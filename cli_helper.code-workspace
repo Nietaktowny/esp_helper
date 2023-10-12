@@ -1,0 +1,38 @@
+{
+	"folders": [
+		{
+			"path": "cli_helper_server"
+		},
+		{
+			"path": "cli_helper_client"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"inttypes.h": "c",
+			"ws2tcpip.h": "c",
+			"tcp_server_priv.h": "c",
+			"winsock2.h": "c",
+			"stdlib.h": "c",
+			"error.h": "c",
+			"unistd.h": "c",
+			"tcp_server.h": "c",
+			"unity.h": "c",
+			"log.h": "c",
+			"time.h": "c"
+		},
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"type": "vgdb",
+				"request": "launch",
+				"name": "C/C++ Debug",
+				"program": "${workspaceFolder}/a.out",
+				"args": [],
+				"cwd": "${workspaceFolder}"
+			}
+		]
+	}
+}
