@@ -2,7 +2,6 @@
 #include "log.h"
 #include <string.h>
 #include <stdlib.h>
-#include <winsock2.h>
 
 #define CHECK_FATAL_ERROR(err)	                                               \
   do {                                                                         \
@@ -25,7 +24,7 @@
 #define CHECK_WSA_ERROR(err)                                                       \
   do {                                                                         \
     if (err != 0) {                                                          \
-      LOG_ERROR("error code: %d", WSAGetLastError());              \
+      LOG_ERROR("error code: %d", errno());              \
     }                                                                          \
   } while (0)
 

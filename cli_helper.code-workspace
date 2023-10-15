@@ -1,9 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "server",
 			"path": "cli_helper_server"
 		},
 		{
+			"name": "client",
 			"path": "cli_helper_client"
 		}
 	],
@@ -19,7 +21,12 @@
 			"tcp_server.h": "c",
 			"unity.h": "c",
 			"log.h": "c",
-			"time.h": "c"
+			"time.h": "c",
+			"pthread.h": "c",
+			"netdb.h": "c",
+			"socket.h": "c",
+			"tcp_server_internal.h": "c",
+			"inet.h": "c"
 		},
 	},
 	"launch": {
@@ -28,10 +35,18 @@
 			{
 				"type": "vgdb",
 				"request": "launch",
-				"name": "C/C++ Debug",
-				"program": "${workspaceFolder}/a.out",
+				"name": "C/C++ Debug tcp_cli_server",
+				"program": "${workspaceFolder:server}/a.out",
 				"args": [],
-				"cwd": "${workspaceFolder}"
+				"cwd": "${workspaceFolder:server}"
+			},
+			{
+				"type": "vgdb",
+				"request": "launch",
+				"name": "C/C++ Debug tcp_cli_client",
+				"program": "${workspaceFolder:client}/a.out",
+				"args": [],
+				"cwd": "${workspaceFolder:client}"
 			}
 		]
 	}

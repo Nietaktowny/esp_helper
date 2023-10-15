@@ -1,0 +1,1 @@
+#define CMD_BASE_CLI    193488477

@@ -1,74 +1,51 @@
-﻿ #define WIN32_LEAN_AND_MEAN
-
-#include <unistd.h>
-#include "tcp_server.h"
+﻿#include "tcp_server.h"
 #include "tcp_server_internal.h"
 #include <unistd.h>
 #include "log.h"
 #include "error.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
+#include <inttypes.h>
+#include "sys/socket.h"
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <arpa/inet.h>
+
 
 
 #define DEFAULT_BUFLEN 512
-#define DEFAULT_PORT "27015"
 
 #define MY_SSID "TP-LINK_AD8313"
 #define MY_PSK "20232887" 
 
 
-int tcp_server_init_winsock(WSADATA* wsaData) {
-    LOG_DEBUG("initializing Winsock");
-    
-    int err = WSAStartup(MAKEWORD(2, 2), wsaData);
 
-    if (err != 0) {
-        LOG_ERROR("Winsock initialization failed with result %d", err);
-        err = WSAGetLastError();
-        CHECK_ERROR(err);
-    }
+static uint64_t htonll(uint64_t n);
+static uint64_t ntohll(uint64_t n);
 
-    LOG_DEBUG("Winsock initialized");
-    return err;
+
+static uint64_t htonll(uint64_t n) {
+    #if __BYTE_ORDER == __BIG_ENDIAN
+        return n; 
+    #else
+        return (((uint64_t)htonl(n)) << 32) + htonl(n >> 32);
+    #endif
 }
 
-int tcp_server_prepare_address(struct addrinfo** result, const char* address) {
-    LOG_DEBUG("Preparing address");
-    int err = 0;
-    struct addrinfo hints;
- 
-    memset(&hints, 0, sizeof(struct addrinfo));
-
-    if(!address) {
-        LOG_WARN("address cannot be null, pointer %p", address);
-        err = ERR_NULL_POINTER;
-        return err;
-    }
-
-    if((int)strlen(address) <= 6) {
-        LOG_WARN("address to short: %s", address);
-        err = WSAHOST_NOT_FOUND;
-        return err;
-    }
-
-    hints.ai_family = AF_INET;
-    hints.ai_socktype = SOCK_STREAM;
-    hints.ai_protocol = IPPROTO_TCP;
-
-    err = getaddrinfo(address, DEFAULT_PORT, &hints, result);
-
-    if(err != 0) {
-        LOG_ERROR("getaddrinfo failed with result %d,\nerror name: %s", err, err_to_name(err));
-        err = WSAGetLastError();
-        CHECK_ERROR(err);
-        CHECK_ERROR(WSACleanup());
-    }
-
-    return err;
+static uint64_t ntohll(uint64_t n) {
+    #if __BYTE_ORDER == __BIG_ENDIAN
+        return n;
+    #else
+        return (((uint64_t)ntohl(n)) << 32) + ntohl(n >> 32);
+    #endif
 }
 
-int tcp_server_create_listen_socket(SOCKET* listen_socket) {
+int tcp_server_create_listen_socket(Socket_t* listen_socket) {
     int err = 0;
 
     if(!listen_socket) {
@@ -84,72 +61,83 @@ int tcp_server_create_listen_socket(SOCKET* listen_socket) {
     err = tcp_server_set_sockopt_reuse_addr(*listen_socket);
 
     if(*listen_socket == INVALID_SOCKET) {
-        err = WSAGetLastError();
+        err = errno;
         LOG_FATAL("socket failed with error %d", err);
-        WSACleanup();
     }
 
     return err;
 }
 
-int tcp_server_bind_socket(SOCKET* socket, struct addrinfo** result) {
+int tcp_server_bind_socket(Socket_t* listen_socket, uint16_t port, const char* address) {
     int err = 0;
-    LOG_DEBUG("binding socket");
+
+    LOG_DEBUG("preparing to bind socket to address: %s:%u", address, port);
+    struct sockaddr_storage prep_server_addr = {0};
+    memset(&prep_server_addr, 0, sizeof(prep_server_addr));
+    struct sockaddr_in* server_addr_ip4 = {(struct sockaddr_in*)&prep_server_addr};
+    server_addr_ip4->sin_family = AF_INET;
+    server_addr_ip4->sin_port = htons(port);
     
-    err = bind(*socket, (*result)->ai_addr, (int)((*result)->ai_addrlen));
-
-    if(err == (int)INVALID_SOCKET) {
-        err = WSAGetLastError();
-        LOG_ERROR("bind failed with error %d,\nerror name: %s", err, err_to_name(err));
-        freeaddrinfo(*result);
-        closesocket(*socket);
-        WSACleanup();
+    err = inet_aton(address, &(server_addr_ip4->sin_addr));
+    if(err != 1) {
+        LOG_ERROR("error when translating address to binary data");
+        return INVALID_SOCKET;
     }
-    LOG_INFO("bound socket to address: %s:%d", tcp_server_get_server_socket_ip(*socket), tcp_server_get_server_socket_port(*socket));
+    
 
+    LOG_DEBUG("binding socket");
+    err = bind(*listen_socket, (struct sockaddr*) server_addr_ip4, sizeof(struct sockaddr));
+
+    if(err == INVALID_SOCKET) {
+        err = errno;
+        LOG_ERROR("bind failed with error %d,\nerror name: %s", err, err_to_name(err));
+        close(*listen_socket);
+        return err;
+    }
+
+    LOG_INFO("bound socket to address: %s:%d", tcp_server_get_server_socket_ip(*listen_socket), tcp_server_get_server_socket_port(*listen_socket));
+    
     return err;
 }
 
-int tcp_server_listen_on_socket(SOCKET* listen_socket) {
+int tcp_server_listen_on_socket(Socket_t* listen_socket) {
     int err = 0;
     LOG_DEBUG("listening on socket");
 
     if(*listen_socket == INVALID_SOCKET) {
         LOG_ERROR("Socket cannot be invalid");
-        return WSAENOTSOCK;
+        return EBADF;
     }
 
     err = listen(*listen_socket, TCP_BACKLOG);
 
-    if(err == SOCKET_ERROR) {
-        err = WSAGetLastError();
+    if(err == INVALID_SOCKET) {
+        err = errno;
         LOG_ERROR("listen failed with error: %d", err);
         LOG_ERROR("Error name: %s", err_to_name(err));
-        closesocket(*listen_socket);
-        WSACleanup();
+        close(*listen_socket);
         return -1;
     }
 
     return 0;
 }
 
-SOCKET tcp_server_accept_client(tcp_server_handle_t* server_handle) {
+Socket_t tcp_server_accept_client(tcp_server_handle_t* server_handle) {
     int err = 0;
     LOG_DEBUG("waiting for accept on listen socket");
 
     if(server_handle->listen_socket == INVALID_SOCKET) {
         LOG_ERROR("Socket cannot be invalid");
-        return WSAENOTSOCK;
+        return EBADF;
     }
 
-    SOCKET client_socket = accept(server_handle->listen_socket, NULL, NULL);
+    Socket_t client_socket = accept(server_handle->listen_socket, NULL, NULL);
 
     if(client_socket == INVALID_SOCKET) {
-        err = WSAGetLastError();
+        err = errno;
         LOG_ERROR("accept failed with error: %d", err);
         LOG_ERROR("Error name: %s", err_to_name(err));
-        closesocket(server_handle->listen_socket);
-        WSACleanup();
+        close(server_handle->listen_socket);
         return 1;
     }
 
@@ -158,11 +146,10 @@ SOCKET tcp_server_accept_client(tcp_server_handle_t* server_handle) {
     return client_socket;
 }
 
-int tcp_server_toggle_socket_block_mode(SOCKET socket, int mode_val) {
+int tcp_server_toggle_socket_block_mode(Socket_t socket) {
     int err = 0;
-    long unsigned int mode = mode_val;
 
-    err = ioctlsocket(socket, FIONBIO, &mode);
+   err = fcntl(socket, F_SETFL, O_NONBLOCK);
 
     if(err != 0) {
         LOG_ERROR("ioctlsocket failed with error: %d", err);
@@ -171,49 +158,56 @@ int tcp_server_toggle_socket_block_mode(SOCKET socket, int mode_val) {
     return err;
 }
 
-int tcp_server_set_sockopt_reuse_addr(SOCKET socket) {
+int tcp_server_set_sockopt_reuse_addr(Socket_t socket) {
     int err = 0;
-    BOOL option_value = TRUE;
-    int option_len = sizeof(BOOL);
+    int option_value = true;
 
-    if (setsockopt(socket, SOL_SOCKET, SO_REUSEADDR, (char*)&option_value, option_len) != SOCKET_ERROR) {
+    /*
+     * turn off bind address checking, and allow
+     * port numbers to be reused - otherwise
+     * the TIME_WAIT phenomenon will prevent
+     * binding to these address.port combinations
+     * for (2 * MSL) seconds.
+     */
+
+    if (setsockopt(socket, SOL_SOCKET, SO_REUSEADDR, (char*)&option_value, sizeof(option_value)) != INVALID_SOCKET) {
         LOG_DEBUG("socket can be bound to an address that is already in use.");
     } else {
-        err = WSAGetLastError();
+        err = errno;
         LOG_ERROR("error when setting SO_REUSEADDR option: %d,\nerror name: %s", err, err_to_name(err));
         return err;
     }
     return err;
 }
 
-char* tcp_server_get_server_socket_ip(SOCKET socket) {
+char* tcp_server_get_server_socket_ip(Socket_t socket) {
     int err = 0;
     struct sockaddr_in socket_addr;
-    int namelen = sizeof(socket_addr);
+    socklen_t namelen = sizeof(socket_addr);
     
     memset(&socket_addr, 0, sizeof(socket_addr));
 
     err = getsockname(socket, (struct sockaddr*) &socket_addr, &namelen);
 
     if(err != 0) {
-        err = WSAGetLastError();
+        err = errno;
         LOG_ERROR("error when getting server socket name %d,\nerror name: %s", err, err_to_name(err));
     }
 
     return inet_ntoa(socket_addr.sin_addr);
 }
 
-int tcp_server_get_server_socket_port(SOCKET socket) {
+int tcp_server_get_server_socket_port(Socket_t socket) {
     int err = 0;
     struct sockaddr_in socket_addr;
-    int namelen = sizeof(socket_addr);
+    socklen_t namelen = sizeof(struct sockaddr_in);
     
     memset(&socket_addr, 0, sizeof(socket_addr));
 
     err = getsockname(socket, (struct sockaddr*) &socket_addr, &namelen);
 
     if(err != 0) {
-        err = WSAGetLastError();
+        err = errno;
         LOG_ERROR("error when getting server socket name %d,\nerror name: %s", err, err_to_name(err));
         return -1;
     }
@@ -221,35 +215,35 @@ int tcp_server_get_server_socket_port(SOCKET socket) {
     return (int)ntohs(socket_addr.sin_port);
 }
 
-char* tcp_server_get_client_socket_ip(SOCKET socket) {
+char* tcp_server_get_client_socket_ip(Socket_t socket) {
     int err = 0;
     struct sockaddr_in socket_addr;
-    int namelen = sizeof(socket_addr);
+    socklen_t namelen = sizeof(socket_addr);
     
     memset(&socket_addr, 0, sizeof(socket_addr));
 
     err = getsockname(socket, (struct sockaddr*) &socket_addr, &namelen);
 
     if(err != 0) {
-        err = WSAGetLastError();
+        err = errno;
         LOG_ERROR("error when getting client socket name %d,\nerror name: %s", err, err_to_name(err));
     }
 
     return inet_ntoa(socket_addr.sin_addr);
 }
 
-int tcp_server_get_client_socket_port(SOCKET socket) {
+int tcp_server_get_client_socket_port(Socket_t socket) {
     int err = 0;
     struct sockaddr_in socket_addr;
-    int namelen = sizeof(socket_addr);
+    socklen_t addr_len = sizeof(struct sockaddr_in);
     
     memset(&socket_addr, 0, sizeof(socket_addr));
 
-    err = getpeername(socket,(struct sockaddr*) &socket_addr, &namelen);
+    err = getpeername(socket,(struct sockaddr*) &socket_addr, &addr_len);
 
     if(err != 0) {
-        err = WSAGetLastError();
-        LOG_ERROR("error when getting client socket name %d,\nerror name: %s", err, err_to_name(err));
+        err = errno;
+        LOG_ERROR("error when getting client socket port %d,\nerror name: %s", err, err_to_name(err));
         return -1;
     }
 
@@ -266,6 +260,8 @@ int tcp_server_convert_data_to_network_order(tcp_server_data_t* data) {
 
     // Only sync needs to be changed because it's only 2 bytes value in data
     data->sync = htons(data->sync);
+    data->cmd_base = htonll(data->cmd_base);
+    data->cmd = htonll(data->cmd);
     
     return 0;
 }
@@ -280,11 +276,13 @@ int tcp_server_convert_data_to_host_order(tcp_server_data_t* data) {
 
     // Only sync needs to be changed because it's only 2 bytes value in data
     data->sync = ntohs(data->sync);
+    data->cmd_base = ntohll(data->cmd_base);
+    data->cmd = ntohll(data->cmd);
     
     return 0;
 }
 
-int tcp_server_recv_data(SOCKET client_socket, tcp_server_data_t* data) {
+int tcp_server_recv_data(Socket_t client_socket, tcp_server_data_t* data) {
     int err = 0;
     err = recv(client_socket, (char*) data, sizeof(tcp_server_data_t), MSG_WAITALL);
 
@@ -293,15 +291,15 @@ int tcp_server_recv_data(SOCKET client_socket, tcp_server_data_t* data) {
         LOG_DEBUG("data len: %u", data->data_len);
         LOG_DEBUG("data sync: %u", data->sync);
         LOG_DEBUG("data: %s", data->data);
-        LOG_DEBUG("cmd base: %d", data->cmd_base);
-        LOG_DEBUG("cmd: %d", data->cmd);
+        LOG_DEBUG("cmd base: %lu", data->cmd_base);
+        LOG_DEBUG("cmd: %lu", data->cmd);
     } else if (err == 0) {
-        LOG_WARN("connection %lld closed", client_socket);
-        return WSAECONNRESET;
+        LOG_WARN("connection %d closed", client_socket);
+        return EBADF;
     } else {
-        err = WSAGetLastError();
-        if(err == WSAECONNRESET) {
-            LOG_WARN("connection %lld closed", client_socket);
+        err = errno;
+        if(err == EBADF) {
+            LOG_WARN("connection %d closed", client_socket);
             return err;
         } else {
             LOG_ERROR("recv failed with error: %d\nerror name: %s",err, err_to_name(err));
@@ -314,8 +312,8 @@ int tcp_server_recv_data(SOCKET client_socket, tcp_server_data_t* data) {
 void* tcp_server_handler_thread(void* args) {
     int err = 0;
     tcp_server_data_t data;
-    SOCKET client_socket = (SOCKET) args;
-    LOG_DEBUG("handling socket transmission: %lld\n", client_socket);
+    Socket_t client_socket = (Socket_t) args;
+    LOG_DEBUG("handling socket transmission: %d\n", client_socket);
     memset(&data, 0, sizeof(data));
     while (1) {
         //RECEIVE
@@ -333,18 +331,17 @@ void* tcp_server_handler_thread(void* args) {
             LOG_DEBUG("data sync: %u", data.sync);
             LOG_DEBUG("data: %s", data.data);
         } else if (err == 0) {
-            LOG_DEBUG("connection %lld closed", client_socket);
+            LOG_DEBUG("connection %d closed", client_socket);
             break;
         } else {
-            err = WSAGetLastError();
+            err = errno;
 
-            if(err == WSAECONNRESET) {
+            if(err == EBADF) {
                 LOG_WARN("%s", err_to_name(err));
                 break;
             }
             LOG_ERROR("recv failed with error: %d\nerror name: %s",err, err_to_name(err));
-            closesocket(client_socket);
-            WSACleanup();
+            close(client_socket);
             pthread_exit(NULL);
         }
 
@@ -361,15 +358,10 @@ void* tcp_server_handler_thread(void* args) {
         }
         err = send(client_socket, (char*) &data, sizeof(tcp_server_data_t), 0);
 
-        if(err == SOCKET_ERROR) {
-            err = WSAGetLastError();
-            if(err == WSAECONNRESET) {
-                LOG_WARN("%s", err_to_name(err));
-                break;
-            }
+        if(err == INVALID_SOCKET) {
+            err = errno;
             LOG_ERROR("send failed with error: %d\nerror name: %s", err, err_to_name(err));
-            closesocket(client_socket);
-            WSACleanup();
+            close(client_socket);
             pthread_exit(NULL);
         }
 
@@ -378,12 +370,12 @@ void* tcp_server_handler_thread(void* args) {
         err = 0;
     }
     LOG_DEBUG("finished transmission");
-    closesocket(client_socket);
-    LOG_DEBUG("closed socket: %lld", client_socket);
+    close(client_socket);
+    LOG_DEBUG("closed socket: %d", client_socket);
     return NULL;
 }
 
-int tcp_server_start_handler_thread(SOCKET client_socket, tcp_server_handle_t* server_handle) {
+int tcp_server_start_handler_thread(Socket_t client_socket, tcp_server_handle_t* server_handle) {
     int err = 0;
     LOG_DEBUG("starting handler thread");
     err = pthread_create(&(server_handle->handler_thread), NULL, tcp_server_handler_thread, (void*) client_socket);
@@ -400,7 +392,7 @@ void* tcp_server_listen_thread(void* args) {
     tcp_server_handle_t* server_handle = (tcp_server_handle_t*) args;
     while(1) {
         LOG_DEBUG("waiting for connection to accept");
-        SOCKET new_client_socket = tcp_server_accept_client(server_handle);
+        Socket_t new_client_socket = tcp_server_accept_client(server_handle);
         LOG_INFO("accepted new connection: %s:%d", tcp_server_get_client_socket_ip(new_client_socket), tcp_server_get_client_socket_port(new_client_socket));
         tcp_server_start_handler_thread(new_client_socket, server_handle);
     }
@@ -436,24 +428,12 @@ int tcp_server_init(tcp_server_handle_t** server_handle, int listen_port, const 
 
     (*server_handle)->port = listen_port;
 
-    err = tcp_server_init_winsock(&((*server_handle)->wsaData));
-
-    if(err != 0) {
-        return err;
-    }
-
-    err = tcp_server_prepare_address(&(*server_handle)->result, ip_address);
-
-    if(err != 0) {
-        return err;
-    }
-
     err = tcp_server_create_listen_socket(&((*server_handle)->listen_socket));
     if(err != 0) {
         return err;;
     }
 
-    err = tcp_server_bind_socket(&((*server_handle)->listen_socket), &(*server_handle)->result);
+    err = tcp_server_bind_socket(&((*server_handle)->listen_socket), listen_port, ip_address);
 
     if(err != 0) {
         return err;
@@ -471,10 +451,10 @@ int tcp_server_init(tcp_server_handle_t** server_handle, int listen_port, const 
 int tcp_server_deinit(tcp_server_handle_t** server_handle) {
     int err = 0;
 
-    err = shutdown((*server_handle)->listen_socket, SD_BOTH);
+    err = shutdown((*server_handle)->listen_socket, SHUT_RDWR);
     if(err != 0) {
-        err= WSAGetLastError();
-        if(err != WSAENOTCONN) {
+        err= errno;
+        if(err != 0) {
             LOG_ERROR("error when trying to shutdown the socket: %d,\nerror name: %s", err, err_to_name(err));
             return err;
         } else {
@@ -482,10 +462,10 @@ int tcp_server_deinit(tcp_server_handle_t** server_handle) {
         }
     }
 
-    err = closesocket((*server_handle)->listen_socket);
-    if(err != 0 && err != WSAENOTCONN) {
-        err = WSAGetLastError();
-        if(err != WSAENOTCONN) {
+    err = close((*server_handle)->listen_socket);
+    if(err != 0 && err != 0) {
+        err = errno;
+        if(err != 0) {
             LOG_ERROR("error when closing socket: %d,\nerror name: %s", err, err_to_name(err));
             return err;
         } else {
@@ -508,14 +488,6 @@ int tcp_server_deinit(tcp_server_handle_t** server_handle) {
 
     if(err != 0 ) {
         LOG_ERROR("error when stopping listen thread: %d", err);
-        return err;
-    }
-
-    err = WSACleanup();
-
-    if(err != 0) {
-        err = WSAGetLastError();
-        LOG_ERROR("error when deinitializing winsock: %d", err);
         return err;
     }
 

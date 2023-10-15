@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.25)
 project(cli_helper_server
         VERSION 0.1
         DESCRIPTION "TCP server for CLI Helper"
