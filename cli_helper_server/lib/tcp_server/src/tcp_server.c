@@ -309,6 +309,7 @@ int tcp_server_recv_data(Socket_t client_socket, tcp_server_data_t* data) {
     return 0;
 }
 
+
 void* tcp_server_handler_thread(void* args) {
     int err = 0;
     tcp_server_data_t data;
@@ -329,6 +330,8 @@ void* tcp_server_handler_thread(void* args) {
             LOG_DEBUG("bytes received: %d", err);
             LOG_DEBUG("data len: %u", data.data_len);
             LOG_DEBUG("data sync: %u", data.sync);
+            LOG_DEBUG("data cmd_base: %lu", data.cmd_base);
+            LOG_DEBUG("data cmd: %lu", data.cmd);
             LOG_DEBUG("data: %s", data.data);
         } else if (err == 0) {
             LOG_DEBUG("connection %d closed", client_socket);

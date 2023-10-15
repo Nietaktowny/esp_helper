@@ -42,6 +42,8 @@ int main(int argc, char **argv) {
         exit(EXIT_FAILURE);
     }
 
+    tcp_client_sync_commands(client_handle, 10);
+
     while(1) {
 
         get_user_input(&data);
@@ -77,8 +79,9 @@ static int get_user_input(tcp_client_data_t* data) {
         if(i == 3) {
             memset(&(data->data[0]), 0, sizeof(data->data));
             LOG_DEBUG("readed cmd base: %s", cmd_base);
-            LOG_DEBUG("cmd_base hash: %lu", tcp_client_hash_string(cmd_base));
+            tcp_client_hash_string(cmd_base);
             LOG_DEBUG("readed cmd: %s", cmd);
+            tcp_client_hash_string(cmd);
             LOG_DEBUG("readed args: %s", args);
             strncpy(&(data->data[0]), cmd_base, strlen(cmd_base));
             strncat(&(data->data[0]), cmd, strlen(cmd));
@@ -90,9 +93,9 @@ static int get_user_input(tcp_client_data_t* data) {
         {
             memset(&(data->data[0]), 0, sizeof(data->data));
             LOG_DEBUG("readed cmd base: %s", cmd_base);
-            LOG_DEBUG("cmd_base hash: %lu", tcp_client_hash_string(cmd_base));
+            tcp_client_hash_string(cmd_base);
             LOG_DEBUG("readed cmd: %s", cmd);
-            LOG_DEBUG("cmd hash: %lu", tcp_client_hash_string(cmd_base));
+            tcp_client_hash_string(cmd);
             strncpy(&(data->data[0]), cmd_base, strlen(cmd_base));
             strncat(&(data->data[0]), cmd, strlen(cmd));
             free(cmd_base);
@@ -100,9 +103,7 @@ static int get_user_input(tcp_client_data_t* data) {
         } else if (i == 1) {
             memset(&(data->data[0]), 0, sizeof(data->data));
             LOG_DEBUG("readed cmd base: %s", cmd_base);
-            if(tcp_client_hash_string(cmd_base) == CMD_BASE_CLI) {
-                LOG_INFO("found command \"cli\"");
-            }
+            tcp_client_hash_string(cmd_base);
             strncpy(&(data->data[0]), cmd_base, strlen(cmd_base));
             free(cmd_base);
         } else {

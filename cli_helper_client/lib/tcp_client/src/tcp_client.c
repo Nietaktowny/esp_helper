@@ -1,4 +1,5 @@
 #include "tcp_client.h"
+#include "tcp_client_cmds.h"
 #include <unistd.h>
 #include "log.h"
 #include "error.h"
@@ -17,9 +18,12 @@
 #include <arpa/inet.h>
 #include <sys/param.h> //for htonll
 
+/*************************************STATIC FUNCTIONS DECLARATIONS*********************************************************/
 
 static uint64_t htonll(uint64_t n);
 static uint64_t ntohll(uint64_t n);
+
+/***************************************************************************************************************************/
 
 
 static uint64_t htonll(uint64_t n) {
@@ -368,6 +372,48 @@ uint64_t tcp_client_hash_string(char* string) {
     return hash;
 }
 
+int tcp_client_sync_commands(tcp_client_handle_t* client_handle, int cmds_num) {
+    int err = 0;
+    int i = 0;
+    //prepare sync command
+    tcp_client_data_t sync_cmd = {
+        .cmd = TCP_CLI_CMD_SYNC,
+        .cmd_base = TCP_CLI_BASE_CLI,
+        .sync = 1234,
+        .data_len = 0.
+    };
+
+    tcp_client_data_t server_data = {0};
+
+    //send sync command to server
+    tcp_client_send_data(client_handle, &sync_cmd);
+
+    while (server_data.cmd_base != TCP_CLI_BASE_CLI && server_data.cmd != TCP_CLI_CMD_SYNC)
+    {   
+        tcp_client_recv_data(client_handle, &server_data);
+        if(i >= cmds_num -1) {
+            LOG_WARN("registered maximum number of commands");
+            break;
+        }
+
+        client_handle->cmds->cmd = server_data.cmd;
+        client_handle->cmds->cmd_base = server_data.cmd_base;
+        
+        sync_cmd.cmd = TCP_CLI_CMD_NO_ERR;
+        tcp_client_send_data(client_handle, &sync_cmd);
+    }
+    
+    
+
+    return err;
+}
+
+int tcp_client_translate_commands(char* cmd_base, char* cmd) {
+    int err = 0;
+
+    return err;
+}
+
 int tcp_client_init(tcp_client_handle_t** const client_handle, const char* server_ip, uint16_t server_port) {
     int err = 0;
 
@@ -377,11 +423,18 @@ int tcp_client_init(tcp_client_handle_t** const client_handle, const char* serve
         return err;
     }
 
-
     *client_handle = malloc(sizeof(tcp_client_handle_t));
 
     if(*client_handle == NULL) {
         LOG_FATAL("error when allocating memory for tcp_client");
+        err = ERR_NO_MEMORY;
+        return err;
+    }
+
+    (*client_handle)->cmds = malloc(sizeof(tcp_client_cmd_t)*100);
+
+    if((*client_handle)->cmds == NULL) {
+        LOG_FATAL("error when allocating memory for cmds array");
         err = ERR_NO_MEMORY;
         return err;
     }

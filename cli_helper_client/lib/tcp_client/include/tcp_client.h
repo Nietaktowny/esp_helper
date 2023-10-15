@@ -15,15 +15,20 @@ struct tcp_client_data_obj {
     uint64_t cmd;
     char data[255];
 };
-
 typedef struct tcp_client_data_obj tcp_client_data_t;
+
+struct tcp_client_cmd_obj {
+    uint64_t cmd_base;
+    uint64_t cmd;
+};
+typedef struct tcp_client_cmd_obj tcp_client_cmd_t;
 
 struct tcp_client_handle_obj {
     Socket_t connect_socket;
     pthread_t handler_thread;
     struct sockaddr_in* result;
+    tcp_client_cmd_t* cmds;
 };
-
 typedef struct tcp_client_handle_obj tcp_client_handle_t;
 
 
@@ -50,6 +55,8 @@ int tcp_client_recv_data(tcp_client_handle_t* client_handle, tcp_client_data_t* 
 int tcp_client_close_connection(tcp_client_handle_t* client_handle);
 
 uint64_t tcp_client_hash_string(char* string);
+
+int tcp_client_sync_commands(tcp_client_handle_t* client_handle, int cmds_num);
 
 int tcp_client_init(tcp_client_handle_t** client_handle, const char* server_ip, uint16_t server_port);
 
