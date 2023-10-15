@@ -357,7 +357,7 @@ int tcp_client_close_connection(tcp_client_handle_t* client_handle) {
     return err;
 }
 
-unsigned long tcp_client_hash_string(char* string) {
+uint64_t tcp_client_hash_string(char* string) {
     unsigned long hash = 5381;
     int c;
     LOG_DEBUG("string to hash: %s", string);

@@ -49,7 +49,7 @@ int tcp_client_recv_data(tcp_client_handle_t* client_handle, tcp_client_data_t* 
 
 int tcp_client_close_connection(tcp_client_handle_t* client_handle);
 
-unsigned long tcp_client_hash_string(char* string);
+uint64_t tcp_client_hash_string(char* string);
 
 int tcp_client_init(tcp_client_handle_t** client_handle, const char* server_ip, uint16_t server_port);
 
