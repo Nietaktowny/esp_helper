@@ -59,6 +59,7 @@ int tcp_server_create_listen_socket(Socket_t* listen_socket) {
     *listen_socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 
     err = tcp_server_set_sockopt_reuse_addr(*listen_socket);
+    err = tcp_server_set_sockopt_reuse_port(*listen_socket);
 
     if(*listen_socket == INVALID_SOCKET) {
         err = errno;
@@ -70,8 +71,18 @@ int tcp_server_create_listen_socket(Socket_t* listen_socket) {
 
 int tcp_server_bind_socket(Socket_t* listen_socket, uint16_t port, const char* address) {
     int err = 0;
-
     LOG_DEBUG("preparing to bind socket to address: %s:%u", address, port);
+
+    if(port != 0 && port < 1024) {
+        LOG_ERROR("cannot bind to well-known port");
+        err = ERR_TCPS_WRONG_PORT;
+        return err;
+    } else if (!port)
+    {
+        LOG_WARN("using wildcard port");
+    }
+    
+
     struct sockaddr_storage prep_server_addr = {0};
     memset(&prep_server_addr, 0, sizeof(prep_server_addr));
     struct sockaddr_in* server_addr_ip4 = {(struct sockaddr_in*)&prep_server_addr};
@@ -81,7 +92,7 @@ int tcp_server_bind_socket(Socket_t* listen_socket, uint16_t port, const char* a
     err = inet_aton(address, &(server_addr_ip4->sin_addr));
     if(err != 1) {
         LOG_ERROR("error when translating address to binary data");
-        return INVALID_SOCKET;
+        return ERR_TCPS_WRONG_ADDR;
     }
     
 
@@ -160,7 +171,7 @@ int tcp_server_toggle_socket_block_mode(Socket_t socket) {
 
 int tcp_server_set_sockopt_reuse_addr(Socket_t socket) {
     int err = 0;
-    int option_value = true;
+    int option_value = 1;
 
     /*
      * turn off bind address checking, and allow
@@ -170,11 +181,33 @@ int tcp_server_set_sockopt_reuse_addr(Socket_t socket) {
      * for (2 * MSL) seconds.
      */
 
-    if (setsockopt(socket, SOL_SOCKET, SO_REUSEADDR, (char*)&option_value, sizeof(option_value)) != INVALID_SOCKET) {
+    if (setsockopt(socket, SOL_SOCKET, SO_REUSEADDR, (const char*)&option_value, sizeof(option_value)) != INVALID_SOCKET) {
         LOG_DEBUG("socket can be bound to an address that is already in use.");
     } else {
         err = errno;
         LOG_ERROR("error when setting SO_REUSEADDR option: %d,\nerror name: %s", err, err_to_name(err));
+        return err;
+    }
+    return err;
+}
+
+int tcp_server_set_sockopt_reuse_port(Socket_t socket) {
+    int err = 0;
+    int option_value = 1;
+
+    /*
+     * turn off bind address checking, and allow
+     * port numbers to be reused - otherwise
+     * the TIME_WAIT phenomenon will prevent
+     * binding to these address.port combinations
+     * for (2 * MSL) seconds.
+     */
+
+    if (setsockopt(socket, SOL_SOCKET, SO_REUSEPORT, (const char*)&option_value, sizeof(option_value)) != INVALID_SOCKET) {
+        LOG_DEBUG("socket can be bound to an port that is already in use.");
+    } else {
+        err = errno;
+        LOG_ERROR("error when setting SO_REUSEPORT option: %d,\nerror name: %s", err, err_to_name(err));
         return err;
     }
     return err;
@@ -309,6 +342,88 @@ int tcp_server_recv_data(Socket_t client_socket, tcp_server_data_t* data) {
     return 0;
 }
 
+uint64_t tcp_server_hash_string(char* string) {
+    unsigned long hash = 5381;
+    int c;
+    LOG_DEBUG("string to hash: %s", string);
+    while((c = (*string++))) {
+        hash = ((hash << 5) + hash) + c;   /*hash * 33 + c*/
+    }
+    LOG_DEBUG("hash is %lu", hash);
+    return hash;
+}
+
+tcp_server_cmd_t* tcp_server_find_cmd(tcp_server_handle_t** server_handle, uint64_t fcmd_base, uint64_t fcmd) {
+    tcp_server_cmd_node_t* iterator = (*server_handle)->list.tail;
+    while (iterator != NULL)
+    {
+        if(iterator->cmd.cmd_base == fcmd_base && iterator->cmd.cmd == fcmd) {
+            LOG_DEBUG("command with base %lu and cmd %lu found", iterator->cmd.cmd_base, iterator->cmd.cmd);
+            return &(iterator->cmd);
+        }
+        iterator = iterator->next;
+    }
+    LOG_DEBUG("command not found");
+    return NULL;
+}
+
+int tcp_server_register_cmd(tcp_server_handle_t** server_handle, void* (*cmd_fun)(void*), char* cmd_base, char* cmd) {
+    int err = 0;
+
+    if(!server_handle || !(*server_handle)) {
+        err = ERR_NULL_POINTER;
+        LOG_FATAL("server handle cannot be null");
+        return err;
+    }
+
+    if(!cmd_fun) {
+        err = ERR_NULL_POINTER;
+        LOG_ERROR("command function cannot be null");
+        return err;  
+    }
+
+    if(!cmd_base || !cmd) {
+        err = ERR_NULL_POINTER;
+        LOG_FATAL("command or command base cannot be null");
+        return err;
+    }
+    uint64_t h_cmd_base = tcp_server_hash_string(cmd_base);
+    uint64_t h_cmd = tcp_server_hash_string(cmd);
+
+    if(tcp_server_find_cmd(server_handle, h_cmd_base, h_cmd) != NULL) {
+        LOG_WARN("such cmd already registered");
+        err = -1;
+        return err;
+    }
+
+    tcp_server_cmd_node_t* current = NULL;
+
+    current = malloc(sizeof(tcp_server_cmd_node_t));
+    current->cmd.cmd = h_cmd;
+    current->cmd.cmd_base = h_cmd_base;
+    current->cmd.cmd_fun = cmd_fun;
+    current->next = NULL;
+
+    if((*server_handle)->list.tail != NULL && (*server_handle)->list.head != NULL) {
+        /*If there is some tail then this isn't first node to be created*/
+        //update head
+        (*server_handle)->list.head->next = current;
+        (*server_handle)->list.head = current;
+    } else {
+        /*If tail ist null, then this may be the first node to be created*/
+        // Init tail and head
+        (*server_handle)->list.head = current;
+        (*server_handle)->list.tail = current;
+    }
+
+    return err;
+}
+
+int tcp_server_send_cmd(tcp_server_handle_t** server_handle) {
+    int err = 0;
+
+    return err;
+}
 
 void* tcp_server_handler_thread(void* args) {
     int err = 0;
@@ -417,19 +532,30 @@ int tcp_server_start_listen_thread(tcp_server_handle_t* server_handle) {
     return err;
 }
 
-int tcp_server_init(tcp_server_handle_t** server_handle, int listen_port, const char* ip_address) {
+int tcp_server_init(tcp_server_handle_t** const server_handle, uint16_t listen_port, const char* ip_address) {
     int err = 0;
+
+    if(!server_handle) {
+        LOG_FATAL("tcp server handle cannot be null");
+        err = ERR_NULL_POINTER;
+        return err;
+    }
 
     LOG_DEBUG("allocating memory for tcp_server...");
     *server_handle = (tcp_server_handle_t*) malloc(sizeof(tcp_server_handle_t));
+
+    /*Initialize handle variables*/
+    (*server_handle)->list.head = NULL;
+    (*server_handle)->list.tail = NULL;
+    (*server_handle)->listen_socket = 0;
+    (*server_handle)->listen_thread = 0;
+    (*server_handle)->handler_thread = 0;
 
     if(!(*server_handle)) {
         err = ERR_NO_MEMORY;
         LOG_FATAL("no memory for tcp server");
         return err;
     }
-
-    (*server_handle)->port = listen_port;
 
     err = tcp_server_create_listen_socket(&((*server_handle)->listen_socket));
     if(err != 0) {
