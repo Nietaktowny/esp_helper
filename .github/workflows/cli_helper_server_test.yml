@@ -15,9 +15,12 @@ jobs:
 
     - name: Build
       working-directory: ${{github.workspace}}/cli_helper_server
-      run: cmake -B build
+      run: cmake -B build -GNinja
 
-    - name: Test
+    - name: Compile
       working-directory: ${{github.workspace}}/cli_helper_server/build
+      run: ninja
+
+    - name: Run Tests
       run: ctest -V
 
