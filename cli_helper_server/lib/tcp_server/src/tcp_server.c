@@ -343,8 +343,14 @@ int tcp_server_recv_data(Socket_t client_socket, tcp_server_data_t* data) {
 }
 
 uint64_t tcp_server_hash_string(char* string) {
-    unsigned long hash = 5381;
+    uint64_t hash = 5381;
     int c;
+
+    if(!string) {
+        LOG_ERROR("string pointer cannot be null");
+        return 0;
+    }
+
     LOG_DEBUG("string to hash: %s", string);
     while((c = (*string++))) {
         hash = ((hash << 5) + hash) + c;   /*hash * 33 + c*/
@@ -353,7 +359,44 @@ uint64_t tcp_server_hash_string(char* string) {
     return hash;
 }
 
-tcp_server_cmd_t* tcp_server_find_cmd(tcp_server_handle_t** server_handle, uint64_t fcmd_base, uint64_t fcmd) {
+tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t** server_handle, char* cmd_base, char* cmd) {
+    if(!server_handle || !(*server_handle)) {
+        LOG_ERROR("server_handle cannot be null");
+        return NULL;
+    }
+    
+    if(!cmd_base) {
+        LOG_ERROR("cmd_base cannot be null");
+        return NULL;
+    }
+
+    if(!cmd_base) {
+        LOG_ERROR("cmd_base cannot be null");
+        return NULL;
+    }
+
+    tcp_server_cmd_node_t* iterator = (*server_handle)->list.tail;
+    uint64_t fcmd_base = tcp_server_hash_string(cmd_base);
+    uint64_t fcmd = tcp_server_hash_string(cmd);
+
+    while (iterator != NULL)
+    {
+        if(iterator->cmd.cmd_base == fcmd_base && iterator->cmd.cmd == fcmd) {
+            LOG_DEBUG("command with base %lu and cmd %lu found", iterator->cmd.cmd_base, iterator->cmd.cmd);
+            return &(iterator->cmd);
+        }
+        iterator = iterator->next;
+    }
+    LOG_DEBUG("command not found");
+    return NULL;
+}
+
+tcp_server_cmd_t* tcp_server_find_hashed_cmd(tcp_server_handle_t** server_handle, uint64_t fcmd_base, uint64_t fcmd) {
+    if(!server_handle || !(*server_handle)) {
+        LOG_ERROR("server_handle cannot be null");
+        return NULL;
+    }
+
     tcp_server_cmd_node_t* iterator = (*server_handle)->list.tail;
     while (iterator != NULL)
     {
@@ -378,7 +421,7 @@ int tcp_server_register_cmd(tcp_server_handle_t** server_handle, void* (*cmd_fun
 
     if(!cmd_fun) {
         err = ERR_NULL_POINTER;
-        LOG_ERROR("command function cannot be null");
+        LOG_FATAL("command function cannot be null");
         return err;  
     }
 
@@ -390,9 +433,9 @@ int tcp_server_register_cmd(tcp_server_handle_t** server_handle, void* (*cmd_fun
     uint64_t h_cmd_base = tcp_server_hash_string(cmd_base);
     uint64_t h_cmd = tcp_server_hash_string(cmd);
 
-    if(tcp_server_find_cmd(server_handle, h_cmd_base, h_cmd) != NULL) {
+    if(tcp_server_find_hashed_cmd(server_handle, h_cmd_base, h_cmd) != NULL) {
         LOG_WARN("such cmd already registered");
-        err = -1;
+        err = ERR_TCPS_DUPLICATE_CMD;
         return err;
     }
 
@@ -619,7 +662,6 @@ int tcp_server_deinit(tcp_server_handle_t** server_handle) {
         LOG_ERROR("error when stopping listen thread: %d", err);
         return err;
     }
-
 
     memset(*server_handle, 0, sizeof(tcp_server_handle_t));
     free(*server_handle);

@@ -20,6 +20,15 @@ int main(int argc, char **argv) {
     if(err != 0) {
         LOG_FATAL("error in tcp_server: %d,\n%s", err, strerror(err));
     }
+    
+    char* cmd_base = "cmd_base";
+    char* cmd = "cmd";
+
+    tcp_server_cmd_t* founded_node = NULL;
+    tcp_server_register_cmd(&server_handle, function, "asdsad", "asdasad");
+    tcp_server_register_cmd(&server_handle, function, "|adsasd", "sadqw12qww");
+    tcp_server_register_cmd(&server_handle, function, cmd_base, cmd);
+    founded_node = tcp_server_find_string_cmd(&server_handle, cmd_base, cmd);
 
     //tcp_server_start_listen_thread(server_handle);
     

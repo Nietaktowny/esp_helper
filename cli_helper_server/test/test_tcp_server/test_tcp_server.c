@@ -21,7 +21,7 @@
 #include <arpa/inet.h>
 #include <limits.h>
 
-SET_LOG_LEVEL(LOG_LEVEL_INFO);
+SET_LOG_LEVEL(LOG_LEVEL_DEBUG);
 
 #define TEST_PORT 27015
 #define TEST_ADDRESS "127.0.0.1"
@@ -33,7 +33,15 @@ int get_random_value (int range) {
     return (rand() % range);
 }
 
+void* test_cmd_fun(void* args) {
+    LOG_DEBUG("Iam test function");
+    return NULL;
+}
 
+void* test_other_fun(void* args) {
+    LOG_DEBUG("Iam other test function");
+    return NULL;
+}
 /*TESTS*/
 
 void test_if_server_handle_is_null_after_init(void) {
@@ -253,6 +261,326 @@ void test_size_of_allocated_memory_for_handle(void) {
     TEST_ASSERT_EQUAL_MESSAGE(sizeof_struct, sizeof_pointer, "sizeof pointer to handle should be the same as handle struct");
 }
 
+void test_if_head_is_not_null_after_adding_node(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_base", "test_cmd");
+
+    //then
+    TEST_ASSERT_NOT_NULL_MESSAGE(server_handle->list.head, "head should not be null after adding node");
+}
+
+void test_if_tail_is_not_null_after_adding_node(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_base", "test_cmd");
+
+    //then
+    TEST_ASSERT_NOT_NULL_MESSAGE(server_handle->list.tail, "tail should not be null after adding node");
+}
+
+void test_if_head_equals_tail_after_adding_one_node(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_base", "test_cmd");
+
+    //then
+    TEST_ASSERT_EQUAL_PTR_MESSAGE(server_handle->list.head, server_handle->list.tail, "tail should equal head after adding one node");
+}
+
+void test_if_register_cmd_returns_zero_on_correct_params(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    int err = -1;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_base", "test_cmd");
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(0, err, "tcp_server_register_cmd should return 0 on correct parameters");
+}
+
+void test_if_register_cmd_returns_err_on_null_handle(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    int err = -1;
+
+    //when
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_base", "test_cmd");
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "tcp_server_register_cmd should return ERR_NULL_POINTER on null handle");
+}
+
+void test_if_register_cmd_returns_err_on_null_cmd_base(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    int err = -1;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, NULL, "test_cmd");
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "tcp_server_register_cmd should return ERR_NULL_POINTER on null cmd_base");
+}
+
+void test_if_register_cmd_returns_err_on_null_cmd(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    int err = -1;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_base", NULL);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "tcp_server_register_cmd should return ERR_NULL_POINTER on null cmd");
+}
+
+void test_if_register_cmd_returns_err_on_null_function(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    int err = -1;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    err = tcp_server_register_cmd(&server_handle, NULL, "test_base", "test_cmd");
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "tcp_server_register_cmd should return ERR_NULL_POINTER on null function");
+}
+
+void test_if_hash_cmd_base_of_new_node_is_correct(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    char* test_cmd_base = "test_cmd_base";
+    uint64_t cmd_base_hash = tcp_server_hash_string(test_cmd_base);
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, test_cmd_base, "test_cmd");
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(cmd_base_hash, server_handle->list.head->cmd.cmd_base, "hash of cmd_base different than expected");
+}
+
+void test_if_hash_cmd_of_new_node_is_correct(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    char* test_cmd = "test_cmd";
+    uint64_t cmd_hash = tcp_server_hash_string(test_cmd);
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_cmd_base", test_cmd);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(cmd_hash, server_handle->list.head->cmd.cmd, "hash of cmd different than expected");
+}
+
+void test_if_fun_pointer_of_new_node_is_correct(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    void* (*test_fun)(void*) = test_cmd_fun;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_cmd_base", "test_cmd");
+
+    //then
+    TEST_ASSERT_EQUAL_PTR_MESSAGE(test_fun, server_handle->list.head->cmd.cmd_fun, "test function of new node different than expected");
+}
+
+void test_if_head_is_different_than_head_on_two_registered_cmd(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "test_cmd_base", "test_cmd");
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "dif_test_base", "dif_test_cmd");
+
+    //then
+    TEST_ASSERT_NOT_EQUAL_MESSAGE(server_handle->list.head, server_handle->list.tail, "on two nodes tail should be different than head");
+}
+
+void test_if_cannot_register_two_cmds_with_the_same_base_and_cmd(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    char* test_cmd_base = "test_base";
+    char* test_cmd = "test_cmd";
+    int err = 0;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, test_cmd_base, test_cmd);
+
+    if(err != 0) {
+        TEST_FAIL_MESSAGE("first tcp_server_register_cmd returned err");
+    }
+
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, test_cmd_base, test_cmd);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_TCPS_DUPLICATE_CMD, err, "trying to register two the same cmd should return ERR_TCPS_DUPLICATE_CMD");    
+}
+
+void test_if_can_register_two_cmds_with_the_same_base_and_different_cmd(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    char* test_cmd_base = "test_base";
+    char* test_cmd = "test_cmd";
+    char* different_cmd = "different_cmd";
+    int err = 0;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, test_cmd_base, test_cmd);
+
+    if(err != 0) {
+        TEST_FAIL_MESSAGE("first tcp_server_register_cmd returned err");
+    }
+
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, test_cmd_base, different_cmd);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(0, err, "trying to register cmd with the same base but another cmd should not return error");    
+}
+
+void test_if_can_register_two_cmds_with_the_same_cmd_and_different_base(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    char* test_cmd_base = "test_base";
+    char* test_cmd = "test_cmd";
+    char* different_base = "different_cmd";
+    int err = 0;
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, test_cmd_base, test_cmd);
+
+    if(err != 0) {
+        TEST_FAIL_MESSAGE("first tcp_server_register_cmd returned err");
+    }
+
+    err = tcp_server_register_cmd(&server_handle, test_cmd_fun, different_base, test_cmd);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(0, err, "trying to register cmd with the same cmd but another base should not return error");    
+}
+
+void test_if_the_same_chars_return_the_same_hash(void) {
+    //given
+    uint64_t first_hash = 0;
+    uint64_t second_hash = 0;
+    char* string_to_hash = "asadasdfgjytxfey4ytdasdasd";
+
+    //when
+    first_hash = tcp_server_hash_string(string_to_hash);
+    second_hash = tcp_server_hash_string(string_to_hash);
+
+    //then
+    TEST_ASSERT_EQUAL_UINT64_MESSAGE(first_hash, second_hash, "hash should always be the same on the same string");
+}
+
+void test_if_hash_string_fun_returns_err_on_null_string(void) {
+    //given
+    uint64_t err = 0;
+
+    //when
+    err = tcp_server_hash_string(NULL);
+
+    //then
+    TEST_ASSERT_EQUAL_UINT64_MESSAGE(0, err, "tcp_server_hash_string should return 0 on null string");    
+}
+
+void test_if_find_hashed_cmd_finds_node(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_t* founded_node = NULL;
+    char* base_to_find = "cmd_base";
+    char* cmd_to_find = "cmd";
+    uint64_t hbase = tcp_server_hash_string(base_to_find);
+    uint64_t hcmd = tcp_server_hash_string(cmd_to_find);
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, base_to_find, base_to_find);
+    //tcp_server_register_cmd(&server_handle, test_cmd_fun, "dif_test_base", "dif_test_cmd");
+    founded_node = tcp_server_find_string_cmd(&server_handle, base_to_find, cmd_to_find);
+
+    //then
+    TEST_ASSERT_NOT_NULL_MESSAGE(founded_node, "founded node should not be null");
+}
+
+void test_if_find_cmd_finds_node_with_correct_base(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_t* founded_node = NULL;
+    char* base_to_find = "find_me_base!";
+    char* cmd_to_find = "find_me_cmd!";
+    uint64_t hbase = tcp_server_hash_string(base_to_find);
+    uint64_t hcmd = tcp_server_hash_string(cmd_to_find);
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, base_to_find, base_to_find);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "dif_test_base", "dif_test_cmd");
+    founded_node = tcp_server_find_hashed_cmd(&server_handle, hbase, hcmd);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(hbase, founded_node->cmd_base, "cmd_base of founded node differs from expected");
+}
+
+void test_if_find_cmd_finds_node_with_correct_cmd(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_t* founded_node = NULL;
+    char* base_to_find = "find_me_base!";
+    char* cmd_to_find = "find_me_cmd!";
+    uint64_t hbase = tcp_server_hash_string(base_to_find);
+    uint64_t hcmd = tcp_server_hash_string(cmd_to_find);
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, base_to_find, base_to_find);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, "dif_test_base", "dif_test_cmd");
+    founded_node = tcp_server_find_hashed_cmd(&server_handle, hbase, hcmd);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(hcmd, founded_node->cmd, "cmd of founded node differs from expected");
+}
+
+void test_if_find_cmd_finds_node_with_correct_fun(void) {
+    //given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_t* founded_node = NULL;
+    char* base_to_find = "find_me_base!";
+    char* cmd_to_find = "find_me_cmd!";
+    uint64_t hbase = tcp_server_hash_string(base_to_find);
+    uint64_t hcmd = tcp_server_hash_string(cmd_to_find);
+
+    //when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(&server_handle, test_cmd_fun, base_to_find, base_to_find);
+    tcp_server_register_cmd(&server_handle, test_other_fun, "dif_test_base", "dif_test_cmd");
+    founded_node = tcp_server_find_hashed_cmd(&server_handle, hbase, hcmd);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(test_cmd_fun, founded_node->cmd_fun, "function of founded node differs from expected");
+}
+
 int main(void)
 {
     UNITY_BEGIN();
@@ -273,5 +601,22 @@ int main(void)
     RUN_TEST(test_if_init_returns_err_on_well_known_port);
     RUN_TEST(test_if_init_returns_zero_on_max_port_value);
     RUN_TEST(test_size_of_allocated_memory_for_handle);
+    RUN_TEST(test_if_head_is_not_null_after_adding_node);
+    RUN_TEST(test_if_tail_is_not_null_after_adding_node);
+    RUN_TEST(test_if_head_equals_tail_after_adding_one_node);
+    RUN_TEST(test_if_register_cmd_returns_zero_on_correct_params);
+    RUN_TEST(test_if_register_cmd_returns_err_on_null_handle);
+    RUN_TEST(test_if_register_cmd_returns_err_on_null_cmd_base);
+    RUN_TEST(test_if_register_cmd_returns_err_on_null_cmd);
+    RUN_TEST(test_if_register_cmd_returns_err_on_null_function);
+    RUN_TEST(test_if_hash_cmd_base_of_new_node_is_correct);
+    RUN_TEST(test_if_hash_cmd_of_new_node_is_correct);
+    RUN_TEST(test_if_fun_pointer_of_new_node_is_correct);
+    RUN_TEST(test_if_head_is_different_than_head_on_two_registered_cmd);
+    RUN_TEST(test_if_cannot_register_two_cmds_with_the_same_base_and_cmd);
+    RUN_TEST(test_if_can_register_two_cmds_with_the_same_base_and_different_cmd);
+    RUN_TEST(test_if_can_register_two_cmds_with_the_same_cmd_and_different_base);
+    RUN_TEST(test_if_the_same_chars_return_the_same_hash);
+    RUN_TEST(test_if_hash_string_fun_returns_err_on_null_string);
     return UNITY_END();
 }
