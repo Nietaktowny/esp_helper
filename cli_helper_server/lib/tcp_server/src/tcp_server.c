@@ -375,7 +375,7 @@ tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t** server_handle
         return NULL;
     }
 
-    tcp_server_cmd_node_t* iterator = (*server_handle)->list.tail;
+    tcp_server_cmd_node_t* iterator = (*server_handle)->list.head;
     uint64_t fcmd_base = tcp_server_hash_string(cmd_base);
     uint64_t fcmd = tcp_server_hash_string(cmd);
 
@@ -397,7 +397,7 @@ tcp_server_cmd_t* tcp_server_find_hashed_cmd(tcp_server_handle_t** server_handle
         return NULL;
     }
 
-    tcp_server_cmd_node_t* iterator = (*server_handle)->list.tail;
+    tcp_server_cmd_node_t* iterator = (*server_handle)->list.head;
     while (iterator != NULL)
     {
         if(iterator->cmd.cmd_base == fcmd_base && iterator->cmd.cmd == fcmd) {
@@ -447,16 +447,16 @@ int tcp_server_register_cmd(tcp_server_handle_t** server_handle, void* (*cmd_fun
     current->cmd.cmd_fun = cmd_fun;
     current->next = NULL;
 
-    if((*server_handle)->list.tail != NULL && (*server_handle)->list.head != NULL) {
-        /*If there is some tail then this isn't first node to be created*/
-        //update head
-        (*server_handle)->list.head->next = current;
-        (*server_handle)->list.head = current;
-    } else {
-        /*If tail ist null, then this may be the first node to be created*/
-        // Init tail and head
-        (*server_handle)->list.head = current;
+    if((*server_handle)->list.head != NULL && (*server_handle)->list.tail != NULL) {
+        /*If there is some head then this isn't first node to be created*/
+        //update tail
+        (*server_handle)->list.tail->next = current;
         (*server_handle)->list.tail = current;
+    } else {
+        /*If head ist null, then this may be the first node to be created*/
+        // Init tail and head
+        (*server_handle)->list.tail = current;
+        (*server_handle)->list.head = current;
     }
 
     return err;
