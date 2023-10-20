@@ -344,7 +344,7 @@ int tcp_server_recv_data(Socket_t client_socket, tcp_server_data_t* data) {
 
 uint64_t tcp_server_hash_string(char* string) {
     uint64_t hash = 5381;
-    int c;
+    int c = 0;
 
     if(!string) {
         LOG_ERROR("string pointer cannot be null");
@@ -359,8 +359,8 @@ uint64_t tcp_server_hash_string(char* string) {
     return hash;
 }
 
-tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t** server_handle, char* cmd_base, char* cmd) {
-    if(!server_handle || !(*server_handle)) {
+tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t* const restrict server_handle, char* cmd_base, char* cmd) {
+    if(!server_handle) {
         LOG_ERROR("server_handle cannot be null");
         return NULL;
     }
@@ -375,7 +375,7 @@ tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t** server_handle
         return NULL;
     }
 
-    tcp_server_cmd_node_t* iterator = (*server_handle)->list.head;
+    tcp_server_cmd_node_t* iterator = server_handle->list.head;
     uint64_t fcmd_base = tcp_server_hash_string(cmd_base);
     uint64_t fcmd = tcp_server_hash_string(cmd);
 
@@ -391,13 +391,13 @@ tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t** server_handle
     return NULL;
 }
 
-tcp_server_cmd_t* tcp_server_find_hashed_cmd(tcp_server_handle_t** server_handle, uint64_t fcmd_base, uint64_t fcmd) {
-    if(!server_handle || !(*server_handle)) {
+tcp_server_cmd_t* tcp_server_find_hashed_cmd(tcp_server_handle_t* const restrict server_handle, uint64_t fcmd_base, uint64_t fcmd) {
+    if(!server_handle) {
         LOG_ERROR("server_handle cannot be null");
         return NULL;
     }
 
-    tcp_server_cmd_node_t* iterator = (*server_handle)->list.head;
+    tcp_server_cmd_node_t* iterator = server_handle->list.head;
     while (iterator != NULL)
     {
         if(iterator->cmd.cmd_base == fcmd_base && iterator->cmd.cmd == fcmd) {
@@ -410,10 +410,10 @@ tcp_server_cmd_t* tcp_server_find_hashed_cmd(tcp_server_handle_t** server_handle
     return NULL;
 }
 
-int tcp_server_register_cmd(tcp_server_handle_t** server_handle, void* (*cmd_fun)(void*), char* cmd_base, char* cmd) {
+int tcp_server_register_cmd(tcp_server_handle_t* const restrict server_handle, void* (*cmd_fun)(void*), char* cmd_base, char* cmd) {
     int err = 0;
 
-    if(!server_handle || !(*server_handle)) {
+    if(!server_handle) {
         err = ERR_NULL_POINTER;
         LOG_FATAL("server handle cannot be null");
         return err;
@@ -447,22 +447,46 @@ int tcp_server_register_cmd(tcp_server_handle_t** server_handle, void* (*cmd_fun
     current->cmd.cmd_fun = cmd_fun;
     current->next = NULL;
 
-    if((*server_handle)->list.head != NULL && (*server_handle)->list.tail != NULL) {
+    if(server_handle->list.head != NULL && server_handle->list.tail != NULL) {
         /*If there is some head then this isn't first node to be created*/
         //update tail
-        (*server_handle)->list.tail->next = current;
-        (*server_handle)->list.tail = current;
+        server_handle->list.tail->next = current;
+        server_handle->list.tail = current;
     } else {
         /*If head ist null, then this may be the first node to be created*/
         // Init tail and head
-        (*server_handle)->list.tail = current;
-        (*server_handle)->list.head = current;
+        server_handle->list.tail = current;
+        server_handle->list.head = current;
     }
 
     return err;
 }
 
-int tcp_server_send_cmd(tcp_server_handle_t** server_handle) {
+int tcp_server_delete_cmd_with_string(tcp_server_handle_t* server_handle, const char* cmd_base, const char* cmd) {
+    int err = 0;
+
+    if(!server_handle) {
+        LOG_ERROR("server_handle cannot be null");
+        err = ERR_NULL_POINTER;
+        return err;
+    }
+    
+    if(!cmd_base) {
+        LOG_ERROR("cmd_base cannot be null");
+        err = ERR_NULL_POINTER;
+        return err;
+    }
+
+    if(!cmd_base) {
+        LOG_ERROR("cmd_base cannot be null");
+        err = ERR_NULL_POINTER;
+        return err;
+    }
+
+    return err;
+}
+
+int tcp_server_send_cmd(tcp_server_handle_t* const restrict server_handle) {
     int err = 0;
 
     return err;
@@ -536,7 +560,7 @@ void* tcp_server_handler_thread(void* args) {
     return NULL;
 }
 
-int tcp_server_start_handler_thread(Socket_t client_socket, tcp_server_handle_t* server_handle) {
+int tcp_server_start_handler_thread(Socket_t client_socket, tcp_server_handle_t* const restrict server_handle) {
     int err = 0;
     LOG_DEBUG("starting handler thread");
     err = pthread_create(&(server_handle->handler_thread), NULL, tcp_server_handler_thread, (void*) client_socket);
@@ -561,7 +585,7 @@ void* tcp_server_listen_thread(void* args) {
     return NULL;
 }
 
-int tcp_server_start_listen_thread(tcp_server_handle_t* server_handle) {
+int tcp_server_start_listen_thread(tcp_server_handle_t* const restrict server_handle) {
     int err = 0;
 
     LOG_INFO("listening for incoming connections...");

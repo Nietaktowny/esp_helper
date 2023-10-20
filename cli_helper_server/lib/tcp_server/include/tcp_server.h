@@ -78,14 +78,14 @@ int tcp_server_init(tcp_server_handle_t** const server_handle, uint16_t listen_p
 
 int tcp_server_deinit(tcp_server_handle_t** server_handle);
 
-int tcp_server_start_listen_thread(tcp_server_handle_t* server_handle);
+int tcp_server_start_listen_thread(tcp_server_handle_t* const restrict server_handle);
 
 uint64_t tcp_server_hash_string(char* string);
 
-tcp_server_cmd_t* tcp_server_find_hashed_cmd(tcp_server_handle_t** server_handle, uint64_t fcmd_base, uint64_t fcmd);
+tcp_server_cmd_t* tcp_server_find_hashed_cmd(tcp_server_handle_t* const restrict server_handle, uint64_t fcmd_base, uint64_t fcmd);
 
-tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t** server_handle, char* cmd_base, char* cmd);
+tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t* const restrict server_handle, char* cmd_base, char* cmd);
 
-int tcp_server_register_cmd(tcp_server_handle_t** server_handle, void* (*cmd_fun)(void*), char* cmd_base, char* cmd);
+int tcp_server_register_cmd(tcp_server_handle_t* const restrict server_handle, void* (*cmd_fun)(void*), char* cmd_base, char* cmd);
 
-int tcp_server_start_handler_thread(Socket_t client_socket, tcp_server_handle_t* server_handle);
+int tcp_server_start_handler_thread(Socket_t client_socket, tcp_server_handle_t* const restrict server_handle);
