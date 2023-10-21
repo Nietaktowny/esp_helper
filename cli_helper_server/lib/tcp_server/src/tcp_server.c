@@ -462,6 +462,38 @@ int tcp_server_register_cmd(tcp_server_handle_t* const restrict server_handle, v
     return err;
 }
 
+tcp_server_cmd_node_t* tcp_server_find_string_node(tcp_server_handle_t* const restrict server_handle, char* cmd_base, char* cmd) {
+    if(!server_handle) {
+        LOG_ERROR("server_handle cannot be null");
+        return NULL;
+    }
+    
+    if(!cmd_base) {
+        LOG_ERROR("cmd_base cannot be null");
+        return NULL;
+    }
+
+    if(!cmd_base) {
+        LOG_ERROR("cmd_base cannot be null");
+        return NULL;
+    }
+
+    tcp_server_cmd_node_t* iterator = server_handle->list.head;
+    uint64_t fcmd_base = tcp_server_hash_string(cmd_base);
+    uint64_t fcmd = tcp_server_hash_string(cmd);
+
+    while (iterator != NULL)
+    {
+        if(iterator->cmd.cmd_base == fcmd_base && iterator->cmd.cmd == fcmd) {
+            LOG_DEBUG("node corresponding with base %lu and cmd %lu found", iterator->cmd.cmd_base, iterator->cmd.cmd);
+            return iterator;
+        }
+        iterator = iterator->next;
+    }
+    LOG_DEBUG("node with such command not found");
+    return NULL;
+}
+
 int tcp_server_delete_cmd_with_string(tcp_server_handle_t* server_handle, const char* cmd_base, const char* cmd) {
     int err = 0;
 
@@ -482,6 +514,15 @@ int tcp_server_delete_cmd_with_string(tcp_server_handle_t* server_handle, const 
         err = ERR_NULL_POINTER;
         return err;
     }
+
+    tcp_server_cmd_node_t* node_to_delete = tcp_server_find_string_node(server_handle, cmd_base, cmd);
+    if(!node_to_delete) {
+        LOG_WARN("not found such node to delete");
+        err = ERR_TCPS_NO_SUCH_CMD;
+        return ERR_TCPS_NO_SUCH_CMD;
+    }
+
+    
 
     return err;
 }

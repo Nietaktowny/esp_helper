@@ -58,6 +58,7 @@ typedef struct tcp_server_handle_obj tcp_server_handle_t;
 #define ERR_TCPS_WRONG_ADDR                     ERR_TCPS_BASE + 0x0001
 #define ERR_TCPS_WRONG_PORT                     ERR_TCPS_BASE + 0x0002
 #define ERR_TCPS_DUPLICATE_CMD                  ERR_TCPS_BASE + 0x0003
+#define ERR_TCPS_NO_SUCH_CMD                    ERR_TCPS_BASE + 0x0004
 
 
 int tcp_server_toggle_socket_block_mode(Socket_t socket);
@@ -85,6 +86,8 @@ uint64_t tcp_server_hash_string(char* string);
 tcp_server_cmd_t* tcp_server_find_hashed_cmd(tcp_server_handle_t* const restrict server_handle, uint64_t fcmd_base, uint64_t fcmd);
 
 tcp_server_cmd_t* tcp_server_find_string_cmd(tcp_server_handle_t* const restrict server_handle, char* cmd_base, char* cmd);
+
+tcp_server_cmd_node_t* tcp_server_find_string_node(tcp_server_handle_t* const restrict server_handle, char* cmd_base, char* cmd);
 
 int tcp_server_register_cmd(tcp_server_handle_t* const restrict server_handle, void* (*cmd_fun)(void*), char* cmd_base, char* cmd);
 

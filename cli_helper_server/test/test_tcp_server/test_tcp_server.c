@@ -562,7 +562,7 @@ void test_if_hash_string_fun_returns_err_on_null_string(void)
     TEST_ASSERT_EQUAL_UINT64_MESSAGE(0, err, "tcp_server_hash_string should return 0 on null string");
 }
 
-void test_if_find_hashed_cmd_finds_first_node(void)
+void test_if_find_hashed_cmd_finds_first_cmd(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -583,7 +583,7 @@ void test_if_find_hashed_cmd_finds_first_node(void)
     TEST_ASSERT_NOT_NULL_MESSAGE(founded_node, "founded node should not be null");
 }
 
-void test_if_find_hashed_cmd_finds_last_node(void)
+void test_if_find_hashed_cmd_finds_last_cmd(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -604,7 +604,7 @@ void test_if_find_hashed_cmd_finds_last_node(void)
     TEST_ASSERT_NOT_NULL_MESSAGE(founded_node, "founded node should not be null");
 }
 
-void test_if_find_string_cmd_finds_first_node(void)
+void test_if_find_string_cmd_finds_first_cmd(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -623,7 +623,7 @@ void test_if_find_string_cmd_finds_first_node(void)
     TEST_ASSERT_NOT_NULL_MESSAGE(founded_node, "founded node should not be null");
 }
 
-void test_if_find_string_cmd_finds_last_node(void)
+void test_if_find_string_cmd_finds_last_cmd(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -642,7 +642,7 @@ void test_if_find_string_cmd_finds_last_node(void)
     TEST_ASSERT_NOT_NULL_MESSAGE(founded_node, "founded node should not be null");
 }
 
-void test_if_find_hashed_cmd_finds_node_with_correct_base(void)
+void test_if_find_hashed_cmd_finds_cmd_with_correct_base(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -662,7 +662,7 @@ void test_if_find_hashed_cmd_finds_node_with_correct_base(void)
     TEST_ASSERT_EQUAL_MESSAGE(hbase, founded_node->cmd_base, "cmd_base of founded node differs from expected");
 }
 
-void test_if_find_string_cmd_finds_node_with_correct_base(void)
+void test_if_find_string_cmd_finds_cmd_with_correct_base(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -681,7 +681,7 @@ void test_if_find_string_cmd_finds_node_with_correct_base(void)
     TEST_ASSERT_EQUAL_MESSAGE(hbase, founded_node->cmd_base, "cmd_base of founded node differs from expected");
 }
 
-void test_if_find_hashed_cmd_finds_node_with_correct_cmd(void)
+void test_if_find_hashed_cmd_finds_cmd_with_correct_cmd(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -701,7 +701,7 @@ void test_if_find_hashed_cmd_finds_node_with_correct_cmd(void)
     TEST_ASSERT_EQUAL_MESSAGE(hcmd, founded_node->cmd, "cmd of founded node differs from expected");
 }
 
-void test_if_find_string_cmd_finds_node_with_correct_cmd(void)
+void test_if_find_string_cmd_finds_cmd_with_correct_cmd(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -720,7 +720,7 @@ void test_if_find_string_cmd_finds_node_with_correct_cmd(void)
     TEST_ASSERT_EQUAL_MESSAGE(hcmd, founded_node->cmd, "cmd of founded node differs from expected");
 }
 
-void test_if_find_hashed_cmd_finds_node_with_correct_fun(void)
+void test_if_find_hashed_cmd_finds_cmd_with_correct_fun(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -740,7 +740,7 @@ void test_if_find_hashed_cmd_finds_node_with_correct_fun(void)
     TEST_ASSERT_EQUAL_MESSAGE(test_cmd_fun, founded_node->cmd_fun, "function of founded node differs from expected");
 }
 
-void test_if_find_string_cmd_finds_node_with_correct_fun(void)
+void test_if_find_string_cmd_finds_cmd_with_correct_fun(void)
 {
     // given
     tcp_server_handle_t *server_handle = NULL;
@@ -884,6 +884,100 @@ void test_if_cmd_fun_returns_data(void) {
     TEST_ASSERT_EQUAL_MESSAGE(12345, data_from_fun, "data returned from function test_if_cmd_fun_returns_data_use_function different from expected");
 }
 
+void test_if_find_string_node_finds_first_node(void)
+{
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* founded_node = NULL;
+    char* base_to_find = "cmd_base";
+    char* cmd_to_find = "cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, base_to_find, cmd_to_find);
+    tcp_server_register_cmd(server_handle, test_other_fun, "asdddasdag", "dddd");
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "sdadasd", "qwe1313");
+    founded_node = tcp_server_find_string_node(server_handle, base_to_find, cmd_to_find);
+
+    // then
+    TEST_ASSERT_NOT_NULL_MESSAGE(founded_node, "founded node should not be null");
+}
+
+void test_if_find_string_node_finds_last_node(void)
+{
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* founded_node = NULL;
+    char* base_to_find = "cmd_base";
+    char* cmd_to_find = "cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_other_fun, "asdasdag", "asdasd");
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "dif_test_base", "dif_test_cmd");
+    tcp_server_register_cmd(server_handle, test_cmd_fun, base_to_find, cmd_to_find);
+    founded_node = tcp_server_find_string_node(server_handle, base_to_find, cmd_to_find);
+
+    // then
+    TEST_ASSERT_NOT_NULL_MESSAGE(founded_node, "founded node should not be null");
+}
+
+void test_if_find_string_node_finds_node_with_correct_base(void)
+{
+    // given
+    tcp_server_handle_t *server_handle = NULL;
+    tcp_server_cmd_node_t *founded_node = NULL;
+    char *base_to_find = "find_me_base!";
+    char *cmd_to_find = "find_me_cmd!";
+    uint64_t hbase = tcp_server_hash_string(base_to_find);
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, base_to_find, cmd_to_find);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "dif_test_base", "dif_test_cmd");
+    founded_node = tcp_server_find_string_node(server_handle, base_to_find, cmd_to_find);
+
+    // then
+    TEST_ASSERT_EQUAL_MESSAGE(hbase, founded_node->cmd.cmd_base, "cmd_base of founded node differs from expected");
+}
+
+void test_if_find_string_node_finds_node_with_correct_cmd(void)
+{
+    // given
+    tcp_server_handle_t *server_handle = NULL;
+    tcp_server_cmd_node_t *founded_node = NULL;
+    char *base_to_find = "find_me_base!";
+    char *cmd_to_find = "find_me_cmd!";
+    uint64_t hcmd = tcp_server_hash_string(cmd_to_find);
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, base_to_find, cmd_to_find);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "dif_test_base", "dif_test_cmd");
+    founded_node = tcp_server_find_string_node(server_handle, base_to_find, cmd_to_find);
+
+    // then
+    TEST_ASSERT_EQUAL_MESSAGE(hcmd, founded_node->cmd.cmd, "cmd of founded node differs from expected");
+}
+
+void test_if_find_string_node_finds_node_with_correct_fun(void)
+{
+    // given
+    tcp_server_handle_t *server_handle = NULL;
+    tcp_server_cmd_node_t *founded_node = NULL;
+    char *base_to_find = "find_me_base!";
+    char *cmd_to_find = "find_me_cmd!";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, base_to_find, cmd_to_find);
+    tcp_server_register_cmd(server_handle, test_other_fun, "dif_test_base", "dif_test_cmd");
+    founded_node = tcp_server_find_string_node(server_handle, base_to_find, cmd_to_find);
+
+    // then
+    TEST_ASSERT_EQUAL_MESSAGE(test_cmd_fun, founded_node->cmd.cmd_fun, "function of founded node differs from expected");
+}
+
 int main(void)
 {
     UNITY_BEGIN();
@@ -921,19 +1015,24 @@ int main(void)
     RUN_TEST(test_if_can_register_two_cmds_with_the_same_cmd_and_different_base);
     RUN_TEST(test_if_the_same_chars_return_the_same_hash);
     RUN_TEST(test_if_hash_string_fun_returns_err_on_null_string);
-    RUN_TEST(test_if_find_hashed_cmd_finds_first_node);
-    RUN_TEST(test_if_find_hashed_cmd_finds_last_node);
-    RUN_TEST(test_if_find_string_cmd_finds_first_node);
-    RUN_TEST(test_if_find_string_cmd_finds_last_node);
-    RUN_TEST(test_if_find_hashed_cmd_finds_node_with_correct_base);
-    RUN_TEST(test_if_find_string_cmd_finds_node_with_correct_base);
-    RUN_TEST(test_if_find_hashed_cmd_finds_node_with_correct_cmd);
-    RUN_TEST(test_if_find_string_cmd_finds_node_with_correct_cmd);
-    RUN_TEST(test_if_find_hashed_cmd_finds_node_with_correct_fun);
-    RUN_TEST(test_if_find_string_cmd_finds_node_with_correct_fun);
+    RUN_TEST(test_if_find_hashed_cmd_finds_first_cmd);
+    RUN_TEST(test_if_find_hashed_cmd_finds_last_cmd);
+    RUN_TEST(test_if_find_string_cmd_finds_first_cmd);
+    RUN_TEST(test_if_find_string_cmd_finds_last_cmd);
+    RUN_TEST(test_if_find_hashed_cmd_finds_cmd_with_correct_base);
+    RUN_TEST(test_if_find_string_cmd_finds_cmd_with_correct_base);
+    RUN_TEST(test_if_find_hashed_cmd_finds_cmd_with_correct_cmd);
+    RUN_TEST(test_if_find_string_cmd_finds_cmd_with_correct_cmd);
+    RUN_TEST(test_if_find_hashed_cmd_finds_cmd_with_correct_fun);
+    RUN_TEST(test_if_find_string_cmd_finds_cmd_with_correct_fun);
     RUN_TEST(test_if_register_cmd_can_add_multiple_cmds);
     RUN_TEST(test_if_can_run_cmd_fun_after_registering_cmd);
     RUN_TEST(test_if_can_pass_something_to_cmd_fun);
     RUN_TEST(test_if_cmd_fun_returns_data);
+    RUN_TEST(test_if_find_string_node_finds_first_node);
+    RUN_TEST(test_if_find_string_node_finds_last_node);
+    RUN_TEST(test_if_find_string_node_finds_node_with_correct_base);
+    RUN_TEST(test_if_find_string_node_finds_node_with_correct_cmd);
+    RUN_TEST(test_if_find_string_node_finds_node_with_correct_fun);
     return UNITY_END();
 }
