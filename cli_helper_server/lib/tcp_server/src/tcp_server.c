@@ -494,6 +494,37 @@ tcp_server_cmd_node_t* tcp_server_find_string_node(tcp_server_handle_t* const re
     return NULL;
 }
 
+tcp_server_cmd_node_t* tcp_server_find_previous_node(tcp_server_handle_t* const restrict server_handle, tcp_server_cmd_node_t* current_node) {
+    if(!server_handle) {
+        LOG_ERROR("server_handle cannot be null");
+        return NULL;
+    }
+
+    if(!current_node) {
+        LOG_ERROR("node used to search cannot be null");
+        return NULL;   
+    }
+
+    tcp_server_cmd_node_t* iterator = server_handle->list.head;
+
+    //if passed node is only node then it's the same as head, return then current node
+    if(iterator == current_node) {
+        return iterator;
+    }
+
+    while (iterator != NULL)
+    {
+        if(iterator->next == current_node) {
+            LOG_DEBUG("found previous node of %p with pointer to next: %p", current_node, iterator->next);
+            return iterator;
+        }
+        iterator = iterator->next;
+    }
+
+    LOG_DEBUG("not found any node");
+    return NULL;
+}
+
 int tcp_server_delete_cmd_with_string(tcp_server_handle_t* server_handle, const char* cmd_base, const char* cmd) {
     int err = 0;
 
@@ -522,7 +553,7 @@ int tcp_server_delete_cmd_with_string(tcp_server_handle_t* server_handle, const 
         return ERR_TCPS_NO_SUCH_CMD;
     }
 
-    
+
 
     return err;
 }

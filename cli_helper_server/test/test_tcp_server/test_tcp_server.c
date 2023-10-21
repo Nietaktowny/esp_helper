@@ -1244,6 +1244,145 @@ void test_if_find_previous_node_finds_some_node(void) {
     TEST_ASSERT_NOT_NULL_MESSAGE(previous_node, "previous node should not be null");
 }
 
+void test_if_find_previous_node_returns_null_on_null_handle(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* current_node = NULL;
+    tcp_server_cmd_node_t* previous_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+    char* second_base = "im a second base";
+    char* second_cmd = "im a second cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_register_cmd(server_handle, test_other_fun, second_base, second_cmd);
+    current_node = tcp_server_find_string_node(server_handle, second_base, second_cmd);
+    TEST_ASSERT_NOT_NULL(current_node);
+    previous_node = tcp_server_find_previous_node(NULL, current_node);
+
+    // then
+    TEST_ASSERT_NULL_MESSAGE(previous_node, "previous node should be null when handle is null");
+}
+
+void test_if_find_previous_node_returns_null_on_null_current_node(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* previous_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+    char* second_base = "im a second base";
+    char* second_cmd = "im a second cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_register_cmd(server_handle, test_other_fun, second_base, second_cmd);
+    previous_node = tcp_server_find_previous_node(server_handle, NULL);
+
+    // then
+    TEST_ASSERT_NULL_MESSAGE(previous_node, "previous node should be null on null current node");
+}
+
+void test_if_find_previous_node_finds_when_no_previous_node(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* current_node = NULL;
+    tcp_server_cmd_node_t* previous_node = NULL;
+    char* second_base = "im a second base";
+    char* second_cmd = "im a second cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_other_fun, second_base, second_cmd);
+    current_node = tcp_server_find_string_node(server_handle, second_base, second_cmd);
+    TEST_ASSERT_NOT_NULL(current_node);
+    previous_node = tcp_server_find_previous_node(server_handle, current_node);
+
+    // then
+    TEST_ASSERT_NOT_NULL_MESSAGE(previous_node, "previous node should not be null");
+}
+
+void test_if_find_previous_node_finds_when_passed_head(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* previous_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+    char* second_base = "im a second base";
+    char* second_cmd = "im a second cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_register_cmd(server_handle, test_other_fun, second_base, second_cmd);
+    previous_node = tcp_server_find_previous_node(server_handle, server_handle->list.head);
+
+    // then
+    TEST_ASSERT_NOT_NULL_MESSAGE(previous_node, "previous node should not be null when passed head");
+}
+
+void test_if_find_previous_node_finds_head_when_passed_head(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* previous_node = NULL;
+    tcp_server_cmd_node_t* head_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+    char* second_base = "im a second base";
+    char* second_cmd = "im a second cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_register_cmd(server_handle, test_other_fun, second_base, second_cmd);
+    head_node = server_handle->list.head;
+    previous_node = tcp_server_find_previous_node(server_handle, head_node);
+
+    // then
+    TEST_ASSERT_EQUAL_PTR_MESSAGE(head_node, previous_node, "previous node should be equal to head if head is passed");
+}
+
+void test_if_find_previous_node_finds_when_passed_tail(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* previous_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+    char* second_base = "im a second base";
+    char* second_cmd = "im a second cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_register_cmd(server_handle, test_other_fun, second_base, second_cmd);
+    previous_node = tcp_server_find_previous_node(server_handle, server_handle->list.tail);
+
+    // then
+    TEST_ASSERT_NOT_NULL_MESSAGE(previous_node, "previous node should not be null when passed tail");
+}
+
+void test_if_find_previous_node_finds_tail_on_one_node(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* previous_node = NULL;
+    tcp_server_cmd_node_t* tail_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tail_node = server_handle->list.tail;
+    previous_node = tcp_server_find_previous_node(server_handle, tail_node);
+
+    // then
+    TEST_ASSERT_EQUAL_PTR_MESSAGE(tail_node, previous_node, "previous node should be equal to tail if there is only one node");
+}
+
+
+
 int main(void)
 {
     UNITY_BEGIN();
@@ -1303,7 +1442,6 @@ int main(void)
     RUN_TEST(test_if_find_string_cmd_doesnt_find_cmd_with_incorrect_base);
     RUN_TEST(test_if_find_string_cmd_doesnt_find_cmd_with_incorrect_cmd);
     RUN_TEST(test_if_find_string_cmd_doesnt_find_cmd_when_no_cmd_added);
-
     RUN_TEST(test_if_register_cmd_can_add_multiple_cmds);
     RUN_TEST(test_if_can_run_cmd_fun_after_registering_cmd);
     RUN_TEST(test_if_can_pass_something_to_cmd_fun);
@@ -1317,5 +1455,13 @@ int main(void)
     RUN_TEST(test_if_find_string_node_returns_null_on_null_base);
     RUN_TEST(test_if_find_string_node_returns_null_on_null_cmd);
     RUN_TEST(test_if_find_previous_node_finds_some_node);
+    RUN_TEST(test_if_find_previous_node_returns_null_on_null_handle);
+    RUN_TEST(test_if_find_previous_node_returns_null_on_null_current_node);
+    RUN_TEST(test_if_find_previous_node_finds_when_no_previous_node);
+    RUN_TEST(test_if_find_previous_node_finds_when_passed_head);
+    RUN_TEST(test_if_find_previous_node_finds_head_when_passed_head);
+    RUN_TEST(test_if_find_previous_node_finds_when_passed_tail);
+    RUN_TEST(test_if_find_previous_node_finds_tail_on_one_node);
+
     return UNITY_END();
 }
