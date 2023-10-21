@@ -20,6 +20,11 @@ int main(int argc, char **argv) {
     if(err != 0) {
         LOG_FATAL("error in tcp_server: %d,\n%s", err, strerror(err));
     }
+
+    tcp_server_register_cmd(server_handle, function, "base", "cmd");
+    tcp_server_register_cmd(server_handle,function ,"another_base","another_cmd");
+    tcp_server_delete_cmd_with_string(server_handle, "base", "cmd");
+
     //tcp_server_start_listen_thread(server_handle);
     
 

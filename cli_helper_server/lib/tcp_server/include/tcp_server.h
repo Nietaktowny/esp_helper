@@ -93,4 +93,6 @@ tcp_server_cmd_node_t* tcp_server_find_previous_node(tcp_server_handle_t* const 
 
 int tcp_server_register_cmd(tcp_server_handle_t* const restrict server_handle, void* (*cmd_fun)(void*), char* cmd_base, char* cmd);
 
+int tcp_server_delete_cmd_with_string(tcp_server_handle_t* const restrict server_handle, const char* cmd_base, const char* cmd);
+
 int tcp_server_start_handler_thread(Socket_t client_socket, tcp_server_handle_t* const restrict server_handle);

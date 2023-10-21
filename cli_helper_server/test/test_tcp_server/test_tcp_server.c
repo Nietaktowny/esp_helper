@@ -337,6 +337,36 @@ void test_if_head_equals_tail_after_adding_one_node(void)
     TEST_ASSERT_EQUAL_PTR_MESSAGE(server_handle->list.head, server_handle->list.tail, "tail should equal head after adding one node");
 }
 
+void test_if_head_differs_from_tail_after_adding_two_nodes(void)
+{
+    // given
+    tcp_server_handle_t *server_handle = NULL;
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "test_base", "test_cmd");
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "asdasd", "testasdasd_cmd");
+
+    // then
+    TEST_ASSERT_NOT_EQUAL_MESSAGE(server_handle->list.head, server_handle->list.tail, "tail should differ from head after adding two nodes");
+}
+
+void test_if_head_differs_from_tail_after_adding_multiple_nodes(void)
+{
+    // given
+    tcp_server_handle_t *server_handle = NULL;
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "test_base", "test_cmd");
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "asdasd", "testasdasd_cmd");
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "asdasdasd", "aaaaa");
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "1234xz", "dfgh");
+
+    // then
+    TEST_ASSERT_NOT_EQUAL_MESSAGE(server_handle->list.head, server_handle->list.tail, "tail should differ from head after adding multiple nodes");
+}
+
 void test_if_register_cmd_returns_zero_on_correct_params(void)
 {
     // given
@@ -1381,7 +1411,143 @@ void test_if_find_previous_node_finds_tail_on_one_node(void) {
     TEST_ASSERT_EQUAL_PTR_MESSAGE(tail_node, previous_node, "previous node should be equal to tail if there is only one node");
 }
 
+void test_if_delete_node_returns_zero(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    int err = -1;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
 
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    err = tcp_server_delete_cmd_with_string(server_handle, first_base, first_cmd);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(0, err, "tcp_server_delete_cmd_with_string should return zero if parameters are right");
+}
+
+void test_if_node_is_deleted_when_it_is_only_one(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* current_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_delete_cmd_with_string(server_handle, first_base, first_cmd);
+    current_node = tcp_server_find_string_node(server_handle, first_base, first_cmd);
+
+    //then
+    TEST_ASSERT_NULL_MESSAGE(current_node, "node should be deleted when it's only one");
+}
+
+void test_if_head_is_null_after_deleting_only_one_node(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_delete_cmd_with_string(server_handle, first_base, first_cmd);
+
+    //then
+    TEST_ASSERT_NULL_MESSAGE(server_handle->list.head, "head should be null after deleting only one node");
+}
+
+void test_if_tail_is_null_after_deleting_only_one_node(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_delete_cmd_with_string(server_handle, first_base, first_cmd);
+
+    //then
+    TEST_ASSERT_NULL_MESSAGE(server_handle->list.tail, "tail should be null after deleting only one node");
+}
+
+void test_if_node_is_deleted_when_there_are_two_and_it_is_head(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* current_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, "asdasdasd", "asdwew");
+    tcp_server_delete_cmd_with_string(server_handle, first_base, first_cmd);
+    current_node = tcp_server_find_string_node(server_handle, first_base, first_cmd);
+
+    //then
+    TEST_ASSERT_NULL_MESSAGE(current_node, "node should be deleted when it's only one");
+}
+
+void test_if_after_deleting_one_node_from_two_last_one_equals_head(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* current_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+    char* left_base = "i should be head";
+    char* left_cmd = "i should be left";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, left_base, left_cmd);
+    tcp_server_delete_cmd_with_string(server_handle, first_base, first_cmd);
+    current_node = tcp_server_find_string_node(server_handle, left_base, left_cmd);
+
+    //then
+    TEST_ASSERT_EQUAL_PTR_MESSAGE(server_handle->list.head, current_node, "after deleting one node from two the second one should be equal to head");
+}
+
+void test_if_after_deleting_one_node_from_two_last_one_equals_tail(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    tcp_server_cmd_node_t* current_node = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+    char* left_base = "i should be head";
+    char* left_cmd = "i should be left";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, left_base, left_cmd);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_delete_cmd_with_string(server_handle, first_base, first_cmd);
+    current_node = tcp_server_find_string_node(server_handle, left_base, left_cmd);
+
+    //then
+    TEST_ASSERT_EQUAL_PTR_MESSAGE(server_handle->list.tail, current_node, "after deleting one node from two the second one should be equal to tail");
+}
+
+void test_if_tail_equals_head_after_deleting_one_node_from_two(void) {
+    // given
+    tcp_server_handle_t* server_handle = NULL;
+    char* first_base = "im a first base";
+    char* first_cmd = "im a first cmd";
+
+    // when
+    tcp_server_init(&server_handle, TEST_PORT, TEST_ADDRESS);
+    tcp_server_register_cmd(server_handle, test_cmd_fun, first_base, first_cmd);
+    tcp_server_register_cmd(server_handle, test_other_fun, "asdasd", "asdasdawqe");
+    tcp_server_delete_cmd_with_string(server_handle, first_base, first_cmd);
+    tcp_server_find_string_node(server_handle, first_base, first_cmd);
+
+    //then
+    TEST_ASSERT_NULL_MESSAGE(server_handle->list.tail, "tail should be null after deleting only one node");
+}
 
 int main(void)
 {
@@ -1406,6 +1572,8 @@ int main(void)
     RUN_TEST(test_if_head_is_not_null_after_adding_node);
     RUN_TEST(test_if_tail_is_not_null_after_adding_node);
     RUN_TEST(test_if_head_equals_tail_after_adding_one_node);
+    RUN_TEST(test_if_head_differs_from_tail_after_adding_two_nodes);
+    RUN_TEST(test_if_head_differs_from_tail_after_adding_multiple_nodes);
     RUN_TEST(test_if_register_cmd_returns_zero_on_correct_params);
     RUN_TEST(test_if_register_cmd_returns_err_on_null_handle);
     RUN_TEST(test_if_register_cmd_returns_err_on_null_cmd_base);
@@ -1462,6 +1630,12 @@ int main(void)
     RUN_TEST(test_if_find_previous_node_finds_head_when_passed_head);
     RUN_TEST(test_if_find_previous_node_finds_when_passed_tail);
     RUN_TEST(test_if_find_previous_node_finds_tail_on_one_node);
-
+    RUN_TEST(test_if_node_is_deleted_when_it_is_only_one);
+    RUN_TEST(test_if_head_is_null_after_deleting_only_one_node);
+    RUN_TEST(test_if_tail_is_null_after_deleting_only_one_node);
+    RUN_TEST(test_if_node_is_deleted_when_there_are_two_and_it_is_head);
+    RUN_TEST(test_if_after_deleting_one_node_from_two_last_one_equals_head);
+    RUN_TEST(test_if_after_deleting_one_node_from_two_last_one_equals_tail);
+    RUN_TEST(test_if_delete_node_returns_zero);
     return UNITY_END();
 }

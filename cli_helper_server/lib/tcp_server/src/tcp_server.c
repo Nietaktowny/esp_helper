@@ -439,9 +439,12 @@ int tcp_server_register_cmd(tcp_server_handle_t* const restrict server_handle, v
         return err;
     }
 
-    tcp_server_cmd_node_t* current = NULL;
-
-    current = malloc(sizeof(tcp_server_cmd_node_t));
+    tcp_server_cmd_node_t* current = malloc(sizeof(tcp_server_cmd_node_t));
+    if(current == NULL) {
+        LOG_ERROR("unable to allocate memory for cmd");
+        err = ERR_NO_MEMORY;
+        return err;
+    }
     current->cmd.cmd = h_cmd;
     current->cmd.cmd_base = h_cmd_base;
     current->cmd.cmd_fun = cmd_fun;
@@ -515,7 +518,7 @@ tcp_server_cmd_node_t* tcp_server_find_previous_node(tcp_server_handle_t* const 
     while (iterator != NULL)
     {
         if(iterator->next == current_node) {
-            LOG_DEBUG("found previous node of %p with pointer to next: %p", current_node, iterator->next);
+            LOG_DEBUG("found previous node of %p with pointer to next: %p", (void*) current_node,(void*) iterator->next);
             return iterator;
         }
         iterator = iterator->next;
@@ -525,7 +528,7 @@ tcp_server_cmd_node_t* tcp_server_find_previous_node(tcp_server_handle_t* const 
     return NULL;
 }
 
-int tcp_server_delete_cmd_with_string(tcp_server_handle_t* server_handle, const char* cmd_base, const char* cmd) {
+int tcp_server_delete_cmd_with_string(tcp_server_handle_t* const restrict server_handle, const char* cmd_base, const char* cmd) {
     int err = 0;
 
     if(!server_handle) {
@@ -546,6 +549,11 @@ int tcp_server_delete_cmd_with_string(tcp_server_handle_t* server_handle, const 
         return err;
     }
 
+    if(server_handle->list.head == NULL && server_handle->list.tail == NULL) {
+        LOG_WARN("no nodes to delete");
+        return 0;
+    } 
+
     tcp_server_cmd_node_t* node_to_delete = tcp_server_find_string_node(server_handle, cmd_base, cmd);
     if(!node_to_delete) {
         LOG_WARN("not found such node to delete");
@@ -553,8 +561,50 @@ int tcp_server_delete_cmd_with_string(tcp_server_handle_t* server_handle, const 
         return ERR_TCPS_NO_SUCH_CMD;
     }
 
+    //when node_to delete is the only node
+    if(node_to_delete == server_handle->list.head && node_to_delete == server_handle->list.tail) {
+        server_handle->list.head = NULL;
+        server_handle->list.tail = NULL;
+        free(node_to_delete);
+        return err;
+    }
 
+    //when node to delete is first node
+    if(node_to_delete == server_handle->list.head && node_to_delete != server_handle->list.tail) {
+        //second is going now to be fist
+        server_handle->list.head = node_to_delete->next;
+        //delete first
+        free(node_to_delete);
+        return err;
+    }
 
+    //when node to delete is last node
+    if(node_to_delete == server_handle->list.tail && node_to_delete != server_handle->list.head) {
+        //find previous node
+        tcp_server_cmd_node_t* previous_node = tcp_server_find_previous_node(server_handle, node_to_delete);
+        if(!previous_node) {
+            LOG_WARN("not found previous node");
+            err = ERR_TCPS_NO_SUCH_CMD;
+            return ERR_TCPS_NO_SUCH_CMD;        
+        }
+        //make previous the last
+        server_handle->list.tail = previous_node;
+        //delete
+        free(node_to_delete);
+        return err;
+    }
+
+    //when node to delete has neighbours from both sides
+    //find previous
+    tcp_server_cmd_node_t* previous_node = tcp_server_find_previous_node(server_handle, node_to_delete);
+    if(!previous_node) {
+        LOG_WARN("not found previous node");
+        err = ERR_TCPS_NO_SUCH_CMD;
+        return ERR_TCPS_NO_SUCH_CMD;        
+    }
+    //link previous to next
+    previous_node->next = node_to_delete->next;
+    free(node_to_delete);
     return err;
 }
 
