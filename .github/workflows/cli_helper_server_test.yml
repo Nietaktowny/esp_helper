@@ -2,9 +2,9 @@ name: Test cli_helper_server
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "tcp_server_develop" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "tcp_server_develop" ]
 
 jobs:
   build:
