@@ -1,4 +1,5 @@
 add_subdirectory(test_tcp_server)
+add_subdirectory(test_arena)
 
 include(FetchContent)
 FetchContent_Declare(

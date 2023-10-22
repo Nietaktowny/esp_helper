@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include "log.h"
 #include "error.h"
+#include "arena.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <inttypes.h>

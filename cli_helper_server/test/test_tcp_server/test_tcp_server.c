@@ -5,7 +5,6 @@
 #include "tcp_server_internal.h"
 #include "error.h"
 #include <unistd.h>
-#include "log.h"
 #include "error.h"
 #include <stdio.h>
 #include <stdlib.h>
