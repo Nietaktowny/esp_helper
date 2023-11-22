@@ -14,6 +14,24 @@ typedef int err_c_t;
         err = err_code;                              \
         Throw(err)                                   \
 
+#define ERR_C_CHECK_NULL_PTR(ptr, message)                \
+    if(!(void*)ptr) {                               \
+        message;                                    \
+        return ERR_NULL_POINTER;                    \
+    }
+
+#define ERR_C_CHECK_MEM_ALLOC(ptr, message)                \
+    if(!(void*)ptr) {                               \
+        message;                                    \
+        return ERR_NO_MEMORY;                    \
+    }
+
+#define ERR_C_CHECK_ERROR(statement, message)         \
+    err_mt val = statement;                      \
+    if(!val) {                            \
+        message;                            \
+        return val;                       \
+    }
 
 typedef enum {
         ERR_C_OK = 0,

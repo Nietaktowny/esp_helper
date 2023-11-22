@@ -1,0 +1,8 @@
+{
+	"name": "memory_utils",
+	"version": "1.0.0",
+	"keywords": "keyword",
+	"description": "Basic memory helping functions.",
+	"frameworks": ["*"],
+	"platforms": ["*"]
+}
