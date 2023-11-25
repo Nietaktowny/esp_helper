@@ -1,8 +1,8 @@
 {
-    "name": "memory_utils",
-    "version": "1.0.2",
-    "keywords": "memory, base, utilities, utils",
-    "description": "Basic memory utils.",
+    "name": "linked_list",
+    "version": "1.0.3",
+    "keywords": "linked, list",
+    "description": "Single bound linked list.",
     "authors":
     {
         "name": "nietaktowny",
@@ -15,7 +15,8 @@
     },
     "dependencies": {
         "nietaktowny/logger": "~1.0.0",
-        "nietaktowny/errors": "*"
+        "nietaktowny/errors": "*",
+        "nietaktowny/memory_utils": "*"
       },
     "frameworks": ["*"],
     "platforms": ["*"]

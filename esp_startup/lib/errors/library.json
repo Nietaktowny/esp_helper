@@ -1,8 +1,8 @@
 {
-    "name": "memory_utils",
+    "name": "errors",
     "version": "1.0.2",
-    "keywords": "memory, base, utilities, utils",
-    "description": "Basic memory utils.",
+    "keywords": "error, errors",
+    "description": "Error handling utilities.",
     "authors":
     {
         "name": "nietaktowny",
@@ -14,8 +14,7 @@
         "url": "https://github.com/Nietaktowny/base_libraries"
     },
     "dependencies": {
-        "nietaktowny/logger": "~1.0.0",
-        "nietaktowny/errors": "*"
+        "nietaktowny/logger": "~1.0.0"
       },
     "frameworks": ["*"],
     "platforms": ["*"]

@@ -1,8 +1,8 @@
 {
-    "name": "memory_utils",
+    "name": "arena",
     "version": "1.0.2",
-    "keywords": "memory, base, utilities, utils",
-    "description": "Basic memory utils.",
+    "keywords": "memory, arena",
+    "description": "Simple memory arena.",
     "authors":
     {
         "name": "nietaktowny",

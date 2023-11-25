@@ -1,8 +1,8 @@
 {
-    "name": "memory_utils",
+    "name": "tcp_driver",
     "version": "1.0.2",
-    "keywords": "memory, base, utilities, utils",
-    "description": "Basic memory utils.",
+    "keywords": "driver, tcp",
+    "description": "TCP socket driver.",
     "authors":
     {
         "name": "nietaktowny",
@@ -15,7 +15,8 @@
     },
     "dependencies": {
         "nietaktowny/logger": "~1.0.0",
-        "nietaktowny/errors": "*"
+        "nietaktowny/errors": "*",
+        "nietaktowny/memory_utils": "*"
       },
     "frameworks": ["*"],
     "platforms": ["*"]

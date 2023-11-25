@@ -1,0 +1,5 @@
+dependencies:
+  idf: '>=5.0' 
+description: Basic memory helping functions.. 
+url: 
+version: 1.0.0
