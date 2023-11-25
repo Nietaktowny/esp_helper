@@ -1,387 +1,371 @@
-#include "tcp_controller.h"
-#include "tcp_c_events.h"
-#include "err_controller.h"
-#include "wifi_controller.h"
-
-#include "esp_log.h"
-#include "lwip/err.h"
+#include "tcp_driver.h"
+#include "tcp_driver_internal.h"
+#include "tcp_driver_errors.h"
+#include "logger.h"
+#include "memory_utils.h"
+#include "errors.h"
+#include "errors_list.h"
+#include "lwip/inet.h"
 #include "lwip/sockets.h"
-#include "lwip/sys.h"
-#include <lwip/netdb.h>
-#include "freertos/task.h"
-#include "inttypes.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/event_groups.h"
-#include "freertos/task.h"
-#include "freertos/semphr.h"
+#include "ping/ping_sock.h"
+#include "lwip/inet.h"
+#include "lwip/netdb.h"
+#include "lwip/sockets.h"
+#include <errno.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <sys/types.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <string.h>
 
+char* tcp_get_client_socket_ip(socket_t socket) {
+    int err = 0;
+    struct sockaddr_in addr = {0};
+    socklen_t namelen = sizeof(addr);
 
-static const char* TAG = "tcp_controller";                              ///< Tcp controller log tag.
-
-
-static void tcp_c_prepare_sock_addr(struct sockaddr_storage *dest_addr);
-static int tcp_c_prepare_listen_socket(void);
-static int tcp_c_bind_socket(int socket, struct sockaddr_storage *dest_addr);
-static int tcp_c_listen_on_socket(int socket);
-static int tcp_c_accept_socket(int socket);
-static void tcp_c_handler_task(void* args);
-static void tcp_c_listen_task(void* args);
-//static int tcp_c_close_socket(int socket);
-
-static EventGroupHandle_t tcp_event_group;                               ///< Freertos event group used to communicate wit tcp controller.
-static TaskHandle_t tcp_listen_task_handle;                              ///< Freertos task handle of tcp controller loop task.
-static TaskHandle_t tcp_handler_task_handle;                                 
-static SemaphoreHandle_t tcp_send_mutex;
-static SemaphoreHandle_t tcp_receive_mutex;
-static SemaphoreHandle_t tcp_conn_socket_mutex;
-
-static int listen_socket = 0;                                            ///< Socket to listen on.
-static int connected_socket = 0;                                         ///< Socket on which accepted sockets are stored.
-
-/**
- * @brief Prepare destination address.
- * 
- * @param dest_addr Destination address where to store result.
- */
-static void tcp_c_prepare_sock_addr(struct sockaddr_storage *dest_addr) {
-    struct sockaddr_in *dest_addr_ip4 = (struct sockaddr_in *)dest_addr;
-    dest_addr_ip4->sin_addr.s_addr = htonl(INADDR_ANY);
-    dest_addr_ip4->sin_family = AF_INET;
-    dest_addr_ip4->sin_port = htons(TCP_C_PORT);
-}
-
-/**
- * @brief Create socket to listen on.
- * 
- * @return int Socket descriptor.
- */
-static int tcp_c_prepare_listen_socket(void) {
-    int listen_sock = socket(TCP_C_ADDR_FAMILY, SOCK_STREAM, TCP_C_IP_PROTOCOL);
-    volatile err_c_t err = ERR_C_OK;
-    Try {
-        if (listen_sock < 0) {
-            ERR_C_SET_AND_THROW_ERR(err, errno);
-        }
-        int opt = 1;
-        setsockopt(listen_sock, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
-
-    } Catch(err) {
-        ESP_LOGE(TAG, "Unable to create socket: errno %d", err);
-        TCP_C_LOG_ERRNO(err)
-        Throw(err);
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("error %d: socket is invalid", ERR_TCP_INVALID_SOCKET);
+        return NULL;
     }
 
-    return listen_sock;
-}
-
-/**
- * @brief Bin socket to specified destination address.
- * 
- * @param socket Socket descriptor. 
- * @param dest_addr Destination address.
- * @return int error code
- */
-static int tcp_c_bind_socket(int socket, struct sockaddr_storage *dest_addr) {
-    volatile err_c_t err = ERR_C_OK;
-    Try {
-        err = bind(socket, (struct sockaddr *)dest_addr, sizeof(struct sockaddr_storage));
-        ERR_C_CHECK_AND_THROW_ERR(err);
-    } Catch(err) {
+    err = getpeername(socket, (struct sockaddr*)&addr, &namelen);
+    if(err != 0) {
         err = errno;
-        ESP_LOGE(TAG, "Socket unable to bind: errno %d", err);
-        TCP_C_LOG_ERRNO(err)
+        LOG_ERROR("error: %d when getting socket name: %s", err, error_to_name(err));
+        return NULL;
+    }
+    return inet_ntoa(addr.sin_addr);
+}
+
+int tcp_get_client_socket_port(socket_t socket) {
+    int err = 0;
+    struct sockaddr_in addr = {0};
+    socklen_t namelen = sizeof(addr);
+
+    if(socket == INVALID_SOCKET) {
+        err = ERR_TCP_INVALID_SOCKET;
+        LOG_ERROR("error %d: socket is invalid", err);
+        return -1;
     }
 
+    err = getpeername(socket, (struct sockaddr*)&addr, &namelen);
+    if(err != 0) {
+        err = errno;
+        LOG_ERROR("error %d when getting socket name: %s", err, error_to_name(err));
+        return -1;
+    }
+
+    return (int)ntohs(addr.sin_port);
+}
+
+char* tcp_get_bound_socket_ip(socket_t socket) {
+    int err = 0;
+    struct sockaddr_in addr = {0};
+    socklen_t namelen = sizeof(addr);
+
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("error %d: socket is invalid", ERR_TCP_INVALID_SOCKET);
+        return NULL;
+    }
+
+    err = getsockname(socket, (struct sockaddr*)&addr, &namelen);
+    if(err != 0) {
+        err = errno;
+        LOG_ERROR("error %d when getting socket name: %s", err, error_to_name(err));
+        return NULL;
+    }
+    return inet_ntoa(addr.sin_addr);
+}
+
+int tcp_get_bound_socket_port(socket_t socket) {
+    int err = 0;
+    struct sockaddr_in addr = {0};
+    socklen_t namelen = sizeof(addr);
+
+    if(socket == INVALID_SOCKET) {
+        err = ERR_TCP_INVALID_SOCKET;
+        LOG_ERROR("error %d: socket is invalid", err);
+        return -1;
+    }
+
+    err = getsockname(socket, (struct sockaddr*)&addr, &namelen);
+    if(err != 0) {
+        err = errno;
+        LOG_ERROR("error %d when getting socket name: %s", err, error_to_name(err));
+        return -1;
+    }
+
+    return (int)ntohs(addr.sin_port);
+}
+
+char* tcp_get_option_name(int id) {
+    switch (id)
+    {
+    case SO_REUSEADDR:
+        return "SO_REUSEADDR";
+    case SO_REUSEPORT:
+        return "SO_REUSEPORT";
+    case SO_KEEPALIVE:
+        return "SO_KEEPALIVE";
+    case SO_ACCEPTCONN:
+        return "SO_ACCEPTCONN";
+    case SO_DEBUG:
+        return "SO_DEBUG";  
+    case SO_ERROR:
+        return "SO_ERROR";
+    case SO_LINGER:
+        return "SO_LINGER";     
+    case SO_OOBINLINE:
+        return "SO_OOBINLINE";
+    case SO_RCVBUF:
+        return "SO_RCVBUF";
+    case SO_RCVLOWAT:
+        return "SO_RCVLOWAT";  
+    case SO_SNDBUF:
+        return "SO_SNDBUF";
+    case SO_TYPE:
+        return "SO_TYPE";                                          
+    default:
+        return "not known option";
+    }
+}
+
+int tcp_set_socket_option(socket_t socket, int level, int option) {
+    int err = 0;
+    int value = 1;
+
+    if(setsockopt(socket, level, option, &value, sizeof(value)) != INVALID_SOCKET) {
+        LOG_DEBUG("option: %s set successfully on socket: %d", tcp_get_option_name(option), socket);
+    } else {
+        err = errno;
+        LOG_ERROR("error: %d when setting socket: %d option: %s is: %s", err, socket, tcp_get_option_name(option), error_to_name(err));
+        return err;
+    }
     return err;
 }
 
-/**
- * @brief Listen on passed socket.
- * 
- * @param socket Socket descriptor.
- * @return int Error code.
- */
-static int tcp_c_listen_on_socket(int socket) {
-    volatile err_c_t err = ERR_C_OK;
-    Try {
-        err = listen(socket, TCP_C_BACKLOG_NUM);
-        ERR_C_CHECK_AND_THROW_ERR(err);
-    } Catch(err) {
-        err = errno;
-        ESP_LOGE(TAG, "Error occurred during listen: errno %d", err);
-        TCP_C_LOG_ERRNO(err)
-    }
+int tcp_get_socket_option(socket_t socket, int level, int option) {
+    int err = 0;
+    int value = 0;
+    socklen_t size = sizeof(value);
 
+    if(getsockopt(socket, level, option, &value, &size) != INVALID_SOCKET) {
+        LOG_DEBUG("option: %s result on socket: %d is: %d", tcp_get_option_name(option), socket, value);
+        return value;
+    } else {
+        err = errno;
+        LOG_ERROR("error: %d when setting socket: %d option: %s is: %s", err, socket, tcp_get_option_name(option), error_to_name(err));
+        return err;
+    }
     return err;
 }
 
-/**
- * @brief Accept connection on socket.
- * 
- * @param socket Socket on which listening was performed.
- * @return int Socket on which connection was accepted.
- */
-static int tcp_c_accept_socket(int socket) {
-    volatile err_c_t err = ERR_C_OK;
-    volatile int sock;
-    char addr_str[128];
-    struct sockaddr_storage source_addr; // Large enough for both IPv4 or IPv6
-    socklen_t addr_len = sizeof(source_addr);
-    int keep_alive = TCP_C_KEEPALIVE;
-    int keep_idle = TCP_C_KEEPALIVE_IDLE;
-    int keep_interval = TCP_C_KEEPALIVE_INTERVAL;
-    int keep_count = TCP_C_KEEPALIVE_COUNT;
+int tcp_create_socket(socket_t* sock) {
+    int err = 0;
+    CHECK_NULL_PTR(sock, LOG_ERROR("socket cannot be null"));
 
-    Try {
-        sock = accept(socket, (struct sockaddr *)&source_addr, &addr_len);
-        if (sock < 0) {
-            ERR_C_SET_AND_THROW_ERR(err, errno);
-        }
+    LOG_DEBUG("preparing socket...");
+    *sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if(*sock == INVALID_SOCKET) {
+        err = errno;
+        LOG_ERROR("error when preparing socket: %s", error_to_name(err));
+        return err;
+    }
+    LOG_DEBUG("created socket: %d", *sock);
+    return err;
+}
 
-        // Set tcp keepalive option
-        setsockopt(sock, SOL_SOCKET, SO_KEEPALIVE, &keep_alive, sizeof(int));
-        setsockopt(sock, IPPROTO_TCP, TCP_KEEPIDLE, &keep_idle, sizeof(int));
-        setsockopt(sock, IPPROTO_TCP, TCP_KEEPINTVL, &keep_interval, sizeof(int));
-        setsockopt(sock, IPPROTO_TCP, TCP_KEEPCNT, &keep_count, sizeof(int));
+int tcp_set_reuse_addr(socket_t socket) {
+    int err = 0;
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("socket: %d is invalid.", socket);
+        return ERR_TCP_INVALID_SOCKET;
+    }
+
+    err = tcp_set_socket_option(socket, SOL_SOCKET, SO_REUSEADDR);
+    if(err != 0) {
+        return err;
+    }
+
+    err = tcp_set_socket_option(socket, SOL_SOCKET, SO_REUSEPORT);
+    if(err != 0) {
+        return err;
+    }
+    LOG_DEBUG("SO_REUSEADDR and SO_REUSEPORT were set on socket: %d", socket);
+    return err;
+}
+
+int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* addr_ipv4) {
+    int err = 0;
+    CHECK_NULL_PTR(address, LOG_ERROR("address cannot be null"));
+    CHECK_NULL_PTR(addr_ipv4, LOG_ERROR("pointer to address structure cannot be null"));
+    if(port < 1024 && port != 0) {
+        LOG_ERROR("cannot use well-known ports");
+        return ERR_TCP_INVALID_PORT;
+    }
+    if(port == 0) {
+        LOG_WARN("port set to 0, using wildcard port");
+    }
         
-        // Convert ip address to string
-        if (source_addr.ss_family == PF_INET) {
-            inet_ntoa_r(((struct sockaddr_in *)&source_addr)->sin_addr, addr_str, sizeof(addr_str) - 1);
-        }
-
-        ESP_LOGD(TAG, "Socket accepted ip address: %s", addr_str);
-    } Catch (err) {
-        ESP_LOGE(TAG, "Unable to accept connection: errno %d", err);
-        TCP_C_LOG_ERRNO(err)
+    LOG_DEBUG("preparing address...");
+    err = inet_aton(address, &(addr_ipv4->sin_addr));
+    if(err != 1) {
+        LOG_ERROR("error when translating address to binary data");
+        return ERR_TCP_ADDR_ERROR;
     }
-
-    return sock;
+    addr_ipv4->sin_family = AF_INET;
+    addr_ipv4->sin_port = htons(port);
+    LOG_DEBUG("prepared address %s:%u", address, port);
+    return err;
 }
 
-/**
- * @brief Close the socket.
- * 
- * @param socket Socket descriptor.
- * @return int 
- */
-int tcp_c_close_socket(void) {
-    //Close the connection.
-    volatile err_c_t err = ERR_C_OK;
-    Try {
-        ERR_C_CHECK_AND_THROW_ERR(close(connected_socket));
-        connected_socket = 0;
-    } Catch(err) {
+int tcp_bind_socket(socket_t socket, struct sockaddr_in* addr_ipv4) {
+    int err = 0;
+    
+    LOG_DEBUG("binding socket: %d to address: %s:%u", socket, inet_ntoa(addr_ipv4->sin_addr), addr_ipv4->sin_port);
+    err = bind(socket, (struct sockaddr*)addr_ipv4, sizeof(struct sockaddr));
+    if (err)
+    {
         err = errno;
-        ESP_LOGE(TAG, "Error during closing socket: %d", err);
-        TCP_C_LOG_ERRNO(err);
+        LOG_ERROR("binding socket: %d failed with error: %d, error name: %s", socket, err, error_to_name(err));
+        close(socket);
+        return err;
     }
+
+    LOG_DEBUG("socket: %d bound to address: %s:%u", socket, tcp_get_bound_socket_ip(socket), tcp_get_bound_socket_port(socket));
     return err;
 }
 
-int tcp_c_deinit(void) {
-    vEventGroupDelete(tcp_event_group);
-    tcp_c_close_socket();
-    vTaskDelete(tcp_listen_task_handle);
-    return ERR_C_OK;
-} 
-
-int tcp_c_send(const char tx_buffer[], int buflen) {
-    volatile err_c_t err = ERR_C_OK;
-    volatile int to_write = buflen;
-    assert(tx_buffer);
-    Try {
-        if(tcp_send_mutex == NULL) {
-            ERR_C_SET_AND_THROW_ERR(err, TCP_C_ERR_NULL_MUTEX);
-        }
-        if(xSemaphoreTake(tcp_send_mutex, pdTICKS_TO_MS(TCP_C_HANDLER_WAIT_TIME)) == pdFALSE) {
-            ERR_C_SET_AND_THROW_ERR(err, TCP_C_ERR_UNABLE_TO_GET_MUTEX);
-        }
-        while (to_write > 0) {
-        int written = send(connected_socket, tx_buffer+(buflen-to_write), to_write, 0);
-        ESP_LOGD(TAG, "sended: %s", tx_buffer);
-        if (written < 0) {
-            ERR_C_SET_AND_THROW_ERR(err, errno);
-        }
-        to_write -= written;
-        }
-        xSemaphoreGive(tcp_send_mutex);
-        xEventGroupSetBits(tcp_event_group, TCP_C_SENDED_DATA_BIT);
-    } Catch(err) {
-        ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
-        TCP_C_LOG_ERRNO(err)
-        tcp_c_close_socket();
-        xSemaphoreGive(tcp_send_mutex);
-        xEventGroupSetBits(tcp_event_group, TCP_C_FINISHED_TRANSMISSION); //there was error, finish current transmission
+int tcp_socket_listen(socket_t socket, int backlog) {
+    int err = 0;
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("socket cannot be invalid");
+        return ERR_TCP_INVALID_SOCKET;
     }
-    return err;
-}
 
-int tcp_c_receive(char rx_buffer[]) {
-    volatile err_c_t err = ERR_C_OK;
-    int len;
-    assert(rx_buffer);
-    memset(rx_buffer, 0, TCP_C_RECEIVE_BUFLEN);
-    Try {
-        if(tcp_receive_mutex == NULL) {
-            ERR_C_SET_AND_THROW_ERR(err, TCP_C_ERR_NULL_MUTEX);
-        }
-        if(xSemaphoreTake(tcp_receive_mutex, pdTICKS_TO_MS(TCP_C_HANDLER_WAIT_TIME)) == pdFALSE) {
-            ERR_C_SET_AND_THROW_ERR(err, TCP_C_ERR_UNABLE_TO_GET_MUTEX);
-        }
-
-        do {
-            len = recv(connected_socket, rx_buffer, TCP_C_RECEIVE_BUFLEN-1, 0);
-            if(len < 0) {
-                ERR_C_SET_AND_THROW_ERR(err, errno);
-            } else if (len == 0) {
-                ESP_LOGD(TAG, "Connection closed.");
-            } else {
-                rx_buffer[len] = 0; // Null-terminate whatever is received and treat it like a string
-                ESP_LOGD(TAG, "Received %d bytes.", len);
-                ESP_LOGD(TAG, "Received data: %s", rx_buffer);
-                break;
-            }
-        } while (len > 0);
-
-        xSemaphoreGive(tcp_receive_mutex);
-
-    } Catch(err) {
+    LOG_DEBUG("trying to listen on socket: %d", socket);
+    err = listen(socket, backlog);
+    if(err != 0) {
         err = errno;
-        ESP_LOGE(TAG, "Error during receiving data, errno: %d", err);
-        TCP_C_LOG_ERRNO(err)
-        xSemaphoreGive(tcp_receive_mutex);
-        if(err == 104) {
-            tcp_c_close_socket();
-            vTaskDelete(tcp_listen_task_handle);
-            tcp_c_start_listen_task(3);
-        }
+        LOG_ERROR("listen on socket: %d failed with error: %d, error name: %s", socket, err, error_to_name(err));
+        close(socket);
     }
-    xEventGroupSetBits(tcp_event_group, TCP_C_RECEIVED_DATA_BIT);
+    LOG_INFO("listening on socket: %s:%u", tcp_get_bound_socket_ip(socket), tcp_get_bound_socket_port(socket));
     return err;
 }
 
-int tcp_c_start_listen_task(uint16_t task_priority) {
-    volatile err_c_t err = ERR_C_OK;
-    ESP_LOGI(TAG, "Starting listen task");
-    Try {
-        if(tcp_listen_task_handle == NULL) {
-            xTaskCreate(tcp_c_listen_task, "tcp_listen_task", 4096, NULL, task_priority, &tcp_listen_task_handle);
-        } else {
-            ESP_LOGE(TAG, "Listen task already running");
-            ERR_C_SET_AND_THROW_ERR(err, 1);
-        }
-    } Catch(err) {
-        ESP_LOGE(TAG, "Unable to create listen task");
+int tcp_accept_client(socket_t socket, socket_t* client) {
+    int err = 0;
+    *client = INVALID_SOCKET;
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("socket cannot be invalid");
+        return ERR_TCP_INVALID_SOCKET;
     }
+
+    *client = accept(socket, NULL, NULL);
+    if (*client == INVALID_SOCKET)
+    {
+        err = errno;
+        LOG_ERROR("error: %d during accept: %s", err, error_to_name(err));
+        close(*client);
+        close(socket);
+        return err;
+    }
+    LOG_INFO("connected to socket: %s:%d", tcp_get_client_socket_ip(*client), tcp_get_bound_socket_port(*client));
     return err;
 }
 
-int tcp_c_start_handler_task(uint16_t task_priority) {
-    volatile err_c_t err = ERR_C_OK;
-    ESP_LOGI(TAG, "Starting handler task");
-    Try {
-        if(tcp_handler_task_handle == NULL) {
-            xTaskCreate(tcp_c_handler_task, "tcp_handler_task", 4096, NULL, task_priority, &tcp_handler_task_handle);
-        } else {
-            ESP_LOGE(TAG, "Handler task already running");
-            ERR_C_SET_AND_THROW_ERR(err, 1);
-        }
-    } Catch(err) {
-        ESP_LOGE(TAG, "Unable to create handler task");
+int tcp_connect_ipv4(socket_t socket, struct sockaddr* address) {
+    int err = 0;
+    socklen_t len = sizeof(*address);
+    struct sockaddr_in* addr_ipv4 = NULL;
+    CHECK_NULL_PTR(address, LOG_ERROR("address cannot be NULL"));
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("socket cannot be invalid");
+        return ERR_TCP_INVALID_SOCKET;
     }
+    if(address->sa_family != AF_INET) {
+        LOG_ERROR("passed not an IPv4 address");
+        return ERR_TCP_ADDR_ERROR;
+    }
+
+    addr_ipv4 = (struct sockaddr_in*) address;          //cast this for debugging purposes, to use inet_ntoa()
+    err = connect(socket, address, len);
+    if(err != 0) {
+        err = errno;
+        LOG_ERROR("error: %d when connecting on socket: %d with address %s:%u, error: %s", err, socket, inet_ntoa(addr_ipv4->sin_addr), ntohs(addr_ipv4->sin_port), error_to_name(err));
+        close(socket);
+        return err;
+    }
+
+    LOG_INFO("connected to address %s:%u", inet_ntoa(addr_ipv4->sin_addr), ntohs(addr_ipv4->sin_port));
     return err;
 }
 
-static void tcp_c_handler_task(void* args) {
-    volatile err_c_t err = ERR_C_OK;
-    char receive_checksum[TCP_C_RECEIVE_BUFLEN];
-    Try {
-        while (1) {
-            tcp_c_receive(receive_checksum);
-            ESP_LOGI(TAG, "Received: %s", receive_checksum);
-            tcp_c_send(receive_checksum, strlen(receive_checksum));
-            ESP_LOGI(TAG, "Sended: %s", receive_checksum);
-            //tcp_c_close_socket();
-        }
-        //xTaskCreate(tcp_c_handler_task, "tcp_handler_task", 4096, NULL, 3, &tcp_handler_task_handle);
-        //tcp_listen_task_handle = NULL;
-        //vTaskDelete(NULL);
-    } Catch(err) {
-        ESP_LOGE(TAG, "error while handling connection: %d", err);
+int tcp_receive(socket_t socket, void* buf, size_t buflen) {
+    int err = 0;
+    CHECK_NULL_PTR(buf, LOG_ERROR("receive buffer cannot be NULL"));
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("socket cannot be invalid");
+        return ERR_TCP_INVALID_SOCKET;
     }
+    if(buflen == 0) {
+        LOG_ERROR("buffer length cannot be 0");
+        return ERR_TCP_INVALID_ARGS;
+    }
+
+    err = recv(socket, buf, buflen, 0);
+    if(err == -1) {
+        err = errno;
+        LOG_ERROR("error: %d during receiving data on socket: %d is: %s", err, socket, error_to_name(err));
+    }
+    
+    LOG_DEBUG("received: %d bytes", err);
+    return err;
 }
 
-static void tcp_c_listen_task(void* args) {
-    volatile err_c_t err = ERR_C_OK;
-    char receive_checksum[TCP_C_RECEIVE_BUFLEN];
-
-    struct sockaddr_storage dest_addr;
-    Try {
-
-        tcp_c_prepare_sock_addr(&dest_addr);
-        ESP_LOGI(TAG, "Address prepared.");
-        listen_socket = tcp_c_prepare_listen_socket();
-        ESP_LOGI(TAG, "Socket created");
-        ERR_C_CHECK_AND_THROW_ERR(tcp_c_bind_socket(listen_socket, &dest_addr));
-        ESP_LOGI(TAG, "Socket bound, port: %d", TCP_C_PORT);
-        ERR_C_CHECK_AND_THROW_ERR(tcp_c_listen_on_socket(listen_socket));
-        ESP_LOGI(TAG, "Socket listening.");
-        //Accept new connection
-        connected_socket = tcp_c_accept_socket(listen_socket);
-        //Inform that new connection was accepted.
-        ESP_LOGI(TAG, "Socket accepted.");
-        while (1) {
-            tcp_c_receive(receive_checksum);
-            ESP_LOGI(TAG, "Received: %s", receive_checksum);
-            tcp_c_send(receive_checksum, TCP_C_RECEIVE_BUFLEN);
-            ESP_LOGI(TAG, "Sended: %s", receive_checksum);
-            //tcp_c_start_handler_task(3);
-            //vTaskDelay(pdMS_TO_TICKS(4000));
-        }
-    } Catch(err) {
-        ESP_LOGE(TAG, "error while listening: %d", err);
+int tcp_recv_all(socket_t socket, void* buf, size_t buflen) {
+    int err = 0;
+    CHECK_NULL_PTR(buf, LOG_ERROR("receive buffer cannot be NULL"));
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("socket cannot be invalid");
+        return ERR_TCP_INVALID_SOCKET;
     }
+    if(buflen == 0) {
+        LOG_ERROR("buffer length cannot be 0");
+        return ERR_TCP_INVALID_ARGS;
+    }
+
+    err = recv(socket, buf, buflen, MSG_WAITALL);
+    if(err == -1) {
+        err = errno;
+        LOG_ERROR("error: %d during receiving data on socket: %d is: %s", err, socket, error_to_name(err));
+    }
+    
+    LOG_DEBUG("received: %d bytes on socket: %d", err, socket);
+    return err;
 }
 
-void tcp_c_server_loop(void* args)
-{
-    volatile err_c_t err = ERR_C_OK;
-    Try {
-        while (1) {
-            ESP_LOGD(TAG, "Socket listening.");
-            //Accept new connection
-            connected_socket = tcp_c_accept_socket(listen_socket);
-            //Inform that new connection was accepted.
-            ESP_LOGD(TAG, "Socket accepted.");
-            xEventGroupSetBits(tcp_event_group, TCP_C_ACCEPTED_SOCKET_BIT);
-            //Wait till transmission is finished.
-            xEventGroupWaitBits(tcp_event_group, TCP_C_FINISHED_TRANSMISSION | TCP_C_SENDED_DATA_BIT, pdTRUE, pdTRUE, pdMS_TO_TICKS(3500));
-            //Close the connection.
-            tcp_c_close_socket();
-            //Inform that connection was closed.
-            xEventGroupSetBits(tcp_event_group, TCP_C_SOCKET_CLOSED_BIT);
-            ESP_LOGD(TAG, "Socket closed.");
-        }
-    } Catch(err) {
-        ESP_LOGE(TAG, "error: %d", err);
+int tcp_send(socket_t socket, void* data, size_t datalen) {
+    int err = 0;
+    CHECK_NULL_PTR(data, LOG_ERROR("receive buffer cannot be NULL"));
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("socket cannot be invalid");
+        return ERR_TCP_INVALID_SOCKET;
     }
-}
-
-int tcp_c_start_tcp_server(EventGroupHandle_t event_group, uint16_t task_priority) {
-    volatile err_c_t err = ERR_C_OK;
-    tcp_event_group = event_group;
-    tcp_receive_mutex = xSemaphoreCreateMutex();
-    tcp_send_mutex = xSemaphoreCreateMutex();
-    tcp_conn_socket_mutex = xSemaphoreCreateMutex();
-    Try {
-        //xTaskCreate(tcp_c_server_loop, "loop", 4096, NULL, 3, NULL);
-        //xTaskCreate(tcp_c_listen_task, "tcp_listen_task", 4096, NULL, task_priority, &tcp_listen_task_handle);
-        tcp_c_start_listen_task(3);
-        //xTaskCreate(tcp_c_handler_task, "tcp_handler_task", 4096, NULL, task_priority, &tcp_handler_task_handle);
-    } Catch(err) {
-        ESP_LOGE(TAG, "Error during starting tcp server: %d", err);
-        TCP_C_LOG_ERRNO(err);
+    if(datalen == 0) {
+        LOG_ERROR("buffer length cannot be 0");
+        return ERR_TCP_INVALID_ARGS;
     }
 
+    err = send(socket, data, datalen, 0);
+    if(err == -1) {
+        err = errno;
+        LOG_ERROR("error: %d during send on socket: %d is: %s", err, socket, error_to_name(err));
+        return err;
+    }
+    LOG_DEBUG("sent: %d bytes on socket: %d", err, socket);
     return err;
 }

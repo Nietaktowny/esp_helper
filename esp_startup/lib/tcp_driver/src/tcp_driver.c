@@ -5,7 +5,12 @@
 #include "memory_utils.h"
 #include "errors.h"
 #include "errors_list.h"
-
+#include "lwip/inet.h"
+#include "lwip/sockets.h"
+#include "ping/ping_sock.h"
+#include "lwip/inet.h"
+#include "lwip/netdb.h"
+#include "lwip/sockets.h"
 #include <errno.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -16,7 +21,7 @@
 #include <string.h>
 
 char* tcp_get_client_socket_ip(socket_t socket) {
-    err_t err = 0;
+    int err = 0;
     struct sockaddr_in addr = {0};
     socklen_t namelen = sizeof(addr);
 
@@ -35,7 +40,7 @@ char* tcp_get_client_socket_ip(socket_t socket) {
 }
 
 int tcp_get_client_socket_port(socket_t socket) {
-    err_t err = 0;
+    int err = 0;
     struct sockaddr_in addr = {0};
     socklen_t namelen = sizeof(addr);
 
@@ -56,7 +61,7 @@ int tcp_get_client_socket_port(socket_t socket) {
 }
 
 char* tcp_get_bound_socket_ip(socket_t socket) {
-    err_t err = 0;
+    int err = 0;
     struct sockaddr_in addr = {0};
     socklen_t namelen = sizeof(addr);
 
@@ -75,7 +80,7 @@ char* tcp_get_bound_socket_ip(socket_t socket) {
 }
 
 int tcp_get_bound_socket_port(socket_t socket) {
-    err_t err = 0;
+    int err = 0;
     struct sockaddr_in addr = {0};
     socklen_t namelen = sizeof(addr);
 
@@ -106,36 +111,20 @@ char* tcp_get_option_name(int id) {
         return "SO_KEEPALIVE";
     case SO_ACCEPTCONN:
         return "SO_ACCEPTCONN";
-    case SO_ATTACH_FILTER:
-        return "SO_ATTACH_FILTER";
     case SO_DEBUG:
         return "SO_DEBUG";  
-    case SO_DOMAIN:
-        return "SO_DOMAIN";
     case SO_ERROR:
         return "SO_ERROR";
     case SO_LINGER:
         return "SO_LINGER";     
-    case SO_LOCK_FILTER:
-        return "SO_LOCK_FILTER";
-    case SO_MARK:
-        return "SO_MARK";  
     case SO_OOBINLINE:
         return "SO_OOBINLINE";
-    case SO_PEEK_OFF:
-        return "SO_PEEK_OFF";
-    case SO_PROTOCOL:
-        return "SO_PROTOCOL";
     case SO_RCVBUF:
         return "SO_RCVBUF";
     case SO_RCVLOWAT:
         return "SO_RCVLOWAT";  
-    case SO_RXQ_OVFL:
-        return "SO_RXQ_OVFL";
     case SO_SNDBUF:
         return "SO_SNDBUF";
-    case SO_TIMESTAMP:
-        return "SO_TIMESTAMP";
     case SO_TYPE:
         return "SO_TYPE";                                          
     default:
@@ -174,7 +163,7 @@ int tcp_get_socket_option(socket_t socket, int level, int option) {
 }
 
 int tcp_create_socket(socket_t* sock) {
-    err_t err = 0;
+    int err = 0;
     CHECK_NULL_PTR(sock, LOG_ERROR("socket cannot be null"));
 
     LOG_DEBUG("preparing socket...");
@@ -209,7 +198,7 @@ int tcp_set_reuse_addr(socket_t socket) {
 }
 
 int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* addr_ipv4) {
-    err_t err = 0;
+    int err = 0;
     CHECK_NULL_PTR(address, LOG_ERROR("address cannot be null"));
     CHECK_NULL_PTR(addr_ipv4, LOG_ERROR("pointer to address structure cannot be null"));
     if(port < 1024 && port != 0) {
@@ -233,7 +222,7 @@ int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* 
 }
 
 int tcp_bind_socket(socket_t socket, struct sockaddr_in* addr_ipv4) {
-    err_t err = 0;
+    int err = 0;
     
     LOG_DEBUG("binding socket: %d to address: %s:%u", socket, inet_ntoa(addr_ipv4->sin_addr), addr_ipv4->sin_port);
     err = bind(socket, (struct sockaddr*)addr_ipv4, sizeof(struct sockaddr));
@@ -250,7 +239,7 @@ int tcp_bind_socket(socket_t socket, struct sockaddr_in* addr_ipv4) {
 }
 
 int tcp_socket_listen(socket_t socket, int backlog) {
-    err_t err = 0;
+    int err = 0;
     if(socket == INVALID_SOCKET) {
         LOG_ERROR("socket cannot be invalid");
         return ERR_TCP_INVALID_SOCKET;
@@ -315,7 +304,7 @@ int tcp_connect_ipv4(socket_t socket, struct sockaddr* address) {
     return err;
 }
 
-int tcp_recv(socket_t socket, void* buf, size_t buflen) {
+int tcp_receive(socket_t socket, void* buf, size_t buflen) {
     int err = 0;
     CHECK_NULL_PTR(buf, LOG_ERROR("receive buffer cannot be NULL"));
     if(socket == INVALID_SOCKET) {

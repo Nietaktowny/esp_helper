@@ -25,15 +25,6 @@
 #ifndef DEBUG_TAG
   #define DEBUG_TAG   "DEBUG"
 #endif
-
-#ifndef SET_LOG_LEVEL
-#define SET_LOG_LEVEL   LOG_LEVEL_DEBUG
-#endif
-
-#ifndef _FILE
-#define _FILE stderr
-#endif
-
                             /*color,time| tag  | file:line  | fun:line | */
 #define LOG_VERBOSE_FORMAT "%s%s | %-5s | %-15s:%d | %s:%d | "
                      /*color,time| tag  | fun:line | */
@@ -42,6 +33,20 @@
 #ifndef LOG_TIME_FORMAT
 #define LOG_TIME_FORMAT "%Y-%m-%d %H:%M:%S"
 #endif
+
+void logger_set_log_output(FILE* file);
+
+uint8_t logger_set_log_level(uint8_t level);
+
+int logger_write(uint8_t level, const char* format, ...);
+
+void logger_flush_logs(void);
+
+int set_logging_to_socket(char* address, uint16_t port);
+
+int logger_esp_log(const char* format, ...);
+
+int logger_redirect_esp_logs(void);
 
 static inline char *timenow() {
     static char buffer[64];
@@ -57,43 +62,43 @@ static inline char *timenow() {
 }
 
 #if SET_LOG_LEVEL >= LOG_LEVEL_FATAL
-#define LOG_FATAL(...)     fprintf(_FILE, LOG_VERBOSE_FORMAT, RED_BOLD_UNTERLINE, timenow(), FATAL_TAG, __FILE__, __LINE__, __func__, __LINE__); \
-                           fprintf(_FILE, __VA_ARGS__);   \
-                           fprintf(_FILE, "%s\n", RESET); \
-                           fflush(_FILE);
+#define LOG_FATAL(...)     logger_write(LOG_LEVEL_FATAL, LOG_VERBOSE_FORMAT, RED_BOLD_UNTERLINE, timenow(), FATAL_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                           logger_write(LOG_LEVEL_FATAL, __VA_ARGS__);   \
+                           logger_write(LOG_LEVEL_FATAL, "%s\n", RESET); \
+                           logger_flush_logs()
 #else
 #define LOG_FATAL(...)
 #endif
 
 #if SET_LOG_LEVEL >= LOG_LEVEL_ERROR
-#define LOG_ERROR(...)     fprintf(_FILE, LOG_VERBOSE_FORMAT, RED, timenow(), ERROR_TAG, __FILE__, __LINE__, __func__, __LINE__);   \
-                           fprintf(_FILE, __VA_ARGS__);   \
-                           fprintf(_FILE, "%s\n", RESET); \
-                           fflush(_FILE)
+#define LOG_ERROR(...)     logger_write(LOG_LEVEL_ERROR, LOG_VERBOSE_FORMAT, RED, timenow(), ERROR_TAG, __FILE__, __LINE__, __func__, __LINE__);   \
+                           logger_write(LOG_LEVEL_ERROR, __VA_ARGS__);   \
+                           logger_write(LOG_LEVEL_ERROR, "%s\n", RESET); \
+                           logger_flush_logs()
 #else
 #define LOG_ERROR(...)
 #endif
 
 #if SET_LOG_LEVEL >= LOG_LEVEL_WARN
-#define LOG_WARN(...)     fprintf(_FILE, LOG_VERBOSE_FORMAT, YELLOW, timenow(), WARN_TAG, __FILE__, __LINE__, __func__, __LINE__); \
-                          fprintf(_FILE, __VA_ARGS__);   \
-                          fprintf(_FILE, "%s\n", RESET); \
-                          fflush(_FILE)
+#define LOG_WARN(...)     logger_write(LOG_LEVEL_WARN, LOG_VERBOSE_FORMAT, YELLOW, timenow(), WARN_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                          logger_write(LOG_LEVEL_WARN, __VA_ARGS__);   \
+                          logger_write(LOG_LEVEL_WARN, "%s\n", RESET); \
+                          logger_flush_logs()
 #else
 #define LOG_WARN(...)
 #endif
 
 #if SET_LOG_LEVEL >= LOG_LEVEL_INFO
   #ifndef USE_VERBOSE_FORMAT
-    #define LOG_INFO(...)     fprintf(_FILE, LOG_STRICT_FORMAT, GREEN, timenow(), INFO_TAG, __func__, __LINE__); \
-                              fprintf(_FILE, __VA_ARGS__);   \
-                              fprintf(_FILE, "%s\n", RESET); \
-                              fflush(_FILE)
+    #define LOG_INFO(...)     logger_write(LOG_LEVEL_INFO, LOG_STRICT_FORMAT, GREEN, timenow(), INFO_TAG, __func__, __LINE__); \
+                              logger_write(LOG_LEVEL_INFO, __VA_ARGS__);   \
+                              logger_write(LOG_LEVEL_INFO, "%s\n", RESET); \
+                              logger_flush_logs()
     #else
-    #define LOG_INFO(...)     fprintf(_FILE, LOG_VERBOSE_FORMAT, GREEN, timenow(), INFO_TAG, __FILE__, __LINE__, __func__, __LINE__); \
-                              fprintf(_FILE, __VA_ARGS__);   \
-                              fprintf(_FILE, "%s\n", RESET); \
-                              fflush(_FILE)
+    #define LOG_INFO(...)     logger_write(LOG_LEVEL_INFO, LOG_VERBOSE_FORMAT, GREEN, timenow(), INFO_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                              logger_write(LOG_LEVEL_INFO, __VA_ARGS__);   \
+                              logger_write(LOG_LEVEL_INFO, "%s\n", RESET); \
+                              logger_flush_logs()
   #endif
 #else
 #define LOG_INFO(...)
@@ -101,15 +106,15 @@ static inline char *timenow() {
 
 #if SET_LOG_LEVEL >= LOG_LEVEL_DEBUG
   #ifndef USE_VERBOSE_FORMAT
-    #define LOG_DEBUG(...)     fprintf(_FILE, LOG_STRICT_FORMAT, RESET, timenow(), DEBUG_TAG, __func__, __LINE__); \
-                               fprintf(_FILE, __VA_ARGS__);   \
-                               fprintf(_FILE, "%s\n", RESET); \
-                               fflush(_FILE)
+    #define LOG_DEBUG(...)     logger_write(LOG_LEVEL_DEBUG, LOG_STRICT_FORMAT, RESET, timenow(), DEBUG_TAG, __func__, __LINE__); \
+                               logger_write(LOG_LEVEL_DEBUG, __VA_ARGS__);   \
+                               logger_write(LOG_LEVEL_DEBUG, "%s\n", RESET); \
+                               logger_flush_logs()
     #else
-    #define LOG_DEBUG(...)     fprintf(_FILE, LOG_VERBOSE_FORMAT, RESET, timenow(), DEBUG_TAG, __FILE__, __LINE__, __func__, __LINE__); \
-                               fprintf(_FILE, __VA_ARGS__);   \
-                               fprintf(_FILE, "%s\n", RESET); \
-                               fflush(_FILE)
+    #define LOG_DEBUG(...)     logger_write(LOG_LEVEL_DEBUG, LOG_VERBOSE_FORMAT, RESET, timenow(), DEBUG_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                               logger_write(LOG_LEVEL_DEBUG, __VA_ARGS__);   \
+                               logger_write(LOG_LEVEL_DEBUG, "%s\n", RESET); \
+                               logger_flush_logs()
   #endif
 #else
 #define LOG_DEBUG(...)

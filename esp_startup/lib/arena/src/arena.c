@@ -150,7 +150,7 @@ arena_t* arena_init(size_t size, size_t count, char* name)
     size = max(size, sizeof(struct node*));
 
     size_t allocated = sizeof(arena_t) + count*size;
-    LOG_DEBUG("bytes to allocate for arena: %lu", allocated);
+    LOG_DEBUG("bytes to allocate for arena: %u", allocated);
 
     void* buf = ALLOC(allocated);
     if(buf == NULL) return NULL;
@@ -182,15 +182,15 @@ arena_t* arena_init_(size_t size, size_t count, void* mem, size_t len, char* nam
 
     LOG_DEBUG("arena initialized with values\n\
     name = \t\t%-s\n\
-    node size = \t%-lu\n\
-    node count = \t%-lu\n\
+    node size = \t%-u\n\
+    node count = \t%-u\n\
     lazy_init = \t%-d\n\
     free_list = \t%-p\n\
     bufstart = \t\t%-p\n\
     buffer = \t\t%-p\n\
     bufend = \t\t%-p",\
     a->name, a->size, a->count, a->lazy_init, (void*)a->free_list,(void*)a->bufstart, (void*)a->buffer, (void*)a->bufend);
-    LOG_INFO("arena initialized with size: %lu", a->size);         
+    LOG_INFO("arena initialized with size: %u", a->size);         
     return a;
 }
 

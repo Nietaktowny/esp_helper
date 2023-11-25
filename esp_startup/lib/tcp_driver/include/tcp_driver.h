@@ -1,4 +1,5 @@
-#include <netinet/in.h>
+#include "lwip/inet.h"
+#include "lwip/sockets.h"
 
 typedef int socket_t;
 
@@ -163,7 +164,7 @@ int tcp_connect_ipv4(socket_t socket, struct sockaddr* address);
  * @retval ERR_TCP_INVALID_ARGS on invalid arguments
  * @retval errno on other errors
 */
-int tcp_recv(socket_t socket, void* buf, size_t buflen);
+int tcp_receive(socket_t socket, void* buf, size_t buflen);
 
 /**
  * @brief Receive data from socket, but read only on full buffer.
