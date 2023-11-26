@@ -407,6 +407,7 @@ int wifi_c_start_sta(const char* ssid, const char* password) {
 
 /**
  * @todo return only needed number of scan results
+ * @todo use memory arena for storing scan results
 */
 int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return) {
     volatile err_c_t err = ERR_C_OK;
@@ -515,6 +516,9 @@ int wifi_c_scan_for_ap_with_ssid(const char* searched_ssid, wifi_c_ap_record_t* 
     return err;
 }
 
+/**
+ * @todo Change print format.
+*/
 int wifi_c_print_scanned_ap (void) {
     volatile err_c_t err = ERR_C_OK;
     Try {

@@ -44,6 +44,7 @@ typedef struct wifi_c_status_obj wifi_c_status_t;
 struct wifi_c_ap_record_obj {
     uint8_t bssid[6];                     /**< MAC address of AP */
     uint8_t ssid[33];                     /**< SSID of AP */
+    uint8_t channel;                      /**< channel of AP */
     int8_t  rssi;                         /**< signal strength of AP */
 };
 
@@ -93,6 +94,7 @@ typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
 
 #define WIFI_C_STA_RETRY_COUNT          4                           ///< Number of times to try to connect to AP as STA.
 #define WIFI_C_DEFAULT_SCAN_SIZE        10                          ///< Number of APs to store when scanning.
+#define WIFI_C_STA_TIMEOUT              60                          ///< Number of seconds for which will wifi_c_start_sta will block before returning
 
 #define WIFI_C_CONNECTED_BIT            0x00000001
 #define WIFI_C_CONNECT_FAIL_BIT         0x00000002
@@ -137,11 +139,13 @@ int wifi_c_start_ap(const char* ssid, const char* password);
  * 
  * @param ssid          SSID of AP to connect to as station.
  * @param password      password of AP to connect to as station.
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_NULL_SSID if passed ssid was null or zero length
- *          - ERR_C_MEMORY_ERR if memcpy of password/ssid was not successfull
- *          - esp specific error codes
+ * 
+ * @note This function will block for number of seconds specified by WIFI_C_STA_TIMEOUT before returning.
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_NULL_SSID if passed ssid was null or zero length
+ * @retval ERR_C_MEMORY_ERR if memcpy of password/ssid was not successfull
+ * @retval esp specific error codes
  */
 int wifi_c_start_sta(const char* ssid, const char* password);
 
