@@ -64,6 +64,8 @@ typedef enum {
 
 char* error_to_name(err_c_t err);
 
+err_c_t err_check_bitmask(uint32_t mask, uint32_t value);
+
 err_c_t err_check_null_pointer(void* ptr);
 
 /**

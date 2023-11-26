@@ -23,11 +23,11 @@ struct wifi_c_status_obj {
     bool netif_initialized;
     wifi_c_mode_t wifi_mode;
     bool even_loop_started;
-    bool wifi_started;
     bool sta_started;
     bool ap_started;
     bool scan_done;
     bool sta_connected;
+    char ip[20];
 };
 
 /**
@@ -87,6 +87,8 @@ typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
 #define WIFI_C_ERR_NEITF_NOT_INIT       WIFI_C_ERR_BASE + 0x0C      ///< Netif was not initialized.
 #define WIFI_C_ERR_EVENT_LOOP_NOT_INIT  WIFI_C_ERR_BASE + 0x0D      ///< Event loop was not started.
 #define WIFI_C_ERR_STA_NOT_CONNECTED    WIFI_C_ERR_BASE + 0x0E      ///< STA is not connected to any AP.
+#define WIFI_C_ERR_STA_CONNECT_FAIL     WIFI_C_ERR_BASE + 0x0F      ///< STA failed to connect to AP.
+#define WIFI_C_ERR_STA_TIMEOUT_EXPIRE   WIFI_C_ERR_BASE + 0x10      ///< wifi_c_start_sta function timeout expired, returned without connection to WiFi
 
 
 #define WIFI_C_STA_RETRY_COUNT          4                           ///< Number of times to try to connect to AP as STA.
@@ -149,6 +151,14 @@ int wifi_c_start_sta(const char* ssid, const char* password);
  * @return wifi_status_t* Pointer to wifi_controller status struct.
  */
 wifi_c_status_t *wifi_c_get_status(void);
+
+/**
+ * @brief Get current IPv4 address of device.
+ * 
+ * @retval IPv4 address
+ * @retval 0.0.0.0 if no address was currently received
+*/
+char* wifi_c_get_ipv4(void);
 
 /**
  * @brief Get Wifi STA connection status.
@@ -244,15 +254,9 @@ int wifi_c_store_scanned_ap (char buffer[], uint16_t buflen);
 /**
  * @brief Used to deinit wifi controller, and free all resources.
  * 
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_WIFI_NOT_STARTED   Wifi was not started.
- *          - WIFI_C_ERR_WIFI_NOT_INIT      WiFi was not initialized.
- *          - WIFI_C_ERR_NEITF_NOT_INIT         Netif interface was not initialized.
- *          - WIFI_C_ERR_EVENT_LOOP_NOT_INIT    Event loop was not started.
- *          - esp specific error codes
+ * @note This function deletes default event loop.
  */
-int wifi_c_deinit(void);
+void wifi_c_deinit(void);
 
 
 void wifi_c_sta_register_disconnect_handler(void (*disconnect_fun_ptr)(void));

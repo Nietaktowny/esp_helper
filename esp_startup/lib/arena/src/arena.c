@@ -1,6 +1,6 @@
 #include "arena.h"
 #include "logger.h"
-#include "errors.h"
+#include "err_controller.h"
 #include <stdbool.h>
 #include <stdint.h>
 

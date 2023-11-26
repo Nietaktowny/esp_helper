@@ -1,3 +1,11 @@
 {
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "files.associations": {
+        "linked_list_internal.h": "c",
+        "err_controller.h": "c"
+    },
+    "cSpell.words": [
+        "deinitialized",
+        "Deinitializing"
+    ]
 }

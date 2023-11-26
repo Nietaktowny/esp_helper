@@ -13,11 +13,6 @@
         "type": "git",
         "url": "https://github.com/Nietaktowny/base_libraries"
     },
-    "dependencies": {
-        "nietaktowny/logger": "~1.0.0",
-        "nietaktowny/errors": "*",
-        "nietaktowny/memory_utils": "*"
-      },
     "frameworks": ["*"],
     "platforms": ["*"]
 }

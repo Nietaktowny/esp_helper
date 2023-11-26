@@ -1,13 +1,16 @@
-#include "errors.h"
+#include "err_controller.h"
 #include "errors_list.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-err_type err_check_null_pointer(void* ptr) {
+err_c_t err_check_null_pointer(void* ptr) {
     return !ptr ? ERR_NULL_POINTER : ERR_C_OK;
 }
 
+err_c_t err_check_bitmask(uint32_t mask, uint32_t value) {
+    return ((mask&value) == mask) ? ERR_C_OK : 1;
+}
 
 void* wrap_malloc(size_t size) {
     void* data = NULL;          // data to return
@@ -24,14 +27,14 @@ void* wrap_malloc(size_t size) {
     return data;
 }
 
-err_type wrap_free(void* allocated) {
+err_c_t wrap_free(void* allocated) {
     CHECK_NULL_PTR(allocated, LOG_ERROR("cannot free NULL ptr"));
     free(allocated);
     return 0;
 }
 
 
-char* error_to_name(err_type err) {
+char* error_to_name(err_c_t err) {
     switch (err)
     {
     case ERR_NO_MEMORY:

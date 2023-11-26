@@ -2,7 +2,7 @@
 #include "linked_list_internal.h"
 #include <inttypes.h>
 #include "logger.h"
-#include "errors.h"
+#include "err_controller.h"
 #include "memory_utils.h"
 #include "errors_list.h"
 #include <string.h>

@@ -34,6 +34,10 @@
 #define LOG_TIME_FORMAT "%Y-%m-%d %H:%M:%S"
 #endif
 
+#ifndef SET_LOG_LEVEL
+#define SET_LOG_LEVEL LOG_LEVEL_DEBUG
+#endif
+
 void logger_set_log_output(FILE* file);
 
 uint8_t logger_set_log_level(uint8_t level);

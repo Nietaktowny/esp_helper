@@ -10,3 +10,7 @@
 
 #define CLI_ERR_TOO_MANY_CMD            12
 
+
+int cli_set_remote_logging(void);
+
+void cli_accept_task(void* args);

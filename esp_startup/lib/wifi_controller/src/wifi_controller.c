@@ -17,16 +17,32 @@
 */
 #include <string.h>
 #include "err_controller.h"
+#include "errors_list.h"
 #include "wifi_controller.h"
 #include "logger.h"
+#include "memory_utils.h"
 
+/**
+ * @brief Initialize network interface.
+*/
 static err_c_t wifi_c_init_netif(wifi_c_mode_t WIFI_C_WIFI_MODE);
 
+/**
+ * @brief Default event handler for AP mode.
+*/
 static void wifi_c_ap_event_handler(void *arg, esp_event_base_t event_base,
                                int32_t event_id, void *event_data);
 
+/**
+ * @brief Default event handler for STA mode.
+*/
 static void wifi_c_sta_event_handler (void *arg, esp_event_base_t event_base,
                                int32_t event_id, void *event_data);
+
+/**
+ * @brief Check event group bits of connection status, and return result.
+*/
+static err_c_t wifi_c_check_sta_connection_result(uint16_t timeout_sec);
 
 
 static wifi_c_status_t wifi_c_status = {
@@ -34,11 +50,11 @@ static wifi_c_status_t wifi_c_status = {
     .netif_initialized = false,
     .wifi_mode = WIFI_C_NO_MODE,
     .even_loop_started = false,
-    .wifi_started = false,
     .sta_started = false,
     .ap_started = false,
     .scan_done = false,
     .sta_connected = false,
+    .ip = "0.0.0.0",
 };
 
 static EventGroupHandle_t wifi_c_event_group;
@@ -79,16 +95,39 @@ static void wifi_c_sta_event_handler (void *arg, esp_event_base_t event_base,
         if(wifi_sta_retry_num < WIFI_C_STA_RETRY_COUNT) {
             esp_wifi_connect();
             wifi_sta_retry_num++;
-            LOG_INFO("Failed to connect to AP, trying again.");
+            LOG_WARN("Failed to connect to AP, trying again.");
         } else {
-            LOG_WARN("Failed to connect to AP!");
             xEventGroupSetBits(wifi_c_event_group, WIFI_C_CONNECT_FAIL_BIT);
         }
     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         ip_event_got_ip_t *event = (ip_event_got_ip_t *) event_data;
+        sprintf(&(wifi_c_status.ip[0]), IPSTR, IP2STR(&event->ip_info.ip));
         LOG_INFO("Got IP:" IPSTR, IP2STR(&event->ip_info.ip));
         wifi_c_status.sta_connected = true;
         xEventGroupSetBits(wifi_c_event_group, WIFI_C_CONNECTED_BIT);
+    }
+}
+
+static err_c_t wifi_c_check_sta_connection_result(uint16_t timeout_sec) {
+    /*Wait for sta to finish connecting or timeout*/
+    EventBits_t bits = xEventGroupWaitBits(wifi_c_event_group, WIFI_C_CONNECTED_BIT | WIFI_C_CONNECT_FAIL_BIT, pdFALSE, pdFALSE, pdMS_TO_TICKS(timeout_sec*1000)); 
+    switch (bits)
+    {
+    case WIFI_C_CONNECTED_BIT | WIFI_C_STA_STARTED_BIT:
+        LOG_DEBUG("WIFI_C_CONNECTED_BIT is set!");
+        return 0;
+    case WIFI_C_CONNECT_FAIL_BIT | WIFI_C_STA_STARTED_BIT:
+        LOG_DEBUG("WIFI_C_CONNECT_FAIL_BIT is set!");
+        return WIFI_C_ERR_STA_CONNECT_FAIL;
+    case WIFI_C_STA_STARTED_BIT:
+        LOG_DEBUG("WIFI_C_STA_STARTED_BIT is set, but timeout expired, connection failed");
+        return WIFI_C_ERR_STA_TIMEOUT_EXPIRE;
+    case 0:
+        LOG_DEBUG("WIFI_C_STA_STARTED_BIT not set");
+        return WIFI_C_ERR_STA_NOT_STARTED;
+    default:
+        LOG_DEBUG("i don't know which bits are set, see: %u", bits);
+        return ERR_C_INVALID_ARGS;
     }
 }
 
@@ -181,6 +220,10 @@ int wifi_c_create_default_event_loop(void) {
 
 wifi_c_status_t *wifi_c_get_status(void) {
     return &wifi_c_status;
+}
+
+char* wifi_c_get_ipv4(void) {
+    return wifi_c_status.ip;
 }
 
 int wifi_c_init_wifi(wifi_c_mode_t WIFI_C_WIFI_MODE) {
@@ -283,11 +326,14 @@ int wifi_c_start_ap(const char* ssid, const char* password) {
     return err;
 }
 
+/**
+ * @todo changing connection timeout time
+*/
 int wifi_c_start_sta(const char* ssid, const char* password) {
     volatile err_c_t err = ERR_C_OK;
     wifi_config_t wifi_sta_config = {
         .sta = {
-            .failure_retry_cnt = WIFI_C_STA_RETRY_COUNT,
+            .failure_retry_cnt = 1,//WIFI_C_STA_RETRY_COUNT,
             .scan_method = WIFI_ALL_CHANNEL_SCAN,
         },
     };
@@ -326,8 +372,8 @@ int wifi_c_start_sta(const char* ssid, const char* password) {
         ERR_C_CHECK_AND_THROW_ERR(esp_wifi_connect());
 
         /*Wait for sta to finish connecting or timeout*/
-        xEventGroupWaitBits(wifi_c_event_group, WIFI_C_CONNECTED_BIT, pdFALSE, pdFALSE, pdMS_TO_TICKS(2000));
-
+        ERR_C_CHECK_AND_THROW_ERR(wifi_c_check_sta_connection_result(60));
+        
     } Catch(err) {
         switch (err)
         {
@@ -340,6 +386,15 @@ int wifi_c_start_sta(const char* ssid, const char* password) {
         case ERR_C_MEMORY_ERR:
             LOG_ERROR("Memory allocation was not successful");
             break;
+        case WIFI_C_ERR_STA_NOT_STARTED:
+            LOG_ERROR("STA didn't start properly");
+            break;
+        case WIFI_C_ERR_STA_CONNECT_FAIL:
+            LOG_ERROR("All attempts to connect to Wifi failed");
+            break;
+        case WIFI_C_ERR_STA_TIMEOUT_EXPIRE:
+            LOG_ERROR("Failed to connect before timeout expired, returning...");
+            break;    
         default:
             LOG_ERROR("Error when starting STA: %d, \nESP-IDF error: %s", err, esp_err_to_name(err));
             break;
@@ -350,11 +405,12 @@ int wifi_c_start_sta(const char* ssid, const char* password) {
     return err;
 }
 
+/**
+ * @todo return only needed number of scan results
+*/
 int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return) {
     volatile err_c_t err = ERR_C_OK;
     wifi_scan_config_t scan_config = {
-        //.ssid = NULL,                   //Search for AP with any SSID.
-        //.bssid = NULL,                  //Search for AP with any BSSID.
         .show_hidden = 0                  //Don't  show hidden AP.
     };
 
@@ -502,7 +558,6 @@ int wifi_c_print_scanned_ap (void) {
     return err;
 }
 
-
 int wifi_c_store_scanned_ap (char buffer[], uint16_t buflen) {
     volatile err_c_t err = ERR_C_OK;
     Try {
@@ -550,50 +605,19 @@ int wifi_c_store_scanned_ap (char buffer[], uint16_t buflen) {
     return err;
 }
 
-int wifi_c_deinit(void) {
-    volatile err_c_t err = ERR_C_OK;
-
-    Try {
-        if(!wifi_c_status.wifi_started) {
-            ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_WIFI_NOT_STARTED);
-        }
-
-        ERR_C_CHECK_AND_THROW_ERR(esp_wifi_stop());
-        wifi_c_status.wifi_started = false;
-
-        if(!wifi_c_status.wifi_initialized) {
-            ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_WIFI_NOT_INIT);
-        }
-
-        ERR_C_CHECK_AND_THROW_ERR(esp_wifi_deinit());
-        wifi_c_status.wifi_initialized = false;
-
-        if(!wifi_c_status.netif_initialized) {
-            ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_NEITF_NOT_INIT);
-        }
-
-        ERR_C_CHECK_AND_THROW_ERR(esp_netif_deinit());
-        wifi_c_status.netif_initialized = false;
-
-    } 
-    Catch(err) {
-        switch (err)
-        {
-        case WIFI_C_ERR_WIFI_NOT_STARTED:
-            LOG_ERROR("Wifi was not started.");
-            break;
-        case WIFI_C_ERR_WIFI_NOT_INIT:
-            LOG_ERROR("WiFi was not initialized.");
-            break;
-        case WIFI_C_ERR_NEITF_NOT_INIT:
-            LOG_ERROR("netif interface was not initialized.");
-            break;        
-        default:
-            LOG_ERROR("Error when deinitializing wifi controller.");
-            break;
-        }
-    }
-
-    return err;
+/**
+ * Mostly when we are deinitializing wifi interface in our application, it means something
+ * somewhere has gone really bad, and we are doing panic exit.
+ * This function was also created with this assumption, so no error checking is done here.
+*/
+void wifi_c_deinit(void) {
+    LOG_DEBUG("Deinitializing wifi_controller...");
+    esp_wifi_stop();
+    esp_wifi_deinit();
+    esp_netif_deinit();
+    vEventGroupDelete(wifi_c_event_group);
+    esp_event_loop_delete_default();
+    memutil_zero_memory(&wifi_c_status, sizeof(wifi_c_status_t));
+    LOG_WARN("wifi_controller deinitialized");
 }
 #endif //ESP_PLATFORM

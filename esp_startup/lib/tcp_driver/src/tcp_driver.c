@@ -3,7 +3,7 @@
 #include "tcp_driver_errors.h"
 #include "logger.h"
 #include "memory_utils.h"
-#include "errors.h"
+#include "err_controller.h"
 #include "errors_list.h"
 #include "lwip/inet.h"
 #include "lwip/sockets.h"
