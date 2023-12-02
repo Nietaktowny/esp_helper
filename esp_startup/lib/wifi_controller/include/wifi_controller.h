@@ -169,12 +169,16 @@ char* wifi_c_get_ipv4(void);
  * 
  * @retval true If STA is connected to some AP.
  * @retval false If STA is not connected to any AP.
+ * @retval true If STA is connected to some AP.
+ * @retval false If STA is not connected to any AP.
  */
 bool wifi_c_check_if_sta_is_connected(void);
 
 /**
  * @brief Initializes default event loop and sets callback functions.
  * 
+ * @retval ERR_C_OK on success
+ * @retval esp specific error codes
  * @retval ERR_C_OK on success
  * @retval esp specific error codes
  */
@@ -204,6 +208,13 @@ int wifi_c_disconnect(void);
  * @retval WIFI_C_ERR_STA_NOT_STARTED
  * @retval WIFI_C_ERR_STA_NOT_CONNECTED
  * @retval esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT
+ * @retval WIFI_C_ERR_WIFI_NOT_STARTED
+ * @retval WIFI_C_ERR_STA_NOT_STARTED
+ * @retval WIFI_C_ERR_STA_NOT_CONNECTED
+ * @retval esp specific error codes
  */
 int wifi_c_sta_reconnect(const char* SSID, const char* PASSWORD);
 
@@ -211,6 +222,12 @@ int wifi_c_sta_reconnect(const char* SSID, const char* PASSWORD);
  * @brief Scan for AP on all channels.
  * 
  * @param result_to_return Pointer to scan results struct.
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_WRONG_MODE Wrong Wifi mode, scanning only possible in STA/APSTA mode.
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
+ * @retval WIFI_C_ERR_STA_NOT_STARTED STA was not started.
+ * @retval esp specific error codes
  * 
  * @retval ERR_C_OK on success
  * @retval WIFI_C_ERR_WRONG_MODE Wrong Wifi mode, scanning only possible in STA/APSTA mode.
@@ -225,6 +242,10 @@ int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return);
  * 
  * @param searched_ssid SSID of AP to search for.
  * @param ap_record     Pointer to wifi_ap_record_t to store result.
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_AP_NOT_FOUND when not found AP
+ * @retval esp specific error codes
  * 
  * @retval ERR_C_OK on success
  * @retval WIFI_C_ERR_AP_NOT_FOUND when not found AP
@@ -245,6 +266,11 @@ int wifi_c_print_scanned_ap (void);
  * 
  * @param buffer Buffer to store scan result.
  * @param buflen Length of the buffer.
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_SCAN_NOT_DONE Scan not done, init scan before getting results.
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
+ * @retval esp specific error codes
  * 
  * @retval ERR_C_OK on success
  * @retval WIFI_C_ERR_SCAN_NOT_DONE Scan not done, init scan before getting results.

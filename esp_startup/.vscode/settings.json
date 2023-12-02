@@ -2,7 +2,9 @@
     "cmake.configureOnOpen": false,
     "files.associations": {
         "linked_list_internal.h": "c",
-        "err_controller.h": "c"
+        "err_controller.h": "c",
+        "spi_master.h": "c",
+        "memory_utils.h": "c"
     },
     "cSpell.words": [
         "deinitialized",
