@@ -48,20 +48,27 @@ void cli_accept_task(void* args) {
     }
 }
 
-int cli_set_remote_logging(void) {
+int cli_set_remote_logging(uint16_t port) {
+    err_c_t err = 0;
     socket_t listen = INVALID_SOCKET;
     socket_t client = INVALID_SOCKET;
     struct sockaddr_in addr;
     memutil_zero_memory(&addr, sizeof(addr));
-    tcp_create_socket(&listen);
-    tcp_prepare_address(27015, wifi_c_get_ipv4(), &addr);
-    tcp_bind_socket(listen, &addr);
-    tcp_socket_listen(listen, 1);
-    LOG_INFO("Connect to device on IP %s with port %u to capture logs.", wifi_c_get_ipv4(), 27015);
-    tcp_accept_client(listen, &client);
-    vTaskDelay(pdMS_TO_TICKS(1000));    //delay to setup connection
-    logger_set_log_output(fdopen(client, "w+"));
-    xTaskCreate(cli_accept_task, "accept_task", 2048, (void*)listen, 2, NULL);
+
+    Try {
+        ERR_C_CHECK_AND_THROW_ERR(tcp_create_socket(&listen));
+        ERR_C_CHECK_AND_THROW_ERR(tcp_prepare_address(port, wifi_c_get_ipv4(), &addr));
+        ERR_C_CHECK_AND_THROW_ERR(tcp_bind_socket(listen, &addr));
+        ERR_C_CHECK_AND_THROW_ERR(tcp_socket_listen(listen, 1));
+        LOG_INFO("Connect to device on IP %s with port %u to capture logs.", wifi_c_get_ipv4(), 27015);
+        ERR_C_CHECK_AND_THROW_ERR(tcp_accept_client(listen, &client));
+        vTaskDelay(pdMS_TO_TICKS(1000));    //delay to setup connection
+        logger_set_log_output(fdopen(client, "w+"));
+        xTaskCreate(cli_accept_task, "accept_task", 2048, (void*)listen, 2, NULL);
+    } Catch(err) {
+        LOG_ERROR("Error when connecting to remote host");
+        return CLI_ERR_CONNECT_FAIL;
+    }
     return 0;
 }
 

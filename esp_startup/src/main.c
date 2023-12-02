@@ -1,8 +1,6 @@
 #include "cli_manager.h"
 #include "nvs_controller.h"
 #include "wifi_controller.h"
-#include "tcp_driver.h"
-#include "tcp_driver_errors.h"
 #include "memory_utils.h"
 #include "linked_list.h"
 #include "arena.h"
@@ -18,8 +16,6 @@
 #include "linked_list.h"
 #include <sys/time.h>
 #include "esp_netif_sntp.h"
-
-const char* TAG = "";
 
 #define MY_SSID "TP-LINK_AD8313"
 #define MY_PSK "20232887"
@@ -38,11 +34,11 @@ void app_main(void)
         wifi_c_deinit();
         esp_restart();
     }
+    LOG_INFO("Connected to wifi, current ip: %s", wifi_c_get_ipv4());
+    cli_set_remote_logging(27015);
     /*delay for dhcp to configure IP adress*/
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
     esp_netif_sntp_init(&config);
-    LOG_INFO("Connected to wifi, current ip: %s", wifi_c_get_ipv4());
-    cli_set_remote_logging();
     while(1) {
         wifi_c_scan_result_t records;
         memutil_zero_memory(&records, sizeof(records));
