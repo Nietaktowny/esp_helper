@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <time.h>
 
+
 #define LOG_LEVEL_ZERO  0x00
 #define LOG_LEVEL_FATAL 0x01
 #define LOG_LEVEL_ERROR 0x02
@@ -46,6 +47,12 @@ int logger_write(uint8_t level, const char* format, ...);
 
 void logger_flush_logs(void);
 
+int logger_get_lock(void);
+
+void logger_create_semphr(void);
+
+void logger_return_lock(void);
+
 int set_logging_to_socket(char* address, uint16_t port);
 
 int logger_esp_log(const char* format, ...);
@@ -84,25 +91,31 @@ static inline char *timenow() {
 #endif
 
 #if SET_LOG_LEVEL >= LOG_LEVEL_WARN
-#define LOG_WARN(...)     logger_write(LOG_LEVEL_WARN, LOG_VERBOSE_FORMAT, YELLOW, timenow(), WARN_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+#define LOG_WARN(...)     logger_get_lock();        \
+                          logger_write(LOG_LEVEL_WARN, LOG_VERBOSE_FORMAT, YELLOW, timenow(), WARN_TAG, __FILE__, __LINE__, __func__, __LINE__); \
                           logger_write(LOG_LEVEL_WARN, __VA_ARGS__);   \
                           logger_write(LOG_LEVEL_WARN, "%s\n", RESET); \
-                          logger_flush_logs()
+                          logger_flush_logs();     \
+                          logger_return_lock()
 #else
 #define LOG_WARN(...)
 #endif
 
 #if SET_LOG_LEVEL >= LOG_LEVEL_INFO
   #ifndef USE_VERBOSE_FORMAT
-    #define LOG_INFO(...)     logger_write(LOG_LEVEL_INFO, LOG_STRICT_FORMAT, GREEN, timenow(), INFO_TAG, __func__, __LINE__); \
+    #define LOG_INFO(...)     logger_get_lock();      \
+                              logger_write(LOG_LEVEL_INFO, LOG_STRICT_FORMAT, GREEN, timenow(), INFO_TAG, __func__, __LINE__); \
                               logger_write(LOG_LEVEL_INFO, __VA_ARGS__);   \
                               logger_write(LOG_LEVEL_INFO, "%s\n", RESET); \
-                              logger_flush_logs()
+                              logger_flush_logs();      \
+                              logger_return_lock()
     #else
-    #define LOG_INFO(...)     logger_write(LOG_LEVEL_INFO, LOG_VERBOSE_FORMAT, GREEN, timenow(), INFO_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+    #define LOG_INFO(...)     logger_get_lock();      \
+                              logger_write(LOG_LEVEL_INFO, LOG_VERBOSE_FORMAT, GREEN, timenow(), INFO_TAG, __FILE__, __LINE__, __func__, __LINE__); \
                               logger_write(LOG_LEVEL_INFO, __VA_ARGS__);   \
                               logger_write(LOG_LEVEL_INFO, "%s\n", RESET); \
-                              logger_flush_logs()
+                              logger_flush_logs();
+                              logger_return_lock();
   #endif
 #else
 #define LOG_INFO(...)
