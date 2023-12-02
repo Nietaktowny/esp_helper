@@ -24,7 +24,15 @@
 #define SOL_SSID "OstNet-952235"
 #define SOL_PSK "Solonka106"
 
-
+void log_task(void* args) {
+    bmp_handle_t bmp = (bmp_handle_t)args;
+    while (1)
+    {
+        uint32_t id = bmp_get_device_id(bmp);
+        LOG_INFO("BMP280 ID is: %u", id);
+        vTaskDelay(pdMS_TO_TICKS(4000));
+    }
+}
 
 
 void app_main(void)
@@ -32,6 +40,7 @@ void app_main(void)
 
     //Allow other core to finish initialization
     vTaskDelay(pdMS_TO_TICKS(100));
+    
     //Create semaphores to synchronize
     logger_create_semphr();
     // Initialize NVS
@@ -43,18 +52,21 @@ void app_main(void)
         wifi_c_deinit();
         esp_restart();
     }
+
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
     esp_netif_sntp_init(&config);
     LOG_INFO("Connected to wifi, current ip: %s", wifi_c_get_ipv4());
-    cli_set_remote_logging();
-
+    //cli_set_remote_logging(27015);
+    
     bmp_config_t bmp_config = {
-        .gpio_cs = GPIO_NUM_14,
-        .gpio_sclk = GPIO_NUM_32,
-        .gpio_miso = GPIO_NUM_26,
-        .gpio_mosi = GPIO_NUM_12,
+        .gpio_cs = GPIO_NUM_21,
+        .gpio_sclk = GPIO_NUM_14,
+        .gpio_miso = GPIO_NUM_27,
+        .gpio_mosi = GPIO_NUM_13,
         .host_id = 1,
     };
     bmp_handle_t bmp280 = NULL;
-    bmp_add_device(&bmp_config, bmp280);
+    bmp_add_device(&bmp_config, &bmp280);
+    LOG_INFO("bmp280 is %p", bmp280);
+    xTaskCreate(log_task, "log_task", 4096, (void*)bmp280, 1, NULL);
 }

@@ -18,6 +18,8 @@ int bmp_enable_cs(uint8_t cs);
 
 int bmp_disable_cs(uint8_t cs);
 
-int bmp_add_device(bmp_config_t* in_config, bmp_handle_t out_handle);
+int bmp_add_device(bmp_config_t* in_config, bmp_handle_t* out_handle);
 
 int bmp_send_cmd(bmp_handle_t bmp, const uint8_t cmd);
+
+int bmp_get_device_id(bmp_handle_t bmp);

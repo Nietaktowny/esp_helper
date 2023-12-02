@@ -1,4 +1,5 @@
 #include "bmp280.h"
+#include "bmp280_internal.h"
 #include "logger.h"
 #include "err_controller.h"
 #include "errors_list.h"
@@ -16,8 +17,14 @@ struct bmp_handle_obj {
 };
 
 
-#define BMP_CS_LOW_LEVEL        0
-#define BMP_CS_HIGH_LEVEL       1
+#define BMP_CS_ENABLED        0
+#define BMP_CS_DISABLED       1
+
+
+/*! @name Interface settings */
+#define BMP2_SPI_RD_MASK                              UINT8_C(0x80)
+#define BMP2_SPI_WR_MASK                              UINT8_C(0x7F)
+#define BMP2_REG_CHIP_ID                              UINT8_C(0xD0)
 
 int bmp_init_chip_select(uint8_t gpio_cs) {
     err_c_t err = 0;
@@ -33,11 +40,11 @@ int bmp_init_chip_select(uint8_t gpio_cs) {
 }
 
 int bmp_enable_cs(uint8_t cs) {
-    return gpio_set_level(cs, BMP_CS_LOW_LEVEL);
+    return gpio_set_level(cs, BMP_CS_ENABLED);
 }
 
 int bmp_disable_cs(uint8_t cs) {
-    return gpio_set_level(cs, BMP_CS_HIGH_LEVEL);
+    return gpio_set_level(cs, BMP_CS_DISABLED);
 }
 
 int bmp_send_cmd(bmp_handle_t bmp, const uint8_t cmd) {
@@ -47,26 +54,47 @@ int bmp_send_cmd(bmp_handle_t bmp, const uint8_t cmd) {
 
     transaction.length = 8;
     transaction.tx_buffer = &cmd;
-    transaction.user = (void*)0;
     transaction.flags = SPI_TRANS_CS_KEEP_ACTIVE;
     err = spi_device_polling_transmit(bmp->esp_handle, &transaction);
-
+    LOG_INFO("sended data: %u", cmd);
     return err;
 }
 
 int bmp_get_device_id(bmp_handle_t bmp) {
     err_c_t err = 0;
-    spi_device_acquire_bus(bmp->esp_handle, portMAX_DELAY);
+    uint8_t tx_data = 0xD0 | BMP2_SPI_RD_MASK;
+    spi_transaction_t t;
 
-    bmp_send_cmd(bmp, 0x76);
-    return err;
+    CHECK_NULL_PTR(bmp, LOG_ERROR("BMP280 handle cannot be NULL"));
+
+    spi_device_acquire_bus(bmp->esp_handle, portMAX_DELAY);
+    
+    bmp_send_cmd(bmp, 0xE0 | BMP2_SPI_WR_MASK);
+    vTaskDelay(pdMS_TO_TICKS(500));
+    bmp_send_cmd(bmp, tx_data);
+    
+    memutil_zero_memory(&t, sizeof(t));
+    t.length = 8;
+    t.flags = SPI_TRANS_USE_RXDATA;
+    err = spi_device_polling_transmit(bmp->esp_handle, &t);
+    if(err != ESP_OK) {
+        LOG_ERROR("error during SPI transmit: %s", esp_err_to_name(err));
+        return err;
+    }
+
+    spi_device_release_bus(bmp->esp_handle);
+    bmp_disable_cs(GPIO_NUM_21);
+    return *(uint32_t*)t.rx_data;
 }
 
-int bmp_add_device(bmp_config_t* in_config, bmp_handle_t out_handle) {
+int bmp_add_device(bmp_config_t* in_config, bmp_handle_t* out_handle) {
     err_c_t err = 0;
 
+    CHECK_NULL_PTR(in_config, LOG_ERROR("BMP280 configuration cannot be NULL"));
+    CHECK_NULL_PTR(out_handle, LOG_ERROR("bmp_handle_t cannot be NULL"));
+
     bmp_init_chip_select(in_config->gpio_cs);
-    bmp_disable_cs(in_config->gpio_cs);
+    bmp_enable_cs(in_config->gpio_cs);
 
     spi_bus_config_t bus_config = {
         .miso_io_num = in_config->gpio_miso,
@@ -84,9 +112,18 @@ int bmp_add_device(bmp_config_t* in_config, bmp_handle_t out_handle) {
         .mode = 0,
         .spics_io_num = in_config->gpio_cs,
         .queue_size = 8,
-        .flags = SPI_DEVICE_POSITIVE_CS,
+        .command_bits = 8,
+        .address_bits = 8,
     };
-    err = spi_bus_add_device(in_config->host_id, &interface, &(out_handle->esp_handle));
+    /*The idea is that we in most situations configure external devices at startup
+    and use them for the whole time. Because of this here it's used lazy allocating - memory is allocated, and never freed.*/
+    NEW((*out_handle), struct bmp_handle_obj);
+    //(*out_handle) = malloc(sizeof(struct bmp_handle_obj));
+    err = spi_bus_add_device(in_config->host_id, &interface, &((*out_handle)->esp_handle));
     ESP_ERROR_CHECK(err);
+
+    (*out_handle)->id = in_config->host_id;
+
+    LOG_INFO("registered new BMP280 device with ID: %u, ptr: %p", (*out_handle)->id, (*out_handle));
     return err;
 }

@@ -4,7 +4,8 @@
         "linked_list_internal.h": "c",
         "err_controller.h": "c",
         "spi_master.h": "c",
-        "memory_utils.h": "c"
+        "memory_utils.h": "c",
+        "logger.h": "c"
     },
     "cSpell.words": [
         "deinitialized",

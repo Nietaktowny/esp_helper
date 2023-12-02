@@ -49,7 +49,7 @@ void cli_accept_task(void* args) {
 }
 
 int cli_set_remote_logging(uint16_t port) {
-    err_c_t err = 0;
+    volatile err_c_t err = 0;
     socket_t listen = INVALID_SOCKET;
     socket_t client = INVALID_SOCKET;
     struct sockaddr_in addr;
@@ -66,7 +66,7 @@ int cli_set_remote_logging(uint16_t port) {
         logger_set_log_output(fdopen(client, "w+"));
         xTaskCreate(cli_accept_task, "accept_task", 2048, (void*)listen, 2, NULL);
     } Catch(err) {
-        LOG_ERROR("Error when connecting to remote host");
+        LOG_ERROR("Error %d when connecting to remote host: %s", err, error_to_name(err));
         return CLI_ERR_CONNECT_FAIL;
     }
     return 0;

@@ -214,6 +214,7 @@ int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* 
         LOG_ERROR("error when translating address to binary data");
         return ERR_TCP_ADDR_ERROR;
     }
+    err = 0;        //fun inet_aton returns 1 on success, where tcp_prepare_address should return 0 on success
     addr_ipv4->sin_family = AF_INET;
     addr_ipv4->sin_port = htons(port);
     LOG_DEBUG("prepared address %s:%u", address, port);
@@ -223,6 +224,11 @@ int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* 
 int tcp_bind_socket(socket_t socket, struct sockaddr_in* addr_ipv4) {
     int err = 0;
     
+    if(socket == INVALID_SOCKET) {
+        LOG_ERROR("socket cannot be invalid");
+        return ERR_TCP_INVALID_SOCKET;
+    }
+
     LOG_DEBUG("binding socket: %d to address: %s:%u", socket, inet_ntoa(addr_ipv4->sin_addr), addr_ipv4->sin_port);
     err = bind(socket, (struct sockaddr*)addr_ipv4, sizeof(struct sockaddr));
     if (err)

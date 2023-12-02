@@ -31,6 +31,11 @@ typedef int32_t err_c_t;
                 Throw(err);                          \
         }                                            \
 
+#define ERR_C_LOG_AND_THROW_ERR(err, log) if(err != 0)  \
+        {                                            \
+                log;                                 \
+                Throw(err);                          \
+        }  
 
 #define ERR_C_SET_AND_THROW_ERR(err, err_code)       \
         err = err_code;                              \
@@ -54,6 +59,7 @@ typedef int32_t err_c_t;
         message;                            \
         return val;                       \
     }
+
 
 typedef enum {
         ERR_C_OK = 0,
