@@ -5,7 +5,9 @@
         "err_controller.h": "c",
         "spi_master.h": "c",
         "memory_utils.h": "c",
-        "logger.h": "c"
+        "logger.h": "c",
+        "arena.h": "c",
+        "errors_list.h": "c"
     },
     "cSpell.words": [
         "deinitialized",

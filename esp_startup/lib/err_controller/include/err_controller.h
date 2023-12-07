@@ -3,9 +3,10 @@
 #include "logger.h"
 #include <stdlib.h>
 #include "CException.h"
-
+#include "errors_list.h"
 
 typedef int32_t err_c_t;
+
 
 #define CHECK_NULL_PTR(ptr, message)                \
     if(!(void*)ptr) {                               \
@@ -51,22 +52,18 @@ typedef int32_t err_c_t;
     if(!(void*)ptr) {                               \
         message;                                    \
         return ERR_NO_MEMORY;                    \
-    }
+    }    
 
 #define ERR_C_CHECK_ERROR(statement, message)         \
+do {                                           \
     err_c_t val = statement;                      \
     if(!val) {                            \
         message;                            \
         return val;                       \
-    }
+    }                                       \
+} while(0)
 
 
-typedef enum {
-        ERR_C_OK = 0,
-        ERR_C_INVALID_ARGS,
-        ERR_C_NO_MEMORY,
-        ERR_C_MEMORY_ERR,
-} err_c_error_t;
 
 char* error_to_name(err_c_t err);
 

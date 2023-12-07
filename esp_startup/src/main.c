@@ -25,12 +25,38 @@
 #define SOL_PSK "Solonka106"
 
 void log_task(void* args) {
-    bmp_handle_t bmp = (bmp_handle_t)args;
+    bmp_handle_t bmp = NULL;
+    i2c_c_bus_handle_t bus = (i2c_c_bus_handle_t)args;
+    float temperature = 0;
+    float pressure = 0;
+
+    bmp_init(&bmp, bus);
+    bmp_i2c_reset_chip(bmp);    
+    bmp_i2c_set_standby_time(bmp, BMP_STANDBY_1000M);
+    bmp_i2c_set_iir_filter(bmp, BMP_IIR_X2);
+    bmp_i2c_set_press_oversampling(bmp, BMP_OVERSAMPLING_X2);
+    bmp_i2c_set_temp_oversampling(bmp, BMP_OVERSAMPLING_X2);
+    bmp_i2c_set_mode(bmp, BMP_MODE_NORMAL);
+    LOG_INFO("Identified BMP280 device:\n address: %x\n chip id: %x\n mode: %x", bmp_get_i2c_addr(bmp), bmp_get_chip_id(bmp), bmp_get_mode(bmp));
+    while (1)
+    {   
+        bmp_readoutFloat(bmp, &temperature, &pressure);
+        LOG_INFO("temperature: %f", temperature);
+        LOG_INFO("pressure: %f", pressure);
+        vTaskDelay(pdMS_TO_TICKS(3000));
+    }
+}
+
+
+void inspect_task(void* args) {
     while (1)
     {
-        uint32_t id = bmp_get_device_id(bmp);
-        LOG_INFO("BMP280 ID is: %u", id);
-        vTaskDelay(pdMS_TO_TICKS(4000));
+        uint32_t free_heap = esp_get_free_heap_size();
+        uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
+
+        LOG_DEBUG("Currently available heap: %lu", free_heap);
+        LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
+        vTaskDelay(pdMS_TO_TICKS(5000));
     }
 }
 
@@ -56,17 +82,11 @@ void app_main(void)
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
     esp_netif_sntp_init(&config);
     LOG_INFO("Connected to wifi, current ip: %s", wifi_c_get_ipv4());
-    //cli_set_remote_logging(27015);
-    
-    bmp_config_t bmp_config = {
-        .gpio_cs = GPIO_NUM_21,
-        .gpio_sclk = GPIO_NUM_14,
-        .gpio_miso = GPIO_NUM_27,
-        .gpio_mosi = GPIO_NUM_13,
-        .host_id = 1,
-    };
-    bmp_handle_t bmp280 = NULL;
-    bmp_add_device(&bmp_config, &bmp280);
-    LOG_INFO("bmp280 is %p", bmp280);
-    xTaskCreate(log_task, "log_task", 4096, (void*)bmp280, 1, NULL);
+    cli_set_remote_logging(27015);
+
+    i2c_c_bus_handle_t i2c_bus = NULL;
+    i2c_c_init_bus(I2C_C_NUM_0, GPIO_NUM_22, GPIO_NUM_21, &i2c_bus);
+
+    xTaskCreate(log_task, "log_task", 4096, (void*)i2c_bus, 1, NULL);
+    xTaskCreate(inspect_task, "inspect_heap_task", 2096, NULL, 2, NULL);
 }
