@@ -41,8 +41,8 @@ void log_task(void* args) {
     while (1)
     {   
         bmp_readoutFloat(bmp, &temperature, &pressure);
-        LOG_INFO("temperature: %f", temperature);
-        LOG_INFO("pressure: %f", pressure);
+        LOG_INFO("temperature: %.2f", temperature);
+        LOG_INFO("pressure: %.2f", pressure);
         vTaskDelay(pdMS_TO_TICKS(3000));
     }
 }
@@ -60,17 +60,22 @@ void inspect_task(void* args) {
     }
 }
 
+void shutdown_handler(void) {
+    LOG_FATAL("FATAL ERROR - RESTARTING ESP DEVICE!");
+}
+
 
 void app_main(void)
 {
 
     //Allow other core to finish initialization
     vTaskDelay(pdMS_TO_TICKS(100));
-    
+    esp_register_shutdown_handler(shutdown_handler);
     //Create semaphores to synchronize
     logger_create_semphr();
     // Initialize NVS
     nvs_c_init_nvs();
+    // Initialize WiFi
     wifi_c_init_wifi(WIFI_C_MODE_STA);
     err_c_t err = wifi_c_start_sta(MY_SSID, MY_PSK);
     if(err != 0) {

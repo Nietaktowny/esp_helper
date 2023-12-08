@@ -9,8 +9,6 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/i2c.h"
-#include "driver/gpio.h"
-#include "esp_log.h"
 
 enum bmp_device_type_t {
     BMP_BMP280 = 1,
@@ -262,7 +260,7 @@ int bmp_i2c_calibrate(bmp_handle_t bmp) {
     bmp->cmps.P8 = buf[20] | (buf[21] << 8);
     bmp->cmps.P9 = buf[22] | (buf[23] << 8);
 
-    LOG_DEBUG("compensation values of BMP280 device updated");
+    LOG_DEBUG("compensation values of BMP280 device updated:\n\tT1: %#x\n\tT2: %#x\n\tT3: %#x\n\tP1: %#x\n\tP2: %#x\n\tP3: %#x\n\tP4: %#x\n\tP5: %#x\n\tP6: %#x\n\tP7: %#x\n\tP8: %#x\n\tP9: %#x ");
     return err;
 }
 
@@ -408,7 +406,6 @@ int bmp_init(bmp_handle_t* out_handle, i2c_c_bus_handle_t bus) {
 
         //calibrate
         ERR_C_CHECK_AND_THROW_ERR(bmp_i2c_calibrate((*out_handle)));
-        ESP_LOG_BUFFER_HEX("bmp280", &((*out_handle)->cmps), sizeof((*out_handle)->cmps));
         LOG_INFO("new BMP280 device ready to use!");
     } Catch(err) {
         switch (err)

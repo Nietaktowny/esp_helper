@@ -24,7 +24,6 @@ void tearDown(void) {
 void afterEach (void) {
   //wifi_c_deinit();
   vTaskDelay(300);
-  ESP_ERROR_CHECK(wifi_c_deinit());
 }
 
 void test_check_if_netif_status_is_initialized(void) {
