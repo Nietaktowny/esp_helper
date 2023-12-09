@@ -27,3 +27,7 @@
 
 #define BMP_I2C_ADDR_HI              UINT8_C(0xEE)      ///< I2C chip address when SDO pin is high.
 #define BMP_I2C_ADDR_LO              UINT8_C(0xEC)      ///< I2C chip address when SDO pin is low.
+
+int32_t bmp_compensate_T_int32(bmp_handle_t bmp, int32_t adc_T);
+
+uint32_t bmp_compensate_P_int64(bmp_handle_t bmp, int32_t adc_P);

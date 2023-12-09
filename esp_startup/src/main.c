@@ -29,14 +29,16 @@ void log_task(void* args) {
     i2c_c_bus_handle_t bus = (i2c_c_bus_handle_t)args;
     float temperature = 0;
     float pressure = 0;
+    bmp_config_t config = {
+        .iir_filter = BMP_IIR_X16,
+        .press_over = BMP_OVERSAMPLING_X4,
+        .temp_over = BMP_OVERSAMPLING_X4,
+        .standby = BMP_STANDBY_1000M,
+        .mode = BMP_MODE_NORMAL,
+    };
 
     bmp_init(&bmp, bus);
-    bmp_i2c_reset_chip(bmp);    
-    bmp_i2c_set_standby_time(bmp, BMP_STANDBY_1000M);
-    bmp_i2c_set_iir_filter(bmp, BMP_IIR_X2);
-    bmp_i2c_set_press_oversampling(bmp, BMP_OVERSAMPLING_X2);
-    bmp_i2c_set_temp_oversampling(bmp, BMP_OVERSAMPLING_X2);
-    bmp_i2c_set_mode(bmp, BMP_MODE_NORMAL);
+    bmp_configure(bmp, &config);
     LOG_INFO("Identified BMP280 device:\n address: %x\n chip id: %x\n mode: %x", bmp_get_i2c_addr(bmp), bmp_get_chip_id(bmp), bmp_get_mode(bmp));
     while (1)
     {   

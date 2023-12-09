@@ -10,29 +10,36 @@
 #include "freertos/task.h"
 #include "driver/i2c.h"
 
+/**
+ * @brief BMP280 device type.
+*/
 enum bmp_device_type_t {
     BMP_BMP280 = 1,
     BMP_BME280,
 };
 
+/**
+ * @brief BMP280 device object.
+*/
 struct bmp_handle_obj {
-    uint8_t addr;
-    uint8_t id;
-    bmp_mode_t mode;
-    i2c_c_device_handle_t i2c_handle;
+    uint8_t addr;                               ///< BMP280 device address.
+    uint8_t id;                                 ///< BMP280 chip ID.
+    bmp_mode_t mode;                            ///< BMP280 device mode.
+    i2c_c_device_handle_t i2c_handle;           ///< I2C bus handle.
+    /** BMP calibration information */
     struct {
-        uint16_t T1;
-        int16_t T2;
-        int16_t T3;
-        uint16_t P1;
-        int16_t P2;
-        int16_t P3;
-        int16_t P4;
-        int16_t P5;
-        int16_t P6;
-        int16_t P7;
-        int16_t P8;
-        int16_t P9;
+        uint16_t T1;                            ///< Register address 0x88 / 0x89
+        int16_t T2;                             ///< Register address 0x8A / 0x8B
+        int16_t T3;                             ///< Register address 0x8C / 0x8D
+        uint16_t P1;                            ///< Register address 0x8E / 0x8F
+        int16_t P2;                             ///< Register address 0x90 / 0x91
+        int16_t P3;                             ///< Register address 0x92 / 0x93
+        int16_t P4;                             ///< Register address 0x94 / 0x95
+        int16_t P5;                             ///< Register address 0x96 / 0x97
+        int16_t P6;                             ///< Register address 0x98 / 0x99
+        int16_t P7;                             ///< Register address 0x9A / 0x9B
+        int16_t P8;                             ///< Register address 0x9C / 0x9D
+        int16_t P9;                             ///< Register address 0x9E / 0x9F
     } cmps;
     uint32_t t_fine;
 };
@@ -72,17 +79,17 @@ int bmp_i2c_get_config(bmp_handle_t bmp, uint8_t* out_config) {
     return err;    
 }
 
-int bmp_i2c_get_ctrl_meas(bmp_handle_t bmp, uint8_t* out_mode) {
+int bmp_i2c_get_ctrl_meas(bmp_handle_t bmp, uint8_t* out_ctrl) {
     int err = 0;
 
     ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("BMP280 device handle cannot be NULL"));
 
-    err = bmp_i2c_read(bmp, BMP_REG_CTRL_MEAS, out_mode, sizeof(uint8_t));
+    err = bmp_i2c_read(bmp, BMP_REG_CTRL_MEAS, out_ctrl, sizeof(uint8_t));
     if(err != ERR_C_OK) {
         LOG_ERROR("error %d during reading data acquisition options of the BMP280 device: %s", err, esp_err_to_name(err));
         return err;
     }
-    LOG_DEBUG("readed ctr_meas register value: %#X", (*out_mode));
+    LOG_DEBUG("readed ctr_meas register value: %#X", (*out_ctrl));
 
     return err;    
 }
@@ -380,6 +387,25 @@ uint32_t bmp_compensate_P_int64(bmp_handle_t bmp, int32_t adc_P)
 }
 
 //END OF DRAGONS
+
+int bmp_configure(bmp_handle_t bmp, bmp_config_t* config) {
+    volatile err_c_t err = 0;
+
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("BMP device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(config, LOG_ERROR("BMP device config cannot be NULL"));
+
+    Try {
+        ERR_C_CHECK_AND_THROW_ERR(bmp_i2c_set_standby_time(bmp, config->standby));
+        ERR_C_CHECK_AND_THROW_ERR(bmp_i2c_set_iir_filter(bmp, config->iir_filter));
+        ERR_C_CHECK_AND_THROW_ERR(bmp_i2c_set_press_oversampling(bmp, config->press_over));
+        ERR_C_CHECK_AND_THROW_ERR(bmp_i2c_set_temp_oversampling(bmp, config->temp_over));
+        ERR_C_CHECK_AND_THROW_ERR(bmp_i2c_set_mode(bmp, config->mode));
+        bmp->mode = config->mode;
+    } Catch(err) {
+        LOG_ERROR("error %d while configuring BMP device: %s", err, esp_err_to_name(err));
+    }
+    return err;
+}
 
 int bmp_init(bmp_handle_t* out_handle, i2c_c_bus_handle_t bus) {
     volatile err_c_t err = 0;

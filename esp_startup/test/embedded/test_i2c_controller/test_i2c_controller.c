@@ -3,28 +3,32 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include <stdio.h>
-#include "esp_err.h"
+#include "i2c_controller_internal.h"
 
-
-
-
-
-void test_basic_test(void) {
-    TEST_PASS();
+void setUp(void) {
+  // set stuff up here
 }
 
+void tearDown(void) {
+  // clean stuff up here
+}
 
+void test_if_i2c_controller_is_defined (void) {
+  
+}
 
-
+int runUnityTests(void) {
+  UNITY_BEGIN();
+  RUN_TEST(test_if_i2c_controller_is_defined);
+  return UNITY_END();
+}
 
 
 /**
   * For ESP-IDF framework
   */
 void app_main(void) {
-  UNITY_BEGIN();
-  test_basic_test(); 
-  UNITY_END();
+  runUnityTests();
   vTaskDelay(200);
   fflush(stdout);
   esp_restart();
