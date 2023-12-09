@@ -89,6 +89,8 @@ typedef struct bmp_config_obj bmp_config_t;
 #define BMP_ERR_NO_DEVICE_FOUND             BMP_ERR_BASE + 0x0001           ///< No BMP280 device was found on bus.
 #define BMP_ERR_MODE_ERROR                  BMP_ERR_BASE + 0x0003           ///< Cannot change BMP device operating mode.
 
+#define BMP_STANDARD_SEA_LEVEL_PRESSURE     1013.25                         ///< Standard pressure on sea level in hPa.
+
 /**
  * @brief Initialize BMP device, and return it's handle.
  * 
@@ -337,6 +339,16 @@ int bmp_configure(bmp_handle_t bmp, bmp_config_t* config);
  * @retval - esp specific error codes
 */
 int bmp_i2c_readout(bmp_handle_t bmp, int32_t* temperature, uint32_t* pressure);
+
+/**
+ * @brief Get calculated altitude based on pressure and pressure on sea level.
+ * 
+ * @param pressure Pressure in hPa
+ * @param sea_level_hPa Pressure at sea level in hPa
+ * 
+ * @return Altitude in metres
+*/
+float bmp_i2c_calculate_altitude(float pressure, float sea_level_hPa);
 
 /**
  * @brief Convert sensor readout to floating point values.

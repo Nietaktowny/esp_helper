@@ -6,6 +6,8 @@
 #include "memory_utils.h"
 #include "i2c_controller.h"
 
+#include <math.h>
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/i2c.h"
@@ -308,6 +310,13 @@ int bmp_i2c_identify_chip(bmp_handle_t bmp) {
     i2c_c_set_device_addr(bmp->i2c_handle, 0);
     bmp->id = 0;
     return BMP_ERR_NO_DEVICE_FOUND;
+}
+
+float bmp_i2c_calculate_altitude(float pressure, float sea_level_hPa) {
+    // Calculating formula taken from https://github.com/farmerkeith/BMP280-library/blob/master/farmerkeith_BMP280.cpp#L323
+    // returns altitude in metres based on pressure and seaLevelpressure, both in hPa
+    // standard seaLevelhPa = 1013.25
+    return (float)44330 * (1.0 - pow(pressure / sea_level_hPa, 0.19026));
 }
 
 int bmp_i2c_readout(bmp_handle_t bmp, int32_t* temperature, uint32_t* pressure) {

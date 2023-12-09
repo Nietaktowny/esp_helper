@@ -29,6 +29,7 @@ void log_task(void* args) {
     i2c_c_bus_handle_t bus = (i2c_c_bus_handle_t)args;
     float temperature = 0;
     float pressure = 0;
+    float altitude = 0;
     bmp_config_t config = {
         .iir_filter = BMP_IIR_X16,
         .press_over = BMP_OVERSAMPLING_X4,
@@ -43,8 +44,10 @@ void log_task(void* args) {
     while (1)
     {   
         bmp_readoutFloat(bmp, &temperature, &pressure);
-        LOG_INFO("temperature: %.2f", temperature);
-        LOG_INFO("pressure: %.2f", pressure);
+        altitude = bmp_i2c_calculate_altitude(pressure * 0.01, BMP_STANDARD_SEA_LEVEL_PRESSURE);
+        LOG_INFO("temperature: %.2f C", temperature);
+        LOG_INFO("pressure: %.2fhPa", pressure * 0.01);
+        LOG_INFO("altitude: %.2f m. n. p. m.", altitude);
         vTaskDelay(pdMS_TO_TICKS(3000));
     }
 }
