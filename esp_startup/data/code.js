@@ -1,0 +1,1 @@
+document.querySelector('body').innerHTML = "<h1>Big Hello world!</h1>"

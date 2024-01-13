@@ -8,6 +8,7 @@
 #include "logger.h"
 #include "bmp280.h"
 #include "http_client.h"
+#include "spiffs_controller.h"
 
 #include <string.h>
 #include "esp_log.h"
@@ -104,5 +105,25 @@ void app_main(void)
     xTaskCreate(read_temperature_task, "log_task", 7000, (void*)i2c_bus, 1, NULL);
     */
     xTaskCreate(inspect_task, "inspect_heap_task", 2096, NULL, 2, NULL);
+    spiffs_c_handle_t spiffs_config = {
+        .base_name = "/spiffs",
+        .partition_label = NULL,
+        .max_files = 5,
+        .format_on_err = true,
+    };
+    size_t total = 0;
+    size_t used = 0;
+    
+    spiffs_c_init(&spiffs_config);
+    spiffs_c_get_info(spiffs_config.partition_label, &total, &used);
+    FILE* stylesheet = NULL;
+    char line[256];
+    spiffs_c_open_file(&spiffs_config, "index.html", "r+", &stylesheet);
+    while(fgets(line, sizeof(line), stylesheet) != NULL)
+    {
+      printf(line);
+    }
+    spiffs_c_close_file(stylesheet);
+    
     cli_set_remote_logging(27015);
 }
