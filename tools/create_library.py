@@ -18,7 +18,7 @@ library_json_text = "{\n\t\"name\": \"" + lib_name + "\",\n\t\"version\": \"1.0.
 src_c_file_text = "#include \"" + header_file + "\""
 
 # mode 
-mode = 0o666
+mode = 0o777
 
 
 os.chdir('../libraries')

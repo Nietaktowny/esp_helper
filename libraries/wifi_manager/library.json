@@ -1,0 +1,8 @@
+{
+	"name": "wifi_manager",
+	"version": "1.0.0",
+	"keywords": "keyword",
+	"description": "Library used to provide web abstraction on connecting to WiFi.",
+	"frameworks": ["espidf"],
+	"platforms": ["espressif32"]
+}

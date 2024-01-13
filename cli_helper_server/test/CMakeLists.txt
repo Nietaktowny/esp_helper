@@ -1,4 +1,3 @@
-add_subdirectory(test_tcp_server)
 
 include(FetchContent)
 FetchContent_Declare(

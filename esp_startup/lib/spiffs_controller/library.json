@@ -1,0 +1,8 @@
+{
+	"name": "spiffs_controller",
+	"version": "1.0.0",
+	"keywords": "keyword",
+	"description": "Library used to use SPIFFS Filesystem on ESP32.",
+	"frameworks": ["espidf"],
+	"platforms": ["espressif32"]
+}

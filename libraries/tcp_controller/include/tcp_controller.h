@@ -1,75 +1,200 @@
-#pragma once
-#include "freertos/FreeRTOS.h"
-#include "freertos/event_groups.h"
+#include "lwip/inet.h"
+#include "lwip/sockets.h"
 
-#define TCP_C_PORT                        27015          ///< TCP port on which listen to.
-#define TCP_C_KEEPALIVE_IDLE              300            ///< TCP keep-alive idle time(s).
-#define TCP_C_KEEPALIVE_INTERVAL          60              ///< TCP keep-alive interval time(s).
-#define TCP_C_KEEPALIVE_COUNT             3              ///< TCP keep-alive packet retry send counts.
-#define TCP_C_KEEPALIVE                   1
-#define TCP_C_RECEIVE_BUFLEN              512            ///< Size of buffer to receive data.
-#define TCP_C_SEND_BUFLEN                 512            ///< Size of buffer from which send data.
-#define TCP_C_ADDR_FAMILY                 AF_INET        ///< Use Internet Protocol v4 addresses.
-#define TCP_C_IP_PROTOCOL                 IPPROTO_IP     ///< Use automatic choice depending on socket type and family.
-#define TCP_C_BACKLOG_NUM                 4              ///< Specifies the maximum number of queued connections.
-#define TCP_C_HANDLER_WAIT_TIME           4000
-#define TCP_C_CHECKSUM_SIZE               5
-
-
-#define TCP_C_ERR_BASE                  0x000F                      ///< Error base used to indicate where tcp_controller errors numbers start.
-#define TCP_C_ERR_NULL_MUTEX            TCP_C_ERR_BASE + 0x01      ///< 
-#define TCP_ERR_WRONG_CHECKSUM          TCP_C_ERR_BASE + 0x02
-#define TCP_C_ERR_UNABLE_TO_GET_MUTEX   TCP_C_ERR_BASE + 0x03
-
-
+typedef int socket_t;
 
 /**
- * @brief Macro used to log errno description to log.
+ * @brief Create socket.
  * 
- */
-#define TCP_C_LOG_ERRNO(err) ESP_LOGE(TAG, "file:%s line:%d\n error description:\n%s", __FILE__, __LINE__, strerror(err));
+ * @param socket_t*[out] pointer to where socket will be stored
+ * 
+ * @retval 0 on success
+ * @retval ERR_NULL_POINTER on NULL socket_t* pointer
+ * @retval reads errno on other errors
+*/
+int tcp_create_socket(socket_t* sock);
 
 /**
- * @brief Prepare tcp controller to handle transmissions.
+ * @brief Prepare address for binding socket.
  * 
- * @param event_group EventGroupHandle_t Event group with which communicate with tcp controller.
- * @param task_priority Prority of tcp controller task.
- * @return int Error code.
- */
-int tcp_c_start_tcp_server(EventGroupHandle_t event_group, uint16_t task_priority);
+ * @warning When port is set to 0, wildcard port will be used.
+ * 
+ * @param uint16_t[in] address port
+ * @param char*[in] IPv4 address
+ * @param sockaddr_in*[out] pointer to sockaddr_in structure where address result will be stored
+ * 
+ * @retval 0 on success
+ * @retval ERR_NULL_POINTER when address/addr_ipv4 was NULL
+ * @retval ERR_TCP_ADDR_ERROR when address was invalid
+ * @retval ERR_TCP_INVALID_PORT when trying to use port < 1024
+*/
+int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* addr_ipv4);
 
 /**
- * @brief Server loop in which all connections are handled.
+ * @brief Read IPv4 address to which socket is bound.
  * 
- */
-void tcp_c_server_loop(void* args);
+ * @warning This function should only be called on bound sockets.
+ * 
+ * @param socket_t socket descriptor
+ * 
+ * @retval har* string containing IPv4 address
+ * @retval NULL on error
+*/
+char* tcp_get_bound_socket_ip(socket_t socket);
 
 /**
- * @brief Receive data into passed buffer
+ * @brief Read port to which socket is bound.
  * 
- * @param rx_buffer Buffer in which save data.
- * @return int Error code.
- */
-int tcp_c_receive(char rx_buffer[]);
+ * @warning This function should only be called on bound sockets.
+ * 
+ * @param socket_t socket descriptor
+ * 
+ * @retval int value containing socket port on success
+ * @retval -1 on error (error value is logged)
+*/
+int tcp_get_bound_socket_port(socket_t socket);
 
 /**
- * @brief Send data from passed buffer.
+ * @brief Bind socket to prepared address.
  * 
- * @param tx_buffer Buffer from which send data.
- * @param buflen Buffer lenght.
- * @return int Error code.
- */
-int tcp_c_send(const char tx_buffer[], int buflen);
+ * @param socket_t socket descriptor
+ * @param sockaddr_in* prepared address
+ * 
+ * @retval 0 on success
+ * @retval errno value on error
+ * 
+*/
+int tcp_bind_socket(socket_t socket, struct sockaddr_in* addr_ipv4);
 
 /**
- * @brief Function used to deinit tcp controller.
+ * @brief Listen on socket for incoming connections.
  * 
- * @return int error code
- */
-int tcp_c_deinit(void);
+ * @param socket socket descriptor
+ * @param backlog  number of pending connections
+ * 
+ * @note backlog can be ignored by system, see https://www.linuxjournal.com/files/linuxjournal.com/linuxjournal/articles/023/2333/2333s2.html
+ * 
+ * @retval 0 on success
+ * @retval ERR_TCP_INVALID_SOCKET on invalid listen socket
+ * @retval errno values on other errors
+*/
+int tcp_socket_listen(socket_t socket, int backlog);
 
-int tcp_c_close_socket(void);
+/**
+ * @brief Accept connection on listen socket, and return client socket.
+ * 
+ * @param socket[in] listening socket descriptor
+ * @param client[out] new client connected socket descriptor
+ * 
+ * @retval 0 on success
+ * @retval ERR_TCP_INVALID_SOCKET on invalid listen socket
+ * @retval errno values on other errors
+*/
+int tcp_accept_client(socket_t socket, socket_t* client);
 
-int tcp_c_start_listen_task(uint16_t task_priority);
+/**
+ * @brief Translate socket option integer value to string name.
+ * 
+ * @note Not all socket options are currently translated.
+ * 
+ * @param id integer value of socket option
+ * 
+ * @retval char* option name string
+ * @reval char* "not known option" when no option is matched
+*/
+char* tcp_get_option_name(int id);
 
-int tcp_c_start_handler_task(uint16_t task_priority);
+/**
+ * @brief Set socket option.
+ * 
+ * @param socket socket descriptor
+ * @param level  option level (for example SOL_SOCKET)
+ * @param option option to set (for example SO_REUSEADDR)
+ * 
+ * @retval 0 on success
+ * @retval errno values on error   
+*/
+int tcp_set_socket_option(socket_t socket, int level, int option);
+
+/**
+ * @brief Get socket option.
+ * 
+ * @param socket socket descriptor
+ * @param level  option level (for example SOL_SOCKET)
+ * @param option option to get (for example SO_REUSEADDR)
+ * 
+ * @retval 0 on success
+ * @retval errno values on error   
+*/
+int tcp_get_socket_option(socket_t socket, int level, int option);
+
+/**
+ * @brief Set SO_REUSEADDR option on socket.
+ * 
+ * @param socket socket descriptor
+ * 
+ * @retval 0 on success
+ * @retval ERR_TCP_INVALID_SOCKET on invalid socket
+ * @retval errno on other errors
+*/
+int tcp_set_reuse_addr(socket_t socket);
+
+/**
+ * @brief Connect to socket using IPv4 address.
+ * 
+ * @param socket socket descriptor
+ * @param address address to connect to
+ * 
+ * @retval 0 on success
+ * @retval ERR_TCP_ADDR_ERROR on invalid address
+ * @retval errno on other errors
+*/
+int tcp_connect_ipv4(socket_t socket, struct sockaddr* address);
+
+/**
+ * @brief Receive data from socket.
+ *  
+ * 
+ * @param socket socket descriptor
+ * @param buf buffer to store data
+ * @param buflen size of buffer
+ * 
+ * @retval 0 on success
+ * @retval ERR_TCP_INVALID_SOCKET on invalid socket
+ * @retval ERR_TCP_INVALID_ARGS on invalid arguments
+ * @retval errno on other errors
+*/
+int tcp_receive(socket_t socket, void* buf, size_t buflen);
+
+/**
+ * @brief Receive data from socket, but read only on full buffer.
+ * 
+ * @note This function uses MSG_WAITALL option.
+ * 
+ * @param socket socket descriptor
+ * @param buf buffer to store data
+ * @param buflen size of buffer
+ * 
+ * @retval 0 on success
+ * @retval ERR_TCP_INVALID_SOCKET on invalid socket
+ * @retval ERR_TCP_INVALID_ARGS on invalid arguments
+ * @retval errno on other errors
+*/
+int tcp_recv_all(socket_t socket, void* buf, size_t buflen);
+
+/**
+ * @brief Send data using socket.
+ * 
+ * @param socket socket descriptor
+ * @param data data to send
+ * @param datalen length of data to send
+ * 
+ * @retval 0 on success
+ * @retval ERR_TCP_INVALID_SOCKET on invalid socket
+ * @retval ERR_TCP_INVALID_ARGS on invalid arguments
+ * @retval errno on other errors
+ * 
+*/
+int tcp_send(socket_t socket, void* data, size_t datalen);
+
+

@@ -23,11 +23,11 @@ struct wifi_c_status_obj {
     bool netif_initialized;
     wifi_c_mode_t wifi_mode;
     bool even_loop_started;
-    bool wifi_started;
     bool sta_started;
     bool ap_started;
     bool scan_done;
     bool sta_connected;
+    char ip[20];
 };
 
 /**
@@ -44,6 +44,7 @@ typedef struct wifi_c_status_obj wifi_c_status_t;
 struct wifi_c_ap_record_obj {
     uint8_t bssid[6];                     /**< MAC address of AP */
     uint8_t ssid[33];                     /**< SSID of AP */
+    uint8_t channel;                      /**< channel of AP */
     int8_t  rssi;                         /**< signal strength of AP */
 };
 
@@ -87,10 +88,13 @@ typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
 #define WIFI_C_ERR_NEITF_NOT_INIT       WIFI_C_ERR_BASE + 0x0C      ///< Netif was not initialized.
 #define WIFI_C_ERR_EVENT_LOOP_NOT_INIT  WIFI_C_ERR_BASE + 0x0D      ///< Event loop was not started.
 #define WIFI_C_ERR_STA_NOT_CONNECTED    WIFI_C_ERR_BASE + 0x0E      ///< STA is not connected to any AP.
+#define WIFI_C_ERR_STA_CONNECT_FAIL     WIFI_C_ERR_BASE + 0x0F      ///< STA failed to connect to AP.
+#define WIFI_C_ERR_STA_TIMEOUT_EXPIRE   WIFI_C_ERR_BASE + 0x10      ///< wifi_c_start_sta function timeout expired, returned without connection to WiFi
 
 
 #define WIFI_C_STA_RETRY_COUNT          4                           ///< Number of times to try to connect to AP as STA.
 #define WIFI_C_DEFAULT_SCAN_SIZE        10                          ///< Number of APs to store when scanning.
+#define WIFI_C_STA_TIMEOUT              60                          ///< Number of seconds for which will wifi_c_start_sta will block before returning
 
 #define WIFI_C_CONNECTED_BIT            0x00000001
 #define WIFI_C_CONNECT_FAIL_BIT         0x00000002
@@ -103,10 +107,10 @@ typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
  * @brief Used to initialize and prepare Wifi to work.
  * 
  * @param WIFI_C_WIFI_MODE Mode in which WiFi will work.
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_WIFI_ALREADY_INIT if already initialized
- *          - esp specific errors
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_WIFI_ALREADY_INIT if already initialized
+ * @retval esp specific errors
  */
 int wifi_c_init_wifi(wifi_c_mode_t WIFI_C_WIFI_MODE);
 
@@ -121,11 +125,11 @@ int wifi_c_init_wifi(wifi_c_mode_t WIFI_C_WIFI_MODE);
  * 
  * @param ssid          SSID of AP.
  * @param password      Password of AP.
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_NULL_SSID if passed ssid was null or zero length
- *          - ERR_C_MEMORY_ERR if memcpy of password/ssid was not successfull
- *          - esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_NULL_SSID if passed ssid was null or zero length
+ * @retval ERR_C_MEMORY_ERR if memcpy of password/ssid was not successfull
+ * @retval esp specific error codes
  *          
  */
 int wifi_c_start_ap(const char* ssid, const char* password);
@@ -135,11 +139,13 @@ int wifi_c_start_ap(const char* ssid, const char* password);
  * 
  * @param ssid          SSID of AP to connect to as station.
  * @param password      password of AP to connect to as station.
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_NULL_SSID if passed ssid was null or zero length
- *          - ERR_C_MEMORY_ERR if memcpy of password/ssid was not successfull
- *          - esp specific error codes
+ * 
+ * @note This function will block for number of seconds specified by WIFI_C_STA_TIMEOUT before returning.
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_NULL_SSID if passed ssid was null or zero length
+ * @retval ERR_C_MEMORY_ERR if memcpy of password/ssid was not successfull
+ * @retval esp specific error codes
  */
 int wifi_c_start_sta(const char* ssid, const char* password);
 
@@ -151,32 +157,42 @@ int wifi_c_start_sta(const char* ssid, const char* password);
 wifi_c_status_t *wifi_c_get_status(void);
 
 /**
+ * @brief Get current IPv4 address of device.
+ * 
+ * @retval IPv4 address
+ * @retval 0.0.0.0 if no address was currently received
+*/
+char* wifi_c_get_ipv4(void);
+
+/**
  * @brief Get Wifi STA connection status.
  * 
- * @return true If STA is connected to some AP.
- * @return false If STA is not connected to any AP.
+ * @retval true If STA is connected to some AP.
+ * @retval false If STA is not connected to any AP.
+ * @retval true If STA is connected to some AP.
+ * @retval false If STA is not connected to any AP.
  */
 bool wifi_c_check_if_sta_is_connected(void);
 
 /**
  * @brief Initializes default event loop and sets callback functions.
  * 
- * @return
- *          - ERR_C_OK on success
- *          - esp specific error codes
+ * @retval ERR_C_OK on success
+ * @retval esp specific error codes
+ * @retval ERR_C_OK on success
+ * @retval esp specific error codes
  */
 int wifi_c_create_default_event_loop(void);
 
 /**
  * @brief Disconnect from AP as STA.
  * 
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_WIFI_NOT_INIT
- *          - WIFI_C_ERR_WIFI_NOT_STARTED
- *          - WIFI_C_ERR_STA_NOT_STARTED
- *          - WIFI_C_ERR_STA_NOT_CONNECTED
- *          - esp specific error codes
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT
+ * @retval WIFI_C_ERR_WIFI_NOT_STARTED
+ * @retval WIFI_C_ERR_STA_NOT_STARTED
+ * @retval WIFI_C_ERR_STA_NOT_CONNECTED
+ * @retval esp specific error codes
  */
 int wifi_c_disconnect(void);
 
@@ -185,13 +201,20 @@ int wifi_c_disconnect(void);
  * 
  * @param SSID SSID to AP;
  * @param PASSWORD Password to AP.
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_WIFI_NOT_INIT
- *          - WIFI_C_ERR_WIFI_NOT_STARTED
- *          - WIFI_C_ERR_STA_NOT_STARTED
- *          - WIFI_C_ERR_STA_NOT_CONNECTED
- *          - esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT
+ * @retval WIFI_C_ERR_WIFI_NOT_STARTED
+ * @retval WIFI_C_ERR_STA_NOT_STARTED
+ * @retval WIFI_C_ERR_STA_NOT_CONNECTED
+ * @retval esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT
+ * @retval WIFI_C_ERR_WIFI_NOT_STARTED
+ * @retval WIFI_C_ERR_STA_NOT_STARTED
+ * @retval WIFI_C_ERR_STA_NOT_CONNECTED
+ * @retval esp specific error codes
  */
 int wifi_c_sta_reconnect(const char* SSID, const char* PASSWORD);
 
@@ -199,12 +222,18 @@ int wifi_c_sta_reconnect(const char* SSID, const char* PASSWORD);
  * @brief Scan for AP on all channels.
  * 
  * @param result_to_return Pointer to scan results struct.
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_WRONG_MODE Wrong Wifi mode, scanning only possible in STA/APSTA mode.
- *          - WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
- *          - WIFI_C_ERR_STA_NOT_STARTED STA was not started.
- *          - esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_WRONG_MODE Wrong Wifi mode, scanning only possible in STA/APSTA mode.
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
+ * @retval WIFI_C_ERR_STA_NOT_STARTED STA was not started.
+ * @retval esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_WRONG_MODE Wrong Wifi mode, scanning only possible in STA/APSTA mode.
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
+ * @retval WIFI_C_ERR_STA_NOT_STARTED STA was not started.
+ * @retval esp specific error codes
  */
 int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return);
 
@@ -213,10 +242,14 @@ int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return);
  * 
  * @param searched_ssid SSID of AP to search for.
  * @param ap_record     Pointer to wifi_ap_record_t to store result.
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_AP_NOT_FOUND when not found AP
- *          - esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_AP_NOT_FOUND when not found AP
+ * @retval esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_AP_NOT_FOUND when not found AP
+ * @retval esp specific error codes
  */
 int wifi_c_scan_for_ap_with_ssid(const char* searched_ssid, wifi_c_ap_record_t* ap_record);
 
@@ -233,26 +266,25 @@ int wifi_c_print_scanned_ap (void);
  * 
  * @param buffer Buffer to store scan result.
  * @param buflen Length of the buffer.
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_SCAN_NOT_DONE Scan not done, init scan before getting results.
- *          - WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
- *          - esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_SCAN_NOT_DONE Scan not done, init scan before getting results.
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
+ * @retval esp specific error codes
+ * 
+ * @retval ERR_C_OK on success
+ * @retval WIFI_C_ERR_SCAN_NOT_DONE Scan not done, init scan before getting results.
+ * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
+ * @retval esp specific error codes
  */
 int wifi_c_store_scanned_ap (char buffer[], uint16_t buflen);
 
 /**
  * @brief Used to deinit wifi controller, and free all resources.
  * 
- * @return
- *          - ERR_C_OK on success
- *          - WIFI_C_ERR_WIFI_NOT_STARTED   Wifi was not started.
- *          - WIFI_C_ERR_WIFI_NOT_INIT      WiFi was not initialized.
- *          - WIFI_C_ERR_NEITF_NOT_INIT         Netif interface was not initialized.
- *          - WIFI_C_ERR_EVENT_LOOP_NOT_INIT    Event loop was not started.
- *          - esp specific error codes
+ * @note This function deletes default event loop.
  */
-int wifi_c_deinit(void);
+void wifi_c_deinit(void);
 
 
 void wifi_c_sta_register_disconnect_handler(void (*disconnect_fun_ptr)(void));

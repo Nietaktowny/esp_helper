@@ -26,7 +26,10 @@
 			"netdb.h": "c",
 			"socket.h": "c",
 			"tcp_server_internal.h": "c",
-			"inet.h": "c"
+			"inet.h": "c",
+			"errors.h": "c",
+			"string.h": "c",
+			"stdint.h": "c"
 		},
 	},
 	"launch": {

@@ -1,0 +1,24 @@
+{
+    "name": "linked_list",
+    "version": "1.0.3",
+    "keywords": "linked, list",
+    "description": "Single bound linked list.",
+    "authors":
+    {
+        "name": "nietaktowny",
+        "url": "https://github.com/Nietaktowny"
+    },
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/Nietaktowny/base_libraries"
+    },
+    "dependencies": {
+        "nietaktowny/logger": "~1.0.0",
+        "nietaktowny/errors": "*",
+        "nietaktowny/memory_utils": "*"
+      },
+    "frameworks": ["*"],
+    "platforms": ["*"]
+}
+

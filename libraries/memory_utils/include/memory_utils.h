@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <inttypes.h>
 #include "logger.h"
-
+#include "arena.h"
 
 /**
  * @brief Wrapper macro with malloc using type of new object.
@@ -45,6 +45,7 @@ do {                                        \
     exit(EXIT_FAILURE);                     \
   }                                         \
 } while (0)
+
 
 /**
  * @brief Wrapper macro for free.

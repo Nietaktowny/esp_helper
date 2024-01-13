@@ -1,0 +1,12 @@
+{
+    "name": "err_controller",
+    "version": "1.0.2",
+    "keywords": "error, error managing, controller, cexception",
+    "description": "Controller library used to control errors.",
+    "dependencies": {
+        "CException": "https://github.com/ThrowTheSwitch/CException/archive/refs/tags/v1.3.3.zip",
+        "CMock": "https://github.com/ThrowTheSwitch/CMock/archive/refs/heads/master.zip"
+    },
+    "frameworks": ["*"],
+    "platforms": ["*"]
+}

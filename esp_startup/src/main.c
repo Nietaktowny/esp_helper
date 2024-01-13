@@ -7,6 +7,8 @@
 #include "err_controller.h"
 #include "logger.h"
 #include "bmp280.h"
+#include "http_client.h"
+
 #include <string.h>
 #include "esp_log.h"
 #include "esp_system.h"
@@ -24,7 +26,7 @@
 #define SOL_SSID "OstNet-952235"
 #define SOL_PSK "Solonka106"
 
-void log_task(void* args) {
+void read_temperature_task(void* args) {
     bmp_handle_t bmp = NULL;
     i2c_c_bus_handle_t bus = (i2c_c_bus_handle_t)args;
     float temperature = 0;
@@ -37,6 +39,8 @@ void log_task(void* args) {
         .standby = BMP_STANDBY_1000M,
         .mode = BMP_MODE_NORMAL,
     };
+    char post_data[256];
+    memutil_zero_memory(&post_data, sizeof(post_data));
 
     bmp_init(&bmp, bus);
     bmp_configure(bmp, &config);
@@ -48,10 +52,12 @@ void log_task(void* args) {
         LOG_INFO("temperature: %.2f C", temperature);
         LOG_INFO("pressure: %.2fhPa", pressure * 0.01);
         LOG_INFO("altitude: %.2f m. n. p. m.", altitude);
-        vTaskDelay(pdMS_TO_TICKS(3000));
+        sprintf(post_data, "device_id=1&temperature=%.2f&pressure=%.2f&altitude=%.2f", temperature, pressure * 0.01, altitude);
+        LOG_DEBUG("data to send to database: %s", post_data);
+        http_client_post("wmytych.usermd.net/", "insert_data.php", post_data);
+        vTaskDelay(pdMS_TO_TICKS(30000));
     }
 }
-
 
 void inspect_task(void* args) {
     while (1)
@@ -68,7 +74,6 @@ void inspect_task(void* args) {
 void shutdown_handler(void) {
     LOG_FATAL("FATAL ERROR - RESTARTING ESP DEVICE!");
 }
-
 
 void app_main(void)
 {
@@ -92,11 +97,12 @@ void app_main(void)
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
     esp_netif_sntp_init(&config);
     LOG_INFO("Connected to wifi, current ip: %s", wifi_c_get_ipv4());
-    cli_set_remote_logging(27015);
-
+    /*
     i2c_c_bus_handle_t i2c_bus = NULL;
     i2c_c_init_bus(I2C_C_NUM_0, GPIO_NUM_22, GPIO_NUM_21, &i2c_bus);
 
-    xTaskCreate(log_task, "log_task", 4096, (void*)i2c_bus, 1, NULL);
+    xTaskCreate(read_temperature_task, "log_task", 7000, (void*)i2c_bus, 1, NULL);
+    */
     xTaskCreate(inspect_task, "inspect_heap_task", 2096, NULL, 2, NULL);
+    cli_set_remote_logging(27015);
 }
