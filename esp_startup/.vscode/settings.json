@@ -1,13 +1,18 @@
 {
     "cmake.configureOnOpen": false,
     "files.associations": {
+        "*.embeddedhtml": "html",
         "linked_list_internal.h": "c",
         "err_controller.h": "c",
         "spi_master.h": "c",
         "memory_utils.h": "c",
         "logger.h": "c",
         "arena.h": "c",
-        "errors_list.h": "c"
+        "errors_list.h": "c",
+        "esp_netif.h": "c",
+        "stdio.h": "c",
+        "nvs_controller.h": "c",
+        "stddef.h": "c"
     },
     "cSpell.words": [
         "deinitialized",

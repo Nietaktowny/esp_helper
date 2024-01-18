@@ -28,6 +28,7 @@ struct wifi_c_status_obj {
     bool scan_done;
     bool sta_connected;
     char ip[20];
+    char ap_ssid[64];
 };
 
 /**
@@ -93,7 +94,7 @@ typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
 
 
 #define WIFI_C_STA_RETRY_COUNT          4                           ///< Number of times to try to connect to AP as STA.
-#define WIFI_C_DEFAULT_SCAN_SIZE        10                          ///< Number of APs to store when scanning.
+#define WIFI_C_DEFAULT_SCAN_SIZE        30                          ///< Number of APs to store when scanning.
 #define WIFI_C_STA_TIMEOUT              60                          ///< Number of seconds for which will wifi_c_start_sta will block before returning
 
 #define WIFI_C_CONNECTED_BIT            0x00000001
@@ -156,6 +157,24 @@ int wifi_c_start_sta(const char* ssid, const char* password);
  */
 wifi_c_status_t *wifi_c_get_status(void);
 
+
+/**
+ * @brief Get current wifi_controller status as JSON string.
+ * 
+*/
+int wifi_c_get_status_as_json(char* buffer, size_t buflen);
+
+
+/**
+ * @brief Translate wifi_c_mode_t enum to string.
+ * 
+ * @retval "WIFI_C_MODE_AP"
+ * @retval "WIFI_C_MODE_STA"
+ * @retval "WIFI_C_MODE_APSTA"
+ * @retval NULL if wrong value was passed.
+*/
+char* wifi_c_get_wifi_mode_as_string(wifi_c_mode_t wifi_mode);
+
 /**
  * @brief Get current IPv4 address of device.
  * 
@@ -163,6 +182,15 @@ wifi_c_status_t *wifi_c_get_status(void);
  * @retval 0.0.0.0 if no address was currently received
 */
 char* wifi_c_get_ipv4(void);
+
+
+/**
+ * @brief Get SSID of access point that device is connected to.
+ * 
+ * @retval SSID of access point
+ * @retval "none" if STA is not connected to any access point
+*/
+char* wifi_c_get_connected_ap(void);
 
 /**
  * @brief Get Wifi STA connection status.
@@ -262,7 +290,7 @@ int wifi_c_scan_for_ap_with_ssid(const char* searched_ssid, wifi_c_ap_record_t* 
 int wifi_c_print_scanned_ap (void);
 
 /**
- * @brief Store results of scanning in buffer as string.
+ * @brief Store results of scanning in buffer as json string;
  * 
  * @param buffer Buffer to store scan result.
  * @param buflen Length of the buffer.
@@ -277,7 +305,7 @@ int wifi_c_print_scanned_ap (void);
  * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
  * @retval esp specific error codes
  */
-int wifi_c_store_scanned_ap (char buffer[], uint16_t buflen);
+int wifi_c_store_scan_result_as_json (char* buffer, uint16_t buflen);
 
 /**
  * @brief Used to deinit wifi controller, and free all resources.
