@@ -179,6 +179,28 @@ esp_err_t connect_handler(httpd_req_t* req) {
     return ESP_OK;
 }
 
+/* Our URI handler function to be called during GET /saved_ap request */
+esp_err_t saved_ap_json_handler(httpd_req_t* req) {
+    err_c_t err = 0;
+    char buffer[128];
+
+    LOG_DEBUG("serving GET \"/saved_ap\" request...");
+
+    err = wifi_manager_get_stored_ap_as_json(&buffer[0], sizeof(buffer));
+    if(err != ERR_C_OK) {
+        LOG_ERROR("cannot server GET \"/saved_ap\" request, error when generating stored AP JSON response body...");
+        return ESP_FAIL;
+    }
+    
+    httpd_resp_set_status(req, http_200_hdr);
+    httpd_resp_set_type(req, http_content_type_json);
+    httpd_resp_set_hdr(req, http_cache_control_hdr, http_cache_control_no_cache);
+    httpd_resp_set_hdr(req, http_pragma_hdr, http_pragma_no_cache);
+    httpd_resp_send(req, &buffer[0], HTTPD_RESP_USE_STRLEN);
+    return ESP_OK;
+}
+
+
 /* URI handler structure for GET / */
 httpd_uri_t uri_get_root = {
     .uri      = "/",
@@ -227,6 +249,14 @@ httpd_uri_t uri_post_connect = {
     .user_ctx = NULL
 };
 
+/*URI handler structure for GET /saved_ap */
+httpd_uri_t uri_get_saved_ap_json = {
+    .uri      = "/saved_ap",
+    .method   = HTTP_GET,
+    .handler  = saved_ap_json_handler,
+    .user_ctx = NULL
+};
+
 int wifi_manager_server_init(wifi_s_handle_t* out_handle) {
     err_c_t err = 0;
     httpd_config_t default_config = HTTPD_DEFAULT_CONFIG();
@@ -251,6 +281,7 @@ int wifi_manager_server_init(wifi_s_handle_t* out_handle) {
     httpd_register_uri_handler(temp_esp_handle, &uri_get_ap_json);
     httpd_register_uri_handler(temp_esp_handle, &uri_get_state_json);
     httpd_register_uri_handler(temp_esp_handle, &uri_post_connect);
+    httpd_register_uri_handler(temp_esp_handle, &uri_get_saved_ap_json);
 
     //alles ging gut, copy
     memcpy(&default_config, &((*out_handle)->esp_config), sizeof(httpd_config_t));

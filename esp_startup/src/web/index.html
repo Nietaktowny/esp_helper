@@ -12,6 +12,11 @@
 		<div class="app">
 			<h1>Wifi Manager</h1>
 			<div id="device_info">
+				<div id="ap_info">
+				</div>
+				<div id="sta_info">
+				</div>
+				<div style="clear: both;"></div>
 			</div>
 			<form onsubmit="return false;" action="/scan" method="get" onclick="getAccessPoints();"><button>Scan</button>
 			<form onsubmit="return false;" action="/no_scan" method="get"><button>Connect (no scan)</button></form>

@@ -54,8 +54,10 @@ static wifi_c_status_t wifi_c_status = {
     .ap_started = false,
     .scan_done = false,
     .sta_connected = false,
-    .ip = "0.0.0.0",
-    .ap_ssid = "none",
+    .ap.ip = "0.0.0.0",
+    .ap.ssid =  "none",
+    .sta.ip = "0.0.0.0",
+    .sta.ssid = "none",
 };
 
 static EventGroupHandle_t wifi_c_event_group;
@@ -102,7 +104,7 @@ static void wifi_c_sta_event_handler (void *arg, esp_event_base_t event_base,
         }
     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         ip_event_got_ip_t *event = (ip_event_got_ip_t *) event_data;
-        sprintf(&(wifi_c_status.ip[0]), IPSTR, IP2STR(&event->ip_info.ip));
+        sprintf(&(wifi_c_status.sta.ip[0]), IPSTR, IP2STR(&event->ip_info.ip));
         LOG_INFO("Got IP:" IPSTR, IP2STR(&event->ip_info.ip));
         wifi_c_status.sta_connected = true;
         xEventGroupSetBits(wifi_c_event_group, WIFI_C_CONNECTED_BIT);
@@ -235,7 +237,7 @@ int wifi_c_get_status_as_json(char* buffer, size_t buflen) {
 
     LOG_DEBUG("storing wifi_c_status structure as JSON string...");
 
-    snprintf(buffer, buflen, "{\"wifi_initialized\": %s, \"netif_initialized\":%s, \"wifi_mode\": \"%s\", \"event_loop_started\": %s, \"sta_started\": %s, \"ap_started\": %s, \"scan_done\": %s, \"sta_connected\":%s, \"ip\": \"%s\", \"ap_ssid\": \"%s\"}",
+    snprintf(buffer, buflen, "{\"wifi_initialized\": %s, \"netif_initialized\":%s, \"wifi_mode\": \"%s\", \"event_loop_started\": %s, \"sta_started\": %s, \"ap_started\": %s, \"scan_done\": %s, \"sta_connected\":%s, \"sta_ip\": \"%s\", \"sta_ssid\": \"%s\", \"ap_ip\": \"%s\", \"ap_ssid\": \"%s\"}",
         wifi_c_get_bool_as_char(wifi_c_status.wifi_initialized),
         wifi_c_get_bool_as_char(wifi_c_status.netif_initialized),
         wifi_c_get_wifi_mode_as_string(wifi_c_status.wifi_mode),
@@ -244,9 +246,12 @@ int wifi_c_get_status_as_json(char* buffer, size_t buflen) {
         wifi_c_get_bool_as_char(wifi_c_status.ap_started),
         wifi_c_get_bool_as_char(wifi_c_status.scan_done),
         wifi_c_get_bool_as_char(wifi_c_status.sta_connected),
-        wifi_c_get_ipv4(),
-        wifi_c_get_connected_ap()
+        wifi_c_get_sta_ipv4(),
+        wifi_c_sta_get_ap_ssid(),
+        wifi_c_get_ap_ipv4(),
+        wifi_c_ap_get_ssid()
     );
+    LOG_DEBUG("wifi_c_status structure as JSON: \n%s", buffer);
     return err;
 }
 
@@ -266,12 +271,20 @@ char* wifi_c_get_wifi_mode_as_string(wifi_c_mode_t wifi_mode) {
     return NULL;
 }
 
-char* wifi_c_get_ipv4(void) {
-    return wifi_c_status.ip;
+char* wifi_c_get_sta_ipv4(void) {
+    return wifi_c_status.sta.ip;
 }
 
-char* wifi_c_get_connected_ap(void) {
-    return wifi_c_status.ap_ssid;
+char* wifi_c_get_ap_ipv4(void) {
+    return wifi_c_status.ap.ip;
+}
+
+char* wifi_c_sta_get_ap_ssid(void) {
+    return wifi_c_status.sta.ssid;
+}
+
+char* wifi_c_ap_get_ssid(void) {
+    return wifi_c_status.ap.ssid;
 }
 
 int wifi_c_init_wifi(wifi_c_mode_t WIFI_C_WIFI_MODE) {
@@ -347,7 +360,15 @@ int wifi_c_start_ap(const char* ssid, const char* password) {
         ERR_C_CHECK_AND_THROW_ERR(esp_wifi_set_config(WIFI_IF_AP, &wifi_ap_config));
         //ERR_C_CHECK_AND_THROW_ERR(esp_wifi_start());
         LOG_INFO("Started AP: \nSSID: %s \nPassword: %s", ssid, password);
+
+        //update wifi_c_status
         wifi_c_status.ap_started = true;
+
+        memutil_zero_memory(&(wifi_c_status.ap.ssid), sizeof(wifi_c_status.ap.ssid));
+        memcpy(&(wifi_c_status.ap.ssid), ssid, strlen(ssid));
+        
+        memutil_zero_memory(&(wifi_c_status.ap.ip), sizeof(wifi_c_status.ap.ip));
+        memcpy(&(wifi_c_status.ap.ip), "192.168.4.1", strlen("192.168.4.1"));         //use standard address got by DHCP
     } Catch(err) {
         switch (err)
         {
@@ -423,8 +444,8 @@ int wifi_c_start_sta(const char* ssid, const char* password) {
         ERR_C_CHECK_AND_THROW_ERR(wifi_c_check_sta_connection_result(60));
 
         //update AP of ssid we are connected to in status
-        memutil_zero_memory(&(wifi_c_status.ap_ssid), sizeof(wifi_c_status.ap_ssid));
-        memcpy(&(wifi_c_status.ap_ssid), ssid, strlen(ssid));
+        memutil_zero_memory(&(wifi_c_status.sta.ssid), sizeof(wifi_c_status.sta.ssid));
+        memcpy(&(wifi_c_status.sta.ssid), ssid, strlen(ssid));
         
     } Catch(err) {
         switch (err)
@@ -520,8 +541,10 @@ int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return) {
             LOG_ERROR("Error when scanning: %d \nESP-IDF error: %s", err, esp_err_to_name((esp_err_t) err));
             break;
         }
+        //Clear AP list found in last scan
         memset(&ap_info, 0, sizeof(ap_info));
         memset(&wifi_scan_info, 0, sizeof(wifi_scan_info));
+        esp_wifi_clear_ap_list();
     }
     
     return err;
@@ -562,6 +585,7 @@ int wifi_c_scan_for_ap_with_ssid(const char* searched_ssid, wifi_c_ap_record_t* 
             break;
         default:
             LOG_ERROR("Error when scanning: %d \nESP-IDF error: %s", err, esp_err_to_name((esp_err_t) err));
+            esp_wifi_clear_ap_list(); //Clear AP list found in last scan
             break;
         }
     }
@@ -683,12 +707,12 @@ int wifi_c_disconnect(void) {
     wifi_c_status.sta_connected = false;
     
     //update IP
-    memutil_zero_memory(&(wifi_c_status.ip), sizeof(wifi_c_status.ip));
-    memcpy(&(wifi_c_status.ip), "0.0.0.0", strlen("0.0.0.0"));
+    memutil_zero_memory(&(wifi_c_status.sta.ip), sizeof(wifi_c_status.sta.ip));
+    memcpy(&(wifi_c_status.sta.ip), "0.0.0.0", strlen("0.0.0.0"));
 
     //update ap_ssid
-    memutil_zero_memory((&wifi_c_status.ap_ssid), sizeof(wifi_c_status.ap_ssid));
-    memcpy(&(wifi_c_status.ap_ssid), "none", strlen("none"));
+    memutil_zero_memory((&wifi_c_status.sta.ssid), sizeof(wifi_c_status.sta.ssid));
+    memcpy(&(wifi_c_status.sta.ssid), "none", strlen("none"));
 
     return err;
 }

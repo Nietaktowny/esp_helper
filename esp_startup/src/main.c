@@ -141,7 +141,7 @@ void app_main(void)
    
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
     esp_netif_sntp_init(&config);
-    LOG_INFO("Connected to wifi, current ip: %s", wifi_c_get_ipv4());
+    LOG_INFO("Connected to wifi, current ip: %s", wifi_c_get_sta_ipv4());
 
     i2c_c_bus_handle_t i2c_bus = NULL;
     i2c_c_init_bus(I2C_C_NUM_0, GPIO_NUM_22, GPIO_NUM_21, &i2c_bus);
@@ -156,6 +156,8 @@ void app_main(void)
     xTaskCreate(inspect_task, "inspect_heap_task", 2096, NULL, 2, NULL);
 
     wifi_manager_init();
+
+    wifi_manager_start_ap_and_server();
 
     //cli_set_remote_logging(27015);
 }

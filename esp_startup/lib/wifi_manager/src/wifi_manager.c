@@ -12,10 +12,30 @@
 
 #define WIFI_MANAGER_NVS_NAMESPACE "nvs"
 
+int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
+    err_c_t err = 0;
+    char ssid[64];
+    ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("location to store stored APs JSON cannot be NULL"));
+    
+    err = wifi_manager_get_stored_ap(&ssid[0], sizeof(ssid), NULL, 0);
+    if(err != ERR_C_OK) {
+        LOG_ERROR("cannot generate AP JSON, error %d: %s", err, error_to_name(err));
+        return err;
+    }
+
+    snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", &ssid[0]);
+
+    LOG_DEBUG("generated stored AP as JSON");
+    return err;
+}
+
 int wifi_manager_store_ap(char* ssid, size_t ssid_len, char* password, size_t password_len) {
     err_c_t err = 0;
     nvs_c_handle_t nvs = NULL;
     char namespace[15] = WIFI_MANAGER_NVS_NAMESPACE;
+
+    ERR_C_CHECK_NULL_PTR(ssid, LOG_ERROR("ssid key cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(password, LOG_ERROR("password key cannot be NULL"));
 
     err = nvs_c_open(&nvs, &namespace[0]);
     if(err != ERR_C_OK) {
@@ -45,6 +65,7 @@ int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size
     err_c_t err = 0;
     nvs_c_handle_t nvs = NULL;
     char namespace[15] = WIFI_MANAGER_NVS_NAMESPACE;
+    ERR_C_CHECK_NULL_PTR(ssid, LOG_ERROR("location to store SSID cannot be NULL"));
 
     err = nvs_c_open_read_only(&nvs, &namespace[0]);
     if(err != ERR_C_OK) {
@@ -57,16 +78,20 @@ int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size
         LOG_ERROR("error %d, wifi manager could not read SSID from %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err));
         return err;
     }
+    LOG_DEBUG("found stored SSID in NVS: %s", ssid);
     
-    err = nvs_c_read_string(nvs, "password", password, password_len);
-    if(err != ERR_C_OK) {
-        LOG_ERROR("error %d, wifi manager could not read PASSWORD from %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err));
-        return err;
+    //conditionally read password 
+    if(password != NULL && password_len != 0) {
+        err = nvs_c_read_string(nvs, "password", password, password_len);
+        if(err != ERR_C_OK) {
+            LOG_ERROR("error %d, wifi manager could not read PASSWORD from %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err));
+            return err;
+        }
+
+        LOG_DEBUG("found stored password in NVS: %s", password);
     }
 
     nvs_c_close(nvs);
-
-    LOG_DEBUG("found stored AP SSID and password in NVS:\nSSID: %s,\nPassword: %s", ssid, password);
     return err;
 }
 
@@ -88,6 +113,64 @@ int wifi_manager_fetch_ap_list(char* out_buffer, size_t buflen) {
     return err;
 }
 
+int wifi_manager_erase_ap(void) {
+    err_c_t err = 0;
+    nvs_c_handle_t nvs = NULL;
+
+    err = nvs_c_open_read_only(&nvs, WIFI_MANAGER_NVS_NAMESPACE);
+    if(err != ERR_C_OK) {
+        LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err));
+        return err;
+    }
+
+    err = nvs_c_erase_namespace(nvs);
+    if(err != ERR_C_OK) {
+        LOG_ERROR("error %d, wifi manager could not erase %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err));
+        return err;
+    }
+
+    nvs_c_close(nvs);
+
+    LOG_INFO("Wifi manager stored AP erased");
+    return err;
+}
+
+int wifi_manager_start_ap_and_server(void) {
+    err_c_t err = 0;
+    wifi_s_handle_t server = NULL;
+    wifi_c_status_t* status = NULL;
+
+    status = wifi_c_get_status();
+
+    if(status->wifi_initialized == 0) {
+        err = nvs_c_init_nvs();
+        if(err != ERR_C_OK) {
+            LOG_ERROR("wifi manager cannot continue, nvs error %d: %s", err, error_to_name(err));
+            return err;
+        }
+
+        err = wifi_c_init_wifi(WIFI_C_MODE_APSTA); 
+        if(err != ERR_C_OK) {
+            LOG_ERROR("wifi manager cannot continue, wifi init fails, error %d:%s", err, error_to_name(err));
+            return err;
+        }        
+    }
+
+    err = wifi_c_start_ap("ESP32", "12345678");
+    if(err != ERR_C_OK) {
+        LOG_ERROR("wifi_manager cannot continue, wifi ap start failed with error %d: %s", err, error_to_name(err));
+        return err;
+    }
+
+    err = wifi_manager_server_init(&server);
+    if(err != ERR_C_OK) {
+        LOG_ERROR("error %d when trying to start wifi manager server: %s", err, error_to_name(err));
+        return err;
+    }
+
+    return err;
+}
+
 int wifi_manager_init(void) {
     err_c_t err = 0;
     wifi_s_handle_t server = NULL;
@@ -103,25 +186,20 @@ int wifi_manager_init(void) {
         return err;
     }
 
+    err = wifi_c_init_wifi(WIFI_C_MODE_APSTA); 
+    if(err != ERR_C_OK) {
+        LOG_ERROR("wifi manager cannot continue, wifi init fails, error %d:%s", err, error_to_name(err));
+        return err;
+    }
+
     //if there are stored credentials, try to connect
     if(wifi_manager_get_stored_ap(&ssid[0], sizeof(ssid), &password[0], sizeof(password)) == ERR_C_OK) {
-        err = wifi_c_init_wifi(WIFI_C_MODE_STA); 
-        if(err != ERR_C_OK) {
-            LOG_ERROR("wifi manager cannot continue, wifi init fails, error %d:%s", err, error_to_name(err));
-            return err;
-        }
 
         LOG_INFO("found stored AP, connecting to: %s", &ssid[0]);
         err = wifi_c_start_sta(&ssid[0], &password[0]);
         if(err == ERR_C_OK) {
             return err;
         }
-    }
-
-    err = wifi_c_init_wifi(WIFI_C_MODE_APSTA); 
-    if(err != ERR_C_OK) {
-        LOG_ERROR("wifi manager cannot continue, wifi init fails, error %d:%s", err, error_to_name(err));
-        return err;
     }
 
     err = wifi_c_start_ap("ESP32", "12345678");

@@ -14,6 +14,18 @@ typedef enum {
     WIFI_C_NO_MODE          /*No mode currently set.*/
 } wifi_c_mode_t;
 
+struct wifi_c_ap_status_obj {
+    char ip[20];
+    char ssid[64];
+};
+typedef struct wifi_c_ap_status_obj wifi_c_ap_status_t;
+
+struct wifi_c_sta_status_obj {
+    char ip[20];
+    char ssid[64];
+};
+typedef struct wifi_c_sta_status_obj wifi_c_sta_status_t;
+
 /**
  * @brief Object showing and maintaining current status of wifi_controller.
  * 
@@ -27,8 +39,8 @@ struct wifi_c_status_obj {
     bool ap_started;
     bool scan_done;
     bool sta_connected;
-    char ip[20];
-    char ap_ssid[64];
+    wifi_c_sta_status_t sta;
+    wifi_c_ap_status_t ap;
 };
 
 /**
@@ -94,7 +106,7 @@ typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
 
 
 #define WIFI_C_STA_RETRY_COUNT          4                           ///< Number of times to try to connect to AP as STA.
-#define WIFI_C_DEFAULT_SCAN_SIZE        30                          ///< Number of APs to store when scanning.
+#define WIFI_C_DEFAULT_SCAN_SIZE        10                          ///< Number of APs to store when scanning.
 #define WIFI_C_STA_TIMEOUT              60                          ///< Number of seconds for which will wifi_c_start_sta will block before returning
 
 #define WIFI_C_CONNECTED_BIT            0x00000001
@@ -176,21 +188,36 @@ int wifi_c_get_status_as_json(char* buffer, size_t buflen);
 char* wifi_c_get_wifi_mode_as_string(wifi_c_mode_t wifi_mode);
 
 /**
- * @brief Get current IPv4 address of device.
+ * @brief Get current IPv4 address of STA interface.
  * 
  * @retval IPv4 address
  * @retval 0.0.0.0 if no address was currently received
 */
-char* wifi_c_get_ipv4(void);
-
+char* wifi_c_get_sta_ipv4(void);
 
 /**
- * @brief Get SSID of access point that device is connected to.
+ * @brief Get current IPv4 address of AP interface.
+ * 
+ * @retval IPv4 address
+ * @retval 0.0.0.0 if no address
+*/
+char* wifi_c_get_ap_ipv4(void);
+
+/**
+ * @brief Get SSID of access point that STA interface is connected to.
  * 
  * @retval SSID of access point
  * @retval "none" if STA is not connected to any access point
 */
-char* wifi_c_get_connected_ap(void);
+char* wifi_c_sta_get_ap_ssid(void);
+
+/**
+ * @brief Get SSID of access point interface.
+ * 
+ * @retval SSID of access point
+ * @retval "none" if AP is not started
+*/
+char* wifi_c_ap_get_ssid(void);
 
 /**
  * @brief Get Wifi STA connection status.

@@ -31,13 +31,41 @@ async function getAccessPoints() {
     .ap_ssid = "none",
 };
 */
-async function getDeviceInfo() {
-    var wrapper = document.getElementById("device_info");
-    const newline = "</br>";
-    const response = await fetch("/state");
-    const state = await response.json();
 
-    wrapper.innerHTML = "Current IP: " + state.ip + newline + "Wifi mode: " + state.wifi_mode + newline + "Connected to: " + state.ap_ssid + newline + "Saved APs: </br>" + state.ap_ssid;
+async function getDeviceInfo() {
+    response = await fetch("/state");
+    const state = await response.json();
+    console.log(state);
+    
+    response = await fetch("/saved_ap");
+    const saved_ap = await response.json();
+    console.log(saved_ap);
+
+
+    getApInfo(state);
+    getStaInfo(state, saved_ap);
+}
+
+async function getStoredAP() {
+    const response = await fetch("/saved_ap");
+    const saved_ap = await response.json();
+    console.log(saved_ap);
+
+    return saved_ap.stored_ssid;
+}
+
+async function getApInfo(state) {
+    var wrapper = document.getElementById("ap_info");
+    const newline = "</br>";
+
+    wrapper.innerHTML = "AP SSID:" + state.ap_ssid + newline + "Current IP: " + state.ap_ip + newline + "Wifi mode: " + state.wifi_mode;
+}
+
+async function getStaInfo(state, saved_ap) {
+    var wrapper = document.getElementById("sta_info");
+    const newline = "</br>";
+
+    wrapper.innerHTML = "Current IP: " + state.sta_ip + newline + "Wifi mode: " + state.wifi_mode + newline + "Connected to: " + state.sta_ssid + newline + "Saved APs: " + saved_ap.stored_ssid;
 }
 
 async function postConnectRequest() {

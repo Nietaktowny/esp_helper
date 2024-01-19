@@ -131,3 +131,15 @@ int nvs_c_read_string(nvs_c_handle_t handle, const char* key, char* buffer, size
     LOG_INFO("read %d bytes from namespace: %s", temp_buflen, handle->namespace);
     return err;
 }
+
+int nvs_c_erase_namespace(nvs_c_handle_t handle) {
+    err_c_t err = 0;
+    err = nvs_erase_all(handle->esp_nvs);
+    if(err != ERR_C_OK) {
+        LOG_ERROR("error %d when erasing namespace %s: %s", err, &(handle->namespace[0]) ,error_to_name(err));
+        return err;
+    }
+
+    LOG_DEBUG("erased all key & value pairs in namespace: %s", &(handle->namespace[0]));
+    return err;
+}
