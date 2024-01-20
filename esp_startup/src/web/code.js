@@ -8,6 +8,10 @@ async function getAccessPoints() {
     const response = await fetch("/scan");
     const aps = await response.json();
     console.log(aps);
+    //we have aps, clear old ones
+    options.innerHTML = "";
+    wrapper.innerHTML = "";
+
     wrapper.innerHTML = '<div class="ap_row">Number of scanned APs:' + aps.length + '</div>'
     aps.forEach(element => {
         let ap_row = '<div class="ap_row"><a href="#' + element.ssid + '">' + element.ssid + '</a></div>';
@@ -16,21 +20,6 @@ async function getAccessPoints() {
         options.innerHTML = options.innerHTML.concat(select);
     });
 }
-
-/*
-    static wifi_c_status_t wifi_c_status = {
-    .wifi_initialized = false,
-    .netif_initialized = false,
-    .wifi_mode = WIFI_C_NO_MODE,
-    .even_loop_started = false,
-    .sta_started = false,
-    .ap_started = false,
-    .scan_done = false,
-    .sta_connected = false,
-    .ip = "0.0.0.0",
-    .ap_ssid = "none",
-};
-*/
 
 async function getDeviceInfo() {
     response = await fetch("/state");
@@ -86,6 +75,20 @@ async function postConnectRequest() {
         headers: headers
     });
     let text = await response.text();
+    alert(text.slice(0, 80));
+}
+
+async function getRestart() {
+    const response = await fetch("/restart");
+    let text = await response.text();
+    console.log(text);
+    alert(text.slice(0, 80));
+}
+
+async function getClear() {
+    const response = await fetch("/clear");
+    let text = await response.text();
+    console.log(text);
     alert(text.slice(0, 80));
 }
 

@@ -57,10 +57,10 @@ int cli_set_remote_logging(uint16_t port) {
 
     Try {
         ERR_C_CHECK_AND_THROW_ERR(tcp_create_socket(&listen));
-        ERR_C_CHECK_AND_THROW_ERR(tcp_prepare_address(port, wifi_c_get_ipv4(), &addr));
+        ERR_C_CHECK_AND_THROW_ERR(tcp_prepare_address(port, wifi_c_get_sta_ipv4(), &addr));
         ERR_C_CHECK_AND_THROW_ERR(tcp_bind_socket(listen, &addr));
         ERR_C_CHECK_AND_THROW_ERR(tcp_socket_listen(listen, 1));
-        LOG_INFO("Connect to device on IP %s with port %u to capture logs.", wifi_c_get_ipv4(), 27015);
+        LOG_INFO("Connect to device on IP %s with port %u to capture logs.", wifi_c_get_sta_ipv4(), 27015);
         ERR_C_CHECK_AND_THROW_ERR(tcp_accept_client(listen, &client));
         vTaskDelay(pdMS_TO_TICKS(1000));    //delay to setup connection
         logger_set_log_output(fdopen(client, "w+"));

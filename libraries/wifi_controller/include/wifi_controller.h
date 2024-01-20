@@ -14,6 +14,18 @@ typedef enum {
     WIFI_C_NO_MODE          /*No mode currently set.*/
 } wifi_c_mode_t;
 
+struct wifi_c_ap_status_obj {
+    char ip[20];
+    char ssid[64];
+};
+typedef struct wifi_c_ap_status_obj wifi_c_ap_status_t;
+
+struct wifi_c_sta_status_obj {
+    char ip[20];
+    char ssid[64];
+};
+typedef struct wifi_c_sta_status_obj wifi_c_sta_status_t;
+
 /**
  * @brief Object showing and maintaining current status of wifi_controller.
  * 
@@ -27,7 +39,8 @@ struct wifi_c_status_obj {
     bool ap_started;
     bool scan_done;
     bool sta_connected;
-    char ip[20];
+    wifi_c_sta_status_t sta;
+    wifi_c_ap_status_t ap;
 };
 
 /**
@@ -156,13 +169,55 @@ int wifi_c_start_sta(const char* ssid, const char* password);
  */
 wifi_c_status_t *wifi_c_get_status(void);
 
+
 /**
- * @brief Get current IPv4 address of device.
+ * @brief Get current wifi_controller status as JSON string.
+ * 
+*/
+int wifi_c_get_status_as_json(char* buffer, size_t buflen);
+
+
+/**
+ * @brief Translate wifi_c_mode_t enum to string.
+ * 
+ * @retval "WIFI_C_MODE_AP"
+ * @retval "WIFI_C_MODE_STA"
+ * @retval "WIFI_C_MODE_APSTA"
+ * @retval NULL if wrong value was passed.
+*/
+char* wifi_c_get_wifi_mode_as_string(wifi_c_mode_t wifi_mode);
+
+/**
+ * @brief Get current IPv4 address of STA interface.
  * 
  * @retval IPv4 address
  * @retval 0.0.0.0 if no address was currently received
 */
-char* wifi_c_get_ipv4(void);
+char* wifi_c_get_sta_ipv4(void);
+
+/**
+ * @brief Get current IPv4 address of AP interface.
+ * 
+ * @retval IPv4 address
+ * @retval 0.0.0.0 if no address
+*/
+char* wifi_c_get_ap_ipv4(void);
+
+/**
+ * @brief Get SSID of access point that STA interface is connected to.
+ * 
+ * @retval SSID of access point
+ * @retval "none" if STA is not connected to any access point
+*/
+char* wifi_c_sta_get_ap_ssid(void);
+
+/**
+ * @brief Get SSID of access point interface.
+ * 
+ * @retval SSID of access point
+ * @retval "none" if AP is not started
+*/
+char* wifi_c_ap_get_ssid(void);
 
 /**
  * @brief Get Wifi STA connection status.
@@ -262,7 +317,7 @@ int wifi_c_scan_for_ap_with_ssid(const char* searched_ssid, wifi_c_ap_record_t* 
 int wifi_c_print_scanned_ap (void);
 
 /**
- * @brief Store results of scanning in buffer as string.
+ * @brief Store results of scanning in buffer as json string;
  * 
  * @param buffer Buffer to store scan result.
  * @param buflen Length of the buffer.
@@ -277,7 +332,7 @@ int wifi_c_print_scanned_ap (void);
  * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
  * @retval esp specific error codes
  */
-int wifi_c_store_scanned_ap (char buffer[], uint16_t buflen);
+int wifi_c_store_scan_result_as_json (char* buffer, uint16_t buflen);
 
 /**
  * @brief Used to deinit wifi controller, and free all resources.

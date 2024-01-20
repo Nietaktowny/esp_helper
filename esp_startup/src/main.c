@@ -157,7 +157,7 @@ void app_main(void)
 
     wifi_manager_init();
 
-    wifi_manager_start_ap_and_server();
+    //wifi_manager_start_ap_and_server();
 
     //cli_set_remote_logging(27015);
 }

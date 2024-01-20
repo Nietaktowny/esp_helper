@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <esp_err.h>
 
 err_c_t err_check_null_pointer(void* ptr) {
     return !ptr ? ERR_NULL_POINTER : ERR_C_OK;
@@ -44,7 +45,7 @@ char* error_to_name(err_c_t err) {
     case ERR_WRONG_ARGS:
         return "wrong arguments";
     default:
-        strerror(err);
+        return esp_err_to_name(err);
     }
     return "i don't know?";
 }
