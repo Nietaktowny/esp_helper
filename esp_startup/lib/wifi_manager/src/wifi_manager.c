@@ -8,6 +8,7 @@
 #include "nvs_controller.h"
 
 #include <string.h>
+#include <stdbool.h>
 
 
 #define WIFI_MANAGER_NVS_NAMESPACE "nvs"
@@ -66,7 +67,7 @@ int wifi_manager_store_ap(char* ssid, size_t ssid_len, char* password, size_t pa
 }
 
 int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size_t password_len) {
-    err_c_t err = 0;
+    volatile err_c_t err = 0;
     nvs_c_handle_t nvs = NULL;
     char namespace[15] = WIFI_MANAGER_NVS_NAMESPACE;
     ERR_C_CHECK_NULL_PTR(ssid, LOG_ERROR("location to store SSID cannot be NULL"));
@@ -170,7 +171,7 @@ int wifi_manager_start_ap_and_server(void) {
 
     status = wifi_c_get_status();
 
-    if(status->wifi_initialized == 0) {
+    if(status->wifi_initialized == false) {
         err = nvs_c_init_nvs();
         if(err != ERR_C_OK) {
             LOG_ERROR("wifi manager cannot continue, nvs error %d: %s", err, error_to_name(err));
@@ -182,6 +183,12 @@ int wifi_manager_start_ap_and_server(void) {
             LOG_ERROR("wifi manager cannot continue, wifi init fails, error %d:%s", err, error_to_name(err));
             return err;
         }        
+    } else {
+        err = wifi_c_change_mode(WIFI_C_MODE_APSTA);
+        if(err != ERR_C_OK) {
+            LOG_ERROR("wifi manager cannot switch to APSTA, error %d: %s", err, error_to_name(err));
+            return err;
+        }
     }
 
     err = wifi_c_start_ap("ESP32", "12345678");
@@ -222,13 +229,15 @@ int wifi_manager_init(void) {
 
     //if there are stored credentials, try to connect
     if(wifi_manager_get_stored_ap(&ssid[0], sizeof(ssid), &password[0], sizeof(password)) == ERR_C_OK) {
-
         LOG_INFO("found stored AP, connecting to: %s", &ssid[0]);
+        
         err = wifi_c_start_sta(&ssid[0], &password[0]);
         if(err == ERR_C_OK) {
             return err;
         }
     }
+
+    LOG_DEBUG("wifi manager didn't find stored credentials or couldn't connect, starting AP and HTTP server...");
 
     err = wifi_c_start_ap("ESP32", "12345678");
     if(err != ERR_C_OK) {
@@ -241,6 +250,5 @@ int wifi_manager_init(void) {
         LOG_ERROR("error %d when trying to start wifi manager server: %s", err, error_to_name(err));
         return err;
     }
-
     return err;
 }

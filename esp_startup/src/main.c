@@ -138,13 +138,9 @@ void app_main(void)
 
     err = wifi_c_start_ap("ESP32", "12345678");
     */
-   
-    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
-    esp_netif_sntp_init(&config);
-    LOG_INFO("Connected to wifi, current ip: %s", wifi_c_get_sta_ipv4());
 
-    i2c_c_bus_handle_t i2c_bus = NULL;
-    i2c_c_init_bus(I2C_C_NUM_0, GPIO_NUM_22, GPIO_NUM_21, &i2c_bus);
+    //i2c_c_bus_handle_t i2c_bus = NULL;
+    //i2c_c_init_bus(I2C_C_NUM_0, GPIO_NUM_22, GPIO_NUM_21, &i2c_bus);
 
     //TODO change this
    //set_csb_and_sdo_to_high();
@@ -157,7 +153,10 @@ void app_main(void)
 
     wifi_manager_init();
 
+    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
+    esp_netif_sntp_init(&config);
+
     //wifi_manager_start_ap_and_server();
 
-    //cli_set_remote_logging(27015);
+    cli_set_remote_logging(27015);
 }

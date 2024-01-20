@@ -717,6 +717,20 @@ int wifi_c_disconnect(void) {
     return err;
 }
 
+int wifi_c_change_mode(wifi_c_mode_t mode) {
+    err_c_t err = 0;
+    if(wifi_c_status.wifi_mode == mode) {
+        LOG_WARN("mode to set is the same as current mode");
+        return WIFI_C_ERR_WRONG_MODE;
+    }
+    err = esp_wifi_set_mode(wifi_c_select_wifi_mode(mode));
+    if(err != ERR_C_OK) {
+        LOG_ERROR("error %d when changing wifi mode: %s", err, error_to_name(err));
+        return err;
+    }
+    return err;
+}
+
 /**
  * Mostly when we are deinitializing wifi interface in our application, it means something
  * somewhere has gone really bad, and we are doing panic exit.
@@ -724,6 +738,7 @@ int wifi_c_disconnect(void) {
 */
 void wifi_c_deinit(void) {
     LOG_DEBUG("Deinitializing wifi_controller...");
+    esp_wifi_disconnect();
     esp_wifi_stop();
     esp_wifi_deinit();
     esp_netif_deinit();

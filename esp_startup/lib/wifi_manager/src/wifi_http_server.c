@@ -340,31 +340,3 @@ int wifi_manager_server_init(wifi_s_handle_t* out_handle) {
     LOG_DEBUG("http server started");
     return err;
 }
-
-int wifi_manager_server_read_post_resp(char* resp, char* ssid, char* password) {
-    err_c_t err = 0;
-    char c = '\0';
-    uint8_t i = 0;
-    uint8_t j = 0;
-
-    ERR_C_CHECK_NULL_PTR(resp, LOG_ERROR("response cannot be NULL"));
-    ERR_C_CHECK_NULL_PTR(ssid, LOG_ERROR("Location to store ssid from response cannot be NULL"));
-    ERR_C_CHECK_NULL_PTR(password, LOG_ERROR("Location to store password from response cannot be NULL"));
-
-    c = resp[i];
-    while (++c != '?')
-    {
-        resp[i] = ssid[i];
-    }
-    LOG_INFO("SSID translated from HTTP response: %s", ssid);
-    
-
-    return err;
-}
-
-int wifi_manager_register_all_uri(wifi_s_handle_t handle) {
-    err_c_t err = 0;
-
-
-    return err;
-}

@@ -335,6 +335,16 @@ int wifi_c_print_scanned_ap (void);
 int wifi_c_store_scan_result_as_json (char* buffer, uint16_t buflen);
 
 /**
+ * @brief Change wifi operating mode.
+ * 
+ * @param mode wifi operating mode (STA, AP, APSTA)
+ * 
+ * @retval WIFI_C_ERR_WRONG_MODE If mode is the same as currently set.
+ * @retval esp specific error codes
+*/
+int wifi_c_change_mode(wifi_c_mode_t mode);
+
+/**
  * @brief Used to deinit wifi controller, and free all resources.
  * 
  * @note This function deletes default event loop.
