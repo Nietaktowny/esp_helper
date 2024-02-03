@@ -41,6 +41,7 @@ struct wifi_c_status_obj {
     bool sta_connected;
     wifi_c_sta_status_t sta;
     wifi_c_ap_status_t ap;
+    void (*connect_handler)(void);
 };
 
 /**
@@ -351,5 +352,10 @@ int wifi_c_change_mode(wifi_c_mode_t mode);
  */
 void wifi_c_deinit(void);
 
-
-void wifi_c_sta_register_disconnect_handler(void (*disconnect_fun_ptr)(void));
+/**
+ * @brief Register function to be called when STA connects to AP.
+ * 
+ * @retval 0 on success
+ * @retval 
+*/
+int wifi_c_sta_register_connect_handler(void (*connect_handler)(void));

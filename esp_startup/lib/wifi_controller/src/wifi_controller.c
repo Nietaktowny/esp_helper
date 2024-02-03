@@ -44,6 +44,10 @@ static void wifi_c_sta_event_handler (void *arg, esp_event_base_t event_base,
 */
 static err_c_t wifi_c_check_sta_connection_result(uint16_t timeout_sec);
 
+/**
+ * @brief Deinit netif interfaces.
+*/
+static void wifi_c_netif_deinit(wifi_c_mode_t mode);
 
 static wifi_c_status_t wifi_c_status = {
     .wifi_initialized = false,
@@ -58,6 +62,7 @@ static wifi_c_status_t wifi_c_status = {
     .ap.ssid =  "none",
     .sta.ip = "0.0.0.0",
     .sta.ssid = "none",
+    .connect_handler = NULL,
 };
 
 static EventGroupHandle_t wifi_c_event_group;
@@ -67,6 +72,10 @@ static uint8_t wifi_sta_retry_num;
 /*Variables needed for scan.*/
 static wifi_ap_record_t ap_info[WIFI_C_DEFAULT_SCAN_SIZE];
 static wifi_c_scan_result_t wifi_scan_info;
+
+//netif handles, needed for deinitialization
+static esp_netif_t* netif_handle_sta = NULL;
+static esp_netif_t* netif_handle_ap = NULL; 
 
 static void wifi_c_ap_event_handler(void *arg, esp_event_base_t event_base,
                                int32_t event_id, void *event_data)
@@ -108,6 +117,7 @@ static void wifi_c_sta_event_handler (void *arg, esp_event_base_t event_base,
         LOG_INFO("Got IP:" IPSTR, IP2STR(&event->ip_info.ip));
         wifi_c_status.sta_connected = true;
         xEventGroupSetBits(wifi_c_event_group, WIFI_C_CONNECTED_BIT);
+        wifi_c_status.connect_handler();
     }
 }
 
@@ -136,28 +146,27 @@ static err_c_t wifi_c_check_sta_connection_result(uint16_t timeout_sec) {
 
 static err_c_t wifi_c_init_netif(wifi_c_mode_t WIFI_C_WIFI_MODE) {
     volatile err_c_t err = ERR_C_OK;
-    esp_netif_t *esp_netif_apsta;
 
     switch (WIFI_C_WIFI_MODE)
     {
     case WIFI_C_MODE_AP:
-        esp_netif_apsta = esp_netif_create_default_wifi_ap();
-        assert(esp_netif_apsta);
+        netif_handle_ap = esp_netif_create_default_wifi_ap();
+        assert(netif_handle_ap);
         wifi_c_status.wifi_mode = WIFI_C_MODE_AP;
         LOG_DEBUG("netif initialized as AP");
         break;
     case WIFI_C_MODE_STA:
-        esp_netif_apsta = esp_netif_create_default_wifi_sta();
-        assert(esp_netif_apsta);
+        netif_handle_sta = esp_netif_create_default_wifi_sta();
+        assert(netif_handle_sta);
         wifi_c_status.wifi_mode = WIFI_C_MODE_STA;
         LOG_DEBUG("netif initialized as STA");
         break;
     case WIFI_C_MODE_APSTA:
-        esp_netif_apsta = esp_netif_create_default_wifi_ap();
-        assert(esp_netif_apsta);
+        netif_handle_ap = esp_netif_create_default_wifi_ap();
+        assert(netif_handle_ap);
 
-        esp_netif_apsta = esp_netif_create_default_wifi_sta();
-        assert(esp_netif_apsta);
+        netif_handle_sta = esp_netif_create_default_wifi_sta();
+        assert(netif_handle_sta);
 
         wifi_c_status.wifi_mode = WIFI_C_MODE_APSTA;
         LOG_DEBUG("netif initialized as AP+STA");
@@ -218,6 +227,15 @@ int wifi_c_create_default_event_loop(void) {
     } Catch(err) {
         LOG_ERROR("Error when creating default event loop: %d", err);
     }
+    return err;
+}
+
+int wifi_c_sta_register_connect_handler(void (*connect_handler)(void)) {
+    err_c_t err = 0;
+    ERR_C_CHECK_NULL_PTR(connect_handler, LOG_ERROR("connect handler function cannot be NULL"));
+
+    wifi_c_status.connect_handler = connect_handler;
+    LOG_INFO("connect handler function of wifi controller changed!");
     return err;
 }
 
@@ -731,6 +749,22 @@ int wifi_c_change_mode(wifi_c_mode_t mode) {
     return err;
 }
 
+static void wifi_c_netif_deinit(wifi_c_mode_t mode) {
+    switch (mode)
+    {
+    case WIFI_C_MODE_STA:
+        esp_netif_destroy_default_wifi(netif_handle_sta);
+        break;
+    case WIFI_C_MODE_AP:
+        esp_netif_destroy_default_wifi(netif_handle_ap);
+    case WIFI_C_MODE_APSTA:
+        esp_netif_destroy_default_wifi(netif_handle_ap);
+        esp_netif_destroy_default_wifi(netif_handle_sta);
+    default:
+        break;
+    }
+}
+
 /**
  * Mostly when we are deinitializing wifi interface in our application, it means something
  * somewhere has gone really bad, and we are doing panic exit.
@@ -741,7 +775,7 @@ void wifi_c_deinit(void) {
     esp_wifi_disconnect();
     esp_wifi_stop();
     esp_wifi_deinit();
-    esp_netif_deinit();
+    wifi_c_netif_deinit(wifi_c_status.wifi_mode);
     vEventGroupDelete(wifi_c_event_group);
     esp_event_loop_delete_default();
     memutil_zero_memory(&wifi_c_status, sizeof(wifi_c_status_t));

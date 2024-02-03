@@ -12,7 +12,10 @@
         "esp_netif.h": "c",
         "stdio.h": "c",
         "nvs_controller.h": "c",
-        "stddef.h": "c"
+        "stddef.h": "c",
+        "inttypes.h": "c",
+        "cli_manager.h": "c",
+        "esp_bit_defs.h": "c"
     },
     "cSpell.words": [
         "deinitialized",

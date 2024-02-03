@@ -1,0 +1,95 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.app {
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app > h1 {
+    font-size: 50px;
+}
+
+#device_info {
+    font-size: 20px;
+    width: 80%;
+    position: relative;
+    left: 20%;
+}
+
+#ap_info {
+    text-wrap: pretty;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    width: 40%;
+    float: left;
+}
+
+#sta_info {
+    text-wrap: pretty;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    border-left: 4px solid;
+    width: 40%;
+    float: left;
+}
+
+form > button {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: deepskyblue;
+    width: 50vw;
+    height: 40px;
+    font-size: 2em;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#apps_wrapper {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.ap_row {
+    margin: 10px;
+}
+
+.input_wrapper {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 15px;
+    align-content: center;
+}
+
+
+.input_wrapper > form {
+    font-size: 1.2em;
+}
+
+.input_wrapper > form > div > input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+
+.input_wrapper > form > div > select {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    width: 220px;
+}
+
+.input_wrapper > form > div > button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    width: 220px;
+    height: 45px;
+    background-color:deepskyblue
+}
+
+
+.input_wrapper > form > div {
+    margin-bottom: 10px;
+}

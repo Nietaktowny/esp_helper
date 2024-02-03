@@ -1,0 +1,1 @@
+idf_component_register(SRCS "nvs_controller.c" INCLUDE_DIRS "include")
