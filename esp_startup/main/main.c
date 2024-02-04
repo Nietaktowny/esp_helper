@@ -15,7 +15,7 @@
 #ifndef ESP32_C3_SUPERMINI
 #include "cli_manager.h"
 
-#include "esp_netif_sntp.h"
+//#include "esp_netif_sntp.h"
 #include <driver/gpio.h>
 #endif
 
@@ -127,7 +127,7 @@ void inspect_task(void *args)
 }
 #endif
 
-void app_main(void)
+void app_main()
 {
 
     // Allow other core to finish initialization
@@ -154,8 +154,8 @@ void app_main(void)
     ota_c_start(&url[0]);
 
 #ifndef ESP32_C3_SUPERMINI
-    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
-    esp_netif_sntp_init(&config);
+    //esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
+    //esp_netif_sntp_init(&config);
     xTaskCreate(inspect_task, "inspect_heap_task", 4096, NULL, 2, NULL);
     cli_set_remote_logging(27015);
 #endif

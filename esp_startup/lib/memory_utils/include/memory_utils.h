@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <inttypes.h>
 #include "logger.h"
-#include "arena.h"
 
 /**
  * @brief Wrapper macro with malloc using type of new object.
