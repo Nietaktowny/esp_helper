@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include "esp_err.h"
 
+#include "logger.h"
 #include "nvs_flash.h"
 
 #include "wifi_controller.h"
@@ -15,6 +16,8 @@ void setUp(void) {
         ESP_ERROR_CHECK(nvs_flash_erase());
         err = nvs_flash_init();
     }
+
+    logger_create_semphr();
 }
 
 void tearDown(void) {
@@ -22,7 +25,7 @@ void tearDown(void) {
 }
 
 void afterEach (void) {
-  //wifi_c_deinit();
+  wifi_c_deinit();
   vTaskDelay(300);
 }
 
@@ -42,7 +45,7 @@ void test_check_if_netif_status_is_initialized(void) {
   afterEach();
 }
 
-void test_check_if_wifi_status_is_initialized(void) {
+void test_check_if_wifi_status_is_initialized_as_sta(void) {
   //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->wifi_initialized, "wifi_initialized should be false before initialization.");
@@ -58,10 +61,319 @@ void test_check_if_wifi_status_is_initialized(void) {
   afterEach();
 }
 
+void test_check_if_wifi_status_is_initialized_as_ap(void) {
+  //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->wifi_initialized, "wifi_initialized should be false before initialization.");
+
+  //then
+  wifi_c_init_wifi(WIFI_C_MODE_AP);
+  
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi_status->wifi_initialized, "wifi_initialized should be true after initialization.");
+
+  //after
+  afterEach();
+}
+
+void test_check_if_wifi_status_is_initialized_as_apsta(void) {
+  //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->wifi_initialized, "wifi_initialized should be false before initialization.");
+
+  //then
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+  
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi_status->wifi_initialized, "wifi_initialized should be true after initialization.");
+
+  //after
+  afterEach();
+}
+
+void test_check_initial_ap_ip_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+  const char* expected = "0.0.0.0";
+
+  //then
+  TEST_ASSERT_EQUAL_STRING_MESSAGE(expected, wifi_status->ap.ip, "Wifi initial value of AP IP different than expected");
+}
+
+void test_check_initial_sta_ip_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+  const char* expected = "0.0.0.0";
+
+  //then
+  TEST_ASSERT_EQUAL_STRING_MESSAGE(expected, wifi_status->sta.ip, "Wifi initial value of STA IP different than expected");
+}
+
+void test_check_initial_ap_ssid_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+  const char* expected = "none";
+
+  //then
+  TEST_ASSERT_EQUAL_STRING_MESSAGE(expected, wifi_status->ap.ssid, "Wifi initial value of AP SSID different than expected");
+}
+
+void test_check_initial_sta_ssid_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+  const char* expected = "none";
+
+  //when
+  TEST_ASSERT_EQUAL_STRING_MESSAGE(expected, wifi_status->sta.ssid, "Wifi initial value of STA SSID different than expected");
+}
+
+void test_check_initial_wifi_initialized_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->wifi_initialized, "Wifi initialized should be false before wifi_c_init");
+}
+
+void test_check_initial_netif_initialized_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->netif_initialized, "Netif initialized should be false before wifi_c_init");
+}
+
+void test_check_initial_event_loop_started_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->even_loop_started, "event_loop_started value should be false before wifi_c_init");
+}
+
+void test_check_initial_sta_started_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->sta_started, "sta_started value should be false before wifi_c_init");
+}
+
+void test_check_initial_ap_started_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->ap_started, "ap_started value should be false before wifi_c_init");
+}
+
+void test_check_initial_scan_done_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->scan_done, "scan_done value should be false before wifi_c_init");
+}
+
+void test_check_initial_sta_connected_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->sta_connected, "sta_connected value should be false before wifi_c_init");
+}
+
+void test_check_initial_ap_connect_handler_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_NULL_MESSAGE(wifi_status->ap.connect_handler, "ap.connect_handler value should be false before setting it.");
+}
+
+void test_check_initial_sta_connect_handler_value(void) {
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_NULL_MESSAGE(wifi_status->sta.connect_handler, "sta.connect_handler value should be false before setting it.");
+}
+
+void test_if_wifi_status_is_initalized_when_init_as_ap(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_AP);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi->wifi_initialized, "wifi_initialized should be true after wifi_c_init");
+
+  //after
+  afterEach();
+}
+
+void test_if_wifi_status_is_initalized_when_init_as_sta(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi->wifi_initialized, "wifi_initialized should be true after wifi_c_init");
+
+  //after
+  afterEach();
+}
+
+void test_if_wifi_status_is_initalized_when_init_as_apsta(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi->wifi_initialized, "wifi_initialized should be true after wifi_c_init");
+
+  //after
+  afterEach();
+}
+
+void test_if_netif_status_is_initalized_when_init_as_ap(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_AP);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi->netif_initialized, "netif_initialized should be true after wifi_c_init");
+
+  //after
+  afterEach();
+}
+
+void test_if_netif_status_is_initalized_when_init_as_sta(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi->netif_initialized, "netif_initialized should be true after wifi_c_init");
+
+  //after
+  afterEach();
+}
+
+void test_if_netif_status_is_initalized_when_init_as_apsta(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi->netif_initialized, "netif_initialized should be true after wifi_c_init");
+
+  //after
+  afterEach();
+}
+
+void test_if_sta_started_is_false_when_init_as_ap(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_AP);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(false, wifi->sta_started, "sta_started should be false after wifi_c_init as AP");
+
+  //after
+  afterEach();
+}
+
+void test_if_sta_started_is_true_when_init_as_sta(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi->sta_started, "sta_started should be true after wifi_c_init as STA");
+
+  //after
+  afterEach();
+}
+
+void test_if_sta_started_is_true_when_init_as_apsta(void) {
+  //given
+  wifi_c_status_t* wifi = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+  wifi = wifi_c_get_status();
+  
+  //then
+  TEST_ASSERT_NOT_NULL(wifi);
+  TEST_ASSERT_EQUAL_MESSAGE(true, wifi->sta_started, "sta_started should be true after wifi_c_init as APSTA");
+
+  //after
+  afterEach();
+}
+
+
 void run_wifi_controller_tests(void) {
   UNITY_BEGIN();
-  //RUN_TEST(test_check_if_wifi_status_is_initialized);
+  RUN_TEST(test_if_sta_started_is_true_when_init_as_apsta);
+  RUN_TEST(test_if_sta_started_is_true_when_init_as_sta);
+  RUN_TEST(test_if_sta_started_is_false_when_init_as_ap);
+  RUN_TEST(test_if_netif_status_is_initalized_when_init_as_apsta);
+  RUN_TEST(test_if_netif_status_is_initalized_when_init_as_sta);
+  RUN_TEST(test_if_netif_status_is_initalized_when_init_as_ap);
+  RUN_TEST(test_if_wifi_status_is_initalized_when_init_as_apsta);
+  RUN_TEST(test_if_wifi_status_is_initalized_when_init_as_sta);
+  RUN_TEST(test_if_wifi_status_is_initalized_when_init_as_ap);
+  RUN_TEST(test_check_initial_sta_connect_handler_value);
+  RUN_TEST(test_check_initial_ap_connect_handler_value);
+  RUN_TEST(test_check_initial_sta_connected_value);
+  RUN_TEST(test_check_initial_scan_done_value);
+  RUN_TEST(test_check_initial_ap_started_value);
+  RUN_TEST(test_check_initial_sta_started_value);
+  RUN_TEST(test_check_initial_event_loop_started_value);
+  RUN_TEST(test_check_initial_netif_initialized_value);
+  RUN_TEST(test_check_initial_wifi_initialized_value);
+  RUN_TEST(test_check_initial_sta_ssid_value);
+  RUN_TEST(test_check_initial_ap_ssid_value);
+  RUN_TEST(test_check_initial_sta_ip_value);
+  RUN_TEST(test_check_if_wifi_status_is_initialized_as_sta);
+  RUN_TEST(test_check_if_wifi_status_is_initialized_as_ap);
+  RUN_TEST(test_check_if_wifi_status_is_initialized_as_apsta);
   RUN_TEST(test_check_if_netif_status_is_initialized);
+  RUN_TEST(test_check_initial_ap_ip_value);
   UNITY_END();
 }
 

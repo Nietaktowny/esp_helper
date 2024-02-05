@@ -17,12 +17,14 @@ typedef enum {
 struct wifi_c_ap_status_obj {
     char ip[20];
     char ssid[64];
+    void (*connect_handler)(void);
 };
 typedef struct wifi_c_ap_status_obj wifi_c_ap_status_t;
 
 struct wifi_c_sta_status_obj {
     char ip[20];
     char ssid[64];
+    void (*connect_handler)(void);
 };
 typedef struct wifi_c_sta_status_obj wifi_c_sta_status_t;
 
@@ -41,7 +43,6 @@ struct wifi_c_status_obj {
     bool sta_connected;
     wifi_c_sta_status_t sta;
     wifi_c_ap_status_t ap;
-    void (*connect_handler)(void);
 };
 
 /**
