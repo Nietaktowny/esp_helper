@@ -343,7 +343,10 @@ int wifi_c_init_wifi(wifi_c_mode_t WIFI_C_WIFI_MODE)
         if (wifi_c_status.wifi_initialized == true && wifi_c_status.wifi_mode == WIFI_C_WIFI_MODE)
         {
             ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_WIFI_ALREADY_INIT);
+        } else if(wifi_c_status.wifi_initialized == true && wifi_c_status.wifi_mode != WIFI_C_WIFI_MODE) {
+            wifi_c_deinit();    //if it's init with different mode, deinit and init with new wanted mode
         }
+
         ESP_ERROR_CHECK(esp_netif_init());
         wifi_c_event_group = xEventGroupCreate();
         ERR_C_CHECK_AND_THROW_ERR(wifi_c_create_default_event_loop());

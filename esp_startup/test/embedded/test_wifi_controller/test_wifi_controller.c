@@ -345,9 +345,65 @@ void test_if_sta_started_is_true_when_init_as_apsta(void) {
   afterEach();
 }
 
+void test_if_wifi_init_throws_err_on_wrong_mode_value(void) {
+  //given
+  int err = 0;
+
+  //when
+  err = wifi_c_init_wifi(-2);
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_ERR_NETIF_INIT_FAILED, err, "on wrong wifi mode value wifi init should throw error");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_init_throws_err_on_multiple_calls(void) {
+  //given
+  int err = 0;
+
+  //when
+  err = wifi_c_init_wifi(WIFI_C_MODE_AP);
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(0, err, "on first wifi_init should return 0");
+
+  //when
+  err = wifi_c_init_wifi(WIFI_C_MODE_AP);
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_ERR_WIFI_ALREADY_INIT, err, "on second wifi_c_init_wifi call with the same mode, should return err");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_init_not_throws_err_on_call_with_different_mode(void) {
+  //given
+  int err = 0;
+
+  //when
+  err = wifi_c_init_wifi(WIFI_C_MODE_AP);
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(0, err, "on first wifi_init should return 0");
+
+  //when
+  err = wifi_c_init_wifi(WIFI_C_MODE_STA);
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(0, err, "on second wifi_c_init_wifi call with different mode, should not return err");
+
+  //after
+  afterEach();  
+}
 
 void run_wifi_controller_tests(void) {
   UNITY_BEGIN();
+  RUN_TEST(test_if_wifi_init_not_throws_err_on_call_with_different_mode);
+  RUN_TEST(test_if_wifi_init_throws_err_on_multiple_calls);
+  RUN_TEST(test_if_wifi_init_throws_err_on_wrong_mode_value);
   RUN_TEST(test_if_sta_started_is_true_when_init_as_apsta);
   RUN_TEST(test_if_sta_started_is_true_when_init_as_sta);
   RUN_TEST(test_if_sta_started_is_false_when_init_as_ap);
