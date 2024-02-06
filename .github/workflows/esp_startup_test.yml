@@ -24,4 +24,3 @@ jobs:
           cd esp_startup
           platformio run --environment esp-wrover-kit
           platformio run --environment esp-dev
-          platformio run --environment esp32-c3
