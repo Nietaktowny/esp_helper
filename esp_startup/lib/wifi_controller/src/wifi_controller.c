@@ -402,7 +402,11 @@ int wifi_c_start_ap(const char *ssid, const char *password)
             ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_NULL_SSID);
         }
 
-        if (strlen(password) == 0)
+        if(!password) {
+            LOG_WARN("No password, setting wifi_auth_mode_t to WIFI_AUTH_OPEN.");
+            wifi_ap_config.ap.authmode = WIFI_AUTH_OPEN;            
+        }
+        else if (strlen(password) == 0)
         {
             LOG_WARN("No password, setting wifi_auth_mode_t to WIFI_AUTH_OPEN.");
             wifi_ap_config.ap.authmode = WIFI_AUTH_OPEN;

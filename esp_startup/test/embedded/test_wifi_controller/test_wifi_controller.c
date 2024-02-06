@@ -399,8 +399,88 @@ void test_if_wifi_init_not_throws_err_on_call_with_different_mode(void) {
   afterEach();  
 }
 
+void test_if_wifi_c_start_ap_returns_zero_on_success(void) {
+  //given
+  int err = 0;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_AP);
+  err = wifi_c_start_ap("esp", "password");
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(0, err, "wifi_c_start_ap should return 0 on success");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_start_ap_returns_err_when_wifi_mode_is_not_ap(void) {
+  //given
+  int err = 0;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  err = wifi_c_start_ap("esp", "password");
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_ERR_WRONG_MODE, err, "wifi_c_start_ap should return err on wrong mode");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_start_sta_returns_connect_fail_on_wrong_credentials(void) {
+  //given
+  int err = 0;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  err = wifi_c_start_sta("3323rdad", "sdadwqe2");
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_ERR_STA_CONNECT_FAIL, err, "wifi_c_start_sta should return 0 on success");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_start_sta_returns_err_when_wifi_mode_is_not_sta(void) {
+  //given
+  int err = 0;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_AP);
+  err = wifi_c_start_sta("esp", "password");
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_ERR_WRONG_MODE, err, "wifi_c_start_sta should return err on wrong mode");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_start_ap_returns_zero_on_zero_len_pass(void) {
+  //given
+  int err = 0;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_AP);
+  err = wifi_c_start_ap("esp", "");
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(0, err, "wifi_c_start_ap should return 0 on success even with 0 len password");
+
+  //after
+  afterEach();  
+}
+
 void run_wifi_controller_tests(void) {
   UNITY_BEGIN();
+  RUN_TEST(test_if_wifi_c_start_ap_returns_zero_on_zero_len_pass);
+  RUN_TEST(test_if_wifi_c_start_sta_returns_connect_fail_on_wrong_credentials);
+  RUN_TEST(test_if_wifi_c_start_sta_returns_err_when_wifi_mode_is_not_sta);
+  RUN_TEST(test_if_wifi_c_start_ap_returns_err_when_wifi_mode_is_not_ap);
+  RUN_TEST(test_if_wifi_c_start_ap_returns_zero_on_success);
   RUN_TEST(test_if_wifi_init_not_throws_err_on_call_with_different_mode);
   RUN_TEST(test_if_wifi_init_throws_err_on_multiple_calls);
   RUN_TEST(test_if_wifi_init_throws_err_on_wrong_mode_value);
