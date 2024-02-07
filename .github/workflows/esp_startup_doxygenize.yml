@@ -20,4 +20,6 @@ jobs:
       - name: Install Doxygen
         run: sudo apt-get install doxygen graphviz -y
       - name: Doxygenize
-        run: doxygen Doxyfile
+        run: |
+          pwd
+          doxygen Doxyfile
