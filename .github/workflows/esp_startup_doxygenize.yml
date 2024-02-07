@@ -21,6 +21,5 @@ jobs:
       - name: Doxygenize
         run: |
           pwd
-          ls -l
-          cd esp_startup
+          cd esp_startup/
           doxygen Doxyfile
