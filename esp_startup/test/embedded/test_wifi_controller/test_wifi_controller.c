@@ -6,6 +6,7 @@
 #include "esp_err.h"
 
 #include "logger.h"
+#include "errors_list.h"
 #include "nvs_flash.h"
 
 #include "wifi_controller.h"
@@ -474,8 +475,113 @@ void test_if_wifi_c_start_ap_returns_zero_on_zero_len_pass(void) {
   afterEach();  
 }
 
+void test_if_wifi_c_start_ap_returns_zero_on_null_pass(void) {
+  //given
+  int err = 0;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_AP);
+  err = wifi_c_start_ap("esp", NULL);
+  
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(0, err, "wifi_c_start_ap should return 0 on success even with NULL password");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_scan_all_ap_returns_zero(void) {
+  //given
+  int err = 0;
+  wifi_c_scan_result_t result;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  wifi_c_start_sta("asdas", "test");
+  err = wifi_c_scan_all_ap(&result);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(0, err, "wifi_c_scan_all_ap should return 0 on success");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_scan_all_ap_returns_err_on_null_buffer(void) {
+  //given
+  int err = 0;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  wifi_c_start_sta("asdas", "test");
+  err = wifi_c_scan_all_ap(NULL);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "wifi_c_scan_all_ap should return null pointer error on null buffer");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_scan_all_ap_returns_err_on_not_init_wifi(void) {
+  //given
+  int err = 0;
+  wifi_c_scan_result_t result;
+
+  //when
+  wifi_c_deinit();
+  err = wifi_c_scan_all_ap(&result);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_ERR_WIFI_NOT_INIT, err, "wifi_c_scan_all_ap should return err when wifi not init");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_scan_all_ap_returns_err_on_not_started_sta(void) {
+  //given
+  int err = 0;
+  wifi_c_scan_result_t result;
+
+  //when
+  wifi_c_deinit();
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  err = wifi_c_scan_all_ap(&result);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_ERR_STA_NOT_STARTED, err, "wifi_c_scan_all_ap should return err when sta not started");
+
+  //after
+  afterEach();  
+}
+
+void test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode(void) {
+  //given
+  int err = 0;
+  wifi_c_scan_result_t result;
+
+  //when
+  wifi_c_deinit();
+  wifi_c_init_wifi(WIFI_MODE_AP);
+  wifi_c_start_ap("ssid", NULL);
+  err = wifi_c_scan_all_ap(&result);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_ERR_WRONG_MODE, err, "wifi_c_scan_all_ap should return err when wifi mode is AP");
+
+  //after
+  afterEach();  
+}
+
 void run_wifi_controller_tests(void) {
   UNITY_BEGIN();
+  //RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode);
+  //RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_not_started_sta);
+  RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_not_init_wifi);
+  RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_null_buffer);
+  RUN_TEST(test_if_wifi_c_scan_all_ap_returns_zero);
+  RUN_TEST(test_if_wifi_c_start_ap_returns_zero_on_null_pass);
   RUN_TEST(test_if_wifi_c_start_ap_returns_zero_on_zero_len_pass);
   RUN_TEST(test_if_wifi_c_start_sta_returns_connect_fail_on_wrong_credentials);
   RUN_TEST(test_if_wifi_c_start_sta_returns_err_when_wifi_mode_is_not_sta);

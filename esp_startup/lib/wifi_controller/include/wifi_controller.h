@@ -146,7 +146,7 @@ int wifi_c_init_wifi(wifi_c_mode_t WIFI_C_WIFI_MODE);
  * Passed SSID of AP cannot be zero length otherwise it will throw error.
  * 
  * @note
- * When passed password length is zero, the auth mode is set to open.
+ * When passed password length is zero or NULL, the auth mode is set to open.
  * 
  * @param ssid          SSID of AP.
  * @param password      Password of AP.
@@ -290,16 +290,13 @@ int wifi_c_sta_reconnect(const char* SSID, const char* PASSWORD);
  * 
  * @param result_to_return Pointer to scan results struct.
  * 
- * @retval ERR_C_OK on success
- * @retval WIFI_C_ERR_WRONG_MODE Wrong Wifi mode, scanning only possible in STA/APSTA mode.
- * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
- * @retval WIFI_C_ERR_STA_NOT_STARTED STA was not started.
- * @retval esp specific error codes
+ * @attention Scanning for access points is only possible when station mode is enabled and started.
  * 
  * @retval ERR_C_OK on success
  * @retval WIFI_C_ERR_WRONG_MODE Wrong Wifi mode, scanning only possible in STA/APSTA mode.
  * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
  * @retval WIFI_C_ERR_STA_NOT_STARTED STA was not started.
+ * @retval ERR_NULL_POINTER Pointer to result buffer was NULL.
  * @retval esp specific error codes
  */
 int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return);

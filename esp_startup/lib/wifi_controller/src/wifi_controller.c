@@ -413,7 +413,7 @@ int wifi_c_start_ap(const char *ssid, const char *password)
             ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_NULL_SSID);
         }
 
-        if(!password) {
+        if(password == NULL) {
             LOG_WARN("No password, setting wifi_auth_mode_t to WIFI_AUTH_OPEN.");
             wifi_ap_config.ap.authmode = WIFI_AUTH_OPEN;            
         }
@@ -441,7 +441,11 @@ int wifi_c_start_ap(const char *ssid, const char *password)
 
         ERR_C_CHECK_AND_THROW_ERR(esp_wifi_set_config(WIFI_IF_AP, &wifi_ap_config));
         // ERR_C_CHECK_AND_THROW_ERR(esp_wifi_start());
-        LOG_INFO("Started AP: \nSSID: %s \nPassword: %s", ssid, password);
+        if(password != NULL) {
+            LOG_INFO("Started AP: \nSSID: %s \nPassword: %s", ssid, password);
+        } else {
+            LOG_INFO("Started AP: \nSSID: %s \nNo Password", ssid);
+        }
 
         // update wifi_c_status
         wifi_c_status.ap_started = true;
@@ -585,16 +589,16 @@ int wifi_c_scan_all_ap(wifi_c_scan_result_t *result_to_return)
 
     Try
     {
-        assert(result_to_return);
-
-        if (wifi_c_status.wifi_mode == WIFI_C_MODE_AP)
-        {
-            ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_WRONG_MODE); // scans are only allowed in STA mode.
-        }
+        ERR_C_CHECK_NULL_PTR(result_to_return, LOG_ERROR("pointer to scan result buffer cannot be NULL"));
 
         if (!wifi_c_status.wifi_initialized)
         {
             ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_WIFI_NOT_INIT);
+        }
+
+        if (wifi_c_status.wifi_mode == WIFI_C_MODE_AP)
+        {
+            ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_WRONG_MODE); // scans are only allowed in STA mode.
         }
 
         if (!wifi_c_status.sta_started)
