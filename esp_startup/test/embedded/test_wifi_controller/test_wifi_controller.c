@@ -539,14 +539,161 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_not_init_wifi(void) {
   afterEach();  
 }
 
+void test_if_wifi_initialized_is_false_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, status->wifi_initialized, "wifi_initialized should be false after deinit");
+}
+
+void test_if_netif_initialized_is_false_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, status->netif_initialized, "netif_initialized should be false after deinit");
+}
+
+void test_if_event_loop_started_is_false_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, status->even_loop_started, "even_loop_started should be false after deinit");
+}
+
+void test_if_sta_started_is_false_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, status->sta_started, "sta_started should be false after deinit");
+}
+
+void test_if_ap_started_is_false_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, status->ap_started, "ap_started should be false after deinit");
+}
+
+void test_if_sta_connected_is_false_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(false, status->sta_connected, "sta_connected should be false after deinit");
+}
+
+void test_if_wifi_mode_is_set_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(WIFI_C_NO_MODE, status->wifi_mode, "wifi_mode should be WIFI_C_NO_MODE after deinit");
+}
+
+void test_if_sta_ip_is_cleared_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_STRING_MESSAGE("0.0.0.0", status->sta.ip, "sta.ip should be 0.0.0.0 after deinit");
+}
+
+void test_if_ap_ip_is_cleared_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_STRING_MESSAGE("0.0.0.0", status->ap.ip, "ap.ip should be 0.0.0.0 after deinit");
+}
+
+void test_if_ap_ssid_is_cleared_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_STRING_MESSAGE("none", status->ap.ssid, "ap.ssid should be none after deinit");
+}
+
+void test_if_sta_ssid_is_cleared_after_deinit(void) {
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_init_wifi(WIFI_C_MODE_APSTA);
+
+  //when
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_STRING_MESSAGE("none", status->sta.ssid, "sta.ssid should be none after deinit");
+}
+
 void test_if_wifi_c_scan_all_ap_returns_err_on_not_started_sta(void) {
   //given
   int err = 0;
   wifi_c_scan_result_t result;
+  wifi_c_status_t* status = NULL;
+  wifi_c_deinit();
 
   //when
-  wifi_c_deinit();
   wifi_c_init_wifi(WIFI_C_MODE_STA);
+  status = wifi_c_get_status();
+  TEST_ASSERT_EQUAL(WIFI_C_MODE_STA, status->wifi_mode);
+  TEST_ASSERT_EQUAL(false, status->sta_started);
   err = wifi_c_scan_all_ap(&result);
 
   //then
@@ -560,11 +707,16 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode(void) {
   //given
   int err = 0;
   wifi_c_scan_result_t result;
+  wifi_c_status_t* status = NULL;
+  wifi_c_deinit();
 
   //when
-  wifi_c_deinit();
   wifi_c_init_wifi(WIFI_MODE_AP);
   wifi_c_start_ap("ssid", NULL);
+  status = wifi_c_get_status();
+  TEST_ASSERT_EQUAL(WIFI_C_MODE_AP, status->wifi_mode);
+  TEST_ASSERT_EQUAL(true, status->ap_started);
+  TEST_ASSERT_EQUAL(false, status->sta_started);
   err = wifi_c_scan_all_ap(&result);
 
   //then
@@ -576,8 +728,19 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode(void) {
 
 void run_wifi_controller_tests(void) {
   UNITY_BEGIN();
-  //RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode);
-  //RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_not_started_sta);
+  RUN_TEST(test_if_sta_ssid_is_cleared_after_deinit);
+  RUN_TEST(test_if_ap_ssid_is_cleared_after_deinit);
+  RUN_TEST(test_if_ap_ip_is_cleared_after_deinit);
+  RUN_TEST(test_if_sta_ip_is_cleared_after_deinit);
+  RUN_TEST(test_if_wifi_mode_is_set_after_deinit);
+  RUN_TEST(test_if_sta_connected_is_false_after_deinit);
+  RUN_TEST(test_if_ap_started_is_false_after_deinit);
+  RUN_TEST(test_if_sta_started_is_false_after_deinit);
+  RUN_TEST(test_if_event_loop_started_is_false_after_deinit);
+  RUN_TEST(test_if_netif_initialized_is_false_after_deinit);
+  RUN_TEST(test_if_wifi_initialized_is_false_after_deinit);
+  RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode);
+  RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_not_started_sta);
   RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_not_init_wifi);
   RUN_TEST(test_if_wifi_c_scan_all_ap_returns_err_on_null_buffer);
   RUN_TEST(test_if_wifi_c_scan_all_ap_returns_zero);
