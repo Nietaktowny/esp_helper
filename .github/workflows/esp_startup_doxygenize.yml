@@ -19,3 +19,5 @@ jobs:
           python-version: '3.9'
       - name: Doxygenize
         uses: langroodi/doxygenize@v1.7.0
+        with:
+          doxygenconf: 'esp_startup/Doxyfile'
