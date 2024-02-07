@@ -18,6 +18,4 @@ jobs:
         with:
           python-version: '3.9'
       - name: Doxygenize
-      uses: actions/checkout@v3
-      uses: langroodi/doxygenize@v1.7.0
-            
+        uses: langroodi/doxygenize@v1.7.0
