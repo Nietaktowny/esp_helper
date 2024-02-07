@@ -19,6 +19,8 @@ jobs:
           python-version: '3.9'
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
+      - name: Install Flawfinder
+        run: pip install flawfinder
       - name: Build PlatformIO Project
         run: |
           cd esp_startup
