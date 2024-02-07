@@ -1,8 +1,0 @@
-add_subdirectory(err_controller)
-add_subdirectory(logger)
-add_subdirectory(tcp_driver)
-add_subdirectory(arena)
-add_subdirectory(linked_list)
-add_subdirectory(memory_utils)
-add_subdirectory(cli_manager)
-add_subdirectory(CException)
