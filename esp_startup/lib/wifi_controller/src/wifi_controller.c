@@ -1,3 +1,14 @@
+/**
+ * @file wifi_controller.c
+ * @author Wojciech Mytych (wojciech.lukasz.mytych@gmail.com)
+ * @brief Wifi controller source file.
+ * @version 0.1
+ * @date 2024-02-07
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 /*Beginning of ESP-IDF specific code.*/
 #ifdef ESP_PLATFORM
 

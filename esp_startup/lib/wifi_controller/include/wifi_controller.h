@@ -1,3 +1,13 @@
+/**
+ * @file wifi_controller.h
+ * @author Wojciech Mytych (wojciech.lukasz.mytych@gmail.com)
+ * @brief Wifi controller header file.
+ * @version 0.1
+ * @date 2024-02-07
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #pragma once
 
 #include <stdbool.h>
