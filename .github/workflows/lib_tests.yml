@@ -1,4 +1,4 @@
-name: Build
+name: Build lib_tests
 
 on: [push]
 
@@ -23,6 +23,6 @@ jobs:
         run: pip install flawfinder
       - name: Build PlatformIO Project
         run: |
-          cd esp_startup
+          cd projects/lib_tests
           platformio run --environment esp-wrover-kit
           platformio run --environment esp-dev
