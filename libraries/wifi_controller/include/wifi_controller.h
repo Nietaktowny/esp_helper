@@ -11,6 +11,8 @@
 #pragma once
 
 #include <stdbool.h>
+#include <inttypes.h>
+#include <stddef.h>
 //#include "esp_wifi.h"
 
 /**
@@ -24,35 +26,53 @@ typedef enum {
     WIFI_C_MODE_APSTA,      /*Use WiFi as AP+STA.*/
 } wifi_c_mode_t;
 
+/**
+ * @brief Object containing information about access point interface.
+ * 
+ */
 struct wifi_c_ap_status_obj {
-    char ip[20];
-    char ssid[64];
-    void (*connect_handler)(void);
+    char ip[20];                        /*!< IP of Access Point.*/
+    char ssid[64];                      /*!< SSID of Access Point.*/
+    void (*connect_handler)(void);      /*!< Function to be called each time new Station connects to Access Point.*/
+    void (*disconnect_handler)(void);   /*!< Function to be called each time Station disconnects from Access Point.*/
 };
+/**
+ * @brief Type of wifi_c_ap_status_obj object.
+ * 
+ */
 typedef struct wifi_c_ap_status_obj wifi_c_ap_status_t;
 
+/**
+ * @brief Object containing information about station interface.
+ * 
+ */
 struct wifi_c_sta_status_obj {
-    char ip[20];
-    char ssid[64];
-    void (*connect_handler)(void);
+    char ip[20];                        /*!< Current IP of station, 0.0.0.0 if not connected to Wifi.*/
+    char ssid[64];                      /*!< SSID of AP the STA is currently connected to.*/
+    void (*connect_handler)(void);      /*!< Function to be called when STA connects to AP.*/
+    void (*disconnect_handler)(void);   /*!< Function to be called when STA disconnects from AP.*/
 };
-typedef struct wifi_c_sta_status_obj wifi_c_sta_status_t;
+/**
+ * @brief Type of wifi_c_sta_status_obj object.
+ * 
+ */
+typedef struct wifi_c_sta_status_obj wifi_c_sta_status_t;       
 
 /**
  * @brief Object showing and maintaining current status of wifi_controller.
  * 
  */
 struct wifi_c_status_obj {
-    bool wifi_initialized;
-    bool netif_initialized;
-    wifi_c_mode_t wifi_mode;
-    bool even_loop_started;
-    bool sta_started;
-    bool ap_started;
-    bool scan_done;
-    bool sta_connected;
-    wifi_c_sta_status_t sta;
-    wifi_c_ap_status_t ap;
+    bool wifi_initialized;              /*!< True if wifi is initialized.*/
+    bool netif_initialized;             /*!< True if netif interface is initialized.*/
+    wifi_c_mode_t wifi_mode;            /*!< Wifi mode of wifi_controller.*/
+    bool even_loop_started;             /*!< True if wifi event loop is started.*/
+    bool sta_started;                   /*!< True if STA is started.*/
+    bool ap_started;                    /*!< True if AP is started.*/
+    bool scan_done;                     /*!< Set to true after first scan.*/
+    bool sta_connected;                 /*!< True if STA is connected to some AP.*/
+    wifi_c_sta_status_t sta;            /*!< STA information structure. @see wifi_c_sta_status_obj*/
+    wifi_c_ap_status_t ap;              /*!< AP information structure.  @see wifi_c_ap_status_obj*/
 };
 
 /**
@@ -63,14 +83,14 @@ typedef struct wifi_c_status_obj wifi_c_status_t;
 
 
 /**
- * @brief Object containing scanned AP records.
+ * @brief Object containing scanned AP record.
  * 
  */
 struct wifi_c_ap_record_obj {
-    uint8_t bssid[6];                     /**< MAC address of AP */
-    uint8_t ssid[33];                     /**< SSID of AP */
-    uint8_t channel;                      /**< channel of AP */
-    int8_t  rssi;                         /**< signal strength of AP */
+    uint8_t bssid[6];                     /*!< MAC address of AP */
+    uint8_t ssid[33];                     /*!< SSID of AP */
+    uint8_t channel;                      /*!< channel of AP */
+    int8_t  rssi;                         /*!< signal strength of AP */
 };
 
 /**
@@ -84,8 +104,8 @@ typedef struct wifi_c_ap_record_obj wifi_c_ap_record_t;
  * 
  */
 struct wifi_c_scan_result_obj {
-    wifi_c_ap_record_t* ap_record;
-    uint16_t ap_count;
+    wifi_c_ap_record_t* ap_record;         /*!< Struct containing AP information, @see wifi_c_ap_record_t*/
+    uint16_t ap_count;                     /*!< Number of scanned APs.*/
 };
 
 /**
@@ -118,13 +138,13 @@ typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
 
 
 #define WIFI_C_STA_RETRY_COUNT          4                           ///< Number of times to try to connect to AP as STA.
-#define WIFI_C_DEFAULT_SCAN_SIZE        10                          ///< Number of APs to store when scanning.
+#define WIFI_C_BUFFER_SCAN_SIZE         10                          ///< Max number of APs to store when scanning.
 #define WIFI_C_STA_TIMEOUT              60                          ///< Number of seconds for which will wifi_c_start_sta will block before returning
 
-#define WIFI_C_CONNECTED_BIT            0x00000001
-#define WIFI_C_CONNECT_FAIL_BIT         0x00000002
-#define WIFI_C_SCAN_DONE_BIT            0x00000004
-#define WIFI_C_STA_STARTED_BIT          0x00000008
+#define WIFI_C_CONNECTED_BIT            0x00000001                  ///< Bit set if STA connected to AP.
+#define WIFI_C_CONNECT_FAIL_BIT         0x00000002                  ///< Bit set if STA cannot connected to AP.
+#define WIFI_C_SCAN_DONE_BIT            0x00000004                  ///< Bit set if STA finished scan.
+#define WIFI_C_STA_STARTED_BIT          0x00000008                  ///< Bit set if STA is started.
 
 #define WIFI_C_SCAN_BLOCK               true                        ///< if block is true, this API will block the caller until the scan is done
 
@@ -185,6 +205,18 @@ wifi_c_status_t *wifi_c_get_status(void);
 /**
  * @brief Get current wifi_controller status as JSON string.
  * 
+ * @attention If buffer is to small to contain whole structure, the status
+ * will be truncated to fit the buffer size.
+ * 
+ * Advised size is around 300 characters.
+ * 
+ * 
+ * @param buffer Buffer to store wifi_c_status data.
+ * @param buflen Size of buffer.
+ * 
+ * @retval ERR_NULL_POINTER if buffer is NULL. 
+ * @retval ERR_C_MEMORY_ERR if buffer cannot contain structure.
+ * 
 */
 int wifi_c_get_status_as_json(char* buffer, size_t buflen);
 
@@ -192,9 +224,12 @@ int wifi_c_get_status_as_json(char* buffer, size_t buflen);
 /**
  * @brief Translate wifi_c_mode_t enum to string.
  * 
+ * @param wifi_mode Wifi mode enum to translate.
+ * 
  * @retval "WIFI_C_MODE_AP"
  * @retval "WIFI_C_MODE_STA"
  * @retval "WIFI_C_MODE_APSTA"
+ * @retval "WIFI_C_NO_MODE"
  * @retval NULL if wrong value was passed.
 */
 char* wifi_c_get_wifi_mode_as_string(wifi_c_mode_t wifi_mode);
@@ -299,7 +334,7 @@ int wifi_c_sta_reconnect(const char* SSID, const char* PASSWORD);
  * @retval ERR_NULL_POINTER Pointer to result buffer was NULL.
  * @retval esp specific error codes
  */
-int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return);
+int wifi_c_scan_all_ap(wifi_c_scan_result_t** result_to_return);
 
 /**
  * @brief Scan for AP with desired SSID.
@@ -365,6 +400,8 @@ void wifi_c_deinit(void);
 /**
  * @brief Register function to be called when STA connects to AP.
  * 
+ * @param connect_handler Pointer to handler function.
+ * 
  * @retval 0 on success
  * @retval ERR_NULL_POINTER when connect_handler function pointer is NULL
 */
@@ -373,7 +410,29 @@ int wifi_c_sta_register_connect_handler(void (*connect_handler)(void));
 /**
  * @brief Register function to be called each time new STA connects to AP.
  * 
+ * @param connect_handler Pointer to handler function.
+ * 
  * @retval 0 on success
  * @retval ERR_NULL_POINTER when connect_handler function pointer is NULL
 */
 int wifi_c_ap_register_connect_handler(void (*connect_handler)(void));
+
+/**
+ * @brief Register function to be called when STA loses connection with AP and all attempts to connect again fails.
+ * 
+ * @param connect_handler Pointer to handler function.
+ * 
+ * @retval 0 on success
+ * @retval ERR_NULL_POINTER when disconnect_handler function pointer is NULL
+*/
+int wifi_c_sta_register_disconnect_handler(void (*disconnect_handler)(void));
+
+/**
+ * @brief Register function to be called each time STA disconnects from our AP.
+ * 
+ * @param connect_handler Pointer to handler function.
+ * 
+ * @retval 0 on success
+ * @retval ERR_NULL_POINTER when disconnect_handler function pointer is NULL
+*/
+int wifi_c_ap_register_disconnect_handler(void (*disconnect_handler)(void));

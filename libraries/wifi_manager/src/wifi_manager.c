@@ -126,7 +126,7 @@ int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size
 
 int wifi_manager_fetch_ap_list(char* out_buffer, size_t buflen) {
     err_c_t err = 0;
-    wifi_c_scan_result_t scan_results;
+    wifi_c_scan_result_t* scan_results;
     ERR_C_CHECK_NULL_PTR(out_buffer, LOG_ERROR("location to store scanned APs list cannot be NULL"));
 
     err = wifi_c_scan_all_ap(&scan_results);
@@ -138,7 +138,7 @@ int wifi_manager_fetch_ap_list(char* out_buffer, size_t buflen) {
     wifi_c_store_scan_result_as_json(out_buffer, buflen);
     
     //LOG_DEBUG("stored scanning result: %s", &buffer[0]);
-    LOG_DEBUG("wifi manager scan complete, scanned: %d APs", scan_results.ap_count);
+    LOG_DEBUG("wifi manager scan complete, scanned: %d APs", scan_results->ap_count);
     return err;
 }
 
