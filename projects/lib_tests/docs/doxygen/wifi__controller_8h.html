@@ -96,15 +96,17 @@ $(document).ready(function(){initNavTree('wifi__controller_8h.html',''); initRes
 <p>Wifi controller header file.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &quot;esp_wifi.h&quot;</code><br />
+<code>#include &lt;inttypes.h&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for wifi_controller.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="wifi__controller_8h__incl.png" border="0" usemap="#alib_2wifi__controller_2include_2wifi__controller_8h" alt=""/></div>
 <map name="alib_2wifi__controller_2include_2wifi__controller_8h" id="alib_2wifi__controller_2include_2wifi__controller_8h">
-<area shape="rect" title="Wifi controller header file." alt="" coords="11,5,191,47"/>
+<area shape="rect" title="Wifi controller header file." alt="" coords="66,5,246,47"/>
 <area shape="rect" title=" " alt="" coords="5,95,88,121"/>
 <area shape="rect" title=" " alt="" coords="113,95,199,121"/>
+<area shape="rect" title=" " alt="" coords="224,95,299,121"/>
 </map>
 </div>
 </div>
@@ -209,15 +211,19 @@ Macros</h2></td></tr>
 <tr class="separator:a8b9ef9f8cd492500103ac3b1b86d899b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a119ecf55dd62303d4dcbe76973027acd"><td class="memItemLeft" align="right" valign="top"><a id="a119ecf55dd62303d4dcbe76973027acd" name="a119ecf55dd62303d4dcbe76973027acd"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_C_CONNECTED_BIT</b>&#160;&#160;&#160;0x00000001</td></tr>
+<tr class="memdesc:a119ecf55dd62303d4dcbe76973027acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit set if STA connected to AP. <br /></td></tr>
 <tr class="separator:a119ecf55dd62303d4dcbe76973027acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17cac29759990e93abff6ea21e1eb60c"><td class="memItemLeft" align="right" valign="top"><a id="a17cac29759990e93abff6ea21e1eb60c" name="a17cac29759990e93abff6ea21e1eb60c"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_C_CONNECT_FAIL_BIT</b>&#160;&#160;&#160;0x00000002</td></tr>
+<tr class="memdesc:a17cac29759990e93abff6ea21e1eb60c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit set if STA cannot connected to AP. <br /></td></tr>
 <tr class="separator:a17cac29759990e93abff6ea21e1eb60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4364d346ec646180ba3f914c2c642658"><td class="memItemLeft" align="right" valign="top"><a id="a4364d346ec646180ba3f914c2c642658" name="a4364d346ec646180ba3f914c2c642658"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_C_SCAN_DONE_BIT</b>&#160;&#160;&#160;0x00000004</td></tr>
+<tr class="memdesc:a4364d346ec646180ba3f914c2c642658"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit set if STA finished scan. <br /></td></tr>
 <tr class="separator:a4364d346ec646180ba3f914c2c642658"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a7a34e87d87f9d0b315367b079c9098"><td class="memItemLeft" align="right" valign="top"><a id="a7a7a34e87d87f9d0b315367b079c9098" name="a7a7a34e87d87f9d0b315367b079c9098"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_C_STA_STARTED_BIT</b>&#160;&#160;&#160;0x00000008</td></tr>
+<tr class="memdesc:a7a7a34e87d87f9d0b315367b079c9098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bit set if STA is started. <br /></td></tr>
 <tr class="separator:a7a7a34e87d87f9d0b315367b079c9098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad76758d4f7f8e9f0ca1967dc47285fc5"><td class="memItemLeft" align="right" valign="top"><a id="ad76758d4f7f8e9f0ca1967dc47285fc5" name="ad76758d4f7f8e9f0ca1967dc47285fc5"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_C_SCAN_BLOCK</b>&#160;&#160;&#160;true</td></tr>
@@ -247,10 +253,10 @@ typedef struct <a class="el" href="structwifi__c__scan__result__obj.html">wifi_c
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:a062956c3402e036ec000008d21cdec8d"><td class="memItemLeft" align="right" valign="top"><a id="a062956c3402e036ec000008d21cdec8d" name="a062956c3402e036ec000008d21cdec8d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#a062956c3402e036ec000008d21cdec8d">wifi_c_mode_t</a> { <b>WIFI_C_MODE_STA</b>
+<tr class="memitem:a062956c3402e036ec000008d21cdec8d"><td class="memItemLeft" align="right" valign="top"><a id="a062956c3402e036ec000008d21cdec8d" name="a062956c3402e036ec000008d21cdec8d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#a062956c3402e036ec000008d21cdec8d">wifi_c_mode_t</a> { <b>WIFI_C_NO_MODE</b>
+, <b>WIFI_C_MODE_STA</b>
 , <b>WIFI_C_MODE_AP</b>
 , <b>WIFI_C_MODE_APSTA</b>
-, <b>WIFI_C_NO_MODE</b>
  }</td></tr>
 <tr class="memdesc:a062956c3402e036ec000008d21cdec8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Types of available WiFi modes. <br /></td></tr>
 <tr class="separator:a062956c3402e036ec000008d21cdec8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,9 +275,8 @@ Functions</h2></td></tr>
 <tr class="memitem:a11fdd017dcbc950018cd580cfaf441d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="wifi__controller_8h.html#a82c5cf3ae06a78a30062bc76f639ff4c">wifi_c_status_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8">wifi_c_get_status</a> (void)</td></tr>
 <tr class="memdesc:a11fdd017dcbc950018cd580cfaf441d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current wifi_controller status.  <a href="wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8">More...</a><br /></td></tr>
 <tr class="separator:a11fdd017dcbc950018cd580cfaf441d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc993cc2a0481bf076e5361048057a90"><td class="memItemLeft" align="right" valign="top"><a id="acc993cc2a0481bf076e5361048057a90" name="acc993cc2a0481bf076e5361048057a90"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_json</b> (char *buffer, size_t buflen)</td></tr>
-<tr class="memdesc:acc993cc2a0481bf076e5361048057a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current wifi_controller status as JSON string. <br /></td></tr>
+<tr class="memitem:acc993cc2a0481bf076e5361048057a90"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#acc993cc2a0481bf076e5361048057a90">wifi_c_get_status_as_json</a> (char *buffer, size_t buflen)</td></tr>
+<tr class="memdesc:acc993cc2a0481bf076e5361048057a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current wifi_controller status as JSON string.  <a href="wifi__controller_8h.html#acc993cc2a0481bf076e5361048057a90">More...</a><br /></td></tr>
 <tr class="separator:acc993cc2a0481bf076e5361048057a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56ae8fcaadef9727ddecc3024e7df340"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#a56ae8fcaadef9727ddecc3024e7df340">wifi_c_get_wifi_mode_as_string</a> (<a class="el" href="wifi__controller_8h.html#a062956c3402e036ec000008d21cdec8d">wifi_c_mode_t</a> wifi_mode)</td></tr>
 <tr class="memdesc:a56ae8fcaadef9727ddecc3024e7df340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Translate wifi_c_mode_t enum to string.  <a href="wifi__controller_8h.html#a56ae8fcaadef9727ddecc3024e7df340">More...</a><br /></td></tr>
@@ -321,12 +326,21 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
 <tr class="memitem:a12695f7f8390b032f86d7317f8480dde"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#a12695f7f8390b032f86d7317f8480dde">wifi_c_sta_register_connect_handler</a> (void(*connect_handler)(void))</td></tr>
 <tr class="memdesc:a12695f7f8390b032f86d7317f8480dde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register function to be called when STA connects to AP.  <a href="wifi__controller_8h.html#a12695f7f8390b032f86d7317f8480dde">More...</a><br /></td></tr>
 <tr class="separator:a12695f7f8390b032f86d7317f8480dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ab89410d5bf8d703907b59935825401"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#a5ab89410d5bf8d703907b59935825401">wifi_c_ap_register_connect_handler</a> (void(*connect_handler)(void))</td></tr>
+<tr class="memdesc:a5ab89410d5bf8d703907b59935825401"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register function to be called each time new STA connects to AP.  <a href="wifi__controller_8h.html#a5ab89410d5bf8d703907b59935825401">More...</a><br /></td></tr>
+<tr class="separator:a5ab89410d5bf8d703907b59935825401"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a4458cd9749bfedf7f065962157f87"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#ab6a4458cd9749bfedf7f065962157f87">wifi_c_sta_register_disconnect_handler</a> (void(*disconnect_handler)(void))</td></tr>
+<tr class="memdesc:ab6a4458cd9749bfedf7f065962157f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register function to be called when STA loses connection with AP and all attempts to connect again fails.  <a href="wifi__controller_8h.html#ab6a4458cd9749bfedf7f065962157f87">More...</a><br /></td></tr>
+<tr class="separator:ab6a4458cd9749bfedf7f065962157f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9897aff5eb6a80a264379be4c29e4101"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__controller_8h.html#a9897aff5eb6a80a264379be4c29e4101">wifi_c_ap_register_disconnect_handler</a> (void(*disconnect_handler)(void))</td></tr>
+<tr class="memdesc:a9897aff5eb6a80a264379be4c29e4101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register function to be called each time STA disconnects from our AP.  <a href="wifi__controller_8h.html#a9897aff5eb6a80a264379be4c29e4101">More...</a><br /></td></tr>
+<tr class="separator:a9897aff5eb6a80a264379be4c29e4101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Wifi controller header file. </p>
 <dl class="section author"><dt>Author</dt><dd>Wojciech Mytych (<a href="#" onclick="location.href='mai'+'lto:'+'woj'+'ci'+'ech'+'.l'+'uka'+'sz'+'.my'+'ty'+'ch@'+'gm'+'ail'+'.c'+'om'; return false;">wojci<span class="obfuscator">.nosp@m.</span>ech.<span class="obfuscator">.nosp@m.</span>lukas<span class="obfuscator">.nosp@m.</span>z.my<span class="obfuscator">.nosp@m.</span>tych@<span class="obfuscator">.nosp@m.</span>gmai<span class="obfuscator">.nosp@m.</span>l.com</a>) </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2024-02-07</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.4.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-02-09</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="aea4deaa8411633b4f5dad8c255078ed9" name="aea4deaa8411633b4f5dad8c255078ed9"></a>
@@ -374,6 +388,72 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
 
 </div>
 </div>
+<a id="a5ab89410d5bf8d703907b59935825401" name="a5ab89410d5bf8d703907b59935825401"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab89410d5bf8d703907b59935825401">&#9670;&nbsp;</a></span>wifi_c_ap_register_connect_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wifi_c_ap_register_connect_handler </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>connect_handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register function to be called each time new STA connects to AP. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connect_handler</td><td>Pointer to handler function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">ERR_NULL_POINTER</td><td>when connect_handler function pointer is NULL </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9897aff5eb6a80a264379be4c29e4101" name="a9897aff5eb6a80a264379be4c29e4101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9897aff5eb6a80a264379be4c29e4101">&#9670;&nbsp;</a></span>wifi_c_ap_register_disconnect_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wifi_c_ap_register_disconnect_handler </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>disconnect_handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register function to be called each time STA disconnects from our AP. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connect_handler</td><td>Pointer to handler function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">ERR_NULL_POINTER</td><td>when disconnect_handler function pointer is NULL </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9a31bfae33079bc395d64c40933a73c8" name="a9a31bfae33079bc395d64c40933a73c8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9a31bfae33079bc395d64c40933a73c8">&#9670;&nbsp;</a></span>wifi_c_change_mode()</h2>
 
@@ -397,6 +477,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function destroys and reinitializes state of wifi_controller</dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">WIFI_C_ERR_WRONG_MODE</td><td>If mode is the same as currently set. </td></tr>
@@ -592,6 +673,50 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
 
 </div>
 </div>
+<a id="acc993cc2a0481bf076e5361048057a90" name="acc993cc2a0481bf076e5361048057a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc993cc2a0481bf076e5361048057a90">&#9670;&nbsp;</a></span>wifi_c_get_status_as_json()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wifi_c_get_status_as_json </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>buflen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get current wifi_controller status as JSON string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>Buffer to store wifi_c_status data. </td></tr>
+    <tr><td class="paramname">buflen</td><td>Size of buffer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">ERR_NULL_POINTER</td><td>if buffer is NULL. </td></tr>
+    <tr><td class="paramname">ERR_C_MEMORY_ERR</td><td>if buffer cannot contain structure. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a56ae8fcaadef9727ddecc3024e7df340" name="a56ae8fcaadef9727ddecc3024e7df340"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56ae8fcaadef9727ddecc3024e7df340">&#9670;&nbsp;</a></span>wifi_c_get_wifi_mode_as_string()</h2>
 
@@ -609,11 +734,20 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
 </div><div class="memdoc">
 
 <p>Translate wifi_c_mode_t enum to string. </p>
+<dl class="section attention"><dt>Attention</dt><dd>If buffer is to small to contain whole structure, it will be truncated to fit the buffer size.</dd></dl>
+<p>Advised size is around 300 characters.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">wifi_mode</td><td>Wifi mode enum to translate.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">WIFI_C_MODE_AP</td><td></td></tr>
     <tr><td class="paramname">WIFI_C_MODE_STA</td><td></td></tr>
     <tr><td class="paramname">WIFI_C_MODE_APSTA</td><td></td></tr>
+    <tr><td class="paramname">WIFI_C_NO_MODE</td><td></td></tr>
     <tr><td class="paramname">NULL</td><td>if wrong value was passed. </td></tr>
   </table>
   </dd>
@@ -699,17 +833,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
   </table>
   </dd>
 </dl>
+<dl class="section attention"><dt>Attention</dt><dd>Scanning for access points is only possible when station mode is enabled and started.</dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">ERR_C_OK</td><td>on success </td></tr>
     <tr><td class="paramname">WIFI_C_ERR_WRONG_MODE</td><td>Wrong Wifi mode, scanning only possible in STA/APSTA mode. </td></tr>
     <tr><td class="paramname">WIFI_C_ERR_WIFI_NOT_INIT</td><td>WiFi was not initialized. </td></tr>
     <tr><td class="paramname">WIFI_C_ERR_STA_NOT_STARTED</td><td>STA was not started. </td></tr>
-    <tr><td class="paramname">esp</td><td>specific error codes</td></tr>
-    <tr><td class="paramname">ERR_C_OK</td><td>on success </td></tr>
-    <tr><td class="paramname">WIFI_C_ERR_WRONG_MODE</td><td>Wrong Wifi mode, scanning only possible in STA/APSTA mode. </td></tr>
-    <tr><td class="paramname">WIFI_C_ERR_WIFI_NOT_INIT</td><td>WiFi was not initialized. </td></tr>
-    <tr><td class="paramname">WIFI_C_ERR_STA_NOT_STARTED</td><td>STA was not started. </td></tr>
+    <tr><td class="paramname">ERR_NULL_POINTER</td><td>Pointer to result buffer was NULL. </td></tr>
     <tr><td class="paramname">esp</td><td>specific error codes </td></tr>
   </table>
   </dd>
@@ -747,7 +878,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">searched_ssid</td><td>SSID of AP to search for. </td></tr>
-    <tr><td class="paramname">ap_record</td><td>Pointer to wifi_ap_record_t to store result.</td></tr>
+    <tr><td class="paramname">ap_record</td><td>Pointer to wifi_c_ap_record_t to store result.</td></tr>
   </table>
   </dd>
 </dl>
@@ -863,10 +994,49 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
 </div><div class="memdoc">
 
 <p>Register function to be called when STA connects to AP. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connect_handler</td><td>Pointer to handler function.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>on success </td></tr>
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">ERR_NULL_POINTER</td><td>when connect_handler function pointer is NULL </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6a4458cd9749bfedf7f065962157f87" name="ab6a4458cd9749bfedf7f065962157f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6a4458cd9749bfedf7f065962157f87">&#9670;&nbsp;</a></span>wifi_c_sta_register_disconnect_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wifi_c_sta_register_disconnect_handler </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>disconnect_handler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register function to be called when STA loses connection with AP and all attempts to connect again fails. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connect_handler</td><td>Pointer to handler function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success </td></tr>
+    <tr><td class="paramname">ERR_NULL_POINTER</td><td>when disconnect_handler function pointer is NULL </td></tr>
   </table>
   </dd>
 </dl>
@@ -901,7 +1071,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_c_get_status_as_j
 
 <p>Starts WiFi in softAP mode. </p>
 <dl class="section attention"><dt>Attention</dt><dd>Passed SSID of AP cannot be zero length otherwise it will throw error.</dd></dl>
-<dl class="section note"><dt>Note</dt><dd>When passed password length is zero, the auth mode is set to open.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When passed password length is zero or NULL, the auth mode is set to open.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ssid</td><td>SSID of AP. </td></tr>

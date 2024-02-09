@@ -12,6 +12,7 @@
 
 #include "wifi_controller.h"
 
+
 void setUp(void) {
     int err = nvs_flash_init();
     if (err == ESP_ERR_NVS_NO_FREE_PAGES || err == ESP_ERR_NVS_NEW_VERSION_FOUND) {
@@ -32,6 +33,9 @@ void afterEach (void) {
 }
 
 void test_check_if_netif_status_is_initialized(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->wifi_initialized, "netif_initialized should be false before initialization.");
@@ -48,6 +52,9 @@ void test_check_if_netif_status_is_initialized(void) {
 }
 
 void test_check_if_wifi_status_is_initialized_as_sta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->wifi_initialized, "wifi_initialized should be false before initialization.");
@@ -64,6 +71,9 @@ void test_check_if_wifi_status_is_initialized_as_sta(void) {
 }
 
 void test_check_if_wifi_status_is_initialized_as_ap(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->wifi_initialized, "wifi_initialized should be false before initialization.");
@@ -80,6 +90,9 @@ void test_check_if_wifi_status_is_initialized_as_ap(void) {
 }
 
 void test_check_if_wifi_status_is_initialized_as_apsta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   TEST_ASSERT_EQUAL_MESSAGE(false, wifi_status->wifi_initialized, "wifi_initialized should be false before initialization.");
@@ -96,6 +109,9 @@ void test_check_if_wifi_status_is_initialized_as_apsta(void) {
 }
 
 void test_check_initial_ap_ip_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   const char* expected = "0.0.0.0";
@@ -105,6 +121,9 @@ void test_check_initial_ap_ip_value(void) {
 }
 
 void test_check_initial_sta_ip_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   const char* expected = "0.0.0.0";
@@ -114,6 +133,9 @@ void test_check_initial_sta_ip_value(void) {
 }
 
 void test_check_initial_ap_ssid_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   const char* expected = "none";
@@ -123,6 +145,9 @@ void test_check_initial_ap_ssid_value(void) {
 }
 
 void test_check_initial_sta_ssid_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
   const char* expected = "none";
@@ -132,6 +157,9 @@ void test_check_initial_sta_ssid_value(void) {
 }
 
 void test_check_initial_wifi_initialized_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -140,6 +168,9 @@ void test_check_initial_wifi_initialized_value(void) {
 }
 
 void test_check_initial_netif_initialized_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -148,6 +179,9 @@ void test_check_initial_netif_initialized_value(void) {
 }
 
 void test_check_initial_event_loop_started_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -156,6 +190,9 @@ void test_check_initial_event_loop_started_value(void) {
 }
 
 void test_check_initial_sta_started_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -164,6 +201,9 @@ void test_check_initial_sta_started_value(void) {
 }
 
 void test_check_initial_ap_started_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -172,6 +212,9 @@ void test_check_initial_ap_started_value(void) {
 }
 
 void test_check_initial_scan_done_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -180,6 +223,9 @@ void test_check_initial_scan_done_value(void) {
 }
 
 void test_check_initial_sta_connected_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -188,6 +234,9 @@ void test_check_initial_sta_connected_value(void) {
 }
 
 void test_check_initial_ap_connect_handler_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -196,6 +245,9 @@ void test_check_initial_ap_connect_handler_value(void) {
 }
 
 void test_check_initial_sta_connect_handler_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
    //given
   wifi_c_status_t* wifi_status = wifi_c_get_status();
 
@@ -203,7 +255,32 @@ void test_check_initial_sta_connect_handler_value(void) {
   TEST_ASSERT_NULL_MESSAGE(wifi_status->sta.connect_handler, "sta.connect_handler value should be false before setting it.");
 }
 
+void test_check_initial_ap_disconnect_handler_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_NULL_MESSAGE(wifi_status->ap.disconnect_handler, "ap.disconnect_handler value should be NULL before setting it.");
+}
+
+void test_check_initial_sta_disconnect_handler_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+   //given
+  wifi_c_status_t* wifi_status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_NULL_MESSAGE(wifi_status->sta.disconnect_handler, "sta.disconnect_handler value should be NULL before setting it.");
+}
+
 void test_if_wifi_status_is_initalized_when_init_as_ap(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -220,6 +297,9 @@ void test_if_wifi_status_is_initalized_when_init_as_ap(void) {
 }
 
 void test_if_wifi_status_is_initalized_when_init_as_sta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -236,6 +316,9 @@ void test_if_wifi_status_is_initalized_when_init_as_sta(void) {
 }
 
 void test_if_wifi_status_is_initalized_when_init_as_apsta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -252,6 +335,9 @@ void test_if_wifi_status_is_initalized_when_init_as_apsta(void) {
 }
 
 void test_if_netif_status_is_initalized_when_init_as_ap(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -268,6 +354,9 @@ void test_if_netif_status_is_initalized_when_init_as_ap(void) {
 }
 
 void test_if_netif_status_is_initalized_when_init_as_sta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -284,6 +373,9 @@ void test_if_netif_status_is_initalized_when_init_as_sta(void) {
 }
 
 void test_if_netif_status_is_initalized_when_init_as_apsta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -300,6 +392,9 @@ void test_if_netif_status_is_initalized_when_init_as_apsta(void) {
 }
 
 void test_if_sta_started_is_false_when_init_as_ap(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -316,6 +411,9 @@ void test_if_sta_started_is_false_when_init_as_ap(void) {
 }
 
 void test_if_sta_started_is_true_when_init_as_sta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -333,6 +431,9 @@ void test_if_sta_started_is_true_when_init_as_sta(void) {
 }
 
 void test_if_sta_started_is_true_when_init_as_apsta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* wifi = NULL;
 
@@ -350,6 +451,9 @@ void test_if_sta_started_is_true_when_init_as_apsta(void) {
 }
 
 void test_if_wifi_init_throws_err_on_wrong_mode_value(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -364,6 +468,9 @@ void test_if_wifi_init_throws_err_on_wrong_mode_value(void) {
 }
 
 void test_if_wifi_init_throws_err_on_multiple_calls(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -384,6 +491,9 @@ void test_if_wifi_init_throws_err_on_multiple_calls(void) {
 }
 
 void test_if_wifi_init_not_throws_err_on_call_with_different_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -404,6 +514,9 @@ void test_if_wifi_init_not_throws_err_on_call_with_different_mode(void) {
 }
 
 void test_if_wifi_c_start_ap_returns_zero_on_success(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -419,6 +532,9 @@ void test_if_wifi_c_start_ap_returns_zero_on_success(void) {
 }
 
 void test_if_wifi_c_start_ap_returns_err_when_wifi_mode_is_not_ap(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -434,6 +550,9 @@ void test_if_wifi_c_start_ap_returns_err_when_wifi_mode_is_not_ap(void) {
 }
 
 void test_if_wifi_c_start_sta_returns_connect_fail_on_wrong_credentials(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -449,6 +568,9 @@ void test_if_wifi_c_start_sta_returns_connect_fail_on_wrong_credentials(void) {
 }
 
 void test_if_wifi_c_start_sta_returns_err_when_wifi_mode_is_not_sta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -464,6 +586,9 @@ void test_if_wifi_c_start_sta_returns_err_when_wifi_mode_is_not_sta(void) {
 }
 
 void test_if_wifi_c_start_ap_returns_zero_on_zero_len_pass(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -479,6 +604,9 @@ void test_if_wifi_c_start_ap_returns_zero_on_zero_len_pass(void) {
 }
 
 void test_if_wifi_c_start_ap_returns_zero_on_null_pass(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -494,6 +622,9 @@ void test_if_wifi_c_start_ap_returns_zero_on_null_pass(void) {
 }
 
 void test_if_wifi_c_scan_all_ap_returns_zero(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
   wifi_c_scan_result_t result;
@@ -511,6 +642,9 @@ void test_if_wifi_c_scan_all_ap_returns_zero(void) {
 }
 
 void test_if_wifi_c_scan_all_ap_returns_err_on_null_buffer(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
 
@@ -527,6 +661,9 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_null_buffer(void) {
 }
 
 void test_if_wifi_c_scan_all_ap_returns_err_on_not_init_wifi(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
   wifi_c_scan_result_t result;
@@ -543,6 +680,9 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_not_init_wifi(void) {
 }
 
 void test_if_wifi_initialized_is_false_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -556,6 +696,9 @@ void test_if_wifi_initialized_is_false_after_deinit(void) {
 }
 
 void test_if_netif_initialized_is_false_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -569,6 +712,9 @@ void test_if_netif_initialized_is_false_after_deinit(void) {
 }
 
 void test_if_event_loop_started_is_false_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -582,6 +728,9 @@ void test_if_event_loop_started_is_false_after_deinit(void) {
 }
 
 void test_if_sta_started_is_false_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -595,6 +744,9 @@ void test_if_sta_started_is_false_after_deinit(void) {
 }
 
 void test_if_ap_started_is_false_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -608,6 +760,9 @@ void test_if_ap_started_is_false_after_deinit(void) {
 }
 
 void test_if_sta_connected_is_false_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -621,6 +776,9 @@ void test_if_sta_connected_is_false_after_deinit(void) {
 }
 
 void test_if_wifi_mode_is_set_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -634,6 +792,9 @@ void test_if_wifi_mode_is_set_after_deinit(void) {
 }
 
 void test_if_sta_ip_is_cleared_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -647,6 +808,9 @@ void test_if_sta_ip_is_cleared_after_deinit(void) {
 }
 
 void test_if_ap_ip_is_cleared_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -660,6 +824,9 @@ void test_if_ap_ip_is_cleared_after_deinit(void) {
 }
 
 void test_if_ap_ssid_is_cleared_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -673,6 +840,9 @@ void test_if_ap_ssid_is_cleared_after_deinit(void) {
 }
 
 void test_if_sta_ssid_is_cleared_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_init_wifi(WIFI_C_MODE_APSTA);
@@ -686,6 +856,9 @@ void test_if_sta_ssid_is_cleared_after_deinit(void) {
 }
 
 void test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = 0;
   wifi_c_scan_result_t result;
@@ -704,6 +877,9 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode(void) {
 }
 
 void test_if_sta_connect_handler_is_set(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_deinit();
@@ -717,6 +893,9 @@ void test_if_sta_connect_handler_is_set(void) {
 }
 
 void test_if_ap_connect_handler_is_set(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_deinit();
@@ -730,6 +909,9 @@ void test_if_ap_connect_handler_is_set(void) {
 }
 
 void test_if_ap_connect_handler_register_returns_err_on_null(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = -1;
   wifi_c_deinit();
@@ -742,6 +924,9 @@ void test_if_ap_connect_handler_register_returns_err_on_null(void) {
 }
 
 void test_if_sta_connect_handler_register_returns_err_on_null(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = -1;
   wifi_c_deinit();
@@ -753,7 +938,72 @@ void test_if_sta_connect_handler_register_returns_err_on_null(void) {
   TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "sta connect handler register should return err on null handler function");  
 }
 
+void test_if_sta_disconnect_handler_is_set(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_deinit();
+
+  //when
+  wifi_c_sta_register_disconnect_handler(afterEach);
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_PTR_MESSAGE(afterEach, status->sta.disconnect_handler, "sta disconnect handler different from expected");  
+}
+
+void test_if_ap_disconnect_handler_is_set(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  wifi_c_status_t* status = NULL;
+  wifi_c_deinit();
+
+  //when
+  wifi_c_ap_register_disconnect_handler(afterEach);
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_EQUAL_PTR_MESSAGE(afterEach, status->ap.disconnect_handler, "ap disconnect handler different from expected");  
+}
+
+void test_if_ap_disconnect_handler_register_returns_err_on_null(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  int err = -1;
+  wifi_c_deinit();
+
+  //when
+  err = wifi_c_ap_register_disconnect_handler(NULL);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "ap disconnect handler register should return err on null handler function");  
+}
+
+void test_if_sta_disconnect_handler_register_returns_err_on_null(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  int err = -1;
+  wifi_c_deinit();
+
+  //when
+  err = wifi_c_sta_register_disconnect_handler(NULL);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "sta disconnect handler register should return err on null handler function");  
+}
+
 void test_if_get_mode_as_str_works_on_ap_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   char* mode = NULL;
 
@@ -765,6 +1015,9 @@ void test_if_get_mode_as_str_works_on_ap_mode(void) {
 }
 
 void test_if_get_mode_as_str_works_on_sta_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   char* mode = NULL;
 
@@ -776,6 +1029,9 @@ void test_if_get_mode_as_str_works_on_sta_mode(void) {
 }
 
 void test_if_get_mode_as_str_works_on_apsta_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   char* mode = NULL;
 
@@ -787,6 +1043,9 @@ void test_if_get_mode_as_str_works_on_apsta_mode(void) {
 }
 
 void test_if_get_mode_as_str_returns_err_on_wrong_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   char* mode = "not null";
 
@@ -798,26 +1057,41 @@ void test_if_get_mode_as_str_returns_err_on_wrong_mode(void) {
 }
 
 void test_if_wifi_c_ap_mode_has_value_as_esp_ap_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //then
   TEST_ASSERT_EQUAL_MESSAGE(WIFI_MODE_AP, WIFI_C_MODE_AP, "WIFI_C_MODE_AP should have the same value as WIFI_MODE_AP");
 }
 
 void test_if_wifi_c_sta_mode_has_value_as_esp_sta_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //then
   TEST_ASSERT_EQUAL_MESSAGE(WIFI_MODE_STA, WIFI_C_MODE_STA, "WIFI_C_MODE_STA should have the same value as WIFI_MODE_STA");
 }
 
 void test_if_wifi_c_apsta_mode_has_value_as_esp_apsta_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //then
   TEST_ASSERT_EQUAL_MESSAGE(WIFI_MODE_APSTA, WIFI_C_MODE_APSTA, "WIFI_C_MODE_APSTA should have the same value as WIFI_MODE_APSTA");
 }
 
 void test_if_wifi_c_no_mode_has_value_as_esp_no_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //then
   TEST_ASSERT_EQUAL_MESSAGE(WIFI_MODE_NULL, WIFI_C_NO_MODE, "WIFI_C_NO_MODE should have the same value as WIFI_MODE_NULL");
 }
 
 void test_if_disconnect_returns_err_on_not_connected_sta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = -1;
   wifi_c_deinit();
@@ -830,6 +1104,9 @@ void test_if_disconnect_returns_err_on_not_connected_sta(void) {
 }
 
 void test_if_change_mode_changes_mode_from_sta_to_ap(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_deinit();
   wifi_c_status_t* status = NULL;
@@ -847,6 +1124,9 @@ void test_if_change_mode_changes_mode_from_sta_to_ap(void) {
 }
 
 void test_if_change_mode_changes_mode_from_ap_to_sta(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   wifi_c_status_t* status = NULL;
   wifi_c_deinit();
@@ -864,6 +1144,9 @@ void test_if_change_mode_changes_mode_from_ap_to_sta(void) {
 }
 
 void test_if_change_mode_returns_err_on_the_same_mode(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = -1;
   wifi_c_deinit();
@@ -880,6 +1163,9 @@ void test_if_change_mode_returns_err_on_the_same_mode(void) {
 }
 
 void test_if_scan_all_ap_returns_err_on_null_result_to_return(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = -1;
   wifi_c_deinit();
@@ -896,6 +1182,9 @@ void test_if_scan_all_ap_returns_err_on_null_result_to_return(void) {
 }
 
 void test_if_scan_all_ap_returns_err_on_not_init_wifi(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = -1;
   wifi_c_scan_result_t scan;
@@ -912,6 +1201,9 @@ void test_if_scan_all_ap_returns_err_on_not_init_wifi(void) {
 }
 
 void test_if_scan_all_ap_returns_zero(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);  
+  
   //given
   int err = -1;
   wifi_c_scan_result_t scan;
@@ -929,6 +1221,9 @@ void test_if_scan_all_ap_returns_zero(void) {
 }
 
 void test_if_scan_ssid_ap_returns_err_on_null_result_to_return(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__); 
+  
   //given
   int err = -1;
   wifi_c_deinit();
@@ -945,6 +1240,9 @@ void test_if_scan_ssid_ap_returns_err_on_null_result_to_return(void) {
 }
 
 void test_if_scan_ssid_ap_returns_err_on_null_ssid_to_search(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);  
+  
   //given
   int err = -1;
   wifi_c_ap_record_t ap_record;
@@ -962,6 +1260,9 @@ void test_if_scan_ssid_ap_returns_err_on_null_ssid_to_search(void) {
 }
 
 void test_if_scan_ssid_ap_returns_err_on_not_init_wifi(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
   //given
   int err = -1;
   wifi_c_ap_record_t scan;
@@ -978,6 +1279,9 @@ void test_if_scan_ssid_ap_returns_err_on_not_init_wifi(void) {
 }
 
 void test_if_scan_ssid_ap_returns_not_found_ssid(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+  
   //given
   int err = -1;
   wifi_c_ap_record_t scan;
@@ -994,8 +1298,92 @@ void test_if_scan_ssid_ap_returns_not_found_ssid(void) {
   wifi_c_deinit();
 }
 
+void test_if_get_status_as_json_returns_err_on_null_buffer(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+  
+  //given
+  int err = 0;
+
+  //when
+  err = wifi_c_get_status_as_json(NULL, 0);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "wifi_c_get_status_as_json should return err on NULL buffer");
+}
+
+void test_if_sta_connect_handler_is_null_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+  
+  //given
+  wifi_c_status_t* status = NULL;
+
+  //when
+  wifi_c_sta_register_connect_handler(afterEach);
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_NULL_MESSAGE(status->sta.connect_handler, "sta connect handler should be NULL after deinit.");
+}
+
+void test_if_ap_connect_handler_is_null_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  wifi_c_status_t* status = NULL;
+
+  //when
+  wifi_c_ap_register_connect_handler(afterEach);
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_NULL_MESSAGE(status->ap.connect_handler, "ap connect handler should be NULL after deinit.");
+}
+
+void test_if_sta_disconnect_handler_is_null_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  
+  //given
+  wifi_c_status_t* status = NULL;
+
+  //when
+  wifi_c_sta_register_disconnect_handler(afterEach);
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_NULL_MESSAGE(status->sta.disconnect_handler, "sta disconnect handler should be NULL after deinit.");
+}
+
+void test_if_ap_disconnect_handler_is_null_after_deinit(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  wifi_c_status_t* status = NULL;
+
+  //when
+  wifi_c_ap_register_disconnect_handler(afterEach);
+  wifi_c_deinit();
+  status = wifi_c_get_status();
+
+  //then
+  TEST_ASSERT_NULL_MESSAGE(status->ap.disconnect_handler, "ap disconnect handler should be NULL after deinit.");
+}
+
 void run_wifi_controller_tests(void) {
   UNITY_BEGIN();
+  RUN_TEST(test_if_ap_disconnect_handler_is_null_after_deinit);
+  RUN_TEST(test_if_sta_disconnect_handler_is_null_after_deinit);
+  RUN_TEST(test_if_ap_connect_handler_is_null_after_deinit);
+  RUN_TEST(test_if_sta_connect_handler_is_null_after_deinit);
+  RUN_TEST(test_if_get_status_as_json_returns_err_on_null_buffer);
   RUN_TEST(test_if_scan_ssid_ap_returns_not_found_ssid);
   RUN_TEST(test_if_scan_ssid_ap_returns_err_on_not_init_wifi);
   RUN_TEST(test_if_scan_ssid_ap_returns_err_on_null_ssid_to_search);
@@ -1015,6 +1403,10 @@ void run_wifi_controller_tests(void) {
   RUN_TEST(test_if_get_mode_as_str_works_on_apsta_mode);
   RUN_TEST(test_if_get_mode_as_str_works_on_sta_mode);
   RUN_TEST(test_if_get_mode_as_str_works_on_ap_mode);
+  RUN_TEST(test_if_sta_disconnect_handler_register_returns_err_on_null);
+  RUN_TEST(test_if_ap_disconnect_handler_register_returns_err_on_null);
+  RUN_TEST(test_if_ap_disconnect_handler_is_set);
+  RUN_TEST(test_if_sta_disconnect_handler_is_set);
   RUN_TEST(test_if_sta_connect_handler_register_returns_err_on_null);
   RUN_TEST(test_if_ap_connect_handler_register_returns_err_on_null);
   RUN_TEST(test_if_ap_connect_handler_is_set);
@@ -1052,6 +1444,8 @@ void run_wifi_controller_tests(void) {
   RUN_TEST(test_if_wifi_status_is_initalized_when_init_as_apsta);
   RUN_TEST(test_if_wifi_status_is_initalized_when_init_as_sta);
   RUN_TEST(test_if_wifi_status_is_initalized_when_init_as_ap);
+  RUN_TEST(test_check_initial_ap_disconnect_handler_value);
+  RUN_TEST(test_check_initial_sta_disconnect_handler_value);
   RUN_TEST(test_check_initial_sta_connect_handler_value);
   RUN_TEST(test_check_initial_ap_connect_handler_value);
   RUN_TEST(test_check_initial_sta_connected_value);
