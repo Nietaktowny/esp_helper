@@ -2,8 +2,8 @@
  * @file wifi_controller.h
  * @author Wojciech Mytych (wojciech.lukasz.mytych@gmail.com)
  * @brief Wifi controller header file.
- * @version 0.1
- * @date 2024-02-07
+ * @version 1.4.0
+ * @date 2024-02-09
  * 
  * @copyright Copyright (c) 2024
  * 
@@ -11,17 +11,17 @@
 #pragma once
 
 #include <stdbool.h>
-#include "esp_wifi.h"
+//#include "esp_wifi.h"
 
 /**
  * @brief Types of available WiFi modes.
  * 
  */
 typedef enum {
+    WIFI_C_NO_MODE,         /*No mode currently set.*/
     WIFI_C_MODE_STA,        /*Use WiFi as STA.*/
     WIFI_C_MODE_AP,         /*Use WiFi as AP.*/
     WIFI_C_MODE_APSTA,      /*Use WiFi as AP+STA.*/
-    WIFI_C_NO_MODE          /*No mode currently set.*/
 } wifi_c_mode_t;
 
 struct wifi_c_ap_status_obj {
@@ -305,7 +305,7 @@ int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return);
  * @brief Scan for AP with desired SSID.
  * 
  * @param searched_ssid SSID of AP to search for.
- * @param ap_record     Pointer to wifi_ap_record_t to store result.
+ * @param ap_record     Pointer to wifi_c_ap_record_t to store result.
  * 
  * @retval ERR_C_OK on success
  * @retval WIFI_C_ERR_AP_NOT_FOUND when not found AP
@@ -348,6 +348,8 @@ int wifi_c_store_scan_result_as_json (char* buffer, uint16_t buflen);
  * 
  * @param mode wifi operating mode (STA, AP, APSTA)
  * 
+ * @warning This function destroys and reinitializes state of wifi_controller
+ * 
  * @retval WIFI_C_ERR_WRONG_MODE If mode is the same as currently set.
  * @retval esp specific error codes
 */
@@ -364,6 +366,14 @@ void wifi_c_deinit(void);
  * @brief Register function to be called when STA connects to AP.
  * 
  * @retval 0 on success
- * @retval 
+ * @retval ERR_NULL_POINTER when connect_handler function pointer is NULL
 */
 int wifi_c_sta_register_connect_handler(void (*connect_handler)(void));
+
+/**
+ * @brief Register function to be called each time new STA connects to AP.
+ * 
+ * @retval 0 on success
+ * @retval ERR_NULL_POINTER when connect_handler function pointer is NULL
+*/
+int wifi_c_ap_register_connect_handler(void (*connect_handler)(void));

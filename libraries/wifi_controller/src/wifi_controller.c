@@ -2,8 +2,8 @@
  * @file wifi_controller.c
  * @author Wojciech Mytych (wojciech.lukasz.mytych@gmail.com)
  * @brief Wifi controller source file.
- * @version 0.1
- * @date 2024-02-07
+ * @version 1.4.0
+ * @date 2024-02-09
  * 
  * @copyright Copyright (c) 2024
  * 
@@ -119,7 +119,7 @@ static void wifi_c_sta_event_handler(void *arg, esp_event_base_t event_base,
     if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_START)
     {
         LOG_INFO("Station started, connecting to WiFi.");
-        wifi_c_status.sta_started = true;
+        //wifi_c_status.sta_started = true;
         xEventGroupSetBits(wifi_c_event_group, WIFI_C_STA_STARTED_BIT);
     }
     else if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_STA_DISCONNECTED)
@@ -227,6 +227,30 @@ static wifi_mode_t wifi_c_select_wifi_mode(wifi_c_mode_t WIFI_C_WIFI_MODE)
     }
 }
 
+static inline char *wifi_c_get_bool_as_char(bool value)
+{
+    return (value) ? "true" : "false";
+}
+
+static void wifi_c_netif_deinit(wifi_c_mode_t mode)
+{
+    switch (mode)
+    {
+    case WIFI_C_MODE_STA:
+        esp_netif_destroy_default_wifi(netif_handle_sta);
+        break;
+    case WIFI_C_MODE_AP:
+        esp_netif_destroy_default_wifi(netif_handle_ap);
+        break;
+    case WIFI_C_MODE_APSTA:
+        esp_netif_destroy_default_wifi(netif_handle_ap);
+        esp_netif_destroy_default_wifi(netif_handle_sta);
+        break;
+    default:
+        break;
+    }
+}
+
 int wifi_c_create_default_event_loop(void)
 {
     volatile err_c_t err = ERR_C_OK;
@@ -268,18 +292,23 @@ int wifi_c_sta_register_connect_handler(void (*connect_handler)(void))
     ERR_C_CHECK_NULL_PTR(connect_handler, LOG_ERROR("connect handler function cannot be NULL"));
 
     wifi_c_status.sta.connect_handler = connect_handler;
-    LOG_INFO("connect handler function of wifi controller changed!");
+    LOG_INFO("STA connect handler function of wifi controller changed!");
+    return err;
+}
+
+int wifi_c_ap_register_connect_handler(void (*connect_handler)(void))
+{
+    err_c_t err = 0;
+    ERR_C_CHECK_NULL_PTR(connect_handler, LOG_ERROR("connect handler function cannot be NULL"));
+
+    wifi_c_status.ap.connect_handler = connect_handler;
+    LOG_INFO("AP connect handler function of wifi controller changed!");
     return err;
 }
 
 wifi_c_status_t *wifi_c_get_status(void)
 {
     return &wifi_c_status;
-}
-
-static inline char *wifi_c_get_bool_as_char(bool value)
-{
-    return (value) ? "true" : "false";
 }
 
 int wifi_c_get_status_as_json(char *buffer, size_t buflen)
@@ -308,7 +337,7 @@ int wifi_c_get_status_as_json(char *buffer, size_t buflen)
     return err;
 }
 
-char *wifi_c_get_wifi_mode_as_string(wifi_c_mode_t wifi_mode)
+char* wifi_c_get_wifi_mode_as_string(wifi_c_mode_t wifi_mode)
 {
     switch (wifi_mode)
     {
@@ -601,11 +630,6 @@ int wifi_c_scan_all_ap(wifi_c_scan_result_t *result_to_return)
             ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_WRONG_MODE); // scans are only allowed in STA mode.
         }
 
-        if (!wifi_c_status.sta_started)
-        {
-            ERR_C_SET_AND_THROW_ERR(err, WIFI_C_ERR_STA_NOT_STARTED);
-        }
-
         memset(&ap_info, 0, sizeof(ap_info));
         LOG_DEBUG("scanning for Access Points...");
 
@@ -625,7 +649,7 @@ int wifi_c_scan_all_ap(wifi_c_scan_result_t *result_to_return)
         xEventGroupWaitBits(wifi_c_event_group, WIFI_C_SCAN_DONE_BIT, pdTRUE, pdFALSE, pdMS_TO_TICKS(2000));
         ERR_C_CHECK_AND_THROW_ERR(esp_wifi_scan_get_ap_records(&wifi_scan_info.ap_count, &ap_info[0]));
         ERR_C_CHECK_AND_THROW_ERR(esp_wifi_scan_get_ap_num(&(wifi_scan_info.ap_count)));
-        wifi_scan_info.ap_record = &ap_info[0];
+        wifi_scan_info.ap_record = (wifi_c_ap_record_t*)&ap_info[0];
 
         /*Point passed pointer to scan results*/
         result_to_return = &wifi_scan_info;
@@ -659,13 +683,19 @@ int wifi_c_scan_all_ap(wifi_c_scan_result_t *result_to_return)
 int wifi_c_scan_for_ap_with_ssid(const char *searched_ssid, wifi_c_ap_record_t *ap_record)
 {
     volatile err_c_t err = ERR_C_OK;
-    assert(searched_ssid);
-    wifi_ap_record_t *record;
+    ERR_C_CHECK_NULL_PTR(searched_ssid, LOG_ERROR("ssid to search cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(ap_record, LOG_ERROR("location to store scan result cannot be NULL"));
+    wifi_c_ap_record_t *record;
     bool success = false;
+    wifi_c_scan_result_t* scan_result = &wifi_scan_info;
 
     Try
     {
-        assert(&wifi_scan_info);
+        err =  wifi_c_scan_all_ap(scan_result);
+        if(err != ERR_C_OK) {
+            LOG_ERROR("error %d when scanning for ssid: %s, error: %s", err, searched_ssid, error_to_name(err));
+            return err;
+        }
         record = wifi_scan_info.ap_record;
         uint8_t ssid_len = strlen(searched_ssid);
 
@@ -730,7 +760,7 @@ int wifi_c_print_scanned_ap(void)
             }
         }
 
-        wifi_ap_record_t *record = wifi_scan_info.ap_record;
+        wifi_c_ap_record_t *record = wifi_scan_info.ap_record;
         for (uint16_t i = 0; i < WIFI_C_DEFAULT_SCAN_SIZE; i++)
         {
             const char *ssid = (char *)(record->ssid);
@@ -785,7 +815,7 @@ int wifi_c_store_scan_result_as_json(char *buffer, uint16_t buflen)
         uint16_t ap_len = 0;
         uint16_t space_left = buflen;
         uint16_t index = 0;
-        wifi_ap_record_t *record = wifi_scan_info.ap_record;
+        wifi_c_ap_record_t *record = wifi_scan_info.ap_record;
         for (uint16_t i = 0; i < WIFI_C_DEFAULT_SCAN_SIZE; i++)
         {
             memutil_zero_memory(&ap, sizeof(ap));
@@ -827,6 +857,12 @@ int wifi_c_store_scan_result_as_json(char *buffer, uint16_t buflen)
 int wifi_c_disconnect(void)
 {
     err_c_t err = 0;
+
+    if(!wifi_c_status.sta_connected) {
+        LOG_ERROR("wifi is not connected, cannot disconnect");
+        return WIFI_C_ERR_STA_NOT_CONNECTED;
+    }
+
     err = esp_wifi_disconnect();
     if (err != ESP_OK)
     {
@@ -854,32 +890,18 @@ int wifi_c_change_mode(wifi_c_mode_t mode)
         LOG_WARN("mode to set is the same as current mode");
         return WIFI_C_ERR_WRONG_MODE;
     }
-    err = esp_wifi_set_mode(wifi_c_select_wifi_mode(mode));
-    if (err != ERR_C_OK)
-    {
-        LOG_ERROR("error %d when changing wifi mode: %s", err, error_to_name(err));
+
+    if(!wifi_c_status.wifi_initialized) {
+        wifi_c_deinit();
+    }
+
+    err = wifi_c_init_wifi(mode);
+    if(err != ERR_C_OK) {
+        LOG_ERROR("error %d during reinitialization of wifi controller: %s", err, error_to_name(err));
         return err;
     }
-    return err;
-}
 
-static void wifi_c_netif_deinit(wifi_c_mode_t mode)
-{
-    switch (mode)
-    {
-    case WIFI_C_MODE_STA:
-        esp_netif_destroy_default_wifi(netif_handle_sta);
-        break;
-    case WIFI_C_MODE_AP:
-        esp_netif_destroy_default_wifi(netif_handle_ap);
-        break;
-    case WIFI_C_MODE_APSTA:
-        esp_netif_destroy_default_wifi(netif_handle_ap);
-        esp_netif_destroy_default_wifi(netif_handle_sta);
-        break;
-    default:
-        break;
-    }
+    return err;
 }
 
 /**
