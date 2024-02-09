@@ -627,7 +627,7 @@ void test_if_wifi_c_scan_all_ap_returns_zero(void) {
 
   //given
   int err = 0;
-  wifi_c_scan_result_t result;
+  wifi_c_scan_result_t* result = NULL;
 
   //when
   wifi_c_init_wifi(WIFI_C_MODE_STA);
@@ -666,7 +666,7 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_not_init_wifi(void) {
 
   //given
   int err = 0;
-  wifi_c_scan_result_t result;
+  wifi_c_scan_result_t* result = NULL;
 
   //when
   wifi_c_deinit();
@@ -861,7 +861,7 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode(void) {
 
   //given
   int err = 0;
-  wifi_c_scan_result_t result;
+  wifi_c_scan_result_t* result = NULL;
   wifi_c_deinit();
 
   //when
@@ -1187,7 +1187,7 @@ void test_if_scan_all_ap_returns_err_on_not_init_wifi(void) {
 
   //given
   int err = -1;
-  wifi_c_scan_result_t scan;
+  wifi_c_scan_result_t* scan = NULL;
   wifi_c_deinit();
 
   //when
@@ -1206,7 +1206,7 @@ void test_if_scan_all_ap_returns_zero(void) {
   
   //given
   int err = -1;
-  wifi_c_scan_result_t scan;
+  wifi_c_scan_result_t* scan = NULL;
   wifi_c_deinit();
 
   //when
@@ -1377,8 +1377,24 @@ void test_if_ap_disconnect_handler_is_null_after_deinit(void) {
   TEST_ASSERT_NULL_MESSAGE(status->ap.disconnect_handler, "ap disconnect handler should be NULL after deinit.");
 }
 
+void test_if_max_ap_buffer_is_bigger_than_ap_scan_count(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  wifi_c_scan_result_t* result = NULL;
+
+  //when
+  wifi_c_init_wifi(WIFI_C_MODE_STA);
+  wifi_c_scan_all_ap(&result);
+
+  //then
+  TEST_ASSERT_TRUE_MESSAGE(result->ap_count <= WIFI_C_BUFFER_SCAN_SIZE, "Number of scanned AP cannot be bigger than max buffer scan size");
+}
+
 void run_wifi_controller_tests(void) {
   UNITY_BEGIN();
+  RUN_TEST(test_if_max_ap_buffer_is_bigger_than_ap_scan_count);
   RUN_TEST(test_if_ap_disconnect_handler_is_null_after_deinit);
   RUN_TEST(test_if_sta_disconnect_handler_is_null_after_deinit);
   RUN_TEST(test_if_ap_connect_handler_is_null_after_deinit);

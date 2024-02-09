@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['wifi_5fc_5fconnect_5ffail_5fbit_0',['WIFI_C_CONNECT_FAIL_BIT',['../wifi__controller_8h.html#a17cac29759990e93abff6ea21e1eb60c',1,'wifi_controller.h']]],
-  ['wifi_5fc_5fconnected_5fbit_1',['WIFI_C_CONNECTED_BIT',['../wifi__controller_8h.html#a119ecf55dd62303d4dcbe76973027acd',1,'wifi_controller.h']]],
-  ['wifi_5fc_5fdefault_5fscan_5fsize_2',['WIFI_C_DEFAULT_SCAN_SIZE',['../wifi__controller_8h.html#a4c04022019e0f5fa5bb0c33b0bd33a8e',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fbuffer_5fscan_5fsize_0',['WIFI_C_BUFFER_SCAN_SIZE',['../wifi__controller_8h.html#a6173efa45812a23f07ccb2449e4dbaee',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fconnect_5ffail_5fbit_1',['WIFI_C_CONNECT_FAIL_BIT',['../wifi__controller_8h.html#a17cac29759990e93abff6ea21e1eb60c',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fconnected_5fbit_2',['WIFI_C_CONNECTED_BIT',['../wifi__controller_8h.html#a119ecf55dd62303d4dcbe76973027acd',1,'wifi_controller.h']]],
   ['wifi_5fc_5ferr_5fap_5fnot_5ffound_3',['WIFI_C_ERR_AP_NOT_FOUND',['../wifi__controller_8h.html#a0ae6399d4d2dad85b04e205803de5596',1,'wifi_controller.h']]],
   ['wifi_5fc_5ferr_5fbase_4',['WIFI_C_ERR_BASE',['../wifi__controller_8h.html#aea4deaa8411633b4f5dad8c255078ed9',1,'wifi_controller.h']]],
   ['wifi_5fc_5ferr_5fevent_5floop_5fnot_5finit_5',['WIFI_C_ERR_EVENT_LOOP_NOT_INIT',['../wifi__controller_8h.html#a8b573078f7f26ef82db3fc85b60d94ef',1,'wifi_controller.h']]],

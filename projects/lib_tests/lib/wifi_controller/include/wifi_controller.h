@@ -26,21 +26,37 @@ typedef enum {
     WIFI_C_MODE_APSTA,      /*Use WiFi as AP+STA.*/
 } wifi_c_mode_t;
 
+/**
+ * @brief Object containing information about access point interface.
+ * 
+ */
 struct wifi_c_ap_status_obj {
-    char ip[20];
-    char ssid[64];
-    void (*connect_handler)(void);
-    void (*disconnect_handler)(void);
+    char ip[20];                        /*!< IP of Access Point.*/
+    char ssid[64];                      /*!< SSID of Access Point.*/
+    void (*connect_handler)(void);      /*!< Function to be called each time new Station connects to Access Point.*/
+    void (*disconnect_handler)(void);   /*!< Function to be called each time Station disconnects from Access Point.*/
 };
+/**
+ * @brief Type of wifi_c_ap_status_obj object.
+ * 
+ */
 typedef struct wifi_c_ap_status_obj wifi_c_ap_status_t;
 
+/**
+ * @brief Object containing information about station interface.
+ * 
+ */
 struct wifi_c_sta_status_obj {
-    char ip[20];
-    char ssid[64];
-    void (*connect_handler)(void);
-    void (*disconnect_handler)(void);
+    char ip[20];                        /*!< Current IP of station, 0.0.0.0 if not connected to Wifi.*/
+    char ssid[64];                      /*!< SSID of AP the STA is currently connected to.*/
+    void (*connect_handler)(void);      /*!< Function to be called when STA connects to AP.*/
+    void (*disconnect_handler)(void);   /*!< Function to be called when STA disconnects from AP.*/
 };
-typedef struct wifi_c_sta_status_obj wifi_c_sta_status_t;
+/**
+ * @brief Type of wifi_c_sta_status_obj object.
+ * 
+ */
+typedef struct wifi_c_sta_status_obj wifi_c_sta_status_t;       
 
 /**
  * @brief Object showing and maintaining current status of wifi_controller.
@@ -67,14 +83,14 @@ typedef struct wifi_c_status_obj wifi_c_status_t;
 
 
 /**
- * @brief Object containing scanned AP records.
+ * @brief Object containing scanned AP record.
  * 
  */
 struct wifi_c_ap_record_obj {
-    uint8_t bssid[6];                     /**< MAC address of AP */
-    uint8_t ssid[33];                     /**< SSID of AP */
-    uint8_t channel;                      /**< channel of AP */
-    int8_t  rssi;                         /**< signal strength of AP */
+    uint8_t bssid[6];                     /*!< MAC address of AP */
+    uint8_t ssid[33];                     /*!< SSID of AP */
+    uint8_t channel;                      /*!< channel of AP */
+    int8_t  rssi;                         /*!< signal strength of AP */
 };
 
 /**
@@ -88,8 +104,8 @@ typedef struct wifi_c_ap_record_obj wifi_c_ap_record_t;
  * 
  */
 struct wifi_c_scan_result_obj {
-    wifi_c_ap_record_t* ap_record;
-    uint16_t ap_count;
+    wifi_c_ap_record_t* ap_record;         /*!< Struct containing AP information, @see wifi_c_ap_record_t*/
+    uint16_t ap_count;                     /*!< Number of scanned APs.*/
 };
 
 /**
@@ -122,7 +138,7 @@ typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
 
 
 #define WIFI_C_STA_RETRY_COUNT          4                           ///< Number of times to try to connect to AP as STA.
-#define WIFI_C_DEFAULT_SCAN_SIZE        10                          ///< Number of APs to store when scanning.
+#define WIFI_C_BUFFER_SCAN_SIZE         10                          ///< Max number of APs to store when scanning.
 #define WIFI_C_STA_TIMEOUT              60                          ///< Number of seconds for which will wifi_c_start_sta will block before returning
 
 #define WIFI_C_CONNECTED_BIT            0x00000001                  ///< Bit set if STA connected to AP.
@@ -318,7 +334,7 @@ int wifi_c_sta_reconnect(const char* SSID, const char* PASSWORD);
  * @retval ERR_NULL_POINTER Pointer to result buffer was NULL.
  * @retval esp specific error codes
  */
-int wifi_c_scan_all_ap(wifi_c_scan_result_t* result_to_return);
+int wifi_c_scan_all_ap(wifi_c_scan_result_t** result_to_return);
 
 /**
  * @brief Scan for AP with desired SSID.

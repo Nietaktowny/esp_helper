@@ -69,6 +69,8 @@ Examining ../lib/cli_manager/src/cli_manager.c <br>
 Examining ../lib/cli_manager/include/cli_manager.h <br>
 Examining ../lib/http_client/src/http_client.c <br>
 Examining ../lib/http_client/include/http_client.h <br>
+Examining ./doxygen/doxygen-awesome-css/include/MyLibrary/subclass-example.hpp <br>
+Examining ./doxygen/doxygen-awesome-css/include/MyLibrary/example.hpp <br>
 
 <h2>Final Results</h2>
 <ul>
@@ -100,11 +102,11 @@ Examining ../lib/http_client/include/http_client.h <br>
   Does not check for buffer overflows (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
   sprintf_s, snprintf, or vsnprintf. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:130: <b>  [4] </b> (format) <i> sprintf:
+<li>../lib/wifi_controller/src/wifi_controller.c:183: <b>  [4] </b> (format) <i> sprintf:
   Potential format string problem (<a
   href="https://cwe.mitre.org/data/definitions/134.html">CWE-134</a>). Make
   format string constant. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:779: <b>  [4] </b> (buffer) <i> sprintf:
+<li>../lib/wifi_controller/src/wifi_controller.c:945: <b>  [4] </b> (buffer) <i> sprintf:
   Does not check for buffer overflows (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Use
   sprintf_s, snprintf, or vsnprintf. </i>
@@ -215,98 +217,98 @@ Examining ../lib/http_client/include/http_client.h <br>
   around to create a race condition, control its ancestors, or change its
   contents? (<a
   href="https://cwe.mitre.org/data/definitions/362.html">CWE-362</a>). </i>
-<li>../lib/wifi_controller/include/wifi_controller.h:18: <b>  [2] </b> (buffer) <i> char:
+<li>../lib/wifi_controller/include/wifi_controller.h:34: <b>  [2] </b> (buffer) <i> char:
   Statically-sized arrays can be improperly restricted, leading to potential
   overflows or other issues (<a
   href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
   Perform bounds checking, use functions that limit length, or ensure that
   the size is larger than the maximum possible length. </i>
-<li>../lib/wifi_controller/include/wifi_controller.h:19: <b>  [2] </b> (buffer) <i> char:
+<li>../lib/wifi_controller/include/wifi_controller.h:35: <b>  [2] </b> (buffer) <i> char:
   Statically-sized arrays can be improperly restricted, leading to potential
   overflows or other issues (<a
   href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
   Perform bounds checking, use functions that limit length, or ensure that
   the size is larger than the maximum possible length. </i>
-<li>../lib/wifi_controller/include/wifi_controller.h:25: <b>  [2] </b> (buffer) <i> char:
+<li>../lib/wifi_controller/include/wifi_controller.h:50: <b>  [2] </b> (buffer) <i> char:
   Statically-sized arrays can be improperly restricted, leading to potential
   overflows or other issues (<a
   href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
   Perform bounds checking, use functions that limit length, or ensure that
   the size is larger than the maximum possible length. </i>
-<li>../lib/wifi_controller/include/wifi_controller.h:26: <b>  [2] </b> (buffer) <i> char:
+<li>../lib/wifi_controller/include/wifi_controller.h:51: <b>  [2] </b> (buffer) <i> char:
   Statically-sized arrays can be improperly restricted, leading to potential
   overflows or other issues (<a
   href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
   Perform bounds checking, use functions that limit length, or ensure that
   the size is larger than the maximum possible length. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:420: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:565: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:426: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:571: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:439: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:591: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:442: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:594: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:504: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:656: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:509: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:661: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:528: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:680: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:670: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:836: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:769: <b>  [2] </b> (buffer) <i> char:
+<li>../lib/wifi_controller/src/wifi_controller.c:935: <b>  [2] </b> (buffer) <i> char:
   Statically-sized arrays can be improperly restricted, leading to potential
   overflows or other issues (<a
   href="https://cwe.mitre.org/data/definitions/119.html">CWE-119</a>!/<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>).
   Perform bounds checking, use functions that limit length, or ensure that
   the size is larger than the maximum possible length. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:781: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:947: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:825: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:998: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:829: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:1002: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:913: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:1076: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:914: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:1077: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:915: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:1078: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:916: <b>  [2] </b> (buffer) <i> memcpy:
+<li>../lib/wifi_controller/src/wifi_controller.c:1079: <b>  [2] </b> (buffer) <i> memcpy:
   Does not check for buffer overflows when copying to destination (<a
   href="https://cwe.mitre.org/data/definitions/120.html">CWE-120</a>). Make
   sure destination can always hold the source data. </i>
@@ -415,47 +417,47 @@ Examining ../lib/http_client/include/http_client.h <br>
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:400: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:544: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:409: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:554: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:414: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:559: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:439: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:591: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:442: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:594: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:499: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:651: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:528: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:680: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:655: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:821: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:780: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:946: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:825: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:998: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
-<li>../lib/wifi_controller/src/wifi_controller.c:829: <b>  [1] </b> (buffer) <i> strlen:
+<li>../lib/wifi_controller/src/wifi_controller.c:1002: <b>  [1] </b> (buffer) <i> strlen:
   Does not handle strings that are not \0-terminated; if given one it may
   perform an over-read (it could cause a crash if unprotected) (<a
   href="https://cwe.mitre.org/data/definitions/126.html">CWE-126</a>). </i>
@@ -464,14 +466,14 @@ Examining ../lib/http_client/include/http_client.h <br>
 <p>
 Hits = 76
 <br>
-Lines analyzed = 6922 in approximately 0.10 seconds (68096 lines/second)
+Lines analyzed = 7376 in approximately 0.12 seconds (62831 lines/second)
 <br>
-Physical Source Lines of Code (SLOC) = 4550
+Physical Source Lines of Code (SLOC) = 4692
 <br>
 Hits@level = [0]   8 [1]  17 [2]  50 [3]   0 [4]   9 [5]   0 <br>
 Hits@level+ = [0+]  84 [1+]  76 [2+]  59 [3+]   9 [4+]   9 [5+]   0 <br>
-Hits/KSLOC@level+ = [0+] 18.4615 [1+] 16.7033 [2+] 12.967 [3+] 1.97802 [4+] 1.97802 [5+]   0 <br>
-Dot directories skipped = 2 (--followdotdir overrides)
+Hits/KSLOC@level+ = [0+] 17.9028 [1+] 16.1978 [2+] 12.5746 [3+] 1.91816 [4+] 1.91816 [5+]   0 <br>
+Dot directories skipped = 4 (--followdotdir overrides)
 <br>
 Minimum risk level = 1
 <br>

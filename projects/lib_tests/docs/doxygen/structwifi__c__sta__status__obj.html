@@ -89,22 +89,86 @@ $(document).ready(function(){initNavTree('structwifi__c__sta__status__obj.html',
   <div class="headertitle"><div class="title">wifi_c_sta_status_obj Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Object containing information about station interface.  
+ <a href="structwifi__c__sta__status__obj.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="wifi__controller_8h_source.html">wifi_controller.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a027b82634392374530ea1951626ce053"><td class="memItemLeft" align="right" valign="top"><a id="a027b82634392374530ea1951626ce053" name="a027b82634392374530ea1951626ce053"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>ip</b> [20]</td></tr>
+<tr class="memitem:a027b82634392374530ea1951626ce053"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwifi__c__sta__status__obj.html#a027b82634392374530ea1951626ce053">ip</a> [20]</td></tr>
 <tr class="separator:a027b82634392374530ea1951626ce053"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1721732788e53cd40804a3fff2cac9a"><td class="memItemLeft" align="right" valign="top"><a id="aa1721732788e53cd40804a3fff2cac9a" name="aa1721732788e53cd40804a3fff2cac9a"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>ssid</b> [64]</td></tr>
+<tr class="memitem:aa1721732788e53cd40804a3fff2cac9a"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwifi__c__sta__status__obj.html#aa1721732788e53cd40804a3fff2cac9a">ssid</a> [64]</td></tr>
 <tr class="separator:aa1721732788e53cd40804a3fff2cac9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae21b8f8f83d10eb3e4a7808b06c26cef"><td class="memItemLeft" align="right" valign="top"><a id="ae21b8f8f83d10eb3e4a7808b06c26cef" name="ae21b8f8f83d10eb3e4a7808b06c26cef"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>connect_handler</b> )(void)</td></tr>
+<tr class="memitem:ae21b8f8f83d10eb3e4a7808b06c26cef"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwifi__c__sta__status__obj.html#ae21b8f8f83d10eb3e4a7808b06c26cef">connect_handler</a> )(void)</td></tr>
 <tr class="separator:ae21b8f8f83d10eb3e4a7808b06c26cef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf61f68b0f170aa47f5cd16083d85550"><td class="memItemLeft" align="right" valign="top"><a id="acf61f68b0f170aa47f5cd16083d85550" name="acf61f68b0f170aa47f5cd16083d85550"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>disconnect_handler</b> )(void)</td></tr>
+<tr class="memitem:acf61f68b0f170aa47f5cd16083d85550"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwifi__c__sta__status__obj.html#acf61f68b0f170aa47f5cd16083d85550">disconnect_handler</a> )(void)</td></tr>
 <tr class="separator:acf61f68b0f170aa47f5cd16083d85550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Object containing information about station interface. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae21b8f8f83d10eb3e4a7808b06c26cef" name="ae21b8f8f83d10eb3e4a7808b06c26cef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21b8f8f83d10eb3e4a7808b06c26cef">&#9670;&nbsp;</a></span>connect_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* wifi_c_sta_status_obj::connect_handler) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Function to be called when STA connects to AP. </p>
+
+</div>
+</div>
+<a id="acf61f68b0f170aa47f5cd16083d85550" name="acf61f68b0f170aa47f5cd16083d85550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf61f68b0f170aa47f5cd16083d85550">&#9670;&nbsp;</a></span>disconnect_handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* wifi_c_sta_status_obj::disconnect_handler) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Function to be called when STA disconnects from AP. </p>
+
+</div>
+</div>
+<a id="a027b82634392374530ea1951626ce053" name="a027b82634392374530ea1951626ce053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a027b82634392374530ea1951626ce053">&#9670;&nbsp;</a></span>ip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char wifi_c_sta_status_obj::ip[20]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Current IP of station, 0.0.0.0 if not connected to Wifi. </p>
+
+</div>
+</div>
+<a id="aa1721732788e53cd40804a3fff2cac9a" name="aa1721732788e53cd40804a3fff2cac9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1721732788e53cd40804a3fff2cac9a">&#9670;&nbsp;</a></span>ssid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char wifi_c_sta_status_obj::ssid[64]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >SSID of AP the STA is currently connected to. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>lib/wifi_controller/include/<a class="el" href="wifi__controller_8h_source.html">wifi_controller.h</a></li>
 </ul>

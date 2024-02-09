@@ -1,4 +1,4 @@
 <map id="wifi_c_scan_result_obj" name="wifi_c_scan_result_obj">
 <area shape="rect" id="node1" title="Object representing scan configuration and results." alt="" coords="5,95,172,121"/>
-<area shape="rect" id="node2" href="$structwifi__c__ap__record__obj.html" title="Object containing scanned AP records." alt="" coords="10,5,167,32"/>
+<area shape="rect" id="node2" href="$structwifi__c__ap__record__obj.html" title="Object containing scanned AP record." alt="" coords="10,5,167,32"/>
 </map>

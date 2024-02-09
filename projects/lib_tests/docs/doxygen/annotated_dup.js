@@ -16,9 +16,9 @@ var annotated_dup =
     [ "nvs_c_handle_obj", "structnvs__c__handle__obj.html", null ],
     [ "spiffs_c_handle_obj", "structspiffs__c__handle__obj.html", null ],
     [ "wifi_c_ap_record_obj", "structwifi__c__ap__record__obj.html", "structwifi__c__ap__record__obj" ],
-    [ "wifi_c_ap_status_obj", "structwifi__c__ap__status__obj.html", null ],
-    [ "wifi_c_scan_result_obj", "structwifi__c__scan__result__obj.html", null ],
-    [ "wifi_c_sta_status_obj", "structwifi__c__sta__status__obj.html", null ],
+    [ "wifi_c_ap_status_obj", "structwifi__c__ap__status__obj.html", "structwifi__c__ap__status__obj" ],
+    [ "wifi_c_scan_result_obj", "structwifi__c__scan__result__obj.html", "structwifi__c__scan__result__obj" ],
+    [ "wifi_c_sta_status_obj", "structwifi__c__sta__status__obj.html", "structwifi__c__sta__status__obj" ],
     [ "wifi_c_status_obj", "structwifi__c__status__obj.html", "structwifi__c__status__obj" ],
     [ "wifi_s_handle_obj", "structwifi__s__handle__obj.html", null ],
     [ "wifi_s_urls_obj", "structwifi__s__urls__obj.html", null ]
