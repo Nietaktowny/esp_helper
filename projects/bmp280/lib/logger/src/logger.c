@@ -29,10 +29,17 @@ uint8_t logger_set_log_level(uint8_t level) {
     return prev;
 }
 
+#ifndef PLATFORM_ESP8266
 int logger_redirect_esp_logs(void) {
     esp_log_set_vprintf(logger_esp_log);
     return 0;
 }
+#else
+int logger_redirect_esp_logs(void) {
+    esp_log_set_putchar(logger_esp_log);
+    return 0;
+}
+#endif
 
 int logger_get_lock(void) {
     return xSemaphoreTake(log_mutex, pdMS_TO_TICKS(1000));

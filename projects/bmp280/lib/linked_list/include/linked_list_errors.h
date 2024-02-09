@@ -1,3 +1,0 @@
-
-#define ERR_LINKEDL_BASE            0x0030
-#define ERR_LINKEDL_SEARCH_ERR      ERR_LINKEDL_BASE + 1

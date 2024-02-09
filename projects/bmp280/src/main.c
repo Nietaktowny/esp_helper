@@ -8,7 +8,6 @@
 #include "wifi_manager.h"
 #include "ota_controller.h"
 #include "gpio_controller.h"
-#include "cli_manager.h"
 #include "nvs_controller.h"
 
 #include <string.h>

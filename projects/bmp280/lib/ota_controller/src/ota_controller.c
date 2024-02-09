@@ -138,6 +138,20 @@ int ota_c_update_device_data(const char* url, const char* path, const char* devi
     return err;
 }
 
+int ota_c_prepare_url_with_device_id(char* url, uint64_t device_id, char* buffer, size_t buflen) {
+    err_c_t err = 0;
+    ERR_C_CHECK_NULL_PTR(url, LOG_ERROR("url to perfom ota cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("buffer to store URL cannot be NULL"));
+    if(buflen == 0) {
+        LOG_ERROR("buffer length to store URL cannot be NULL");
+        return ERR_C_MEMORY_ERR;
+    }
+
+    snprintf(buffer, buflen, "%s?device_id=%llu", url, device_id);
+    LOG_DEBUG("prepared url with device id for ota update:\n%s", buffer);
+    return err;
+}
+
 int ota_c_start(const char* url) {
     err_c_t err = 0;
     esp_http_client_config_t client = {

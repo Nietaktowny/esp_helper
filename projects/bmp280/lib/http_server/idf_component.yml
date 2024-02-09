@@ -1,5 +1,0 @@
-dependencies:
-  idf: '>=5.0' 
-description: Library used to help with creating HTTP servers on ESP32.. 
-url: 
-version: 1.0.0

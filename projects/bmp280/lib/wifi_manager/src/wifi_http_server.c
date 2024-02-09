@@ -97,10 +97,6 @@ esp_err_t ap_json_handler(httpd_req_t* req) {
     LOG_DEBUG("serving GET \"/scan\" request...");
 
     err = wifi_manager_fetch_ap_list(&buffer[0], sizeof(buffer));
-    if(err != ERR_C_OK) {
-        LOG_ERROR("error %d when trying to fetch APs list: %s", err , error_to_name(err));
-        return ESP_FAIL;
-    }
 
     httpd_resp_set_status(req, http_200_hdr);
     httpd_resp_set_type(req, http_content_type_json);
@@ -117,10 +113,6 @@ esp_err_t state_json_handler(httpd_req_t* req) {
     LOG_DEBUG("serving GET \"/state\" request...");
 
     err = wifi_c_get_status_as_json(&buffer[0], sizeof(buffer));
-    if(err != ERR_C_OK) {
-        LOG_ERROR("error %d when trying to get wifi controller status: %s", err , error_to_name(err));
-        return ESP_FAIL;
-    }
 
     httpd_resp_set_status(req, http_200_hdr);
     httpd_resp_set_type(req, http_content_type_json);
@@ -161,7 +153,7 @@ esp_err_t connect_handler(httpd_req_t* req) {
         LOG_ERROR("Length of X-Custom-ssid header bigger than buffer: %d", ssid_len);
         return ESP_FAIL;
     }
-    httpd_req_get_hdr_value_str(req, "X-Custom-ssid", &ssid[0], ssid_len + 1);
+    httpd_req_get_hdr_value_str(req, "X-Custom-ssid", &ssid, ssid_len + 1);
 
     //get password header
     password_len = httpd_req_get_hdr_value_len(req, "X-Custom-password");
@@ -172,7 +164,7 @@ esp_err_t connect_handler(httpd_req_t* req) {
         LOG_ERROR("Length of X-Custom-password header bigger than buffer: %d", password_len);
         return ESP_FAIL;
     }
-    httpd_req_get_hdr_value_str(req, "X-Custom-password", &password[0], password_len + 1);
+    httpd_req_get_hdr_value_str(req, "X-Custom-password", &password, password_len + 1);
 
     LOG_INFO("Received APs credentials!\n\tSSID: %s\n\tPassword: %s", &ssid, &password);
 
@@ -180,7 +172,7 @@ esp_err_t connect_handler(httpd_req_t* req) {
     httpd_resp_send(req, "Got access point credentials, device will now restart!", HTTPD_RESP_USE_STRLEN);
     LOG_WARN("Got access point credentials, device will now restart!");
     
-    wifi_manager_store_ap(&ssid[0], ssid_len, &password[0], password_len);
+    wifi_manager_store_ap(&ssid, ssid_len, &password, password_len);
     vTaskDelay(pdMS_TO_TICKS(100));
 
     esp_restart();
