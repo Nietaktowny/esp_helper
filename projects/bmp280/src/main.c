@@ -1,4 +1,3 @@
-#include "cli_manager.h"
 #include "wifi_controller.h"
 #include "memory_utils.h"
 #include "err_controller.h"
@@ -7,21 +6,39 @@
 #include "http_client.h"
 #include "wifi_manager.h"
 #include "ota_controller.h"
-#include "gpio_controller.h"
 #include "nvs_controller.h"
 
 #include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "esp_netif_sntp.h"
-#include "esp_task_wdt.h"
+
+#ifndef ESP32_C3_SUPERMINI
+#include "cli_manager.h"
+
+//#include "esp_netif_sntp.h"
+#include <driver/gpio.h>
+#endif
 
 #define MY_SSID "TP-LINK_AD8313"
 #define MY_PSK "20232887"
 #define SOL_SSID "OstNet-952235"
 #define SOL_PSK "Solonka106"
 
-#define ESP_WROVER_KIT_DEVICE_ID 333333
+#ifdef ESP_WROVER_KIT
+#define ESP_DEVICE_ID 111111
+#define ESP_DEVICE_WIFI_LED GPIO_NUM_2
+#define BUS_GPIO_SCL 22
+#define BUS_GPIO_SDA 21
+#elif ESP_DEV_MODULE
+#define ESP_DEVICE_ID 222222
+#define ESP_DEVICE_WIFI_LED GPIO_NUM_2
+#define BUS_GPIO_SCL 22
+#define BUS_GPIO_SDA 21
+#elif ESP32_C3_SUPERMINI
+#define ESP_DEVICE_ID 333333
+#define BUS_GPIO_SCL 9
+#define BUS_GPIO_SDA 8
+#endif
 
 void read_temperature_task(void *args)
 {
@@ -61,7 +78,7 @@ void read_temperature_task(void *args)
         LOG_INFO("temperature: %.2f C", temperature);
         LOG_INFO("pressure: %.2fhPa", pressure * 0.01);
         LOG_INFO("altitude: %.2f m. n. p. m.", altitude);
-        sprintf(post_data, "device_id=%d&temperature=%.2f&pressure=%.2f&altitude=%.2f", ESP_WROVER_KIT_DEVICE_ID, temperature, pressure * 0.01, altitude);
+        sprintf(post_data, "device_id=%d&temperature=%.2f&pressure=%.2f&altitude=%.2f", ESP_DEVICE_ID, temperature, pressure * 0.01, altitude);
         LOG_DEBUG("data to send to database: %s", post_data);
         err = http_client_post("wmytych.usermd.net", "modules/setters/insert_data.php", post_data);
         LOG_INFO("Client POST request returned: %d", err);
@@ -69,18 +86,33 @@ void read_temperature_task(void *args)
     }
 }
 
-void switch_led_task(void *args)
+void on_connect_handler(void)
 {
-    gpio_c_set_direction(GPIO_C_NUM_2, GPIO_C_MODE_OUTPUT);
-    while (1)
-    {
-        gpio_c_set_level(GPIO_C_NUM_2, 1);
-        LOG_INFO("CHANGED GPIO_2 LEVEL");
-        vTaskDelay(pdMS_TO_TICKS(4000));
-        gpio_c_set_level(GPIO_C_NUM_2, 0);
-    }
+#ifndef ESP32_C3_SUPERMINI
+    gpio_set_direction(ESP_DEVICE_WIFI_LED, GPIO_MODE_OUTPUT);
+    gpio_set_level(ESP_DEVICE_WIFI_LED, 1);
+    LOG_INFO("Onboard LED turned on!");
+#endif
+
+    i2c_c_bus_handle_t i2c_bus = NULL;
+    i2c_c_init_bus(I2C_C_NUM_0, BUS_GPIO_SCL, BUS_GPIO_SDA, &i2c_bus);
+    xTaskCreate(read_temperature_task, "log_task", 8096, (void *)i2c_bus, 1, NULL);
 }
 
+#ifdef ESP_WROVER_KIT
+void switch_off_all_leds(void)
+{
+    // switch off all LEDs
+    gpio_set_direction(GPIO_NUM_0, GPIO_MODE_OUTPUT);
+    gpio_set_level(GPIO_NUM_0, 0);
+    gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
+    gpio_set_level(GPIO_NUM_4, 0);
+    gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
+    gpio_set_level(GPIO_NUM_2, 0);
+}
+#endif
+
+#ifndef ESP32_C3_SUPERMINI
 void inspect_task(void *args)
 {
     while (1)
@@ -93,8 +125,9 @@ void inspect_task(void *args)
         vTaskDelay(pdMS_TO_TICKS(5000));
     }
 }
+#endif
 
-void app_main(void)
+void app_main()
 {
 
     // Allow other core to finish initialization
@@ -106,20 +139,24 @@ void app_main(void)
     // Initialize NVS
     nvs_c_init_nvs();
 
-    i2c_c_bus_handle_t i2c_bus = NULL;
-    i2c_c_init_bus(I2C_C_NUM_0, 22, 21, &i2c_bus);
+//ESP-WROVE-KIT has 3 LEDs, turn all off
+#ifdef ESP_WROVER_KIT
+    switch_off_all_leds();
+#endif
+
+    wifi_c_sta_register_connect_handler(on_connect_handler);
 
     wifi_manager_init();
 
-    ota_c_do_simple_ota("http://wmytych.usermd.net/ota.php");
-    ota_c_start("http://wmytych.usermd.net/modules/getters/ota.php?device_id=333333");
+    char url[100];
+    memutil_zero_memory(&url, sizeof(url));
+    ota_c_prepare_url_with_device_id("http://wmytych.usermd.net/modules/getters/ota.php", ESP_DEVICE_ID, &url[0], sizeof(url));
+    ota_c_start(&url[0]);
 
-    xTaskCreate(read_temperature_task, "log_task", 8096, (void *)i2c_bus, 1, NULL);
-
-    xTaskCreate(inspect_task, "inspect_heap_task", 8096, NULL, 2, NULL);
-
-    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
-    esp_netif_sntp_init(&config);
-
+#ifndef ESP32_C3_SUPERMINI
+    //esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
+    //esp_netif_sntp_init(&config);
+    xTaskCreate(inspect_task, "inspect_heap_task", 4096, NULL, 2, NULL);
     cli_set_remote_logging(27015);
+#endif
 }

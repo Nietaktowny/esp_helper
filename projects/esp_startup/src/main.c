@@ -24,6 +24,8 @@
 #define SOL_SSID "OstNet-952235"
 #define SOL_PSK "Solonka106"
 
+#define FIRMWARE_VER        "0.0.0.6"
+
 #ifdef ESP_WROVER_KIT
 #define ESP_DEVICE_ID 111111
 #define ESP_DEVICE_WIFI_LED GPIO_NUM_2
@@ -119,7 +121,8 @@ void inspect_task(void *args)
     {
         uint32_t free_heap = esp_get_free_heap_size();
         uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
-
+        
+        LOG_DEBUG("Current firmware version: %s", FIRMWARE_VER);
         LOG_DEBUG("Currently available heap: %lu", free_heap);
         LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
         vTaskDelay(pdMS_TO_TICKS(5000));

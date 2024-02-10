@@ -76,7 +76,7 @@ struct wifi_c_status_obj {
 };
 
 /**
- * @brief Type of wifi_controller status object.
+ * @brief Type of wifi_c_status_obj object.
  * 
  */
 typedef struct wifi_c_status_obj wifi_c_status_t;
@@ -94,7 +94,7 @@ struct wifi_c_ap_record_obj {
 };
 
 /**
- * @brief Type of AP scan result.
+ * @brief Type of AP wifi_c_ap_record_obj object..
  * 
  */
 typedef struct wifi_c_ap_record_obj wifi_c_ap_record_t;
@@ -109,7 +109,7 @@ struct wifi_c_scan_result_obj {
 };
 
 /**
- * @brief Type of scan results object.
+ * @brief Type of wifi_c_scan_result_obj object.
  * 
  */
 typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;

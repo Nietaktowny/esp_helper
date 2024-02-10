@@ -2,6 +2,14 @@
 #include "esp_err.h"
 #include "wifi_controller.h"
 
+void connect_handler(void) {
+    //Things to do when STA connects to some Access Point.
+}
+
+void disconnect_handler(void) {
+    //Things to do when STA loses connection with Access Point.
+}
+
 void app_main(void)
 {
     // Initialize NVS
@@ -16,6 +24,13 @@ void app_main(void)
 
     //Init Wifi
     ESP_ERROR_CHECK(wifi_c_init_wifi(WIFI_C_MODE_STA));
+
+    //Register connect handler (optional)
+    ESP_ERROR_CHECK(wifi_c_sta_register_connect_handler(connect_handler));
+
+    //Register connect handler (optional)
+    ESP_ERROR_CHECK(wifi_c_sta_register_disconnect_handler(disconnect_handler));
+
     //Start STA and connect to AP:
     ESP_ERROR_CHECK(wifi_c_start_sta("SSID", "PASSWORD"));
 
