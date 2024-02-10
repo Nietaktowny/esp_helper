@@ -712,7 +712,6 @@ int wifi_c_start_sta(const char *ssid, const char *password)
 }
 
 /**
- * @todo return only needed number of scan results
  * @todo use memory arena for storing scan results
  */
 int wifi_c_scan_all_ap(wifi_c_scan_result_t** result_to_return)
