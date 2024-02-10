@@ -5,7 +5,7 @@
 const char* MAIN = "main";
 
 wifi_c_scan_result_t scan_results;
-wifi_ap_record_t ap_record;
+wifi_c_ap_record_t ap_record;
 
 void app_main(void)
 {
@@ -34,7 +34,7 @@ void app_main(void)
 
       /*SCAN ALL*/
 
-      //Scan for AP on all channels and use pointers to wifi_ap_record_t structures in scan results to iterate
+      //Scan for AP on all channels and use pointers to wifi_c_ap_record_t structures in scan results to iterate
       ESP_ERROR_CHECK(wifi_c_scan_all_ap(&scan_results));
 
       //You can use wifi_c_print_scanned_ap to log scan results to monitor.
