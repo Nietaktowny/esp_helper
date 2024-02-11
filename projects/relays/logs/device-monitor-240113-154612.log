@@ -1,0 +1,1853 @@
+I (3100) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, p[0m2024-01-13 14:46:11 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:11 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:11 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:11 | DEBUG | inspect_task:70 | Currently available heap: 222996[0m
+[0m2024-01-13 14:46:12 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 218328[0m
+[0m2024-01-13 14:46:12 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:12 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:12 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 14:46:12 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:12 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:12 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:12 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:12 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:12 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:12 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:12 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:12 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:12 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:12 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:12 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:12 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:12 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:12 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:12 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:12 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;32m2024-01-13 14:46:12 | INFO  | tcp_socket_listen:260 | [0;31m2024-01-13 14:46:12 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:12 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;33m2024-01-13 14:46:12 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:12 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:12 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (5191) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc82144  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ffb4 0x4038ad40 0x3c0c019c 0x3fca9550 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca85e4 0x3c0ca110 0x00001881 0x80000004 0x3fca85b0 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa79c 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000[0;32m2024-01-13 14:46:17 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4821) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:46:17 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:17 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:17 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:17 | DEBUG | inspect_task:70 | Currently available heap: 223024[0m
+[0m2024-01-13 14:46:17 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 220056[0m
+[0m2024-01-13 14:46:17 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:17 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:17 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0;31m2024-01-13 14:46:17 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:17 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:17 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:17 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:17 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:17 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:17 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:17 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:17 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:17 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:17 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:17 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:17 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:17 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:17 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:17 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:17 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:17 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;32m2024-01-13 14:46:17 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:17 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;33m2024-01-13 14:46:17 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:17 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:17 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (5141) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc82204  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ffb4 0x4038ad40 0x3c0c102c 0x3fca9480 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca8540 0x3c0ca110 0x00001881 0x80000004 0x3fca850c 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa774 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (311) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (364) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:46:18 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca2024, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:46:18 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:46:18 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:46:18 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:46:18 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3100) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3780) wifi:state: init -> auth (b0)
+I (3780) wifi:state: auth -> assoc (0)
+I (3790) wifi:state: assoc -> run (10)
+I (4800) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (4800) wifi:security: WPA2-PSK, phy: bgn, rssi: -65
+I (4820) wifi:pm start, type: 1
+
+I (4820) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (4830) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (4880) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-13 14:46:24 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (5820) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:46:24 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:24 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:24 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:24 | DEBUG | inspect_task:70 | Currently available heap: 223028[0m
+[0m2024-01-13 14:46:24 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 220056[0m
+[0m2024-01-13 14:46:24 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:24 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:24 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 14:46:24 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:24 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:24 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:24 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:24 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:24 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:24 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:24 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:24 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:24 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:24 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:24 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:24 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:24 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:24 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:24 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:24 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;32m2024-01-13 14:46:24 | INFO  | tcp_socket_listen:260 | [0;31m2024-01-13 14:46:24 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:24 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;33m2024-01-13 14:46:24 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:24 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:24 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (6140) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc821a4  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ff30 0x4038ad40 0x3c0c019c 0x3fca95b0 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca8560 0x3c0ca110 0x00001881 0x80000004 0x3fca852c 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa784 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (311) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (363) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:46:25 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca2024, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:46:25 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:46:25 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:46:25 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:46:25 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3140) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3820) wifi:state: init -> auth (b0)
+I (3820) wifi:state: auth -> assoc (0)
+I (3830) wifi:state: assoc -> run (10)
+I (3840) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3840) wifi:security: WPA2-PSK, phy: bgn, rssi: -65
+I (3850) wifi:pm start, type: 1
+
+I (3850) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3860) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3880) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-13 14:46:29 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4850) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:46:29 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:29 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:29 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:29 | DEBUG | inspect_task:70 | Currently available heap: 222868[0m
+[0m2024-01-13 14:46:29 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 219916[0m
+[0m2024-01-13 14:46:29 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:29 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:29 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 14:46:29 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:29 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:29 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:29 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:29 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:29 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:29 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:29 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:29 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:29 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:29 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:29 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:29 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:29 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:29 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:29 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:29 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;32m2024-01-13 14:46:29 | INFO  | tcp_socket_listen:260 | [0;31m2024-01-13 14:46:29 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:29 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;33m2024-01-13 14:46:29 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:29 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:29 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (5170) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc82244  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ff30 0x4038ad40 0x3c0df3ce 0x3fca94c0 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca8688 0x3c0ca110 0x00001881 0x80000004 0x3fca8654 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa818 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (311) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (364) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:46:30 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca20a8, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:46:30 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:46:30 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:46:30 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:46:30 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3100) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3780) wifi:state: init -> auth (b0)
+I (3780) wifi:state: auth -> assoc (0)
+I (3790) wifi:state: assoc -> run (10)
+I (3800) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3800) wifi:security: WPA2-PSK, phy: bgn, rssi: -68
+I (3810) wifi:pm start, type: 1
+
+I (3810) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3820) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3860) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-13 14:46:35 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4810) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:46:35 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:35 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:35 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:35 | DEBUG | inspect_task:70 | Currently available heap: 222996[0m
+[0m2024-01-13 14:46:35 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 220032[0m
+[0m2024-01-13 14:46:35 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:35 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:35 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0;31m2024-01-13 14:46:35 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:35 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:35 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:35 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:35 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:35 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:35 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:35 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:35 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:35 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:35 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:35 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:35 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:35 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:35 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:35 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:35 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:35 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;32m2024-01-13 14:46:35 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:35 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;33m2024-01-13 14:46:35 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:35 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:35 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (5130) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc82144  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ffb4 0x4038ad40 0x3c0c0cd3 0x3fc9bcb0 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca85e4 0x3c0ca110 0x00001881 0x80000004 0x3fca85b0 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa79c 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (144) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (312) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (364) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:46:36 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca20a8, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:46:36 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:46:36 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:46:36 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:46:36 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3100) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3830) wifi:state: init -> auth (b0)
+I (3830) wifi:state: auth -> assoc (0)
+I (3830) wifi:state: assoc -> run (10)
+I (3840) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3840) wifi:security: WPA2-PSK, phy: bgn, rssi: -69
+I (3860) wifi:pm start, type: 1
+
+I (3860) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3860) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3880) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-13 14:46:40 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4860) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:46:40 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:40 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:40 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:40 | DEBUG | inspect_task:70 | Currently available heap: 222996[0m
+[0m2024-01-13 14:46:40 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 220032[0m
+[0m2024-01-13 14:46:40 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:40 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:40 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 14:46:40 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:40 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:40 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:40 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:40 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:40 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:40 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:40 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:40 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:40 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:40 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:40 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:40 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:40 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:40 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:40 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:40 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;32m2024-01-13 14:46:40 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:40 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;31m2024-01-13 14:46:40 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:40 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:40 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:40 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (5180) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc82144  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000002 0x3fca8554 0x4038ad40 0x3c0c0000 0x3c0e2000 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x00000000 0x3c0ca0e8 0x3fca85e4 0x3c0ca110 0x00001881 0x80000004 0x3fca85b0 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa79c 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (311) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (363) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:46:41 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca20a8, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:46:41 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:46:41 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:46:41 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:46:42 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3100) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3780) wifi:state: init -> auth (b0)
+I (3780) wifi:state: auth -> assoc (0)
+I (3790) wifi:state: assoc -> run (10)
+I (3800) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3800) wifi:security: WPA2-PSK, phy: bgn, rssi: -73
+I (3810) wifi:pm start, type: 1
+
+I (3810) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3810) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3850) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-13 14:46:46 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4810) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:46:46 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:46 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:46 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:46 | DEBUG | inspect_task:70 | Currently available heap: 223024[0m
+[0m2024-01-13 14:46:46 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 220056[0m
+[0m2024-01-13 14:46:46 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:46 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:46 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 14:46:46 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:46 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:46 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:46 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:46 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:46 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:46 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:46 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:46 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:46 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:46 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:46 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:46 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:46 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:46 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:46 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:46 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;32m2024-01-13 14:46:46 | INFO  | tcp_socket_listen:260 | [0;31m2024-01-13 14:46:46 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:46 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;33m2024-01-13 14:46:46 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:46 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:46 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (5130) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc82204  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ffb4 0x4038ad40 0x3c0df3ce 0x3fca9480 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca8540 0x3c0ca110 0x00001881 0x80000004 0x3fca850c 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa774 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (311) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (363) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:46:47 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca2024, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:46:47 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:46:47 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:46:47 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:46:47 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3100) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3780) wifi:state: init -> auth (b0)
+I (3780) wifi:state: auth -> assoc (0)
+I (3790) wifi:state: assoc -> run (10)
+I (3800) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3800) wifi:security: WPA2-PSK, phy: bgn, rssi: -65
+I (3810) wifi:pm start, type: 1
+
+I (3810) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3820) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3870) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-13 14:46:51 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4810) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:46:51 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:51 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:51 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:51 | DEBUG | inspect_task:70 | Currently available heap: 223028[0m
+[0m2024-01-13 14:46:51 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 220056[0m
+[0m2024-01-13 14:46:51 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:51 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:51 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 14:46:51 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:51 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:51 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:51 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:51 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:51 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:51 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:51 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:51 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:51 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:51 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:51 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:51 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:51 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:51 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:51 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:51 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;32m2024-01-13 14:46:51 | INFO  | tcp_socket_listen:260 | [0;31m2024-01-13 14:46:51 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:51 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;33m2024-01-13 14:46:51 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:51 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:51 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (5130) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc821a4  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ff30 0x4038ad40 0x3c0c019c 0x3fca95b0 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca8560 0x3c0ca110 0x00001881 0x80000004 0x3fca852c 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa784 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (311) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (363) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:46:52 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca2024, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:46:52 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:46:52 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:46:52 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:46:53 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3160) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3840) wifi:state: init -> auth (b0)
+I (3860) wifi:state: auth -> assoc (0)
+I (3860) wifi:state: assoc -> run (10)
+I (3870) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3870) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+I (3890) wifi:pm start, type: 1
+
+I (3890) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3890) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3900) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m2024-01-13 14:46:57 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4890) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:46:57 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:46:57 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:46:57 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:46:57 | DEBUG | inspect_task:70 | Currently available heap: 222868[0m
+[0m2024-01-13 14:46:57 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 219916[0m
+[0m2024-01-13 14:46:57 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:57 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:46:57 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 14:46:57 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:46:57 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:46:57 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:57 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:46:57 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:57 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:57 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:46:57 | DEBUG | tcp_bind_socket:242 | [0;31m2024-01-13 14:46:57 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:46:57 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:57 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:46:57 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:46:57 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:46:57 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:46:57 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:46:57 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:46:57 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;32m2024-01-13 14:46:57 | INFO  | tcp_socket_listen:260 | [0;31m2024-01-13 14:46:57 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:46:57 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;33m2024-01-13 14:46:57 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:46:57 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:46:57 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc82244  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000001  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x4203bd04  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x3fc99d3c  S5      : 0x3fc9be60  S6      : 0x3c0ca1f9  S7      : 0x00000000  
+S8      : 0x0000001f  S9      : 0x00000073  S10     : 0x00000000  S11     : 0x00000002  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ff30 0x4038ad40 0x3c0ca1f9 0x3fc9be60 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca8688 0x3c0ca110 0x00001881 0x80000001 0x00000011 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x4038334a 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa818 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (144) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (311) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (363) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:46:58 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca20a8, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:46:58 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:46:58 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:46:58 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:46:58 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3090) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3770) wifi:state: init -> auth (b0)
+I (3770) wifi:state: auth -> assoc (0)
+I (3780) wifi:state: assoc -> run (10)
+I (3790) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3790) wifi:security: WPA2-PSK, phy: bgn, rssi: -66
+I (3800) wifi:pm start, type: 1
+
+I (3800) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3810) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3830) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-13 14:47:02 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4800) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:47:02 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:47:02 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:47:02 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:47:02 | DEBUG | inspect_task:70 | Currently available heap: 222896[0m
+[0m2024-01-13 14:47:02 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 219924[0m
+[0m2024-01-13 14:47:02 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:47:02 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:47:02 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0;31m2024-01-13 14:47:02 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:47:02 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:47:02 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m2024-01-13 14:47:02 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:47:02 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:47:02 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:47:02 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m2024-01-13 14:47:02 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:47:02 | DEBUG | tcp_bind_socket:242 | [0;33m2024-01-13 14:47:02 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:47:02 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0m2024-01-13 14:47:02 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:47:02 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:47:02 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;31m2024-01-13 14:47:02 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m2024-01-13 14:47:02 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m2024-01-13 14:47:02 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;32m2024-01-13 14:47:02 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:47:02 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;31m2024-01-13 14:47:02 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m2024-01-13 14:47:02 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m2024-01-13 14:47:03 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m2024-01-13 14:47:03 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 3841 when connecting to remote host: i don't know?[0m
+[0;32mI (5120) main_task: Returned from app_main()[0m
+
+***ERROR*** A stack overflow in task log_task has been detected.
+Core  0 register dump:
+MEPC    : 0x403811a0  RA      : 0x40387f7a  SP      : 0x3fc95120  GP      : 0x3fc92600  
+TP      : 0x3fc82224  T0      : 0x4005890e  T1      : 0x0000000f  T2      : 0x00000001  
+S0/FP   : 0x00000003  S1      : 0x80000004  A0      : 0x3fc95138  A1      : 0x3c0ca124  
+A2      : 0x00000003  A3      : 0x3fc95166  A4      : 0x00000001  A5      : 0x3fc99000  
+A6      : 0x60023000  A7      : 0x0000000a  S2      : 0x00001881  S3      : 0x00000001  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000001  T6      : 0x00000000  
+MSTATUS : 0x00001801  MTVEC   : 0x40380001  MCAUSE  : 0x00000007  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fc95120: 0xffffffff 0x00000000 0x3fc9ffb4 0x4038ad40 0x3c0df3ce 0x3fc9bc60 0x452a2a2a 0x524f5252
+3fc95140: 0x202a2a2a 0x74732041 0x206b6361 0x7265766f 0x776f6c66 0x206e6920 0x6b736174 0x676f6c20
+3fc95160: 0x7361745f 0x6168206b 0x65622073 0x64206e65 0x63657465 0x2e646574 0x00000000 0x00000000
+3fc95180: 0x01000000 0x3c0ca0e8 0x3fca85e4 0x3c0ca110 0x00001881 0x80000004 0x3fca85b0 0x40389bb2
+3fc951a0: 0x00000000 0x00000000 0x40385ae4 0x4038b176 0x4038020a 0x00000000 0x00000000 0x403801ee
+3fc951c0: 0x60023000 0x40386b66 0x40386b72 0x3c0ca13c 0x00000003 0x3c0e3954 0x0000000b 0x3c0debac
+3fc951e0: 0x00000013 0x3c0c8c58 0x0000001b 0x3c0c8ad8 0x00000023 0x3c0e39b8 0x0000002b 0x3c0e353c
+3fc95200: 0x00000033 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95220: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc952c0: 0x00000000 0x3fcaa808 0x00000000 0x00000000 0x01000000 0x00000000 0x00000000 0x00000000
+3fc952e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95340: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc953e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95400: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95420: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95440: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc954e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fc95500: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x3c0c03c4
+
+
+
+ELF file SHA256: 8ff8c3d21c001f25
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 13 2024 14:50:44[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=28430h (164912) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=00038458 vaddr=3fc91e00 size=02958h ( 10584) load[0m
+[0;32mI (143) esp_image: segment 2: paddr=0003adb8 vaddr=40380000 size=05260h ( 21088) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=b6eech (749292) map[0m
+[0;32mI (275) esp_image: segment 4: paddr=000f6f14 vaddr=40385260 size=0ca18h ( 51736) load[0m
+[0;32mI (290) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (291) boot: Disabling RNG early entropy source...[0m
+[0;32mI (302) cpu_start: Unicore app[0m
+[0;32mI (302) cpu_start: Pro cpu up.[0m
+[0;32mI (311) cpu_start: Pro cpu start user code[0m
+[0;32mI (311) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (311) cpu_start: Application information:[0m
+[0;32mI (314) cpu_start: Project name:     esp_startup[0m
+[0;32mI (320) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (325) cpu_start: Compile time:     Jan 13 2024 14:48:48[0m
+[0;32mI (331) cpu_start: ELF file SHA256:  8ff8c3d21c001f25...[0m
+[0;32mI (337) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (342) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (347) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (351) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (356) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (363) heap_init: At 3FC99090 len 00043680 (269 KiB): DRAM[0m
+[0;32mI (370) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (376) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (383) spi_flash: detected chip: generic[0m
+[0;32mI (387) spi_flash: flash io: dio[0m
+[0;32mI (392) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (405) app_start: Starting scheduler on CPU0[0m
+[0;32mI (410) main_task: Started on CPU0[0m
+[0;32mI (410) main_task: Calling app_main()[0m
+[0m2024-01-13 14:47:03 | DEBUG | wifi_c_init_netif:150 | netif initialized as STA[0m
+[0;32mI (510) pp: pp rom version: 9387209[0m
+[0;32mI (510) net80211: net80211 rom version: 9387209[0m
+I (530) wifi:wifi driver task: 3fca20a8, prio:23, stack:6656, core=0
+I (530) wifi:wifi firmware version: ce9244d
+I (530) wifi:wifi certification version: v7.0
+I (530) wifi:config NVS flash: enabled
+I (540) wifi:config nano formating: disabled
+I (540) wifi:Init data frame dynamic rx buffer num: 32
+I (540) wifi:Init management frame dynamic rx buffer num: 32
+I (550) wifi:Init management short buffer num: 32
+I (550) wifi:Init dynamic tx buffer num: 32
+I (560) wifi:Init static tx FG buffer num: 2
+I (560) wifi:Init static rx buffer size: 1600
+I (570) wifi:Init static rx buffer num: 10
+I (570) wifi:Init dynamic rx buffer num: 32
+[0;32mI (570) wifi_init: rx ba win: 6[0m
+[0;32mI (580) wifi_init: tcpip mbox: 32[0m
+[0;32mI (580) wifi_init: udp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp mbox: 6[0m
+[0;32mI (590) wifi_init: tcp tx win: 5744[0m
+[0;32mI (590) wifi_init: tcp rx win: 5744[0m
+[0;32mI (600) wifi_init: tcp mss: 1440[0m
+[0;32mI (600) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (610) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-13 14:47:04 | INFO  | wifi_c_init_wifi:241 | Wifi initialized.[0m
+[0;32mI (620) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (660) wifi:mode : sta (ec:da:3b:36:60:50)
+I (660) wifi:enable tsf
+[0;32m2024-01-13 14:47:04 | INFO  | wifi_c_sta_event_handler:91 | Station started, connecting to WiFi.[0m
+[0m2024-01-13 14:47:04 | DEBUG | wifi_c_init_wifi:245 | wifi successfully initialized[0m
+[0m2024-01-13 14:47:04 | DEBUG | wifi_c_start_sta:366 | WiFi successfully configured as STA.[0m
+I (3100) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3830) wifi:state: init -> auth (b0)
+I (3830) wifi:state: auth -> assoc (0)
+I (3850) wifi:state: assoc -> run (10)
+I (3870) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3870) wifi:security: WPA2-PSK, phy: bgn, rssi: -68
+I (3880) wifi:pm start, type: 1
+
+I (3880) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3880) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3960) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-13 14:47:08 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (4880) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-13 14:47:08 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-13 14:47:08 | INFO  | app_main:112 | Connected to wifi, current ip: 192.168.0.104[0m
+[0;32m2024-01-13 14:47:08 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-13 14:47:08 | DEBUG | inspect_task:70 | Currently available heap: 222896[0m
+[0m2024-01-13 14:47:08 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 219924[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-13 14:47:08 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m2024-01-13 14:47:08 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m2024-01-13 14:47:08 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 14:47:08 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 14:47:08 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m2024-01-13 14:47:08 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_calibrate:252 | reading BMP280 out calibration values...[0m
+[0m2024-01-13 14:47:08 | DEBUG | tcp_bind_socket:242 | socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m2024-01-13 14:47:08 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_calibrate:272 | compensation values of BMP280 device updated:
+	T1: 0
+	T2: 0x1
+	T3: 0x3fc99000
+	P1: 0
+	P2: 0xa0000000
+	P3: 0xa
+	P4: 0x3c0c0000
+	P5: 0x3fca860c
+	P6: 0x3fc99b60
+	P7: 0x42092a7a
+	P8: 0
+	P9: 0 [0m
+[0;32m2024-01-13 14:47:08 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.104:27015[0m
+[0;32m2024-01-13 14:47:08 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;32m2024-01-13 14:47:08 | INFO  | bmp_init:444 | new BMP280 device ready to use![0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_set_standby_time:173 | config register value changed to: 160[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_set_iir_filter:237 | config register value of BMP280 device changed to: 0xa0[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_set_press_oversampling:197 | BMP280 device ctrl_meas register was set to: 0XC[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0XC[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_set_temp_oversampling:221 | BMP280 device ctrl_meas register was set to: 0X6C[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6C[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_set_mode:150 | BMP280 device mode was set to: 3[0m
+[0;32m2024-01-13 14:47:08 | INFO  | read_temperature_task:49 | Identified BMP280 device:
+ address: ee
+ chip id: 58
+ mode: 3[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-13 14:47:08 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-13 14:47:08 | INFO  | read_temperature_task:54 | temperature: 20.95 C[0m
+[0;32m2024-01-13 14:47:08 | INFO  | read_temperature_task:55 | pressure: 987.55hPa[0m
+[0;32m2024-01-13 14:47:08 | INFO  | read_temperature_task:56 | altitude: 216.17 m. n. p. m.[0m
+[0m2024-01-13 14:47:08 | DEBUG | read_temperature_task:58 | data to send to database: device_id=1&temperature=20.95&pressure=987.55&altitude=216.17[0m
+[0;32m2024-01-13 14:47:08 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net//insert_data.php[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 13 Jan 2024 14:47:09 GMT[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.1.26[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-13 14:47:08 | DEBUG | http_client_post:158 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-13 14:47:08 | INFO  | http_client_post:161 | 
+data stored in a database successfully.[0m
+[0m2024-01-13 14:47:08 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+I (7610) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:5, ssn:0, winSize:64
+[0m2024-01-13 14:47:14 | DEBUG | inspect_task:70 | Currently available heap: 221532[0m
+[0m2024-01-13 14:47:14 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 214028[0m
+[0m2024-01-13 14:47:19 | DEBUG | inspect_task:70 | Currently available heap: 221540[0m
+[0m2024-01-13 14:47:19 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 214028[0m
+[0m2024-01-13 14:47:24 | DEBUG | inspect_task:70 | Currently available heap: 221540[0m
+[0m2024-01-13 14:47:24 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 214028[0m
+[0m2024-01-13 14:47:29 | DEBUG | inspect_task:70 | Currently available heap: 221540[0m
+[0m2024-01-13 14:47:29 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 214028[0m
+[0m2024-01-13 14:47:34 | DEBUG | inspect_task:70 | Currently available heap: 221540[0m
+[0m2024-01-13 14:47:34 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 214028[0m
+[0m2024-01-13 14:47:39 | DEBUG | inspect_task:70 | Currently available heap: 221540[0m
+[0m2024-01-13 14:47:39 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 214028[0m
+[0m2024-01-13 14:47:39 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-13 14:47:39 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-13 14:47:39 | INFO  | read_temperature_task:54 | temperature: 21.76 C[0m
+[0;32m2024-01-13 14:47:39 | INFO  | read_temperature_task:55 | pressure: 987.46hPa[0m
+[0;32m2024-01-13 14:47:39 | INFO  | read_temperature_task:56 | altitude: 216.94 m. n. p. m.[0m
+[0m2024-01-13 14:47:39 | DEBUG | read_temperature_task:58 | data to send to database: device_id=1&temperature=21.76&pressure=987.46&altitude=216.94[0m
+[0;32m2024-01-13 14:47:39 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net//insert_data.php[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 13 Jan 2024 14:47:39 GMT[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.1.26[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-13 14:47:39 | DEBUG | http_client_post:158 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-13 14:47:39 | INFO  | http_client_post:161 | 
+data stored in a database successfully.[0m
+[0m2024-01-13 14:47:39 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-13 14:47:44 | DEBUG | inspect_task:70 | Currently available heap: 221328[0m
+[0m2024-01-13 14:47:44 | DEBUG | inspect_task:71 | The minimum heap size that was ever available: 213772[0m

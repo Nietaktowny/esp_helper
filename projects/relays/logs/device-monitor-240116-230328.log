@@ -1,0 +1,171 @@
+[0m2024-01-16 22:03:33 | DEBUG | inspect_task:97 | Currently available heap: 194324[0m
+[0m2024-01-16 22:03:33 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:03:33 | DEBUG | root_handler:64 | serving GET "/" request...[0m
+[0m2024-01-16 22:03:33 | DEBUG | script_handler:85 | serving GET "/code.js" request...[0m
+[0m2024-01-16 22:03:34 | DEBUG | state_json_handler:112 | serving GET "/state" request...[0m
+[0m2024-01-16 22:03:34 | DEBUG | wifi_c_get_status_as_json:236 | storing wifi_c_status structure as JSON string...[0m
+[0m2024-01-16 22:03:34 | DEBUG | ap_json_handler:96 | serving GET "/scan" request...[0m
+[0m2024-01-16 22:03:34 | DEBUG | wifi_c_scan_all_ap:488 | scanning for Access Points...[0m
+[0;32m2024-01-16 22:03:37 | INFO  | wifi_c_ap_event_handler:81 | Total APs scanned: 30[0m
+[0m2024-01-16 22:03:37 | DEBUG | wifi_manager_fetch_ap_list:27 | wifi manager scan complete, scanned: 57856 APs[0m
+[0m2024-01-16 22:03:38 | DEBUG | inspect_task:97 | Currently available heap: 193156[0m
+[0m2024-01-16 22:03:38 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:03:43 | DEBUG | inspect_task:97 | Currently available heap: 193156[0m
+[0m2024-01-16 22:03:43 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:03:48 | DEBUG | inspect_task:97 | Currently available heap: 193156[0m
+[0m2024-01-16 22:03:48 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:03:53 | DEBUG | inspect_task:97 | Currently available heap: 193156[0m
+[0m2024-01-16 22:03:53 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:03:58 | DEBUG | inspect_task:97 | Currently available heap: 193156[0m
+[0m2024-01-16 22:03:58 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:03 | DEBUG | inspect_task:97 | Currently available heap: 193156[0m
+[0m2024-01-16 22:04:03 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:04 | DEBUG | root_handler:64 | serving GET "/" request...[0m
+[0m2024-01-16 22:04:04 | DEBUG | script_handler:85 | serving GET "/code.js" request...[0m
+[0m2024-01-16 22:04:04 | DEBUG | state_json_handler:112 | serving GET "/state" request...[0m
+[0m2024-01-16 22:04:04 | DEBUG | wifi_c_get_status_as_json:236 | storing wifi_c_status structure as JSON string...[0m
+[0m2024-01-16 22:04:04 | DEBUG | ap_json_handler:96 | serving GET "/scan" request...[0m
+[0m2024-01-16 22:04:04 | DEBUG | wifi_c_scan_all_ap:488 | scanning for Access Points...[0m
+[0;32m2024-01-16 22:04:07 | INFO  | wifi_c_ap_event_handler:81 | Total APs scanned: 30[0m
+[0m2024-01-16 22:04:07 | DEBUG | wifi_manager_fetch_ap_list:27 | wifi manager scan complete, scanned: 57856 APs[0m
+[0m2024-01-16 22:04:08 | DEBUG | inspect_task:97 | Currently available heap: 193220[0m
+[0m2024-01-16 22:04:08 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:13 | DEBUG | inspect_task:97 | Currently available heap: 193532[0m
+[0m2024-01-16 22:04:13 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:18 | DEBUG | inspect_task:97 | Currently available heap: 193532[0m
+[0m2024-01-16 22:04:18 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:23 | DEBUG | inspect_task:97 | Currently available heap: 193532[0m
+[0m2024-01-16 22:04:23 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:28 | DEBUG | inspect_task:97 | Currently available heap: 193532[0m
+[0m2024-01-16 22:04:28 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:33 | DEBUG | inspect_task:97 | Currently available heap: 193532[0m
+[0m2024-01-16 22:04:33 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:38 | DEBUG | inspect_task:97 | Currently available heap: 193532[0m
+[0m2024-01-16 22:04:38 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+[0m2024-01-16 22:04:43 | DEBUG | inspect_task:97 | Currently available heap: 194348[0m
+[0m2024-01-16 22:04:43 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 177660[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x1e (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 15 2024 23:37:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=279dch (162268) map[0m
+[0;32mI (185) esp_image: segment 1: paddr=00037a04 vaddr=3ffb0000 size=03858h ( 14424) load[0m
+[0;32mI (191) esp_image: segment 2: paddr=0003b264 vaddr=40080000 size=04db4h ( 19892) load[0m
+[0;32mI (200) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9ad48h (634184) map[0m
+[0;32mI (429) esp_image: segment 4: paddr=000dad70 vaddr=40084db4 size=11ee8h ( 73448) load[0m
+[0;32mI (471) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (471) boot: Disabling RNG early entropy source...[0m
+[0;32mI (483) cpu_start: Multicore app[0m
+[0;32mI (483) cpu_start: Pro cpu up.[0m
+[0;32mI (483) cpu_start: Starting app cpu, entry point is 0x40081f94[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (501) cpu_start: Pro cpu start user code[0m
+[0;32mI (501) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (501) cpu_start: Application information:[0m
+[0;32mI (506) cpu_start: Project name:     esp_startup[0m
+[0;32mI (511) cpu_start: App version:      b66229a-dirty[0m
+[0;32mI (517) cpu_start: Compile time:     Jan 15 2024 23:35:12[0m
+[0;32mI (523) cpu_start: ELF file SHA256:  cb5893a5f0a82ff4...[0m
+[0;32mI (529) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (534) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (538) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (543) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (548) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (555) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (561) heap_init: At 3FFB8A38 len 000275C8 (157 KiB): DRAM[0m
+[0;32mI (567) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (574) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (580) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (588) spi_flash: detected chip: generic[0m
+[0;32mI (591) spi_flash: flash io: dio[0m
+[0;32mI (596) app_start: Starting scheduler on CPU0[0m
+[0;32mI (600) app_start: Starting scheduler on CPU1[0m
+[0;32mI (600) main_task: Started on CPU0[0m
+[0;32mI (610) main_task: Calling app_main()[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_init_netif:161 | netif initialized as AP+STA[0m
+I (760) wifi:wifi driver task: 3ffc0df0, prio:23, stack:6656, core=0
+I (780) wifi:wifi firmware version: ce9244d
+I (780) wifi:wifi certification version: v7.0
+I (780) wifi:config NVS flash: enabled
+I (780) wifi:config nano formating: disabled
+I (790) wifi:Init data frame dynamic rx buffer num: 32
+I (790) wifi:Init management frame dynamic rx buffer num: 32
+I (800) wifi:Init management short buffer num: 32
+I (800) wifi:Init dynamic tx buffer num: 32
+I (800) wifi:Init static rx buffer size: 1600
+I (810) wifi:Init static rx buffer num: 10
+I (810) wifi:Init dynamic rx buffer num: 32
+[0;32mI (820) wifi_init: rx ba win: 6[0m
+[0;32mI (820) wifi_init: tcpip mbox: 32[0m
+[0;32mI (820) wifi_init: udp mbox: 6[0m
+[0;32mI (830) wifi_init: tcp mbox: 6[0m
+[0;32mI (830) wifi_init: tcp tx win: 5744[0m
+[0;32mI (830) wifi_init: tcp rx win: 5744[0m
+[0;32mI (840) wifi_init: tcp mss: 1440[0m
+[0;32mI (840) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (850) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:00 | INFO  | wifi_c_init_wifi:289 | Wifi initialized.[0m
+[0;32mI (860) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (960) wifi:mode : sta (08:3a:8d:0a:f6:18) + softAP (08:3a:8d:0a:f6:19)
+I (960) wifi:enable tsf
+I (970) wifi:Total power save buffer number: 16
+I (970) wifi:Init max length of beacon: 752/752
+I (970) wifi:Init max length of beacon: 752/752
+[0;32m1970-01-01 00:00:00 | INFO  | wifi_c_sta_event_handler:92 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_init_wifi:293 | wifi successfully initialized[0m
+[0;32mI (990) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_start_sta:414 | WiFi successfully configured as STA.[0m
+I (3870) wifi:ap channel adjust o:1,1 n:11,2
+I (3870) wifi:new:<11,2>, old:<1,1>, ap:<11,2>, sta:<11,2>, prof:1
+I (5040) wifi:state: init -> auth (b0)
+I (5050) wifi:state: auth -> assoc (0)
+I (5050) wifi:state: assoc -> run (10)
+I (5060) wifi:connected with TP-LINK_AD8313, aid = 4, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (5060) wifi:security: WPA2-PSK, phy: bgn, rssi: -54
+I (5080) wifi:pm start, type: 1
+
+I (5090) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (5130) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:05 | INFO  | wifi_c_sta_event_handler:106 | Got IP:192.168.0.103[0m
+[0;32mI (6080) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_c_check_sta_connection_result:118 | WIFI_C_CONNECTED_BIT is set![0m
+I (7270) wifi:Total power save buffer number: 16
+[0;32mI (7270) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32m1970-01-01 00:00:06 | INFO  | wifi_c_start_ap:349 | Started AP: 
+SSID: ESP32 
+Password: 12345678[0m
+[0;32m1970-01-01 00:00:06 | INFO  | app_main:141 | Connected to wifi, current ip: 192.168.0.103[0m
+[0m1970-01-01 00:00:06 | DEBUG | inspect_task:97 | Currently available heap: 221888[0m
+[0m1970-01-01 00:00:06 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 207472[0m
+[0m1970-01-01 00:00:06 | DEBUG | spiffs_c_init:63 | initializing SPIFFS...[0m
+[0m1970-01-01 00:00:06 | DEBUG | spiffs_c_init:74 | initialized SPIFFS successfully[0m
+[0;32m2024-01-16 22:04:58 | INFO  | spiffs_c_check:100 | SPIFFS check successful[0m
+[0m2024-01-16 22:04:58 | DEBUG | wifi_manager_server_init:256 | http server started[0m
+[0;32mI (12130) main_task: Returned from app_main()[0m
+[0m2024-01-16 22:04:58 | DEBUG | inspect_task:97 | Currently available heap: 202028[0m
+[0m2024-01-16 22:04:58 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 197292[0m

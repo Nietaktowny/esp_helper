@@ -1,0 +1,389 @@
+[0m2024-01-22 13:21:09 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-22 13:21:09 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-22 13:21:09 | INFO  | read_temperature_task:72 | temperature: 23.21 C[0m
+[0;32m2024-01-22 13:21:09 | INFO  | read_temperature_task:73 | pressure: 998.13hPa[0m
+[0;32m2024-01-22 13:21:09 | INFO  | read_temperature_task:74 | altitude: 126.60 m. n. p. m.[0m
+[0m2024-01-22 13:21:09 | DEBUG | read_temperature_task:76 | data to send to database: device_id=2&temperature=23.21&pressure=998.13&altitude=126.60[0m
+[0;32m2024-01-22 13:21:09 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/insert_data.php[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:09 GMT[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:09 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:09 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-22 13:21:09 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-22 13:21:09 | INFO  | read_temperature_task:78 | Client POST request returned: 0[0m
+[0m2024-01-22 13:21:10 | DEBUG | inspect_task:100 | Currently available heap: 200256[0m
+[0m2024-01-22 13:21:10 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 192672[0m
+[0;32m2024-01-22 13:21:10 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:21:10 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:10 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:11 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:11 GMT[0m
+[0m2024-01-22 13:21:11 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:21:11 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:21:11 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:21:11 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:11 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:11 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:11 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:21:11 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:21:11 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m
+[0m2024-01-22 13:21:16 | DEBUG | inspect_task:100 | Currently available heap: 200044[0m
+[0m2024-01-22 13:21:16 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 192316[0m
+[0;32m2024-01-22 13:21:16 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:16 GMT[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:16 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:16 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:21:16 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:21:16 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m
+[0m2024-01-22 13:21:21 | DEBUG | inspect_task:100 | Currently available heap: 199832[0m
+[0m2024-01-22 13:21:21 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 192252[0m
+[0;32m2024-01-22 13:21:21 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:21:21 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:21 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:22 GMT[0m
+[0m2024-01-22 13:21:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:21:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:21:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:21:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:22 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:22 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:22 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:21:22 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:21:22 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x1e (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 15 2024 23:37:35[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (92) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d9f4h (186868) map[0m
+[0;32mI (194) esp_image: segment 1: paddr=0003da1c vaddr=3ffb0000 size=025fch (  9724) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae120h (712992) map[0m
+[0;32mI (457) esp_image: segment 3: paddr=000ee148 vaddr=3ffb25fc size=0134ch (  4940) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef49c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (513) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (525) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (543) cpu_start: Pro cpu start user code[0m
+[0;32mI (543) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (543) cpu_start: Application information:[0m
+[0;32mI (548) cpu_start: Project name:     esp_startup[0m
+[0;32mI (553) cpu_start: App version:      0.0.1.1[0m
+[0;32mI (558) cpu_start: Compile time:     Jan 21 2024 12:29:07[0m
+[0;32mI (564) cpu_start: ELF file SHA256:  fe209f4b1ec5f900...[0m
+[0;32mI (570) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (575) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8658 len 000279A8 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (615) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (637) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:00 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09d8, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (842) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (862) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (872) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (882) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:00 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1002) wifi:mode : sta (08:3a:8d:0a:f6:18)
+I (1002) wifi:enable tsf
+[0;32m1970-01-01 00:00:00 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:00 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:00 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:00 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:00 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:00 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3502) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3502) wifi:state: init -> auth (b0)
+I (3512) wifi:state: auth -> assoc (0)
+I (3512) wifi:state: assoc -> run (10)
+I (3532) wifi:connected with TP-LINK_AD8313, aid = 3, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3532) wifi:security: WPA2-PSK, phy: bgn, rssi: -38
+I (3532) wifi:pm start, type: 1
+
+I (3542) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3562) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:04 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.101[0m
+[0;32mI (4542) esp_netif_handlers: sta ip: 192.168.0.101, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:04 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m1970-01-01 00:00:04 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:100 | Currently available heap: 215864[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 215864[0m
+[0m1970-01-01 00:00:04 | DEBUG | i2c_c_set_device_addr:115 | [0;33mW (4592) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+changed device address from 0 to 0XEE[0m
+[0;32m1970-01-01 00:00:04 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_calibrate:252 | reading BMP280 out calibration values...[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_calibrate:272 | compensation values of BMP280 device updated:
+	T1: 0x3f40018c
+	T2: 0x3ffb3db0
+	T3: 0x3f4002a0
+	P1: 0x3f40350c
+	P2: 0x110
+	P3: 0x3ffb3db0
+	P4: 0x3f4002a0
+	P5: 0x3f4035a8
+	P6: 0x67036afd
+	P7: 0x96300032
+	P8: 0xbd0d6f7
+	P9: 0xff7f1220 [0m
+[0;32m1970-01-01 00:00:04 | INFO  | bmp_init:444 | new BMP280 device ready to use![0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_set_standby_time:173 | config register value changed to: 160[0m
+[0;32mI (4702) esp_https_ota: Starting OTA...[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_set_iir_filter:237 | config register value of BMP280 device changed to: 0xa0[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_set_press_oversampling:197 | BMP280 device ctrl_meas register was set to: 0X6F[0m
+[0;32mI (4712) esp_https_ota: Writing to partition subtype 17 at offset 0x110000[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:30 GMT[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_set_temp_oversampling:221 | BMP280 device ctrl_meas register was set to: 0X6E[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_set_mode:150 | BMP280 device mode was set to: 3[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m1970-01-01 00:00:04 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m1970-01-01 00:00:04 | INFO  | ota_c_validate_image:91 | Running firmware version: 0.0.1.1[0m
+[0;32m1970-01-01 00:00:04 | INFO  | http_client_post:162 | 
+[0m
+[0;32m1970-01-01 00:00:04 | INFO  | read_temperature_task:67 | Identified BMP280 device:
+ address: ee
+ chip id: 58
+ mode: 3[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m1970-01-01 00:00:04 | DEBUG | ota_c_update_device_data:137 | [0;33m1970-01-01 00:00:04 | WARN  | lib/ota_controller/src/ota_controller.c:96 | ota_c_validate_image:96 | device data send successfully to server[0m
+Current running version is the same as a new. Will not update.[0m
+[0m1970-01-01 00:00:04 | DEBUG | ota_c_validate_image:97 | current firmware version: 0.0.1.1
+new firmware version: 0.0.1.1[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0;31m1970-01-01 00:00:04 | ERROR | lib/ota_controller/src/ota_controller.c:172 | ota_c_start:172 | [0m
+image header verification failed[0m
+[0;32mI (4982) main_task: Returned from app_main()[0m
+[0;32m1970-01-01 00:00:04 | INFO  | read_temperature_task:72 | temperature: 23.29 C[0m
+[0;32m1970-01-01 00:00:04 | INFO  | read_temperature_task:73 | pressure: 998.19hPa[0m
+[0;32m1970-01-01 00:00:04 | INFO  | read_temperature_task:74 | altitude: 126.14 m. n. p. m.[0m
+[0m1970-01-01 00:00:04 | DEBUG | read_temperature_task:76 | data to send to database: device_id=2&temperature=23.29&pressure=998.19&altitude=126.14[0m
+[0;32m1970-01-01 00:00:04 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/insert_data.php[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:30 GMT[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m1970-01-01 00:00:04 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m1970-01-01 00:00:04 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m1970-01-01 00:00:04 | INFO  | read_temperature_task:78 | Client POST request returned: 0[0m
+I (9242) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:6, ssn:2, winSize:64
+[0m2024-01-22 13:21:35 | DEBUG | inspect_task:100 | Currently available heap: 208424[0m
+[0m2024-01-22 13:21:35 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 200760[0m
+[0;32m2024-01-22 13:21:35 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:35 GMT[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:35 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:35 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:21:35 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:21:35 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m
+[0m2024-01-22 13:21:40 | DEBUG | inspect_task:100 | Currently available heap: 208212[0m
+[0m2024-01-22 13:21:40 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 200628[0m
+[0;32m2024-01-22 13:21:40 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:21:40 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:40 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:41 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:40 GMT[0m
+[0m2024-01-22 13:21:41 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:21:41 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:21:41 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:21:41 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:41 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:41 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:41 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:21:41 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:21:41 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m
+[0m2024-01-22 13:21:46 | DEBUG | inspect_task:100 | Currently available heap: 204536[0m
+[0m2024-01-22 13:21:46 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 198504[0m
+[0;32m2024-01-22 13:21:46 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:46 GMT[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:46 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:46 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:21:46 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:21:46 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m
+[0m2024-01-22 13:21:51 | DEBUG | inspect_task:100 | Currently available heap: 202592[0m
+[0m2024-01-22 13:21:51 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 196568[0m
+[0;32m2024-01-22 13:21:51 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:52 GMT[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:52 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:52 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:21:52 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:21:52 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m
+[0m2024-01-22 13:21:57 | DEBUG | inspect_task:100 | Currently available heap: 200640[0m
+[0m2024-01-22 13:21:57 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 194608[0m
+[0;32m2024-01-22 13:21:57 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:21:57 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:21:57 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:21:58 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:21:57 GMT[0m
+[0m2024-01-22 13:21:58 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:21:58 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:21:58 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:21:58 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:21:58 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:21:58 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:21:58 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:21:58 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:21:58 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m
+[0m2024-01-22 13:22:00 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-22 13:22:00 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-22 13:22:00 | INFO  | read_temperature_task:72 | temperature: 23.26 C[0m
+[0;32m2024-01-22 13:22:00 | INFO  | read_temperature_task:73 | pressure: 998.29hPa[0m
+[0;32m2024-01-22 13:22:00 | INFO  | read_temperature_task:74 | altitude: 125.24 m. n. p. m.[0m
+[0m2024-01-22 13:22:00 | DEBUG | read_temperature_task:76 | data to send to database: device_id=2&temperature=23.26&pressure=998.29&altitude=125.24[0m
+[0;32m2024-01-22 13:22:00 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/insert_data.php[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:22:00 GMT[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:22:00 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:22:00 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-22 13:22:00 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-22 13:22:00 | INFO  | read_temperature_task:78 | Client POST request returned: 0[0m
+[0m2024-01-22 13:22:03 | DEBUG | inspect_task:100 | Currently available heap: 200216[0m
+[0m2024-01-22 13:22:03 | DEBUG | inspect_task:101 | The minimum heap size that was ever available: 192640[0m
+[0;32m2024-01-22 13:22:03 | INFO  | http_client_post:143 | making POST request to address: http://192.168.0.108:8081/bmp280/ota.php[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Mon, 22 Jan 2024 13:22:03 GMT[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.2.12[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Length, value=0[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-22 13:22:03 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430000[0m
+[0;32m2024-01-22 13:22:03 | INFO  | http_client_post:162 | 
+[0m
+[0m2024-01-22 13:22:03 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-22 13:22:03 | DEBUG | ota_c_update_device_data:137 | device data send successfully to server[0m

@@ -1,0 +1,438 @@
+[0;32mI (122) esp_image: segment 1: paddr=0003d3d8 vaddr=3fc91eI (3150) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3150) wifi:state: init -> auth (b0)
+I (3150) wifi:state: auth -> assoc (0)
+I (3160) wifi:state: assoc -> run (10)
+I (3170) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3170) wifi:security: WPA2-PSK, phy: bgn, rssi: -61
+I (3170) wifi:pm start, type: 1
+
+I (3170) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3180) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3190) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m2024-01-27 16:54:49 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.100[0m
+[0;32mI (4190) esp_netif_handlers: sta ip: 192.168.0.100, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-27 16:54:49 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;33mW (4200) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;32mI (4260) esp_https_ota: Starting OTA...[0m
+[0;31mE (4260) esp_https_ota: Passive OTA partition not found[0m
+[0;31m2024-01-27 16:54:49 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error -1, ESP HTTPS OTA Begin failed: ESP_FAIL[0m
+[0;32m2024-01-27 16:54:49 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m2024-01-27 16:54:49 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m2024-01-27 16:54:49 | DEBUG | inspect_task:78 | Currently available heap: 212352[0m
+[0m2024-01-27 16:54:49 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 212352[0m
+[0m2024-01-27 16:54:49 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0;32mI (4320) main_task: Returned from app_main()[0m
+[0m2024-01-27 16:54:49 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m2024-01-27 16:54:49 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X4F[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_calibrate:252 | reading BMP280 out calibration values...[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_calibrate:272 | compensation values of BMP280 device updated:
+	T1: 0
+	T2: 0x1
+	T3: 0x3fc99000
+	P1: 0
+	P2: 0xa0000000
+	P3: 0xa
+	P4: 0x3fc99000
+	P5: 0x3c0c0000
+	P6: 0x3c0c018c
+	P7: 0x3fc9a060
+	P8: 0x3fc99000
+	P9: 0x68f66e18 [0m
+[0;32m2024-01-27 16:54:50 | INFO  | bmp_init:444 | new BMP280 device ready to use![0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_set_standby_time:173 | config register value changed to: 160[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_set_iir_filter:237 | config register value of BMP280 device changed to: 0xa0[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X4F[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_set_press_oversampling:197 | BMP280 device ctrl_meas register was set to: 0X4F[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X4F[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_set_temp_oversampling:221 | BMP280 device ctrl_meas register was set to: 0X6E[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X4F[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_set_mode:150 | BMP280 device mode was set to: 3[0m
+[0;32m2024-01-27 16:54:50 | INFO  | read_temperature_task:56 | Identified BMP280 device:
+ address: ee
+ chip id: 58
+ mode: 3[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:54:50 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:54:50 | INFO  | read_temperature_task:61 | temperature: 26.15 C[0m
+[0;32m2024-01-27 16:54:50 | INFO  | read_temperature_task:62 | pressure: 1000.44hPa[0m
+[0;32m2024-01-27 16:54:50 | INFO  | read_temperature_task:63 | altitude: 107.18 m. n. p. m.[0m
+[0m2024-01-27 16:54:50 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.15&pressure=1000.44&altitude=107.18[0m
+[0;32m2024-01-27 16:54:50 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:54:50 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:54:50 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:54:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:54:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:54:50 GMT[0m
+[0m2024-01-27 16:54:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:54:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:54:50 | DEBUG | _http_event_handler:33 | HTTP_[0m2024-01-27 16:55:00 | DEBUG | inspect_task:78 | Currently available heap: 216264[0m
+[0m2024-01-27 16:55:00 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208632[0m
+[0m2024-01-27 16:55:05 | DEBUG | inspect_task:78 | Currently available heap: 216264[0m
+[0m2024-01-27 16:55:05 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208632[0m
+[0m2024-01-27 16:55:10 | DEBUG | inspect_task:78 | Currently available heap: 216264[0m
+[0m2024-01-27 16:55:10 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208632[0m
+[0m2024-01-27 16:55:15 | DEBUG | inspect_task:78 | Currently available heap: 216264[0m
+[0m2024-01-27 16:55:15 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208632[0m
+[0m2024-01-27 16:55:20 | DEBUG | inspect_task:78 | Currently available heap: 216264[0m
+[0m2024-01-27 16:55:20 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208632[0m
+[0m2024-01-27 16:55:20 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:55:20 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:55:20 | INFO  | read_temperature_task:61 | temperature: 26.22 C[0m
+[0;32m2024-01-27 16:55:20 | INFO  | read_temperature_task:62 | pressure: 1000.51hPa[0m
+[0;32m2024-01-27 16:55:20 | INFO  | read_temperature_task:63 | altitude: 106.60 m. n. p. m.[0m
+[0m2024-01-27 16:55:20 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.22&pressure=1000.51&altitude=106.60[0m
+[0;32m2024-01-27 16:55:20 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:55:20 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:55:20 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:55:20 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:55:20 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:55:20 GMT[0m
+[0m2024-01-27 16:55:20 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:55:20 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:55:21 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:55:21 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:55:21 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:55:21 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:55:21 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:55:21 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:55:21 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:55:21 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:55:21 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:55:21 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:55:25 | DEBUG | inspect_task:78 | Currently available heap: 216040[0m
+[0m2024-01-27 16:55:25 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208288[0m
+[0m2024-01-27 16:55:30 | DEBUG | inspect_task:78 | Currently available heap: 216040[0m
+[0m2024-01-27 16:55:30 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208288[0m
+[0m2024-01-27 16:55:35 | DEBUG | inspect_task:78 | Currently available heap: 216040[0m
+[0m2024-01-27 16:55:35 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208288[0m
+[0m2024-01-27 16:55:40 | DEBUG | inspect_task:78 | Currently available heap: 216040[0m
+[0m2024-01-27 16:55:40 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208288[0m
+[0m2024-01-27 16:55:45 | DEBUG | inspect_task:78 | Currently available heap: 216040[0m
+[0m2024-01-27 16:55:45 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208288[0m
+[0m2024-01-27 16:55:50 | DEBUG | inspect_task:78 | Currently available heap: 216040[0m
+[0m2024-01-27 16:55:50 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 208288[0m
+[0m2024-01-27 16:55:51 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:55:51 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:55:51 | INFO  | read_temperature_task:61 | temperature: 26.25 C[0m
+[0;32m2024-01-27 16:55:51 | INFO  | read_temperature_task:62 | pressure: 1000.42hPa[0m
+[0;32m2024-01-27 16:55:51 | INFO  | read_temperature_task:63 | altitude: 107.38 m. n. p. m.[0m
+[0m2024-01-27 16:55:51 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.25&pressure=1000.42&altitude=107.38[0m
+[0;32m2024-01-27 16:55:51 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:55:51 GMT[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:55:51 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:55:51 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:55:51 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:55:51 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:55:55 | DEBUG | inspect_task:78 | Currently available heap: 215828[0m
+[0m2024-01-27 16:55:55 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:00 | DEBUG | inspect_task:78 | Currently available heap: 215828[0m
+[0m2024-01-27 16:56:00 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:05 | DEBUG | inspect_task:78 | Currently available heap: 215828[0m
+[0m2024-01-27 16:56:05 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:10 | DEBUG | inspect_task:78 | Currently available heap: 215828[0m
+[0m2024-01-27 16:56:10 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:15 | DEBUG | inspect_task:78 | Currently available heap: 215828[0m
+[0m2024-01-27 16:56:15 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:20 | DEBUG | inspect_task:78 | Currently available heap: 215828[0m
+[0m2024-01-27 16:56:20 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:21 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:56:21 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:56:21 | INFO  | read_temperature_task:61 | temperature: 26.26 C[0m
+[0;32m2024-01-27 16:56:21 | INFO  | read_temperature_task:62 | pressure: 1000.46hPa[0m
+[0;32m2024-01-27 16:56:21 | INFO  | read_temperature_task:63 | altitude: 107.03 m. n. p. m.[0m
+[0m2024-01-27 16:56:21 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.26&pressure=1000.46&altitude=107.03[0m
+[0;32m2024-01-27 16:56:21 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:56:21 GMT[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:56:21 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:56:21 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:56:21 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:56:21 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:56:25 | DEBUG | inspect_task:78 | Currently available heap: 215616[0m
+[0m2024-01-27 16:56:25 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:30 | DEBUG | inspect_task:78 | Currently available heap: 215616[0m
+[0m2024-01-27 16:56:30 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:35 | DEBUG | inspect_task:78 | Currently available heap: 215616[0m
+[0m2024-01-27 16:56:35 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:40 | DEBUG | inspect_task:78 | Currently available heap: 215616[0m
+[0m2024-01-27 16:56:40 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:45 | DEBUG | inspect_task:78 | Currently available heap: 215616[0m
+[0m2024-01-27 16:56:45 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:50 | DEBUG | inspect_task:78 | Currently available heap: 215616[0m
+[0m2024-01-27 16:56:50 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:56:51 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:56:51 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:56:51 | INFO  | read_temperature_task:61 | temperature: 26.26 C[0m
+[0;32m2024-01-27 16:56:51 | INFO  | read_temperature_task:62 | pressure: 1000.49hPa[0m
+[0;32m2024-01-27 16:56:51 | INFO  | read_temperature_task:63 | altitude: 106.73 m. n. p. m.[0m
+[0m2024-01-27 16:56:51 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.26&pressure=1000.49&altitude=106.73[0m
+[0;32m2024-01-27 16:56:51 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:56:51 GMT[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:56:51 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:56:51 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:56:51 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:56:51 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:56:55 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:56:55 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:00 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:00 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:05 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:05 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:10 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:10 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:15 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:15 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:20 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:20 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:21 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:57:21 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:57:21 | INFO  | read_temperature_task:61 | temperature: 26.27 C[0m
+[0;32m2024-01-27 16:57:21 | INFO  | read_temperature_task:62 | pressure: 1000.50hPa[0m
+[0;32m2024-01-27 16:57:21 | INFO  | read_temperature_task:63 | altitude: 106.67 m. n. p. m.[0m
+[0m2024-01-27 16:57:21 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.27&pressure=1000.50&altitude=106.67[0m
+[0;32m2024-01-27 16:57:21 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:57:21 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:57:21 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:57:22 GMT[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:57:22 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:57:22 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:57:22 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:57:22 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:57:25 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:25 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:30 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:30 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:35 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:35 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:40 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:40 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:45 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:45 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:50 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:57:50 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:57:52 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:57:52 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:57:52 | INFO  | read_temperature_task:61 | temperature: 26.30 C[0m
+[0;32m2024-01-27 16:57:52 | INFO  | read_temperature_task:62 | pressure: 1000.46hPa[0m
+[0;32m2024-01-27 16:57:52 | INFO  | read_temperature_task:63 | altitude: 106.99 m. n. p. m.[0m
+[0m2024-01-27 16:57:52 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.30&pressure=1000.46&altitude=106.99[0m
+[0;32m2024-01-27 16:57:52 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:57:52 GMT[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:57:52 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:57:52 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:57:52 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:57:52 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:57:55 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:57:55 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:00 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:00 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:05 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:05 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:10 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:10 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:15 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:15 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:20 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:20 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:22 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:58:22 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:58:22 | INFO  | read_temperature_task:61 | temperature: 26.24 C[0m
+[0;32m2024-01-27 16:58:22 | INFO  | read_temperature_task:62 | pressure: 1000.46hPa[0m
+[0;32m2024-01-27 16:58:22 | INFO  | read_temperature_task:63 | altitude: 106.98 m. n. p. m.[0m
+[0m2024-01-27 16:58:22 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.24&pressure=1000.46&altitude=106.98[0m
+[0;32m2024-01-27 16:58:22 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:58:22 GMT[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:58:22 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:58:22 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:58:22 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:58:22 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:58:25 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:25 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:30 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:30 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:35 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:35 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:40 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:40 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:45 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:45 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:50 | DEBUG | inspect_task:78 | Currently available heap: 215608[0m
+[0m2024-01-27 16:58:50 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:58:52 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:58:52 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:58:52 | INFO  | read_temperature_task:61 | temperature: 26.27 C[0m
+[0;32m2024-01-27 16:58:52 | INFO  | read_temperature_task:62 | pressure: 1000.53hPa[0m
+[0;32m2024-01-27 16:58:52 | INFO  | read_temperature_task:63 | altitude: 106.44 m. n. p. m.[0m
+[0m2024-01-27 16:58:52 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.27&pressure=1000.53&altitude=106.44[0m
+[0;32m2024-01-27 16:58:52 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:58:52 GMT[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:58:52 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:58:52 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:58:52 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:58:52 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:58:55 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:58:55 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:00 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:59:00 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:05 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:59:05 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:10 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:59:10 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:15 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:59:15 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:20 | DEBUG | inspect_task:78 | Currently available heap: 215612[0m
+[0m2024-01-27 16:59:20 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:22 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:59:22 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:59:22 | INFO  | read_temperature_task:61 | temperature: 26.27 C[0m
+[0;32m2024-01-27 16:59:22 | INFO  | read_temperature_task:62 | pressure: 1000.48hPa[0m
+[0;32m2024-01-27 16:59:22 | INFO  | read_temperature_task:63 | altitude: 106.84 m. n. p. m.[0m
+[0m2024-01-27 16:59:22 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.27&pressure=1000.48&altitude=106.84[0m
+[0;32m2024-01-27 16:59:23 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:59:23 GMT[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:59:23 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:59:23 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:59:23 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:59:23 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:59:25 | DEBUG | inspect_task:78 | Currently available heap: 215624[0m
+[0m2024-01-27 16:59:25 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:30 | DEBUG | inspect_task:78 | Currently available heap: 215624[0m
+[0m2024-01-27 16:59:30 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:35 | DEBUG | inspect_task:78 | Currently available heap: 215624[0m
+[0m2024-01-27 16:59:35 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:40 | DEBUG | inspect_task:78 | Currently available heap: 215624[0m
+[0m2024-01-27 16:59:40 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:45 | DEBUG | inspect_task:78 | Currently available heap: 215624[0m
+[0m2024-01-27 16:59:45 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:50 | DEBUG | inspect_task:78 | Currently available heap: 215624[0m
+[0m2024-01-27 16:59:50 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 16:59:53 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-27 16:59:53 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-27 16:59:53 | INFO  | read_temperature_task:61 | temperature: 26.30 C[0m
+[0;32m2024-01-27 16:59:53 | INFO  | read_temperature_task:62 | pressure: 1000.49hPa[0m
+[0;32m2024-01-27 16:59:53 | INFO  | read_temperature_task:63 | altitude: 106.76 m. n. p. m.[0m
+[0m2024-01-27 16:59:53 | DEBUG | read_temperature_task:65 | data to send to database: device_id=333333&temperature=26.30&pressure=1000.49&altitude=106.76[0m
+[0;32m2024-01-27 16:59:53 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 27 Jan 2024 16:59:53 GMT[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-27 16:59:53 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1[0m
+[0;32m2024-01-27 16:59:53 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-27 16:59:53 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-27 16:59:53 | INFO  | read_temperature_task:67 | Client POST request returned: 0[0m
+[0m2024-01-27 16:59:55 | DEBUG | inspect_task:78 | Currently available heap: 215628[0m
+[0m2024-01-27 16:59:55 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 17:00:00 | DEBUG | inspect_task:78 | Currently available heap: 215628[0m
+[0m2024-01-27 17:00:00 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 17:00:05 | DEBUG | inspect_task:78 | Currently available heap: 215628[0m
+[0m2024-01-27 17:00:05 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 17:00:10 | DEBUG | inspect_task:78 | Currently available heap: 215628[0m
+[0m2024-01-27 17:00:10 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 17:00:15 | DEBUG | inspect_task:78 | Currently available heap: 215628[0m
+[0m2024-01-27 17:00:15 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m
+[0m2024-01-27 17:00:20 | DEBUG | inspect_task:78 | Currently available heap: 215628[0m
+[0m2024-01-27 17:00:20 | DEBUG | inspect_task:79 | The minimum heap size that was ever available: 206320[0m

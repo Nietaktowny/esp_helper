@@ -1,0 +1,67 @@
+I (3216) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3216) wifi:state: init -> auth (b0)
+I (3226) wifi:state: auth -> assoc (0)
+I (3226) wifi:state: assoc -> run (10)
+I (3236) wifi:connected with TP-LINK_AD8313, aid = 1, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3236) wifi:security: WPA2-PSK, phy: bgn, rssi: -54
+I (3246) wifi:pm start, type: 1
+
+I (3246) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3256) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3266) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-22 23:19:32 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.103[0m
+[0;32mI (4256) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-22 23:19:32 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;33mW (4266) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;32mI (4326) esp_https_ota: Starting OTA...[0m
+[0;32mI (4326) esp_https_ota: Writing to partition subtype 17 at offset 0x110000[0m
+[0;32m2024-01-22 23:19:32 | INFO  | ota_c_validate_image:91 | Running firmware version: 0.0.1.1[0m
+[0m2024-01-22 23:19:32 | DEBUG | ota_c_validate_image:101 | validated new firmware version: 0.0.0.1[0m
+[0;31mE (4346) esp_https_ota: Mismatch chip id, expected 5, found 0[0m
+[0;31m2024-01-22 23:19:32 | ERROR | lib/ota_controller/src/ota_controller.c:188 | ota_c_start:188 | complete image data was not received[0m
+[0m2024-01-22 23:19:32 | DEBUG | inspect_task:99 | Currently available heap: 211940[0m
+[0m2024-01-22 23:19:32 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 211940[0m
+[0m2024-01-22 23:19:32 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-22 23:19:32 | DEBUG | tcp_create_socket:175 | created socket: 55[0m
+[0m2024-01-22 23:19:32 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-22 23:19:32 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.103:27015[0m
+[0m2024-01-22 23:19:32 | DEBUG | tcp_bind_socket:232 | binding socket: 55 to address: 192.168.0.103:34665[0m
+[0m2024-01-22 23:19:32 | DEBUG | tcp_bind_socket:242 | socket: 55 bound to address: 192.168.0.103:27015[0m
+[0m2024-01-22 23:19:32 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 55[0m
+[0;32m2024-01-22 23:19:32 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.103:27015[0m
+[0;32m2024-01-22 23:19:32 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.103 with port 27015 to capture logs.[0m
+I (6196) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:5, ssn:0, winSize:64
+[0m2024-01-22 23:19:37 | DEBUG | inspect_task:99 | Currently available heap: 211368[0m
+[0m2024-01-22 23:19:37 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 209384[0m
+[0m2024-01-22 23:19:42 | DEBUG | inspect_task:99 | Currently available heap: 209632[0m
+[0m2024-01-22 23:19:42 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 207584[0m
+[0m2024-01-22 23:19:47 | DEBUG | inspect_task:99 | Currently available heap: 207896[0m
+[0m2024-01-22 23:19:47 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 206192[0m
+[0m2024-01-22 23:19:52 | DEBUG | inspect_task:99 | Currently available heap: 206160[0m
+[0m2024-01-22 23:19:52 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 204456[0m
+[0m2024-01-22 23:19:57 | DEBUG | inspect_task:99 | Currently available heap: 204424[0m
+[0m2024-01-22 23:19:57 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 202660[0m
+[0m2024-01-22 23:20:02 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:02 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200976[0m
+[0m2024-01-22 23:20:07 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:07 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:12 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:12 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:17 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:17 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:22 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:22 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:27 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:27 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:32 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:32 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:37 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:37 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:42 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:42 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:47 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:47 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:52 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:52 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m
+[0m2024-01-22 23:20:57 | DEBUG | inspect_task:99 | Currently available heap: 202680[0m
+[0m2024-01-22 23:20:57 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 200632[0m

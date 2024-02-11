@@ -1,0 +1,5 @@
+dependencies:
+  idf: '>=5.0' 
+description: Library used to interact with MySQL databases as client.. 
+url: 
+version: 1.0.0

@@ -1,0 +1,93 @@
+[0;33m2024-01-20 10:08:53 | WARN  | lib/wifi_manager/src/wifi_manager.c:90 | wifi_manager_get_stored_ap:90 | Cannot find any stored AP in NVS[0m
+[0m2024-01-20 10:08:53 | DEBUG | wifi_manager_init:240 | wifi manager didn't find stored credentials or couldn't connect, starting AP and HTTP server...[0m
+I (1507) wifi:Total power save buffer number: 16
+[0;32mI (1517) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32m2024-01-20 10:08:54 | INFO  | wifi_c_start_ap:369 | Started AP: 
+SSID: ESP32 
+Password: 12345678[0m
+[0m2024-01-20 10:08:54 | DEBUG | wifi_manager_server_init:340 | http server started[0m
+[0m2024-01-20 10:08:54 | DEBUG | wifi_c_deinit:763 | Deinitializing wifi_controller...[0m
+I (1537) wifi:flush txq
+I (1537) wifi:stop sw txq
+I (1547) wifi:lmac stop hw txq
+I (1547) wifi:Deinit lldesc rx mblock:10
+[0;33m2024-01-20 10:08:54 | WARN  | lib/wifi_controller/src/wifi_controller.c:771 | wifi_c_deinit:771 | wifi_controller deinitialized[0m
+[0m2024-01-20 10:08:55 | DEBUG | nvs_c_open:55 | opened namespace nvs for read and write operations[0m
+[0m2024-01-20 10:08:55 | DEBUG | nvs_c_erase_namespace:143 | erased all key & value pairs in namespace: nvs[0m
+[0m2024-01-20 10:08:55 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m2024-01-20 10:08:55 | INFO  | wifi_manager_erase_ap:163 | Wifi manager stored AP erased[0m
+[0;32m2024-01-20 10:08:55 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m2024-01-20 10:08:55 | DEBUG | wifi_c_init_netif:170 | netif initialized as AP+STA[0m
+[0;32mI (2597) pp: pp rom version: 9387209[0m
+[0;32mI (2597) net80211: net80211 rom version: 9387209[0m
+I (2607) wifi:wifi driver task: 3fca80fc, prio:23, stack:6656, core=0
+I (2617) wifi:wifi firmware version: ce9244d
+I (2617) wifi:wifi certification version: v7.0
+I (2617) wifi:config NVS flash: enabled
+I (2617) wifi:config nano formating: disabled
+I (2627) wifi:Init data frame dynamic rx buffer num: 32
+I (2627) wifi:Init management frame dynamic rx buffer num: 32
+I (2637) wifi:Init management short buffer num: 32
+I (2637) wifi:Init dynamic tx buffer num: 32
+I (2647) wifi:Init static tx FG buffer num: 2
+I (2647) wifi:Init static rx buffer size: 1600
+I (2647) wifi:Init static rx buffer num: 10
+I (2657) wifi:Init dynamic rx buffer num: 32
+[0;32mI (2657) wifi_init: rx ba win: 6[0m
+[0;32mI (2667) wifi_init: tcpip mbox: 32[0m
+[0;32mI (2667) wifi_init: udp mbox: 6[0m
+[0;32mI (2667) wifi_init: tcp mbox: 6[0m
+[0;32mI (2677) wifi_init: tcp tx win: 5744[0m
+[0;32mI (2677) wifi_init: tcp rx win: 5744[0m
+[0;32mI (2687) wifi_init: tcp mss: 1440[0m
+[0;32mI (2687) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (2687) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-20 10:08:55 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+I (2707) wifi:mode : sta (ec:da:3b:36:60:50) + softAP (ec:da:3b:36:60:51)
+I (2707) wifi:enable tsf
+I (2717) wifi:Total power save buffer number: 16
+I (2717) wifi:Init max length of beacon: 752/752
+I (2717) wifi:Init max length of beacon: 752/752
+[0;32m2024-01-20 10:08:55 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0;32mI (2737) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0m2024-01-20 10:08:55 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m2024-01-20 10:08:55 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;31m2024-01-20 10:08:55 | ERROR | lib/nvs_controller/src/nvs_controller.c:127 | nvs_c_read_string:127 | error 4354 when writing data with key: ssid into nvs namespace: ESP_ERR_NVS_NOT_FOUND[0m
+[0;31m2024-01-20 10:08:55 | ERROR | lib/nvs_controller/src/nvs_controller.c:127 | nvs_c_read_string:127 | error 4354 when writing data with key: ssid into nvs namespace: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33m2024-01-20 10:08:55 | WARN  | lib/wifi_manager/src/wifi_manager.c:90 | wifi_manager_get_stored_ap:90 | Cannot find any stored AP in NVS[0m
+[0m2024-01-20 10:08:55 | DEBUG | wifi_manager_init:240 | wifi manager didn't find stored credentials or couldn't connect, starting AP and HTTP server...[0m
+I (3507) wifi:Total power save buffer number: 16
+[0;32mI (3507) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32m2024-01-20 10:08:56 | INFO  | wifi_c_start_ap:369 | Started AP: 
+SSID: ESP32 
+Password: 12345678[0m
+[0;31mE (3517) httpd: httpd_server_init: error in listen (112)[0m
+[0;31m2024-01-20 10:08:56 | ERROR | lib/wifi_manager/src/wifi_http_server.c:322 | wifi_manager_server_init:322 | error -1 during starting http server: ESP_FAIL[0m
+[0;31m2024-01-20 10:08:56 | ERROR | lib/wifi_manager/src/wifi_manager.c:250 | wifi_manager_init:250 | error -1 when trying to start wifi manager server: ESP_FAIL[0m
+[0m2024-01-20 10:08:56 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-20 10:08:56 | DEBUG | tcp_create_socket:175 | created socket: 57[0m
+[0m2024-01-20 10:08:56 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m2024-01-20 10:08:56 | ERROR | lib/tcp_controller/src/tcp_[0m2024-01-20 10:09:03 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:03 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:08 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:08 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:13 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:13 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:18 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:18 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:23 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:23 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:28 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:28 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:33 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:33 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:38 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:38 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:43 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:43 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:48 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:48 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:53 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:53 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m
+[0m2024-01-20 10:09:58 | DEBUG | inspect_task:97 | Currently available heap: 210672[0m
+[0m2024-01-20 10:09:58 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 195284[0m

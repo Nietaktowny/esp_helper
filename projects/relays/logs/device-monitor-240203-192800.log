@@ -1,0 +1,159 @@
+I (3828) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3828) wifi:state: init -> auth (b0)
+I (3828) wifi:state: auth -> assoc (0)
+I (3838) wifi:state: assoc -> run (10)
+I (3848) wifi:connected with TP-LINK_AD8313, aid = 4, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3848) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+I (3858) wifi:pm start, type: 1
+
+I (3858) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3868) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:04 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.100[0m
+[0;32mI (4868) esp_netif_handlers: sta ip: 192.168.0.100, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:04 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m1970-01-01 00:00:04 | INFO  | event_handler:26 | OTA started[0m
+[0;31mE (4888) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/ota_controller/src/ota_controller.c:71 | ota_c_do_simple_ota:71 | error -1 during https ota: ESP_FAIL[0m
+[0;32m1970-01-01 00:00:04 | INFO  | event_handler:26 | OTA started[0m
+[0;31mE (4918) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:04 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:92 | Currently available heap: 214772[0m
+[0;32m1970-01-01 00:00:04 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:93 | [0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:283 | The minimum heap size that was ever available: 214772[0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | i2c_c_set_device_addr:117 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/i2c_controller/src/i2c_controller.c:146 | i2c_c_read:146 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:175 | [0m
+created socket: 54[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | i2c_c_set_device_addr:117 | [0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:211 | changed device address from 0XEE to 0XECpreparing address...[0m
+[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.100:27015[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:302 | found BMP280 device on bus with address: 0XEC and ID: 0[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.100:34665[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_calibrate:252 | reading BMP280 out calibration values...[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:242 | socket: 54 bound to address: 192.168.0.100:27015[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_calibrate:272 | compensation values of BMP280 device updated:
+	T1: 0x3f40018c
+	T2: 0x3ffb3a20
+	T3: 0x3f4002a0
+	P1: 0x3f402938
+	P2: 0x110
+	P3: 0x3ffb3a20
+	P4: 0x3f4002a0
+	P5: 0x3f4029d4
+	P6: 0x67036afd
+	P7: 0x96300032
+	P8: 0xbd0d6f7
+	P9: 0xff7f1220 [0m1970-01-01 00:00:04 | DEBUG | tcp_socket_listen:253 | [0m
+trying to listen on socket: 54[0m
+[0;32m1970-01-01 00:00:04 | INFO  | bmp_init:444 | new BMP280 device ready to use![0m
+[0;32m1970-01-01 00:00:04 | INFO  | tcp_socket_listen:260 | [0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+listening on socket: 192.168.0.100:27015[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_set_standby_time:173 | config register value changed to: 160[0m
+[0;32m1970-01-01 00:00:04 | INFO  | cli_set_remote_logging:63 | [0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_config:79 | Connect to device on IP 192.168.0.100 with port 27015 to capture logs.readed config register value: 0XA0[0m
+[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_set_iir_filter:237 | config register value of BMP280 device changed to: 0xa0[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_ctrl_
+e[0;32m2024-02-03 18:28:10 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:12 | DEBUG | inspect_task:92 | Currently available heap: 208504[0m
+[0m2024-02-03 18:28:12 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 201020[0m
+[0;32m2024-02-03 18:28:14 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:17 | DEBUG | inspect_task:92 | Currently available heap: 208504[0m
+[0m2024-02-03 18:28:17 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 201020[0m
+[0;32m2024-02-03 18:28:18 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0;32m2024-02-03 18:28:22 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:22 | DEBUG | inspect_task:92 | Currently available heap: 208504[0m
+[0m2024-02-03 18:28:22 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 201020[0m
+[0;32m2024-02-03 18:28:26 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:27 | DEBUG | inspect_task:92 | Currently available heap: 208504[0m
+[0m2024-02-03 18:28:27 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 201020[0m
+[0;32m2024-02-03 18:28:30 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:32 | DEBUG | inspect_task:92 | Currently available heap: 208504[0m
+[0m2024-02-03 18:28:32 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 201020[0m
+[0m2024-02-03 18:28:33 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-02-03 18:28:33 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-02-03 18:28:33 | INFO  | read_temperature_task:62 | temperature: 24.31 C[0m
+[0;32m2024-02-03 18:28:33 | INFO  | read_temperature_task:63 | pressure: 990.65hPa[0m
+[0;32m2024-02-03 18:28:33 | INFO  | read_temperature_task:64 | altitude: 189.85 m. n. p. m.[0m
+[0m2024-02-03 18:28:33 | DEBUG | read_temperature_task:66 | data to send to database: device_id=333333&temperature=24.31&pressure=990.65&altitude=189.85[0m
+[0;32m2024-02-03 18:28:33 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 03 Feb 2024 18:28:33 GMT[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.2[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-02-03 18:28:33 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073429088[0m
+[0;32m2024-02-03 18:28:33 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-02-03 18:28:33 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-02-03 18:28:33 | INFO  | read_temperature_task:68 | Client POST request returned: 0[0m
+[0;32m2024-02-03 18:28:34 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:37 | DEBUG | inspect_task:92 | Currently available heap: 208292[0m
+[0m2024-02-03 18:28:37 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200744[0m
+[0;32m2024-02-03 18:28:38 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0;32m2024-02-03 18:28:42 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:42 | DEBUG | inspect_task:92 | Currently available heap: 208292[0m
+[0m2024-02-03 18:28:42 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200744[0m
+[0;32m2024-02-03 18:28:46 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:47 | DEBUG | inspect_task:92 | Currently available heap: 208292[0m
+[0m2024-02-03 18:28:47 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200744[0m
+[0;32m2024-02-03 18:28:50 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:52 | DEBUG | inspect_task:92 | Currently available heap: 208292[0m
+[0m2024-02-03 18:28:52 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200744[0m
+[0;32m2024-02-03 18:28:54 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:28:57 | DEBUG | inspect_task:92 | Currently available heap: 208292[0m
+[0m2024-02-03 18:28:57 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200744[0m
+[0;32m2024-02-03 18:28:58 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0;32m2024-02-03 18:29:02 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:29:02 | DEBUG | inspect_task:92 | Currently available heap: 208296[0m
+[0m2024-02-03 18:29:02 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200744[0m
+[0m2024-02-03 18:29:03 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-02-03 18:29:03 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-02-03 18:29:03 | INFO  | read_temperature_task:62 | temperature: 24.41 C[0m
+[0;32m2024-02-03 18:29:03 | INFO  | read_temperature_task:63 | pressure: 990.53hPa[0m
+[0;32m2024-02-03 18:29:03 | INFO  | read_temperature_task:64 | altitude: 190.83 m. n. p. m.[0m
+[0m2024-02-03 18:29:03 | DEBUG | read_temperature_task:66 | data to send to database: device_id=333333&temperature=24.41&pressure=990.53&altitude=190.83[0m
+[0;32m2024-02-03 18:29:03 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 03 Feb 2024 18:29:04 GMT[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.2[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-02-03 18:29:04 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-02-03 18:29:05 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-02-03 18:29:05 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-02-03 18:29:05 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073429088[0m
+[0;32m2024-02-03 18:29:05 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-02-03 18:29:05 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-02-03 18:29:05 | INFO  | read_temperature_task:68 | Client POST request returned: 0[0m
+[0;32m2024-02-03 18:29:06 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:29:07 | DEBUG | inspect_task:92 | Currently available heap: 208084[0m
+[0m2024-02-03 18:29:07 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200532[0m
+[0;32m2024-02-03 18:29:10 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:29:12 | DEBUG | inspect_task:92 | Currently available heap: 208084[0m
+[0m2024-02-03 18:29:12 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200532[0m
+[0;32m2024-02-03 18:29:14 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:29:17 | DEBUG | inspect_task:92 | Currently available heap: 208084[0m
+[0m2024-02-03 18:29:17 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200532[0m
+[0;32m2024-02-03 18:29:18 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0;32m2024-02-03 18:29:22 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:29:22 | DEBUG | inspect_task:92 | Currently available heap: 208084[0m
+[0m2024-02-03 18:29:22 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200532[0m
+[0;32m2024-02-03 18:29:26 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:29:27 | DEBUG | inspect_task:92 | Currently available heap: 208084[0m
+[0m2024-02-03 18:29:27 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 200532[0m

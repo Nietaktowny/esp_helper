@@ -1,0 +1,371 @@
+I (587) wifi:Init management short buffer num: 32
+I (587) wifi:Init dynamic tx buffer num: 32
+I (587) wifi:Init static tx FG buffer num: 2
+I (597) wifi:Init static rx buffer size: 1600
+I (597) wifi:Init static rx buffer num: 10
+I (607) wifi:Init dynamic rx buffer num: 32
+[0;32mI (607) wifi_init: rx ba win: 6[0m
+[0;32mI (607) wifi_init: tcpip mbox: 32[0m
+[0;32mI (617) wifi_init: udp mbox: 6[0m
+[0;32mI (617) wifi_init: tcp mbox: 6[0m
+[0;32mI (617) wifi_init: tcp tx win: 5744[0m
+[0;32mI (627) wifi_init: tcp rx win: 5744[0m
+[0;32mI (627) wifi_init: tcp mss: 1440[0m
+[0;32mI (637) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (637) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:03:12 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (657) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (697) wifi:mode : sta (ec:da:3b:37:ed:5c)
+I (697) wifi:enable tsf
+[0;32m1970-01-01 00:03:12 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:03:12 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0;31m1970-01-01 00:03:12 | ERROR | lib/nvs_controller/src/nvs_controller.c:70 | nvs_c_open_read_only:70 | error 4354 when opening nvs namespace: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33m1970-01-01 00:03:12 | WARN  | lib/wifi_manager/src/wifi_manager.c:90 | wifi_manager_get_stored_ap:90 | Cannot find any stored AP in NVS[0m
+[0m1970-01-01 00:03:12 | DEBUG | wifi_manager_init:240 | wifi manager didn't find stored credentials or couldn't connect, starting AP and HTTP server...[0m
+[0m1970-01-01 00:03:12 | DEBUG | wifi_c_deinit:763 | Deinitializing wifi_controller...[0m
+I (757) wifi:flush txq
+I (757) wifi:stop sw txq
+I (757) wifi:lmac stop hw txq
+I (767) wifi:Deinit lldesc rx mblock:10
+[0;33m1970-01-01 00:03:12 | WARN  | lib/wifi_controller/src/wifi_controller.c:771 | wifi_c_deinit:771 | wifi_controller deinitialized[0m
+[0m1970-01-01 00:03:12 | DEBUG | wifi_c_init_netif:170 | netif initialized as AP+STA[0m
+[0;32mI (787) pp: pp rom version: 9387209[0m
+[0;32mI (787) net80211: net80211 rom version: 9387209[0m
+I (807) wifi:wifi driver task: 3fc9fb7c, prio:23, stack:6656, core=0
+I (807) wifi:wifi firmware version: ce9244d
+I (807) wifi:wifi certification version: v7.0
+I (807) wifi:config NVS flash: enabled
+I (817) wifi:config nano formating: disabled
+I (817) wifi:Init data frame dynamic rx buffer num: 32
+I (827) wifi:Init management frame dynamic rx buffer num: 32
+I (827) wifi:Init management short buffer num: 32
+I (837) wifi:Init dynamic tx buffer num: 32
+I (837) wifi:Init static tx FG buffer num: 2
+I (837) wifi:Init static rx buffer size: 1600
+I (847) wifi:Init static rx buffer num: 10
+I (847) wifi:Init dynamic rx buffer num: 32
+[0;32mI (857) wifi_init: rx ba win: 6[0m
+[0;32mI (857) wifi_init: tcpip mbox: 32[0m
+[0;32mI (857) wifi_init: udp mbox: 6[0m
+[0;32mI (867) wifi_init: tcp mbox: 6[0m
+[0;32mI (867) wifi_init: tcp tx win: 5744[0m
+[0;32mI (867) wifi_init: tcp rx win: 5744[0m
+[0;32mI (877) wifi_init: tcp mss: 1440[0m
+[0;32mI (877) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (887) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:03:12 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+I (907) wifi:mode : sta (ec:da:3b:37:ed:5c) + softAP (ec:da:3b:37:ed:5d)
+I (907) wifi:enable tsf
+I (907) wifi:Total power save buffer number: 16
+I (907) wifi:Init max length of beacon: 752/752
+I (917) wifi:Init max length of beacon: 752/752
+[0;32m1970-01-01 00:03:12 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0;32mI (927) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0m1970-01-01 00:03:12 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+I (1617) wifi:Total power save buffer number: 16
+[0;32mI (1627) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32m1970-01-01 00:03:13 | INFO  | wifi_c_start_ap:369 | Started AP: 
+SSID: ESP32 
+Password: 12345678[0m
+[0m1970-01-01 00:03:13 | DEBUG | wifi_manager_server_init:340 | http server started[0m
+[0;33mW (1637) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;31mE (1647) esp-tls: couldn't get hostname for :wmytych.usermd.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1657) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1667) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (1677) esp_https_ota: Failed to open HTTP connection: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1677) esp_https_ota: Failed to establish HTTP connection[0m
+[0;31m1970-01-01 00:03:13 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 28674, ESP HTTPS OTA Begin failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32m1970-01-01 00:03:13 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:03:13 | DEBUG | inspect_task:72 | Currently available heap: 186092[0m
+[0m1970-01-01 00:03:13 | DEBUG | inspect_task:73 | The minimum heap size that was ever available: 186092[0m
+[0m1970-01-01 00:03:13 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:03:13 | DEBUG | i2c_c_set_device_addr:115 | ch[0;32m1970-01-01 00:03:14 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:03:14 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+[0;32mI (537) pp: pp rom version: 9387209[0m
+[0;32mI (547) net80211: net80211 rom version: 9387209[0m
+I (557) wifi:wifi driver task: 3fca25f4, prio:23, stack:6656, core=0
+I (557) wifi:wifi firmware version: ce9244d
+I (557) wifi:wifi certification version: v7.0
+I (567) wifi:config NVS flash: enabled
+I (567) wifi:config nano formating: disabled
+I (577) wifi:Init data frame dynamic rx buffer num: 32
+I (577) wifi:Init management frame dynamic rx buffer num: 32
+I (587) wifi:Init management short buffer num: 32
+I (587) wifi:Init dynamic tx buffer num: 32
+I (587) wifi:Init static tx FG buffer num: 2
+I (597) wifi:Init static rx buffer size: 1600
+I (597) wifi:Init static rx buffer num: 10
+I (607) wifi:Init dynamic rx buffer num: 32
+[0;32mI (607) wifi_init: rx ba win: 6[0m
+[0;32mI (607) wifi_init: tcpip mbox: 32[0m
+[0;32mI (617) wifi_init: udp mbox: 6[0m
+[0;32mI (617) wifi_init: tcp mbox: 6[0m
+[0;32mI (617) wifi_init: tcp tx win: 5744[0m
+[0;32mI (627) wifi_init: tcp rx win: 5744[0m
+[0;32mI (627) wifi_init: tcp mss: 1440[0m
+[0;32mI (637) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (637) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:03:15 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (657) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (697) wifi:mode : sta (ec:da:3b:37:ed:5c)
+I (697) wifi:enable tsf
+[0;32m1970-01-01 00:03:15 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:03:15 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0;31m1970-01-01 00:03:15 | ERROR | lib/nvs_controller/src/nvs_controller.c:70 | nvs_c_open_read_only:70 | error 4354 when opening nvs namespace: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33m1970-01-01 00:03:15 | WARN  | lib/wifi_manager/src/wifi_manager.c:90 | wifi_manager_get_stored_ap:90 | Cannot find any stored AP in NVS[0m
+[0m1970-01-01 00:03:15 | DEBUG | wifi_manager_init:240 | wifi manager didn't find stored credentials or couldn't connect, starting AP and HTTP server...[0m
+[0m1970-01-01 00:03:15 | DEBUG | wifi_c_deinit:763 | Deinitializing wifi_controller...[0m
+I (757) wifi:flush txq
+I (757) wifi:stop sw txq
+I (757) wifi:lmac stop hw txq
+I (767) wifi:Deinit lldesc rx mblock:10
+[0;33m1970-01-01 00:03:15 | WARN  | lib/wifi_controller/src/wifi_controller.c:771 | wifi_c_deinit:771 | wifi_controller deinitialized[0m
+[0m1970-01-01 00:03:15 | DEBUG | wifi_c_init_netif:170 | netif initialized as AP+STA[0m
+[0;32mI (787) pp: pp rom version: 9387209[0m
+[0;32mI (787) net80211: net80211 rom version: 9387209[0m
+I (807) wifi:wifi driver task: 3fc9fb7c, prio:23, stack:6656, core=0
+I (807) wifi:wifi firmware version: ce9244d
+I (807) wifi:wifi certification version: v7.0
+I (807) wifi:config NVS flash: enabled
+I (817) wifi:config nano formating: disabled
+I (817) wifi:Init data frame dynamic rx buffer num: 32
+I (827) wifi:Init management frame dynamic rx buffer num: 32
+I (827) wifi:Init management short buffer num: 32
+I (837) wifi:Init dynamic tx buffer num: 32
+I (837) wifi:Init static tx FG buffer num: 2
+I (837) wifi:Init static rx buffer size: 1600
+I (847) wifi:Init static rx buffer num: 10
+I (847) wifi:Init dynamic rx buffer num: 32
+[0;32mI (857) wifi_init: rx ba win: 6[0m
+[0;32mI (857) wifi_init: tcpip mbox: 32[0m
+[0;32mI (857) wifi_init: udp mbox: 6[0m
+[0;32mI (867) wifi_init: tcp mbox: 6[0m
+[0;32mI (867) wifi_init: tcp tx win: 5744[0m
+[0;32mI (867) wifi_init: tcp rx win: 5744[0m
+[0;32mI (877) wifi_init: tcp mss: 1440[0m
+[0;32mI (877) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (887) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:03:15 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+I (907) wifi:mode : sta (ec:da:3b:37:ed:5c) + softAP (ec:da:3b:37:ed:5d)
+I (907) wifi:enable tsf
+I (907) wifi:Total power save buffer number: 16
+I (907) wifi:Init max length of beacon: 752/752
+I (917) wifi:Init max length of beacon: 752/752
+[0;32m1970-01-01 00:03:15 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0;32mI (927) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0m1970-01-01 00:03:15 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+I (1617) wifi:Total power save buffer number: 16
+[0;32mI (1627) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32m1970-01-01 00:03:15 | INFO  | wifi_c_start_ap:369 | Started AP: 
+SSID: ESP32 
+Password: 12345678[0m
+[0m1970-01-01 00:03:16 | DEBUG | wifi_manager_server_init:340 | http server started[0m
+[0;33mW (1637) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;31mE (1657) esp-tls: couldn't get hostname for :wmytych.usermd.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1657) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1667) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (1677) esp_https_ota: Failed to open HTTP connection: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1677) esp_https_ota: Failed to establish HTTP connection[0m
+[0;31m1970-01-01 00:03:16 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 28674, ESP HTTPS OTA Begin failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32m1970-01-01 00:03:16 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:03:16 | DEBUG | inspect_task:72 | Currently available heap: 186092[0m
+[0m1970-01-01 00:03:16 | DEBUG | inspect_task:73 | The minimum heap size that was ever available: 186092[0m
+[0m1970-01-01 00:03:16 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:03:16 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0;32mI (1747) main_task: Returned from app_main()[0m
+[0;31m1970-01-01 00:03:16 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m1970-01-01 00:03:16 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:03:16 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0;31m1970-01-01 00:03:16 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0;33m1970-01-01 00:03:16 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:03:16 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+[0;31m1970-01-01 00:03:16 | ERROR | lib/bmp280/src/bmp280.c:449 | bmp_init:449 | no BMP280 device was found[0m
+[0;31m1970-01-01 00:03:16 | ERROR | src/main.c     :42 | read_temperature_task:42 | BMP280 device not found[0m
+[0;31m1970-01-01 00:03:16 | ERROR | lib/bmp280/src/bmp280.c:403 | bmp_configure:403 | BMP device handle cannot be NULL[0m
+[0;31m1970-01-01 00:03:16 | ERROR | src/main.c     :47 | read_temperature_task:47 | cannot configure BMP280 device[0m
+Guru Meditation Error: Core  0 panic'ed (Load access fault). Exception was unhandled.
+
+Core  0 register dump:
+MEPC    : 0x42001318  RA      : 0x42000182  SP      : 0x3fcb1220  GP      : 0x3fc92600  
+TP      : 0x3fc848e0  T0      : 0x4005890e  T1      : 0x50000000  T2      : 0x00000000  
+S0/FP   : 0x3fc9d2d4  S1      : 0x00000000  A0      : 0x00000000  A1      : 0x3fcb0e58  
+A2      : 0x00000000  A3      : 0x00000001  A4      : 0x3fc99000  A5      : 0x00000000  
+A6      : 0xa0000000  A7      : 0x0000000a  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x00000000  T5      : 0x00000000  T6      : 0x00000000  
+MSTATUS : 0x00001881  MTVEC   : 0x40380001  MCAUSE  : 0x00000005  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+3fcb1220: 0x0000002f 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb1240: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb1260: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb1280: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb12a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb12c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb12e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb1300: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb1320: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000003 0x000000a0 0x00000003 0x00000003
+3fcb1340: 0x00000005 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb1360: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x4038a802
+3fcb1380: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb13a0: 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000154 0x3fcb0c90 0x000000eb
+3fcb13c0: 0x3fc94b4c 0x3fc94b4c 0x3fcb13b8 0x3fc94b44 0x00000018 0x3fc9d284 0x3fc9d284 0x3fcb13b8
+3fcb13e0: 0x00000000 0x00000001 0x3fcaf414 0x5f676f6c 0x6b736174 0x3fcb0c00 0x000000eb 0x00000000
+3fcb1400: 0x3fcb13b0 0x00000001 0x00000001 0x00000000 0x00000000 0x00000000 0x3fc99f90 0x3fc99ff8
+3fcb1420: 0x3fc9a060 0x00000000 0x00000000 0x00000001 0x00000000 0x00000000 0x00000000 0x4205c7fe
+3fcb1440: 0x00000000 0x00000000 0x00000000 0x00000000 0x3fcb1510 0x00000000 0x00000000 0x00000000
+3fcb1460: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb1480: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb14a0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb14c0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb14e0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+3fcb1500: 0x00000000 0x00000000 0x3f000000 0x00000024 0x00000010 0x00000003 0x00000000 0x00000001
+3fcb1520: 0x00000000 0x00000046 0x00000004 0x00000000 0x00000000 0x00001fa0 0xa5a5a5a5 0xa5a5a5a5
+3fcb1540: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcb1560: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcb1580: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcb15a0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcb15c0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcb15e0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+3fcb1600: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+
+
+
+ELF file SHA256: 46714825a1ad3fbb
+
+Rebooting...
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xf (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 28 2024 19:08:21[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (95) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) boot: Defaulting to factory image[0m
+[0;32mI (111) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2d3b0h (185264) map[0m
+[0;32mI (149) esp_image: segment 1: paddr=0003d3d8 vaddr=3fc91e00 size=02a88h ( 10888) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=0003fe68 vaddr=40380000 size=001b0h (   432) load[0m
+[0;32mI (155) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=bda74h (776820) map[0m
+[0;32mI (287) esp_image: segment 4: paddr=000fda9c vaddr=403801b0 size=11b58h ( 72536) load[0m
+[0;32mI (307) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (307) boot: Disabling RNG early entropy source...[0m
+[0;32mI (318) cpu_start: Unicore app[0m
+[0;32mI (319) cpu_start: Pro cpu up.[0m
+[0;32mI (327) cpu_start: Pro cpu start user code[0m
+[0;32mI (327) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (327) cpu_start: Application information:[0m
+[0;32mI (330) cpu_start: Project name:     esp_startup[0m
+[0;32mI (336) cpu_start: App version:      0.0.0.2[0m
+[0;32mI (341) cpu_start: Compile time:     Jan 28 2024 19:32:15[0m
+[0;32mI (347) cpu_start: ELF file SHA256:  46714825a1ad3fbb...[0m
+[0;32mI (353) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (357) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (362) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (367) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (372) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (379) heap_init: At 3FC99590 len 00043180 (268 KiB): DRAM[0m
+[0;32mI (385) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (392) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (399) spi_flash: detected chip: generic[0m
+[0;32mI (403) spi_flash: flash io: dio[0m
+[0;32mI (407) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (413) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (421) app_start: Starting scheduler on CPU0[0m
+[0;32mI (426) main_task: Started on CPU0[0m
+[0;32mI (426) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:03:17 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:03:17 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+[0;32mI (526) pp: pp rom version: 9387209[0m
+[0;32mI (536) net80211: net80211 rom version: 9387209[0m
+I (546) wifi:wifi driver task: 3fca25f4, prio:23, stack:6656, core=0
+I (546) wifi:wifi firmware version: ce9244d
+I (546) wifi:wifi certification version: v7.0
+I (556) wifi:config NVS flash: enabled
+I (556) wifi:config nano formating: disabled
+I (566) wifi:Init data frame dynamic rx buffer num: 32
+I (566) wifi:Init management frame dynamic rx buffer num: 32
+I (576) wifi:Init management short buffer num: 32
+I (576) wifi:Init dynamic tx buffer num: 32
+I (576) wifi:Init static tx FG buffer num: 2
+I (586) wifi:Init static rx buffer size: 1600
+I (586) wifi:Init static rx buffer num: 10
+I (596) wifi:Init dynamic rx buffer num: 32
+[0;32mI (596) wifi_init: rx ba win: 6[0m
+[0;32mI (596) wifi_init: tcpip mbox: 32[0m
+[0;32mI (606) wifi_init: udp mbox: 6[0m
+[0;32mI (606) wifi_init: tcp mbox: 6[0m
+[0;32mI (606) wifi_init: tcp tx win: 5744[0m
+[0;32mI (616) wifi_init: tcp rx win: 5744[0m
+[0;32mI (616) wifi_init: tcp mss: 1440[0m
+[0;32mI (626) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (626) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:03:17 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (646) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (686) wifi:mode : sta (ec:da:3b:37:ed:5c)
+I (686) wifi:enable tsf
+[0;32m1970-01-01 00:03:17 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:03:17 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0;31m1970-01-01 00:03:17 | ERROR | lib/nvs_controller/src/nvs_controller.c:70 | nvs_c_open_read_only:70 | error 4354 when opening nvs namespace: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33m1970-01-01 00:03:17 | WARN  | lib/wifi_manager/src/wifi_manager.c:90 | wifi_manager_get_stored_ap:90 | Cannot find any stored AP in NVS[0m
+[0m1970-01-01 00:03:17 | DEBUG | wifi_manager_init:240 | wifi manager didn't find stored credentials or couldn't connect, starting AP and HTTP server...[0m
+[0m1970-01-01 00:03:17 | DEBUG | wifi_c_deinit:763 | Deinitializing wifi_controller...[0m
+I (746) wifi:flush txq
+I (746) wifi:stop sw txq
+I (756) wifi:lmac stop hw txq
+I (756) wifi:Deinit lldesc rx mblock:10
+[0;33m1970-01-01 00:03:17 | WARN  | lib/wifi_controller/src/wifi_controller.c:771 | wifi_c_deinit:771 | wifi_controller deinitialized[0m
+[0m1970-01-01 00:03:17 | DEBUG | wifi_c_init_netif:170 | netif initialized as AP+STA[0m
+[0;32mI (776) pp: pp rom version: 9387209[0m
+[0;32mI (786) net80211: net80211 rom version: 9387209[0m
+I (796) wifi:wifi driver task: 3fc9fb7c, prio:23, stack:6656, core=0
+I (796) wifi:wifi firmware version: ce9244d
+I (796) wifi:wifi certification version: v7.0
+I (806) wifi:config NVS flash: enabled
+I (806) wifi:config nano formating: disabled
+I (806) wifi:Init data frame dynamic rx buffer num: 32
+I (816) wifi:Init management frame dynamic rx buffer num: 32
+I (816) wifi:Init management short buffer num: 32
+I (826) wifi:Init dynamic tx buffer num: 32
+I (826) wifi:Init static tx FG buffer num: 2
+I (836) wifi:Init static rx buffer size: 1600
+I (836) wifi:Init static rx buffer num: 10
+I (836) wifi:Init dynamic rx buffer num: 32
+[0;32mI (846) wifi_init: rx ba win: 6[0m
+[0;32mI (846) wifi_init: tcpip mbox: 32[0m
+[0;32mI (856) wifi_init: udp mbox: 6[0m
+[0;32mI (856) wifi_init: tcp mbox: 6[0m
+[0;32mI (856) wifi_init: tcp tx win: 5744[0m
+[0;32mI (866) wifi_init: tcp rx win: 5744[0m
+[0;32mI (866) wifi_init: tcp mss: 1440[0m
+[0;32mI (876) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (876) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:03:17 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+I (896) wifi:mode : sta (ec:da:3b:37:ed:5c) + softAP (ec:da:3b:37:ed:5d)
+I (896) wifi:enable tsf
+I (896) wifi:Total power save buffer number: 16
+I (896) wifi:Init max length of beacon: 752/752
+I (906) wifi:Init max length of beacon: 752/752
+[0;32m1970-01-01 00:03:17 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0;32mI (916) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0m1970-01-01 00:03:17 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m

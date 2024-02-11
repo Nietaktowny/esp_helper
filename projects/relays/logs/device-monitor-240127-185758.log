@@ -1,0 +1,2862 @@
+I (3580) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3580) wifi:state: init -> auth (b0)
+I (3590) wifi:state: auth -> assoc (0)
+I (3590) wifi:state: assoc -> run (10)
+I (3600) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3600) wifi:security: WPA2-PSK, phy: bgn, rssi: -42
+I (3610) wifi:pm start, type: 1
+
+I (3620) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3630) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:04 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4610) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:04 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4630) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:74 | Currently available heap: 215020[0m
+[0;32m1970-01-01 00:00:04 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:168 | [0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:283 | [0m1970-01-01 00:00:04 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 215020Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m
+[0m1970-01-01 00:00:04 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+preparing socket...[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:175 | [0m
+created socket: 54[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:220 | [0;31m1970-01-01 00:00:04 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | prepared address 192.168.0.104:27015error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:232 | [0;33m1970-01-01 00:00:04 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | binding socket: 54 to address: 192.168.0.104:34665[0m
+no BMP280 device found on bus![0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:242 | [0m1970-01-01 00:00:04 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m
+***ERROR*** A stack overflow in task log_task has been detected.
+
+
+Backtrace: 0x40082db2:0x3ffba2a0 0x40089f41:0x3ffba2c0 0x4008cc52:0x3ffba2e0 0x4008b5c7:0x3ffba360 0x4008cf28:0x3ffba380 0x4008ceda:0x3ffb4068 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba2a0 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba2c0 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x4008cc52:0x3ffba2e0 in vApplicationStackOverflowHook at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+  #3  0x4008b5c7:0x3ffba360 in vTaskSwitchContext at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+  #4  0x4008cf28:0x3ffba380 in _frxt_dispatch at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+  #5  0x4008ceda:0x3ffb4068 in _frxt_int_exit at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 st
+rI (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3532) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3552) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3552) wifi:security: WPA2-PSK, phy: bgn, rssi: -42
+I (3552) wifi:pm start, type: 1
+
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3592) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:08 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4562) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:08 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4572) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:08 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:08 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:08 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:08 | DEBUG | inspect_task:74 | Currently available heap: 214608[0m
+[0m1970-01-01 00:00:08 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214588[0m
+[0m1970-01-01 00:00:08 | DEBUG | i2c_c_set_device_addr:115 | [0m1970-01-01 00:00:08 | DEBUG | tcp_create_socket:168 | changed device address from 0 to 0XEEpreparing socket...[0m
+[0m
+[0m1970-01-01 00:00:08 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:00:08 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:00:08 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:00:08 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:08 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m
+[0;31m1970-01-01 00:00:08 | ERROR | lib/bmp280/src/bmp280.c:91 | bmp_i2c_get_ctrl_meas:91 | error -1 during reading data acquisition options of the BMP280 device: ESP_FAIL[0m1970-01-01 00:00:08 | DEBUG | tcp_bind_socket:232 | [0m
+bindn
+***ERROR*** A stack overflow in task log_task has been detected.
+
+
+Backtrace: 0x40082db2:0x3ffba2a0 0x40089f41:0x3ffba2c0 0x4008cc52:0x3ffba2e0 0x4008b5c7:0x3ffba360 0x4008cf28:0x3ffba380 0x4008ceda:0x3ffb4068 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba2a0 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba2c0 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x4008cc52:0x3ffba2e0 in vApplicationStackOverflowHook at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+  #3  0x4008b5c7:0x3ffba360 in vTaskSwitchContext at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+  #4  0x4008cf28:0x3ffba380 in _frxt_dispatch at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+  #5  0x4008ceda:0x3ffb4068 in _frxt_int_exit at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:09 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:09 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:09 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:10 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:10 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:10 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:10 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:10 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:10 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:10 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:10 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:10 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:10 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3532) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3552) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3552) wifi:security: WPA2-PSK, phy: bgn, rssi: -41
+I (3562) wifi:pm start, type: 1
+
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3642) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:13 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4562) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:13 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4572) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:13 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:13 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:13 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:00:13 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:13 | DEBUG | inspect_task:75 | [0m1970-01-01 00:00:13 | DEBUG | bmp_i2c_identify_chip:283 | The minimum heap size that was ever available: 214880[0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:13 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:00:13 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:13 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:00:13 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m1970-01-01 00:00:13 | DEBUG | tcp_prepare_address:220 | [0m1970-01-01 00:00:13 | DEBUG | bmp_i2c_identify_chip:296 | prepared address 192.168.0.104:27015BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m
+[0m1970-01-01 00:00:13 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:00:13 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m1970-01-01 00:00:13 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:13 | DEBUG | tcp_bind_socket:242 | [0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0;33m1970-01-01 00:00:13 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:00:13 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0m1970-01-01 00:00:13 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+     Guru Meditation Error: Core  1 panic'ed (Unknown). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x4000c3f0  PS      : 0x00060430  A0      : 0x8012aff4  A1      : 0x8000bd86  
+A2      : 0x3ffba420  A3      : 0x00000000  A4      : 0x401031f4  A5      : 0x00000080  
+A6      : 0x00000000  A7      : 0x00000000  A8      : 0x00000001  A9      : 0x80001180  
+A10     : 0x3ffba440  A11     : 0x3ffafd14  A12     : 0x00000002  A13     : 0x3ffaee0c  
+A14     : 0x00000080  A15     : 0xb33fffff  SAR     : 0xb33fffff  EXCCAUSE: 0x80059301  
+EXCVADDR: 0x3ffba460  LBEG    : 0x3ffafd14  LEND    : 0x3ffaebac  LCOUNT  : 0x3ffaee0c  
+
+
+Backtrace: 0x4000c3ed:0x8000bd86 |<-CORRUPTED
+
+  #0  0x4000c3ed:0x8000bd86 in ?? ??:0
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:14 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:14 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:14 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:14 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:14 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:14 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:14 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:14 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:14 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:14 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:14 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:14 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:14 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3532) wifi:state: auth -> assoc (0)
+I (3542) wifi:state: assoc -> run (10)
+I (3582) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3582) wifi:security: WPA2-PSK, phy: bgn, rssi: -42
+I (3582) wifi:pm start, type: 1
+
+I (3612) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3622) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:18 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4592) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:18 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4612) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:18 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:18 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:18 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:00:18 | DEBUG | bmp_i2c_identify_chip:283 | [0m1970-01-01 00:00:18 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 213468Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m
+[0m1970-01-01 00:00:18 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:18 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:18 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0;31m1970-01-01 00:00:18 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m1970-01-01 00:00:18 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:00:18 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:00:18 | DEBUG | tcp_prepare_address:220 | [0m1970-01-01 00:00:18 | DEBUG | i2c_c_set_device_addr:115 | prepared address 192.168.0.104:27015changed device address from 0XEE to 0XEC[0m
+[0m
+[0m1970-01-01 00:00:18 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;31m1970-01-01 00:00:18 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:18 | DEBUG | tcp_bind_socket:242 | [0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0;33m1970-01-01 00:00:18 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:00:18 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0m1970-01-01 00:00:18 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4011ff74  PS      : 0x00060830  A0      : 0x8012f29e  A1      : 0x3ffba4c0  
+A2      : 0x00000004  A3      : 0x00000080  A4      : 0x3ffba744  A5      : 0x00000000  
+A6      : 0x3ffba6ac  A7      : 0x3ffba770  A8      : 0x80083eb8  A9      : 0x3ffba490  
+A10     : 0x00000000  A11     : 0xffffffff  A12     : 0x00000004  A13     : 0x3ffaed30  
+A14     : 0x00000002  A15     : 0x0000003d  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4011ff71:0x3ffba4c0 0x4012f29b:0x3ffba4f0 0x4012811d:0x3ffba510 0x40128ad6:0x3ffba830
+
+  #0  0x4011ff71:0x3ffba4c0 in __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/fvwrite.c:60
+  #1  0x4012f29b:0x3ffba4f0 in __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+      (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+  #2  0x4012811d:0x3ffba510 in _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1694 (discriminator 3)
+  #3  0x40128ad6:0x3ffba830 in vfprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:647
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:19 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:19 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:19 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:19 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:19 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:19 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:19 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:19 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:19 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:19 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:19 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:19 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:19 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (3552) wifi:pm start, type: 1
+
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3622) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:23 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4552) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:23 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4572) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:23 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:23 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:23 | DEBUG | inspect_task:74 | Currently available heap: 214984[0m
+[0m1970-01-01 00:00:23 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:23 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214984[0m
+[0m1970-01-01 00:00:23 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:23 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:23 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0;31m1970-01-01 00:00:23 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m1970-01-01 00:00:23 | DEBUG | tcp_prepare_address:211 | [0m1970-01-01 00:00:23 | DEBUG | bmp_i2c_identify_chip:296 | preparing address...BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m
+[0m1970-01-01 00:00:23 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:00:23 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0;31m1970-01-01 00:00:23 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:23 | DEBUG | tcp_bind_socket:232 | [0m
+binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;33m1970-01-01 00:00:23 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:00:23 | DEBUG | tcp_bind_socket:242 | [0m1970-01-01 00:00:23 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4000c3f0  PS      : 0x00060730  A0      : 0x8012aff4  A1      : 0x3ffba4a0  
+A2      : 0x3ffb39e0  A3      : 0x00000000  A4      : 0x0000003f  A5      : 0x3ffae918  
+A6      : 0x0000003f  A7      : 0x0000003d  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000001  A11     : 0x00000000  A12     : 0x3ffb5128  A13     : 0x00000000  
+A14     : 0x00000000  A15     : 0xb33fffff  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x4000142d  LEND    : 0x4000143a  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x4000c3ed:0x3ffba4a0 0x4012aff1:0x3ffba4c0 0x4012cd49:0x3ffba4f0 0x4012aa31:0x3ffba7b0 0x40121812:0x3ffba870 0x4012198f:0x3ffba8d0 0x400d3574:0x3ffba8f0 0x400d324b:0x3ffba9b0 0x4008cd24:0x3ffbaa00 0x4008c921:0x3ffbaa30
+
+  #0  0x4000c3ed:0x3ffba4a0 in ?? ??:0
+  #1  0x4012aff1:0x3ffba4c0 in __ssprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:336
+  #2  0x4012cd49:0x3ffba4f0 in _svfiprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1769 (discriminator 1)
+  #3  0x4012aa31:0x3ffba7b0 in sniprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/sniprintf.c:80 (discriminator 4)
+  #4  0x40121812:0x3ffba870 in __strftime at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/time/strftime.c:1328
+  #5  0x4012198f:0x3ffba8d0 in strftime at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/time/strftime.c:1445
+  #6  0x400d3574:0x3ffba8f0 in timenow at lib/logger/include/logger.h:70
+      (inlined by) cli_set_remote_logging at lib/cli_manager/src/cli_manager.c:69
+  #7  0x400d324b:0x3ffba9b0 in app_main at src/main.c:111
+  #8  0x4008cd24:0x3ffbaa00 in main_task at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/app_startup.c:208 (discriminator 13)
+  #9  0x4008c921:0x3ffbaa30 in vPortTaskWrapper at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:24 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:24 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:24 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1042) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1052) wifi:enable tsf
+[0;32m1970-01-01 00:00:24 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:24 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:24 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:24 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:24 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:24 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:24 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:24 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:24 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:24 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3542) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3552) wifi:state: init -> auth (b0)
+I (3552) wifi:state: auth -> assoc (0)
+I (3562) wifi:state: assoc -> run (10)
+I (3572) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3572) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (3582) wifi:pm start, type: 1
+
+I (3602) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3612) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:28 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4582) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:28 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4602) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:28 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:28 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:28 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:00:28 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:28 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214880[0m
+[0m1970-01-01 00:00:28 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:28 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:28 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:00:28 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:00:28 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:00:28 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:28 | DEBUG | tcp_prepare_address:220 | [0m
+prepared address 192.168.0.104:27015[0;31m1970-01-01 00:00:28 | ERROR | lib/bmp280/src/bmp280.c:91 | bmp_i2c_get_ctrl_meas:91 | [0m
+error -1 during reading data acquisition options of the BMP280 device: ESP_FAIL[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060430  A0      : 0x801274fe  A1      : 0x3ffba500  
+A2      : 0x00000005  A3      : 0x00000001  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x8012f29e  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba744  A13     : 0x00000000  
+A14     : 0x3ffba70c  A15     : 0x00000001  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000005  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400014d9:0x3ffba500 0x401274fb:0x3ffba510 0x40128ad6:0x3ffba830 0x400d3393:0x3ffba890 0x00000009:0x3ffba8b0 |<-CORRUPTED
+
+  #0  0x400014d9:0x3ffba500 in ?? ??:0
+  #1  0x401274fb:0x3ffba510 in _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1524
+  #2  0x40128ad6:0x3ffba830 in vfprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:647
+  #3  0x400d3393:0x3ffba890 in logger_write at lib/logger/src/logger.c:75
+  #4  0x00000009:0x3ffba8b0 in ?? ??:0
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:29 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:29 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:29 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:29 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:29 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:29 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:29 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:29 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:29 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:29 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:29 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:29 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:29 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -41
+I (3552) wifi:pm start, type: 1
+
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3572) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:32 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4552) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:32 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4572) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:32 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0m1970-01-01 00:00:32 | DEBUG | inspect_task:74 | Currently available heap: 215024[0m
+[0;32m1970-01-01 00:00:32 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:32 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:32 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 215024[0m
+[0m1970-01-01 00:00:32 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:32 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0;31m1970-01-01 00:00:32 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:33 | DEBUG | tcp_create_socket:175 | [0m
+created socket: 54[0m
+[0m1970-01-01 00:00:33 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:00:33 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:00:33 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:00:33 | DEBUG | tcp_prepare_address:220 | [0;31m1970-01-01 00:00:33 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | prepared address 192.168.0.104:27015error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m
+[0m1970-01-01 00:00:33 | DEBUG | tcp_bind_socket:232 | [0;33m1970-01-01 00:00:33 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | binding socket: 54 to address: 192.168.0.104:34665[0m
+no BMP280 device found on bus![0m
+[0m1970-01-01 00:00:33 | DEBUG | tcp_bind_socket:242 | [0m1970-01-01 00:00:33 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m
+***ERROR*** A stack overflow in task log_task has been detected.
+
+
+Backtrace: 0x40082db2:0x3ffba2a0 0x40089f41:0x3ffba2c0 0x4008cc52:0x3ffba2e0 0x4008b5c7:0x3ffba360 0x4008cf28:0x3ffba380 0x4008ceda:0x3ffb4068 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba2a0 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba2c0 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x4008cc52:0x3ffba2e0 in vApplicationStackOverflowHook at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+  #3  0x4008b5c7:0x3ffba360 in vTaskSwitchContext at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+  #4  0x4008cf28:0x3ffba380 in _frxt_dispatch at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+  #5  0x4008ceda:0x3ffb4068 in _frxt_int_exit at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:33 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:33 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:34 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:34 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:34 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:34 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:34 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:34 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:34 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:34 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:34 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:34 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:34 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3572) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3572) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (3582) wifi:pm start, type: 1
+
+I (3612) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3612) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:37 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4582) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:37 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4602) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:37 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:37 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:37 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:00:37 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:37 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214880[0m
+[0m1970-01-01 00:00:37 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:37 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:37 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0;31m1970-01-01 00:00:37 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:37 | DEBUG | tcp_prepare_address:211 | [0m
+preparing address...[0m
+[0m1970-01-01 00:00:37 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:00:37 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m1970-01-01 00:00:37 | DEBUG | i2c_c_set_device_addr:115 | [0m
+changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:00:37 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0;31m1970-01-01 00:00:37 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | [0m
+error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m1970-01-01 00:00:37 | DEBUG | tcp_bind_socket:242 | [0;33m1970-01-01 00:00:37 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m1970-01-01 00:00:37 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4012af3a  PS      : 0x00060730  A0      : 0x8012cd4c  A1      : 0x3ffba4c0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3ffba724  A5      : 0x3ffb39e0  
+A6      : 0x0000013f  A7      : 0x3ffba7b0  A8      : 0x8008b9a5  A9      : 0x3ffba760  
+A10     : 0x00000003  A11     : 0x00060723  A12     : 0x00060720  A13     : 0x3ffae918  
+A14     : 0x0000003f  A15     : 0x0000003d  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x0000013f  LBEG    : 0x4000142d  LEND    : 0x4000143a  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x4012af37:0x3ffba4c0 0x4012cd49:0x3ffba4f0 0x4012aa31:0x3ffba7b0 0x40121812:0x3ffba870 0x4012198f:0x3ffba8d0 0x400d3574:0x3ffba8f0 0x400d324b:0x3ffba9b0 0x4008cd24:0x3ffbaa00 0x4008c921:0x3ffbaa30
+
+  #0  0x4012af37:0x3ffba4c0 in __ssprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:279
+  #1  0x4012cd49:0x3ffba4f0 in _svfiprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1769 (discriminator 1)
+  #2  0x4012aa31:0x3ffba7b0 in sniprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/sniprintf.c:80 (discriminator 4)
+  #3  0x40121812:0x3ffba870 in __strftime at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/time/strftime.c:1328
+  #4  0x4012198f:0x3ffba8d0 in strftime at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/time/strftime.c:1445
+  #5  0x400d3574:0x3ffba8f0 in timenow at lib/logger/include/logger.h:70
+      (inlined by) cli_set_remote_logging at lib/cli_manager/src/cli_manager.c:69
+  #6  0x400d324b:0x3ffba9b0 in app_main at src/main.c:111
+  #7  0x4008cd24:0x3ffbaa00 in main_task at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/app_startup.c:208 (discriminator 13)
+  #8  0x4008c921:0x3ffbaa30 in vPortTaskWrapper at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+
+
+Core  1 register dump:
+PC      : 0x4012af3a  PS      : 0x00060730  A0      : 0x8012cd4c  A1      : 0x3ffba4c0  
+A2      : 0x00000000  A3      : 0x00000000  A4      : 0x3ffba724  A5      : 0x3ffb39e0  
+A6      : 0x0000013f  A7      : 0x3ffba7b0  A8      : 0x8008b9a5  A9      : 0x3ffba760  
+A10     : 0x00000003  A11     : 0x00060723  A12     : 0x00060720  A13     : 0x3ffae918  
+A14     : 0x0000003f  A15     : 0x0000003d  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x0000013f  LBEG    : 0x4000142d  LEND    : 0x4000143a  LCOUNT  : 0xfffffffd  
+
+
+Backtrace: 0x4012af37:0x3ffba4c0 0x4012cd49:0x3ffba4f0 0x4012aa31:0x3ffba7b0 0x40121812:0x3ffba870 0x4012198f:0x3ffba8d0 0x400d3574:0x3ffba8f0 0x400d324b:0x3ffba9b0 0x4008cd24:0x3ffbaa00 0x4008c921:0x3ffbaa30
+
+  #0  0x4012af37:0x3ffba4c0 in __ssprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:279
+  #1  0x4012cd49:0x3ffba4f0 in _svfiprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1769 (discriminator 1)
+  #2  0x4012aa31:0x3ffba7b0 in sniprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/sniprintf.c:80 (discriminator 4)
+  #3  0x40121812:0x3ffba870 in __strftime at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/time/strftime.c:1328
+  #4  0x4012198f:0x3ffba8d0 in strftime at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/time/strftime.c:1445
+  #5  0x400d3574:0x3ffba8f0 in timenow at lib/logger/include/logger.h:70
+      (inlined by) cli_set_remote_logging at lib/cli_manager/src/cli_manager.c:69
+  #6  0x400d324b:0x3ffba9b0 in app_main at src/main.c:111
+  #7  0x4008cd24:0x3ffbaa00 in main_task at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/app_startup.c:208 (discriminator 13)
+  #8  0x4008c921:0x3ffbaa30 in vPortTaskWrapper at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:162
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:38 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:38 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:38 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:39 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:39 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:39 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:39 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:39 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:39 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:39 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:39 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:39 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:39 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -39
+I (3552) wifi:pm start, type: 1
+
+I (3552) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:42 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4552) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:42 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4572) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:42 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:42 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:42 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:00:42 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:42 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214880[0m
+[0m1970-01-01 00:00:42 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:42 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:42 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0;31m1970-01-01 00:00:42 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:42 | DEBUG | tcp_prepare_address:211 | [0m
+preparing address...[0m
+[0m1970-01-01 00:00:42 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:00:42 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:00:42 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0;31m1970-01-01 00:00:42 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:42 | DEBUG | tcp_bind_socket:232 | [0m
+binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;33m1970-01-01 00:00:42 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:00:42 | DEBUG | tcp_bind_socket:242 | [0m1970-01-01 00:00:42 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m
+***ERROR*** A stack overflow in task log_task has been detected.
+
+
+Backtrace: 0x40082db2:0x3ffba2a0 0x40089f41:0x3ffba2c0 0x4008cc52:0x3ffba2e0 0x4008b5c7:0x3ffba360 0x4008cf28:0x3ffba380 0x4008ceda:0x3ffb4068 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba2a0 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba2c0 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x4008cc52:0x3ffba2e0 in vApplicationStackOverflowHook at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+  #3  0x4008b5c7:0x3ffba360 in vTaskSwitchContext at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+  #4  0x4008cf28:0x3ffba380 in _frxt_dispatch at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+  #5  0x4008ceda:0x3ffb4068 in _frxt_int_exit at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:43 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:43 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:43 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:43 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:43 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:43 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:43 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:43 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:43 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:43 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:43 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:43 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:43 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3532) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3592) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3592) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (3592) wifi:pm start, type: 1
+
+I (3602) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3672) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:47 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4602) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:47 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4622) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:47 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:47 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:47 | DEBUG | inspect_task:74 | Currently available heap: 214984[0m
+[0m1970-01-01 00:00:47 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:47 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214984[0m
+[0m1970-01-01 00:00:47 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:47 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:47 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0;31m1970-01-01 00:00:47 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m1970-01-01 00:00:47 | DEBUG | tcp_prepare_address:211 | [0m1970-01-01 00:00:47 | DEBUG | bmp_i2c_identify_chip:296 | preparing address...BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m
+[0m1970-01-01 00:00:47 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:00:47 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0;31m1970-01-01 00:00:47 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:47 | DEBUG | tcp_bind_socket:232 | [0m
+binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;33m1970-01-01 00:00:47 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:00:47 | DEBUG | tcp_bind_socket:242 | [0m1970-01-01 00:00:47 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m 
+***ERROR*** A stack overflow in task log_task has been detected.
+
+
+Backtrace: 0x40082db2:0x3ffba2a0 0x40089f41:0x3ffba2c0 0x4008cc52:0x3ffba2e0 0x4008b5c7:0x3ffba360 0x4008cf28:0x3ffba380 0x4008ceda:0x3ffb4068 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba2a0 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba2c0 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x4008cc52:0x3ffba2e0 in vApplicationStackOverflowHook at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+  #3  0x4008b5c7:0x3ffba360 in vTaskSwitchContext at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+  #4  0x4008cf28:0x3ffba380 in _frxt_dispatch at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+  #5  0x4008ceda:0x3ffb4068 in _frxt_int_exit at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:48 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:48 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:48 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:48 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:48 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:48 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:48 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:48 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:48 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:48 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:48 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:48 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:48 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -38
+I (3552) wifi:pm start, type: 1
+
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3642) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:52 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4552) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:52 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4572) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:52 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:00:52 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:52 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:00:52 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:52 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214880[0m1970-01-01 00:00:52 | DEBUG | bmp_i2c_identify_chip:283 | [0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:52 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0;31m1970-01-01 00:00:52 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:52 | DEBUG | tcp_create_socket:175 | [0m
+created socket: 54[0m
+[0m1970-01-01 00:00:52 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:00:52 | DEBUG | tcp_prepare_address:211 | [0m1970-01-01 00:00:52 | DEBUG | i2c_c_set_device_addr:115 | preparing address...[0m
+changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:00:52 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0;31m1970-01-01 00:00:52 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:52 | DEBUG | tcp_bind_socket:232 | [0m
+binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;33m1970-01-01 00:00:52 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:00:52 | DEBUG | tcp_bind_socket:242 | [0m1970-01-01 00:00:52 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m
+***ERROR*** A stack overflow in task log_task has been detected.
+
+
+Backtrace: 0x40082db2:0x3ffba2a0 0x40089f41:0x3ffba2c0 0x4008cc52:0x3ffba2e0 0x4008b5c7:0x3ffba360 0x4008cf28:0x3ffba380 0x4008ceda:0x3ffb4068 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba2a0 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba2c0 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x4008cc52:0x3ffba2e0 in vApplicationStackOverflowHook at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+  #3  0x4008b5c7:0x3ffba360 in vTaskSwitchContext at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+  #4  0x4008cf28:0x3ffba380 in _frxt_dispatch at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+  #5  0x4008ceda:0x3ffb4068 in _frxt_int_exit at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:53 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:53 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:53 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:53 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:53 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:53 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:53 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:53 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:53 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:53 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:53 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:53 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:53 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (3552) wifi:pm start, type: 1
+
+I (3552) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:57 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (5052) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:57 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (5072) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:57 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0m1970-01-01 00:00:57 | DEBUG | inspect_task:74 | Currently available heap: 214920[0m
+[0;32m1970-01-01 00:00:57 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:57 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214920[0m
+[0m1970-01-01 00:00:57 | DEBUG | tcp_create_socket:168 | [0m1970-01-01 00:00:57 | DEBUG | bmp_i2c_identify_chip:283 | preparing socket...Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m
+[0m1970-01-01 00:00:57 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:57 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:00:57 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:00:57 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:00:57 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:00:57 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0m
+[0;31m1970-01-01 00:00:57 | ERROR | lib/bmp280/src/bmp280.c:91 | bmp_i2c_get_ctrl_meas:91 | error -1 during reading data acquisition options of the BMP280 device: ESP_FAIL[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x40125b64  PS      : 0x00060730  A0      : 0x80128ad9  A1      : 0x3ffba510  
+A2      : 0x00000004  A3      : 0x00000000  A4      : 0x00000004  A5      : 0x00000000  
+A6      : 0x000001f4  A7      : 0x00000001  A8      : 0x3ffba704  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x3ffaebac  A12     : 0x3ffba744  A13     : 0x00000010  
+A14     : 0x00ff0000  A15     : 0xff000000  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000000  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x40125b61:0x3ffba510 0x40128ad6:0x3ffba830
+
+  #0  0x40125b61:0x3ffba510 in _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:914
+  #1  0x40128ad6:0x3ffba830 in vfprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:647
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:58 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:58 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:58 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:00:58 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:58 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:58 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:58 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:58 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:58 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:58 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:58 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:58 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:58 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3552) wifi:state: auth -> assoc (0)
+I (3562) wifi:state: assoc -> run (10)
+I (3592) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3592) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (3602) wifi:pm start, type: 1
+
+I (3622) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3692) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:01:02 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4602) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:01:02 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4622) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:01:02 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:01:02 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:01:02 | DEBUG | inspect_task:74 | Currently available heap: 214984[0m
+[0m1970-01-01 00:01:02 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:01:02 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214984[0m1970-01-01 00:01:02 | DEBUG | bmp_i2c_identify_chip:283 | [0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:01:02 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0;31m1970-01-01 00:01:02 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:01:02 | DEBUG | tcp_create_socket:175 | [0m
+created socket: 54[0m
+[0m1970-01-01 00:01:02 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:01:02 | DEBUG | tcp_prepare_address:211 | [0m1970-01-01 00:01:02 | DEBUG | i2c_c_set_device_addr:115 | preparing address...changed device address from 0XEE to 0XEC[0m
+[0m
+[0m1970-01-01 00:01:02 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0;31m1970-01-01 00:01:02 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:01:02 | DEBUG | tcp_bind_socket:232 | [0m
+binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;33m1970-01-01 00:01:02 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:01:02 | DEBUG | tcp_bind_socket:242 | [0m1970-01-01 00:01:02 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m
+***ERROR*** A stack overflow in task log_task has been detected.
+
+
+Backtrace: 0x40082db2:0x3ffba2a0 0x40089f41:0x3ffba2c0 0x4008cc52:0x3ffba2e0 0x4008b5c7:0x3ffba360 0x4008cf28:0x3ffba380 0x4008ceda:0x3ffb4068 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba2a0 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba2c0 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x4008cc52:0x3ffba2e0 in vApplicationStackOverflowHook at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+  #3  0x4008b5c7:0x3ffba360 in vTaskSwitchContext at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+  #4  0x4008cf28:0x3ffba380 in _frxt_dispatch at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+  #5  0x4008ceda:0x3ffb4068 in _frxt_int_exit at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:01:03 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:01:03 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:01:03 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:01:03 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:01:03 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:01:03 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:01:03 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:03 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:01:03 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:03 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:01:03 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:01:03 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:01:03 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -40
+I (3552) wifi:pm start, type: 1
+
+I (3552) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:01:07 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4552) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:01:07 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4572) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:01:07 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:01:07 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:01:07 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:01:07 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:01:07 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214880[0m
+[0m1970-01-01 00:01:07 | DEBUG | tcp_create_socket:168 | [0m1970-01-01 00:01:07 | DEBUG | i2c_c_set_device_addr:115 | preparing socket...[0m
+changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:01:07 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:01:07 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:01:07 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:01:07 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:01:07 | DEBUG | tcp_prepare_address:220 | [0m
+prepared address 192.168.0.104:27015[0m
+[0;31m1970-01-01 00:01:07 | ERROR | lib/bmp280/src/bmp280.c:91 | bmp_i2c_get_ctrl_meas:91 | error -1 during reading data acquisition options of the BMP280 device: ESP_FAIL[0m1970-01-01 00:01:07 | DEBUG | tcp_bind_socket:232 | [0m
+bind
+***ERROR*** A stack overflow in task log_task has been detected.
+
+
+Backtrace: 0x40082db2:0x3ffba2a0 0x40089f41:0x3ffba2c0 0x4008cc52:0x3ffba2e0 0x4008b5c7:0x3ffba360 0x4008cf28:0x3ffba380 0x4008ceda:0x3ffb4068 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba2a0 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba2c0 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x4008cc52:0x3ffba2e0 in vApplicationStackOverflowHook at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:581
+  #3  0x4008b5c7:0x3ffba360 in vTaskSwitchContext at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/tasks.c:3728
+  #4  0x4008cf28:0x3ffba380 in _frxt_dispatch at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:450
+  #5  0x4008ceda:0x3ffb4068 in _frxt_int_exit at /home/wmytych/.platformio/packages/framework-espidf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:245
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:01:08 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:01:08 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:01:08 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:01:08 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:01:08 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:01:08 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:01:08 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:08 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:01:08 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:08 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:01:08 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:01:08 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:01:08 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (3552) wifi:pm start, type: 1
+
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3612) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:01:11 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4552) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:01:11 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4562) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:01:11 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:01:11 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:01:11 | DEBUG | inspect_task:74 | Currently available heap: 214696[0m
+[0m1970-01-01 00:01:11 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:01:11 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214696[0m1970-01-01 00:01:11 | DEBUG | bmp_i2c_identify_chip:283 | [0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:01:11 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0;31m1970-01-01 00:01:11 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:01:11 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m
+[0m1970-01-01 00:01:11 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:01:11 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:01:11 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:01:12 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0;31m1970-01-01 00:01:12 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m1970-01-01 00:01:12 | DEBUG | tcp_bind_socket:232 | [0;33m1970-01-01 00:01:12 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+binding socket: 54 to address: 192.168.0.104:34665[0m
+[0m1970-01-01 00:01:12 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4011ff74  PS      : 0x00060a30  A0      : 0x8012f29e  A1      : 0x3ffba4c0  
+A2      : 0x00000004  A3      : 0x00000080  A4      : 0x3ffba744  A5      : 0x00000000  
+A6      : 0x3ffba744  A7      : 0x00000001  A8      : 0x3f4242d4  A9      : 0x3ffba4a0  
+A10     : 0x00000001  A11     : 0x00000000  A12     : 0x00000010  A13     : 0x00000080  
+A14     : 0xffffff90  A15     : 0x00000010  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4011ff71:0x3ffba4c0 0x4012f29b:0x3ffba4f0 0x40127f65:0x3ffba510 0x40128ad6:0x3ffba830
+
+  #0  0x4011ff71:0x3ffba4c0 in __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/fvwrite.c:60
+  #1  0x4012f29b:0x3ffba4f0 in __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+      (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+  #2  0x40127f65:0x3ffba510 in _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1681 (discriminator 3)
+  #3  0x40128ad6:0x3ffba830 in vfprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:647
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:01:12 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:01:12 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:01:13 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:01:13 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:01:13 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:01:13 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:01:13 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:13 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:01:13 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:13 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:01:13 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:01:13 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:01:13 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3552) wifi:security: WPA2-PSK, phy: bgn, rssi: -43
+I (3552) wifi:pm start, type: 1
+
+I (3592) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3592) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:01:16 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4562) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:01:16 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4582) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:01:16 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:01:16 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:01:16 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:01:16 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:01:16 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214880[0m1970-01-01 00:01:16 | DEBUG | bmp_i2c_identify_chip:283 | [0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:01:16 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0;31m1970-01-01 00:01:16 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:01:16 | DEBUG | tcp_create_socket:175 | [0m
+created socket: 54[0m
+[0m1970-01-01 00:01:16 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:01:16 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:01:16 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:01:16 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m
+[0;31m1970-01-01 00:01:16 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:01:16 | DEBUG | tcp_bind_socket:232 | [0m
+binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;33m1970-01-01 00:01:16 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:01:16 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+
+assert failed: heap_caps_free heap_caps.c:387 (heap != NULL && "free() target pointer is outside heap areas")
+
+
+Backtrace: 0x40082db2:0x3ffba370 0x40089f41:0x3ffba390 0x40091411:0x3ffba3b0 0x40083b13:0x3ffba4d0 0x40091459:0x3ffba6e3 |<-CORRUPTED
+
+  #0  0x40082db2:0x3ffba370 in panic_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/panic.c:452
+  #1  0x40089f41:0x3ffba390 in esp_system_abort at /home/wmytych/.platformio/packages/framework-espidf/components/esp_system/port/esp_system_chip.c:84
+  #2  0x40091411:0x3ffba3b0 in __assert_func at /home/wmytych/.platformio/packages/framework-espidf/components/newlib/assert.c:81
+  #3  0x40083b13:0x3ffba4d0 in heap_caps_free at /home/wmytych/.platformio/packages/framework-espidf/components/heap/heap_caps.c:387 (discriminator 1)
+  #4  0x40091459:0x3ffba6e3 in _free_r at /home/wmytych/.platformio/packages/framework-espidf/components/newlib/heap.c:49
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:01:17 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:01:17 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:01:17 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:01:17 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:01:17 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:01:17 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:01:17 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:17 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:01:17 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:18 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:01:18 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:01:18 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:01:18 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -45
+I (3552) wifi:pm start, type: 1
+
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3612) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:01:21 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (5052) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:01:21 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (5072) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:01:22 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:01:22 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:01:22 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:01:22 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:01:22 | DEBUG | inspect_task:75 | [0m1970-01-01 00:01:22 | DEBUG | bmp_i2c_identify_chip:283 | The minimum heap size that was ever available: 214880[0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:01:22 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:01:22 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:01:22 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:01:22 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:01:22 | DEBUG | tcp_prepare_address:220 | [0m
+prepared address 192.168.0.104:27015[0m
+[0m1970-01-01 00:01:22 | DEBUG | bmp_i2c_identify_chip:296 | BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:01:22 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0m1970-01-01 00:01:22 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:01:22 | DEBUG | tcp_bind_socket:242 | [0;31m1970-01-01 00:01:22 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | socket: 54 bound to address: 192.168.0.104:27015error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m
+[0m1970-01-01 00:01:22 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;33m1970-01-01 00:01:22 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m1970-01-01 00:01:22 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4011ff74  PS      : 0x00060430  A0      : 0x8012f29e  A1      : 0x3ffba4c0  
+A2      : 0x00000004  A3      : 0x00000080  A4      : 0x3ffba744  A5      : 0x00000000  
+A6      : 0x3ffba744  A7      : 0x00000001  A8      : 0x3f4242d4  A9      : 0x3ffba4a0  
+A10     : 0x00000001  A11     : 0x00000000  A12     : 0x00000010  A13     : 0x00000080  
+A14     : 0xffffff90  A15     : 0x00000010  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000010  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4011ff71:0x3ffba4c0 0x4012f29b:0x3ffba4f0 0x40127f65:0x3ffba510 0x40128ad6:0x3ffba830
+
+  #0  0x4011ff71:0x3ffba4c0 in __sfvwrite_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/fvwrite.c:60
+  #1  0x4012f29b:0x3ffba4f0 in __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:429
+      (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+  #2  0x40127f65:0x3ffba510 in _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1681 (discriminator 3)
+  #3  0x40128ad6:0x3ffba830 in vfprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:647
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:01:23 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:01:23 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:01:23 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:01:23 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:01:23 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:01:23 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:01:23 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:23 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:01:23 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:23 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:01:23 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:01:23 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:01:23 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3542) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (3552) wifi:pm start, type: 1
+
+I (3582) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (4052) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:01:27 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (5052) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:01:27 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (5072) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:01:27 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:01:27 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:01:27 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:01:27 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:01:27 | DEBUG | inspect_task:75 | [0m1970-01-01 00:01:27 | DEBUG | bmp_i2c_identify_chip:283 | The minimum heap size that was ever available: 214880[0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:01:27 | DEBUG | tcp_create_socket:175 | [0m1970-01-01 00:01:27 | DEBUG | i2c_c_set_device_addr:115 | created socket: 54changed device address from 0 to 0XEE[0m
+[0m
+[0m1970-01-01 00:01:27 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:01:27 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+[0m1970-01-01 00:01:27 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.104:27015[0m1970-01-01 00:01:27 | DEBUG | bmp_i2c_identify_chip:296 | [0m
+BMP280 device with 0x77 address not found on bus, trying 0x76 address...[0m
+[0m1970-01-01 00:01:27 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.104:34665[0m
+[0m1970-01-01 00:01:27 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEE to 0XEC[0m
+[0m1970-01-01 00:01:27 | DEBUG | tcp_bind_socket:242 | [0;31m1970-01-01 00:01:27 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m
+socket: 54 bound to address: 192.168.0.104:27015[0;33m1970-01-01 00:01:27 | WARN  | lib/bmp280/src/bmp280.c:308 | bmp_i2c_identify_chip:308 | no BMP280 device found on bus![0m
+[0m
+[0m1970-01-01 00:01:27 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0XEC to 0[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x4000c250  PS      : 0x00060430  A0      : 0x801274cc  A1      : 0x3ffba4f0  
+A2      : 0x8012025a  A3      : 0x00000000  A4      : 0x8018077a  A5      : 0x00000010  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x8012f29e  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba744  A13     : 0x00000000  
+A14     : 0x3ffba70c  A15     : 0x00000001  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x8012025a  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x4000c24d:0x3ffba4f0 0x401274c9:0x3ffba510 0x40128ad6:0x3ffba830 0x400d3393:0x3ffba890 0x00000009:0x3ffba8b0 |<-CORRUPTED
+
+  #0  0x4000c24d:0x3ffba4f0 in ?? ??:0
+  #1  0x401274c9:0x3ffba510 in _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1517
+  #2  0x40128ad6:0x3ffba830 in vfprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:647
+  #3  0x400d3393:0x3ffba890 in logger_write at lib/logger/src/logger.c:75
+  #4  0x00000009:0x3ffba8b0 in ?? ??:0
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:01:28 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:01:28 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:01:28 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:01:28 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:01:28 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:01:28 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:01:28 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:28 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:01:28 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:28 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:01:28 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:01:28 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:01:28 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3532) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3542) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3552) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (3552) wifi:pm start, type: 1
+
+I (3562) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3562) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:01:32 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4562) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:01:32 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;31mE (4582) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:01:32 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0;32m1970-01-01 00:01:32 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:01:32 | DEBUG | inspect_task:74 | Currently available heap: 214880[0m
+[0m1970-01-01 00:01:32 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:01:32 | DEBUG | inspect_task:75 | The minimum heap size that was ever available: 214880[0m
+[0m1970-01-01 00:01:32 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:01:32 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:01:32 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:01:32 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:01:32 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:01:32 | ERROR | lib/i2c_controller/src/i2c_controller.c:144 | i2c_c_read:144 | error -1 during reading registers on I2C: ESP_FAIL[0m1970-01-01 00:01:32 | DEBUG | tcp_prepare_address:220 | [0m
+prepared address 192.168.0.104:27015[0;31m1970-01-01 00:01:32 | ERROR | lib/bmp280/src/bmp280.c:91 | bmp_i2c_get_ctrl_meas:91 | [0m
+error -1 during reading data acquisition options of the BMP280 device: ESP_FAIL[0m
+Guru Meditation Error: Core  0 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400014dc  PS      : 0x00060430  A0      : 0x801274fe  A1      : 0x3ffba500  
+A2      : 0x00000005  A3      : 0x00000001  A4      : 0x000000ff  A5      : 0x0000ff00  
+A6      : 0x00ff0000  A7      : 0xff000000  A8      : 0x8012f29e  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000001  A12     : 0x3ffba744  A13     : 0x00000000  
+A14     : 0x3ffba70c  A15     : 0x00000001  SAR     : 0x00000004  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000005  LBEG    : 0x400014fd  LEND    : 0x4000150d  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400014d9:0x3ffba500 0x401274fb:0x3ffba510 0x40128ad6:0x3ffba830 0x400d3393:0x3ffba890 0x00000009:0x3ffba8b0 |<-CORRUPTED
+
+  #0  0x400014d9:0x3ffba500 in ?? ??:0
+  #1  0x401274fb:0x3ffba510 in _vfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1524
+  #2  0x40128ad6:0x3ffba830 in vfprintf at /builds/idf/crosstool-NG/.build/xtensa-esp32-elf/src/newlib/newlib/libc/stdio/vfprintf.c:647
+  #3  0x400d3393:0x3ffba890 in logger_write at lib/logger/src/logger.c:75
+  #4  0x00000009:0x3ffba8b0 in ?? ??:0
+
+
+
+
+ELF file SHA256: bd3f59ae31d62ead
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (31) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jan 27 2024 18:25:44[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (76) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (91) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (99) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (106) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (114) boot: End of partition table[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2ddech (187884) map[0m
+[0;32mI (195) esp_image: segment 1: paddr=0003de14 vaddr=3ffb0000 size=02204h (  8708) load[0m
+[0;32mI (198) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=ae1f8h (713208) map[0m
+[0;32mI (458) esp_image: segment 3: paddr=000ee220 vaddr=3ffb2204 size=01754h (  5972) load[0m
+[0;32mI (460) esp_image: segment 4: paddr=000ef97c vaddr=40080000 size=16c9ch ( 93340) load[0m
+[0;32mI (514) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (514) boot: Disabling RNG early entropy source...[0m
+[0;32mI (525) cpu_start: Multicore app[0m
+[0;32mI (526) cpu_start: Pro cpu up.[0m
+[0;32mI (526) cpu_start: Starting app cpu, entry point is 0x4008228c[0m
+[0;32mI (513) cpu_start: App cpu up.[0m
+[0;32mI (544) cpu_start: Pro cpu start user code[0m
+[0;32mI (544) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (544) cpu_start: Application information:[0m
+[0;32mI (549) cpu_start: Project name:     esp_startup[0m
+[0;32mI (554) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (559) cpu_start: Compile time:     Jan 27 2024 18:23:18[0m
+[0;32mI (565) cpu_start: ELF file SHA256:  bd3f59ae31d62ead...[0m
+[0;32mI (571) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (576) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (580) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (585) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (590) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (597) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (603) heap_init: At 3FFB8700 len 00027900 (158 KiB): DRAM[0m
+[0;32mI (609) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (616) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (622) heap_init: At 40096C9C len 00009364 (36 KiB): IRAM[0m
+[0;32mI (630) spi_flash: detected chip: generic[0m
+[0;32mI (633) spi_flash: flash io: dio[0m
+[0;32mI (638) app_start: Starting scheduler on CPU0[0m
+[0;32mI (642) app_start: Starting scheduler on CPU1[0m
+[0;32mI (642) main_task: Started on CPU0[0m
+[0;32mI (652) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:01:33 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:01:33 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+I (802) wifi:wifi driver task: 3ffc09fc, prio:23, stack:6656, core=0
+I (822) wifi:wifi firmware version: ce9244d
+I (822) wifi:wifi certification version: v7.0
+I (822) wifi:config NVS flash: enabled
+I (822) wifi:config nano formating: disabled
+I (832) wifi:Init data frame dynamic rx buffer num: 32
+I (832) wifi:Init management frame dynamic rx buffer num: 32
+I (842) wifi:Init management short buffer num: 32
+I (842) wifi:Init dynamic tx buffer num: 32
+I (852) wifi:Init static rx buffer size: 1600
+I (852) wifi:Init static rx buffer num: 10
+I (852) wifi:Init dynamic rx buffer num: 32
+[0;32mI (862) wifi_init: rx ba win: 6[0m
+[0;32mI (862) wifi_init: tcpip mbox: 32[0m
+[0;32mI (872) wifi_init: udp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp mbox: 6[0m
+[0;32mI (872) wifi_init: tcp tx win: 5744[0m
+[0;32mI (882) wifi_init: tcp rx win: 5744[0m
+[0;32mI (882) wifi_init: tcp mss: 1440[0m
+[0;32mI (892) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (892) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:01:33 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (902) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1022) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1022) wifi:enable tsf
+[0;32m1970-01-01 00:01:33 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:01:33 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:01:33 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:01:33 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:33 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:01:33 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:01:33 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:01:33 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:01:33 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:01:33 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3522) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3522) wifi:state: init -> auth (b0)
+I (3522) wifi:state: auth -> assoc (0)
+I (3532) wifi:state: assoc -> run (10)
+I (3572) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3572) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (3582) wifi:pm start, type: 1
+
+I (3592) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3682) wifi:AP's beacon interval = 102400 us, DTIM period = 1

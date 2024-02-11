@@ -1,0 +1,109 @@
+I (3568) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3568) wifi:state: init -> auth (b0)
+I (3578) wifi:state: auth -> assoc (0)
+I (3578) wifi:state: assoc -> run (10)
+I (3588) wifi:connected with TP-LINK_AD8313, aid = 6, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3598) wifi:security: WPA2-PSK, phy: bgn, rssi: -73
+I (3598) wifi:pm start, type: 1
+
+I (3608) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3618) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:04 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.104[0m
+[0;32mI (4608) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:04 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;33mW (4628) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;32mI (4718) esp_https_ota: Starting OTA...[0m
+[0;32mI (4718) esp_https_ota: Writing to partition subtype 17 at offset 0x110000[0m
+[0;32m1970-01-01 00:00:04 | INFO  | ota_c_validate_image:91 | Running firmware version: 0.0.0.1[0m
+[0;33m1970-01-01 00:00:04 | WARN  | lib/ota_controller/src/ota_controller.c:96 | ota_c_validate_image:96 | Current running version is the same as a new. Will not update.[0m
+[0m1970-01-01 00:00:04 | DEBUG | ota_c_validate_image:97 | current firmware version: 0.0.0.1
+new firmware version: 0.0.0.1[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/ota_controller/src/ota_controller.c:172 | ota_c_start:172 | image header verification failed[0m
+[0;32m1970-01-01 00:00:04 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:103 | Currently available heap: 205696[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 205696[0m
+[0m1970-01-01 00:00:04 | DEBUG | i2c_c_set_device_addr:123 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0XAF[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:175 | [0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_calibrate:252 | reading BMP280 out calibration values...created socket: 55[0m
+[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | bmp_i2c_calibrate:272 | compensation values of BMP280 device updated:
+	T1: 0x3f40018c
+	T2: 0x3ffb3df0
+	T3: 0x3f4002a0
+	P1: 0x3f40357c
+	P2: 0x110
+	P3: 0x3ffb3df0
+	P4: 0x3f4002a0
+	P5: 0x3f403618
+	P6: 0x67036afd
+	P7: 0x96300032
+	P8: 0xbd0d6f7
+	P9: 0xff7f1220 [0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:220 | [0m
+prepared address 192.168.0.104:27015[0;32m1970-01-01 00:00:04 | INFO  | bmp_init:444 | new BMP280 device ready to use![0m
+[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:232 | binding socket: 55 to address: 192.168.0.104:34665[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:242 | socket: 55 bound to address: 192.168.0.104:27015[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 55[0m
+[0;32m1970-01-01 00:00:04 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.104:27015[0m
+[0;32m1970-01-01 00:00:04 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/i2c_controller/src/i2c_controller.c:219 | i2c_c_device_lock:219 | could not obtain 0x3ffc78c8 device lock[0m
+I (5748) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:6, ssn:2, winSize:64
+[0;31m2024-01-25 21:04:18 | ERROR | lib/i2c_controller/src/i2c_controller.c:219 | i2c_c_device_lock:219 | could not obtain 0x3ffc78c8 device lock[0m
+[0;31m2024-01-25 21:04:18 | ERROR | lib/i2c_controller/src/i2c_controller.c:158 | i2c_c_read:158 | error 513 during reading registers on I2C: ERROR[0m
+[0;31m2024-01-25 21:04:18 | ERROR | lib/bmp280/src/bmp280.c:76 | bmp_i2c_get_config:76 | error 513 during reading config register of the BMP280 device: ERROR[0m
+[0;31m2024-01-25 21:04:18 | ERROR | lib/bmp280/src/bmp280.c:162 | bmp_i2c_set_standby_time:162 | error 1061159240 during reading c
+n[0m2024-01-25 21:04:32 | DEBUG | inspect_task:103 | Currently available heap: 200704[0m
+[0m2024-01-25 21:04:32 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 196564[0m
+[0m2024-01-25 21:04:37 | DEBUG | inspect_task:103 | Currently available heap: 198972[0m
+[0m2024-01-25 21:04:37 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 196564[0m
+[0m2024-01-25 21:04:42 | DEBUG | inspect_task:103 | Currently available heap: 197240[0m
+[0m2024-01-25 21:04:42 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 195488[0m
+[0m2024-01-25 21:04:47 | DEBUG | inspect_task:103 | Currently available heap: 195508[0m
+[0m2024-01-25 21:04:47 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 193632[0m
+[0m2024-01-25 21:04:48 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-25 21:04:48 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;31m2024-01-25 21:04:49 | ERROR | lib/i2c_controller/src/i2c_controller.c:219 | i2c_c_device_lock:219 | could not obtain 0x3ffc78c8 device lock[0m
+[0;31m2024-01-25 21:04:49 | ERROR | lib/i2c_controller/src/i2c_controller.c:219 | i2c_c_device_lock:219 | could not obtain 0x3ffc78c8 device lock[0m
+[0;31m2024-01-25 21:04:49 | ERROR | lib/i2c_controller/src/i2c_controller.c:158 | i2c_c_read:158 | error 513 during reading registers on I2C: ERROR[0m
+[0;31m2024-01-25 21:04:49 | ERROR | lib/bmp280/src/bmp280.c:341 | bmp_i2c_readout:341 | error 0 during reading results from BMP280 device: ESP_OK[0m
+[0;32m2024-01-25 21:04:49 | INFO  | read_temperature_task:76 | temperature: 21.76 C[0m
+[0;32m2024-01-25 21:04:49 | INFO  | read_temperature_task:77 | pressure: 0.00hPa[0m
+[0;32m2024-01-25 21:04:49 | INFO  | read_temperature_task:78 | altitude: 44330.00 m. n. p. m.[0m
+[0m2024-01-25 21:04:50 | DEBUG | read_temperature_task:80 | data to send to database: device_id=222222&temperature=21.76&pressure=0.00&altitude=44330.00[0m
+[0;32m2024-01-25 21:04:50 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net/modules/setters/insert_data.php[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Thu, 25 Jan 2024 21:04:50 GMT[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.0[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-25 21:04:50 | DEBUG | http_client_post:159 | HTTP GET Status = 200, content_length = 1073430064[0m
+[0;32m2024-01-25 21:04:50 | INFO  | http_client_post:162 | 
+data stored in a database successfully.[0m
+[0m2024-01-25 21:04:50 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0;32m2024-01-25 21:04:50 | INFO  | read_temperature_task:82 | Client POST request returned: 0[0m
+[0m2024-01-25 21:04:52 | DEBUG | inspect_task:103 | Currently available heap: 195080[0m
+[0m2024-01-25 21:04:52 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 187472[0m
+[0m2024-01-25 21:04:57 | DEBUG | inspect_task:103 | Currently available heap: 195080[0m
+[0m2024-01-25 21:04:57 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 187472[0m
+[0m2024-01-25 21:05:02 | DEBUG | inspect_task:103 | Currently available heap: 195080[0m
+[0m2024-01-25 21:05:02 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 187472[0m
+[0m2024-01-25 21:05:07 | DEBUG | inspect_task:103 | Currently available heap: 195080[0m
+[0m2024-01-25 21:05:07 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 187472[0m
+[0m2024-01-25 21:05:12 | DEBUG | inspect_task:103 | Currently available heap: 195080[0m
+[0m2024-01-25 21:05:12 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 187472[0m
+[0m2024-01-25 21:05:17 | DEBUG | inspect_task:103 | Currently available heap: 195088[0m
+[0m2024-01-25 21:05:17 | DEBUG | inspect_task:104 | The minimum heap size that was ever available: 187472[0m
+[0m2024-01-25 21:05:20 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-25 21:05:20 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;31m2024-01-25 21:05:20 | ERROR | lib/i2c_controller/src/i2c_controller.c:219 | i2c_c_device_lock:219 | could not obtain 0x3ffc78c8 device lock[0m

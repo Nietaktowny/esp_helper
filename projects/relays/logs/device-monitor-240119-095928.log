@@ -1,0 +1,84 @@
+[0;33m1970-01-01 00:00:03 | WARN  | lib/wifi_controller/src/wifi_controller.c:101 | wifi_c_sta_event_handler:101 | Failed to connect to AP, trying again.[0m
+[0m1970-01-01 00:00:05 | DEBUG | inspect_task:97 | Currently available heap: 224788[0m
+[0m1970-01-01 00:00:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 222912[0m
+[0;33m1970-01-01 00:00:06 | WARN  | lib/wifi_controller/src/wifi_controller.c:101 | wifi_c_sta_event_handler:101 | Failed to connect to AP, trying again.[0m
+[0;33m1970-01-01 00:00:09 | WARN  | lib/wifi_controller/src/wifi_controller.c:101 | wifi_c_sta_event_handler:101 | Failed to connect to AP, trying again.[0m
+[0m1970-01-01 00:00:10 | DEBUG | inspect_task:97 | Currently available heap: 224780[0m
+[0m1970-01-01 00:00:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 222912[0m
+[0;33m1970-01-01 00:00:11 | WARN  | lib/wifi_controller/src/wifi_controller.c:101 | wifi_c_sta_event_handler:101 | Failed to connect to AP, trying again.[0m
+[0m1970-01-01 00:00:14 | DEBUG | wifi_c_check_sta_connection_result:123 | WIFI_C_CONNECT_FAIL_BIT is set![0m
+[0m1970-01-01 00:00:14 | DEBUG | wifi_c_check_sta_connection_result:123 | WIFI_C_CONNECT_FAIL_BIT is set![0m
+[0;31m1970-01-01 00:00:14 | ERROR | lib/wifi_controller/src/wifi_controller.c:466 | wifi_c_start_sta:466 | All attempts to connect to Wifi failed[0m
+[0m1970-01-01 00:00:15 | DEBUG | inspect_task:97 | Currently available heap: 226788[0m
+[0m1970-01-01 00:00:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 222912[0m
+I (16524) wifi:Total power save buffer number: 16
+[0;32mI (16534) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32m1970-01-01 00:00:16 | INFO  | wifi_c_start_ap:362 | Started AP: 
+SSID: ESP32 
+Password: 12345678[0m
+[0m1970-01-01 00:00:16 | DEBUG | wifi_manager_server_init:259 | http server started[0m
+[0;32mI (16544) main_task: Returned from app_main()[0m
+[0m1970-01-01 00:00:20 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:00:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+[0m1970-01-01 00:00:25 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:00:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+[0m1970-01-01 00:00:30 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:00:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+[0m1970-01-01 00:00:35 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:00:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+[0m1970-01-01 00:00:40 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:00:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+[0m1970-01-01 00:00:45 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:00:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+[0m1970-01-01 00:00:50 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:00:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+[0m1970-01-01 00:00:55 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:00:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+[0m1970-01-01 00:01:00 | DEBUG | inspect_task:97 | Currently available heap: 207828[0m
+[0m1970-01-01 00:01:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 203076[0m
+I (63224) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1
+I (63224) wifi:station: 10:02:b5:33:2e:17 join, AID=1, bgn, 40U
+[0;32m1970-01-01 00:01:02 | INFO  | wifi_c_ap_event_handler:76 | Station 10:02:b5:33:2e:17 joined, AID=1[0m
+[0;32mI (63384) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0m1970-01-01 00:01:03 | DEBUG | ap_json_handler:97 | serving GET "/scan" request...[0m
+[0m1970-01-01 00:01:03 | DEBUG | wifi_c_scan_all_ap:509 | scanning for Access Points...[0m
+I (64864) wifi:<ba-add>idx:2 (ifx:1, 10:02:b5:33:2e:17), tid:0, ssn:17, winSize:64
+[0m1970-01-01 00:01:05 | DEBUG | inspect_task:97 | Currently available heap: 199168[0m
+[0m1970-01-01 00:01:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 196952[0m
+[0;32m1970-01-01 00:01:06 | INFO  | wifi_c_ap_event_handler:83 | Total APs scanned: 10[0m
+[0m1970-01-01 00:01:06 | DEBUG | wifi_manager_fetch_ap_list:87 | wifi manager scan complete, scanned: 52080 APs[0m
+[0m1970-01-01 00:01:09 | DEBUG | root_handler:65 | serving GET "/" request...[0m
+[0m1970-01-01 00:01:09 | DEBUG | stylesheet_handler:75 | serving GET "/styles.css" request...[0m
+[0m1970-01-01 00:01:09 | DEBUG | script_handler:86 | serving GET "/code.js" request...[0m
+[0m1970-01-01 00:01:10 | DEBUG | ap_json_handler:97 | serving GET "/scan" request...[0m
+[0m1970-01-01 00:01:10 | DEBUG | wifi_c_scan_all_ap:509 | scanning for Access Points...[0m
+[0m1970-01-01 00:01:10 | DEBUG | inspect_task:97 | Currently available heap: 196964[0m
+[0m1970-01-01 00:01:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 191192[0m
+[0;32m1970-01-01 00:01:12 | INFO  | wifi_c_ap_event_handler:83 | Total APs scanned: 10[0m
+[0m1970-01-01 00:01:12 | DEBUG | wifi_manager_fetch_ap_list:87 | wifi manager scan complete, scanned: 52080 APs[0m
+[0;33mW (73474) httpd_uri: httpd_uri: URI '/favicon.ico' not found[0m
+[0;33mW (73474) httpd_txrx: httpd_resp_send_err: 404 Not Found - Nothing matches the given URI[0m
+[0;32m1970-01-01 00:01:13 | INFO  | wifi_c_ap_event_handler:80 | Station 10:02:b5:33:2e:17 left, AID=1[0m
+I (74154) wifi:starting SA query procedure with STA(10:02:b5:33:2e:17)
+I (74154) wifi:Send SA Query req with transaction id 4778
+I (74354) wifi:Send SA Query req with transaction id 4779
+I (74554) wifi:Send SA Query req with transaction id 477a
+I (74754) wifi:Send SA Query req with transaction id 477b
+I (74954) wifi:Send SA Query req with transaction id 477c
+I (75154) wifi:Send SA Query req with transaction id 477d
+I (75184) wifi:STA not responded to 6 SA Query attempts, Reset connection sending disassoc
+I (75234) wifi:station: 10:02:b5:33:2e:17 leave, AID = 1, bss_flags is 658531, bss:0x3ffb9e50
+I (75234) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1
+I (75234) wifi:<ba-del>idx:2, tid:0
+[0;32m1970-01-01 00:01:14 | INFO  | wifi_c_ap_event_handler:80 | Station 10:02:b5:33:2e:17 left, AID=1[0m
+I (75724) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1
+I (75724) wifi:station: 10:02:b5:33:2e:17 join, AID=1, bgn, 40U
+[0;32m1970-01-01 00:01:15 | INFO  | wifi_c_ap_event_handler:76 | Station 10:02:b5:33:2e:17 joined, AID=1[0m
+[0m1970-01-01 00:01:15 | DEBUG | inspect_task:97 | Currently available heap: 190392[0m
+[0m1970-01-01 00:01:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 186824[0m
+[0;32mI (75884) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (77654) wifi:<ba-add>idx:2 (ifx:1, 10:02:b5:33:2e:17), tid:0, ssn:25, winSize:64
+[0m1970-01-01 00:01:20 | DEBUG | inspect_task:97 | Currently available heap: 198120[0m
+[0m1970-01-01 00:01:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 183244[0m
+[0m1970-01-01 00:01:25 | DEBUG | inspect_task:97 | Currently available heap: 198120[0m
+[0m1970-01-01 00:01:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 183244[0m

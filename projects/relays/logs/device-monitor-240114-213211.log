@@ -1,0 +1,275 @@
+I (3481) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (4851) wifi:state: init -> auth (b0)
+I (4851) wifi:state: auth -> assoc (0)
+I (4861) wifi:state: assoc -> run (10)
+I (4871) wifi:connected with TP-LINK_AD8313, aid = 4, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (4871) wifi:security: WPA2-PSK, phy: bgn, rssi: -40
+I (4891) wifi:pm start, type: 1
+
+I (4901) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (4961) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:05 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.105[0m
+[0;32mI (5891) esp_netif_handlers: sta ip: 192.168.0.105, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m1970-01-01 00:00:05 | INFO  | app_main:139 | Connected to wifi, current ip: 192.168.0.105[0m
+[0;32m1970-01-01 00:00:05 | INFO  | set_csb_and_sdo_to_high:114 | GPIO_NUM_3 level: 0[0m
+[0;32m1970-01-01 00:00:05 | INFO  | set_csb_and_sdo_to_high:115 | GPIO_NUM_2 level: 0[0m
+[0;32m1970-01-01 00:00:05 | INFO  | bmp_init:427 | preparing new BMP280 device...[0m
+[0m1970-01-01 00:00:05 | DEBUG | inspect_task:97 | Currently available heap: 218456[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_identify_chip:283 | [0m1970-01-01 00:00:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 215968[0m
+Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:05 | DEBUG | spiffs_c_init:63 | initializing SPIFFS...[0m
+[0m1970-01-01 00:00:05 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEE[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_identify_chip:289 | found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_calibrate:252 | reading BMP280 out calibration values...[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_calibrate:272 | compensation values of BMP280 device updated:
+	T1: 0x3f40018c
+	T2: 0x3ffb3cf8
+	T3: 0x3f4002a0
+	P1: 0x3f4021cc
+	P2: 0x110
+	P3: 0x3ffb3cf8
+	P4: 0x3f4002a0
+	P5: 0x3f402268
+	P6: 0x67036afd
+	P7: 0x96300032
+	P8: 0xbd0d6f7
+	P9: 0xff7f1220 [0m
+[0;32m1970-01-01 00:00:05 | INFO  | bmp_init:444 | new BMP280 device ready to use![0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_set_standby_time:173 | config register value changed to: 160[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_set_iir_filter:237 | config register value of BMP280 device changed to: 0xa0[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_set_press_oversampling:197 | BMP280 device ctrl_meas register was set to: 0X6F[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_set_temp_oversampling:221 | BMP280 device ctrl_meas register was set to: 0X6E[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6F[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_set_mode:150 | BMP280 device mode was set to: 3[0m
+[0;32m1970-01-01 00:00:05 | INFO  | read_temperature_task:66 | Identified BMP280 device:
+ address: ee
+ chip id: 58
+ mode: 3[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m1970-01-01 00:00:05 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m1970-01-01 00:00:05 | INFO  | read_temperature_task:71 | temperature: 21.22 C[0m
+[0;32m1970-01-01 00:00:05 | INFO  | read_temperature_task:72 | pressure: 977.95hPa[0m
+[0;32m1970-01-01 00:00:05 | INFO  | read_temperature_task:73 | altitude: 298.05 m. n. p. m.[0m
+[0m1970-01-01 00:00:05 | DEBUG | read_temperature_task:75 | data to send to database: device_id=2&temperature=21.22&pressure=977.95&altitude=298.05[0m
+[0;32m1970-01-01 00:00:05 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net//insert_data.php[0m
+[0m1970-01-01 00:00:05 | DEBUG | spiffs_c_init:74 | initialized SPIFFS successfully[0m
+[0;32m1970-01-01 00:00:08 | INFO  | wifi_c_ap_event_handler:80 | Total APs scanned: 10[0m
+I (8811) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:5, ssn:0, winSize:64
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-LINK_AD8313[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-38[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_04F5[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-58[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	DIRECT-CE-HP Ink Tank Wireless[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-67[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ASUS_2[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-68[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-72[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	Kleo2.4[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-76[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_20[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-79[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_DDE6[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-82[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_8[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-85[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-LINK_FD2E5B[0m
+[0;32m2024-01-14 20:32:19 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-86[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sun, 14 Jan 2024 20:32:19 GMT[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.1.26[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-14 20:32:19 | DEBUG | http_client_post:158 | HTTP GET Status = 200, content_length = 1073429816[0m
+[0;32m2024-01-14 20:32:19 | INFO  | http_client_post:161 | 
+data stored in a database successfully.[0m
+[0m2024-01-14 20:32:19 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-14 20:32:21 | DEBUG | inspect_task:97 | Currently available heap: 207504[0m
+[0m2024-01-14 20:32:21 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 198064[0m
+[0;32m2024-01-14 20:32:22 | INFO  | spiffs_c_check:100 | SPIFFS check successful[0m
+[0m2024-01-14 20:32:22 | DEBUG | wifi_manager_server_init:137 | http server started[0m
+[0m2024-01-14 20:32:22 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-14 20:32:22 | DEBUG | tcp_create_socket:175 | created socket: 57[0m
+[0m2024-01-14 20:32:22 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-14 20:32:22 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.105:27015[0m
+[0m2024-01-14 20:32:22 | DEBUG | tcp_bind_socket:232 | binding socket: 57 to address: 192.168.0.105:34665[0m
+[0m2024-01-14 20:32:22 | DEBUG | tcp_bind_socket:242 | socket: 57 bound to address: 192.168.0.105:27015[0m
+[0m2024-01-14 20:32:22 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 57[0m
+[0;32m2024-01-14 20:32:22 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.105:27015[0m
+[0;32m2024-01-14 20:32:22 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.105 with port 27015 to capture logs.[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_ap_event_handler:80 | Total APs scanned: 10[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-LINK_AD8313[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-39[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_04F5[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-59[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	DIRECT-CE-HP Ink Tank Wireless[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-65[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ASUS_2[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-67[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-71[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	Kleo2.4[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-78[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-79[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_20[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-80[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_28[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-84[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_24[0m
+[0;32m2024-01-14 20:32:25 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-85[0m
+[0m2024-01-14 20:32:26 | DEBUG | inspect_task:97 | Currently available heap: 199216[0m
+[0m2024-01-14 20:32:26 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 194552[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_ap_event_handler:80 | Total APs scanned: 10[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-LINK_AD8313[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-41[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_04F5[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-62[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	DIRECT-CE-HP Ink Tank Wireless[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-67[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ASUS_2[0m
+[0m2024-01-14 20:32:31 | DEBUG | inspect_task:97 | Currently available heap: 198608[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | [0m
+RSSI 	-67[0m
+[0m2024-01-14 20:32:31 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 194288[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-75[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	citi net 10[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-80[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_20[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-80[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_DDE6[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-80[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	Kleo2.4[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-80[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_28[0m
+[0;32m2024-01-14 20:32:31 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-82[0m
+[0m2024-01-14 20:32:36 | DEBUG | inspect_task:97 | Currently available heap: 195968[0m
+[0m2024-01-14 20:32:36 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 193944[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_ap_event_handler:80 | Total APs scanned: 10[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-LINK_AD8313[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-39[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_04F5[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-61[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	DIRECT-CE-HP Ink Tank Wireless[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-66[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ASUS_2[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-68[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-74[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-77[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_DDE6[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-78[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	Kleo2.4[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-78[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_20[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-79[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ZTE MF258-2829[0m
+[0;32m2024-01-14 20:32:37 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-82[0m
+[0m2024-01-14 20:32:41 | DEBUG | inspect_task:97 | Currently available heap: 197376[0m
+[0m2024-01-14 20:32:41 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 193736[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_ap_event_handler:80 | Total APs scanned: 10[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-LINK_AD8313[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-42[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_04F5[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-62[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ASUS_2[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-66[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	DIRECT-CE-HP Ink Tank Wireless[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-68[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-73[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_20[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-78[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	citi net 10[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-79[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-79[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	Kleo2.4[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-80[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_DDE6[0m
+[0;32m2024-01-14 20:32:43 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-81[0m
+[0m2024-01-14 20:32:46 | DEBUG | inspect_task:97 | Currently available heap: 198620[0m
+[0m2024-01-14 20:32:46 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 193736[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_ap_event_handler:80 | Total APs scanned: 10[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-LINK_AD8313[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-40[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_04F5[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-64[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ASUS_2[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-67[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	DIRECT-CE-HP Ink Tank Wireless[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-68[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-72[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	Kleo2.4[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-78[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	citi net 10[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-79[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_20[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-79[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-81[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_DDE6[0m
+[0;32m2024-01-14 20:32:49 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-81[0m
+[0m2024-01-14 20:32:49 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-14 20:32:50 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-14 20:32:50 | INFO  | read_temperature_task:71 | temperature: 21.22 C[0m
+[0;32m2024-01-14 20:32:50 | INFO  | read_temperature_task:72 | pressure: 977.98hPa[0m
+[0;32m2024-01-14 20:32:50 | INFO  | read_temperature_task:73 | altitude: 297.83 m. n. p. m.[0m
+[0m2024-01-14 20:32:50 | DEBUG | read_temperature_task:75 | data to send to database: device_id=2&temperature=21.22&pressure=977.98&altitude=297.83[0m
+[0;32m2024-01-14 20:32:50 | INFO  | http_client_post:143 | making POST request to address: http://wmytych.usermd.net//insert_data.php[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sun, 14 Jan 2024 20:32:50 GMT[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.1.26[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=39[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m2024-01-14 20:32:50 | DEBUG | http_client_post:158 | HTTP GET Status = 200, content_length = 1073429816[0m
+[0;32m2024-01-14 20:32:50 | INFO  | http_client_post:161 | 
+data stored in a database successfully.[0m
+[0m2024-01-14 20:32:50 | DEBUG | _http_event_handler:66 | HTTP_EVENT_DISCONNECTED[0m
+[0m2024-01-14 20:32:51 | DEBUG | inspect_task:97 | Currently available heap: 198836[0m
+[0m2024-01-14 20:32:51 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 191236[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_ap_event_handler:80 | Total APs scanned: 10[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-LINK_AD8313[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-40[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_04F5[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-62[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	DIRECT-CE-HP Ink Tank Wireless[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-68[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ASUS_2[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-68[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	citi net 10[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-78[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_20[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-79[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	bananowiec[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-80[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	TP-Link_DDE6[0m
+[0;32m2024-01-14 20:32:55 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-80[0m
+[0;32m2024-01-14 20:32:56 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	CityNet_28[0m
+[0;32m2024-01-14 20:32:56 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-82[0m
+[0;32m2024-01-14 20:32:56 | INFO  | wifi_c_print_scanned_ap:543 | SSID 	ZTE MF258-2829[0m
+[0;32m2024-01-14 20:32:56 | INFO  | wifi_c_print_scanned_ap:544 | RSSI 	-83[0m
+[0m2024-01-14 20:32:56 | DEBUG | inspect_task:97 | Currently available heap: 198416[0m
+[0m2024-01-14 20:32:56 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 191236[0m

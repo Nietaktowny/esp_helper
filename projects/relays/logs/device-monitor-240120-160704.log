@@ -1,0 +1,904 @@
+I (3240) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3240) wifi:state: init -> auth (b0)
+I (3240) wifi:state: auth -> assoc (0)
+I (3250) wifi:state: assoc -> run (10)
+I (3260) wifi:connected with TP-LINK_AD8313, aid = 5, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3260) wifi:security: WPA2-PSK, phy: bgn, rssi: -54
+I (3260) wifi:pm start, type: 1
+
+I (3270) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3270) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3290) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m2024-01-20 15:07:14 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.103[0m
+[0;32mI (4280) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-20 15:07:14 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-20 15:07:14 | INFO  | event_handler:19 | OTA started[0m
+[0;33mW (4300) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;32m2024-01-20 15:07:14 | INFO  | event_handler:22 | Connected to server[0m
+[0;32mI (4360) esp_https_ota: Starting OTA...[0m
+[0;32mI (4360) esp_https_ota: Writing to partition subtype 17 at offset 0x110000[0m
+[0;32m2024-01-20 15:07:14 | INFO  | event_handler:28 | Verifying chip id of new image: 5[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 2048 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 3072 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 4096 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 5120 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 6144 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 7168 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 8192 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 9216 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 10240 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 11264 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 12288 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 13312 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 14336 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 15360 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 16384 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 17408 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 18432 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 19456 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 20480 written[0m
+[0m2024-01-20 15:07:14 | DEBUG | event_handler:34 | Writing to flash: 21504 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 22528 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 23552 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 24576 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 25600 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 26624 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 27648 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 28672 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 29696 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 30720 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 31744 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 32768 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 33792 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 34816 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 35840 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 36864 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 37888 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 38912 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 39936 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 40960 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 41984 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 43008 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 44032 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to flash: 45056 written[0m
+[0m2024-01-20 15:07:15 | DEBUG | inspect_task:98 | Currently available heap: 225180[0m
+[0m2024-01-20 15:07:15 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 219820[0m
+[0m2024-01-20 15:07:15 | DEBUG | event_handler:34 | Writing to [0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 423936 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 424960 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 425984 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 427008 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 428032 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 429056 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 430080 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 431104 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 432128 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 433152 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 434176 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 435200 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 436224 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 437248 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 438272 written[0m
+[0m2024-01-20 15:07:19 | DEBUG | event_handler:34 | Writing to flash: 439296 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 440320 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 441344 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 442368 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 443392 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 444416 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 445440 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 446464 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 447488 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 448512 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 449536 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 450560 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 451584 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 452608 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 453632 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 454656 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 455680 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 456704 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 457728 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 458752 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 459776 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 460800 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 461824 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 462848 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 463872 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 464896 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 465920 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 466944 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 467968 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 468992 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 470016 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 471040 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 472064 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 473088 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 474112 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 475136 written[0m
+[0m2024-01-20 15:07:20 | DEBUG | event_handler:34 | Writing to flash: 476160 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 477184 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 478208 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 479232 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 480256 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 481280 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 482304 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 483328 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 484352 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 485376 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 486400 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 487424 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 488448 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 489472 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 490496 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 491520 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 492544 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 493568 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 494592 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 495616 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 496640 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 497664 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 498688 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 499712 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 500736 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 501760 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 502784 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 503808 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 504832 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 505856 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 506880 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 507904 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 508928 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 509952 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 510976 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 512000 written[0m
+[0m2024-01-20 15:07:21 | DEBUG | event_handler:34 | Writing to flash: 513024 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 514048 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 515072 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 516096 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 517120 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 518144 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 519168 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 520192 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 521216 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 522240 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 523264 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 524288 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 525312 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 526336 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 527360 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 528384 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 529408 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 530432 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 531456 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 532480 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 533504 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 534528 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 535552 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 536576 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 537600 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 538624 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 539648 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 540672 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 541696 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 542720 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 543744 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 544768 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 545792 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 546816 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 547840 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 548864 written[0m
+[0m2024-01-20 15:07:22 | DEBUG | event_handler:34 | Writing to flash: 549888 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 550912 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 551936 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 552960 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 553984 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 555008 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 556032 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 557056 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 558080 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 559104 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 560128 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 561152 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 562176 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 563200 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 564224 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 565248 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 566272 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 567296 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 568320 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 569344 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 570368 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 571392 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 572416 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 573440 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 574464 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 575488 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 576512 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 577536 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 578560 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 579584 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 580608 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 581632 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 582656 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 583680 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 584704 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 585728 written[0m
+[0m2024-01-20 15:07:23 | DEBUG | event_handler:34 | Writing to flash: 586752 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 587776 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 588800 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 589824 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 590848 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | inspect_task:98 | Currently available heap: 223444[0m
+[0m2024-01-20 15:07:24 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 218136[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 591872 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 592896 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 593920 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 594944 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 595968 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 596992 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 598016 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 599040 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 600064 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 601088 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 602112 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 603136 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 604160 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 605184 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 606208 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 607232 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 608256 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 609280 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 610304 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 611328 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 612352 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 613376 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 614400 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 615424 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 616448 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 617472 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 618496 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 619520 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 620544 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 621568 written[0m
+[0m2024-01-20 15:07:24 | DEBUG | event_handler:34 | Writing to flash: 622592 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 623616 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 624640 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 625664 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 626688 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 627712 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 628736 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 629760 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 630784 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 631808 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 632832 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 633856 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 634880 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 635904 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 636928 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 637952 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 638976 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 640000 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 641024 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 642048 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 643072 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 644096 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 645120 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 646144 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 647168 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 648192 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 649216 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 650240 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 651264 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 652288 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 653312 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 654336 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 655360 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 656384 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 657408 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 658432 written[0m
+[0m2024-01-20 15:07:25 | DEBUG | event_handler:34 | Writing to flash: 659456 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 660480 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 661504 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 662528 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 663552 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 664576 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 665600 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 666624 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 667648 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 668672 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 669696 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 670720 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 671744 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 672768 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 673792 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 674816 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 675840 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 676864 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 677888 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 678912 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 679936 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 680960 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 681984 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 683008 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 684032 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 685056 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 686080 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 687104 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 688128 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 689152 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 690176 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 691200 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 692224 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 693248 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 694272 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 695296 written[0m
+[0m2024-01-20 15:07:26 | DEBUG | event_handler:34 | Writing to flash: 696320 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 697344 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 698368 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 699392 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 700416 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 701440 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 702464 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 703488 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 704512 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 705536 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 706560 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 707584 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 708608 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 709632 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 710656 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 711680 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 712704 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 713728 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 714752 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 715776 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 716800 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 717824 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 718848 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 719872 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 720896 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 721920 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 722944 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 723968 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 724992 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 726016 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 727040 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 728064 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 729088 written[0m
+[0m2024-01-20 15:07:27 | DEBUG | event_handler:34 | Writing to flash: 730112 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 731136 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 732160 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 733184 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 734208 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 735232 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 736256 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 737280 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 738304 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 739328 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 740352 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 741376 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 742400 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 743424 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 744448 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 745472 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 746496 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 747520 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 748544 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 749568 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 750592 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 751616 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 752640 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 753664 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 754688 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 755712 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 756736 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 757760 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 758784 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 759808 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 760832 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 761856 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 762880 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 763904 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 764928 written[0m
+[0m2024-01-20 15:07:28 | DEBUG | event_handler:34 | Writing to flash: 765952 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 766976 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 768000 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 769024 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 770048 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 771072 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | inspect_task:98 | Currently available heap: 221708[0m
+[0m2024-01-20 15:07:29 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 218136[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 772096 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 773120 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 774144 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 775168 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 776192 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 777216 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 778240 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 779264 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 780288 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 781312 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 782336 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 783360 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 784384 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 785408 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 786432 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 787456 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 788480 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 789504 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 790528 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 791552 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 792576 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 793600 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 794624 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 795648 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 796672 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 797696 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 798720 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 799744 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 800768 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 801792 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 802816 written[0m
+[0m2024-01-20 15:07:29 | DEBUG | event_handler:34 | Writing to flash: 803840 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 804864 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 805888 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 806912 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 807936 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 808960 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 809984 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 811008 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 812032 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 813056 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 814080 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 815104 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 816128 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 817152 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 818176 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 819200 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 820224 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 821248 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 822272 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 823296 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 824320 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 825344 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 826368 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 827392 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 828416 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 829440 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 830464 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 831488 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 832512 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 833536 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 834560 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 835584 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 836608 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 837632 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 838656 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 839680 written[0m
+[0m2024-01-20 15:07:30 | DEBUG | event_handler:34 | Writing to flash: 840704 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 841728 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 842752 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 843776 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 844800 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 845824 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 846848 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 847872 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 848896 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 849920 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 850944 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 851968 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 852992 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 854016 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 855040 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 856064 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 857088 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 858112 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 859136 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 860160 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 861184 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 862208 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 863232 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 864256 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 865280 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 866304 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 867328 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 868352 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 869376 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 870400 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 871424 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 872448 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 873472 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 874496 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 875520 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 876544 written[0m
+[0m2024-01-20 15:07:31 | DEBUG | event_handler:34 | Writing to flash: 877568 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 878592 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 879616 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 880640 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 881664 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 882688 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 883712 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 884736 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 885760 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 886784 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 887808 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 888832 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 889856 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 890880 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 891904 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 892928 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 893952 written[0m
+[0m2024-01-20 15:07:32 | DEBUG | event_handler:34 | Writing to flash: 894368 written[0m
+[0;32mI (28970) esp_image: segment 0: paddr=00110020 vaddr=3c0b0020 size=25e60h (155232) map[0m
+[0;32mI (28990) esp_image: segment 1: paddr=00135e88 vaddr=3fc90800 size=029e0h ( 10720) [0m
+[0;32mI (28990) esp_image: segment 2: paddr=00138870 vaddr=40380000 size=077a8h ( 30632) [0m
+[0;32mI (29000) esp_image: segment 3: paddr=00140020 vaddr=42000020 size=a11cch (659916) map[0m
+[0;32mI (29090) esp_image: segment 4: paddr=001e11f4 vaddr=403877a8 size=08f80h ( 36736) [0m
+[0;32mI (29100) esp_image: segment 0: paddr=00110020 vaddr=3c0b0020 size=25e60h (155232) map[0m
+[0;32mI (29120) esp_image: segment 1: paddr=00135e88 vaddr=3fc90800 size=029e0h ( 10720) [0m
+[0;32mI (29120) esp_image: segment 2: paddr=00138870 vaddr=40380000 size=077a8h ( 30632) [0m
+[0;32mI (29130) esp_image: segment 3: paddr=00140020 vaddr=42000020 size=a11cch (659916) map[0m
+[0;32mI (29220) esp_image: segment 4: paddr=001e11f4 vaddr=403877a8 size=08f80h ( 36736) [0m
+[0;32m2024-01-20 15:07:32 | INFO  | event_handler:37 | Boot partition updated. Next Partition: 17[0m
+[0;32m2024-01-20 15:07:32 | INFO  | event_handler:40 | OTA finish[0m
+[0;32m2024-01-20 15:07:32 | INFO  | ota_c_do_simple_ota:68 | OTA successful, restarting![0m
+I (29280) wifi:state: run -> init (0)
+I (29280) wifi:pm stop, total sleep time: 1053211 us / 26017074 us
+
+I (29290) wifi:<ba-del>idx:0, tid:0
+I (29290) wifi:new:<11,0>, old:<11,2>, ap:<255,255>, sta:<11,2>, prof:1
+[0;33m2024-01-20 15:07:32 | WARN  | lib/wifi_controller/src/wifi_controller.c:109 | wifi_c_sta_event_handler:109 | Failed to connect to AP, trying again.[0m
+I (29350) wifi:flush txq
+I (29350) wifi:stop sw txq
+I (29350) wifi:lmac stop hw txq
+[31;1;4m2024-01-20 15:07:32 | FATAL | src/main.c     :105 | shutdown_handler:105 | FATAL ERROR - RESTARTING ESP DEVICE![0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 20 2024 15:49:51[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00110020 vaddr=3c0b0020 size=25e60h (155232) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=00135e88 vaddr=3fc90800 size=029e0h ( 10720) load[0m
+[0;32mI (142) esp_image: segment 2: paddr=00138870 vaddr=40380000 size=077a8h ( 30632) load[0m
+[0;32mI (151) esp_image: segment 3: paddr=00140020 vaddr=42000020 size=a11cch (659916) map[0m
+[0;32mI (259) esp_image: segment 4: paddr=001e11f4 vaddr=403877a8 size=08f80h ( 36736) load[0m
+[0;32mI (271) boot: Loaded app from partition at offset 0x110000[0m
+[0;32mI (272) boot: Disabling RNG early entropy source...[0m
+[0;32mI (283) cpu_start: Unicore app[0m
+[0;32mI (283) cpu_start: Pro cpu up.[0m
+[0;32mI (292) cpu_start: Pro cpu start user code[0m
+[0;32mI (292) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (293) cpu_start: Application information:[0m
+[0;32mI (295) cpu_start: Project name:     esp_startup[0m
+[0;32mI (301) cpu_start: App version:      8a047f6-dirty[0m
+[0;32mI (306) cpu_start: Compile time:     Jan 20 2024 15:48:06[0m
+[0;32mI (312) cpu_start: ELF file SHA256:  d8126e7da67b92c0...[0m
+[0;32mI (318) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (323) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (328) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (333) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (337) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (345) heap_init: At 3FC97CB0 len 00044A60 (274 KiB): DRAM[0m
+[0;32mI (351) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (357) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (365) spi_flash: detected chip: generic[0m
+[0;32mI (368) spi_flash: flash io: dio[0m
+[0;32mI (373) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (379) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (386) app_start: Starting scheduler on CPU0[0m
+[0;32mI (391) main_task: Started on CPU0[0m
+[0;32mI (391) main_task: Calling app_main()[0m
+[0;32m2024-01-20 15:07:33 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m2024-01-20 15:07:33 | DEBUG | inspect_task:98 | Currently available heap: 279440[0m
+[0m2024-01-20 15:07:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 279440[0m
+[0;32m2024-01-20 15:07:33 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m2024-01-20 15:07:33 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+[0;32mI (521) pp: pp rom version: 9387209[0m
+[0;32mI (531) net80211: net80211 rom version: 9387209[0m
+I (541) wifi:wifi driver task: 3fca1618, prio:23, stack:6656, core=0
+I (541) wifi:wifi firmware version: ce9244d
+I (541) wifi:wifi certification version: v7.0
+I (541) wifi:config NVS flash: enabled
+I (551) wifi:config nano formating: disabled
+I (551) wifi:Init data frame dynamic rx buffer num: 32
+I (561) wifi:Init management frame dynamic rx buffer num: 32
+I (561) wifi:Init management short buffer num: 32
+I (571) wifi:Init dynamic tx buffer num: 32
+I (571) wifi:Init static tx FG buffer num: 2
+I (581) wifi:Init static rx buffer size: 1600
+I (581) wifi:Init static rx buffer num: 10
+I (581) wifi:Init dynamic rx buffer num: 32
+[0;32mI (591) wifi_init: rx ba win: 6[0m
+[0;32mI (591) wifi_init: tcpip mbox: 32[0m
+[0;32mI (591) wifi_init: udp mbox: 6[0m
+[0;32mI (601) wifi_init: tcp mbox: 6[0m
+[0;32mI (601) wifi_init: tcp tx win: 5744[0m
+[0;32mI (611) wifi_init: tcp rx win: 5744[0m
+[0;32mI (611) wifi_init: tcp mss: 1440[0m
+[0;32mI (611) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (621) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m2024-01-20 15:07:33 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (631) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (671) wifi:mode : sta (ec:da:3b:36:60:50)
+I (671) wifi:enable tsf
+[0;32m2024-01-20 15:07:33 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m2024-01-20 15:07:33 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m2024-01-20 15:07:33 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m2024-01-20 15:07:33 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m2024-01-20 15:07:33 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m2024-01-20 15:07:33 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m2024-01-20 15:07:33 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m2024-01-20 15:07:33 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m2024-01-20 15:07:33 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m2024-01-20 15:07:33 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3171) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3171) wifi:state: init -> auth (b0)
+I (3171) wifi:state: auth -> assoc (0)
+I (3171) wifi:state: assoc -> run (10)
+I (3191) wifi:connected with TP-LINK_AD8313, aid = 5, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3191) wifi:security: WPA2-PSK, phy: bgn, rssi: -54
+I (3191) wifi:pm start, type: 1
+
+I (3201) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3211) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3291) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-20 15:07:37 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.103[0m
+[0;32mI (4211) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-20 15:07:37 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-20 15:07:37 | INFO  | app_main:164 | OTA UPDATE SUCCESSFUL![0m
+[0;32mI (4231) main_task: Returned from app_main()[0m
+[0m2024-01-20 15:07:38 | DEBUG | inspect_task:98 | Currently available heap: 238376[0m
+[0m2024-01-20 15:07:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+I (6571) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:5, ssn:0, winSize:64
+[0m2024-01-20 15:07:43 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:07:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:07:48 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:07:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:07:53 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:07:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:07:58 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:07:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:03 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:08 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:13 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:18 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:23 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:28 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:33 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:38 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:43 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:48 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:53 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:08:58 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:08:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:03 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:09:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:08 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:09:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:13 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:09:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:18 | DEBUG | inspect_task:98 | Currently available heap: 238148[0m
+[0m2024-01-20 15:09:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:23 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:09:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:28 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:09:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:33 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:09:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:38 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:09:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:43 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:09:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:48 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:09:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:53 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:09:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:09:58 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:09:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:03 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:08 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:13 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:18 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:23 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:28 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:33 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:38 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:43 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:48 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:53 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:10:58 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:10:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:03 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:08 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:13 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:18 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:23 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:28 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:33 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:38 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:43 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:48 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:53 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:11:58 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:11:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:03 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:08 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:13 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:18 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:23 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:28 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:33 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:38 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:43 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:48 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:53 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:12:58 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:12:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:03 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:08 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:13 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:18 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:23 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:28 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:33 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:38 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:43 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:48 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:53 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:13:58 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:13:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:03 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:08 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:13 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:18 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:23 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:28 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:33 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:38 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:43 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:48 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:53 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:14:58 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:14:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:03 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:08 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:13 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:18 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:23 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:28 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:33 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:38 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:43 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:48 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:53 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:15:58 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:15:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:03 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:08 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:13 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:18 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:23 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:23 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:28 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:28 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:33 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:33 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:38 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:38 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:43 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:43 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:48 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:48 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:53 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:53 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:16:58 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:16:58 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:17:03 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:17:03 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:17:08 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:17:08 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:17:13 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:17:13 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m
+[0m2024-01-20 15:17:18 | DEBUG | inspect_task:98 | Currently available heap: 238168[0m
+[0m2024-01-20 15:17:18 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 231304[0m

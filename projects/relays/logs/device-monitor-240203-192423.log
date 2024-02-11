@@ -1,0 +1,53 @@
+0;32m1970-01-01 00:00:00 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3714) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3714) wifi:state: init -> auth (b0)
+I (3714) wifi:state: auth -> assoc (0)
+I (3724) wifi:state: assoc -> run (10)
+I (3734) wifi:connected with TP-LINK_AD8313, aid = 4, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3734) wifi:security: WPA2-PSK, phy: bgn, rssi: -64
+I (3744) wifi:pm start, type: 1
+
+I (3754) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3754) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:04 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.100[0m
+[0;32mI (4744) esp_netif_handlers: sta ip: 192.168.0.100, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:04 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m1970-01-01 00:00:04 | INFO  | event_handler:26 | OTA started[0m
+[0;31mE (4864) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/ota_controller/src/ota_controller.c:71 | ota_c_do_simple_ota:71 | error -1 during https ota: ESP_FAIL[0m
+[0;32m1970-01-01 00:00:04 | INFO  | event_handler:26 | OTA started[0m
+[0;31mE (4884) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m1970-01-01 00:00:04 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 258, ESP HTTPS OTA Begin failed: ESP_ERR_INVALID_ARG[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:92 | Currently available heap: 223868[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 223868[0m
+[0;32m1970-01-01 00:00:04 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.100:27015[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.100:34665[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:242 | socket: 54 bound to address: 192.168.0.100:27015[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;32m1970-01-01 00:00:04 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.100:27015[0m
+[0;32m1970-01-01 00:00:04 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.100 with port 27015 to capture logs.[0m
+I (6524) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:6, ssn:2, winSize:64
+[0;32m2024-02-03 18:24:30 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:24:31 | DEBUG | inspect_task:92 | Currently available heap: 218532[0m
+[0m2024-02-03 18:24:31 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 215144[0m
+[0;32m2024-02-03 18:24:34 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:24:36 | DEBUG | inspect_task:92 | Currently available heap: 218532[0m
+[0m2024-02-03 18:24:36 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 215144[0m
+[0;32m2024-02-03 18:24:38 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:24:41 | DEBUG | inspect_task:92 | Currently available heap: 218532[0m
+[0m2024-02-03 18:24:41 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 215144[0m
+[0;32m2024-02-03 18:24:42 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:24:46 | DEBUG | inspect_task:92 | Currently available heap: 218532[0m
+[0m2024-02-03 18:24:46 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 215144[0m
+[0;32m2024-02-03 18:24:46 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0;32m2024-02-03 18:24:50 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:24:51 | DEBUG | inspect_task:92 | Currently available heap: 218532[0m
+[0m2024-02-03 18:24:51 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 215144[0m
+[0;32m2024-02-03 18:24:54 | INFO  | switch_led_task:79 | CHANGED GPIO_2 LEVEL[0m
+[0m2024-02-03 18:24:56 | DEBUG | inspect_task:92 | Currently available heap: 218532[0m
+[0m2024-02-03 18:24:56 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 215144[0m

@@ -1,0 +1,62 @@
+I (3434) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (4604) wifi:state: init -> auth (b0)
+I (4614) wifi:state: auth -> assoc (0)
+I (4614) wifi:state: assoc -> run (10)
+I (4624) wifi:connected with TP-LINK_AD8313, aid = 8, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (4634) wifi:security: WPA2-PSK, phy: bgn, rssi: -62
+I (4644) wifi:pm start, type: 1
+
+I (4654) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (4664) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:00:05 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.103[0m
+[0;32mI (5654) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m1970-01-01 00:00:05 | INFO  | app_main:100 | Connected to wifi, current ip: 192.168.0.103[0m
+[0m1970-01-01 00:00:05 | DEBUG | inspect_task:69 | Currently available heap: 224912[0m
+[0m1970-01-01 00:00:05 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m1970-01-01 00:00:05 | DEBUG | spiffs_c_init:16 | initializing SPIFFS...[0m
+[0;33mW (5704) SPIFFS: mount failed, -10025. formatting...[0m
+I (6444) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:5, ssn:0, winSize:64
+[0m2024-01-13 09:03:06 | DEBUG | inspect_task:69 | Currently available heap: 222200[0m
+[0m2024-01-13 09:03:06 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:09 | DEBUG | spiffs_c_init:27 | initialized SPIFFS successfully[0m
+[0;32m2024-01-13 09:03:09 | INFO  | spiffs_c_get_info:83 | partition size:
+	total: 896321,
+	used: 0[0m
+[0m2024-01-13 09:03:09 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m2024-01-13 09:03:09 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m2024-01-13 09:03:09 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m2024-01-13 09:03:09 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.103:27015[0m
+[0m2024-01-13 09:03:09 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.103:34665[0m
+[0m2024-01-13 09:03:09 | DEBUG | tcp_bind_socket:242 | socket: 54 bound to address: 192.168.0.103:27015[0m
+[0m2024-01-13 09:03:09 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;32m2024-01-13 09:03:09 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.103:27015[0m
+[0;32m2024-01-13 09:03:10 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.103 with port 27015 to capture logs.[0m
+[0m2024-01-13 09:03:11 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:11 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:16 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:16 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:21 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:21 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:26 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:26 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:31 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:31 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:36 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:36 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:41 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:41 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:46 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:46 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:51 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:51 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:03:56 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:03:56 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:04:01 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:04:01 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:04:06 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:04:06 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:04:11 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:04:11 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m
+[0m2024-01-13 09:04:16 | DEBUG | inspect_task:69 | Currently available heap: 221616[0m
+[0m2024-01-13 09:04:16 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 205164[0m

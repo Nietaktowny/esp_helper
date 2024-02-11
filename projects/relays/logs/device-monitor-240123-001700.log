@@ -1,0 +1,1407 @@
+I (893) wifi:Init dynamic tx buffer num: 32
+I (893) wifi:Init static tx FG buffer num: 2
+I (893) wifi:Init static rx buffer size: 1600
+I (903) wifi:Init static rx buffer num: 10
+I (903) wifi:Init dynamic rx buffer num: 32
+[0;32mI (913) wifi_init: rx ba win: 6[0m
+[0;32mI (913) wifi_init: tcpip mbox: 32[0m
+[0;32mI (913) wifi_init: udp mbox: 6[0m
+[0;32mI (923) wifi_init: tcp mbox: 6[0m
+[0;32mI (923) wifi_init: tcp tx win: 5744[0m
+[0;32mI (933) wifi_init: tcp rx win: 5744[0m
+[0;32mI (933) wifi_init: tcp mss: 1440[0m
+[0;32mI (933) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (943) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:01:35 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+I (963) wifi:mode : sta (ec:da:3b:37:ed:5c) + softAP (ec:da:3b:37:ed:5d)
+I (963) wifi:enable tsf
+I (963) wifi:Total power save buffer number: 16
+I (963) wifi:Init max length of beacon: 752/752
+I (973) wifi:Init max length of beacon: 752/752
+[0;32m1970-01-01 00:01:35 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0;32mI (983) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0m1970-01-01 00:01:35 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+I (1683) wifi:Total power save buffer number: 16
+[0;32mI (1693) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32m1970-01-01 00:01:36 | INFO  | wifi_c_start_ap:369 | Started AP: 
+SSID: ESP32 
+Password: 12345678[0m
+[0m1970-01-01 00:01:36 | DEBUG | wifi_manager_server_init:340 | http server started[0m
+[0;33mW (1703) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;31mE (1713) esp-tls: couldn't get hostname for :wmytych.usermd.net: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (1723) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (1733) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;31mE (1733) esp_https_ota: Failed to open HTTP connection: ESP_ERR_HTTP_CONNECT[0m
+[0;31mE (1743) esp_https_ota: Failed to establish HTTP connection[0m
+[0;31m1970-01-01 00:01:36 | ERROR | lib/ota_controller/src/ota_controller.c:157 | ota_c_start:157 | error 28674, ESP HTTPS OTA Begin failed: ESP_ERR_HTTP_CONNECT[0m
+[0m1970-01-01 00:01:36 | DEBUG | inspect_task:99 | Currently available heap: 194676[0m
+[0m1970-01-01 00:01:36 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 194676[0m
+[0m1970-01-01 00:01:36 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:01:36 | DEBUG | tcp_create_socket:175 | created socket: 57[0m
+[0m1970-01-01 00:01:36 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:01:36 | ERROR | lib/tcp_controller/src/tcp_controller.c:214 | tcp_prepare_address:214 | error when translating address to binary data[0m
+[0m1970-01-01 00:01:36 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0;31m1970-01-01 00:01:36 | ERROR | lib/tcp_controller/src/tcp_controller.c:214 | tcp_prepare_address:214 | error when translating address to binary data[0m
+[0;31m1970-01-01 00:01:36 | ERROR | lib/cli_manager/src/cli_manager.c:69 | cli_set_remote_logging:69 | Error 35 when connecting to remote host: ERROR[0m
+[0;32mI (1853) main_task: Returned from app_main()[0m
+[0m1970-01-01 00:01:41 | DEBUG | inspect_task:99 | Currently available heap: 198772[0m
+[0m1970-01-01 00:01:41 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 194024[0m
+[0m1970-01-01 00:01:46 | DEBUG | inspect_task:99 | Currently available heap: 198772[0m
+[0m1970-01-01 00:01:46 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 194024[0m
+[0m1970-01-01 00:01:51 | DEBUG | inspect_task:99 | Currently available heap: 198772[0m
+[0m1970-01-01 00:01:51 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 194024[0m
+[0m1970-01-01 00:01:56 | DEBUG | inspect_task:99 | Currently available heap: 198772[0m
+[0m1970-01-01 00:01:56 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 194024[0m
+[0m1970-01-01 00:02:01 | DEBUG | inspect_task:99 | Currently available heap: 198772[0m
+[0m1970-01-01 00:02:01 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 194024[0m
+I (27623) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1
+I (27623) wifi:station: 10:02:b5:33:2e:17 join, AID=1, bgn, 40U
+[0;32m1970-01-01 00:02:02 | INFO  | wifi_c_ap_event_handler:84 | Station 10:02:b5:33:2e:17 joined, AID=1[0m
+[0;32mI (27723) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0m1970-01-01 00:02:06 | DEBUG | inspect_task:99 | Currently available heap: 196688[0m
+[0m1970-01-01 00:02:06 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 192500[0m
+[0m1970-01-01 00:02:06 | DEBUG | root_handler:65 | serving GET "/" request...[0m
+[0m1970-01-01 00:02:06 | DEBUG | script_handler:86 | serving GET "/code.js" request...[0m
+I (32533) wifi:<ba-add>idx:2 (ifx:1, 10:02:b5:33:2e:17), tid:0, ssn:40, winSize:64
+[0m1970-01-01 00:02:07 | DEBUG | state_json_handler:113 | serving GET "/state" request...[0m
+[0m1970-01-01 00:02:07 | DEBUG | wifi_c_get_status_as_json:245 | storing wifi_c_status structure as JSON string...[0m
+[0m1970-01-01 00:02:07 | DEBUG | wifi_c_get_status_as_json:261 | wifi_c_status structure as JSON: 
+{"wifi_initialized": true, "netif_initialized":true, "wifi_mode": "WIFI_C_MODE_APSTA", "event_loop_started": true, "sta_started": true, "ap_started": true, "scan_done": false, "sta_connected":false, "sta_ip": "", "sta_ssid": "", "ap_ip": "192.168.4.1", "ap_ssid": "ESP32"}[0m
+[0m1970-01-01 00:02:07 | DEBUG | ap_json_handler:97 | serving GET "/scan" request...[0m
+[0m1970-01-01 00:02:07 | DEBUG | wifi_c_scan_all_ap:516 | scanning for Access Points...[0m
+[0;32m1970-01-01 00:02:10 | INFO  | wifi_c_ap_event_handler:91 | Total APs scanned: 10[0m
+[0m1970-01-01 00:02:10 | DEBUG | wifi_manager_fetch_ap_list:141 | wifi manager scan complete, scanned: 41040 APs[0m
+[0m1970-01-01 00:02:10 | DEBUG | saved_ap_json_handler:187 | serving GET "/saved_ap" request...[0m
+[0;31m1970-01-01 00:02:10 | ERROR | lib/nvs_controller/src/nvs_controller.c:70 | nvs_c_open_read_only:70 | error 4354 when opening nvs namespace: ESP_ERR_NVS_NOT_FOUND[0m
+[0;31m1970-01-01 00:02:10 | ERROR | lib/nvs_controller/src/nvs_controller.c:70 | nvs_c_open_read_only:70 | error 4354 when opening nvs namespace: ESP_ERR_NVS_NOT_FOUND[0m
+[0;33m1970-01-01 00:02:10 | WARN  | lib/wifi_manager/src/wifi_manager.c:90 | wifi_manager_get_stored_ap:90 | Cannot find any stored AP in NVS[0m
+[0;33m1970-01-01 00:02:10 | WARN  | lib/wifi_manager/src/wifi_manager.c:26 | wifi_manager_get_stored_ap_as_json:26 | not found any stored AP, generating empty list message...[0m
+[0;32m1970-01-01 00:02:10 | INFO  | wifi_c_ap_event_handler:88 | Station 10:02:b5:33:2e:17 left, AID=1[0m
+I (35693) wifi:starting SA query procedure with STA(10:02:b5:33:2e:17)
+I (35693) wifi:Send SA Query req with transaction id dea0
+I (35893) wifi:Send SA Query req with transaction id dea1
+I (36093) wifi:Send SA Query req with transaction id dea2
+I (36293) wifi:Send SA Query req with transaction id dea3
+I (36493) wifi:Send SA Query req with transaction id dea4
+I (36693) wifi:Send SA Query req with transaction id dea5
+I (36713) wifi:STA not responded to 6 SA Query attempts, Reset connection sending disassoc
+I (36743) wifi:station: 10:02:b5:33:2e:17 leave, AID = 1, bss_flags is 134243, bss:0x3fc9be20
+I (36743) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1
+I (36743) wifi:<ba-del>idx:2, tid:0
+[0;32m1970-01-01 00:02:11 | INFO  | wifi_c_ap_event_handler:88 | Station 10:02:b5:33:2e:17 left, AID=1[0m
+[0m1970-01-01 00:02:11 | DEBUG | inspect_task:99 | Currently available heap: 182796[0m
+[0m1970-01-01 00:02:11 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 178004[0m
+I (37243) wifi:new:<1,1>, old:<1,0>, ap:<1,1>, sta:<0,0>, prof:1
+I (37243) wifi:station: 10:02:b5:33:2e:17 join, AID=1, bgn, 40U
+[0;32m1970-01-01 00:02:11 | INFO  | wifi_c_ap_event_handler:84 | Station 10:02:b5:33:2e:17 joined, AID=1[0m
+[0;32mI (37373) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+[0m1970-01-01 00:02:16 | DEBUG | inspect_task:99 | Currently available heap: 187004[0m
+[0m1970-01-01 00:02:16 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 176540[0m
+[0m1970-01-01 00:02:21 | DEBUG | inspect_task:99 | Currently available heap: 187004[0m
+[0m1970-01-01 00:02:21 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 176540[0m
+[0m1970-01-01 00:02:22 | DEBUG | connect_handler:135 | serving POST "/connect" request...[0m
+[0;32m1970-01-01 00:02:22 | INFO  | connect_handler:169 | Received APs credentials!
+	SSID: TP-LINK_AD8313
+	Password: 20232887[0m
+[0;33m1970-01-01 00:02:22 | WARN  | lib/wifi_manager/src/wifi_http_server.c:173 | connect_handler:173 | Got access point credentials, device will now restart![0m
+[0m1970-01-01 00:02:22 | DEBUG | nvs_c_open:55 | opened namespace nvs for read and write operations[0m
+[0;32m1970-01-01 00:02:22 | INFO  | nvs_c_write_string:115 | written 14 bytes data into namespace nvs[0m
+[0;32m1970-01-01 00:02:22 | INFO  | nvs_c_write_string:115 | written 8 bytes data into namespace nvs[0m
+[0m1970-01-01 00:02:22 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0m1970-01-01 00:02:22 | DEBUG | wifi_manager_store_ap:65 | stored AP SSID and password in NVS:
+SSID: TP-LINK_AD8313
+Password: 20232887[0m
+I (47993) wifi:station: 10:02:b5:33:2e:17 leave, AID = 1, bss_flags is 658547, bss:0x3fc9be20
+I (47993) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<0,0>, prof:1
+[0;32m1970-01-01 00:02:22 | INFO  | wifi_c_ap_event_handler:88 | Station 10:02:b5:33:2e:17 left, AID=1[0m
+I (48053) wifi:flush txq
+I (48053) wifi:stop sw txq
+I (48053) wifi:lmac stop hw txq
+[31;1;4m1970-01-01 00:02:22 | FATAL | src/main.c     :106 | shutdown_handler:106 | FATAL ERROR - RESTARTING ESP DEVICE![0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 20 2024 15:49:51[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2c530h (181552) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=0003c558 vaddr=3fc91e00 size=02a88h ( 10888) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=0003efe8 vaddr=40380000 size=01030h (  4144) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=bba08h (768520) map[0m
+[0;32mI (280) esp_image: segment 4: paddr=000fba30 vaddr=40381030 size=10cd8h ( 68824) load[0m
+[0;32mI (299) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (300) boot: Disabling RNG early entropy source...[0m
+[0;32mI (311) cpu_start: Unicore app[0m
+[0;32mI (311) cpu_start: Pro cpu up.[0m
+[0;32mI (320) cpu_start: Pro cpu start user code[0m
+[0;32mI (320) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (320) cpu_start: Application information:[0m
+[0;32mI (323) cpu_start: Project name:     esp_startup[0m
+[0;32mI (328) cpu_start: App version:      0.0.1.1[0m
+[0;32mI (333) cpu_start: Compile time:     Jan 23 2024 00:15:57[0m
+[0;32mI (339) cpu_start: ELF file SHA256:  85e67676b7c74d75...[0m
+[0;32mI (345) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (350) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (355) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (360) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (364) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (372) heap_init: At 3FC99580 len 00043190 (268 KiB): DRAM[0m
+[0;32mI (378) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (384) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (391) spi_flash: detected chip: generic[0m
+[0;32mI (395) spi_flash: flash io: dio[0m
+[0;32mI (400) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (406) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (413) app_start: Starting scheduler on CPU0[0m
+[0;32mI (418) main_task: Started on CPU0[0m
+[0;32mI (418) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:02:23 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:02:23 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+[0;32mI (528) pp: pp rom version: 9387209[0m
+[0;32mI (528) net80211: net80211 rom version: 9387209[0m
+I (548) wifi:wifi driver task: 3fca2580, prio:23, stack:6656, core=0
+I (548) wifi:wifi firmware version: ce9244d
+I (548) wifi:wifi certification version: v7.0
+I (548) wifi:config NVS flash: enabled
+I (548) wifi:config nano formating: disabled
+I (558) wifi:Init data frame dynamic rx buffer num: 32
+I (558) wifi:Init management frame dynamic rx buffer num: 32
+I (568) wifi:Init management short buffer num: 32
+I (568) wifi:Init dynamic tx buffer num: 32
+I (578) wifi:Init static tx FG buffer num: 2
+I (578) wifi:Init static rx buffer size: 1600
+I (578) wifi:Init static rx buffer num: 10
+I (588) wifi:Init dynamic rx buffer num: 32
+[0;32mI (588) wifi_init: rx ba win: 6[0m
+[0;32mI (598) wifi_init: tcpip mbox: 32[0m
+[0;32mI (598) wifi_init: udp mbox: 6[0m
+[0;32mI (598) wifi_init: tcp mbox: 6[0m
+[0;32mI (608) wifi_init: tcp tx win: 5744[0m
+[0;32mI (608) wifi_init: tcp rx win: 5744[0m
+[0;32mI (618) wifi_init: tcp mss: 1440[0m
+[0;32mI (618) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (618) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:02:23 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (648) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (678) wifi:mode : sta (ec:da:3b:37:ed:5c)
+I (678) wifi:enable tsf
+[0;32m1970-01-01 00:02:23 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:02:23 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:02:23 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:02:23 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:02:23 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:02:23 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:02:23 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:02:23 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:02:23 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:02:23 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3178) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3858) wifi:state: init -> auth (b0)
+I (3858) wifi:state: auth -> assoc (0)
+I (3858) wifi:state: assoc -> run (10)
+I (3878) wifi:connected with TP-LINK_AD8313, aid = 1, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3878) wifi:security: WPA2-PSK, phy: bgn, rssi: -55
+I (3888) wifi:pm start, type: 1
+
+I (3888) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3938) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (4968) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:02:28 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.103[0m
+[0;32mI (5888) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:02:28 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;33mW (5898) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;32mI (5968) esp_https_ota: Starting OTA...[0m
+[0;32mI (5968) esp_https_ota: Writing to partition subtype 17 at offset 0x110000[0m
+[0;32m1970-01-01 00:02:28 | INFO  | ota_c_validate_image:91 | Running firmware version: 0.0.1.1[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_validate_image:101 | validated new firmware version: 0.0.0.1[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 1024[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 2048[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 3072[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 4096[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 5120[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 6144[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 7168[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 8192[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 9216[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 10240[0m
+[0m1970-01-01 00:02:28 | DEBUG | ota_c_start:183 | image bytes read: 11264[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 12288[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 13312[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 14336[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 15360[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 16384[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 17408[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 18432[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 19456[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 20480[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 21504[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 22528[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 23552[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 24576[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 25600[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 26624[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 27648[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 28672[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 29696[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 30720[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 31744[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 32768[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 33792[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 34816[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 35840[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 36864[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 37888[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 38912[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 39936[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 40960[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 41984[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 43008[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 44032[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 45056[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 46080[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 47104[0m
+[0m1970-01-01 00:02:29 | DEBUG | ota_c_start:183 | image bytes read: 48128[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 49152[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 50176[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 51200[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 52224[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 53248[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 54272[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 55296[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 56320[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 57344[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 58368[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 59392[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 60416[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 61440[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 62464[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 63488[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 64512[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 65536[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 66560[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 67584[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 68608[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 69632[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 70656[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 71680[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 72704[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 73728[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 74752[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 75776[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 76800[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 77824[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 78848[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 79872[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 80896[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 81920[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 82944[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 83968[0m
+[0m1970-01-01 00:02:30 | DEBUG | ota_c_start:183 | image bytes read: 84992[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 86016[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 87040[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 88064[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 89088[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 90112[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 91136[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 92160[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 93184[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 94208[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 95232[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 96256[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 97280[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 98304[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 99328[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 100352[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 101376[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 102400[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 103424[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 104448[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 105472[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 106496[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 107520[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 108544[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 109568[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 110592[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 111616[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 112640[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 113664[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 114688[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 115712[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 116736[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 117760[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 118784[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 119808[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 120832[0m
+[0m1970-01-01 00:02:31 | DEBUG | ota_c_start:183 | image bytes read: 121856[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 122880[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 123904[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 124928[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 125952[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 126976[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 128000[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 129024[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 130048[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 131072[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 132096[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 133120[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 134144[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 135168[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 136192[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 137216[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 138240[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 139264[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 140288[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 141312[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 142336[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 143360[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 144384[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 145408[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 146432[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 147456[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 148480[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 149504[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 150528[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 151552[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 152576[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 153600[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 154624[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 155648[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 156672[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 157696[0m
+[0m1970-01-01 00:02:32 | DEBUG | ota_c_start:183 | image bytes read: 158720[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 159744[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 160768[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 161792[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 162816[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 163840[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 164864[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 165888[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 166912[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 167936[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 168960[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 169984[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 171008[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 172032[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 173056[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 174080[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 175104[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 176128[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 177152[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 178176[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 179200[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 180224[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 181248[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 182272[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 183296[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 184320[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 185344[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 186368[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 187392[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 188416[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 189440[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 190464[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 191488[0m
+[0m1970-01-01 00:02:33 | DEBUG | ota_c_start:183 | image bytes read: 192512[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 193536[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 194560[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 195584[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 196608[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 197632[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 198656[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 199680[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 200704[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 201728[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 202752[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 203776[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 204800[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 205824[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 206848[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 207872[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 208896[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 209920[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 210944[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 211968[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 212992[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 214016[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 215040[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 216064[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 217088[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 218112[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 219136[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 220160[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 221184[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 222208[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 223232[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 224256[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 225280[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 226304[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 227328[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 228352[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 229376[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 230400[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 231424[0m
+[0m1970-01-01 00:02:34 | DEBUG | ota_c_start:183 | image bytes read: 232448[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 233472[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 234496[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 235520[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 236544[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 237568[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 238592[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 239616[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 240640[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 241664[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 242688[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 243712[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 244736[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 245760[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 246784[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 247808[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 248832[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 249856[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 250880[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 251904[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 252928[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 253952[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 254976[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 256000[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 257024[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 258048[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 259072[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 260096[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 261120[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 262144[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 263168[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 264192[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 265216[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 266240[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 267264[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 268288[0m
+[0m1970-01-01 00:02:35 | DEBUG | ota_c_start:183 | image bytes read: 269312[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 270336[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 271360[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 272384[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 273408[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 274432[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 275456[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 276480[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 277504[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 278528[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 279552[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 280576[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 281600[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 282624[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 283648[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 284672[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 285696[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 286720[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 287744[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 288768[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 289792[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 290816[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 291840[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 292864[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 293888[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 294912[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 295936[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 296960[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 297984[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 299008[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 300032[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 301056[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 302080[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 303104[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 304128[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 305152[0m
+[0m1970-01-01 00:02:36 | DEBUG | ota_c_start:183 | image bytes read: 306176[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 307200[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 308224[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 309248[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 310272[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 311296[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 312320[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 313344[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 314368[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 315392[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 316416[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 317440[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 318464[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 319488[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 320512[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 321536[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 322560[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 323584[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 324608[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 325632[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 326656[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 327680[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 328704[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 329728[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 330752[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 331776[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 332800[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 333824[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 334848[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 335872[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 336896[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 337920[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 338944[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 339968[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 340992[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 342016[0m
+[0m1970-01-01 00:02:37 | DEBUG | ota_c_start:183 | image bytes read: 343040[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 344064[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 345088[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 346112[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 347136[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 348160[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 349184[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 350208[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 351232[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 352256[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 353280[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 354304[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 355328[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 356352[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 357376[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 358400[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 359424[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 360448[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 361472[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 362496[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 363520[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 364544[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 365568[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 366592[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 367616[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 368640[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 369664[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 370688[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 371712[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 372736[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 373760[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 374784[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 375808[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 376832[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 377856[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 378880[0m
+[0m1970-01-01 00:02:38 | DEBUG | ota_c_start:183 | image bytes read: 379904[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 380928[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 381952[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 382976[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 384000[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 385024[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 386048[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 387072[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 388096[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 389120[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 390144[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 391168[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 392192[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 393216[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 394240[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 395264[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 396288[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 397312[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 398336[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 399360[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 400384[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 401408[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 402432[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 403456[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 404480[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 405504[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 406528[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 407552[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 408576[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 409600[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 410624[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 411648[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 412672[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 413696[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 414720[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 415744[0m
+[0m1970-01-01 00:02:39 | DEBUG | ota_c_start:183 | image bytes read: 416768[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 417792[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 418816[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 419840[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 420864[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 421888[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 422912[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 423936[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 424960[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 425984[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 427008[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 428032[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 429056[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 430080[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 431104[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 432128[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 433152[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 434176[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 435200[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 436224[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 437248[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 438272[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 439296[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 440320[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 441344[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 442368[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 443392[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 444416[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 445440[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 446464[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 447488[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 448512[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 449536[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 450560[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 451584[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 452608[0m
+[0m1970-01-01 00:02:40 | DEBUG | ota_c_start:183 | image bytes read: 453632[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 454656[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 455680[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 456704[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 457728[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 458752[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 459776[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 460800[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 461824[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 462848[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 463872[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 464896[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 465920[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 466944[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 467968[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 468992[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 470016[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 471040[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 472064[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 473088[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 474112[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 475136[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 476160[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 477184[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 478208[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 479232[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 480256[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 481280[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 482304[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 483328[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 484352[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 485376[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 486400[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 487424[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 488448[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 489472[0m
+[0m1970-01-01 00:02:41 | DEBUG | ota_c_start:183 | image bytes read: 490496[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 491520[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 492544[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 493568[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 494592[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 495616[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 496640[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 497664[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 498688[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 499712[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 500736[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 501760[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 502784[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 503808[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 504832[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 505856[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 506880[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 507904[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 508928[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 509952[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 510976[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 512000[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 513024[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 514048[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 515072[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 516096[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 517120[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 518144[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 519168[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 520192[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 521216[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 522240[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 523264[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 524288[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 525312[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 526336[0m
+[0m1970-01-01 00:02:42 | DEBUG | ota_c_start:183 | image bytes read: 527360[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 528384[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 529408[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 530432[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 531456[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 532480[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 533504[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 534528[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 535552[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 536576[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 537600[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 538624[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 539648[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 540672[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 541696[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 542720[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 543744[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 544768[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 545792[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 546816[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 547840[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 548864[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 549888[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 550912[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 551936[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 552960[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 553984[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 555008[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 556032[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 557056[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 558080[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 559104[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 560128[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 561152[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 562176[0m
+[0m1970-01-01 00:02:43 | DEBUG | ota_c_start:183 | image bytes read: 563200[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 564224[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 565248[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 566272[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 567296[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 568320[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 569344[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 570368[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 571392[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 572416[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 573440[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 574464[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 575488[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 576512[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 577536[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 578560[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 579584[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 580608[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 581632[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 582656[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 583680[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 584704[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 585728[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 586752[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 587776[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 588800[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 589824[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 590848[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 591872[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 592896[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 593920[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 594944[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 595968[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 596992[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 598016[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 599040[0m
+[0m1970-01-01 00:02:44 | DEBUG | ota_c_start:183 | image bytes read: 600064[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 601088[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 602112[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 603136[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 604160[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 605184[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 606208[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 607232[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 608256[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 609280[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 610304[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 611328[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 612352[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 613376[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 614400[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 615424[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 616448[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 617472[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 618496[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 619520[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 620544[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 621568[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 622592[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 623616[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 624640[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 625664[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 626688[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 627712[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 628736[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 629760[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 630784[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 631808[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 632832[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 633856[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 634880[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 635904[0m
+[0m1970-01-01 00:02:45 | DEBUG | ota_c_start:183 | image bytes read: 636928[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 637952[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 638976[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 640000[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 641024[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 642048[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 643072[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 644096[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 645120[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 646144[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 647168[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 648192[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 649216[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 650240[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 651264[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 652288[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 653312[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 654336[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 655360[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 656384[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 657408[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 658432[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 659456[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 660480[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 661504[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 662528[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 663552[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 664576[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 665600[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 666624[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 667648[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 668672[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 669696[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 670720[0m
+[0m1970-01-01 00:02:46 | DEBUG | ota_c_start:183 | image bytes read: 671744[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 672768[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 673792[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 674816[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 675840[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 676864[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 677888[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 678912[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 679936[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 680960[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 681984[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 683008[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 684032[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 685056[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 686080[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 687104[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 688128[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 689152[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 690176[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 691200[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 692224[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 693248[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 694272[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 695296[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 696320[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 697344[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 698368[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 699392[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 700416[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 701440[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 702464[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 703488[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 704512[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 705536[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 706560[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 707584[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 708608[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 709632[0m
+[0m1970-01-01 00:02:47 | DEBUG | ota_c_start:183 | image bytes read: 710656[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 711680[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 712704[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 713728[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 714752[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 715776[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 716800[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 717824[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 718848[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 719872[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 720896[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 721920[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 722944[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 723968[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 724992[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 726016[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 727040[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 728064[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 729088[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 730112[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 731136[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 732160[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 733184[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 734208[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 735232[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 736256[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 737280[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 738304[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 739328[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 740352[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 741376[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 742400[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 743424[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 744448[0m
+[0m1970-01-01 00:02:48 | DEBUG | ota_c_start:183 | image bytes read: 745472[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 746496[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 747520[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 748544[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 749568[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 750592[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 751616[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 752640[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 753664[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 754688[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 755712[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 756736[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 757760[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 758784[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 759808[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 760832[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 761856[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 762880[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 763904[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 764928[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 765952[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 766976[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 768000[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 769024[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 770048[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 771072[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 772096[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 773120[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 774144[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 775168[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 776192[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 777216[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 778240[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 779264[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 780288[0m
+[0m1970-01-01 00:02:49 | DEBUG | ota_c_start:183 | image bytes read: 781312[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 782336[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 783360[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 784384[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 785408[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 786432[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 787456[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 788480[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 789504[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 790528[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 791552[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 792576[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 793600[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 794624[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 795648[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 796672[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 797696[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 798720[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 799744[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 800768[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 801792[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 802816[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 803840[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 804864[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 805888[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 806912[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 807936[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 808960[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 809984[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 811008[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 812032[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 813056[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 814080[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 815104[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 816128[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 817152[0m
+[0m1970-01-01 00:02:50 | DEBUG | ota_c_start:183 | image bytes read: 818176[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 819200[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 820224[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 821248[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 822272[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 823296[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 824320[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 825344[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 826368[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 827392[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 828416[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 829440[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 830464[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 831488[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 832512[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 833536[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 834560[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 835584[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 836608[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 837632[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 838656[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 839680[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 840704[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 841728[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 842752[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 843776[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 844800[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 845824[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 846848[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 847872[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 848896[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 849920[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 850944[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 851968[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 852992[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 854016[0m
+[0m1970-01-01 00:02:51 | DEBUG | ota_c_start:183 | image bytes read: 855040[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 856064[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 857088[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 858112[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 859136[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 860160[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 861184[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 862208[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 863232[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 864256[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 865280[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 866304[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 867328[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 868352[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 869376[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 870400[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 871424[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 872448[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 873472[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 874496[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 875520[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 876544[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 877568[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 878592[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 879616[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 880640[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 881664[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 882688[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 883712[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 884736[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 885760[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 886784[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 887808[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 888832[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 889856[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 890880[0m
+[0m1970-01-01 00:02:52 | DEBUG | ota_c_start:183 | image bytes read: 891904[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 892928[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 893952[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 894976[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 896000[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 897024[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 898048[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 899072[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 900096[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 901120[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 902144[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 903168[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 904192[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 905216[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 906240[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 907264[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 908288[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 909312[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 910336[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 911360[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 912384[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 913408[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 914432[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 915456[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 916480[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 917504[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 918528[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 919552[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 920576[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 921600[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 922624[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 923648[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 924672[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 925696[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 926720[0m
+[0m1970-01-01 00:02:53 | DEBUG | ota_c_start:183 | image bytes read: 927744[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 928768[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 929792[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 930816[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 931840[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 932864[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 933888[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 934912[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 935936[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 936960[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 937984[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 939008[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 940032[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 941056[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 942080[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 943104[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 944128[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 945152[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 946176[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 947200[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 948224[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 949248[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 950272[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 951296[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 952320[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 953344[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 954368[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 955392[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 956416[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 957440[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 958464[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 959488[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 960512[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 961536[0m
+[0m1970-01-01 00:02:54 | DEBUG | ota_c_start:183 | image bytes read: 962560[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 963584[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 964608[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 965632[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 966656[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 967680[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 968704[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 969728[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 970752[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 971776[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 972800[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 973824[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 974848[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 975872[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 976896[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 977920[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 978944[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 979968[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 980992[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 982016[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 983040[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 984064[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 985088[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 986112[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 987136[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 988160[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 989184[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 990208[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 991232[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 992256[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 993280[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 994304[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 995328[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 996352[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 997376[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 998400[0m
+[0m1970-01-01 00:02:55 | DEBUG | ota_c_start:183 | image bytes read: 999424[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1000448[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1001472[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1002496[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1003520[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1004544[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1005568[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1006592[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1007616[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1008640[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1009664[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1010688[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1011712[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1012736[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1013760[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1014784[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1015808[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1016832[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1017856[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1018880[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1019904[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1020928[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1021952[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1022976[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1024000[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1025024[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1026048[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1027072[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1028096[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1029120[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1030144[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1031168[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1032192[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1033216[0m
+[0m1970-01-01 00:02:56 | DEBUG | ota_c_start:183 | image bytes read: 1034032[0m
+[0;32mI (34178) esp_image: segment 0: paddr=00110020 vaddr=3c0c0020 size=2c530h (181552) map[0m
+[0;32mI (34198) esp_image: segment 1: paddr=0013c558 vaddr=3fc91e00 size=02a88h ( 10888) [0m
+[0;32mI (34208) esp_image: segment 2: paddr=0013efe8 vaddr=40380000 size=01030h (  4144) [0m
+[0;32mI (34208) esp_image: segment 3: paddr=00140020 vaddr=42000020 size=bba08h (768520) map[0m
+[0;32mI (34308) esp_image: segment 4: paddr=001fba30 vaddr=40381030 size=10cd8h ( 68824) [0m
+[0;32mI (34328) esp_image: segment 0: paddr=00110020 vaddr=3c0c0020 size=2c530h (181552) map[0m
+[0;32mI (34348) esp_image: segment 1: paddr=0013c558 vaddr=3fc91e00 size=02a88h ( 10888) [0m
+[0;32mI (34348) esp_image: segment 2: paddr=0013efe8 vaddr=40380000 size=01030h (  4144) [0m
+[0;32mI (34358) esp_image: segment 3: paddr=00140020 vaddr=42000020 size=bba08h (768520) map[0m
+[0;32mI (34458) esp_image: segment 4: paddr=001fba30 vaddr=40381030 size=10cd8h ( 68824) [0m
+[0;32m1970-01-01 00:02:57 | INFO  | ota_c_start:194 | ESP HTTPS OTA upgrade successful. Rebooting...[0m
+I (35518) wifi:state: run -> init (0)
+I (35518) wifi:pm stop, total sleep time: 2680881 us / 31628081 us
+
+I (35518) wifi:<ba-del>idx:0, tid:0
+I (35518) wifi:new:<11,0>, old:<11,2>, ap:<255,255>, sta:<11,2>, prof:1
+[0;33m1970-01-01 00:02:58 | WARN  | lib/wifi_controller/src/wifi_controller.c:109 | wifi_c_sta_event_handler:109 | Failed to connect to AP, trying again.[0m
+I (35578) wifi:flush txq
+I (35578) wifi:stop sw txq
+I (35578) wifi:lmac stop hw txq
+[31;1;4m1970-01-01 00:02:58 | FATAL | src/main.c     :106 | shutdown_handler:106 | FATAL ERROR - RESTARTING ESP DEVICE![0m
+ESP-ROM:esp32c3-api1-20210207
+Build:Feb  7 2021
+rst:0x3 (RTC_SW_SYS_RST),boot:0xd (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048b82
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fcd5820,len:0x1704
+load:0x403cc710,len:0x968
+load:0x403ce710,len:0x2f68
+entry 0x403cc710
+[0;32mI (24) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Jan 20 2024 15:49:51[0m
+[0;32mI (24) boot: chip revision: v0.4[0m
+[0;32mI (27) boot.esp32c3: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c3: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c3: SPI Flash Size : 4MB[0m
+[0;32mI (41) boot: Enabling RNG early entropy source...[0m
+[0;32mI (46) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (65) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (72) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (80) boot:  3 factory          OTA app          00 10 00010000 00100000[0m
+[0;32mI (87) boot:  4 ota_1            OTA app          00 11 00110000 00100000[0m
+[0;32mI (95) boot:  5 storage          Unknown data     01 82 00210000 000f0000[0m
+[0;32mI (102) boot: End of partition table[0m
+[0;32mI (106) esp_image: segment 0: paddr=00110020 vaddr=3c0c0020 size=2c530h (181552) map[0m
+[0;32mI (144) esp_image: segment 1: paddr=0013c558 vaddr=3fc91e00 size=02a88h ( 10888) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=0013efe8 vaddr=40380000 size=01030h (  4144) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=00140020 vaddr=42000020 size=bba08h (768520) map[0m
+[0;32mI (280) esp_image: segment 4: paddr=001fba30 vaddr=40381030 size=10cd8h ( 68824) load[0m
+[0;32mI (299) boot: Loaded app from partition at offset 0x110000[0m
+[0;32mI (300) boot: Disabling RNG early entropy source...[0m
+[0;32mI (311) cpu_start: Unicore app[0m
+[0;32mI (311) cpu_start: Pro cpu up.[0m
+[0;32mI (320) cpu_start: Pro cpu start user code[0m
+[0;32mI (320) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (320) cpu_start: Application information:[0m
+[0;32mI (323) cpu_start: Project name:     esp_startup[0m
+[0;32mI (328) cpu_start: App version:      0.0.0.1[0m
+[0;32mI (333) cpu_start: Compile time:     Jan 22 2024 22:50:31[0m
+[0;32mI (339) cpu_start: ELF file SHA256:  1ba732841a98ebff...[0m
+[0;32mI (345) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (350) cpu_start: Min chip rev:     v0.3[0m
+[0;32mI (355) cpu_start: Max chip rev:     v0.99 [0m
+[0;32mI (360) cpu_start: Chip rev:         v0.4[0m
+[0;32mI (364) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (372) heap_init: At 3FC99580 len 00043190 (268 KiB): DRAM[0m
+[0;32mI (378) heap_init: At 3FCDC710 len 00002950 (10 KiB): STACK/DRAM[0m
+[0;32mI (384) heap_init: At 50000010 len 00001FD8 (7 KiB): RTCRAM[0m
+[0;32mI (392) spi_flash: detected chip: generic[0m
+[0;32mI (395) spi_flash: flash io: dio[0m
+[0;32mI (400) sleep: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (406) sleep: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (413) app_start: Starting scheduler on CPU0[0m
+[0;32mI (418) main_task: Started on CPU0[0m
+[0;32mI (418) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:02:58 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:02:58 | DEBUG | wifi_c_init_netif:160 | netif initialized as STA[0m
+[0;32mI (528) pp: pp rom version: 9387209[0m
+[0;32mI (528) net80211: net80211 rom version: 9387209[0m
+I (548) wifi:wifi driver task: 3fca2688, prio:23, stack:6656, core=0
+I (548) wifi:wifi firmware version: ce9244d
+I (548) wifi:wifi certification version: v7.0
+I (548) wifi:config NVS flash: enabled
+I (548) wifi:config nano formating: disabled
+I (558) wifi:Init data frame dynamic rx buffer num: 32
+I (558) wifi:Init management frame dynamic rx buffer num: 32
+I (568) wifi:Init management short buffer num: 32
+I (568) wifi:Init dynamic tx buffer num: 32
+I (578) wifi:Init static tx FG buffer num: 2
+I (578) wifi:Init static rx buffer size: 1600
+I (588) wifi:Init static rx buffer num: 10
+I (588) wifi:Init dynamic rx buffer num: 32
+[0;32mI (588) wifi_init: rx ba win: 6[0m
+[0;32mI (598) wifi_init: tcpip mbox: 32[0m
+[0;32mI (598) wifi_init: udp mbox: 6[0m
+[0;32mI (598) wifi_init: tcp mbox: 6[0m
+[0;32mI (608) wifi_init: tcp tx win: 5744[0m
+[0;32mI (608) wifi_init: tcp rx win: 5744[0m
+[0;32mI (618) wifi_init: tcp mss: 1440[0m
+[0;32mI (618) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (628) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:02:58 | INFO  | wifi_c_init_wifi:309 | Wifi initialized.[0m
+[0;32mI (638) phy_init: phy_version 970,1856f88,May 10 2023,17:44:12[0m
+I (678) wifi:mode : sta (ec:da:3b:37:ed:5c)
+I (678) wifi:enable tsf
+[0;32m1970-01-01 00:02:59 | INFO  | wifi_c_sta_event_handler:102 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:02:59 | DEBUG | wifi_c_init_wifi:313 | wifi successfully initialized[0m
+[0m1970-01-01 00:02:59 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:02:59 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:02:59 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:02:59 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:02:59 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:02:59 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:02:59 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:02:59 | DEBUG | wifi_c_start_sta:442 | WiFi successfully configured as STA.[0m
+I (3168) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3178) wifi:state: init -> auth (b0)
+I (3178) wifi:state: auth -> assoc (0)
+I (3178) wifi:state: assoc -> run (10)
+I (3188) wifi:connected with TP-LINK_AD8313, aid = 1, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3188) wifi:security: WPA2-PSK, phy: bgn, rssi: -54
+I (3198) wifi:pm start, type: 1
+
+I (3198) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3208) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3258) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m1970-01-01 00:03:02 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.103[0m
+[0;32mI (4208) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:03:02 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;33mW (4218) esp_https_ota: Continuing with insecure option because CONFIG_ESP_HTTPS_OTA_ALLOW_HTTP is set.[0m
+[0;32mI (4288) esp_https_ota: Starting OTA...[0m
+[0;32mI (4288) esp_https_ota: Writing to partition subtype 16 at offset 0x10000[0m
+[0;32m1970-01-01 00:03:02 | INFO  | ota_c_validate_image:91 | Running firmware version: 0.0.0.1[0m
+[0;33m1970-01-01 00:03:02 | WARN  | lib/ota_controller/src/ota_controller.c:96 | ota_c_validate_image:96 | Current running version is the same as a new. Will not update.[0m
+[0m1970-01-01 00:03:02 | DEBUG | ota_c_validate_image:97 | current firmware version: 0.0.0.1
+new firmware version: 0.0.0.1[0m
+[0;31m1970-01-01 00:03:02 | ERROR | lib/ota_controller/src/ota_controller.c:172 | ota_c_start:172 | image header verification failed[0m
+[0m1970-01-01 00:03:02 | DEBUG | inspect_task:99 | Currently available heap: 211856[0m
+[0m1970-01-01 00:03:02 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 211856[0m
+[0m1970-01-01 00:03:02 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:03:02 | DEBUG | tcp_create_socket:175 | created socket: 55[0m
+[0m1970-01-01 00:03:02 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:03:02 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.103:27015[0m
+[0m1970-01-01 00:03:02 | DEBUG | tcp_bind_socket:232 | binding socket: 55 to address: 192.168.0.103:34665[0m
+[0m1970-01-01 00:03:02 | DEBUG | tcp_bind_socket:242 | socket: 55 bound to address: 192.168.0.103:27015[0m
+[0m1970-01-01 00:03:02 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 55[0m
+[0;32m1970-01-01 00:03:02 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.103:27015[0m
+[0;32m1970-01-01 00:03:02 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.103 with port 27015 to capture logs.[0m
+[0m2024-01-22 23:18:32 | DEBUG | inspect_task:99 | Currently available heap: 211464[0m
+[0m2024-01-22 23:18:32 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 209228[0m
+[0m2024-01-22 23:18:37 | DEBUG | inspect_task:99 | Currently available heap: 209728[0m
+[0m2024-01-22 23:18:37 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 207672[0m
+[0m2024-01-22 23:18:42 | DEBUG | inspect_task:99 | Currently available heap: 207992[0m
+[0m2024-01-22 23:18:42 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 206288[0m
+[0m2024-01-22 23:18:47 | DEBUG | inspect_task:99 | Currently available heap: 206256[0m
+[0m2024-01-22 23:18:47 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 204552[0m
+[0m2024-01-22 23:18:52 | DEBUG | inspect_task:99 | Currently available heap: 204520[0m
+[0m2024-01-22 23:18:52 | DEBUG | inspect_task:100 | The minimum heap size that was ever available: 202756[0m

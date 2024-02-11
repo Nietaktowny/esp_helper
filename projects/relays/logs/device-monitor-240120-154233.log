@@ -1,0 +1,270 @@
+I (3243) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (3243) wifi:state: init -> auth (b0)
+I (3243) wifi:state: auth -> assoc (0)
+I (3253) wifi:state: assoc -> run (10)
+I (3263) wifi:connected with TP-LINK_AD8313, aid = 5, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (3263) wifi:security: WPA2-PSK, phy: bgn, rssi: -44
+I (3263) wifi:pm start, type: 1
+
+I (3263) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+I (3273) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+I (3303) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[0;32m2024-01-20 14:42:36 | INFO  | wifi_c_sta_event_handler:116 | Got IP:192.168.0.103[0m
+[0;32mI (4273) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m2024-01-20 14:42:36 | DEBUG | wifi_c_check_sta_connection_result:128 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m2024-01-20 14:42:36 | INFO  | event_handler:19 | OTA started[0m
+[0;31mE (4293) esp_https_ota: No option for server verification is enabled in esp_http_client config.[0m
+[0;31m2024-01-20 14:42:36 | ERROR | lib/ota_controller/src/ota_controller.c:64 | ota_c_do_simple_ota:64 | error -1 during https ota: ESP_FAIL[0m
+[0;32mI (4313) main_task: Returned from app_main()[0m
+[0m2024-01-20 14:42:37 | DEBUG | inspect_task:98 | Currently available heap: 237372[0m
+[0m2024-01-20 14:42:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:42:42 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:42:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:42:47 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:42:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:42:52 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:42:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:42:57 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:42:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:02 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:43:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:07 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:43:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:12 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:43:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:17 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:43:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:22 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:43:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:27 | DEBUG | inspect_task:98 | Currently available heap: 237228[0m
+[0m2024-01-20 14:43:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:43:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:43:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:43:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:43:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:43:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:43:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:43:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:44:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:44:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:45:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:45:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:46:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:46:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:47:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:47:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:48:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:48:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:49:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:49:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:50:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:50:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:51:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:51:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:07 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:07 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:12 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:12 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:17 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:17 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:22 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:22 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:27 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:27 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:32 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:32 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:37 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:37 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:42 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:42 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:47 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:47 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:52 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:52 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:52:57 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:52:57 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m
+[0m2024-01-20 14:53:02 | DEBUG | inspect_task:98 | Currently available heap: 237248[0m
+[0m2024-01-20 14:53:02 | DEBUG | inspect_task:99 | The minimum heap size that was ever available: 230360[0m

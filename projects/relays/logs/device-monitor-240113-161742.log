@@ -1,0 +1,51 @@
+Temperature = 22.37 *C
+Pressure = 988.76 hPa
+
+Temperature = 22.37 *C
+Pressure = 988.76 hPa
+
+Temperature = 22.37 *C
+Pressure = 988.76 hPa
+
+Temperature = 22.37 *C
+Pressure = 988.76 hPa
+
+Temperature = 22.37 *C
+Pressure = 988.76 hPa
+
+Temperature = 22.37 *C
+Pressure = 988.77 hPa
+
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x1e (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0030,len:1344
+load:0x40078000,len:13964
+load:0x40080400,len:3600
+entry 0x400805f0
+BMP280 Sensor event test
+------------------------------------
+Sensor:       BMP280
+Type:         Ambient Temp (C)
+Driver Ver:   1
+Unique ID:    280
+Min Value:    -40.00
+Max Value:    85.00
+Resolution:   0.01
+------------------------------------
+
+Temperature = 22.37 *C
+Pressure = 988.76 hPa
+
+Temperature = 22.37 *C
+Pressure = 988.75 hPa
+
+Temperature = 22.38 *C
+Pressure = 988.74 hPa
+
+Temperature = 22.39 *C
+Pressure = 988.73 hPa
+

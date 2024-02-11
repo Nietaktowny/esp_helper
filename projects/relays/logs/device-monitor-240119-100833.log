@@ -1,0 +1,217 @@
+[0m1970-01-01 00:01:10 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:15 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:20 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:25 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:30 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:35 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:40 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:45 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:50 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:01:55 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:01:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:00 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:02:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:05 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:02:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:10 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:02:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:15 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:02:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:20 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:02:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:25 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:02:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:30 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:02:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:35 | DEBUG | inspect_task:97 | Currently available heap: 195560[0m
+[0m1970-01-01 00:02:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+I (156534) wifi:<ba-add>idx:2 (ifx:1, 10:02:b5:33:2e:17), tid:0, ssn:123, winSize:64
+[0m1970-01-01 00:02:40 | DEBUG | inspect_task:97 | Currently available heap: 195484[0m
+[0m1970-01-01 00:02:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:45 | DEBUG | inspect_task:97 | Currently available heap: 195484[0m
+[0m1970-01-01 00:02:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:50 | DEBUG | inspect_task:97 | Currently available heap: 195484[0m
+[0m1970-01-01 00:02:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:02:55 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:02:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:00 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:05 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:10 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:15 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:20 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:25 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:30 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:35 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:40 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:45 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:50 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:03:55 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:03:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:00 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:05 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:10 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:15 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:20 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:25 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:30 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:35 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:40 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:45 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:50 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:04:55 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:04:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:00 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:05 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:10 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:15 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:20 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:25 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:30 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:35 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:40 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:45 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:50 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:05:55 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:05:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:00 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:05 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:10 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:15 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:20 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:25 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:30 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:35 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:40 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:45 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:50 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:06:55 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:06:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:00 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:05 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:10 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:15 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:20 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:25 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:30 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:35 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:40 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:45 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:50 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:07:55 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:07:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:00 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:05 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:10 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:15 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:20 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:25 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:30 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:35 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:40 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:45 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:50 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:08:55 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:08:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:00 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:05 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:10 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:10 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:15 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:15 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:20 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:20 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:25 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:25 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:30 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:30 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:35 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:35 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:40 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:40 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:45 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:45 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:50 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:50 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:09:55 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:09:55 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:10:00 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:10:00 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m
+[0m1970-01-01 00:10:05 | DEBUG | inspect_task:97 | Currently available heap: 195696[0m
+[0m1970-01-01 00:10:05 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 179600[0m

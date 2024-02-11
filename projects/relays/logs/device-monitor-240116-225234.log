@@ -1,0 +1,24 @@
+[0m2024-01-16 21:52:34 | DEBUG | inspect_task:97 | Currently available heap: 189520[0m
+[0m2024-01-16 21:52:34 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 187304[0m
+[0;32m2024-01-16 21:52:35 | INFO  | wifi_c_ap_event_handler:81 | Total APs scanned: 30[0m
+[0m2024-01-16 21:52:35 | DEBUG | wifi_manager_fetch_ap_list:27 | wifi manager scan complete, scanned: 57856 APs[0m
+[0;32m2024-01-16 21:52:36 | INFO  | wifi_c_ap_event_handler:78 | Station 10:02:b5:33:2e:17 left, AID=1[0m
+I (29288) wifi:starting SA query procedure with STA(10:02:b5:33:2e:17)
+I (29288) wifi:Send SA Query req with transaction id d53a
+I (29488) wifi:Send SA Query req with transaction id d53b
+I (29688) wifi:Send SA Query req with transaction id d53c
+I (29888) wifi:Send SA Query req with transaction id d53d
+I (30088) wifi:Send SA Query req with transaction id d53e
+I (30288) wifi:Send SA Query req with transaction id d53f
+I (30308) wifi:STA not responded to 6 SA Query attempts, Reset connection sending disassoc
+I (30328) wifi:station: 10:02:b5:33:2e:17 leave, AID = 1, bss_flags is 134243, bss:0x3ffba490
+I (30338) wifi:new:<11,2>, old:<11,2>, ap:<11,2>, sta:<11,2>, prof:1
+I (30338) wifi:<ba-del>idx:2, tid:0
+[0;32m2024-01-16 21:52:37 | INFO  | wifi_c_ap_event_handler:78 | Station 10:02:b5:33:2e:17 left, AID=1[0m
+I (30868) wifi:new:<11,2>, old:<11,2>, ap:<11,2>, sta:<11,2>, prof:1
+I (30868) wifi:station: 10:02:b5:33:2e:17 join, AID=1, bgn, 40D
+[0;32m2024-01-16 21:52:38 | INFO  | wifi_c_ap_event_handler:74 | Station 10:02:b5:33:2e:17 joined, AID=1[0m
+[0;32mI (31008) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2[0m
+I (32058) wifi:<ba-add>idx:2 (ifx:1, 10:02:b5:33:2e:17), tid:0, ssn:15, winSize:64
+[0m2024-01-16 21:52:39 | DEBUG | inspect_task:97 | Currently available heap: 188216[0m
+[0m2024-01-16 21:52:39 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 182356[0m

@@ -1,0 +1,110 @@
+I (3464) wifi:new:<11,2>, old:<1,0>, ap:<255,255>, sta:<11,2>, prof:1
+I (4634) wifi:state: init -> auth (b0)
+I (4644) wifi:state: auth -> assoc (0)
+I (4644) wifi:state: assoc -> run (10)
+I (4664) wifi:connected with TP-LINK_AD8313, aid = 7, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (4664) wifi:security: WPA2-PSK, phy: bgn, rssi: -69
+I (4674) wifi:pm start, type: 1
+
+I (4764) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (5754) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:06 | INFO  | wifi_c_sta_event_handler:105 | Got IP:192.168.0.104[0m
+[0;32mI (6684) esp_netif_handlers: sta ip: 192.168.0.104, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:06 | DEBUG | wifi_c_check_sta_connection_result:117 | WIFI_C_CONNECTED_BIT is set![0m
+[0;32m1970-01-01 00:00:06 | INFO  | app_main:100 | Connected to wifi, current ip: 192.168.0.104[0m
+[0m1970-01-01 00:00:06 | DEBUG | inspect_task:69 | Currently available heap: 213692[0m
+[0;32m1970-01-01 00:00:06 | INFO  | bmp_init:427 | [0m1970-01-01 00:00:06 | DEBUG | inspect_task:70 | preparing new BMP280 device...[0m
+The minimum heap size that was ever available: 204400[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_identify_chip:283 | Trying to find BMP280 device on bus with 0x77 address...[0m
+[0m1970-01-01 00:00:06 | DEBUG | tcp_create_socket:168 | [0m1970-01-01 00:00:06 | DEBUG | i2c_c_set_device_addr:115 | changed device address from 0 to 0XEEpreparing socket...[0m
+[0m
+[0m1970-01-01 00:00:06 | DEBUG | tcp_create_socket:175 | [0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_identify_chip:289 | created socket: 54[0m
+found BMP280 device on bus with address: 0XEE and ID: 0[0m
+[0m1970-01-01 00:00:06 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0[0m
+[0m1970-01-01 00:00:06 | DEBUG | tcp_prepare_address:220 | [0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_calibrate:252 | prepared address 192.168.0.104:27015reading BMP280 out calibration values...[0m
+[0m
+[0m1970-01-01 00:00:06 | DEBUG | tcp_bind_socket:232 | [0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_calibrate:272 | compensation values of BMP280 device updated:
+	T1: 0x3f40019c
+	T2: 0x3ffb3980
+	T3: 0x3f400228
+	P1: 0x3f4019bc
+	P2: 0x110
+	P3: 0x3ffb3980
+	P4: 0x3f400228
+	P5: 0x3f401a58
+	P6: 0x673d6b0a
+	P7: 0x91d3fc18
+	P8: 0xbd0d632
+	P9: 0x9516af [0m
+binding socket: 54 to address: 192.168.0.104:34665[0m
+[0;32m1970-01-01 00:00:06 | INFO  | bmp_init:444 | new BMP280 device ready to use![0m
+[0m1970-01-01 00:00:06 | DEBUG | tcp_bind_socket:242 | socket: 54 bound to address: 192.168.0.104:27015[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0[0m
+[0m1970-01-01 00:00:06 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_set_standby_time:173 | config register value changed to: 160[0m
+[0;32m1970-01-01 00:00:06 | INFO  | tcp_socket_listen:260 | [0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_get_config:79 | readed config register value: 0XA0[0m
+listening on socket: 192.168.0.104:27015[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_set_iir_filter:237 | config register value of BMP280 device changed to: 0xa0[0m
+[0;32m1970-01-01 00:00:06 | INFO  | cli_set_remote_logging:63 | Connect to device on IP 192.168.0.104 with port 27015 to capture logs.[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0[0m
+[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_set_press_oversampling:197 | BMP280 device ctrl_meas register was set to: 0XC[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0XC[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_set_temp_oversampling:221 | BMP280 device ctrl_meas register was set to: 0X6C[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_get_ctrl_meas:94 | readed ctr_meas register value: 0X6C[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_set_mode:150 | BMP280 device mode was set to: 3[0m
+[0;32m1970-01-01 00:00:06 | INFO  | log_task:47 | Identified BMP280 device:
+ address: ee
+ chip id: 58
+ mode: 3[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m1970-01-01 00:00:06 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m1970-01-01 00:00:06 | INFO  | log_task:52 | temperature: 20.87 C[0m
+[0;32m1970-01-01 00:00:06 | INFO  | log_task:53 | pressure: 989.54hPa[0m
+[0;32m1970-01-01 00:00:06 | INFO  | log_task:54 | altitude: 199.23 m. n. p. m.[0m
+[0m1970-01-01 00:00:06 | DEBUG | log_task:56 | data to send to database: device_id=1&temperature=20.87&pressure=989.54&altitude=199.23[0m
+[0;32m1970-01-01 00:00:06 | INFO  | http_client_post:102 | making POST request to address: http://192.168.100.146:8081/bmp280/insert_data.php[0m
+I (7074) wifi:<ba-add>idx:1 (ifx:0, 84:16:f9:ad:83:12), tid:6, ssn:2, winSize:64
+[0m2024-01-07 18:06:32 | DEBUG | inspect_task:69 | Currently available heap: 209564[0m
+[0m2024-01-07 18:06:32 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0;31mE (12084) esp-tls: [sock=55] select() timeout[0m
+[0;31mE (12084) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (12084) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0m2024-01-07 18:06:32 | DEBUG | _http_event_handler:23 | HTTP_EVENT_ERROR[0m
+[0;31m2024-01-07 18:06:32 | ERROR | lib/http_client/src/http_client.c:123 | http_client_post:123 | HTTP POST request failed: ESP_ERR_HTTP_CONNECT[0m
+[0m2024-01-07 18:06:32 | DEBUG | _http_event_handler:65 | HTTP_EVENT_DISCONNECTED[0m
+[0;31m2024-01-07 18:06:32 | ERROR | lib/http_client/src/http_client.c:74 | _http_event_handler:74 | Last esp error code: 0x8006[0m
+[0;31m2024-01-07 18:06:32 | ERROR | lib/http_client/src/http_client.c:75 | _http_event_handler:75 | Last mbedtls failure: 0x0[0m
+[0m2024-01-07 18:06:37 | DEBUG | inspect_task:69 | Currently available heap: 212528[0m
+[0m2024-01-07 18:06:37 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0m2024-01-07 18:06:42 | DEBUG | inspect_task:69 | Currently available heap: 212528[0m
+[0m2024-01-07 18:06:42 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0m2024-01-07 18:06:47 | DEBUG | inspect_task:69 | Currently available heap: 212528[0m
+[0m2024-01-07 18:06:47 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0m2024-01-07 18:06:52 | DEBUG | inspect_task:69 | Currently available heap: 212528[0m
+[0m2024-01-07 18:06:52 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0m2024-01-07 18:06:57 | DEBUG | inspect_task:69 | Currently available heap: 212528[0m
+[0m2024-01-07 18:06:57 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0m2024-01-07 18:07:02 | DEBUG | inspect_task:69 | Currently available heap: 212528[0m
+[0m2024-01-07 18:07:02 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0m2024-01-07 18:07:02 | DEBUG | bmp_i2c_readout:333 | reading temperature of BMP280 device...[0m
+[0m2024-01-07 18:07:02 | DEBUG | bmp_i2c_readout:337 | reading pressure of BMP280 device...[0m
+[0;32m2024-01-07 18:07:02 | INFO  | log_task:52 | temperature: 20.90 C[0m
+[0;32m2024-01-07 18:07:02 | INFO  | log_task:53 | pressure: 989.55hPa[0m
+[0;32m2024-01-07 18:07:02 | INFO  | log_task:54 | altitude: 199.13 m. n. p. m.[0m
+[0m2024-01-07 18:07:02 | DEBUG | log_task:56 | data to send to database: device_id=1&temperature=20.90&pressure=989.55&altitude=199.13[0m
+[0;32m2024-01-07 18:07:02 | INFO  | http_client_post:102 | making POST request to address: http://192.168.100.146:8081/bmp280/insert_data.php[0m
+[0m2024-01-07 18:07:07 | DEBUG | inspect_task:69 | Currently available heap: 209540[0m
+[0m2024-01-07 18:07:07 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0;31mE (47204) esp-tls: [sock=55] select() timeout[0m
+[0;31mE (47204) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (47204) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0m2024-01-07 18:07:07 | DEBUG | _http_event_handler:23 | HTTP_EVENT_ERROR[0m
+[0;31m2024-01-07 18:07:07 | ERROR | lib/http_client/src/http_client.c:123 | http_client_post:123 | HTTP POST request failed: ESP_ERR_HTTP_CONNECT[0m
+[0m2024-01-07 18:07:07 | DEBUG | _http_event_handler:65 | HTTP_EVENT_DISCONNECTED[0m
+[0;31m2024-01-07 18:07:07 | ERROR | lib/http_client/src/http_client.c:74 | _http_event_handler:74 | Last esp error code: 0x8006[0m
+[0;31m2024-01-07 18:07:07 | ERROR | lib/http_client/src/http_client.c:75 | _http_event_handler:75 | Last mbedtls failure: 0x0[0m
+[0m2024-01-07 18:07:12 | DEBUG | inspect_task:69 | Currently available heap: 212528[0m
+[0m2024-01-07 18:07:12 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m
+[0m2024-01-07 18:07:17 | DEBUG | inspect_task:69 | Currently available heap: 212552[0m
+[0m2024-01-07 18:07:17 | DEBUG | inspect_task:70 | The minimum heap size that was ever available: 204400[0m

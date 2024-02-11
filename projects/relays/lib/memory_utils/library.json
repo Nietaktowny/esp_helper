@@ -1,0 +1,19 @@
+{
+    "name": "memory_utils",
+    "version": "1.0.2",
+    "keywords": "memory, base, utilities, utils",
+    "description": "Basic memory utils.",
+    "authors":
+    {
+        "name": "nietaktowny",
+        "url": "https://github.com/Nietaktowny"
+    },
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/Nietaktowny/base_libraries"
+    },
+    "frameworks": ["*"],
+    "platforms": ["*"]
+}
+

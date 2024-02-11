@@ -1,0 +1,279 @@
+�� 32
+I (846) wifi:Init dynamic tx buffer num: 32
+I (846) wifi:Init static rx buffer size: 1600
+I (856) wifi:Init static rx buffer num: 10
+I (856) wifi:Init dynamic rx buffer num: 32
+[0;32mI (866) wifi_init: rx ba win: 6[0m
+[0;32mI (866) wifi_init: tcpip mbox: 32[0m
+[0;32mI (866) wifi_init: udp mbox: 6[0m
+[0;32mI (876) wifi_init: tcp mbox: 6[0m
+[0;32mI (876) wifi_init: tcp tx win: 5744[0m
+[0;32mI (886) wifi_init: tcp rx win: 5744[0m
+[0;32mI (886) wifi_init: tcp mss: 1440[0m
+[0;32mI (886) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (896) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:00 | INFO  | wifi_c_init_wifi:499 | Wifi initialized.[0m
+[0;32mI (906) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1026) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1026) wifi:enable tsf
+[0;32m1970-01-01 00:00:00 | INFO  | wifi_c_sta_event_handler:158 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_init_wifi:503 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:00 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:00 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:00 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:00 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:00 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:00 | DEBUG | wifi_c_start_sta:667 | WiFi successfully configured as STA.[0m
+I (3526) wifi:new:<1,1>, old:<1,0>, ap:<255,255>, sta:<1,1>, prof:1
+I (3526) wifi:state: init -> auth (b0)
+I (3536) wifi:state: auth -> assoc (0)
+I (3536) wifi:state: assoc -> run (10)
+I (3586) wifi:connected with TP-LINK_AD8313, aid = 4, channel 1, 40U, bssid = 84:16:f9:ad:83:12
+I (3586) wifi:security: WPA2-PSK, phy: bgn, rssi: -49
+I (3586) wifi:pm start, type: 1
+
+I (3616) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3626) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:04 | INFO  | wifi_c_sta_event_handler:184 | Got IP:192.168.0.103[0m
+[0;32mI (4596) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32m1970-01-01 00:00:04 | INFO  | http_client_get:185 | making GET request to address: http://wmytych.usermd.net/modules/getters/get_gpio_state.php[0m
+[0m1970-01-01 00:00:04 | DEBUG | wifi_c_check_sta_connection_result:202 | WIFI_C_CONNECTED_BIT is set![0m
+[0m1970-01-01 00:00:04 | DEBUG | ota_c_prepare_url_with_device_id:151 | prepared url with device id for ota update:
+http://wmytych.usermd.net/modules/getters/ota.php?device_id=222222[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:92 | Currently available heap: 219268[0m
+[0m1970-01-01 00:00:04 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 217516[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_create_socket:175 | created socket: 55[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:27 | [0m1970-01-01 00:00:04 | DEBUG | tcp_prepare_address:220 | HTTP_EVENT_ON_CONNECTED[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+prepared address 192.168.0.103:27015[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:232 | binding socket: 55 to address: 192.168.0.103:34665[0m
+[0m1970-01-01 00:00:04 | DEBUG | tcp_bind_socket:242 | socket: 55 bound to address: 192.168.0.103:27015[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Server, value=nginx[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 10 Feb 2024 20:15:43 GMT[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m1970-01-01 00:00:04 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m1970-01-01 
+0[0;32mI (454) esp_image: segment 4: paddr=000e658c vaddr=400821f0 size=13700h ( 79616) load[0m
+[0;32mI (498) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (498) boot: Disabling RNG early entropy source...[0m
+[0;32mI (510) cpu_start: Multicore app[0m
+[0;32mI (510) cpu_start: Pro cpu up.[0m
+[0;32mI (510) cpu_start: Starting app cpu, entry point is 0x400817cc[0m
+[0;32mI (498) cpu_start: App cpu up.[0m
+[0;32mI (528) cpu_start: Pro cpu start user code[0m
+[0;32mI (528) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (529) cpu_start: Application information:[0m
+[0;32mI (533) cpu_start: Project name:     relay[0m
+[0;32mI (538) cpu_start: App version:      0.0.0.6[0m
+[0;32mI (543) cpu_start: Compile time:     Feb 10 2024 20:38:22[0m
+[0;32mI (549) cpu_start: ELF file SHA256:  2147fcfadaac4dfa...[0m
+[0;32mI (555) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (560) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (564) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (569) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (574) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (581) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (587) heap_init: At 3FFB8400 len 00027C00 (159 KiB): DRAM[0m
+[0;32mI (594) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (600) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (606) heap_init: At 400958F0 len 0000A710 (41 KiB): IRAM[0m
+[0;32mI (614) spi_flash: detected chip: generic[0m
+[0;32mI (617) spi_flash: flash io: dio[0m
+[0;32mI (622) app_start: Starting scheduler on CPU0[0m
+[0;32mI (626) app_start: Starting scheduler on CPU1[0m
+[0;32mI (626) main_task: Started on CPU0[0m
+[0;32mI (636) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:05 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0;32m1970-01-01 00:00:05 | INFO  | wifi_c_sta_register_connect_handler:370 | STA connect handler function of wifi controller changed![0m
+[0;32m1970-01-01 00:00:05 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_c_init_netif:235 | netif initialized as STA[0m
+I (806) wifi:wifi driver task: 3ffc05a8, prio:23, stack:6656, core=0
+I (826) wifi:wifi firmware version: ce9244d
+I (826) wifi:wifi certification version: v7.0
+I (826) wifi:config NVS flash: enabled
+I (826) wifi:config nano formating: disabled
+I (836) wifi:Init data frame dynamic rx buffer num: 32
+I (836) wifi:Init management frame dynamic rx buffer num: 32
+I (846) wifi:Init management short buffer num: 32
+I (846) wifi:Init dynamic tx buffer num: 32
+I (846) wifi:Init static rx buffer size: 1600
+I (856) wifi:Init static rx buffer num: 10
+I (856) wifi:Init dynamic rx buffer num: 32
+[0;32mI (866) wifi_init: rx ba win: 6[0m
+[0;32mI (866) wifi_init: tcpip mbox: 32[0m
+[0;32mI (866) wifi_init: udp mbox: 6[0m
+[0;32mI (876) wifi_init: tcp mbox: 6[0m
+[0;32mI (876) wifi_init: tcp tx win: 5744[0m
+[0;32mI (886) wifi_init: tcp rx win: 5744[0m
+[0;32mI (886) wifi_init: tcp mss: 1440[0m
+[0;32mI (886) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (896) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:05 | INFO  | wifi_c_init_wifi:499 | Wifi initialized.[0m
+[0;32mI (906) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1026) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1026) wifi:enable tsf
+[0;32m1970-01-01 00:00:05 | INFO  | wifi_c_sta_event_handler:158 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_c_init_wifi:503 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:05 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:05 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:05 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:05 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:05 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_c_start_sta:667 | WiFi successfully configured as STA.[0m
+I (3516) wifi:new:<1,1>, old:<1,0>, ap:<255,255>, sta:<1,1>, prof:1
+I (3526) wifi:state: init -> auth (b0)
+I (3526) wifi:state: auth -> assoc (0)
+I (3536) wifi:state: assoc -> run (10)
+I (3566) wifi:connected with TP-LINK_AD8313, aid = 4, channel 1, 40U, bssid = 84:16:f9:ad:83:12
+I (3566) wifi:security: WPA2-PSK, phy: bgn, rssi: -54
+I (3576) wifi:pm start, type: 1
+
+I (3616) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3626) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:08 | INFO  | wifi_c_sta_event_handler:184 | Got IP:192.168.0.103[0m
+[0;32mI (4576) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32m1970-01-01 00:00:08 | INFO  | http_client_get:185 | making GET request to address: http://wmytych.usermd.net/modules/getters/get_gpio_state.php[0m
+[0m1970-01-01 00:00:08 | DEBUG | wifi_c_check_sta_connection_result:202 | WIFI_C_CONNECTED_BIT is set![0m
+[0m1970-01-01 00:00:08 | DEBUG | ota_c_prepare_url_with_device_id:151 | prepared url with device id for ota update:
+http://wmytych.usermd.net/modules/getters/ota.php?device_id=222222[0m
+[0m1970-01-01 00:00:08 | DEBUG | inspect_task:92 | Currently available heap: 219268[0m
+[0m1970-01-01 00:00:08 | DEBUG | inspect_task:93 | The minimum heap size that was ever available: 219268[0m
+[0m1970-01-01 00:00:09 | DEBUG | tcp_create_socket:168 | preparing socket...[0m
+[0m1970-01-01 00:00:09 | DEBUG | tcp_create_socket:175 | created socket: 54[0m
+[0m1970-01-01 00:00:09 | DEBUG | tcp_prepare_address:211 | preparing address...[0m
+[0m1970-01-01 00:00:09 | DEBUG | tcp_prepare_address:220 | prepared address 192.168.0.103:27015[0m
+[0m1970-01-01 00:00:09 | DEBUG | tcp_bind_socket:232 | binding socket: 54 to address: 192.168.0.103:34665[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:27 | HTTP_EVENT_ON_CONNECTED[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:30 | HTTP_EVENT_HEADER_SENT[0m
+[0m1970-01-01 00:00:09 | DEBUG | tcp_bind_socket:242 | socket: 54 bound to address: 192.168.0.103:27015[0m
+[0m1970-01-01 00:00:09 | DEBUG | tcp_socket_listen:253 | trying to listen on socket: 54[0m
+[0;32m1970-01-01 00:00:09 | INFO  | tcp_socket_listen:260 | listening on socket: 192.168.0.103:27015[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:33 | [0;32m1970-01-01 00:00:09 | INFO  | cli_set_remote_logging:63 | HTTP_EVENT_ON_HEADER, key=Server, value=nginxConnect to device on IP 192.168.0.103 with port 27015 to capture logs.[0m
+[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Date, value=Sat, 10 Feb 2024 20:15:48 GMT[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Content-Type, value=text/html; charset=UTF-8[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Transfer-Encoding, value=chunked[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=Connection, value=keep-alive[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:33 | HTTP_EVENT_ON_HEADER, key=X-Powered-By, value=PHP/8.3.2[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:36 | HTTP_EVENT_ON_DATA, len=149[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:37 | HTTP_EVENT_ON_DATA, output_len=0[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:38 | HTTP_EVENT_ON_DATA, content_length=-1[0m
+[0m1970-01-01 00:00:09 | DEBUG | _http_event_handler:56 | HTTP_EVENT_ON_FINISH[0m
+[0m1970-01-01 00:00:09 | DEBUG | http_client_get:200 | HTTP GET Status = 200, content_length = 1073429340[0m
+[0;32m1970-01-01 00:00:09 | INFO  | http_client_get:203 | 
+
+Warning: Undefined array key "device_id" in /usr/home/wmytych/domains/wmytych.usermd.net/public_html/modules/getters/get_gpio_state.php on line 5
+[][0m
+ets Jul 29 2019 12:21:46
+
+rst:0x8 (TG1WDT_SYS_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7076
+load:0x40078000,len:15584
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3876
+entry 0x4008064c
+[0;32mI (62) boot: ESP-IDF 5.1.1 2nd stage bootloader[0m
+[0;32mI (62) boot: compile time Feb 10 2024 20:45:28[0m
+[0;32mI (62) boot: Multicore bootloader[0m
+[0;32mI (67) boot: chip revision: v3.0[0m
+[0;32mI (70) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (75) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (79) boot.esp32: SPI Flash Size : 4MB[0m
+[0;33mW (84) boot.esp32: PRO CPU has been reset by WDT.[0m
+[0;33mW (89) boot.esp32: WDT reset info: PRO CPU PC=0x400803c2[0m
+[0;33mW (95) boot.esp32: WDT reset info: APP CPU PC=0x400803c2[0m
+[0;32mI (101) boot: Enabling RNG early entropy source...[0m
+[0;32mI (107) boot: Partition Table:[0m
+[0;32mI (111) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (118) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (125) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (133) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (141) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (148) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (156) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (163) boot: End of partition table[0m
+[0;32mI (168) boot: Defaulting to factory image[0m
+[0;32mI (172) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2a51ch (173340) map[0m
+[0;32mI (243) esp_image: segment 1: paddr=0003a544 vaddr=3ffb0000 size=038dch ( 14556) load[0m
+[0;32mI (249) esp_image: segment 2: paddr=0003de28 vaddr=40080000 size=021f0h (  8688) load[0m
+[0;32mI (253) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a6564h (681316) map[0m
+[0;32mI (504) esp_image: segment 4: paddr=000e658c vaddr=400821f0 size=13700h ( 79616) load[0m
+[0;32mI (548) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (548) boot: Disabling RNG early entropy source...[0m
+[0;32mI (559) cpu_start: Multicore app[0m
+[0;32mI (560) cpu_start: Pro cpu up.[0m
+[0;32mI (560) cpu_start: Starting app cpu, entry point is 0x400817cc[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (578) cpu_start: Pro cpu start user code[0m
+[0;32mI (578) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (578) cpu_start: Application information:[0m
+[0;32mI (582) cpu_start: Project name:     relay[0m
+[0;32mI (587) cpu_start: App version:      0.0.0.6[0m
+[0;32mI (592) cpu_start: Compile time:     Feb 10 2024 20:38:22[0m
+[0;32mI (598) cpu_start: ELF file SHA256:  2147fcfadaac4dfa...[0m
+[0;32mI (604) cpu_start: ESP-IDF:          5.1.1[0m
+[0;32mI (609) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (614) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (618) cpu_start: Chip rev:         v3.0[0m
+[0;32mI (623) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (631) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (636) heap_init: At 3FFB8400 len 00027C00 (159 KiB): DRAM[0m
+[0;32mI (643) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (649) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (656) heap_init: At 400958F0 len 0000A710 (41 KiB): IRAM[0m
+[0;32mI (663) spi_flash: detected chip: generic[0m
+[0;32mI (666) spi_flash: flash io: dio[0m
+[0;32mI (671) app_start: Starting scheduler on CPU0[0m
+[0;32mI (675) app_start: Starting scheduler on CPU1[0m
+[0;32mI (675) main_task: Started on CPU0[0m
+[0;32mI (685) main_task: Calling app_main()[0m
+[0;32m1970-01-01 00:00:10 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0;32m1970-01-01 00:00:10 | INFO  | wifi_c_sta_register_connect_handler:370 | STA connect handler function of wifi controller changed![0m
+[0;32m1970-01-01 00:00:10 | INFO  | nvs_c_init_nvs:31 | nvs was initialized[0m
+[0m1970-01-01 00:00:10 | DEBUG | wifi_c_init_netif:235 | netif initialized as STA[0m
+I (855) wifi:wifi driver task: 3ffc05a8, prio:23, stack:6656, core=0
+I (875) wifi:wifi firmware version: ce9244d
+I (875) wifi:wifi certification version: v7.0
+I (875) wifi:config NVS flash: enabled
+I (875) wifi:config nano formating: disabled
+I (885) wifi:Init data frame dynamic rx buffer num: 32
+I (885) wifi:Init management frame dynamic rx buffer num: 32
+I (895) wifi:Init management short buffer num: 32
+I (895) wifi:Init dynamic tx buffer num: 32
+I (895) wifi:Init static rx buffer size: 1600
+I (905) wifi:Init static rx buffer num: 10
+I (905) wifi:Init dynamic rx buffer num: 32
+[0;32mI (915) wifi_init: rx ba win: 6[0m
+[0;32mI (915) wifi_init: tcpip mbox: 32[0m
+[0;32mI (915) wifi_init: udp mbox: 6[0m
+[0;32mI (925) wifi_init: tcp mbox: 6[0m
+[0;32mI (925) wifi_init: tcp tx win: 5744[0m
+[0;32mI (935) wifi_init: tcp rx win: 5744[0m
+[0;32mI (935) wifi_init: tcp mss: 1440[0m
+[0;32mI (935) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (945) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32m1970-01-01 00:00:11 | INFO  | wifi_c_init_wifi:499 | Wifi initialized.[0m
+[0;32mI (955) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07[0m
+I (1075) wifi:mode : sta (c8:f0:9e:f8:01:a8)
+I (1075) wifi:enable tsf
+[0;32m1970-01-01 00:00:11 | INFO  | wifi_c_sta_event_handler:158 | Station started, connecting to WiFi.[0m
+[0m1970-01-01 00:00:11 | DEBUG | wifi_c_init_wifi:503 | wifi successfully initialized[0m
+[0m1970-01-01 00:00:11 | DEBUG | nvs_c_open_read_only:79 | opened namespace nvs for read only operations[0m
+[0;32m1970-01-01 00:00:11 | INFO  | nvs_c_read_string:131 | read 15 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:11 | DEBUG | wifi_manager_get_stored_ap:79 | found stored SSID in NVS: TP-LINK_AD8313[0m
+[0;32m1970-01-01 00:00:11 | INFO  | nvs_c_read_string:131 | read 9 bytes from namespace: nvs[0m
+[0m1970-01-01 00:00:11 | DEBUG | wifi_manager_get_stored_ap:83 | found stored password in NVS: 20232887[0m
+[0m1970-01-01 00:00:11 | DEBUG | nvs_c_close:88 | nvs namespace: nvs was closed[0m
+[0;32m1970-01-01 00:00:11 | INFO  | wifi_manager_init:232 | found stored AP, connecting to: TP-LINK_AD8313[0m
+[0m1970-01-01 00:00:11 | DEBUG | wifi_c_start_sta:667 | WiFi successfully configured as STA.[0m

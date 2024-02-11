@@ -1,0 +1,24 @@
+I (3850) wifi:ap channel adjust o:1,1 n:11,2
+I (3850) wifi:new:<11,2>, old:<1,1>, ap:<11,2>, sta:<11,2>, prof:1
+I (5020) wifi:state: init -> auth (b0)
+I (5030) wifi:state: auth -> assoc (0)
+I (5030) wifi:state: assoc -> run (10)
+I (5040) wifi:connected with TP-LINK_AD8313, aid = 4, channel 11, 40D, bssid = 84:16:f9:ad:83:12
+I (5040) wifi:security: WPA2-PSK, phy: bgn, rssi: -42
+I (5060) wifi:pm start, type: 1
+
+I (5060) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (5070) wifi:<ba-add>idx:0 (ifx:0, 84:16:f9:ad:83:12), tid:0, ssn:0, winSize:64
+[0;32m1970-01-01 00:00:05 | INFO  | wifi_c_sta_event_handler:106 | Got IP:192.168.0.103[0m
+[0;32mI (6060) esp_netif_handlers: sta ip: 192.168.0.103, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0m1970-01-01 00:00:05 | DEBUG | wifi_c_check_sta_connection_result:118 | WIFI_C_CONNECTED_BIT is set![0m
+I (7240) wifi:Total power save buffer number: 16
+[0;32mI (7250) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.168.4.1[0m
+[0;32m1970-01-01 00:00:06 | INFO  | wifi_c_start_ap:349 | Started AP: 
+SSID: ESP32 
+Password: 12345678[0m
+[0;32m1970-01-01 00:00:06 | INFO  | app_main:141 | Connected to wifi, current ip: 192.168.0.103[0m
+[0m1970-01-01 00:00:06 | DEBUG | inspect_task:97 | Currently available heap: 221892[0m
+[0m1970-01-01 00:00:06 | DEBUG | inspect_task:98 | The minimum heap size that was ever available: 207480[0m
+[0m1970-01-01 00:00:06 | DEBUG | spiffs_c_init:63 | initializing SPIFFS...[0m
+[0m1970-01-01 00:00:06 | DEBUG | spiffs_c_init:74 | initialized SPIFFS successfully[0m
