@@ -10,13 +10,12 @@
 #include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "cJSON.h"
+#include <driver/gpio.h>
 
 #ifndef ESP32_C3_SUPERMINI
 #include "cli_manager.h"
-
 #include "esp_netif_sntp.h"
-#include <driver/gpio.h>
-#include "cJSON.h"
 #endif
 
 #define MY_SSID "TP-LINK_AD8313"
@@ -87,14 +86,38 @@ void switch_gpio_task(void *args)
     };
 }
 
+void inspect_task(void *args)
+{
+    char *wifi_c_info = NULL;
+    NEW_SIZE(wifi_c_info, 300); // TODO add constant to wifi_controller, something like WIFI_C_STATUS_JSON_MIN_BUFLEN
+
+    char *device_info = NULL;
+    NEW_SIZE(device_info, 350);
+    while (1)
+    {
+        uint32_t free_heap = esp_get_free_heap_size();
+        uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
+        wifi_c_get_status_as_json(wifi_c_info, 300);
+        snprintf(device_info, 350, "device_id=%d&wifi_info=%s", ESP_DEVICE_ID, wifi_c_info);
+        http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info);
+        LOG_DEBUG("sent wifi_c_status to the server");
+        LOG_DEBUG("Currently available heap: %lu", free_heap);
+        LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
+        vTaskDelay(pdMS_TO_TICKS(60000 * 3)); // TODO Make it a constant or configuration variable?
+    }
+    DELETE(wifi_c_info);
+    DELETE(device_info);
+}
+
 void on_connect_handler(void)
 {
-    /*#ifndef ESP32_C3_SUPERMINI
-        gpio_set_direction(ESP_DEVICE_WIFI_LED, GPIO_MODE_OUTPUT);
-        gpio_set_level(ESP_DEVICE_WIFI_LED, 1);
-        LOG_INFO("Onboard LED turned on!");
-    #endif*/
+#ifndef ESP32_C3_SUPERMINI
+    gpio_set_direction(ESP_DEVICE_WIFI_LED, GPIO_MODE_OUTPUT);
+    gpio_set_level(ESP_DEVICE_WIFI_LED, 1);
+    LOG_INFO("Onboard LED turned on!");
+#endif
     xTaskCreate(switch_gpio_task, "gpio_task", 1024 * 6, NULL, 2, NULL);
+    xTaskCreate(inspect_task, "inspect_heap_task", 1024 * 6, NULL, 3, NULL);
 }
 
 #ifdef ESP_WROVER_KIT
@@ -107,21 +130,6 @@ void switch_off_all_leds(void)
     gpio_set_level(GPIO_NUM_4, 0);
     gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT);
     gpio_set_level(GPIO_NUM_2, 0);
-}
-#endif
-
-#ifndef ESP32_C3_SUPERMINI
-void inspect_task(void *args)
-{
-    while (1)
-    {
-        uint32_t free_heap = esp_get_free_heap_size();
-        uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
-
-        LOG_DEBUG("Currently available heap: %lu", free_heap);
-        LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
-        vTaskDelay(pdMS_TO_TICKS(5000));
-    }
 }
 #endif
 
@@ -139,7 +147,7 @@ void app_main()
 
 // ESP-WROVE-KIT has 3 LEDs, turn all off
 #ifdef ESP_WROVER_KIT
-    //switch_off_all_leds();
+    switch_off_all_leds();
 #endif
 
     wifi_c_sta_register_connect_handler(on_connect_handler);
@@ -154,7 +162,6 @@ void app_main()
 #ifndef ESP32_C3_SUPERMINI
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
     esp_netif_sntp_init(&config);
-    xTaskCreate(inspect_task, "inspect_heap_task", 4096, NULL, 2, NULL);
     cli_set_remote_logging(27015);
 #endif
 }
