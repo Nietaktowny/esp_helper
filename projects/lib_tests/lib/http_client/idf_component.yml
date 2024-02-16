@@ -1,5 +1,0 @@
-dependencies:
-  idf: '>=5.0' 
-description: Library used to act as HTPP Client.. 
-url: 
-version: 1.0.0

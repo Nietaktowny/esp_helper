@@ -1,1 +1,0 @@
-idf_component_register(SRCS "err_controller.c" INCLUDE_DIRS "include")

@@ -6,4 +6,9 @@
 logs
 build
 .pytest_cache
-__pytest__
+*/__pytest__
+*/__pycache__
+.vscode
+test.log
+*/build
+*/dependencies.lock

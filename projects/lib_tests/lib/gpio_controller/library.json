@@ -1,8 +1,0 @@
-{
-	"name": "gpio_controller",
-	"version": "1.0.0",
-	"keywords": "keyword",
-	"description": "Library used to control GPIO pins.",
-	"frameworks": ["espidf"],
-	"platforms": ["espressif32"]
-}

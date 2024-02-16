@@ -1,5 +1,0 @@
-dependencies:
-  idf: '>=5.0' 
-description: Simple logging library. 
-url: 
-version: 1.0.0
