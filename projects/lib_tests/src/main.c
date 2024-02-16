@@ -52,7 +52,7 @@ void scan_task(void* args) {
     
 }
 
-void app_main()
+void app_main(void)
 {
 
     // Allow other core to finish initialization
