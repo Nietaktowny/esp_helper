@@ -1,5 +1,4 @@
 dependencies:
   idf: '>=5.0'
 description: Library used to control errors.
-url: 
 version: 1.0.0

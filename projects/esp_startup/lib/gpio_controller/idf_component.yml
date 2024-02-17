@@ -1,5 +1,0 @@
-dependencies:
-  idf: '>=5.0' 
-description: Library used to control GPIO pins.. 
-url: 
-version: 1.0.0

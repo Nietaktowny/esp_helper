@@ -167,3 +167,54 @@ int http_client_post(const char* ipv4_address, const char* path, const char* pos
 	esp_http_client_cleanup(client);
     return (int)id;
 }
+
+int http_client_get(const char* ipv4_address, const char* path, char* buffer, size_t buflen) {
+    err_c_t err = 0;
+    uint64_t id = 0;
+    char local_response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0};
+    char url[64];
+
+    memutil_zero_memory(&url, sizeof(url));
+    memutil_zero_memory(&local_response_buffer, sizeof(local_response_buffer));
+
+    ERR_C_CHECK_NULL_PTR(ipv4_address, LOG_ERROR("IPv4 address cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(path, LOG_ERROR("Path to php script cannot be NULL"));
+	ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("Buffer to store http get result cannot be NULL"));
+
+    sprintf(url, "http://%s/%s", ipv4_address, path);
+    LOG_INFO("making GET request to address: %s", url);
+    //prepare client handle
+    esp_http_client_config_t config = {
+        .url = url,
+        .event_handler = _http_event_handler,
+        .user_data = local_response_buffer,
+		.method = HTTP_METHOD_GET,
+    };
+    esp_http_client_handle_t client = esp_http_client_init(&config);
+
+    //POST
+    esp_http_client_set_url(client, url);
+    esp_http_client_set_method(client, HTTP_METHOD_GET);
+    err = esp_http_client_perform(client);
+    if(err == ERR_C_OK) {
+ 		LOG_DEBUG("HTTP GET Status = %d, content_length = %d",
+				esp_http_client_get_status_code(client),
+				esp_http_client_get_content_length(client));
+		LOG_INFO("\n%s", local_response_buffer);
+		id = strtol(local_response_buffer, NULL, 10);
+
+		//copy result into user buffer
+		size_t resplen = strlen(local_response_buffer);
+		if(resplen >= buflen) {
+			LOG_ERROR("buffer not big enough to store HTTP response:\nbuffer: %ld, content_length: %d", buflen, esp_http_client_get_content_length(client));
+			return ERR_C_MEMORY_ERR;
+		}
+
+		mempcpy(buffer, local_response_buffer, resplen);
+		LOG_DEBUG("HTTP response stored into buffer");
+    } else {
+        LOG_ERROR("HTTP GET request failed: %s", esp_err_to_name(err));
+    }
+	esp_http_client_cleanup(client);
+    return (int)id;
+}
