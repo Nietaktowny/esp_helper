@@ -49,8 +49,8 @@ void app_main(void)
     ESP_ERROR_CHECK(wifi_c_sta_register_disconnect_handler(disconnect_handler));
 
     //Start STA and connect to AP:
-    ESP_ERROR_CHECK(wifi_c_start_sta(MY_SSID, MY_PSK));
+    wifi_c_start_sta(MY_SSID, MY_PSK);
 
     //Start AP
-    ESP_ERROR_CHECK(wifi_c_start_ap("TEST_AP", "TEST_AP_PASSWORD"));
+    wifi_c_start_ap("TEST_AP", "TEST_AP_PASSWORD");
 }

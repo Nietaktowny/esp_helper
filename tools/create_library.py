@@ -12,7 +12,7 @@ src_file = lib_name + ".c"
 
 readme_file_text = "# " + lib_name + "\n" + lib_description
 
-cmake_file_text = ''''
+cmake_file_text = '''
 idf_component_register(
     SRCS "src/''' + src_file +'''" 
     INCLUDE_DIRS "include"
