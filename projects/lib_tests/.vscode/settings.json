@@ -5,6 +5,7 @@
         "compare": "c",
         "esp_system.h": "c",
         "esp_mac.h": "c",
-        "logger.h": "c"
+        "logger.h": "c",
+        "ota_controller.h": "c"
     }
 }
