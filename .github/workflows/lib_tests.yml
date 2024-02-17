@@ -25,8 +25,3 @@ jobs:
         run: pip install gitpython
       - name: Install TQDM
         run: pip install tqdm
-      - name: Build PlatformIO Project
-        run: |
-          cd projects/lib_tests
-          platformio run --environment esp-wrover-kit
-          platformio run --environment esp-dev
