@@ -1,4 +1,0 @@
-dependencies:
-  idf: '>=5.0' 
-description: ESP Helper utilities library..
-version: 1.0.0

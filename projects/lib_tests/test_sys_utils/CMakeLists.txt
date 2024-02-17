@@ -8,4 +8,4 @@ cmake_minimum_required(VERSION 3.16)
 set(EXTRA_COMPONENT_DIRS "../lib")
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(test_cli_manager)
+project(test_sys_utils)

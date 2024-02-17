@@ -1,8 +1,0 @@
-{
-	"name": "esp_helper_utils",
-	"version": "1.0.0",
-	"keywords": "keyword",
-	"description": "ESP Helper utilities library.",
-	"frameworks": ["espidf"],
-	"platforms": ["espressif32"]
-}

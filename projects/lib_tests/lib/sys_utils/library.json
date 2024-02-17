@@ -1,0 +1,8 @@
+{
+	"name": "sys_utils",
+	"version": "1.0.0",
+	"keywords": "keyword",
+	"description": "System utilities library.",
+	"frameworks": ["espidf"],
+	"platforms": ["espressif32"]
+}
