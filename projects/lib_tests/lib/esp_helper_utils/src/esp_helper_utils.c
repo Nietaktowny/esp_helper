@@ -42,7 +42,7 @@ int helper_prepare_url_with_device_id(const char *url, const char *device_id, ch
     {
         LOG_ERROR("buffer length to store URL cannot be NULL");
         return ERR_C_MEMORY_ERR;
-    } else if {buflen < 100} {
+    } else if (buflen < 100) {
         LOG_ERROR("buffer to small to store URL.");
         return ERR_C_MEMORY_ERR;
     }
