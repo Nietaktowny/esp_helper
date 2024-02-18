@@ -34,7 +34,7 @@ jobs:
         run: |
             cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests
             . $HOME/esp/esp-idf/export.sh
-            cp -Rf lib lib_tests
+            cp -Rf lib lib_tests/lib
             cd lib_tests
             ls -la
             mv lib components
