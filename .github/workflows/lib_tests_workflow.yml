@@ -32,13 +32,12 @@ jobs:
             . $HOME/esp/esp-idf/export.sh
       - name: Build all test projects.
         run: |
-            cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests/
+            cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests/test_logger
             . $HOME/esp/esp-idf/export.sh
             pwd
-            python3 clean_all.py
-            python3 build_all.py
+            idf.py build
       - name: Run pytest on qemu.
         run: |
             . $HOME/esp/esp-idf/export.sh
-            pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
+            pytest pytest_logger.py --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
             junit2html junit/test_reports
