@@ -8,11 +8,15 @@ jobs:
     container:
       image: espressif/idf
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: "esp_helper"
       - name: Build all test projects.
         run: |
             pwd
             ls -la
-            cd projects/lib_tests/
+            cd esp_helper/projects/lib_tests/
             python clean_all.py
             python build_all.py
       - name: Run pytest on qemu.
