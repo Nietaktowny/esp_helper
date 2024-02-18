@@ -32,9 +32,11 @@ jobs:
             . $HOME/esp/esp-idf/export.sh
       - name: Build all test projects.
         run: |
-            cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests/test_logger
+            cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests
             . $HOME/esp/esp-idf/export.sh
-            pwd
+            cp -Rf lib lib_tests
+            cd lib_tests
+            mv lib components
             idf.py build
       - name: Run pytest on qemu.
         run: |
