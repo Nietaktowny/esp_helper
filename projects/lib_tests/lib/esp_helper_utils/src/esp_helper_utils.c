@@ -15,8 +15,13 @@
 #include "err_controller.h"
 #include "memory_utils.h"
 #include "ota_controller.h"
+#include "wifi_controller.h"
+
+#include <stdbool.h>
 
 #define ESP_HELPER_OTA_URL "http://wmytych.usermd.net/modules/getters/ota.php"
+
+#define ESP_HELPER_MIN_URL_SIZE     100         ///< Minimal buffer size to store URLs prepared by ESP Helper utils.
 
 /**
  * @todo Do some bit-magic with mac address so it's not obvious.
@@ -40,10 +45,10 @@ int helper_prepare_url_with_device_id(const char *url, const char *device_id, ch
     ERR_C_CHECK_NULL_PTR(device_id, LOG_ERROR("device_id cannot be NULL"));
     if (buflen == 0)
     {
-        LOG_ERROR("buffer length to store URL cannot be NULL");
+        LOG_ERROR("buffer length to store URL cannot be zero");
         return ERR_C_MEMORY_ERR;
-    } else if (buflen < 100) {
-        LOG_ERROR("buffer to small to store URL.");
+    } else if (buflen < ESP_HELPER_MIN_URL_SIZE) {
+        LOG_ERROR("buffer to store URL must be at least %d bytes big.", ESP_HELPER_MIN_URL_SIZE);
         return ERR_C_MEMORY_ERR;
     }
 
@@ -59,8 +64,13 @@ int helper_perform_ota(void)
     Try
     {
         char url[128] = {0};
-        char device_id[20] = {0};
+        char device_id[20] = "111111";
+        wifi_c_status_t* wifi = wifi_c_get_status();
 
+        if(wifi->sta_connected == false) {
+            LOG_ERROR("STA needs to be connected to Wifi to perform OTA.");
+            return ESP_HELPER_ERR_NOT_CONNECTED;
+        }
         ERR_C_CHECK_AND_THROW_ERR(sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id)));
         ERR_C_CHECK_AND_THROW_ERR(helper_prepare_url_with_device_id(ESP_HELPER_OTA_URL, device_id, url, sizeof(url)));
         ERR_C_CHECK_AND_THROW_ERR(ota_c_start(url));

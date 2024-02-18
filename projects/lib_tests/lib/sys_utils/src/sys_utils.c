@@ -36,6 +36,6 @@ int sysutil_get_chip_base_mac_as_str(char* buffer, size_t buflen) {
     }
 
     sysutil_get_chip_base_mac(mac);
-    snprintf(buffer, buflen, "Mac address: %02x:%02x:%02x:%02x:%02x:%02x", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+    snprintf(buffer, buflen, "%02x:%02x:%02x:%02x:%02x:%02x", mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
     return err;
 }
