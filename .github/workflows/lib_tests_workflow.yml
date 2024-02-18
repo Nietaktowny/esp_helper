@@ -33,4 +33,4 @@ jobs:
       - name: Build all test projects.
         run: |
             cd ~/
-            pwd
+            ls -la
