@@ -5,7 +5,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    container:
+      image: espressif/idf
     steps:
       - uses: actions/checkout@v3
       - uses: actions/cache@v3
@@ -17,27 +18,13 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-      - name: Install ESP-IDF prerequisites
-        run: sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
-      - name: Get ESP-IDF
-        run: |
-            pwd
-            mkdir -p ~/esp
-            cd ~/esp
-            git clone --recursive https://github.com/espressif/esp-idf.git
-      - name: Set up the Tools for ESP-IDF
-        run: |
-            cd ~/esp/esp-idf
-            ./install.sh esp32 --enable-pytest
-            . $HOME/esp/esp-idf/export.sh
       - name: Build all test projects.
         run: |
             cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests
-            . $HOME/esp/esp-idf/export.sh
             python clean_all.py
             python build_all.py
       - name: Run pytest on qemu.
         run: |
-            . $HOME/esp/esp-idf/export.sh
             pytest pytest_logger.py --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
+            pip install junit2html
             junit2html junit/test_reports
