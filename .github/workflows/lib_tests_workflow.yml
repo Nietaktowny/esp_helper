@@ -8,12 +8,11 @@ jobs:
     container:
       image: espressif/idf
     steps:
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
       - name: Build all test projects.
         run: |
-            cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests
+            pwd
+            ls -la
+            cd projects/lib_tests/
             python clean_all.py
             python build_all.py
       - name: Run pytest on qemu.
