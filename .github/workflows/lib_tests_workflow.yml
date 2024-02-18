@@ -36,6 +36,7 @@ jobs:
             . $HOME/esp/esp-idf/export.sh
             cp -Rf lib lib_tests
             cd lib_tests
+            ls -la
             mv lib components
             idf.py build
       - name: Run pytest on qemu.
