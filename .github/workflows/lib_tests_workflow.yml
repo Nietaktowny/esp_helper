@@ -37,9 +37,10 @@ jobs:
       - name: Build all test projects.
         run: |
             cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests
+            . $HOME/esp/esp-idf/export.sh
             python3 build_all.py
       - name: Run pytest on qemu.
         run: |
-            python3 build_all.py
+            . $HOME/esp/esp-idf/export.sh
             pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
             junit2html junit/test_reports
