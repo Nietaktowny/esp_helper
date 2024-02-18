@@ -30,5 +30,7 @@ jobs:
             cd ~/esp/esp-idf
             ./install.sh esp32 --enable-pytest
             . $HOME/esp/esp-idf/export.sh
+      - name: Build all test projects.
+        run: |
+            cd ~/
             pwd
-            ls -la
