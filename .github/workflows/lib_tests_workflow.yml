@@ -32,8 +32,9 @@ jobs:
             . $HOME/esp/esp-idf/export.sh
       - name: Build all test projects.
         run: |
-            cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests
+            cd /home/runner/work/esp_helper/esp_helper/projects/lib_tests/
             . $HOME/esp/esp-idf/export.sh
+            pwd
             python3 clean_all.py
             python3 build_all.py
       - name: Run pytest on qemu.
