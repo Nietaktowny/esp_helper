@@ -25,4 +25,6 @@ jobs:
         working-directory: projects/lib_tests/test_logger
         run: |
           . ${IDF_PATH}/export.sh
+          ls -la
+          pwd
           idf.py build
