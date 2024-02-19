@@ -12,15 +12,23 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: "esp_helper"
-      - name: Build all test projects.
+      - name: Go to lib_tests.
         run: |
-            pwd
-            ls -la
             cd esp_helper/projects/lib_tests/
-            python clean_all.py
-            python build_all.py
+      - name: esp-idf build tes_sys_utils
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+            esp_idf_version: v5.3
+            target: esp32
+            path: 'test_sys_utils'
+      - name: esp-idf build logger
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+            esp_idf_version: v5.3
+            target: esp32
+            path: 'test_logger'          
       - name: Run pytest on qemu.
         run: |
-            pytest pytest_logger.py --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
+            pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
             pip install junit2html
             junit2html junit/test_reports
