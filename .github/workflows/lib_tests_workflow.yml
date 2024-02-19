@@ -22,7 +22,7 @@ jobs:
         working-directory: projects/lib_tests
         run: |
           . ${IDF_PATH}/export.sh
-          cp -Rf lub test_logger/
+          cp -Rf lib test_logger/
           cd test_logger
           mv lib components
           ls -la components
