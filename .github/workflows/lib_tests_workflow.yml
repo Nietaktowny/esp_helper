@@ -32,6 +32,10 @@ jobs:
           python build_all.py
           pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
       - name: Run pytest on qemu.
+        working-directory: projects/lib_tests
         run: |
+            pwd
+            ls -la
+            ls -la junit
             python -m pip install junit2html
             junit2html junit/test_reports
