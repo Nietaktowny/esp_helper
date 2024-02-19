@@ -16,9 +16,9 @@ jobs:
         run: |
             cd esp_helper/projects/lib_tests/
       - name: esp-idf build tes_sys_utils
-        run: docker run --rm -v $PWD:/test_sys_utils -w /project espressif/idf idf.py build
+        run: docker run --rm -v $PWD:/test_sys_utils -w /test_sys_utils espressif/idf idf.py build
       - name: esp-idf build test_logger
-        run: docker run --rm -v $PWD:/test_logger -w /project espressif/idf idf.py build                     
+        run: docker run --rm -v $PWD:/test_logger -w /test_logger espressif/idf idf.py build                     
       - name: Run pytest on qemu.
         run: |
             pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
