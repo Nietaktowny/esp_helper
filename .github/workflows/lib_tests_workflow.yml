@@ -12,7 +12,7 @@ jobs:
         idf_target: ["esp32", "esp32s2", "esp32s3", "esp32c2", "esp32c3"]
         exclude:
           - idf_ver: "release-v4.4"
-            idf_target: esp32c2 # ESP32C2 support started with version 5.0
+            idf_target: esp32 # ESP32 support started with version 5.0
     container: espressif/idf:${{ matrix.idf_ver }}
     steps:
       - uses: actions/checkout@v3
