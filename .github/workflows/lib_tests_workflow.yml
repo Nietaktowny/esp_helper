@@ -14,10 +14,6 @@ jobs:
           path: "esp_helper"
       - name: Install Docker
         uses: papodaca/install-docker-action@v1
-      - name: Go to lib_tests.
-        run: |
-            cd esp_helper/projects/lib_tests/
-            pwd
       - name: esp-idf build tes_sys_utils
         run: docker run --rm -v esp_helper/projects/lib_tests/test_sys_utils -w esp_helper/projects/lib_tests/ espressif/idf idf.py build
       - name: esp-idf build test_logger
