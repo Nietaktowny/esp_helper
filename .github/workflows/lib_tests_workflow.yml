@@ -1,25 +1,31 @@
-name: Test qemu lib_tests
-
-on: [push]
+name: Build lub tests
+on:
+  push:
+    branches:
+    - master
+  pull_request:
 
 jobs:
-  build:
+  build-examples:
+    name: Build for ${{ matrix.idf_target }} on ${{ matrix.idf_ver }}
     runs-on: ubuntu-latest
-    container:
-      image: espressif/idf
+    strategy:
+      matrix:
+        idf_ver: ["release-v4.4", "release-v5.0", "release-v5.1", "release-v5.2", "latest"]
+        idf_target: ["esp32", "esp32s2", "esp32s3", "esp32c2", "esp32c3"]
+        exclude:
+          - idf_ver: "release-v4.4"
+            idf_target: esp32c2 # ESP32C2 support started with version 5.0
+    container: espressif/idf:${{ matrix.idf_ver }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
-          path: "esp_helper"
-      - name: Install Docker
-        uses: papodaca/install-docker-action@v1
-      - name: esp-idf build tes_sys_utils
-        run: docker run --rm -v /esp_helper/projects/lib_tests/test_sys_utils -w /esp_helper/projects/lib_tests/test_sys_utils espressif/idf idf.py build
-      - name: esp-idf build test_logger
-        run: docker run --rm -v $PWD:/test_logger -w /test_logger espressif/idf idf.py build                     
-      - name: Run pytest on qemu.
+          submodules: 'true'
+      - name: esp-idf build
+        env:
+          IDF_TARGET: ${{ matrix.idf_target }}
+        shell: bash
+        working-directory: projects/lib_tests/test_logger
         run: |
-            pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
-            pip install junit2html
-            junit2html junit/test_reports
+          . ${IDF_PATH}/export.sh
+          idf.py build
