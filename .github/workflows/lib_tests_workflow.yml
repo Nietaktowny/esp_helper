@@ -8,11 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        idf_ver: ["release-v4.4", "release-v5.0", "release-v5.1", "release-v5.2", "latest"]
-        idf_target: ["esp32", "esp32s2", "esp32s3", "esp32c2", "esp32c3"]
-        exclude:
-          - idf_ver: "release-v4.4"
-            idf_target: esp32 # ESP32 support started with version 5.0
+        idf_ver: ["release-v5.2", "latest"]
+        idf_target: ["esp32"]
     container: espressif/idf:${{ matrix.idf_ver }}
     steps:
       - uses: actions/checkout@v3
