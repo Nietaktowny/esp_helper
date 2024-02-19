@@ -8,10 +8,12 @@ jobs:
     container:
       image: espressif/idf
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v3
         with:
-          path: "esp_helper"
+          submodules: 'recursive'
+      - name: Install Docker
+        uses: papodaca/install-docker-action@v1
       - name: Go to lib_tests.
         run: |
             cd esp_helper/projects/lib_tests/
