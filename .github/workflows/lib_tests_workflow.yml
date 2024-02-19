@@ -16,17 +16,9 @@ jobs:
         run: |
             cd esp_helper/projects/lib_tests/
       - name: esp-idf build tes_sys_utils
-        uses: espressif/esp-idf-ci-action@v1
-        with:
-            esp_idf_version: v5.3
-            target: esp32
-            path: 'test_sys_utils'
-      - name: esp-idf build logger
-        uses: espressif/esp-idf-ci-action@v1
-        with:
-            esp_idf_version: v5.3
-            target: esp32
-            path: 'test_logger'          
+        run: docker run --rm -v $PWD:/test_sys_utils -w /project espressif/idf idf.py build
+      - name: esp-idf build test_logger
+        run: docker run --rm -v $PWD:/test_logger -w /project espressif/idf idf.py build                     
       - name: Run pytest on qemu.
         run: |
             pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
