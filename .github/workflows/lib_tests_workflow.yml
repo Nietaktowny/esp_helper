@@ -28,7 +28,7 @@ jobs:
           python build_all.py
       - name: Run pytest on qemu.
         run: |
-            pip install pytest
+            python pip install pytest
             pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
-            pip install junit2html
+            python pip install junit2html
             junit2html junit/test_reports
