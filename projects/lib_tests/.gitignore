@@ -12,3 +12,5 @@ build
 test.log
 */build
 */dependencies.lock
+sdkconfig
+*/sdkconfig

@@ -116,8 +116,24 @@ void test_if_helper_prepare_url_returns_err_on_too_small_buffer(void) {
   TEST_ASSERT_EQUAL_MESSAGE(ERR_C_MEMORY_ERR, err, "helper_prepare_url_with_device_id should return err on too small buffer");
 }
 
+void test_if_helper_perform_ota_returns_err_on_not_connected_wifi(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  int err = 0;
+
+  //when
+  err = helper_perform_ota();
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(ESP_HELPER_ERR_NOT_CONNECTED, err, "helper_perform_ota should return err on not connected wifi");  
+}
+
 int runUnityTests(void) {
   UNITY_BEGIN();
+  RUN_TEST(test_if_helper_perform_ota_returns_err_on_not_connected_wifi);
+  RUN_TEST(test_if_helper_perform_ota_returns_err_on_not_connected_wifi);
   RUN_TEST(test_if_helper_prepare_url_returns_err_on_too_small_buffer);
   RUN_TEST(test_if_helper_prepare_url_returns_err_on_null_buffer);
   RUN_TEST(test_if_helper_prepare_url_returns_err_on_null_device_id);

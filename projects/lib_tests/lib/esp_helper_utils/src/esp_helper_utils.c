@@ -64,7 +64,7 @@ int helper_perform_ota(void)
     Try
     {
         char url[128] = {0};
-        char device_id[20] = "111111";
+        char device_id[20] = {0};
         wifi_c_status_t* wifi = wifi_c_get_status();
 
         if(wifi->sta_connected == false) {
