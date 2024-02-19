@@ -19,9 +19,13 @@ jobs:
         env:
           IDF_TARGET: ${{ matrix.idf_target }}
         shell: bash
-        working-directory: projects/lib_tests/test_logger
+        working-directory: projects/lib_tests
         run: |
           . ${IDF_PATH}/export.sh
-          ls -la ../lib
+          cp -Rf lub test_logger/
+          cd test_logger
+          mv lib components
+          ls -la components
+          ls -la
           pwd
           idf.py build
