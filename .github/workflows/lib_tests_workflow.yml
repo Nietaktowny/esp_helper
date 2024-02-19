@@ -17,6 +17,7 @@ jobs:
       - name: Go to lib_tests.
         run: |
             cd esp_helper/projects/lib_tests/
+            pwd
       - name: esp-idf build tes_sys_utils
         run: docker run --rm -v $PWD:/test_sys_utils -w /test_sys_utils espressif/idf idf.py build
       - name: esp-idf build test_logger
