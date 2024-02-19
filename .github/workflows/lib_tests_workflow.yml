@@ -22,13 +22,8 @@ jobs:
         working-directory: projects/lib_tests
         run: |
           . ${IDF_PATH}/export.sh
-          cp -Rf lib test_logger/
+          cp -Rf ../projects/bmp280/lib/wifi_controller lib/
+          ls -la lib
           cd test_logger
-          mv lib components
-          ls -la components
-          ls -la
-          pwd
-          rm sdkconfig
-          rm sdkconfig.old
           idf.py fullclean
           idf.py build
