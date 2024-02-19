@@ -27,7 +27,6 @@ jobs:
         run: |
           ${IDF_PATH}/./install.sh --enable-pytest
           . ${IDF_PATH}/export.sh
-          cp -Rf ../bmp280/lib/wifi_controller lib/
           python clean_all.py
           python build_all.py
           pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
