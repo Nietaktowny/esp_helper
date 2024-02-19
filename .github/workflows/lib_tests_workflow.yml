@@ -28,5 +28,7 @@ jobs:
           ls -la components
           ls -la
           pwd
+          rm sdkconfig
+          rm sdkconfig.old
           idf.py fullclean
           idf.py build
