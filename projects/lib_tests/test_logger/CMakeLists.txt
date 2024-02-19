@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.16)
 
 # Include the components directory of the main application:
 #
-set(EXTRA_COMPONENT_DIRS "../lib")
+#set(EXTRA_COMPONENT_DIRS "../lib")
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(test_logger)
