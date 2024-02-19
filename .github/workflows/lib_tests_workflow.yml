@@ -19,7 +19,8 @@ jobs:
       - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: 3.8      - name: esp-idf build
+          python-version: 3.8
+      - name: esp-idf build
         env:
           IDF_TARGET: ${{ matrix.idf_target }}
         shell: bash
