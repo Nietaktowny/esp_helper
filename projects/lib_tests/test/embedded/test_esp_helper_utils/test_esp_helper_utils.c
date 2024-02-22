@@ -11,6 +11,7 @@
 
 void setUp(void) {
   // set stuff up here
+  logger_create_semphr();
 }
 
 void tearDown(void) {

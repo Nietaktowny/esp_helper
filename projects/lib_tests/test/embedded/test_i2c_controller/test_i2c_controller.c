@@ -3,10 +3,13 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include <stdio.h>
+
 #include "i2c_controller_internal.h"
+#include "logger.h"
 
 void setUp(void) {
   // set stuff up here
+  logger_create_semphr();
 }
 
 void tearDown(void) {
