@@ -213,7 +213,7 @@ h1 {
                 <li>test_wifi_controller.pytest_wifi_controller
                 <ul>
                     
-                    <li><a href="#18a61a9a-15f3-4789-a0a9-96edc5fa913f">test_wifi_controller</a></li>
+                    <li><a href="#46d7335e-8fe9-4eb7-8f2b-d0bedf5dab98">test_wifi_controller</a></li>
                     
                 </ul>
                 </li>
@@ -221,7 +221,7 @@ h1 {
                 <li>test_wifi_manager.pytest_wifi_manager
                 <ul>
                     
-                    <li><a href="#5e18b616-8795-4421-9cfe-fcc6f6197cbe">test_wifi_manager</a></li>
+                    <li><a href="#08c454a4-db76-449e-8d21-0ece844c5104">test_wifi_manager</a></li>
                     
                 </ul>
                 </li>
@@ -229,7 +229,7 @@ h1 {
                 <li>test_cli_manager.pytest_cli_manager
                 <ul>
                     
-                    <li><a href="#f748bfa9-c0e1-44b2-b01c-14db25bd07b2">test_cli_manager</a></li>
+                    <li><a href="#78c68fc6-f07a-4925-a0d8-8d3c04f65b8f">test_cli_manager</a></li>
                     
                 </ul>
                 </li>
@@ -237,7 +237,7 @@ h1 {
                 <li>test_logger.pytest_logger
                 <ul>
                     
-                    <li><a href="#dcfb788a-7ae2-4ed5-bf46-1aea72897f72">test_logger</a></li>
+                    <li><a href="#0251f239-56e3-4749-8101-423dcf89c2cb">test_logger</a></li>
                     
                 </ul>
                 </li>
@@ -245,7 +245,7 @@ h1 {
                 <li>test_sys_utils.pytest_sys_utils
                 <ul>
                     
-                    <li><a href="#ddab99a2-76de-4d8b-a719-02175a207abd">test_sys_utils</a></li>
+                    <li><a href="#70c7fbe3-7e4d-4277-9f79-2457bf56d29b">test_sys_utils</a></li>
                     
                 </ul>
                 </li>
@@ -258,8 +258,6 @@ h1 {
             
                 
                     
-                    
-                    <li><a href="#18a61a9a-15f3-4789-a0a9-96edc5fa913f">[F] test_wifi_controller.pytest_wifi_controller : test_wifi_controller</a></li>
                     
                     
                 
@@ -288,19 +286,19 @@ h1 {
 
     <div class="testsuite">
         <h2>Test Suite: pytest</h2>
-        <a id="d303d217-979b-4649-bf59-0030c63d044d"></a>
+        <a id="9e10df52-80ca-448a-a263-d55c5ded524b"></a>
         
         
         <h3>Results</h3>
         <table class="proplist">
             <tr>
-                <th>Duration</th><td>87.107 sec</td>
+                <th>Duration</th><td>64.255 sec</td>
             </tr>
             <tr>
                 <th>Tests</th><td>5</td>
             </tr>
             <tr>
-                <th>Failures</th><td>1</td>
+                <th>Failures</th><td>0</td>
             </tr>
         </table>
 
@@ -311,138 +309,25 @@ h1 {
                 <h4>test_wifi_controller.pytest_wifi_controller</h4>
                 <div class="testcases">
                 
-                    <div class="test outcome outcome-failed">
-                        <a id="18a61a9a-15f3-4789-a0a9-96edc5fa913f"></a>
+                    <div class="test outcome outcome-passed">
+                        <a id="46d7335e-8fe9-4eb7-8f2b-d0bedf5dab98"></a>
                         <table class="proplist">
                             <tr><th>Test case:</th><td><b>test_wifi_controller</b></td></tr>
-                            <tr><th>Outcome:</th><td>Failed</td></tr>
-                            <tr><th>Duration:</th><td>42.849 sec</td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>17.797 sec</td></tr>
                         
-                            <tr><th>Failed</th><td>pexpect.exceptions.TIMEOUT: Not found &#34;Random errror&#34;
-Bytes in current buffer (color code eliminated): . I (3718) wifi:new:&lt;1,1&gt;, old:&lt;1,1&gt;, ap:&lt;1,1&gt;, sta:&lt;1,1&gt;, prof:1 I (4028) wifi:state: init -&gt; auth (b0) I (4048) wifi:state: auth -&gt; assoc (0) I (5058) wifi:state: assoc -&gt; init... (total 1505 bytes)
-Please check the full log here: /tmp/pytest-embedded/2024-02-18_17-10-54-027640/test_wifi_controller/dut.log</td></tr>
+                            <tr><th>Failed</th><td>None</td></tr>
                         
                         
                         </table>
 
                         
-                        <pre>self = &lt;pytest_embedded_idf.dut.IdfDut object at 0x7f5b5e09c210&gt;, pattern = &#39;Random errror&#39;, expect_all = False, not_matching = (), args = (), kwargs = {}, patterns = [&#39;Random errror&#39;]
-res = []
-debug_str = &#39;Not found &#34;Random errror&#34;\nBytes in current buffer (color code eliminated): . I (3718) wifi:new:&lt;1,1&gt;, old:&lt;1,1&gt;, ap:...5 bytes)\nPlease check the full log here: /tmp/pytest-embedded/2024-02-18_17-10-54-027640/test_wifi_controller/dut.log&#39;
-
-    @functools.wraps(func)  # noqa
-    def wrapper(
-        self, pattern, *args, expect_all: bool = False, not_matching: List[Union[str, re.Pattern]] = (), **kwargs
-    ) -&gt; Union[Union[Match, AnyStr], List[Union[Match, AnyStr]]]:
-        patterns = to_list(pattern)
-        res = []
-        while patterns:
-            try:
-&gt;               index = func(self, pattern, *args, **kwargs)  # noqa
-
-../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/dut.py:76: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/dut.py:131: in expect
-    return self.pexpect_proc.expect(pattern, **kwargs)
-../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pexpect/spawnbase.py:354: in expect
-    return self.expect_list(compiled_pattern_list,
-../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pexpect/spawnbase.py:383: in expect_list
-    return exp.expect_loop(timeout)
-../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pexpect/expect.py:181: in expect_loop
-    return self.timeout(e)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = &lt;pexpect.expect.Expecter object at 0x7f5b5f304710&gt;
-err = TIMEOUT(&#34;&lt;pytest_embedded.log.PexpectProcess object at 0x7f5b5e06b590&gt;\nsearcher: searcher_re:\n    0: re.compile(b&#39;Random errror&#39;)&#34;)
-
-    def timeout(self, err=None):
-        spawn = self.spawn
-    
-        spawn.before = spawn._before.getvalue()
-        spawn.after = TIMEOUT
-        index = self.searcher.timeout_index
-        if index &gt;= 0:
-            spawn.match = TIMEOUT
-            spawn.match_index = index
-            return index
-        else:
-            spawn.match = None
-            spawn.match_index = None
-            msg = str(spawn)
-            msg += &#39;\nsearcher: %s&#39; % self.searcher
-            if err is not None:
-                msg = str(err) + &#39;\n&#39; + msg
-    
-            exc = TIMEOUT(msg)
-            exc.__cause__ = None    # in Python 3.x we can use &#34;raise exc from None&#34;
-&gt;           raise exc
-E           pexpect.exceptions.TIMEOUT: &lt;pytest_embedded.log.PexpectProcess object at 0x7f5b5e06b590&gt;
-E           searcher: searcher_re:
-E               0: re.compile(b&#39;Random errror&#39;)
-E           &lt;pytest_embedded.log.PexpectProcess object at 0x7f5b5e06b590&gt;
-E           searcher: searcher_re:
-E               0: re.compile(b&#39;Random errror&#39;)
-
-../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pexpect/expect.py:144: TIMEOUT
-
-The above exception was the direct cause of the following exception:
-
-dut = &lt;pytest_embedded_idf.dut.IdfDut object at 0x7f5b5e09c210&gt;
-
-    @pytest.mark.esp32
-    def test_wifi_controller(dut):
-        # expect from what esptool.py printed to sys.stdout
-        dut.expect(&#39;wifi successfully initialized&#39;)
-        dut.expect(&#39;WiFi successfully configured as STA&#39;)
-&gt;       dut.expect(&#39;Random errror&#39;)
-
-test_wifi_controller/pytest_wifi_controller.py:9: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = &lt;pytest_embedded_idf.dut.IdfDut object at 0x7f5b5e09c210&gt;, pattern = &#39;Random errror&#39;, expect_all = False, not_matching = (), args = (), kwargs = {}, patterns = [&#39;Random errror&#39;]
-res = []
-debug_str = &#39;Not found &#34;Random errror&#34;\nBytes in current buffer (color code eliminated): . I (3718) wifi:new:&lt;1,1&gt;, old:&lt;1,1&gt;, ap:...5 bytes)\nPlease check the full log here: /tmp/pytest-embedded/2024-02-18_17-10-54-027640/test_wifi_controller/dut.log&#39;
-
-    @functools.wraps(func)  # noqa
-    def wrapper(
-        self, pattern, *args, expect_all: bool = False, not_matching: List[Union[str, re.Pattern]] = (), **kwargs
-    ) -&gt; Union[Union[Match, AnyStr], List[Union[Match, AnyStr]]]:
-        patterns = to_list(pattern)
-        res = []
-        while patterns:
-            try:
-                index = func(self, pattern, *args, **kwargs)  # noqa
-            except (pexpect.EOF, pexpect.TIMEOUT) as e:
-                debug_str = (
-                    f&#39;Not found &#34;{str(pattern)}&#34;\n&#39;
-                    f&#39;Bytes in current buffer (color code eliminated): {self.pexpect_proc.buffer_debug_str}\n&#39;
-                    f&#39;Please check the full log here: {self.logfile}&#39;
-                )
-&gt;               raise e.__class__(debug_str) from e
-E               pexpect.exceptions.TIMEOUT: Not found &#34;Random errror&#34;
-E               Bytes in current buffer (color code eliminated): . I (3718) wifi:new:&lt;1,1&gt;, old:&lt;1,1&gt;, ap:&lt;1,1&gt;, sta:&lt;1,1&gt;, prof:1 I (4028) wifi:state: init -&gt; auth (b0) I (4048) wifi:state: auth -&gt; assoc (0) I (5058) wifi:state: assoc -&gt; init... (total 1505 bytes)
-E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_17-10-54-027640/test_wifi_controller/dut.log
-
-../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/dut.py:83: TIMEOUT</pre>
+                        <pre>None</pre>
                         
                         
 
                         
                         
-                        <div class="stdout"><i>Stdout</i><br>
-                            <pre>--------------------------------- Captured Log ---------------------------------
-#x1B[32mINFO    #x1B[0m root:serial.py:144 Target: esp32, Port: /dev/ttyUSB0
---------------------------------- Captured Out ---------------------------------
-
-</pre>
-                        </div>
-                        
-                        
-                        <div class="stderr"><i>Stderr</i><br>
-                            <pre>--------------------------------- Captured Err ---------------------------------
-
-</pre>
-                        </div>
                         
                     </div>
                 
@@ -454,11 +339,11 @@ E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_
                 <div class="testcases">
                 
                     <div class="test outcome outcome-passed">
-                        <a id="5e18b616-8795-4421-9cfe-fcc6f6197cbe"></a>
+                        <a id="08c454a4-db76-449e-8d21-0ece844c5104"></a>
                         <table class="proplist">
                             <tr><th>Test case:</th><td><b>test_wifi_manager</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>14.23 sec</td></tr>
+                            <tr><th>Duration:</th><td>16.12 sec</td></tr>
                         
                             <tr><th>Failed</th><td>None</td></tr>
                         
@@ -472,20 +357,6 @@ E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_
 
                         
                         
-                        <div class="stdout"><i>Stdout</i><br>
-                            <pre>--------------------------------- Captured Log ---------------------------------
-#x1B[32mINFO    #x1B[0m root:serial.py:144 Target: esp32, Port: /dev/ttyUSB0
---------------------------------- Captured Out ---------------------------------
-
-</pre>
-                        </div>
-                        
-                        
-                        <div class="stderr"><i>Stderr</i><br>
-                            <pre>--------------------------------- Captured Err ---------------------------------
-
-</pre>
-                        </div>
                         
                     </div>
                 
@@ -497,11 +368,11 @@ E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_
                 <div class="testcases">
                 
                     <div class="test outcome outcome-passed">
-                        <a id="f748bfa9-c0e1-44b2-b01c-14db25bd07b2"></a>
+                        <a id="78c68fc6-f07a-4925-a0d8-8d3c04f65b8f"></a>
                         <table class="proplist">
                             <tr><th>Test case:</th><td><b>test_cli_manager</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>16.378 sec</td></tr>
+                            <tr><th>Duration:</th><td>17.008 sec</td></tr>
                         
                             <tr><th>Failed</th><td>None</td></tr>
                         
@@ -515,20 +386,6 @@ E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_
 
                         
                         
-                        <div class="stdout"><i>Stdout</i><br>
-                            <pre>--------------------------------- Captured Log ---------------------------------
-#x1B[32mINFO    #x1B[0m root:serial.py:144 Target: esp32, Port: /dev/ttyUSB0
---------------------------------- Captured Out ---------------------------------
-
-</pre>
-                        </div>
-                        
-                        
-                        <div class="stderr"><i>Stderr</i><br>
-                            <pre>--------------------------------- Captured Err ---------------------------------
-
-</pre>
-                        </div>
                         
                     </div>
                 
@@ -540,11 +397,11 @@ E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_
                 <div class="testcases">
                 
                     <div class="test outcome outcome-passed">
-                        <a id="dcfb788a-7ae2-4ed5-bf46-1aea72897f72"></a>
+                        <a id="0251f239-56e3-4749-8101-423dcf89c2cb"></a>
                         <table class="proplist">
                             <tr><th>Test case:</th><td><b>test_logger</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>5.979 sec</td></tr>
+                            <tr><th>Duration:</th><td>6.15 sec</td></tr>
                         
                             <tr><th>Failed</th><td>None</td></tr>
                         
@@ -558,20 +415,6 @@ E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_
 
                         
                         
-                        <div class="stdout"><i>Stdout</i><br>
-                            <pre>--------------------------------- Captured Log ---------------------------------
-#x1B[32mINFO    #x1B[0m root:serial.py:144 Target: esp32, Port: /dev/ttyUSB0
---------------------------------- Captured Out ---------------------------------
-
-</pre>
-                        </div>
-                        
-                        
-                        <div class="stderr"><i>Stderr</i><br>
-                            <pre>--------------------------------- Captured Err ---------------------------------
-
-</pre>
-                        </div>
                         
                     </div>
                 
@@ -583,11 +426,11 @@ E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_
                 <div class="testcases">
                 
                     <div class="test outcome outcome-passed">
-                        <a id="ddab99a2-76de-4d8b-a719-02175a207abd"></a>
+                        <a id="70c7fbe3-7e4d-4277-9f79-2457bf56d29b"></a>
                         <table class="proplist">
                             <tr><th>Test case:</th><td><b>test_sys_utils</b></td></tr>
                             <tr><th>Outcome:</th><td>Passed</td></tr>
-                            <tr><th>Duration:</th><td>7.501 sec</td></tr>
+                            <tr><th>Duration:</th><td>7.101 sec</td></tr>
                         
                             <tr><th>Failed</th><td>None</td></tr>
                         
@@ -601,20 +444,6 @@ E               Please check the full log here: /tmp/pytest-embedded/2024-02-18_
 
                         
                         
-                        <div class="stdout"><i>Stdout</i><br>
-                            <pre>--------------------------------- Captured Log ---------------------------------
-#x1B[32mINFO    #x1B[0m root:serial.py:144 Target: esp32, Port: /dev/ttyUSB0
---------------------------------- Captured Out ---------------------------------
-
-</pre>
-                        </div>
-                        
-                        
-                        <div class="stderr"><i>Stderr</i><br>
-                            <pre>--------------------------------- Captured Err ---------------------------------
-
-</pre>
-                        </div>
                         
                     </div>
                 

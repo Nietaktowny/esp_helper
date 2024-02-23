@@ -21,7 +21,7 @@ void perform_ota_on_sta_connected(void) {
 void app_main(void)
 {
     // Init logger library
-    logger_create_semphr();
+    logger_init();
     LOG_INFO("TESTING ESP HELPER UTILS");
 
     // Initialize NVS    

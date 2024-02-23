@@ -1,0 +1,1 @@
+<testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="7.700" timestamp="2024-02-24T00:29:15.822877" hostname="wmytych"><testcase classname="test_logger.pytest_logger" name="test_logger" time="7.649" /></testsuite></testsuites>

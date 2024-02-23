@@ -1,3 +1,14 @@
+/**
+ * @file logger.c
+ * @author Wojciech Mytych
+ * @brief Logger library source file.
+ * @version 0.1
+ * @date 2024-02-23
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include <stdio.h>
 #include "logger.h"
 #include "ansi_colors.h"
@@ -8,13 +19,17 @@
 #include <string.h>
 
 
+/**
+ * @brief Logger context structure.
+ * 
+ */
 struct logger_contex
 {
-    FILE *logfiles[LOGGER_MAX_OUTPUT_FILES];
-    pthread_mutex_t mutex;
-    uint8_t level;
-    uint8_t logfiles_num;
-    uint8_t silent_mode;
+    FILE *logfiles[LOGGER_MAX_OUTPUT_FILES];                        /*!< Array of files used as log output.*/
+    pthread_mutex_t mutex;                                          /*!< Mutex used to synchronize logging.*/
+    uint8_t level;                                                  /*!< Log level.*/
+    uint8_t logfiles_num;                                           /*!< Number of currently used log files.*/
+    uint8_t silent_mode;                                            /*!< Variable to set silent mode (don't log to stderr).*/
 };
 
 static struct logger_contex logger = {
@@ -22,8 +37,13 @@ static struct logger_contex logger = {
     .logfiles_num = 0,
     .silent_mode = 0,
 };
-static uint8_t log_level = LOG_LEVEL_DEBUG;
 
+/**
+ * @brief Macro used for internal error logging in logger.
+ * 
+ * @param error error message to log.
+ * 
+ */
 #define LOG_INTERNAL_ERROR(error)                                                                  \
     printf(LOG_VERBOSE_FORMAT, RED, timenow(), ERROR_TAG, __FILE__, __LINE__, __func__, __LINE__); \
     printf(error);                                                                                 \
@@ -46,6 +66,10 @@ int logger_init(void)
     return err;
 }
 
+/**
+ * 
+ *  This function is here mostly for testing.
+ */
 void *logger_get_logger_contex(void)
 {
     return &logger;
@@ -113,8 +137,8 @@ void *logger_get_log_mutex(void)
 
 uint8_t logger_set_log_level(uint8_t level)
 {
-    uint8_t prev = log_level;
-    log_level = level;
+    uint8_t prev = logger.level;
+    logger.level = level;
     return prev;
 }
 
@@ -155,7 +179,7 @@ int logger_esp_log(const char *format, ...)
 
 int logger_write(uint8_t level, const char *format, ...)
 {
-    if (level > log_level)
+    if (level > logger.level)
     {
         return 0;
     }
