@@ -20,7 +20,7 @@ void setUp(void) {
         err = nvs_flash_init();
     }
 
-    logger_create_semphr();
+    logger_init();
 }
 
 void tearDown(void) {
