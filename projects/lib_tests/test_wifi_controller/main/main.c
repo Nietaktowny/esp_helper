@@ -27,7 +27,7 @@ void disconnect_handler(void) {
 void app_main(void)
 {
     // Init logger library
-    logger_create_semphr();
+    logger_init();
     
     // Initialize NVS    
     esp_err_t ret = nvs_flash_init();

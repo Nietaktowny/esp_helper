@@ -11,7 +11,7 @@
 void app_main(void)
 {
     // Init logger library
-    logger_create_semphr();
+    logger_init();
     LOG_INFO("TESTING SYSTEM UTILS");
 
     uint8_t mac[6] = {0};
