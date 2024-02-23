@@ -1,3 +1,4 @@
+#ifdef ESP_PLATFORM
 #include "wifi_controller.h"
 #include "memory_utils.h"
 #include "err_controller.h"
@@ -165,3 +166,13 @@ void app_main()
     cli_set_remote_logging(27015);
 #endif
 }
+
+#else
+#include "logger.h"
+
+int main() {
+    logger_init();
+    LOG_DEBUG("Hello world!");
+    return 0;
+}
+#endif

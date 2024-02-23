@@ -6,6 +6,10 @@
         "esp_system.h": "c",
         "esp_mac.h": "c",
         "logger.h": "c",
-        "ota_controller.h": "c"
+        "ota_controller.h": "c",
+        "time.h": "c",
+        "memory_utils.h": "c",
+        "freertos.h": "c",
+        "esp_log.h": "c"
     }
 }

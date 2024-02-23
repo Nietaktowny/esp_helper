@@ -1,16 +1,12 @@
 #include "unity.h"
-#include "esp_system.h"
-#include "freertos/FreeRTOS.h"
-#include "freertos/semphr.h"
-#include "freertos/task.h"
 #include <stdio.h>
+#include <pthread.h>
 
-#include "spiffs_controller.h"
 #include "logger.h"
 
 struct logger_contex {
     FILE* logfiles[LOGGER_MAX_OUTPUT_FILES];
-    SemaphoreHandle_t mutex;
+    pthread_mutex_t mutex;
     uint8_t level;
     uint8_t logfiles_num;
     uint8_t silent_mode;
@@ -70,11 +66,11 @@ void test_if_logger_create_semphr_creates_mutex(void) {
     LOG_TEST_NAME;
 
     //given
-    SemaphoreHandle_t mutex = NULL;
+    pthread_mutex_t* mutex = NULL;
 
     //when
     logger_create_semphr();
-    mutex = (SemaphoreHandle_t)logger_get_log_mutex();
+    mutex = (pthread_mutex_t*)logger_get_log_mutex();
 
     //then
     TEST_ASSERT_NOT_NULL_MESSAGE(mutex, "logger mutex cannot be NULL after logger_create_semphr");
@@ -86,15 +82,15 @@ void test_if_logger_delete_semphr_deletes_mutex(void) {
 
     //given
     logger_create_semphr();
-    SemaphoreHandle_t mutex = (SemaphoreHandle_t)logger_get_log_mutex();
+    pthread_mutex_t* mutex = (pthread_mutex_t*)logger_get_log_mutex();
     TEST_ASSERT_NOT_NULL_MESSAGE(mutex, "logger mutex cannot be NULL");
 
     //when
     logger_delete_semphr();
-    mutex = (SemaphoreHandle_t)logger_get_log_mutex();
+    mutex = (pthread_mutex_t*)logger_get_log_mutex();
 
     //then
-    TEST_ASSERT_NULL_MESSAGE(mutex, "logger mutex should be NULL after logger_delete_semphr");
+    TEST_ASSERT_NOT_EQUAL_MESSAGE(0, pthread_mutex_lock(mutex), "mutex should be destroyed after logger delete_sempthr");
 }
 
 void test_if_logger_init_returns_zero(void) {
@@ -160,11 +156,115 @@ void test_if_after_logger_add_file_appends_file(void) {
     logger = logger_get_logger_contex();
 
     //then
-    TEST_ASSERT_EQUAL_MESSAGE(file, logger->logfiles[0], "log file should be added after logger_add_log_file");    
+    TEST_ASSERT_EQUAL_MESSAGE(file, logger->logfiles[logger->logfiles_num -1], "log file should be added after logger_add_log_file");
+
+    //after
+    logger_clear_all_log_files();
+    remove("new_file.txt");
+}
+
+void test_if_after_logger_add_file_files_num_changes(void) {
+    //before
+    LOG_TEST_NAME;
+
+    //given
+    struct logger_contex* logger = logger_get_logger_contex();
+    int logfiles_num_before = logger->logfiles_num;
+    FILE* file = fopen("new_file2.txt", "w");
+
+    //when
+    logger_init();
+    logger_add_log_file(file);
+    logger = logger_get_logger_contex();
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(++logfiles_num_before, logger->logfiles_num, "logfiles_num should be 1 after logger_add_log_file adds one file");
+
+    //after
+    logger_clear_all_log_files();
+    remove("new_file2.txt");   
+}
+
+void test_if_after_logger_add_file_return_err_on_null_file(void) {
+    //before
+    LOG_TEST_NAME;
+
+    //given
+    int err = 0;
+    FILE* file = NULL;
+
+    //when
+    logger_init();
+    err = logger_add_log_file(file);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(LOGGER_ERR_NULL_FILE, err, "logger_add_log_file should return LOGGER_ERR_NULL_FILE on null file"); 
+}
+
+void test_if_clear_all_files_sets_filesnum_to_zero(void) {
+    //before
+    LOG_TEST_NAME;
+
+    //given
+    struct logger_contex* logger = logger_get_logger_contex();
+
+    //when
+    logger_init();
+    logger->logfiles_num = 2;
+    logger_clear_all_log_files();
+    
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(0, logger->logfiles_num, "logfiles_num should be zero after logger_clear_all_log_files"); 
+}
+
+void test_if_clear_all_files_sets_all_files_to_null(void) {
+    //before
+    LOG_TEST_NAME;
+
+    //given
+    FILE* file = fopen("new_file.txt", "w");
+    FILE* file2 = fopen("new_file2.txt", "w");
+    FILE* file3 = fopen("new_file3.txt", "w");
+    FILE* file4 = fopen("new_file4.txt", "w");
+    FILE* file5 = fopen("new_file5.txt", "w");
+    struct logger_contex* logger = logger_get_logger_contex();
+    int err = -1;
+
+    //when
+    logger_init();
+    err =logger_add_log_file(file);
+    TEST_ASSERT_EQUAL(0, err);
+    err = logger_add_log_file(file2);
+    TEST_ASSERT_EQUAL(0, err);
+    err = logger_add_log_file(file3);
+    TEST_ASSERT_EQUAL(0, err);
+    err = logger_add_log_file(file4);
+    TEST_ASSERT_EQUAL(0, err);
+    err = logger_add_log_file(file5);
+    logger_clear_all_log_files();
+    
+
+    //then
+    for (uint8_t i = 0; i < logger->logfiles_num; i++)
+    {
+        TEST_ASSERT_NULL_MESSAGE(logger->logfiles[i], "after logger_clear_all_log_files all log files should be NULL");
+    }
+    
+    //after
+    remove("new_file.txt");
+    remove("new_file2.txt");
+    remove("new_file3.txt");
+    remove("new_file4.txt");
+    remove("new_file5.txt");
 }
 
 int runUnityTests(void) {
   UNITY_BEGIN();
+ // RUN_TEST(test_if_clear_all_files_sets_all_files_to_null);
+  RUN_TEST(test_if_clear_all_files_sets_filesnum_to_zero);
+  RUN_TEST(test_if_after_logger_add_file_return_err_on_null_file);
+  RUN_TEST(test_if_after_logger_add_file_files_num_changes);
   RUN_TEST(test_if_after_logger_add_file_appends_file);
   RUN_TEST(test_if_after_logger_init_silent_mode_is_disabled);
   RUN_TEST(test_if_after_logger_init_log_level_is_debug);
@@ -179,11 +279,8 @@ int runUnityTests(void) {
 
 
 /**
-  * For ESP-IDF framework
+  * For native platform.
   */
-void app_main(void) {
+int main(void) {
   runUnityTests();
-  vTaskDelay(200);
-  fflush(stdout);
-  esp_restart();
 }

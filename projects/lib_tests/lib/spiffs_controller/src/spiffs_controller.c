@@ -138,7 +138,7 @@ int spiffs_c_get_info(const char* partition_label, size_t* out_total, size_t* ou
 
 int spiffs_c_open_file(spiffs_c_handle_t* handle, char* filename, const char* mode, FILE** out_file) {
     int err = 0;
-    char path[128] = "/spiffs/styles.css";
+    char path[128];
     memutil_zero_memory(&path, sizeof(path));
 
     ERR_C_CHECK_NULL_PTR(filename, LOG_ERROR("filename cannot be NULL"));

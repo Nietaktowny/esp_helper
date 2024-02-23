@@ -2,7 +2,7 @@
 
 void app_main(void)
 {
-    logger_create_semphr();
+    logger_init();
 
     LOG_DEBUG("Debug log");
     LOG_INFO("Info log");

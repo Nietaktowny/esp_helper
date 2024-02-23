@@ -2,11 +2,16 @@
 #include "ansi_colors.h"
 #include <stdio.h>
 #include <time.h>
+#include <inttypes.h>
 
 #define LOGGER_ERR_BASE         0x0950                                ///< Logger error base.
-#define LOGGER_ERR_NO_MUTEX     0x0001 + LOGGER_ERR_BASE              ///< When logger mutex was not initialized.
+#define LOGGER_ERR_MUTEX_ERROR  0x0001 + LOGGER_ERR_BASE              ///< When some error with logger mutex occurred.
 #define LOGGER_MUTEX_TIMEOUT    0x0002 + LOGGER_ERR_BASE              ///< When function getting semaphore timeout expired and cannot obtain log_mutex.
+#define LOGGER_ERR_NULL_FILE    0x0003 + LOGGER_ERR_BASE              ///< When null pointer is passed as log file output.
+#define LOGGER_NO_FREE_FILES    0x0004 + LOGGER_ERR_BASE              ///< When there are no new slots for log files, max number of files has been reached.
 
+
+#define LOGGER_MAX_OUTPUT_FILES 4                                     ///< Max number of files used as output.
 
 #define LOG_LEVEL_ZERO          0x00                                  ///< Log level zero, no logging.
 #define LOG_LEVEL_FATAL         0x01                                  ///< Log level fatal, log only fatal errors.
@@ -48,9 +53,15 @@
 #define SET_LOG_LEVEL LOG_LEVEL_DEBUG                                 ///< Default log level is set to debug, change by defining SET_LOG_LEVEL level macro.
 #endif
 
-void logger_set_log_output(FILE* file);
+int logger_init(void);
+
+int logger_add_log_file(FILE* file);
+
+int logger_clear_all_log_files(void);
 
 uint8_t logger_set_log_level(uint8_t level);
+
+void* logger_get_logger_contex(void);
 
 int logger_write(uint8_t level, const char* format, ...);
 
@@ -58,7 +69,11 @@ void logger_flush_logs(void);
 
 int logger_get_lock(void);
 
-void logger_create_semphr(void);
+int logger_create_semphr(void);
+
+void logger_delete_semphr(void);
+
+void* logger_get_log_mutex(void);
 
 int logger_return_lock(void);
 

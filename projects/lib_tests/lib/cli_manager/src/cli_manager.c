@@ -44,7 +44,7 @@ void cli_accept_task(void* args) {
         //It should block here until some client shows up
         tcp_accept_client(listen, &client);
         vTaskDelay(pdMS_TO_TICKS(1000));    //delay to setup connection
-        logger_set_log_output(fdopen(client, "w+"));
+        logger_add_log_file(fdopen(client, "w+"));
     }
 }
 
@@ -63,7 +63,7 @@ int cli_set_remote_logging(uint16_t port) {
         LOG_INFO("Connect to device on IP %s with port %u to capture logs.", wifi_c_get_sta_ipv4(), 27015);
         ERR_C_CHECK_AND_THROW_ERR(tcp_accept_client(listen, &client));
         vTaskDelay(pdMS_TO_TICKS(1000));    //delay to setup connection
-        logger_set_log_output(fdopen(client, "w+"));
+        logger_add_log_file(fdopen(client, "w+"));
         xTaskCreate(cli_accept_task, "accept_task", 2048, (void*)listen, 2, NULL);
     } Catch(err) {
         LOG_ERROR("Error %d when connecting to remote host: %s", err, error_to_name(err));
@@ -84,7 +84,7 @@ int set_logging_to_socket(char* address, uint16_t port) {
     tcp_socket_listen(listen, 1);
     tcp_accept_client(listen, &client);
 
-    logger_set_log_output(fdopen(client, "w+"));
+    logger_add_log_file(fdopen(client, "w+"));
 
     return 0;
 }
