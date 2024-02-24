@@ -3,7 +3,7 @@ var searchData=
   ['want_20something_20simple_0',['You want something simple...',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md35',1,'']]],
   ['warn_5ftag_1',['WARN_TAG',['../logger_8h.html#a9f3c820adf2fbb5aba0567cc91d63975',1,'logger.h']]],
   ['what_20s_20it_20good_20for_2',['So what&apos;s it good for?',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md31',1,'']]],
-  ['whitespace_3',['Whitespace',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md21',1,'Whitespace'],['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md26',1,'Whitespace']]],
+  ['whitespace_3',['whitespace',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md26',1,'Whitespace'],['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md21',1,'Whitespace']]],
   ['why_4',['Why?',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md33',1,'']]],
   ['why_20have_20a_20coding_20standard_5',['Why Have A Coding Standard?',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md13',1,'']]],
   ['wifi_5fc_5fap_5fget_5fssid_6',['wifi_c_ap_get_ssid',['../wifi__controller_8h.html#a2226f799d81d2e553dfe4da5e3a76686',1,'wifi_controller.h']]],

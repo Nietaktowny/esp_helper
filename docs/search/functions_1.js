@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['logger_5fadd_5flog_5ffile_0',['logger_add_log_file',['../logger_8h.html#ac318f2fb9f51699954c24804dd8b095d',1,'logger_add_log_file(FILE *file):&#160;logger.c'],['../logger_8c.html#ac318f2fb9f51699954c24804dd8b095d',1,'logger_add_log_file(FILE *file):&#160;logger.c']]],
+  ['logger_5fadd_5flog_5ffile_0',['logger_add_log_file',['../logger_8c.html#ac318f2fb9f51699954c24804dd8b095d',1,'logger_add_log_file(FILE *file):&#160;logger.c'],['../logger_8h.html#ac318f2fb9f51699954c24804dd8b095d',1,'logger_add_log_file(FILE *file):&#160;logger.c']]],
   ['logger_5fclear_5fall_5flog_5ffiles_1',['logger_clear_all_log_files',['../logger_8h.html#a4cae04593f6a3be65ac345115c8a959d',1,'logger_clear_all_log_files(void):&#160;logger.c'],['../logger_8c.html#a4cae04593f6a3be65ac345115c8a959d',1,'logger_clear_all_log_files(void):&#160;logger.c']]],
   ['logger_5fcreate_5fsemphr_2',['logger_create_semphr',['../logger_8h.html#abab9441a735dc4904805af1a4d3b69d6',1,'logger_create_semphr(void):&#160;logger.c'],['../logger_8c.html#abab9441a735dc4904805af1a4d3b69d6',1,'logger_create_semphr(void):&#160;logger.c']]],
   ['logger_5fdelete_5fsemphr_3',['logger_delete_semphr',['../logger_8h.html#abbbf8fa261e42c898242d5e9801c8efd',1,'logger_delete_semphr(void):&#160;logger.c'],['../logger_8c.html#abbbf8fa261e42c898242d5e9801c8efd',1,'logger_delete_semphr(void):&#160;logger.c']]],

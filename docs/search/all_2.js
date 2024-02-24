@@ -2,7 +2,7 @@ var searchData=
 [
   ['c_0',['It&apos;s ANSI C',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md34',1,'']]],
   ['c_20and_20c_20details_1',['C and C++ Details',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md20',1,'']]],
-  ['case_2',['Case',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md22',1,'Case'],['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md27',1,'Case']]],
+  ['case_2',['case',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md22',1,'Case'],['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md27',1,'Case']]],
   ['catch_20e_3',['Catch(e)',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md5',1,'']]],
   ['catch_20e_20tt_4',['&lt;tt&gt;Catch(e) { }&lt;/tt&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md44',1,'']]],
   ['cexception_5',['CException',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html',1,'']]],
@@ -19,13 +19,12 @@ var searchData=
   ['ci_20badge_20svg_20alt_20ci_16',['CException &lt;img src=&quot;https://github.com/ThrowTheSwitch/CException/workflows/CI/badge.svg&quot; alt=&quot;CI&quot;/&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html',1,'']]],
   ['cli_5fmanager_17',['cli_manager',['../md_projects_2lib__tests_2lib_2cli__manager_2README.html',1,'']]],
   ['cmps_18',['cmps',['../structbmp__handle__obj.html#a94b10d1c43ab04276cf678ca9914b630',1,'bmp_handle_obj']]],
-  ['coding_20standard_19',['Coding Standard',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html',1,'ThrowTheSwitch.org Coding Standard'],['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md13',1,'Why Have A Coding Standard?']]],
+  ['coding_20standard_19',['coding standard',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html',1,'ThrowTheSwitch.org Coding Standard'],['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md13',1,'Why Have A Coding Standard?']]],
   ['com_20throwtheswitch_20cexception_20workflows_20ci_20badge_20svg_20alt_20ci_20',['CException &lt;img src=&quot;https://github.com/ThrowTheSwitch/CException/workflows/CI/badge.svg&quot; alt=&quot;CI&quot;/&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html',1,'']]],
   ['comments_21',['Comments',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md24',1,'']]],
-  ['configuration_22',['CONFIGURATION',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md8',1,'']]],
-  ['configuration_23',['Configuration',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md47',1,'']]],
-  ['connect_5fhandler_24',['connect_handler',['../structwifi__c__ap__status__obj.html#afe40080eb0740d4b37d6fe57772199b6',1,'wifi_c_ap_status_obj::connect_handler'],['../structwifi__c__sta__status__obj.html#ae21b8f8f83d10eb3e4a7808b06c26cef',1,'wifi_c_sta_status_obj::connect_handler']]],
-  ['consistent_25',['Consistent',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md18',1,'']]],
-  ['contents_26',['Example folder contents',['../md_projects_2lib__tests_2README.html#autotoc_md61',1,'']]],
-  ['contents_20of_20this_20document_27',['CONTENTS OF THIS DOCUMENT',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md0',1,'']]]
+  ['configuration_22',['configuration',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md8',1,'CONFIGURATION'],['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md47',1,'Configuration']]],
+  ['connect_5fhandler_23',['connect_handler',['../structwifi__c__sta__status__obj.html#ae21b8f8f83d10eb3e4a7808b06c26cef',1,'wifi_c_sta_status_obj::connect_handler'],['../structwifi__c__ap__status__obj.html#afe40080eb0740d4b37d6fe57772199b6',1,'wifi_c_ap_status_obj::connect_handler']]],
+  ['consistent_24',['Consistent',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md18',1,'']]],
+  ['contents_25',['Example folder contents',['../md_projects_2lib__tests_2README.html#autotoc_md61',1,'']]],
+  ['contents_20of_20this_20document_26',['CONTENTS OF THIS DOCUMENT',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md0',1,'']]]
 ];
