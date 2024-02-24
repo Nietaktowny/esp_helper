@@ -4,13 +4,8 @@ on: [push]
 
 jobs:
   build-examples:
-    name: Build for ${{ matrix.idf_target }} on ${{ matrix.idf_ver }}
+    name: Generate docs.
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        idf_ver: ["release-v5.2", "latest"]
-        idf_target: ["esp32"]
-    container: espressif/idf:${{ matrix.idf_ver }}
     steps:
       - uses: actions/checkout@v3
         with:
