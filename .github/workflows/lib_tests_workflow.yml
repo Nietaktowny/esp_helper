@@ -19,6 +19,19 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
+      - name: doxygen-install
+        uses: ssciwr/doxygen-install@v1.3.0
+      - name: Doxygenize
+  # You may pin to the exact commit or the version.
+  # uses: langroodi/doxygenize@542946a13bc9021f5ba07c8751e6ab3d84bca154
+        uses: langroodi/doxygenize@v1.7.0
+        with:
+          # Doxygen configuration file path
+          doxygenconf: projects/lib_tests/Doxyfile
+          # Generated HTML documents output folder
+          htmloutput: projects/lib_tests/
+          # Toggle dark mode CSS
+          darkmode: true
       - name: esp-idf run qemu tests
         env:
           IDF_TARGET: ${{ matrix.idf_target }}
