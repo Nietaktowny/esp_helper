@@ -1,4 +1,0 @@
-dependencies:
-  idf: '>=5.0' 
-description: Basic memory helping functions.. 
-version: 1.0.0

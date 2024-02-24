@@ -5,7 +5,8 @@
 #include "bmp280.h"
 #include "http_client.h"
 #include "wifi_manager.h"
-#include "ota_controller.h"
+#include "esp_helper_utils.h"
+#include "sys_utils.h"
 #include "nvs_controller.h"
 
 #include <string.h>
@@ -25,17 +26,14 @@
 #define SOL_PSK "Solonka106"
 
 #ifdef ESP_WROVER_KIT
-#define ESP_DEVICE_ID 111111
 #define ESP_DEVICE_WIFI_LED GPIO_NUM_2
 #define BUS_GPIO_SCL 22
 #define BUS_GPIO_SDA 21
 #elif ESP_DEV_MODULE
-#define ESP_DEVICE_ID 222222
 #define ESP_DEVICE_WIFI_LED GPIO_NUM_2
 #define BUS_GPIO_SCL 22
 #define BUS_GPIO_SDA 21
 #elif ESP32_C3_SUPERMINI
-#define ESP_DEVICE_ID 333333
 #define BUS_GPIO_SCL 9
 #define BUS_GPIO_SDA 8
 #endif
@@ -58,6 +56,9 @@ void read_temperature_task(void *args)
     char post_data[256];
     memutil_zero_memory(&post_data, sizeof(post_data));
 
+    char device_id[20] = {0};
+    sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
+
     err = bmp_init(&bmp, bus);
     if (err != ERR_C_OK)
     {
@@ -78,7 +79,7 @@ void read_temperature_task(void *args)
         LOG_INFO("temperature: %.2f C", temperature);
         LOG_INFO("pressure: %.2fhPa", pressure * 0.01);
         LOG_INFO("altitude: %.2f m. n. p. m.", altitude);
-        sprintf(post_data, "device_id=%d&temperature=%.2f&pressure=%.2f&altitude=%.2f", ESP_DEVICE_ID, temperature, pressure * 0.01, altitude);
+        sprintf(post_data, "device_id=%s&temperature=%.2f&pressure=%.2f&altitude=%.2f", device_id, temperature, pressure * 0.01, altitude);
         LOG_DEBUG("data to send to database: %s", post_data);
         err = http_client_post("wmytych.usermd.net", "modules/setters/insert_data.php", post_data);
         LOG_INFO("Client POST request returned: %d", err);
@@ -93,17 +94,21 @@ void inspect_task(void *args)
 
     char *device_info = NULL;
     NEW_SIZE(device_info, 350);
+
+    char device_id[20] = {0};
+    sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
+
     while (1)
     {
         uint32_t free_heap = esp_get_free_heap_size();
         uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
         wifi_c_get_status_as_json(wifi_c_info, 300);
-        snprintf(device_info, 350, "device_id=%d&wifi_info=%s", ESP_DEVICE_ID, wifi_c_info);
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
         http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info);
         LOG_DEBUG("sent wifi_c_status to the server");
         LOG_DEBUG("Currently available heap: %lu", free_heap);
         LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
-        vTaskDelay(pdMS_TO_TICKS(60000*3));         //TODO Make it a constant or configuration variable?
+        vTaskDelay(pdMS_TO_TICKS(60000 * 3)); // TODO Make it a constant or configuration variable?
     }
     DELETE(wifi_c_info);
     DELETE(device_info);
@@ -117,6 +122,7 @@ void on_connect_handler(void)
     LOG_INFO("Onboard LED turned on!");
 #endif
 
+    helper_perform_ota();
     i2c_c_bus_handle_t i2c_bus = NULL;
     i2c_c_init_bus(I2C_C_NUM_0, BUS_GPIO_SCL, BUS_GPIO_SDA, &i2c_bus);
     xTaskCreate(read_temperature_task, "log_task", 8096, (void *)i2c_bus, 1, NULL);
@@ -143,10 +149,15 @@ void app_main()
     vTaskDelay(pdMS_TO_TICKS(100));
 
     // Create semaphores to synchronize logs
-    logger_create_semphr();
+    logger_init();
+    logger_set_log_level(LOG_LEVEL_VERBOSE);
 
     // Initialize NVS
     nvs_c_init_nvs();
+
+    char device_id[20] = {0};
+    sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
+    LOG_DEBUG("this device ID is: %s", device_id);
 
 // ESP-WROVE-KIT has 3 LEDs, turn all off
 #ifdef ESP_WROVER_KIT
@@ -157,14 +168,9 @@ void app_main()
 
     wifi_manager_init();
 
-    char url[100];
-    memutil_zero_memory(&url, sizeof(url));
-    ota_c_prepare_url_with_device_id("http://wmytych.usermd.net/modules/getters/ota.php", ESP_DEVICE_ID, &url[0], sizeof(url));
-    ota_c_start(&url[0]);
-
 #ifndef ESP32_C3_SUPERMINI
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
     esp_netif_sntp_init(&config);
-    cli_set_remote_logging(27015);
+    cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
 #endif
 }
