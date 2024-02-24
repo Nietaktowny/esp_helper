@@ -94,7 +94,7 @@ void inspect_task(void *args)
 
     char *device_info = NULL;
     NEW_SIZE(device_info, 350);
-    
+
     char device_id[20] = {0};
     sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
     while (1)
@@ -153,6 +153,10 @@ void app_main()
 
     // Initialize NVS
     nvs_c_init_nvs();
+
+    char device_id[20] = {0};
+    sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
+    LOG_DEBUG("this device ID is: %s", device_id);
 
 // ESP-WROVE-KIT has 3 LEDs, turn all off
 #ifdef ESP_WROVER_KIT
