@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: 3.8
       - name: Install Doxygen
-        run: apt-get install doxygen -y
+        run: apt install doxygen -y
         shell: bash
       - name: Generate Doxygen Documentation
         working-directory: projects/lib_tests
