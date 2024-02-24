@@ -76,7 +76,7 @@ int bmp_i2c_get_config(bmp_handle_t bmp, uint8_t* out_config) {
         LOG_ERROR("error %d during reading config register of the BMP280 device: %s", err, esp_err_to_name(err));
         return err;
     }
-    LOG_DEBUG("readed config register value: %#X", (*out_config));
+    LOG_VERBOSE("readed config register value: %#X", (*out_config));
 
     return err;    
 }
@@ -91,7 +91,7 @@ int bmp_i2c_get_ctrl_meas(bmp_handle_t bmp, uint8_t* out_ctrl) {
         LOG_ERROR("error %d during reading data acquisition options of the BMP280 device: %s", err, esp_err_to_name(err));
         return err;
     }
-    LOG_DEBUG("readed ctr_meas register value: %#X", (*out_ctrl));
+    LOG_VERBOSE("readed ctr_meas register value: %#X", (*out_ctrl));
 
     return err;    
 }
@@ -106,7 +106,7 @@ int bmp_i2c_get_status(bmp_handle_t bmp, uint8_t* out_status) {
         return err;
     }
 
-    LOG_DEBUG("sucessfully read BMP280 status register, value: %#X", (*out_status));
+    LOG_VERBOSE("sucessfully read BMP280 status register, value: %#X", (*out_status));
     return err;
 }
 
@@ -249,7 +249,7 @@ int bmp_i2c_calibrate(bmp_handle_t bmp) {
 
     CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
     
-    LOG_DEBUG("reading BMP280 out calibration values...");
+    LOG_VERBOSE("reading BMP280 out calibration values...");
     err = bmp_i2c_read(bmp, BMP_REG_CAL_LOW, buf, sizeof(buf));
     if(err != ERR_C_OK) {
         LOG_ERROR("error %d while reading low bank calibration values of BMP280 device: %s", err, esp_err_to_name(err));
@@ -269,7 +269,7 @@ int bmp_i2c_calibrate(bmp_handle_t bmp) {
     bmp->cmps.P8 = buf[20] | (buf[21] << 8);
     bmp->cmps.P9 = buf[22] | (buf[23] << 8);
 
-    LOG_DEBUG("compensation values of BMP280 device updated:\n\tT1: %#x\n\tT2: %#x\n\tT3: %#x\n\tP1: %#x\n\tP2: %#x\n\tP3: %#x\n\tP4: %#x\n\tP5: %#x\n\tP6: %#x\n\tP7: %#x\n\tP8: %#x\n\tP9: %#x ");
+    LOG_VERBOSE("compensation values of BMP280 device updated:\n\tT1: %#x\n\tT2: %#x\n\tT3: %#x\n\tP1: %#x\n\tP2: %#x\n\tP3: %#x\n\tP4: %#x\n\tP5: %#x\n\tP6: %#x\n\tP7: %#x\n\tP8: %#x\n\tP9: %#x ");
     return err;
 }
 
@@ -280,7 +280,7 @@ int bmp_i2c_identify_chip(bmp_handle_t bmp) {
     CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
 
     //Try high address 0x77
-    LOG_DEBUG("Trying to find BMP280 device on bus with 0x77 address...");
+    LOG_VERBOSE("Trying to find BMP280 device on bus with 0x77 address...");
     bmp->addr = BMP_I2C_ADDR_HI;
     i2c_c_set_device_addr(bmp->i2c_handle, BMP_I2C_ADDR_HI);
     err = bmp_i2c_read(bmp, BMP_REG_CHIP_ID, &id, sizeof(uint8_t));
@@ -293,7 +293,7 @@ int bmp_i2c_identify_chip(bmp_handle_t bmp) {
     }
 
     //Try low address 0x76
-    LOG_DEBUG("BMP280 device with 0x77 address not found on bus, trying 0x76 address...");
+    LOG_VERBOSE("BMP280 device with 0x77 address not found on bus, trying 0x76 address...");
     bmp->addr = BMP_I2C_ADDR_LO;
     i2c_c_set_device_addr(bmp->i2c_handle, BMP_I2C_ADDR_LO);
     err = bmp_i2c_read(bmp, BMP_REG_CHIP_ID, &id, sizeof(uint8_t));
@@ -330,11 +330,11 @@ int bmp_i2c_readout(bmp_handle_t bmp, int32_t* temperature, uint32_t* pressure) 
         uint8_t buffer[3];
         memutil_zero_memory(&buffer, sizeof(buffer));
         
-        LOG_DEBUG("reading temperature of BMP280 device...");
+        LOG_VERBOSE("reading temperature of BMP280 device...");
         ERR_C_CHECK_AND_THROW_ERR(bmp_i2c_read(bmp, BMP_REG_TEMP_MSB, &(buffer[0]), sizeof(buffer)));
         *temperature = bmp_compensate_T_int32(bmp, (buffer[0] << 12) | (buffer[1] << 4) | (buffer[0] >> 4));
 
-        LOG_DEBUG("reading pressure of BMP280 device...");
+        LOG_VERBOSE("reading pressure of BMP280 device...");
         ERR_C_CHECK_AND_THROW_ERR(bmp_i2c_read(bmp, BMP_REG_PRESS_MSB, &(buffer[0]), sizeof(buffer)));
         *pressure = bmp_compensate_P_int64(bmp, (buffer[0] << 12) | (buffer[1] << 4) | (buffer[0] >> 4));
     } Catch(err) {
@@ -424,7 +424,7 @@ int bmp_init(bmp_handle_t* out_handle, i2c_c_bus_handle_t bus) {
     Try {
         uint8_t reg_val = 0;
         
-        LOG_INFO("preparing new BMP280 device...");
+        LOG_DEBUG("preparing new BMP280 device...");
         NEW((*out_handle), struct bmp_handle_obj);
         (*out_handle)->addr = 0;
         (*out_handle)->id = 0;

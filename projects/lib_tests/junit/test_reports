@@ -1,1 +1,449 @@
-<testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="72.496" timestamp="2024-02-24T00:24:51.105170" hostname="wmytych"><testcase classname="test_wifi_controller.pytest_wifi_controller" name="test_wifi_controller" time="17.756" /><testcase classname="test_wifi_manager.pytest_wifi_manager" name="test_wifi_manager" time="14.209" /><testcase classname="test_cli_manager.pytest_cli_manager" name="test_cli_manager" time="16.959" /><testcase time="6.270" /></testsuite></testsuites>
+<testsuites><testsuite name="pytest" errors="3" failures="0" skipped="0" tests="3" time="79.069" timestamp="2024-02-24T17:58:49.863737" hostname="wmytych"><testcase classname="test_wifi_controller.pytest_wifi_controller" name="test_wifi_controller" time="18.720"><error message="failed on setup with &quot;RuntimeError: generator raised StopIteration&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...ded_idf.app.IdfApp object at 0x7fa24cb9c490&gt;, 'msg_queue': &lt;pytest_embedded.log.MessageQueue object at 0x7fa24cd84d90&gt;}
+_close_or_terminate = &lt;function multi_dut_generator_fixture.&lt;locals&gt;.wrapper.&lt;locals&gt;._close_or_terminate at 0x7fa24cd91ee0&gt;
+res = None
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        def _close_or_terminate(obj):
+            if obj is None:
+                del obj
+                return
+    
+            try:
+                if isinstance(obj, (subprocess.Popen, multiprocessing.process.BaseProcess)):
+                    obj.terminate()
+                    obj.kill()
+                elif isinstance(obj, io.IOBase):
+                    try:
+                        obj.close()
+                    except Exception as e:
+                        logging.debug('file %s closed failed with error: %s', obj, str(e))
+                else:
+                    try:
+                        obj.close()
+                    except AttributeError:
+                        try:
+                            obj.terminate()
+                        except AttributeError:
+                            pass
+                    except Exception as e:
+                        logging.debug('Not properly caught object %s: %s', obj, str(e))
+            except Exception as e:
+                logging.debug('%s: %s', obj, str(e))
+                return  # swallow up all error
+            finally:
+                referrers = gc.get_referrers(obj)
+                for _referrer in referrers:
+                    if isinstance(_referrer, list):
+                        for _i, val in enumerate(_referrer):
+                            if val is obj:
+                                _referrer[_i] = None
+                    elif isinstance(_referrer, dict):
+                        for key, value in _referrer.items():
+                            if value is obj:
+                                _referrer[key] = None
+                del obj
+    
+        if _COUNT == 1:
+            res = None
+            try:
+&gt;               res = func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:464: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1354: in serial
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/serial.py:42: in __init__
+    super().__init__(
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_serial_esp/serial.py:152: in __init__
+    super().__init__(msg_queue=msg_queue, port=esp._port, baud=baud, meta=meta, **kwargs)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_serial/serial.py:90: in __init__
+    self._start()
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/serial.py:76: in _start
+    self.flash()
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_serial_esp/serial.py:189: in wrapper
+    ret = func(self, *args, **kwargs)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/serial.py:162: in flash
+    esptool.write_flash(self.stub, args)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/cmds.py:598: in write_flash
+    esp.flash_defl_block(block, seq, timeout=timeout)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/loader.py:131: in inner
+    return func(*args, **kwargs)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/loader.py:1077: in flash_defl_block
+    self.check_command(
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/loader.py:467: in check_command
+    val, data = self.command(op, data, chk, timeout=timeout)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/loader.py:436: in command
+    p = self.read()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;esptool.targets.esp32.ESP32StubLoader object at 0x7fa24cdca790&gt;
+
+    def read(self):
+        """Read a SLIP packet from the serial port"""
+&gt;       return next(self._slip_reader)
+E       StopIteration
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/loader.py:369: StopIteration
+
+The above exception was the direct cause of the following exception:
+
+cls = &lt;class '_pytest.runner.CallInfo'&gt;
+func = &lt;function call_runtest_hook.&lt;locals&gt;.&lt;lambda&gt; at 0x7fa24ce0a520&gt;, when = 'setup'
+reraise = (&lt;class '_pytest.outcomes.Exit'&gt;, &lt;class 'KeyboardInterrupt'&gt;)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: Optional[
+            Union[Type[BaseException], Tuple[Type[BaseException], ...]]
+        ] = None,
+    ) -&gt; "CallInfo[TResult]":
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        start = timing.time()
+        precise_start = timing.perf_counter()
+        try:
+&gt;           result: Optional[TResult] = func()
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/runner.py:345: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/runner.py:266: in &lt;lambda&gt;
+    lambda: ihook(item=item, **kwds), when=when, reraise=reraise
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pluggy/_hooks.py:501: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pluggy/_manager.py:119: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/unraisableexception.py:85: in pytest_runtest_setup
+    yield from unraisable_exception_runtest_hook()
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/unraisableexception.py:65: in unraisable_exception_runtest_hook
+    yield
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/logging.py:833: in pytest_runtest_setup
+    yield from self._runtest_for(item, "setup")
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/logging.py:822: in _runtest_for
+    yield
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/capture.py:877: in pytest_runtest_setup
+    return (yield)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/threadexception.py:82: in pytest_runtest_setup
+    yield from thread_exception_runtest_hook()
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/threadexception.py:63: in thread_exception_runtest_hook
+    yield
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/runner.py:161: in pytest_runtest_setup
+    item.session._setupstate.setup(item)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/runner.py:517: in setup
+    raise exc
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/runner.py:514: in setup
+    col.setup()
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/python.py:1839: in setup
+    self._request._fillfixtures()
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:693: in _fillfixtures
+    item.funcargs[argname] = self.getfixturevalue(argname)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:547: in getfixturevalue
+    fixturedef = self._get_active_fixturedef(argname)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:566: in _get_active_fixturedef
+    self._compute_fixture_value(fixturedef)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:652: in _compute_fixture_value
+    fixturedef.execute(request=subrequest)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:1071: in execute
+    fixturedef = request._get_active_fixturedef(argname)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:566: in _get_active_fixturedef
+    self._compute_fixture_value(fixturedef)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:652: in _compute_fixture_value
+    fixturedef.execute(request=subrequest)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:1095: in execute
+    result = ihook.pytest_fixture_setup(fixturedef=self, request=request)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pluggy/_hooks.py:501: in __call__
+    return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pluggy/_manager.py:119: in _hookexec
+    return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/setuponly.py:36: in pytest_fixture_setup
+    return (yield)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:1149: in pytest_fixture_setup
+    result = call_fixture_func(fixturefunc, request, kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+fixturefunc = &lt;function serial at 0x7fa24cda11c0&gt;
+request = &lt;SubRequest 'serial' for &lt;Function test_wifi_controller&gt;&gt;
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...ded_idf.app.IdfApp object at 0x7fa24cb9c490&gt;, 'msg_queue': &lt;pytest_embedded.log.MessageQueue object at 0x7fa24cd84d90&gt;}
+
+    def call_fixture_func(
+        fixturefunc: "_FixtureFunc[FixtureValue]", request: FixtureRequest, kwargs
+    ) -&gt; FixtureValue:
+        if is_generator(fixturefunc):
+            fixturefunc = cast(
+                Callable[..., Generator[FixtureValue, None, None]], fixturefunc
+            )
+            generator = fixturefunc(**kwargs)
+            try:
+&gt;               fixture_result = next(generator)
+E               RuntimeError: generator raised StopIteration
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/_pytest/fixtures.py:916: RuntimeError</error></testcase><testcase classname="test_wifi_manager.pytest_wifi_manager" name="test_wifi_manager" time="12.661"><error message="failed on setup with &quot;esptool.util.FatalError: MD5Sum command returned unexpected result: b'C\x1d\xc4\xd0\xca\xca\xe5\x18\x7fj\xa2\\\xe8\xb5A'&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...ded_idf.app.IdfApp object at 0x7fa247700f50&gt;, 'msg_queue': &lt;pytest_embedded.log.MessageQueue object at 0x7fa247728490&gt;}
+_close_or_terminate = &lt;function multi_dut_generator_fixture.&lt;locals&gt;.wrapper.&lt;locals&gt;._close_or_terminate at 0x7fa24cbd5da0&gt;
+res = None
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        def _close_or_terminate(obj):
+            if obj is None:
+                del obj
+                return
+    
+            try:
+                if isinstance(obj, (subprocess.Popen, multiprocessing.process.BaseProcess)):
+                    obj.terminate()
+                    obj.kill()
+                elif isinstance(obj, io.IOBase):
+                    try:
+                        obj.close()
+                    except Exception as e:
+                        logging.debug('file %s closed failed with error: %s', obj, str(e))
+                else:
+                    try:
+                        obj.close()
+                    except AttributeError:
+                        try:
+                            obj.terminate()
+                        except AttributeError:
+                            pass
+                    except Exception as e:
+                        logging.debug('Not properly caught object %s: %s', obj, str(e))
+            except Exception as e:
+                logging.debug('%s: %s', obj, str(e))
+                return  # swallow up all error
+            finally:
+                referrers = gc.get_referrers(obj)
+                for _referrer in referrers:
+                    if isinstance(_referrer, list):
+                        for _i, val in enumerate(_referrer):
+                            if val is obj:
+                                _referrer[_i] = None
+                    elif isinstance(_referrer, dict):
+                        for key, value in _referrer.items():
+                            if value is obj:
+                                _referrer[key] = None
+                del obj
+    
+        if _COUNT == 1:
+            res = None
+            try:
+&gt;               res = func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:464: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1354: in serial
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/serial.py:42: in __init__
+    super().__init__(
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_serial_esp/serial.py:152: in __init__
+    super().__init__(msg_queue=msg_queue, port=esp._port, baud=baud, meta=meta, **kwargs)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_serial/serial.py:90: in __init__
+    self._start()
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/serial.py:76: in _start
+    self.flash()
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_serial_esp/serial.py:189: in wrapper
+    ret = func(self, *args, **kwargs)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/serial.py:162: in flash
+    esptool.write_flash(self.stub, args)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/cmds.py:642: in write_flash
+    res = esp.flash_md5sum(address, uncsize)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/loader.py:131: in inner
+    return func(*args, **kwargs)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;esptool.targets.esp32.ESP32StubLoader object at 0x7fa247af0810&gt;, addr = 65536, size = 874896
+
+    @stub_and_esp32_function_only
+    def flash_md5sum(self, addr, size):
+        # the MD5 command returns additional bytes in the standard
+        # command reply slot
+        timeout = timeout_per_mb(MD5_TIMEOUT_PER_MB, size)
+        res = self.check_command(
+            "calculate md5sum",
+            self.ESP_SPI_FLASH_MD5,
+            struct.pack("&lt;IIII", addr, size, 0, 0),
+            timeout=timeout,
+        )
+    
+        if len(res) == 32:
+            return res.decode("utf-8")  # already hex formatted
+        elif len(res) == 16:
+            return hexify(res).lower()
+        else:
+&gt;           raise FatalError("MD5Sum command returned unexpected result: %r" % res)
+E           esptool.util.FatalError: MD5Sum command returned unexpected result: b'C\x1d\xc4\xd0\xca\xca\xe5\x18\x7fj\xa2\\\xe8\xb5A'
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/esptool/loader.py:1122: FatalError</error></testcase><testcase classname="test_cli_manager.pytest_cli_manager" name="test_cli_manager" time="23.724"><error message="failed on setup with &quot;ValueError: Couldn't auto detect chip. Please manually specify with &quot;--port&quot;&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...ded_idf.app.IdfApp object at 0x7fa247e9ce90&gt;, 'msg_queue': &lt;pytest_embedded.log.MessageQueue object at 0x7fa24c3691d0&gt;}
+_close_or_terminate = &lt;function multi_dut_generator_fixture.&lt;locals&gt;.wrapper.&lt;locals&gt;._close_or_terminate at 0x7fa24cd79ee0&gt;
+res = None
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        def _close_or_terminate(obj):
+            if obj is None:
+                del obj
+                return
+    
+            try:
+                if isinstance(obj, (subprocess.Popen, multiprocessing.process.BaseProcess)):
+                    obj.terminate()
+                    obj.kill()
+                elif isinstance(obj, io.IOBase):
+                    try:
+                        obj.close()
+                    except Exception as e:
+                        logging.debug('file %s closed failed with error: %s', obj, str(e))
+                else:
+                    try:
+                        obj.close()
+                    except AttributeError:
+                        try:
+                            obj.terminate()
+                        except AttributeError:
+                            pass
+                    except Exception as e:
+                        logging.debug('Not properly caught object %s: %s', obj, str(e))
+            except Exception as e:
+                logging.debug('%s: %s', obj, str(e))
+                return  # swallow up all error
+            finally:
+                referrers = gc.get_referrers(obj)
+                for _referrer in referrers:
+                    if isinstance(_referrer, list):
+                        for _i, val in enumerate(_referrer):
+                            if val is obj:
+                                _referrer[_i] = None
+                    elif isinstance(_referrer, dict):
+                        for key, value in _referrer.items():
+                            if value is obj:
+                                _referrer[key] = None
+                del obj
+    
+        if _COUNT == 1:
+            res = None
+            try:
+&gt;               res = func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:464: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1354: in serial
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/serial.py:42: in __init__
+    super().__init__(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.serial.IdfSerial object at 0x7fa247e9eb90&gt;
+pexpect_proc = &lt;pytest_embedded.log.PexpectProcess object at 0x7fa24c369ad0&gt;
+msg_queue = &lt;pytest_embedded.log.MessageQueue object at 0x7fa24c3691d0&gt;, target = 'esp32', beta_target = None
+port = None, port_mac = None, baud = 115200, esptool_baud = 921600, skip_autoflash = False, erase_all = False
+meta = Meta(logdir='/tmp/pytest-embedded/2024-02-24_16-58-49-980030/test_cli_manager', port_target_cache={'/dev/ttyUSB0': 'esp32', '/dev/ttyUSB1': 'esp32'}, port_app_cache={}, logfile_extension='.log')
+kwargs = {}, available_ports = ['/dev/ttyS0', '/dev/ttyUSB1'], ports = ['/dev/ttyS0', '/dev/ttyUSB1']
+_esp = None, each_port = '/dev/ttyS0', chip_class = &lt;class 'esptool.targets.esp32.ESP32ROM'&gt;, esp = None
+
+    def __init__(
+        self,
+        pexpect_proc: PexpectProcess,
+        msg_queue: MessageQueue,
+        target: Optional[str] = None,
+        beta_target: Optional[str] = None,
+        port: Optional[str] = None,
+        port_mac: str = None,
+        baud: int = Serial.DEFAULT_BAUDRATE,
+        esptool_baud: int = ESPTOOL_DEFAULT_BAUDRATE,
+        skip_autoflash: bool = False,
+        erase_all: bool = False,
+        meta: Optional[Meta] = None,
+        **kwargs,
+    ) -&gt; None:
+        self._meta = meta
+    
+        esptool_target = beta_target or target or 'auto'
+        if port is None:
+            available_ports = esptool.get_port_list()
+            ports = list(set(available_ports) - set(self.occupied_ports.keys()))
+    
+            # sort to make /dev/ttyS* ports before /dev/ttyUSB* ports
+            # esptool will reverse the list
+            ports.sort()
+            if port_mac:
+                for port in ports:
+                    if _is_port_mac_verified(pexpect_proc, port, port_mac, msg_queue):
+                        ports = [port]
+                        break
+                else:
+                    raise ValueError(f'The specified MAC address {port_mac} cannot be found.')
+    
+            # prioritize the cache recorded target port
+            if esptool_target and self._meta:
+                ports.sort(key=lambda x: self._meta.hit_port_target_cache(x, esptool_target))
+    
+            logging.debug(f'Detecting ports from {", ".join(ports)}')
+        else:
+            if port_mac:
+                if _is_port_mac_verified(pexpect_proc, port, port_mac, msg_queue):
+                    ports = [port]
+                else:
+                    raise ValueError(f'The specified MAC address {port_mac} binds with different port, not with {port}')
+            else:
+                ports = [port]
+    
+        # normal loader
+        if esptool_target not in (['auto'] + ESPTOOL_CHIPS):
+            raise ValueError(
+                f'esptool version {ESPTOOL_VERSION} not support target {esptool_target}\n'
+                f'Supported targets: {ESPTOOL_CHIPS}'
+            )
+    
+        with contextlib.redirect_stdout(msg_queue):
+            # Temp workaround for esptool
+            # on windows have to close the unused scanned ports manually
+            #
+            # could revert to the following code blocks after fixing it
+            #
+            # esp: esptool.ESPLoader = esptool.get_default_connected_device(
+            #     ports,
+            #     port=port,
+            #     connect_attempts=3,
+            #     initial_baud=baud,
+            #     chip=esptool_target,
+            # )
+            _esp = None
+            for each_port in reversed(ports):
+                print(f'Serial port {each_port}')
+                try:
+                    if esptool_target == 'auto':
+                        _esp = detect_chip(each_port, baud, connect_attempts=3)
+                    else:
+                        chip_class = CHIP_DEFS[esptool_target]
+                        _esp = chip_class(each_port, baud)
+                        _esp.connect(attempts=3)
+                    break
+                except (FatalError, OSError) as err:
+                    if port is not None:
+                        raise
+                    print(f'{each_port} failed to connect: {err}')
+                    if _esp:
+                        # ensure unused port is closed.
+                        _esp._port.close()
+                    _esp = None
+            esp = _esp
+    
+        if not esp:
+&gt;           raise ValueError('Couldn\'t auto detect chip. Please manually specify with "--port"')
+E           ValueError: Couldn't auto detect chip. Please manually specify with "--port"
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_serial_esp/serial.py:138: ValueError</error></testcase><testcase time="6.476" /></testsuite></testsuites>

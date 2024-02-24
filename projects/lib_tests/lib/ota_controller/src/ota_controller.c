@@ -29,16 +29,16 @@ static void event_handler(void* arg, esp_event_base_t event_base,
                 LOG_INFO("Connected to server");
                 break;
             case ESP_HTTPS_OTA_GET_IMG_DESC:
-                LOG_INFO("Reading Image Description");
+                LOG_DEBUG("Reading Image Description");
                 break;
             case ESP_HTTPS_OTA_VERIFY_CHIP_ID:
-                LOG_INFO("Verifying chip id of new image: %d", *(esp_chip_id_t *)event_data);
+                LOG_DEBUG("Verifying chip id of new image: %d", *(esp_chip_id_t *)event_data);
                 break;
             case ESP_HTTPS_OTA_DECRYPT_CB:
-                LOG_INFO("Callback to decrypt function");
+                LOG_DEBUG("Callback to decrypt function");
                 break;
             case ESP_HTTPS_OTA_WRITE_FLASH:
-                LOG_DEBUG("Writing to flash: %d written", *(int *)event_data);
+                LOG_VERBOSE("Writing to flash: %d written", *(int *)event_data);
                 break;
             case ESP_HTTPS_OTA_UPDATE_BOOT_PARTITION:
                 LOG_INFO("Boot partition updated. Next Partition: %d", *(esp_partition_subtype_t *)event_data);
@@ -47,7 +47,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
                 LOG_INFO("OTA finish");
                 break;
             case ESP_HTTPS_OTA_ABORT:
-                LOG_INFO("OTA abort");
+                LOG_WARN("OTA abort");
                 break;
         }
     }

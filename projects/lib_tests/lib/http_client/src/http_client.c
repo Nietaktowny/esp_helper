@@ -21,21 +21,21 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 	static int output_len;		 // Stores number of bytes read
 	switch(evt->event_id) {
 		case HTTP_EVENT_ERROR:
-			LOG_DEBUG("HTTP_EVENT_ERROR");
+			LOG_VERBOSE("HTTP_EVENT_ERROR");
 			break;
 		case HTTP_EVENT_ON_CONNECTED:
-			LOG_DEBUG("HTTP_EVENT_ON_CONNECTED");
+			LOG_VERBOSE("HTTP_EVENT_ON_CONNECTED");
 			break;
 		case HTTP_EVENT_HEADER_SENT:
-			LOG_DEBUG("HTTP_EVENT_HEADER_SENT");
+			LOG_VERBOSE("HTTP_EVENT_HEADER_SENT");
 			break;
 		case HTTP_EVENT_ON_HEADER:
-			LOG_DEBUG("HTTP_EVENT_ON_HEADER, key=%s, value=%s", evt->header_key, evt->header_value);
+			LOG_VERBOSE("HTTP_EVENT_ON_HEADER, key=%s, value=%s", evt->header_key, evt->header_value);
 			break;
 		case HTTP_EVENT_ON_DATA:
-			LOG_DEBUG("HTTP_EVENT_ON_DATA, len=%d", evt->data_len);
-			LOG_DEBUG("HTTP_EVENT_ON_DATA, output_len=%d", output_len);
-			LOG_DEBUG("HTTP_EVENT_ON_DATA, content_length=%d", esp_http_client_get_content_length(evt->client));
+			LOG_VERBOSE("HTTP_EVENT_ON_DATA, len=%d", evt->data_len);
+			LOG_VERBOSE("HTTP_EVENT_ON_DATA, output_len=%d", output_len);
+			LOG_VERBOSE("HTTP_EVENT_ON_DATA, content_length=%d", esp_http_client_get_content_length(evt->client));
 			// If user_data buffer is configured, copy the response into the buffer
 			if (evt->user_data) {
 				memcpy(evt->user_data + output_len, evt->data, evt->data_len);
@@ -53,7 +53,7 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 			output_len += evt->data_len;
 			break;
 		case HTTP_EVENT_ON_FINISH:
-			LOG_DEBUG("HTTP_EVENT_ON_FINISH");
+			LOG_VERBOSE("HTTP_EVENT_ON_FINISH");
 			if (output_buffer != NULL) {
 				// Response is accumulated in output_buffer. Uncomment the below line to print the accumulated response
 				// ESP_LOG_BUFFER_HEX(TAG, output_buffer, output_len);
@@ -63,7 +63,7 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 			output_len = 0;
 			break;
 		case HTTP_EVENT_DISCONNECTED:
-			LOG_DEBUG("HTTP_EVENT_DISCONNECTED");
+			LOG_VERBOSE("HTTP_EVENT_DISCONNECTED");
 			int mbedtls_err = 0;
 			esp_err_t err = esp_tls_get_and_clear_last_error(evt->data, &mbedtls_err, NULL);
 			if (err != 0) {
@@ -77,10 +77,10 @@ esp_err_t _http_event_handler(esp_http_client_event_t *evt)
 			}
 			break;
         case HTTP_EVENT_REDIRECT:
-            LOG_DEBUG("HTTP_EVENT_REDIRECT");
+            LOG_VERBOSE("HTTP_EVENT_REDIRECT");
             break;
         default:
-            LOG_DEBUG("NOT KNOWN HTTP EVENT");
+            LOG_VERBOSE("NOT KNOWN HTTP EVENT");
             break;
 	}
 	return ESP_OK;
@@ -99,7 +99,7 @@ int https_client_post(const char* ipv4_address, const char* path, const char* po
     ERR_C_CHECK_NULL_PTR(path, LOG_ERROR("Path to php script cannot be NULL"));
 
     sprintf(url, "http://%s/%s", ipv4_address, path);
-    LOG_INFO("making POST request to address: %s", url);
+    LOG_DEBUG("making POST request to address: %s", url);
     //prepare client handle
     esp_http_client_config_t config = {
         .url = url,
@@ -168,11 +168,15 @@ int http_client_post(const char* ipv4_address, const char* path, const char* pos
     return (int)id;
 }
 
+/**
+ * @todo Make some constant or something so that internal url buffer is not some magic number
+ * @todo Do error checking if provided buffer fits into internal url buffer.
+*/
 int http_client_get(const char* ipv4_address, const char* path, char* buffer, size_t buflen) {
     err_c_t err = 0;
     uint64_t id = 0;
     char local_response_buffer[MAX_HTTP_OUTPUT_BUFFER] = {0};
-    char url[64];
+    char url[256];
 
     memutil_zero_memory(&url, sizeof(url));
     memutil_zero_memory(&local_response_buffer, sizeof(local_response_buffer));
@@ -211,7 +215,7 @@ int http_client_get(const char* ipv4_address, const char* path, char* buffer, si
 		}
 
 		mempcpy(buffer, local_response_buffer, resplen);
-		LOG_DEBUG("HTTP response stored into buffer");
+		LOG_VERBOSE("HTTP response stored into buffer");
     } else {
         LOG_ERROR("HTTP GET request failed: %s", esp_err_to_name(err));
     }

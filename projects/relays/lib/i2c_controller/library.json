@@ -1,8 +1,0 @@
-{
-	"name": "i2c_controller",
-	"version": "1.0.0",
-	"keywords": "keyword",
-	"description": "Library used to act as ESP-IDF I2C drivers abrstraction.",
-	"frameworks": ["espidf"],
-	"platforms": ["espressif32"]
-}

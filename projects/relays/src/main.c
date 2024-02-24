@@ -6,6 +6,8 @@
 #include "wifi_manager.h"
 #include "ota_controller.h"
 #include "nvs_controller.h"
+#include "esp_helper_utils.h"
+#include "sys_utils.h"
 
 #include <string.h>
 #include "freertos/FreeRTOS.h"
@@ -24,13 +26,10 @@
 #define SOL_PSK "Solonka106"
 
 #ifdef ESP_WROVER_KIT
-#define ESP_DEVICE_ID 111111
 #define ESP_DEVICE_WIFI_LED GPIO_NUM_2
 #elif ESP_DEV_MODULE
-#define ESP_DEVICE_ID 222222
 #define ESP_DEVICE_WIFI_LED GPIO_NUM_2
 #elif ESP32_C3_SUPERMINI
-#define ESP_DEVICE_ID 333333
 #endif
 
 #define SERVER_URL "wmytych.usermd.net"
@@ -38,16 +37,18 @@
 
 void switch_gpio_task(void *args)
 {
-    err_c_t err = 0;
     char response[500] = {0};
-    char url[100] = {0};
-    snprintf(url, sizeof(url), "%s?device_id=%d", PHP_GET_GPIO_STATES_URL, ESP_DEVICE_ID);
+    char url[120] = {0};
+    char device_id[20] = {0};
+    sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
+    LOG_DEBUG("getting gpio state for device with ID: %s", device_id);
+    snprintf(url, sizeof(url), "%s?device_id=%s", PHP_GET_GPIO_STATES_URL, device_id);
 
     cJSON *array = NULL;
     const cJSON *element = NULL;
     while (1)
     {
-        err = http_client_get(
+        http_client_get(
             SERVER_URL,
             url,
             response,
@@ -93,12 +94,15 @@ void inspect_task(void *args)
 
     char *device_info = NULL;
     NEW_SIZE(device_info, 350);
+    
+    char device_id[20] = {0};
+    sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
     while (1)
     {
         uint32_t free_heap = esp_get_free_heap_size();
         uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
         wifi_c_get_status_as_json(wifi_c_info, 300);
-        snprintf(device_info, 350, "device_id=%d&wifi_info=%s", ESP_DEVICE_ID, wifi_c_info);
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
         http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info);
         LOG_DEBUG("sent wifi_c_status to the server");
         LOG_DEBUG("Currently available heap: %lu", free_heap);
@@ -115,7 +119,11 @@ void on_connect_handler(void)
     gpio_set_direction(ESP_DEVICE_WIFI_LED, GPIO_MODE_OUTPUT);
     gpio_set_level(ESP_DEVICE_WIFI_LED, 1);
     LOG_INFO("Onboard LED turned on!");
+    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
+    esp_netif_sntp_init(&config);
 #endif
+
+    // helper_perform_ota();
     xTaskCreate(switch_gpio_task, "gpio_task", 1024 * 6, NULL, 2, NULL);
     xTaskCreate(inspect_task, "inspect_heap_task", 1024 * 6, NULL, 3, NULL);
 }
@@ -140,7 +148,8 @@ void app_main()
     vTaskDelay(pdMS_TO_TICKS(100));
 
     // Create semaphores to synchronize logs
-    logger_create_semphr();
+    logger_init();
+    logger_set_log_level(LOG_LEVEL_VERBOSE);
 
     // Initialize NVS
     nvs_c_init_nvs();
@@ -153,15 +162,7 @@ void app_main()
     wifi_c_sta_register_connect_handler(on_connect_handler);
 
     wifi_manager_init();
-
-    char url[100];
-    memutil_zero_memory(&url, sizeof(url));
-    ota_c_prepare_url_with_device_id("http://wmytych.usermd.net/modules/getters/ota.php", ESP_DEVICE_ID, &url[0], sizeof(url));
-    ota_c_start(&url[0]);
-
 #ifndef ESP32_C3_SUPERMINI
-    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
-    esp_netif_sntp_init(&config);
-    cli_set_remote_logging(27015);
+    cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
 #endif
 }

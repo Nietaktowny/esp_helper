@@ -15,7 +15,8 @@
 
 
 void perform_ota_on_sta_connected(void) {
-    helper_perform_ota();
+    LOG_DEBUG("Performing OTA update...");
+    helper_perform_ota_with_id("222222");
 }
 
 void app_main(void)

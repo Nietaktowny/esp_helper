@@ -1,4 +1,4 @@
 dependencies:
   idf: '>=5.0'
 description: Library used to control OTA updates.
-version: 1.0.0
+version: 1.0.3

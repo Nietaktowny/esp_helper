@@ -165,14 +165,14 @@ int tcp_create_socket(socket_t* sock) {
     int err = 0;
     CHECK_NULL_PTR(sock, LOG_ERROR("socket cannot be null"));
 
-    LOG_DEBUG("preparing socket...");
+    LOG_VERBOSE("preparing socket...");
     *sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     if(*sock == INVALID_SOCKET) {
         err = errno;
         LOG_ERROR("error when preparing socket: %s", error_to_name(err));
         return err;
     }
-    LOG_DEBUG("created socket: %d", *sock);
+    LOG_VERBOSE("created socket: %d", *sock);
     return err;
 }
 
@@ -208,7 +208,7 @@ int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* 
         LOG_WARN("port set to 0, using wildcard port");
     }
         
-    LOG_DEBUG("preparing address...");
+    LOG_VERBOSE("preparing address...");
     err = inet_aton(address, &(addr_ipv4->sin_addr));
     if(err != 1) {
         LOG_ERROR("error when translating address to binary data");
@@ -217,7 +217,7 @@ int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* 
     err = 0;        //fun inet_aton returns 1 on success, where tcp_prepare_address should return 0 on success
     addr_ipv4->sin_family = AF_INET;
     addr_ipv4->sin_port = htons(port);
-    LOG_DEBUG("prepared address %s:%u", address, port);
+    LOG_VERBOSE("prepared address %s:%u", address, port);
     return err;
 }
 
@@ -229,7 +229,7 @@ int tcp_bind_socket(socket_t socket, struct sockaddr_in* addr_ipv4) {
         return ERR_TCP_INVALID_SOCKET;
     }
 
-    LOG_DEBUG("binding socket: %d to address: %s:%u", socket, inet_ntoa(addr_ipv4->sin_addr), addr_ipv4->sin_port);
+    LOG_VERBOSE("binding socket: %d to address: %s:%u", socket, inet_ntoa(addr_ipv4->sin_addr), addr_ipv4->sin_port);
     err = bind(socket, (struct sockaddr*)addr_ipv4, sizeof(struct sockaddr));
     if (err)
     {
@@ -250,7 +250,7 @@ int tcp_socket_listen(socket_t socket, int backlog) {
         return ERR_TCP_INVALID_SOCKET;
     }
 
-    LOG_DEBUG("trying to listen on socket: %d", socket);
+    LOG_VERBOSE("trying to listen on socket: %d", socket);
     err = listen(socket, backlog);
     if(err != 0) {
         err = errno;

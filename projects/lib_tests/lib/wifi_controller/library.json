@@ -1,6 +1,6 @@
 {
     "name": "wifi_controller",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "keywords": "WiFi, driver, controller, espressif32",
     "description": "Controller library used to control WiFi with ESP-IDF.",
     "examples": [
@@ -43,6 +43,11 @@
         "type": "git",
         "url": "https://github.com/Nietaktowny/wifi_controller"
     },
+	"dependencies": {
+		"nietaktowny/logger": "^2.0.2",
+		"nietaktowny/err_controller": "^1.0.3",
+		"nietaktowny/memory_utils": "^1.0.4"
+	  },
     "frameworks": ["espidf"],
     "platforms": ["espressif32"]
 }

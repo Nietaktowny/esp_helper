@@ -40,6 +40,19 @@ int helper_get_chip_id(uint8_t chip_id[6]);
 int helper_prepare_url_with_device_id(const char* url, const char* device_id, char* buffer, size_t buflen);
 
 /**
+ * @brief Perform simple OTA firmware update with standard ESP Helper server and provided device ID.
+ * 
+ * @param device_id Device ID used to perform OTA.
+ * 
+ * @retval ERR_NULL_POINTER on internal NULL pointer
+ * @retval ERR_C_MEMORY_ERR on internal memory error.
+ * @retval OTA_C_ERR_IMAGES_THE_SAME If current firmware version is the same as new.
+ * @retval ESP_HELPER_ERR_NOT_CONNECTED If STA is not connected to Wifi.
+ * @retval esp_specific errors 
+ */
+int helper_perform_ota_with_id(const char* device_id);
+
+/**
  * @brief Perform simple OTA firmware update with standard ESP Helper server.
  * 
  * @retval ERR_NULL_POINTER on internal NULL pointer

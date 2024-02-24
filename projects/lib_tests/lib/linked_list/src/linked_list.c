@@ -16,7 +16,7 @@ linkedl_t linkedl_create(size_t item_size, char* name) {
         return NULL;
     }
     if(!name) {
-        LOG_DEBUG("no name, using generic name \"linked list\"");
+        LOG_VERBOSE("no name, using generic name \"linked list\"");
         name = LINKEDL_DEFAULT_NAME;
     }
 
@@ -27,7 +27,7 @@ linkedl_t linkedl_create(size_t item_size, char* name) {
     list->items_num = 0;
     list->name = name;
     list->size = item_size;
-    LOG_INFO("created linked list: %s, with item size: %u", list->name, list->size);
+    LOG_DEBUG("created linked list: %s, with item size: %u", list->name, list->size);
     return list;
 }
 
@@ -43,7 +43,7 @@ int linkedl_destroy(linkedl_t list) {
 
 int linkedl_clear(linkedl_t list) {
     CHECK_NULL_PTR(list, LOG_WARN("list is not initialized"));
-    LOG_DEBUG("about to destroy list: %s", list->name);
+    LOG_VERBOSE("about to destroy list: %s", list->name);
 
     if(!(list->head) && !(list->items_num)) {
         //head is null and items_num is 0, this means that list is empty, just info user and return
@@ -59,7 +59,7 @@ int linkedl_clear(linkedl_t list) {
         //if it isn't last node
         if(ptr->next != NULL) {
             node_t next_ptr = ptr->next;
-            LOG_DEBUG("deleting node %llu form list %s", ptr->id, list->name);
+            LOG_VERBOSE("deleting node %llu form list %s", ptr->id, list->name);
             memutil_zero_memory(ptr->item, list->size);     //clear user data
             DELETE(ptr->item);
             DELETE(ptr);
@@ -76,7 +76,7 @@ int linkedl_clear(linkedl_t list) {
     }
     list->items_num = 0;
     list->head = NULL;
-    LOG_INFO("deleted %d nodes from list: %s", num, list->name);
+    LOG_DEBUG("deleted %d nodes from list: %s", num, list->name);
     return 0;
 }
 
@@ -87,7 +87,7 @@ node_t linkedl_create_node(linkedl_t list, char* name) {
     node->id = linkedl_hash_string(name);
     node->next = NULL;
     NEW_SIZE(node->item, list->size);
-    LOG_DEBUG("created new node with ID %llu updating node data...", node->id);
+    LOG_VERBOSE("created new node with ID %llu updating node data...", node->id);
     return node;
 }
 
@@ -101,12 +101,12 @@ uint64_t linkedl_add_last(linkedl_t list, void* data, char* name) {
     new_node = linkedl_create_node(list, name); //there is no need for checking allocation, this function will exit when it fails
     memcpy(new_node->item, data, list->size);
 
-    LOG_DEBUG("updating list data...");
+    LOG_VERBOSE("updating list data...");
     //if head is null, this is first node to be created
     if(list->head == NULL) {
         list->head = new_node;
         list->items_num++;
-        LOG_INFO("added node with ID %llu to list: %s", new_node->id, list->name);
+        LOG_DEBUG("added node with ID %llu to list: %s", new_node->id, list->name);
         return new_node->id;        // if everything is ok, then always return id of new node
     }
     //if head isn't null, then search for last node
@@ -117,7 +117,7 @@ uint64_t linkedl_add_last(linkedl_t list, void* data, char* name) {
     }
     last_node->next = new_node;
     list->items_num++;
-    LOG_INFO("added node with ID %llu to list: %s", new_node->id, list->name);
+    LOG_DEBUG("added node with ID %llu to list: %s", new_node->id, list->name);
     return new_node->id;            // if everything is ok, then always return id of new node
 }
 
@@ -130,19 +130,19 @@ uint64_t linkedl_add_first(linkedl_t list, void* data, char* name) {
     CHECK_MEM_ALLOC(new_node, LOG_ERROR("cannot create new node in list: %s", list->name));
     memcpy(new_node->item, data, list->size);
 
-    LOG_DEBUG("updating list data...");
+    LOG_VERBOSE("updating list data...");
     //if head is null, and this is first node
     if(!list->head && list->items_num == 0) {
         list->head = new_node;
         list->items_num++;
-        LOG_INFO("added node with ID %llu to list: %s", new_node->id, list->name);
+        LOG_DEBUG("added node with ID %llu to list: %s", new_node->id, list->name);
         return new_node->id;                                               // if everything is ok, then always return id of new node
     }
     //if there is already some node
     new_node->next = list->head;
     list->head = new_node;
     list->items_num++;
-    LOG_INFO("added node with ID %llu to list: %s", new_node->id, list->name);
+    LOG_DEBUG("added node with ID %llu to list: %s", new_node->id, list->name);
     return new_node->id;                                       // if everything is ok, then always return id of new node
 }
 
@@ -158,21 +158,21 @@ int linkedl_delete(linkedl_t list, char* name) {
         return 0;
     }
     uint64_t id = linkedl_hash_string(name);
-    LOG_DEBUG("searching for node to delete...");
+    LOG_VERBOSE("searching for node to delete...");
     node_t node_to_delete = linkedl_find_node_with_id(list, id);
     if(!node_to_delete) {
         LOG_ERROR("not found with current id");
         return ERR_WRONG_ARGS;
     }
-    LOG_DEBUG("node found, updating list information...");
+    LOG_VERBOSE("node found, updating list information...");
     node_t previous_node = linkedl_find_previous_node(list, node_to_delete);
      
     if(previous_node) {
         previous_node->next = node_to_delete->next;
-        LOG_DEBUG("updated information in previous node: %llu, deleting...", previous_node->id);
+        LOG_VERBOSE("updated information in previous node: %llu, deleting...", previous_node->id);
     } else {
         //no previous node, no need to update information, just dealloc and return
-        LOG_DEBUG("no previous node, no need to update data, deleting...");
+        LOG_VERBOSE("no previous node, no need to update data, deleting...");
     }
 
     //clear user data
@@ -182,7 +182,7 @@ int linkedl_delete(linkedl_t list, char* name) {
     DELETE(node_to_delete->item);
     DELETE(node_to_delete);
 
-    LOG_INFO("deleted node: %llu from list: %s", id, list->name);
+    LOG_DEBUG("deleted node: %llu from list: %s", id, list->name);
     return 0;
 }
 
@@ -205,7 +205,7 @@ node_t linkedl_find_previous_node(linkedl_t list, node_t node) {
     while (previous != NULL)
     {
         if(previous->next == node) {
-            LOG_DEBUG("found previous: %llu of node: %llu in list: %s", previous->id, node->id, list->name);
+            LOG_VERBOSE("found previous: %llu of node: %llu in list: %s", previous->id, node->id, list->name);
             return previous;
         }
         previous = previous->next;
@@ -221,20 +221,20 @@ node_t linkedl_get_last_node(linkedl_t list) {
     }
 
     if(!list->head && !list->items_num) {
-        LOG_DEBUG("list is empty");
+        LOG_VERBOSE("list is empty");
         return NULL;
     }
     node_t ptr = list->head;
     while (ptr != NULL)
     {
         if(ptr->next == NULL) {
-            LOG_DEBUG("found last node with ID %llu", ptr->id);
+            LOG_VERBOSE("found last node with ID %llu", ptr->id);
             return ptr;
         }
         ptr = ptr->next;
     }
 
-    LOG_DEBUG("not found any node");
+    LOG_VERBOSE("not found any node");
     return NULL;
 }
 
@@ -257,7 +257,7 @@ node_t linkedl_find_node_with_id(linkedl_t list, uint64_t id) {
     while (ptr != NULL)
     {
         if(ptr->id == id) {
-            LOG_DEBUG("found node with ID %llu", ptr->id);
+            LOG_VERBOSE("found node with ID %llu", ptr->id);
             return ptr;
         }
         ptr = ptr->next;
@@ -281,7 +281,7 @@ void* linkedl_find(linkedl_t list, char* name) {
         LOG_WARN("cannot find node %llu in list %s", id, list->name);
         return NULL;
     }
-    LOG_DEBUG("found node %llu in list: %s", id, list->name);
+    LOG_VERBOSE("found node %llu in list: %s", id, list->name);
     return node->item; 
 }
 
@@ -299,7 +299,7 @@ void* linkedl_find_with_id(linkedl_t list, uint64_t id) {
         LOG_WARN("cannot find node %llu in list %s", id, list->name);
         return NULL;
     }
-    LOG_DEBUG("found node %llu in list: %s", id, list->name);
+    LOG_VERBOSE("found node %llu in list: %s", id, list->name);
     return node->item;     
 }
 
@@ -312,10 +312,10 @@ uint64_t linkedl_hash_string(char* string) {
         return 0;
     }
 
-    LOG_DEBUG("string to hash: %s", string);
+    LOG_VERBOSE("string to hash: %s", string);
     while((c = (*string++))) {
         hash = ((hash << 5) + hash) + c;   /*hash * 33 + c*/
     }
-    LOG_DEBUG("hash is %llu", hash);
+    LOG_VERBOSE("hash is %llu", hash);
     return hash;
 }

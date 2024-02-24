@@ -12,6 +12,6 @@
 #define CLI_ERR_CONNECT_FAIL            CLI_ERR_BASE + 0x0001
 
 
-int cli_set_remote_logging(uint16_t port);
+int cli_set_remote_logging(uint16_t port, const char* address);
 
 void cli_accept_task(void* args);

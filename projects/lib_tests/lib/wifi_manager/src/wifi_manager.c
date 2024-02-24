@@ -30,7 +30,7 @@ int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
 
     snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", &ssid[0]);
 
-    LOG_DEBUG("generated stored AP as JSON");
+    LOG_VERBOSE("generated stored AP as JSON");
     return err;
 }
 
@@ -138,7 +138,7 @@ int wifi_manager_fetch_ap_list(char* out_buffer, size_t buflen) {
     wifi_c_store_scan_result_as_json(out_buffer, buflen);
     
     //LOG_DEBUG("stored scanning result: %s", &buffer[0]);
-    LOG_DEBUG("wifi manager scan complete, scanned: %d APs", scan_results->ap_count);
+    LOG_VERBOSE("wifi manager scan complete, scanned: %d APs", scan_results->ap_count);
     return err;
 }
 

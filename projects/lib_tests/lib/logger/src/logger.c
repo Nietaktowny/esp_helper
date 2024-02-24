@@ -122,7 +122,7 @@ int logger_create_semphr(void)
         return LOGGER_ERR_MUTEX_ERROR;
     }
 
-    LOG_DEBUG("logger mutex was created");
+    LOG_VERBOSE("logger mutex was created");
     return 0;
 }
 

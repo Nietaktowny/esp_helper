@@ -33,5 +33,5 @@ void app_main(void)
     ESP_ERROR_CHECK(wifi_c_start_sta(MY_SSID, MY_PSK));
 
     //start CLI manager
-    cli_set_remote_logging(27015);
+    cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
 }

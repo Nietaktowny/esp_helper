@@ -1,6 +1,6 @@
 {
     "name": "err_controller",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "keywords": "error, error managing, controller, cexception",
     "description": "Controller library used to control errors.",
     "dependencies": {

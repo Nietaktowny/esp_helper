@@ -1,8 +1,0 @@
-{
-	"name": "http_server",
-	"version": "1.0.0",
-	"keywords": "keyword",
-	"description": "Library used to help with creating HTTP servers on ESP32.",
-	"frameworks": ["espidf"],
-	"platforms": ["espressif32"]
-}
