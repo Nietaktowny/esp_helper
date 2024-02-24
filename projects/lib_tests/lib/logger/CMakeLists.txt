@@ -1,4 +1,3 @@
 idf_component_register(
     SRCS "src/logger.c" 
-    INCLUDE_DIRS "include" 
-    PRIV_REQUIRES err_controller memory_utils)
+    INCLUDE_DIRS "include" )

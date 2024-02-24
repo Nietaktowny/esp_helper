@@ -1,3 +1,13 @@
+/**
+ * @file logger.h
+ * @author Wojciech Mytych
+ * @brief Logger library header file.
+ * @version 0.1
+ * @date 2024-02-24
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #pragma once
 #include "ansi_colors.h"
 #include <stdio.h>
@@ -39,6 +49,27 @@
 #ifndef VERBOSE_TAG
   #define VERBOSE_TAG "VERBOSE"                                       ///< Verbose logs tag.
 #endif
+
+#ifndef VERBOSE_COLOR
+  #define VERBOSE_COLOR WHITE
+#endif
+#ifndef DEBUG_COLOR
+  #define DEBUG_COLOR BLUE
+#endif
+#ifndef INFO_COLOR
+  #define INFO_COLOR GREEN
+#endif
+#ifndef WARN_COLOR
+  #define WARN_COLOR YELLOW
+#endif
+#ifndef ERROR_COLOR
+  #define ERROR_COLOR RED
+#endif
+#ifndef FATAL_COLOR
+  #define FATAL_COLOR RED_BOLD_UNDERLINE
+#endif
+
+
 
                             /*color,time| tag  | file:line  | fun:line | */
 #define LOG_VERBOSE_FORMAT "%s%s | %-5s | %-15s:%d | %s:%d | "        ///< Verbose format of logs, default to all logs with levels higher than info.
@@ -96,6 +127,24 @@ int logger_clear_all_log_files(void);
  * @return uint8_t Previous log level.
  */
 uint8_t logger_set_log_level(uint8_t level);
+
+/**
+ * @brief Enable silent mode - don't log to stderr.
+ * 
+ * @return uint8_t Previous value of silent mode.
+ * @retval 0 if silent mode was not enabled.
+ * @retval 1 if silent mode was already enabled.
+ */
+uint8_t logger_enable_silent_mode(void);
+
+/**
+ * @brief Disable silent mode - log all logs to stderr.
+ * 
+ * @return uint8_t Previous value of silent mode.
+ * @retval 0 if silent mode was not enabled.
+ * @retval 1 if silent mode was already enabled.
+ */
+uint8_t logger_disable_silent_mode(void);
 
 /**
  * @brief Get pointer to logger context.
@@ -183,7 +232,7 @@ static inline char *timenow() {
  */
 #if SET_LOG_LEVEL >= LOG_LEVEL_FATAL
 #define LOG_FATAL(...)     logger_get_lock();        \
-                           logger_write(LOG_LEVEL_FATAL, LOG_VERBOSE_FORMAT, RED_BOLD_UNTERLINE, timenow(), FATAL_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                           logger_write(LOG_LEVEL_FATAL, LOG_VERBOSE_FORMAT, FATAL_COLOR, timenow(), FATAL_TAG, __FILE__, __LINE__, __func__, __LINE__); \
                            logger_write(LOG_LEVEL_FATAL, __VA_ARGS__);   \
                            logger_write(LOG_LEVEL_FATAL, "%s\n", RESET); \
                            logger_flush_logs();      \
@@ -198,7 +247,7 @@ static inline char *timenow() {
  */
 #if SET_LOG_LEVEL >= LOG_LEVEL_ERROR
 #define LOG_ERROR(...)     logger_get_lock();        \
-                           logger_write(LOG_LEVEL_ERROR, LOG_VERBOSE_FORMAT, RED, timenow(), ERROR_TAG, __FILE__, __LINE__, __func__, __LINE__);   \
+                           logger_write(LOG_LEVEL_ERROR, LOG_VERBOSE_FORMAT, ERROR_COLOR, timenow(), ERROR_TAG, __FILE__, __LINE__, __func__, __LINE__);   \
                            logger_write(LOG_LEVEL_ERROR, __VA_ARGS__);   \
                            logger_write(LOG_LEVEL_ERROR, "%s\n", RESET); \
                            logger_flush_logs();       \
@@ -213,7 +262,7 @@ static inline char *timenow() {
  */
 #if SET_LOG_LEVEL >= LOG_LEVEL_WARN
 #define LOG_WARN(...)     logger_get_lock();        \
-                          logger_write(LOG_LEVEL_WARN, LOG_VERBOSE_FORMAT, YELLOW, timenow(), WARN_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                          logger_write(LOG_LEVEL_WARN, LOG_VERBOSE_FORMAT, WARN_COLOR, timenow(), WARN_TAG, __FILE__, __LINE__, __func__, __LINE__); \
                           logger_write(LOG_LEVEL_WARN, __VA_ARGS__);   \
                           logger_write(LOG_LEVEL_WARN, "%s\n", RESET); \
                           logger_flush_logs();     \
@@ -229,14 +278,14 @@ static inline char *timenow() {
 #if SET_LOG_LEVEL >= LOG_LEVEL_INFO
   #ifndef USE_VERBOSE_FORMAT
     #define LOG_INFO(...)     logger_get_lock();      \
-                              logger_write(LOG_LEVEL_INFO, LOG_STRICT_FORMAT, GREEN, timenow(), INFO_TAG, __func__, __LINE__); \
+                              logger_write(LOG_LEVEL_INFO, LOG_STRICT_FORMAT, INFO_COLOR, timenow(), INFO_TAG, __func__, __LINE__); \
                               logger_write(LOG_LEVEL_INFO, __VA_ARGS__);   \
                               logger_write(LOG_LEVEL_INFO, "%s\n", RESET); \
                               logger_flush_logs();      \
                               logger_return_lock()
     #else
     #define LOG_INFO(...)     logger_get_lock();      \
-                              logger_write(LOG_LEVEL_INFO, LOG_VERBOSE_FORMAT, GREEN, timenow(), INFO_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                              logger_write(LOG_LEVEL_INFO, LOG_VERBOSE_FORMAT, INFO_COLOR, timenow(), INFO_TAG, __FILE__, __LINE__, __func__, __LINE__); \
                               logger_write(LOG_LEVEL_INFO, __VA_ARGS__);   \
                               logger_write(LOG_LEVEL_INFO, "%s\n", RESET); \
                               logger_flush_logs();
@@ -253,14 +302,14 @@ static inline char *timenow() {
 #if SET_LOG_LEVEL >= LOG_LEVEL_DEBUG
   #ifndef USE_VERBOSE_FORMAT
     #define LOG_DEBUG(...)     logger_get_lock();      \
-                               logger_write(LOG_LEVEL_DEBUG, LOG_STRICT_FORMAT, RESET, timenow(), DEBUG_TAG, __func__, __LINE__); \
+                               logger_write(LOG_LEVEL_DEBUG, LOG_STRICT_FORMAT, DEBUG_COLOR, timenow(), DEBUG_TAG, __func__, __LINE__); \
                                logger_write(LOG_LEVEL_DEBUG, __VA_ARGS__);   \
                                logger_write(LOG_LEVEL_DEBUG, "%s\n", RESET); \
                                logger_flush_logs();    \
                                logger_return_lock();
     #else
     #define LOG_DEBUG(...)     logger_get_lock();      \
-                               logger_write(LOG_LEVEL_DEBUG, LOG_VERBOSE_FORMAT, RESET, timenow(), DEBUG_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                               logger_write(LOG_LEVEL_DEBUG, LOG_VERBOSE_FORMAT, DEBUG_COLOR, timenow(), DEBUG_TAG, __FILE__, __LINE__, __func__, __LINE__); \
                                logger_write(LOG_LEVEL_DEBUG, __VA_ARGS__);   \
                                logger_write(LOG_LEVEL_DEBUG, "%s\n", RESET); \
                                logger_flush_logs();     \
@@ -277,14 +326,14 @@ static inline char *timenow() {
 #if SET_LOG_LEVEL >= LOG_LEVEL_VERBOSE
   #ifndef USE_VERBOSE_FORMAT
     #define LOG_VERBOSE(...)   logger_get_lock();      \
-                               logger_write(LOG_LEVEL_VERBOSE, LOG_STRICT_FORMAT, RESET, timenow(), VERBOSE_TAG, __func__, __LINE__); \
+                               logger_write(LOG_LEVEL_VERBOSE, LOG_STRICT_FORMAT, VERBOSE_COLOR, timenow(), VERBOSE_TAG, __func__, __LINE__); \
                                logger_write(LOG_LEVEL_VERBOSE, __VA_ARGS__);   \
                                logger_write(LOG_LEVEL_VERBOSE, "%s\n", RESET); \
                                logger_flush_logs();    \
                                logger_return_lock();
     #else
     #define LOG_VERBOSE(...)   logger_get_lock();      \
-                               logger_write(LOG_LEVEL_VERBOSE, LOG_VERBOSE_FORMAT, RESET, timenow(), VERBOSE_TAG, __FILE__, __LINE__, __func__, __LINE__); \
+                               logger_write(LOG_LEVEL_VERBOSE, LOG_VERBOSE_FORMAT, VERBOSE_COLOR, timenow(), VERBOSE_TAG, __FILE__, __LINE__, __func__, __LINE__); \
                                logger_write(LOG_LEVEL_VERBOSE, __VA_ARGS__);   \
                                logger_write(LOG_LEVEL_VERBOSE, "%s\n", RESET); \
                                logger_flush_logs();     \

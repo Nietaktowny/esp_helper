@@ -4,6 +4,10 @@
 #include "freertos/task.h"
 #include <stdio.h>
 
+//Change fatal color to purple, to use it to log test names.
+#include "ansi_colors.h"
+#define FATAL_COLOR PURPLE_BOLD
+
 #include "i2c_controller_internal.h"
 #include "logger.h"
 

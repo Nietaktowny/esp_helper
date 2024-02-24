@@ -6,6 +6,10 @@
 #include "esp_err.h"
 #include "esp_wifi_types.h"
 
+//Change fatal color to purple, to use it to log test names.
+#include "ansi_colors.h"
+#define FATAL_COLOR PURPLE_BOLD
+
 #include "logger.h"
 #include "errors_list.h"
 #include "nvs_flash.h"

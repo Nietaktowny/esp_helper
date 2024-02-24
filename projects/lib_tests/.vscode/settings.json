@@ -11,6 +11,7 @@
         "memory_utils.h": "c",
         "freertos.h": "c",
         "esp_log.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "errors_list.h": "c"
     }
 }

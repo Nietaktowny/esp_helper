@@ -9,9 +9,10 @@
  * 
  */
 
-#include <stdio.h>
 #include "logger.h"
 #include "ansi_colors.h"
+
+#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <pthread.h>
@@ -139,6 +140,18 @@ uint8_t logger_set_log_level(uint8_t level)
 {
     uint8_t prev = logger.level;
     logger.level = level;
+    return prev;
+}
+
+uint8_t logger_enable_silent_mode(void) {
+    uint8_t prev = logger.silent_mode;
+    logger.silent_mode = 1;
+    return prev;
+}
+
+uint8_t logger_disable_silent_mode(void) {
+    uint8_t prev = logger.silent_mode;
+    logger.silent_mode = 0;
     return prev;
 }
 
