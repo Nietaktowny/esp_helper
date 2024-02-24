@@ -29,7 +29,7 @@ jobs:
           # Doxygen configuration file path
           doxygenconf: projects/lib_tests/Doxyfile
           # Generated HTML documents output folder
-          htmloutput: projects/lib_tests/
+          htmloutput: projects/lib_tests/docs
           # Toggle dark mode CSS
           darkmode: true
       - name: esp-idf run qemu tests
