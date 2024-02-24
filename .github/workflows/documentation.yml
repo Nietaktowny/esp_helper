@@ -22,6 +22,7 @@ jobs:
         submodules: 'false'
     - name: Add Doxygen Awesome
       run: |
+        mkdir docs
         cd docs
         git submodule add https://github.com/jothepro/doxygen-awesome-css.git
         cd doxygen-awesome-css
