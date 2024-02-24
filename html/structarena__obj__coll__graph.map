@@ -1,6 +1,0 @@
-<map id="arena_obj" name="arena_obj">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,139,83,165"/>
-<area shape="rect" id="Node000002" href="$structnode.html" title=" " alt="" coords="19,5,69,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,47,47,138,41,138,41,47"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="86,5,92,10,95,18,93,26,87,31,69,33,69,28,85,26,89,23,90,18,88,13,83,9"/>
-</map>

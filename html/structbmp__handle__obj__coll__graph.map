@@ -1,7 +1,0 @@
-<map id="bmp_handle_obj" name="bmp_handle_obj">
-<area shape="rect" id="Node000001" title="BMP280 device object." alt="" coords="31,183,146,208"/>
-<area shape="rect" id="Node000002" href="$structi2c__c__device__handle__obj.html" title="I2C device object." alt="" coords="5,94,172,120"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,135,91,182,86,182,86,135"/>
-<area shape="rect" id="Node000003" href="$structi2c__c__bus__handle__obj.html" title="I2C bus object." alt="" coords="14,5,163,31"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,47,91,94,86,94,86,47"/>
-</map>

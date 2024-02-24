@@ -1,8 +1,0 @@
-{
-    "name": "nvs_controller",
-    "version": "1.0.0",
-    "keywords": "nvs, driver, controller, espressif32",
-    "description": "Controller library used to control NVS with ESP-IDF.",
-    "frameworks": ["*"],
-    "platforms": ["*"]
-}

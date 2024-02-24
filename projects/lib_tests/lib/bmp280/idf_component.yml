@@ -1,4 +1,0 @@
-dependencies:
-  idf: '>=5.0' 
-description: Library used to control BMP280 chips with ESP-IDF.
-version: 1.0.2

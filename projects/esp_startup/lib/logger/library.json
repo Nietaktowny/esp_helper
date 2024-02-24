@@ -1,8 +1,0 @@
-{
-	"name": "logger",
-	"version": "1.0.0",
-	"keywords": "keyword",
-	"description": "Simple logging library",
-	"frameworks": ["*"],
-	"platforms": ["*"]
-}

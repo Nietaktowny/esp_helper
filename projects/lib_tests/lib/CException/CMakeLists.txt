@@ -1,1 +1,0 @@
-idf_component_register(SRCS "lib/CException.c" INCLUDE_DIRS "lib")

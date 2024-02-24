@@ -1,4 +1,0 @@
-dependencies:
-  idf: '>=5.0' 
-description: Single bound linked list.
-version: 1.0.5
