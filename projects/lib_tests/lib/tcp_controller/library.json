@@ -1,0 +1,18 @@
+{
+	"name": "tcp_controller",
+	"version": "1.2.2",
+	"keywords": "tcp, server, client, sockets, socket, esp, espressif32, idf",
+	"description": "Creates and manages simple TCP server using sockets.",
+	"authors":
+    {
+        "name": "nietaktowny",
+        "url": "https://github.com/Nietaktowny"
+    },
+	"dependencies": {
+		"nietaktowny/logger": "^2.0.2",
+		"nietaktowny/err_controller": "^1.0.3",
+		"nietaktowny/memory_utils": "^1.0.4"
+	  },
+	"frameworks": ["espidf"],
+	"platforms": ["espressif32"]
+}

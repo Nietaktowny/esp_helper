@@ -1,0 +1,8 @@
+{
+	"name": "tcp_controller",
+	"version": "1.2.0",
+	"keywords": "keyword",
+	"description": "Creates and manages simple TCP server using sockets.",
+	"frameworks": ["espidf"],
+	"platforms": ["espressif32"]
+}

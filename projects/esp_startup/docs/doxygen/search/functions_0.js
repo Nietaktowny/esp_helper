@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['wifi_5fc_5fap_5fget_5fssid_0',['wifi_c_ap_get_ssid',['../wifi__controller_8h.html#a2226f799d81d2e553dfe4da5e3a76686',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fchange_5fmode_1',['wifi_c_change_mode',['../wifi__controller_8h.html#a9a31bfae33079bc395d64c40933a73c8',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fcheck_5fif_5fsta_5fis_5fconnected_2',['wifi_c_check_if_sta_is_connected',['../wifi__controller_8h.html#affbfd7d0d067642ab70151c8f7491a5c',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fcreate_5fdefault_5fevent_5floop_3',['wifi_c_create_default_event_loop',['../wifi__controller_8h.html#a21e6edcb1e0ba687150f84a3c55fe367',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fdeinit_4',['wifi_c_deinit',['../wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fdisconnect_5',['wifi_c_disconnect',['../wifi__controller_8h.html#a21bc62fadc9d1f53dcb22a75658331e2',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fget_5fap_5fipv4_6',['wifi_c_get_ap_ipv4',['../wifi__controller_8h.html#a4910697532f4821bf2e43c4303647c39',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fget_5fsta_5fipv4_7',['wifi_c_get_sta_ipv4',['../wifi__controller_8h.html#a5ffe20bdd9ee714423ca066be11ced00',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fget_5fstatus_8',['wifi_c_get_status',['../wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fget_5fstatus_5fas_5fjson_9',['wifi_c_get_status_as_json',['../wifi__controller_8h.html#acc993cc2a0481bf076e5361048057a90',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fget_5fwifi_5fmode_5fas_5fstring_10',['wifi_c_get_wifi_mode_as_string',['../wifi__controller_8h.html#a56ae8fcaadef9727ddecc3024e7df340',1,'wifi_controller.h']]],
+  ['wifi_5fc_5finit_5fwifi_11',['wifi_c_init_wifi',['../wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fprint_5fscanned_5fap_12',['wifi_c_print_scanned_ap',['../wifi__controller_8h.html#ab4d28319c2f1ca3af24419bbdcfe195a',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fscan_5fall_5fap_13',['wifi_c_scan_all_ap',['../wifi__controller_8h.html#ae25f019b9ffc486ec4b7e5a8e23d449a',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fscan_5ffor_5fap_5fwith_5fssid_14',['wifi_c_scan_for_ap_with_ssid',['../wifi__controller_8h.html#a1b0e26ab7e6cfed5ba13bc64696e399b',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fsta_5fget_5fap_5fssid_15',['wifi_c_sta_get_ap_ssid',['../wifi__controller_8h.html#afefafe0d63b68389057e631283b3f890',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fsta_5freconnect_16',['wifi_c_sta_reconnect',['../wifi__controller_8h.html#a470e145a873a3529701ac7901acf3ca7',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fsta_5fregister_5fconnect_5fhandler_17',['wifi_c_sta_register_connect_handler',['../wifi__controller_8h.html#a12695f7f8390b032f86d7317f8480dde',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fstart_5fap_18',['wifi_c_start_ap',['../wifi__controller_8h.html#a30a6f81293cb4d466933926997d2d884',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fstart_5fsta_19',['wifi_c_start_sta',['../wifi__controller_8h.html#a222008978f46f659f29a0f44e4985780',1,'wifi_controller.h']]],
+  ['wifi_5fc_5fstore_5fscan_5fresult_5fas_5fjson_20',['wifi_c_store_scan_result_as_json',['../wifi__controller_8h.html#a65a29cdfc998ed4e91bb9088d2eebc37',1,'wifi_controller.h']]]
+];

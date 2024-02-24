@@ -1,0 +1,19 @@
+{
+	"name": "http_client",
+	"version": "1.0.3",
+	"keywords": "http, http_client, client",
+	"description": "Library used to act as HTPP Client.",
+	"authors":
+    {
+        "name": "nietaktowny",
+        "url": "https://github.com/Nietaktowny"
+    },
+	"dependencies": {
+		"nietaktowny/logger": "^2.0.1",
+		"nietaktowny/err_controller": "^1.0.3",
+		"nietaktowny/memory_utils": "^1.0.3",
+		"nietaktowny/arena": "^1.0.3"
+	  },
+	"frameworks": ["espidf"],
+	"platforms": ["espressif32"]
+}

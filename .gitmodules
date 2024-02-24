@@ -1,0 +1,3 @@
+[submodule "wifi_controller"]
+	path = wifi_controller
+	url = https://github.com/Nietaktowny/wifi_controller.git

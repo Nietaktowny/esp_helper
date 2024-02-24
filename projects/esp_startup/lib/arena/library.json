@@ -1,0 +1,19 @@
+{
+    "name": "arena",
+    "version": "1.0.2",
+    "keywords": "memory, arena",
+    "description": "Simple memory arena.",
+    "authors":
+    {
+        "name": "nietaktowny",
+        "url": "https://github.com/Nietaktowny"
+    },
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/Nietaktowny/base_libraries"
+    },
+    "frameworks": ["*"],
+    "platforms": ["*"]
+}
+
