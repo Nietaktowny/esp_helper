@@ -22,3 +22,7 @@ jobs:
       - name: Install Doxygen
         run: sudo apt-get install doxygen -y
         shell: bash
+      - name: Generate Doxygen Documentation
+        working-directory: projects/lib_tests
+        run: doxygen Doxyfile
+        shell: bash
