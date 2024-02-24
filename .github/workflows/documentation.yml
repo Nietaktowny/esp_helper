@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Doxygen Action
+name: Create documentation
 
 on: [ push ]
 
@@ -34,5 +34,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         # Default Doxyfile build documentation to html directory. 
         # Change the directory if changes in Doxyfile
-        publish_dir: docs
+        publish_dir: .
                   
