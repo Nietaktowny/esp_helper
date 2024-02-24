@@ -19,9 +19,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
-      - name: Install Doxygen
-        run: sudo apt-get install doxygen -y
-        shell: bash
       - name: esp-idf run qemu tests
         env:
           IDF_TARGET: ${{ matrix.idf_target }}
