@@ -115,10 +115,10 @@ projects/lib_tests/lib/CException/test/TestException.c:63:10: style: Variable 'T
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:47:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:807:25: style: The scope of the variable 'record' can be reduced. [variableScope]
+projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:808:25: style: The scope of the variable 'record' can be reduced. [variableScope]
     wifi_c_ap_record_t *record;
                         ^
-projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:935:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
+projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:936:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
         uint16_t ap_len = 0;
                  ^
 projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:99:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
@@ -145,9 +145,21 @@ projects/lib_tests/src/main.c:92:25: note: Assignment 'wifi_c_info=NULL', assign
 projects/lib_tests/src/main.c:102:80: note: Null pointer dereference
         snprintf(device_info, 350, "device_id=%d&wifi_info=%s", ESP_DEVICE_ID, wifi_c_info);
                                                                                ^
+projects/lib_tests/test/embedded/test_http_client/test_http_client.c:63:0: error: Syntax error in #elif [preprocessorErrorDirective]
+    #elif
+^
+projects/lib_tests/test/embedded/test_http_client/test_http_client.c:0:0: information: This file is not analyzed. Cppcheck failed to extract a valid configuration. Use -v for more details. [noValidConfiguration]
+
+^
 projects/lib_tests/test/embedded/test_wifi_controller/test_wifi_controller.c:24:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
         err = nvs_flash_init();
             ^
+projects/lib_tests/test_http_client/main/main.c:44:37: style: Variable 'expected_resp' is assigned a value that is never used. [unreadVariable]
+    const char* const expected_resp = "[{\"gpio\":22,\"state\":1,\"gpio_alias\":\"Relay\"},{\"gpio\":2,\"state\":1,\"gpio_alias\":\"Onboard LED\"}]";
+                                    ^
+projects/lib_tests/test_http_client/main/main.c:47:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err = http_client_get(address, path, resp, 1024);
+        ^
 projects/relays/src/main.c:105:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
         snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
                  ^
