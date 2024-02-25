@@ -22,10 +22,8 @@ jobs:
         submodules: 'false'
     - name: Add Doxygen Awesome
       run: |
-#  git config --global --add safe.directory /__w/esp_helper/esp_helper
         mkdir docs
         cd docs
-#   doxygen -w html header.html delete_me.html delete_me.css
         git submodule add https://github.com/jothepro/doxygen-awesome-css.git
         cd doxygen-awesome-css
         git checkout v2.3.1
