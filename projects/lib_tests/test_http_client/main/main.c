@@ -34,7 +34,7 @@ void app_main(void)
     ESP_ERROR_CHECK(wifi_c_init_wifi(WIFI_C_MODE_STA));
 
     //Start STA and connect to AP:
-    ESP_ERROR_CHECK(wifi_c_start_sta(SOL_SSID, SOL_PSK));
+    ESP_ERROR_CHECK(wifi_c_start_sta(MY_SSID, MY_PSK));
 
     //given
     int err = -1;
