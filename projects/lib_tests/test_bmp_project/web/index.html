@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" href="styles.css">
+		<script async src="code.js"></script>
+		<title>wifi-manager</title>
+	</head>
+	<body>
+		<div class="app">
+			<h1>Wifi Manager</h1>
+			<div id="device_info">
+				<div id="ap_info">
+				</div>
+				<div id="sta_info">
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<form onsubmit="return false;" action="/scan" method="get" onclick="getAccessPoints();"><button>Scan</button></form>
+			<form onsubmit="return false;" action="/restart" method="get" onclick="getRestart();"><button>Restart</button></form>
+			<form onsubmit="return false;" action="/clear" method="get" onclick="getClear();"><button>Clear</button></form>
+
+			<div class="input_wrapper">
+				<form onsubmit="return false;" action="/connect" method="post">
+					<div>
+						<label for="ssid">Select SSID:   </label>
+						<select id="ssid">
+						</select>
+					</div>
+					<div>
+						<label for="password">Enter Password:   </label>
+						<input type="password" id="password">
+					</div>
+
+					<div>
+						<button type="submit" id="conect" onclick="postConnectRequest();">Connect</button>
+					</div>
+				</form>
+			</div>
+			<div id="apps_wrapper">
+			</div>
+		</div>
+	</body>
+	<script src="https://kit.fontawesome.com/21678364ff.js" crossorigin="anonymous"></script>
+<html>
