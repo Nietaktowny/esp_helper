@@ -2,7 +2,11 @@
  * @file http_client.c
  * @author Wojciech Mytych (wojciech.luksz.mytych@gmail.com)
  * @brief Http client source file.
- * @version 1.0.3
+ * 
+ * @todo Implement get and post versions using arena
+ * @todo Implement ESP8266-RTOS-SDK compliant version
+ * 
+ * @version 1.0.5
  * @date 2024-02-25
  * 
  * @copyright Copyright (c) 2024
