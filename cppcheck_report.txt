@@ -154,6 +154,30 @@ projects/lib_tests/test/embedded/test_http_client/test_http_client.c:0:0: inform
 projects/lib_tests/test/embedded/test_wifi_controller/test_wifi_controller.c:24:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
         err = nvs_flash_init();
             ^
+projects/lib_tests/test_bmp_project/main/main.c:108:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+                 ^
+projects/lib_tests/test_bmp_project/main/main.c:97:25: note: Assignment 'device_info=NULL', assigned value is 0
+    char *device_info = NULL;
+                        ^
+projects/lib_tests/test_bmp_project/main/main.c:108:18: note: Null pointer dereference
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+                 ^
+projects/lib_tests/test_bmp_project/main/main.c:108:76: warning:inconclusive: Possible null pointer dereference: wifi_c_info [nullPointer]
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+                                                                           ^
+projects/lib_tests/test_bmp_project/main/main.c:94:25: note: Assignment 'wifi_c_info=NULL', assigned value is 0
+    char *wifi_c_info = NULL;
+                        ^
+projects/lib_tests/test_bmp_project/main/main.c:108:76: note: Null pointer dereference
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+                                                                           ^
+projects/lib_tests/test_bmp_project/main/main.c:50:11: style: The scope of the variable 'altitude' can be reduced. [variableScope]
+    float altitude = 0;
+          ^
+projects/lib_tests/test_bmp_project/main/main.c:50:20: style: Variable 'altitude' is assigned a value that is never used. [unreadVariable]
+    float altitude = 0;
+                   ^
 projects/lib_tests/test_http_client/main/main.c:44:37: style: Variable 'expected_resp' is assigned a value that is never used. [unreadVariable]
     const char* const expected_resp = "[{\"gpio\":22,\"state\":1,\"gpio_alias\":\"Relay\"},{\"gpio\":2,\"state\":1,\"gpio_alias\":\"Onboard LED\"}]";
                                     ^
