@@ -1,4 +1,4 @@
 dependencies:
   idf: '>=5.0' 
 description: Creates and manages simple TCP server using sockets.
-version: 1.2.2
+version: 1.2.3

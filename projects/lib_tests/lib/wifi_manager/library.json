@@ -1,6 +1,6 @@
 {
 	"name": "wifi_manager",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"keywords": "keyword",
 	"description": "Library used to provide web abstraction on connecting to WiFi.",
 	"authors":
@@ -9,12 +9,12 @@
         "url": "https://github.com/Nietaktowny"
     },
 	"dependencies": {
-		"nietaktowny/wifi_controller": "^2.0.1",
-		"nietaktowny/logger": "^2.0.2",
-		"nietaktowny/spiffs_controller": "^1.0.2",
-		"nietaktowny/err_controller": "^1.0.3",
-		"nietaktowny/memory_utils": "^1.0.4",
-		"nietaktowny/nvs_controller": "1.0.3"
+		"nietaktowny/wifi_controller": "2.0.2",
+		"nietaktowny/logger": "2.0.2",
+		"nietaktowny/spiffs_controller": "1.0.3",
+		"nietaktowny/err_controller": "1.0.3",
+		"nietaktowny/memory_utils": "1.0.5",
+		"nietaktowny/nvs_controller": "1.0.4"
 	  },
 	"frameworks": ["espidf"],
 	"platforms": ["espressif32"]

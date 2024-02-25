@@ -1,6 +1,6 @@
 {
 	"name": "spiffs_controller",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"keywords": "spiffs, driver, esp32, esp, idf, filesystem",
 	"description": "Library used to use SPIFFS Filesystem on ESP32.",
 	"authors":
@@ -9,9 +9,9 @@
         "url": "https://github.com/Nietaktowny"
     },
 	"dependencies": {
-		"nietaktowny/logger": "^2.0.2",
-		"nietaktowny/err_controller": "^1.0.3",
-		"nietaktowny/memory_utils": "^1.0.4"
+		"nietaktowny/logger": "2.0.2",
+		"nietaktowny/err_controller": "1.0.3",
+		"nietaktowny/memory_utils": "1.0.5"
 	  },
 	"frameworks": ["espidf"],
 	"platforms": ["espressif32"]

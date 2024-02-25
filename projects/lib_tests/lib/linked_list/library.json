@@ -1,6 +1,6 @@
 {
     "name": "linked_list",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "keywords": "linked, list",
     "description": "Single bound linked list.",
 	"authors":
@@ -9,9 +9,9 @@
         "url": "https://github.com/Nietaktowny"
     },
 	"dependencies": {
-		"nietaktowny/logger": "^2.0.1",
-		"nietaktowny/err_controller": "^1.0.3",
-		"nietaktowny/memory_utils": "^1.0.3"
+		"nietaktowny/logger": "2.0.2",
+		"nietaktowny/err_controller": "1.0.3",
+		"nietaktowny/memory_utils": "1.0.5"
 	  },
     "repository":
     {
