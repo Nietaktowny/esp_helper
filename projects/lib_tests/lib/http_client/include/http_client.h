@@ -2,7 +2,7 @@
  * @file http_client.h
  * @author Wojciech Mytych (wojciech.luksz.mytych@gmail.com)
  * @brief HTTP Client header file.
- * @version 1.0.3
+ * @version 1.0.5
  * @date 2024-02-25
  * 
  * @copyright Copyright (c) 2024

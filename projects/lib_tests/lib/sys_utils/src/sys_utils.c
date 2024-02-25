@@ -2,7 +2,10 @@
  * @file sys_utils.c
  * @author Wojciech Mytych
  * @brief Source file of sys_utils library.
- * @version 0.1
+ * 
+ * @todo Implement FreeRTOS wrapper functions (delay, create task, delete task itd.) or use pthreads
+ * 
+ * @version 1.0.2
  * @date 2024-02-17
  * 
  * @copyright Copyright (c) 2024
@@ -14,6 +17,8 @@
 #include "err_controller.h"
 #include "memory_utils.h"
 
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 #include "esp_mac.h"
 #include "esp_system.h"

@@ -10,7 +10,6 @@
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "driver/i2c.h"
 
 /**
  * @brief BMP280 device type.
