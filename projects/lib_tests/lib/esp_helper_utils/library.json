@@ -1,6 +1,6 @@
 {
 	"name": "esp_helper_utils",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"keywords": "esp_helper, utilities, esp32, esp, idf, helper",
 	"description": "ESP Helper utilities library.",
 	"authors":
@@ -9,12 +9,12 @@
         "url": "https://github.com/Nietaktowny"
     },
 	"dependencies": {
-		"nietaktowny/wifi_controller": "^2.0.1",
-		"nietaktowny/logger": "^2.0.1",
-		"nietaktowny/ota_controller": "^1.0.3",
-		"nietaktowny/err_controller": "^1.0.3",
-		"nietaktowny/memory_utils": "^1.0.3",
-		"nietaktowny/sys_utils": "^1.0.0"
+		"nietaktowny/wifi_controller": "2.0.2",
+		"nietaktowny/logger": "2.0.2",
+		"nietaktowny/ota_controller": "1.0.5",
+		"nietaktowny/err_controller": "1.0.3",
+		"nietaktowny/memory_utils": "1.0.5",
+		"nietaktowny/sys_utils": "1.0.2"
 	  },
 	"frameworks": ["espidf"],
 	"platforms": ["espressif32"]
