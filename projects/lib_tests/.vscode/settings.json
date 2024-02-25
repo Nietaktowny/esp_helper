@@ -13,6 +13,7 @@
         "esp_log.h": "c",
         "stdio.h": "c",
         "errors_list.h": "c",
-        "event_groups.h": "c"
+        "event_groups.h": "c",
+        "stddef.h": "c"
     }
 }
