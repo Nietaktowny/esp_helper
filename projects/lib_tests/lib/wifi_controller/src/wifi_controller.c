@@ -621,7 +621,8 @@ int wifi_c_start_ap(const char *ssid, const char *password)
 }
 
 /**
- * @todo changing connection timeout time
+ * @todo Changing connection timeout time.
+ * @todo Printing SSID name that we try to connect.
  */
 int wifi_c_start_sta(const char *ssid, const char *password)
 {
