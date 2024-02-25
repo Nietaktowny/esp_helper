@@ -104,11 +104,11 @@ void inspect_task(void *args)
         uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
         wifi_c_get_status_as_json(wifi_c_info, 300);
         snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
-        http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info);
+        http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
         LOG_DEBUG("sent wifi_c_status to the server");
         LOG_DEBUG("Currently available heap: %lu", free_heap);
         LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
-        vTaskDelay(pdMS_TO_TICKS(60000 * 3)); // TODO Make it a constant or configuration variable?
+        vTaskDelay(pdMS_TO_TICKS(60000 * 3)); /** @todo Make it a constant or configuration variable?*/
     }
     DELETE(wifi_c_info);
     DELETE(device_info);
