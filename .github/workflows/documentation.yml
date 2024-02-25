@@ -22,6 +22,7 @@ jobs:
         submodules: 'false'
     - name: Add Doxygen Awesome
       run: |
+        git config --global --add safe.directory /__w/esp_helper/esp_helper
         mkdir docs
         cd docs
         doxygen -w html header.html delete_me.html delete_me.css
