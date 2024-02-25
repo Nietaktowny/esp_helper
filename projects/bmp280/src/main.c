@@ -81,7 +81,7 @@ void read_temperature_task(void *args)
         LOG_INFO("altitude: %.2f m. n. p. m.", altitude);
         sprintf(post_data, "device_id=%s&temperature=%.2f&pressure=%.2f&altitude=%.2f", device_id, temperature, pressure * 0.01, altitude);
         LOG_DEBUG("data to send to database: %s", post_data);
-        err = http_client_post("wmytych.usermd.net", "modules/setters/insert_data.php", post_data);
+        err = http_client_post("wmytych.usermd.net", "modules/setters/insert_data.php", post_data, HTTP_CLIENT_POST_USE_STRLEN);
         LOG_INFO("Client POST request returned: %d", err);
         vTaskDelay(pdMS_TO_TICKS(30000));
     }
