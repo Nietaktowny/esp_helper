@@ -191,14 +191,13 @@ void test_if_http_get_returns_expected_response(void) {
     ABORT_IF_STA_CONNECTED_STATUS(false);
 
     //given
-    int err = -1;
     const char* address = "wmytych.usermd.net";
     const char* path = "modules/getters/get_gpio_state.php?device_id=222222";
     char* resp = malloc(1025);
     const char* const expected_resp = "[{\"gpio\":22,\"state\":1,\"gpio_alias\":\"Relay\"},{\"gpio\":2,\"state\":1,\"gpio_alias\":\"Onboard LED\"}]";
 
     //when
-    err = http_client_get(address, path, resp, 1024);
+    http_client_get(address, path, resp, 1024);
 
     //then
     TEST_ASSERT_EQUAL_STRING_MESSAGE(expected_resp, resp, "http_client_get response different from expected");
@@ -265,7 +264,7 @@ int runUnityTests(void) {
 void app_main(void) {
   nvs_c_init_nvs();
   wifi_c_init_wifi(WIFI_C_MODE_STA);
-  wifi_c_start_sta(SOL_SSID, SOL_PSK);
+  wifi_c_start_sta(MY_SSID, MY_PSK);
   runUnityTests();
   vTaskDelay(200);
   fflush(stdout);
