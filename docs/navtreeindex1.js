@@ -1,5 +1,15 @@
 var NAVTREEINDEX1 =
 {
+"structlogger__contex.html#a8368c37cfb59cb636cf44e105e809e45":[8,0,11,3],
+"structlogger__contex.html#a8ea3ac108f011fd3fb97960282504545":[8,0,11,2],
+"structnode.html":[8,0,12],
+"structnode__obj.html":[8,0,13],
+"structnode__obj.html#a6e190ab9ce5544d7657a437fe467a7e7":[8,0,13,2],
+"structnode__obj.html#a8493a2ba8e02434272cc8e2beeece1a5":[8,0,13,0],
+"structnode__obj.html#ad08382343ed547b7f0a8d4887a6fbff9":[8,0,13,1],
+"structnvs__c__handle__obj.html":[8,0,14],
+"structspiffs__c__handle__obj.html":[8,0,15],
+"structwifi__c__ap__record__obj.html":[8,0,16],
 "structwifi__c__ap__record__obj.html#a2ad61a3fad331d95100f9fd2eca3b016":[8,0,16,0],
 "structwifi__c__ap__record__obj.html#a78730061a4de648e49e796a0357ff108":[8,0,16,2],
 "structwifi__c__ap__record__obj.html#a97890ccdcf57ca73f0f78dbe965c524f":[8,0,16,3],

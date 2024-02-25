@@ -128,7 +128,7 @@ int ota_c_update_device_data(const char* url, const char* path, const char* devi
         app_info.idf_ver
     );
 
-    err = http_client_post("192.168.0.108:8081", "bmp280/ota.php", &post);
+    err = http_client_post("192.168.0.108:8081", "bmp280/ota.php", &post, HTTP_CLIENT_POST_USE_STRLEN);
     if(err != ERR_C_OK) {
         LOG_ERROR("error %d when sending device data to server: %s", err, error_to_name(err));
         return err;

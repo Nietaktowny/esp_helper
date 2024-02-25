@@ -1,6 +1,6 @@
 {
     "name": "ota_controller",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "keywords": "ota, driver, controller, espressif32",
     "description": "Controller library used to control OTA updates with ESP-IDF.",
     "authors":
@@ -12,7 +12,7 @@
 		"nietaktowny/logger": "^2.0.2",
 		"nietaktowny/err_controller": "^1.0.3",
 		"nietaktowny/memory_utils": "^1.0.4",
-        "nietaktowny/http_client": "^1.0.3"
+        "nietaktowny/http_client": "^1.0.4"
 	  },
     "frameworks": ["*"],
     "platforms": ["*"]

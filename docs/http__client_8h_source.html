@@ -99,21 +99,25 @@ $(document).ready(function(){initNavTree('http__client_8h_source.html',''); init
   <div class="headertitle"><div class="title">http_client.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keywordtype">int</span> http_client_post(<span class="keyword">const</span> <span class="keywordtype">char</span>* ipv4_address, <span class="keyword">const</span> <span class="keywordtype">char</span>* path, <span class="keyword">const</span> <span class="keywordtype">char</span>* post_data);</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keywordtype">int</span> https_client_post(<span class="keyword">const</span> <span class="keywordtype">char</span>* ipv4_address, <span class="keyword">const</span> <span class="keywordtype">char</span>* path, <span class="keyword">const</span> <span class="keywordtype">char</span>* post_data);</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">int</span> http_client_get(<span class="keyword">const</span> <span class="keywordtype">char</span>* ipv4_address, <span class="keyword">const</span> <span class="keywordtype">char</span>* path, <span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> buflen);</div>
+<a href="http__client_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="http__client_8h.html#a4a26e87eb9df7ff345b4a3e07b97e921">   14</a></span><span class="preprocessor">#define HTTP_CLIENT_MAX_OUTPUT_BUFFER_SIZE              1024        </span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="http__client_8h.html#a7268ad5218a6214755a84f0e190558b5">   15</a></span><span class="preprocessor">#define HTTP_CLIENT_MAX_URL_LENGTH                      256         </span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="http__client_8h.html#a7f32fc2c9125fdf8ebc17ded516451df">   16</a></span><span class="preprocessor">#define HTTP_CLIENT_POST_USE_STRLEN                     -1          </span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">int</span> <a class="code hl_function" href="http__client_8h.html#a55c042080b84c0ac0c2644a0b37f8388">http_client_post</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ipv4_address, <span class="keyword">const</span> <span class="keywordtype">char</span>* path, <span class="keyword">const</span> <span class="keywordtype">char</span>* post_data, <span class="keywordtype">size_t</span> datalen);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">int</span> <a class="code hl_function" href="http__client_8h.html#aecf54e1637f052dc08eca4b05a6bd32a">http_client_get</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ipv4_address, <span class="keyword">const</span> <span class="keywordtype">char</span>* path, <span class="keywordtype">char</span>* buffer, <span class="keywordtype">size_t</span> buflen);</div>
+<div class="ttc" id="ahttp__client_8h_html_a55c042080b84c0ac0c2644a0b37f8388"><div class="ttname"><a href="http__client_8h.html#a55c042080b84c0ac0c2644a0b37f8388">http_client_post</a></div><div class="ttdeci">int http_client_post(const char *ipv4_address, const char *path, const char *post_data, size_t datalen)</div><div class="ttdoc">Make a HTTP POST request.</div><div class="ttdef"><b>Definition</b> http_client.c:108</div></div>
+<div class="ttc" id="ahttp__client_8h_html_aecf54e1637f052dc08eca4b05a6bd32a"><div class="ttname"><a href="http__client_8h.html#aecf54e1637f052dc08eca4b05a6bd32a">http_client_get</a></div><div class="ttdeci">int http_client_get(const char *ipv4_address, const char *path, char *buffer, size_t buflen)</div><div class="ttdoc">Make a HTTP POST request.</div><div class="ttdef"><b>Definition</b> http_client.c:156</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_ee5e40fa0eda3d5a4b079cda0961046c.html">http_client</a></li><li class="navelem"><a class="el" href="dir_a5e8f9715e3f561e189874cf30fb17db.html">include</a></li><li class="navelem"><b>http_client.h</b></li>
+    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_ee5e40fa0eda3d5a4b079cda0961046c.html">http_client</a></li><li class="navelem"><a class="el" href="dir_a5e8f9715e3f561e189874cf30fb17db.html">include</a></li><li class="navelem"><a class="el" href="http__client_8h.html">http_client.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

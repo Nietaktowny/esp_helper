@@ -11,7 +11,14 @@ var searchData=
   ['helper_5fprepare_5furl_5fwith_5fdevice_5fid_8',['helper_prepare_url_with_device_id',['../esp__helper__utils_8h.html#a1809da36848c291864649a3cc56f289a',1,'helper_prepare_url_with_device_id(const char *url, const char *device_id, char *buffer, size_t buflen):&#160;esp_helper_utils.c'],['../esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a',1,'helper_prepare_url_with_device_id(const char *url, const char *device_id, char *buffer, size_t buflen):&#160;esp_helper_utils.c']]],
   ['how_9',['How?',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md37',1,'']]],
   ['how_20to_20use_20example_10',['How to use example',['../md_projects_2lib__tests_2README.html#autotoc_md60',1,'']]],
-  ['http_5fs_5fhandle_5fobj_11',['http_s_handle_obj',['../structhttp__s__handle__obj.html',1,'']]],
-  ['http_5fs_5furi_5ft_12',['http_s_uri_t',['../structhttp__s__uri__t.html',1,'']]],
-  ['https_3a_20github_20com_20throwtheswitch_20cexception_20workflows_20ci_20badge_20svg_20alt_20ci_13',['CException &lt;img src=&quot;https://github.com/ThrowTheSwitch/CException/workflows/CI/badge.svg&quot; alt=&quot;CI&quot;/&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html',1,'']]]
+  ['http_5fclient_2ec_11',['http_client.c',['../http__client_8c.html',1,'']]],
+  ['http_5fclient_2eh_12',['http_client.h',['../http__client_8h.html',1,'']]],
+  ['http_5fclient_5fget_13',['http_client_get',['../http__client_8h.html#aecf54e1637f052dc08eca4b05a6bd32a',1,'http_client_get(const char *ipv4_address, const char *path, char *buffer, size_t buflen):&#160;http_client.c'],['../http__client_8c.html#aecf54e1637f052dc08eca4b05a6bd32a',1,'http_client_get(const char *ipv4_address, const char *path, char *buffer, size_t buflen):&#160;http_client.c']]],
+  ['http_5fclient_5fmax_5foutput_5fbuffer_5fsize_14',['HTTP_CLIENT_MAX_OUTPUT_BUFFER_SIZE',['../http__client_8h.html#a4a26e87eb9df7ff345b4a3e07b97e921',1,'http_client.h']]],
+  ['http_5fclient_5fmax_5furl_5flength_15',['HTTP_CLIENT_MAX_URL_LENGTH',['../http__client_8h.html#a7268ad5218a6214755a84f0e190558b5',1,'http_client.h']]],
+  ['http_5fclient_5fpost_16',['http_client_post',['../http__client_8c.html#a55c042080b84c0ac0c2644a0b37f8388',1,'http_client_post(const char *ipv4_address, const char *path, const char *post_data, size_t datalen):&#160;http_client.c'],['../http__client_8h.html#a55c042080b84c0ac0c2644a0b37f8388',1,'http_client_post(const char *ipv4_address, const char *path, const char *post_data, size_t datalen):&#160;http_client.c']]],
+  ['http_5fclient_5fpost_5fuse_5fstrlen_17',['HTTP_CLIENT_POST_USE_STRLEN',['../http__client_8h.html#a7f32fc2c9125fdf8ebc17ded516451df',1,'http_client.h']]],
+  ['http_5fs_5fhandle_5fobj_18',['http_s_handle_obj',['../structhttp__s__handle__obj.html',1,'']]],
+  ['http_5fs_5furi_5ft_19',['http_s_uri_t',['../structhttp__s__uri__t.html',1,'']]],
+  ['https_3a_20github_20com_20throwtheswitch_20cexception_20workflows_20ci_20badge_20svg_20alt_20ci_20',['CException &lt;img src=&quot;https://github.com/ThrowTheSwitch/CException/workflows/CI/badge.svg&quot; alt=&quot;CI&quot;/&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html',1,'']]]
 ];

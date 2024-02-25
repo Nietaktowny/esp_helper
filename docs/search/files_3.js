@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wifi_5fcontroller_2ec_0',['wifi_controller.c',['../wifi__controller_8c.html',1,'']]],
-  ['wifi_5fcontroller_2eh_1',['wifi_controller.h',['../wifi__controller_8h.html',1,'']]]
+  ['sys_5futils_2ec_0',['sys_utils.c',['../sys__utils_8c.html',1,'']]],
+  ['sys_5futils_2eh_1',['sys_utils.h',['../sys__utils_8h.html',1,'']]]
 ];

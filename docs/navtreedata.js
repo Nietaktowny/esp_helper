@@ -96,7 +96,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CExceptionConfig_8h_source.html",
-"structwifi__c__ap__record__obj.html#a2ad61a3fad331d95100f9fd2eca3b016"
+"structlogger__contex.html#a8368c37cfb59cb636cf44e105e809e45"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

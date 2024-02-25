@@ -1,1 +1,98 @@
-<testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="0" time="42.386" timestamp="2024-02-24T21:13:17.405702" hostname="wmytych"><testcase time="15.064" /></testsuite></testsuites>
+<testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="72.550" timestamp="2024-02-25T10:32:34.959779" hostname="wmytych"><testcase classname="test_wifi_controller.pytest_wifi_controller" name="test_wifi_controller" time="42.047"><failure message="pexpect.exceptions.TIMEOUT: Not found &quot;wifi successfully initialized&quot;&#10;Bytes in current buffer (color code eliminated): Serial port /dev/ttyUSB0 Connecting.... Connecting....... Detecting chip type... Unsupported detection protocol, switching and trying again... Connecting.... Detecting chip... (total 9114 bytes)&#10;Please check the full log here: /tmp/pytest-embedded/2024-02-25_09-32-35-032854/test_wifi_controller/dut.log">self = &lt;pytest_embedded_idf.dut.IdfDut object at 0x7fbcd72c6e10&gt;, pattern = 'wifi successfully initialized'
+expect_all = False, not_matching = (), args = (), kwargs = {}, patterns = ['wifi successfully initialized']
+res = []
+debug_str = 'Not found "wifi successfully initialized"\nBytes in current buffer (color code eliminated): Serial port /dev/ttyUSB0 ...4 bytes)\nPlease check the full log here: /tmp/pytest-embedded/2024-02-25_09-32-35-032854/test_wifi_controller/dut.log'
+
+    @functools.wraps(func)  # noqa
+    def wrapper(
+        self, pattern, *args, expect_all: bool = False, not_matching: List[Union[str, re.Pattern]] = (), **kwargs
+    ) -&gt; Union[Union[Match, AnyStr], List[Union[Match, AnyStr]]]:
+        patterns = to_list(pattern)
+        res = []
+        while patterns:
+            try:
+&gt;               index = func(self, pattern, *args, **kwargs)  # noqa
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/dut.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/dut.py:131: in expect
+    return self.pexpect_proc.expect(pattern, **kwargs)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pexpect/spawnbase.py:354: in expect
+    return self.expect_list(compiled_pattern_list,
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pexpect/spawnbase.py:383: in expect_list
+    return exp.expect_loop(timeout)
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pexpect/expect.py:181: in expect_loop
+    return self.timeout(e)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pexpect.expect.Expecter object at 0x7fbcd7532690&gt;
+err = TIMEOUT("&lt;pytest_embedded.log.PexpectProcess object at 0x7fbcd7493c50&gt;\nsearcher: searcher_re:\n    0: re.compile(b'wifi successfully initialized')")
+
+    def timeout(self, err=None):
+        spawn = self.spawn
+    
+        spawn.before = spawn._before.getvalue()
+        spawn.after = TIMEOUT
+        index = self.searcher.timeout_index
+        if index &gt;= 0:
+            spawn.match = TIMEOUT
+            spawn.match_index = index
+            return index
+        else:
+            spawn.match = None
+            spawn.match_index = None
+            msg = str(spawn)
+            msg += '\nsearcher: %s' % self.searcher
+            if err is not None:
+                msg = str(err) + '\n' + msg
+    
+            exc = TIMEOUT(msg)
+            exc.__cause__ = None    # in Python 3.x we can use "raise exc from None"
+&gt;           raise exc
+E           pexpect.exceptions.TIMEOUT: &lt;pytest_embedded.log.PexpectProcess object at 0x7fbcd7493c50&gt;
+E           searcher: searcher_re:
+E               0: re.compile(b'wifi successfully initialized')
+E           &lt;pytest_embedded.log.PexpectProcess object at 0x7fbcd7493c50&gt;
+E           searcher: searcher_re:
+E               0: re.compile(b'wifi successfully initialized')
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pexpect/expect.py:144: TIMEOUT
+
+The above exception was the direct cause of the following exception:
+
+dut = &lt;pytest_embedded_idf.dut.IdfDut object at 0x7fbcd72c6e10&gt;
+
+    @pytest.mark.esp32
+    def test_wifi_controller(dut):
+        # expect from what esptool.py printed to sys.stdout
+&gt;       dut.expect('wifi successfully initialized')
+
+test_wifi_controller/pytest_wifi_controller.py:7: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.dut.IdfDut object at 0x7fbcd72c6e10&gt;, pattern = 'wifi successfully initialized'
+expect_all = False, not_matching = (), args = (), kwargs = {}, patterns = ['wifi successfully initialized']
+res = []
+debug_str = 'Not found "wifi successfully initialized"\nBytes in current buffer (color code eliminated): Serial port /dev/ttyUSB0 ...4 bytes)\nPlease check the full log here: /tmp/pytest-embedded/2024-02-25_09-32-35-032854/test_wifi_controller/dut.log'
+
+    @functools.wraps(func)  # noqa
+    def wrapper(
+        self, pattern, *args, expect_all: bool = False, not_matching: List[Union[str, re.Pattern]] = (), **kwargs
+    ) -&gt; Union[Union[Match, AnyStr], List[Union[Match, AnyStr]]]:
+        patterns = to_list(pattern)
+        res = []
+        while patterns:
+            try:
+                index = func(self, pattern, *args, **kwargs)  # noqa
+            except (pexpect.EOF, pexpect.TIMEOUT) as e:
+                debug_str = (
+                    f'Not found "{str(pattern)}"\n'
+                    f'Bytes in current buffer (color code eliminated): {self.pexpect_proc.buffer_debug_str}\n'
+                    f'Please check the full log here: {self.logfile}'
+                )
+&gt;               raise e.__class__(debug_str) from e
+E               pexpect.exceptions.TIMEOUT: Not found "wifi successfully initialized"
+E               Bytes in current buffer (color code eliminated): Serial port /dev/ttyUSB0 Connecting.... Connecting....... Detecting chip type... Unsupported detection protocol, switching and trying again... Connecting.... Detecting chip... (total 9114 bytes)
+E               Please check the full log here: /tmp/pytest-embedded/2024-02-25_09-32-35-032854/test_wifi_controller/dut.log
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/dut.py:83: TIMEOUT</failure></testcase><testcase classname="test_wifi_manager.pytest_wifi_manager" name="test_wifi_manager" time="14.184" /><testcase time="11.759" /></testsuite></testsuites>
