@@ -6,7 +6,8 @@
 #include "logger.h"
 #include "wifi_controller.h"
 #include "cli_manager.h"
-
+#include "esp_helper_utils.h"
+#include "sys_utils.h"
 
 #define MY_SSID "TP-LINK_AD8313"
 #define MY_PSK "20232887"
@@ -31,6 +32,8 @@ void app_main(void)
 
     //Start STA and connect to AP:
     ESP_ERROR_CHECK(wifi_c_start_sta(MY_SSID, MY_PSK));
+
+    helper_perform_ota();
 
     //start CLI manager
     cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());

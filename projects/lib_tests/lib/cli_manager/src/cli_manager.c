@@ -24,6 +24,9 @@ void cli_accept_task(void* args) {
     }
 }
 
+/**
+ * @todo If address is 0.0.0.0 don't bind, no internet connection.
+ */
 int cli_set_remote_logging(uint16_t port, const char* address) {
     volatile err_c_t err = 0;
     socket_t listen = INVALID_SOCKET;
@@ -32,6 +35,13 @@ int cli_set_remote_logging(uint16_t port, const char* address) {
     memutil_zero_memory(&addr, sizeof(addr));
 
     ERR_C_CHECK_NULL_PTR(address, LOG_ERROR("address for cli_manager cannot be NULL"));
+
+    //If address is 0.0.0.0, this means that we have no internet connection, no sense in continuing.
+    if(!strncmp("0.0.0.0", address, 8)) {
+        LOG_WARN("Device has no internet connection, cannot use remote logging.");
+        return CLI_ERR_NO_INTERNET;
+    }
+
     Try {
         ERR_C_CHECK_AND_THROW_ERR(tcp_create_socket(&listen));
         ERR_C_CHECK_AND_THROW_ERR(tcp_prepare_address(port, address, &addr));
@@ -46,22 +56,5 @@ int cli_set_remote_logging(uint16_t port, const char* address) {
         LOG_ERROR("Error %d when connecting to remote host: %s", err, error_to_name(err));
         return CLI_ERR_CONNECT_FAIL;
     }
-    return 0;
-}
-
-int set_logging_to_socket(char* address, uint16_t port) {
-    socket_t listen = INVALID_SOCKET;
-    socket_t client = INVALID_SOCKET;
-    struct sockaddr_in addr;
-    memutil_zero_memory(&addr, sizeof(addr));
-
-    tcp_create_socket(&listen);
-    tcp_prepare_address(port, address, &addr);
-    tcp_bind_socket(listen, &addr);
-    tcp_socket_listen(listen, 1);
-    tcp_accept_client(listen, &client);
-
-    logger_add_log_file(fdopen(client, "w+"));
-
     return 0;
 }
