@@ -1,23 +1,26 @@
 <map id="projects/lib_tests/test/embedded" name="projects/lib_tests/test/embedded">
-<area shape="rect" id="node2" href="dir_47a7251d03dd49de3012b4bb0f267929.html" title="test_esp_helper_utils" alt="" coords="713,63,858,89"/>
-<area shape="rect" id="node8" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html" title="lib" alt="" coords="406,137,445,162"/>
-<area shape="poly" id="edge1" href="dir_000083_000034.html" alt="" coords="759,92,701,113,635,127,568,137,460,149,460,143,568,132,634,122,699,107,758,87"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000083_000034.html" title="2" alt="" coords="460,147,467,162"/>
-<area shape="rect" id="node3" href="dir_fae7898174c5a503e6b49f8f7b26d7a4.html" title="test_http_client" alt="" coords="578,63,689,89"/>
-<area shape="poly" id="edge2" href="dir_000085_000034.html" alt="" coords="613,92,568,112,511,131,460,143,459,138,510,125,566,108,610,87"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000085_000034.html" title="3" alt="" coords="461,141,468,156"/>
-<area shape="rect" id="node4" href="dir_d3205993a4fe5c91487a60d6788eebe2.html" title="test_i2c_controller" alt="" coords="427,63,554,89"/>
-<area shape="poly" id="edge3" href="dir_000087_000034.html" alt="" coords="482,91,449,127,445,123,478,87"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000087_000034.html" title="1" alt="" coords="451,121,458,136"/>
-<area shape="rect" id="node5" href="dir_6b91ff0fe53172f1ec23f7e236db49a5.html" title="test_logger" alt="" coords="317,63,403,89"/>
-<area shape="poly" id="edge4" href="dir_000089_000034.html" alt="" coords="373,87,406,123,402,127,369,91"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000089_000034.html" title="1" alt="" coords="405,110,412,125"/>
-<area shape="rect" id="node6" href="dir_d78089399b2290acb044dd515d69773e.html" title="test_sys_utils" alt="" coords="192,63,293,89"/>
-<area shape="poly" id="edge5" href="dir_000092_000034.html" alt="" coords="264,87,306,108,392,137,390,142,304,112,262,91"/>
-<area shape="rect" id="edge5-headlabel" href="dir_000092_000034.html" title="2" alt="" coords="387,123,394,138"/>
-<area shape="rect" id="node7" href="dir_ff73fcd1861c21ed2ab3e56686b65bd4.html" title="test_wifi_controller" alt="" coords="38,63,167,89"/>
-<area shape="poly" id="edge6" href="dir_000094_000034.html" alt="" coords="128,87,181,107,238,121,295,131,391,143,390,148,294,137,237,126,179,113,126,92"/>
-<area shape="rect" id="edge6-headlabel" href="dir_000094_000034.html" title="2" alt="" coords="385,129,392,144"/>
-<area shape="rect" id="clust2" href="dir_56b0114c4f4fe8f51f94d04316663e36.html" alt="" coords="27,52,975,99"/>
-<area shape="rect" id="clust1" href="dir_d1d90b1fd78504db37cfd2eff4a0a04d.html" title="test" alt="" coords="16,16,985,110"/>
+<area shape="rect" id="node2" href="dir_087b09378bc230403da1233022cb4b7f.html" title="test_cli_manager" alt="" coords="881,63,1002,89"/>
+<area shape="rect" id="node9" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html" title="lib" alt="" coords="471,137,510,162"/>
+<area shape="poly" id="edge1" href="dir_000082_000034.html" alt="" coords="921,92,870,113,774,133,677,144,526,151,526,146,676,139,773,127,869,107,919,87"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000082_000034.html" title="1" alt="" coords="525,149,532,164"/>
+<area shape="rect" id="node3" href="dir_47a7251d03dd49de3012b4bb0f267929.html" title="test_esp_helper_utils" alt="" coords="713,63,858,89"/>
+<area shape="poly" id="edge2" href="dir_000084_000034.html" alt="" coords="759,92,701,113,606,134,525,147,524,141,605,129,699,107,757,87"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000084_000034.html" title="2" alt="" coords="526,144,533,159"/>
+<area shape="rect" id="node4" href="dir_fae7898174c5a503e6b49f8f7b26d7a4.html" title="test_http_client" alt="" coords="578,63,689,89"/>
+<area shape="poly" id="edge3" href="dir_000086_000034.html" alt="" coords="610,92,525,134,523,129,608,87"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000086_000034.html" title="3" alt="" coords="527,130,534,145"/>
+<area shape="rect" id="node5" href="dir_d3205993a4fe5c91487a60d6788eebe2.html" title="test_i2c_controller" alt="" coords="427,63,554,89"/>
+<area shape="poly" id="edge4" href="dir_000088_000034.html" alt="" coords="493,89,493,121,488,121,488,89"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000088_000034.html" title="1" alt="" coords="496,111,503,126"/>
+<area shape="rect" id="node6" href="dir_6b91ff0fe53172f1ec23f7e236db49a5.html" title="test_logger" alt="" coords="317,63,403,89"/>
+<area shape="poly" id="edge5" href="dir_000090_000034.html" alt="" coords="380,87,416,108,459,130,456,135,413,112,378,91"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000090_000034.html" title="1" alt="" coords="455,116,462,131"/>
+<area shape="rect" id="node7" href="dir_d78089399b2290acb044dd515d69773e.html" title="test_sys_utils" alt="" coords="192,63,293,89"/>
+<area shape="poly" id="edge6" href="dir_000093_000034.html" alt="" coords="263,87,306,108,386,129,457,141,456,147,385,134,304,112,261,92"/>
+<area shape="rect" id="edge6-headlabel" href="dir_000093_000034.html" title="2" alt="" coords="451,128,458,143"/>
+<area shape="rect" id="node8" href="dir_ff73fcd1861c21ed2ab3e56686b65bd4.html" title="test_wifi_controller" alt="" coords="38,63,167,89"/>
+<area shape="poly" id="edge7" href="dir_000095_000034.html" alt="" coords="127,87,181,107,257,124,333,135,456,144,455,150,332,140,256,129,179,113,125,92"/>
+<area shape="rect" id="edge7-headlabel" href="dir_000095_000034.html" title="2" alt="" coords="450,131,457,146"/>
+<area shape="rect" id="clust2" href="dir_56b0114c4f4fe8f51f94d04316663e36.html" alt="" coords="27,52,1119,99"/>
+<area shape="rect" id="clust1" href="dir_d1d90b1fd78504db37cfd2eff4a0a04d.html" title="test" alt="" coords="16,16,1129,110"/>
 </map>

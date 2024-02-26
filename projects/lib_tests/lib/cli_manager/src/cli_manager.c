@@ -38,8 +38,9 @@ int cli_set_remote_logging(uint16_t port, const char* address) {
 
     //If address is 0.0.0.0, this means that we have no internet connection, no sense in continuing.
     if(!strncmp("0.0.0.0", address, 8)) {
-        LOG_WARN("Device has no internet connection, cannot use remote logging.");
-        return CLI_ERR_NO_INTERNET;
+        err = CLI_ERR_NO_INTERNET;
+        LOG_WARN("error %d, device has no internet connection, cannot use remote logging.", err);
+        return err;
     }
 
     Try {
