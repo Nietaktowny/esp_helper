@@ -1,3 +1,16 @@
+/**
+ * @file linked_list_internal.h
+ * @author Wojciech Mytych
+ * @brief Linked list library internal header file.
+ * @version 1.0.6
+ * @date 2024-02-26
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
+#pragma once
+
 #include <inttypes.h>
 
 /**

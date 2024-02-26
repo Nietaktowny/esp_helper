@@ -16,6 +16,8 @@
         "event_groups.h": "c",
         "stddef.h": "c",
         "wifi_controller.h": "c",
-        "i2c_controller.h": "c"
+        "i2c_controller.h": "c",
+        "cli_manager.h": "c",
+        "inttypes.h": "c"
     }
 }

@@ -1,3 +1,14 @@
+/**
+ * @file tcp_controller.h
+ * @author Wojciech Mytych
+ * @brief TCP Controller header file.
+ * @version 1.2.3
+ * @date 2024-02-26
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include "lwip/inet.h"
 #include "lwip/sockets.h"
 

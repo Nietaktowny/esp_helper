@@ -1,3 +1,14 @@
+/**
+ * @file linked_list.c
+ * @author Wojciech Mytych
+ * @brief Linked list library source file.
+ * @version 1.0.6
+ * @date 2024-02-26
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include "linked_list.h"
 #include "linked_list_internal.h"
 #include <inttypes.h>

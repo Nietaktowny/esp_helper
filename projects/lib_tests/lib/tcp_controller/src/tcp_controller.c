@@ -1,3 +1,14 @@
+/**
+ * @file tcp_controller.c
+ * @author Wojciech Mytych
+ * @brief TCP Controller source file.
+ * @version 1.2.3
+ * @date 2024-02-26
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include "tcp_controller.h"
 #include "tcp_c_errors.h"
 #include "logger.h"
