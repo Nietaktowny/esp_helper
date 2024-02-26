@@ -126,10 +126,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a2db3d30d46f47b9964977ca0de719d3f" id="r_a2db3d30d46f47b9964977ca0de719d3f"><td class="memItemLeft" align="right" valign="top"><a id="a2db3d30d46f47b9964977ca0de719d3f" name="a2db3d30d46f47b9964977ca0de719d3f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_PORT</b>&#160;&#160;&#160;27015</td></tr>
-<tr class="memdesc:a2db3d30d46f47b9964977ca0de719d3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP Cli manager listen port. <br /></td></tr>
-<tr class="separator:a2db3d30d46f47b9964977ca0de719d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899964ca83adffa85bb4400b4530f4fd" id="r_a899964ca83adffa85bb4400b4530f4fd"><td class="memItemLeft" align="right" valign="top"><a id="a899964ca83adffa85bb4400b4530f4fd" name="a899964ca83adffa85bb4400b4530f4fd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_DEFAULT_PORT</b>&#160;&#160;&#160;27015</td></tr>
+<tr class="memdesc:a899964ca83adffa85bb4400b4530f4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP Cli manager listen port. <br /></td></tr>
+<tr class="separator:a899964ca83adffa85bb4400b4530f4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54dec98f6c1b206706db2e763f5a5ed1" id="r_a54dec98f6c1b206706db2e763f5a5ed1"><td class="memItemLeft" align="right" valign="top"><a id="a54dec98f6c1b206706db2e763f5a5ed1" name="a54dec98f6c1b206706db2e763f5a5ed1"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_KEEPALIVE_IDLE</b>&#160;&#160;&#160;5</td></tr>
 <tr class="memdesc:a54dec98f6c1b206706db2e763f5a5ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">TCP keep-alive idle time(s). <br /></td></tr>
@@ -154,6 +154,10 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_CMD_MAX_COMMANDS</b>&#160;&#160;&#160;64</td></tr>
 <tr class="memdesc:a1fe243d3c0cc0ae36d667b71754e2147"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max number of commands to register. <br /></td></tr>
 <tr class="separator:a1fe243d3c0cc0ae36d667b71754e2147"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa32151326da45526227b351efd3b0247" id="r_aa32151326da45526227b351efd3b0247"><td class="memItemLeft" align="right" valign="top"><a id="aa32151326da45526227b351efd3b0247" name="aa32151326da45526227b351efd3b0247"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_ACCEPT_TASK_DEFAULT_SIZE</b>&#160;&#160;&#160;2096</td></tr>
+<tr class="memdesc:aa32151326da45526227b351efd3b0247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default stack size used for cli_accept_task. <br /></td></tr>
+<tr class="separator:aa32151326da45526227b351efd3b0247"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b5412807d020ae4da23f28eb4786f47" id="r_a9b5412807d020ae4da23f28eb4786f47"><td class="memItemLeft" align="right" valign="top"><a id="a9b5412807d020ae4da23f28eb4786f47" name="a9b5412807d020ae4da23f28eb4786f47"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_ERR_BASE</b>&#160;&#160;&#160;0x0500</td></tr>
 <tr class="separator:a9b5412807d020ae4da23f28eb4786f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,19 +175,19 @@ Functions</h2></td></tr>
 <tr class="memitem:a4b80c5127fd2867a5881d9c1f9d2cfda" id="r_a4b80c5127fd2867a5881d9c1f9d2cfda"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__manager_8h.html#a4b80c5127fd2867a5881d9c1f9d2cfda">cli_set_remote_logging</a> (uint16_t port, const char *address)</td></tr>
 <tr class="memdesc:a4b80c5127fd2867a5881d9c1f9d2cfda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Log all logger library logs to remote host on TCP port.  <br /></td></tr>
 <tr class="separator:a4b80c5127fd2867a5881d9c1f9d2cfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d005c16578abd519b23b03756e0a9cd" id="r_a8d005c16578abd519b23b03756e0a9cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__manager_8h.html#a8d005c16578abd519b23b03756e0a9cd">cli_accept_task</a> (void *args)</td></tr>
-<tr class="memdesc:a8d005c16578abd519b23b03756e0a9cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task responsible for accepting new hosts in TCP server.  <br /></td></tr>
-<tr class="separator:a8d005c16578abd519b23b03756e0a9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cf547424c3b4d26fa301c9f2bc79688" id="r_a6cf547424c3b4d26fa301c9f2bc79688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__manager_8h.html#a6cf547424c3b4d26fa301c9f2bc79688">cli_accept_task</a> (void *socket)</td></tr>
+<tr class="memdesc:a6cf547424c3b4d26fa301c9f2bc79688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task responsible for accepting new hosts in TCP log server.  <br /></td></tr>
+<tr class="separator:a6cf547424c3b4d26fa301c9f2bc79688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Cli Manager library header file. </p>
 <dl class="section author"><dt>Author</dt><dd>Wojciech Mytych </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0.7 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2024-02-23</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0.8 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-02-26</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a8d005c16578abd519b23b03756e0a9cd" name="a8d005c16578abd519b23b03756e0a9cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d005c16578abd519b23b03756e0a9cd">&#9670;&#160;</a></span>cli_accept_task()</h2>
+<a id="a6cf547424c3b4d26fa301c9f2bc79688" name="a6cf547424c3b4d26fa301c9f2bc79688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cf547424c3b4d26fa301c9f2bc79688">&#9670;&#160;</a></span>cli_accept_task()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,16 +196,19 @@ Functions</h2></td></tr>
           <td class="memname">void cli_accept_task </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>args</em></td><td>)</td>
+          <td class="paramname"><em>socket</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Task responsible for accepting new hosts in TCP server. </p>
+<p>Task responsible for accepting new hosts in TCP log server. </p>
+<p>It will block till new connection is accepted.</p>
+<p>In case invalid listen socket is passed, task will delete itself.</p>
+<p>Task name is the same as function.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">args</td><td>Additional arguments passed to task. </td></tr>
+    <tr><td class="paramname">socket</td><td>Additional arguments passed to task, used to pass listen socket. </td></tr>
   </table>
   </dd>
 </dl>
@@ -238,8 +245,8 @@ Functions</h2></td></tr>
 <dl class="section attention"><dt>Attention</dt><dd>Ports under 1000 cannot be used, as they are restricted.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">port</td><td>Port on which set up TCP server. </td></tr>
-    <tr><td class="paramname">address</td><td>Address on which set up TCP server.</td></tr>
+    <tr><td class="paramname">port</td><td>Port on which set up TCP log server. </td></tr>
+    <tr><td class="paramname">address</td><td>Address on which set up TCP log server.</td></tr>
   </table>
   </dd>
 </dl>
@@ -247,11 +254,10 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">ERR_NULL_POINTER</td><td>If address is NULL. </td></tr>
     <tr><td class="paramname">CLI_ERR_CONNECT_FAIL</td><td>If error occurs during setup of TCP server. </td></tr>
-    <tr><td class="paramname">CLI_ERR_NO_INTERNET</td><td>If device has no internet connection.</td></tr>
+    <tr><td class="paramname">CLI_ERR_NO_INTERNET</td><td>If device has no internet connection. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>If address is 0.0.0.0 don't bind, no internet connection. </dd></dl>
 
 </div>
 </div>

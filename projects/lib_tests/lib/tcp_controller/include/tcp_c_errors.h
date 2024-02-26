@@ -1,3 +1,14 @@
+/**
+ * @file tcp_c_errors.h
+ * @author Wojciech Mytych
+ * @brief TCP Controller errors list.
+ * @version "1.2.3"
+ * @date 2024-02-26
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #pragma once
 
 #define INVALID_SOCKET          -1

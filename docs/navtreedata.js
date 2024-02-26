@@ -83,7 +83,7 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
+        [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
@@ -96,7 +96,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CExceptionConfig_8h_source.html",
-"structbmp__handle__obj.html#ade40f65851aa1014a37678418508aa4c"
+"md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
