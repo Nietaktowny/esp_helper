@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"structlogger__contex.html":[8,0,11],
+"structlogger__contex.html#a1ea4101a8ff3352c65cc9a003ba400eb":[8,0,11,0],
+"structlogger__contex.html#a6eff41da96e137420b30d21ec89bc388":[8,0,11,4],
+"structlogger__contex.html#a7536e0fccd9dea28ecccd70c01b55631":[8,0,11,1],
 "structlogger__contex.html#a8368c37cfb59cb636cf44e105e809e45":[8,0,11,3],
 "structlogger__contex.html#a8ea3ac108f011fd3fb97960282504545":[8,0,11,2],
 "structnode.html":[8,0,12],

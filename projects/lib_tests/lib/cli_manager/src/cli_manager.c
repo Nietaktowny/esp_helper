@@ -1,3 +1,14 @@
+/**
+ * @file cli_manager.c
+ * @author Wojciech Mytych
+ * @brief Clip Manger library source file.
+ * @version 1.0.3
+ * @date 2024-02-23
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include "cli_manager.h"
 #include "err_controller.h"
 #include "errors_list.h"

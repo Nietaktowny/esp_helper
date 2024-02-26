@@ -96,7 +96,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CExceptionConfig_8h_source.html",
-"structlogger__contex.html#a8368c37cfb59cb636cf44e105e809e45"
+"structlogger__contex.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
