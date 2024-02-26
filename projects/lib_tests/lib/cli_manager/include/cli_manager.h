@@ -1,3 +1,16 @@
+/**
+ * @file cli_manager.h
+ * @author Wojciech Mytych
+ * @brief Cli Manager library header file.
+ * @version 1.0.7
+ * @date 2024-02-23
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
+#pragma once
+
 #include "inttypes.h"
 
 #define CLI_PORT                        27015                   ///< TCP Cli manager listen port.
