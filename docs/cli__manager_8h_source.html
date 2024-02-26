@@ -99,29 +99,34 @@ $(document).ready(function(){initNavTree('cli__manager_8h_source.html',''); init
   <div class="headertitle"><div class="title">cli_manager.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;inttypes.h&quot;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define CLI_PORT                        27015                   </span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#define CLI_KEEPALIVE_IDLE              5                       </span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#define CLI_KEEPALIVE_INTERVAL          5                       </span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define CLI_KEEPALIVE_COUNT             3                       </span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define CLI_CMD_INTS_NUMBER             2                       </span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define CLI_CMD_ARGS_NUMBER             64                      </span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define CLI_CMD_MAX_COMMANDS            64                      </span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define CLI_ERR_BASE                    0x0500                  </span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define CLI_ERR_CONNECT_FAIL            0x0001 + CLI_ERR_BASE   </span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define CLI_ERR_NO_INTERNET             0x0002 + CLI_ERR_BASE   </span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> cli_set_remote_logging(uint16_t port, <span class="keyword">const</span> <span class="keywordtype">char</span>* address);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> cli_accept_task(<span class="keywordtype">void</span>* args);</div>
+<a href="cli__manager_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;inttypes.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a2db3d30d46f47b9964977ca0de719d3f">   16</a></span><span class="preprocessor">#define CLI_PORT                        27015                   </span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a54dec98f6c1b206706db2e763f5a5ed1">   17</a></span><span class="preprocessor">#define CLI_KEEPALIVE_IDLE              5                       </span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a6a796afc1a43696fa89bc5c5731614f5">   18</a></span><span class="preprocessor">#define CLI_KEEPALIVE_INTERVAL          5                       </span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a12882456fceeac2e9a598b9a296c6792">   19</a></span><span class="preprocessor">#define CLI_KEEPALIVE_COUNT             3                       </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a44d25c8694f990c2b0cde594a8777137">   20</a></span><span class="preprocessor">#define CLI_CMD_INTS_NUMBER             2                       </span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a998b6d774a3eacf79d90b5082ec18022">   21</a></span><span class="preprocessor">#define CLI_CMD_ARGS_NUMBER             64                      </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a1fe243d3c0cc0ae36d667b71754e2147">   22</a></span><span class="preprocessor">#define CLI_CMD_MAX_COMMANDS            64                      </span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define CLI_ERR_BASE                    0x0500                  </span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a6f79a351a63547a81124cf8440b641ab">   25</a></span><span class="preprocessor">#define CLI_ERR_CONNECT_FAIL            0x0001 + CLI_ERR_BASE   </span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="cli__manager_8h.html#a166aacfbc5ee0198221e95f439af5980">   26</a></span><span class="preprocessor">#define CLI_ERR_NO_INTERNET             0x0002 + CLI_ERR_BASE   </span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">int</span> <a class="code hl_function" href="cli__manager_8h.html#a4b80c5127fd2867a5881d9c1f9d2cfda">cli_set_remote_logging</a>(uint16_t port, <span class="keyword">const</span> <span class="keywordtype">char</span>* address);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">void</span> <a class="code hl_function" href="cli__manager_8h.html#a8d005c16578abd519b23b03756e0a9cd">cli_accept_task</a>(<span class="keywordtype">void</span>* args);</div>
+<div class="ttc" id="acli__manager_8h_html_a4b80c5127fd2867a5881d9c1f9d2cfda"><div class="ttname"><a href="cli__manager_8h.html#a4b80c5127fd2867a5881d9c1f9d2cfda">cli_set_remote_logging</a></div><div class="ttdeci">int cli_set_remote_logging(uint16_t port, const char *address)</div><div class="ttdoc">Log all logger library logs to remote host on TCP port.</div><div class="ttdef"><b>Definition</b> cli_manager.c:41</div></div>
+<div class="ttc" id="acli__manager_8h_html_a8d005c16578abd519b23b03756e0a9cd"><div class="ttname"><a href="cli__manager_8h.html#a8d005c16578abd519b23b03756e0a9cd">cli_accept_task</a></div><div class="ttdeci">void cli_accept_task(void *args)</div><div class="ttdoc">Task responsible for accepting new hosts in TCP server.</div><div class="ttdef"><b>Definition</b> cli_manager.c:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_6e7fc6bf6f046ea8d07a281d45f8421b.html">cli_manager</a></li><li class="navelem"><a class="el" href="dir_bef235ec6014446c16625a0720772de8.html">include</a></li><li class="navelem"><b>cli_manager.h</b></li>
+    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_6e7fc6bf6f046ea8d07a281d45f8421b.html">cli_manager</a></li><li class="navelem"><a class="el" href="dir_bef235ec6014446c16625a0720772de8.html">include</a></li><li class="navelem"><a class="el" href="cli__manager_8h.html">cli_manager.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

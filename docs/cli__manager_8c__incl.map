@@ -1,6 +1,6 @@
 <map id="projects/lib_tests/lib/cli_manager/src/cli_manager.c" name="projects/lib_tests/lib/cli_manager/src/cli_manager.c">
 <area shape="rect" id="Node000001" title="Clip Manger library source file." alt="" coords="570,5,705,61"/>
-<area shape="rect" id="Node000002" href="$cli__manager_8h_source.html" title=" " alt="" coords="655,183,756,208"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8h.html" title="Cli Manager library header file." alt="" coords="655,183,756,208"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="644,61,652,96,665,134,688,169,683,172,660,136,647,98,639,62"/>
 <area shape="rect" id="Node000004" href="$err__controller_8h_source.html" title=" " alt="" coords="332,109,439,135"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="571,60,436,106,435,101,569,55"/>

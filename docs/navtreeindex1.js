@@ -1,5 +1,17 @@
 var NAVTREEINDEX1 =
 {
+"structbmp__handle__obj.html#ade40f65851aa1014a37678418508aa4c":[8,0,3,9],
+"structbmp__handle__obj.html#ade420b5e69f1165293e98e5e8df5d05a":[8,0,3,12],
+"structbmp__handle__obj.html#af6b4902589feedb6188e5b353098d78d":[8,0,3,15],
+"structhttp__s__handle__obj.html":[8,0,5],
+"structhttp__s__uri__t.html":[8,0,6],
+"structi2c__c__bus__handle__obj.html":[8,0,7],
+"structi2c__c__device__handle__obj.html":[8,0,8],
+"structlinked__list__obj.html":[8,0,10],
+"structlinked__list__obj.html#a2737402a9d34b88a511c2d4493c87565":[8,0,10,3],
+"structlinked__list__obj.html#a48597054c2bc12bee16a088b28b8f958":[8,0,10,1],
+"structlinked__list__obj.html#aa09d0cb908ef7873f3cbccfcf51d83ec":[8,0,10,0],
+"structlinked__list__obj.html#af04f2a4f685d273c13ae0ffead4efe29":[8,0,10,2],
 "structlogger__contex.html":[8,0,11],
 "structlogger__contex.html#a1ea4101a8ff3352c65cc9a003ba400eb":[8,0,11,0],
 "structlogger__contex.html#a6eff41da96e137420b30d21ec89bc388":[8,0,11,4],
