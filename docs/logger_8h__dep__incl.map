@@ -1,6 +1,6 @@
 <map id="projects/lib_tests/lib/logger/include/logger.h" name="projects/lib_tests/lib/logger/include/logger.h">
 <area shape="rect" id="Node000001" title="Logger library header file." alt="" coords="357,5,479,61"/>
-<area shape="rect" id="Node000002" href="$cli__manager_8c.html" title="Clip Manger library source file." alt="" coords="5,213,140,268"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="5,213,140,268"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="342,38,289,44,232,57,176,78,150,93,126,111,107,134,93,160,79,213,73,211,88,158,103,131,123,107,147,89,173,74,230,52,288,39,341,33"/>
 <area shape="rect" id="Node000003" href="$err__controller_8h_source.html" title=" " alt="" coords="340,109,496,165"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="421,77,421,108,415,108,415,77"/>

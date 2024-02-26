@@ -1,7 +1,7 @@
 /**
  * @file cli_manager.c
  * @author Wojciech Mytych
- * @brief Clip Manger library source file.
+ * @brief Cli Manager library source file.
  * @version 1.0.7
  * @date 2024-02-23
  * 
