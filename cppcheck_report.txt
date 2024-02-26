@@ -112,6 +112,9 @@ projects/esp_startup/test/embedded/test_wifi_controller/test_wifi_controller.c:1
 projects/lib_tests/lib/CException/test/TestException.c:63:10: style: Variable 'Throw' is assigned a value that is never used. [unreadVariable]
     Throw(0xEF);
          ^
+projects/lib_tests/lib/cli_manager/src/cli_manager.c:29:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err_c_t err = 0;
+                ^
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:47:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
