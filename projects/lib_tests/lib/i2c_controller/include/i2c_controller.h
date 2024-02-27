@@ -36,7 +36,7 @@ typedef enum
  * @warning This function will exit when memory allocation fails.
  *
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when pointer to out_handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when pointer to out_handle is NULL.
  * @retval - esp specific errors
  */
 int i2c_c_init_bus(const i2c_c_port_t port, const uint8_t scl, const uint8_t sda, i2c_c_bus_handle_t *out_handle);
@@ -47,7 +47,7 @@ int i2c_c_init_bus(const i2c_c_port_t port, const uint8_t scl, const uint8_t sda
  * @param bus Bus handle.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when bus handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when bus handle is NULL.
 */
 int i2c_c_delete_bus(i2c_c_bus_handle_t bus);
 
@@ -61,7 +61,7 @@ int i2c_c_delete_bus(i2c_c_bus_handle_t bus);
  * @warning This function will exit when memory allocation fails.
  *
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when pointer to out_handle or bus is NULL.
+ * @retval - ERR_C_NULL_POINTER - when pointer to out_handle or bus is NULL.
  * @retval - esp specific errors.
  */
 int i2c_c_add_device(const uint8_t addr, const i2c_c_bus_handle_t bus, i2c_c_device_handle_t *out_handle);
@@ -72,7 +72,7 @@ int i2c_c_add_device(const uint8_t addr, const i2c_c_bus_handle_t bus, i2c_c_dev
  * @param device Device handle to delete.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when device handle is NULL.
 */
 int i2c_c_delete_device(i2c_c_device_handle_t device);
 
@@ -83,7 +83,7 @@ int i2c_c_delete_device(i2c_c_device_handle_t device);
  * @param new_addr New address of said device.
  *
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when device handle is NULL.
  * @retval - esp specific errors.
  */
 int i2c_c_set_device_addr(i2c_c_device_handle_t device, const uint8_t new_addr);
@@ -98,7 +98,7 @@ int i2c_c_set_device_addr(i2c_c_device_handle_t device, const uint8_t new_addr);
  * @param timeout Time after which function will return regardless of result of reading.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when device handle is NULL.
  * @retval - I2C_C_ERR_LOCK_ERR - when lock acquisition fails.
  * @retval - esp specific errors. 
  */
@@ -114,7 +114,7 @@ int i2c_c_read(const i2c_c_device_handle_t dev, const uint8_t addr, uint8_t *out
  * @param timeout Time after which function will return regardless of result of reading.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when device handle or pointer to in_buffer are NULL.
+ * @retval - ERR_C_NULL_POINTER - when device handle or pointer to in_buffer are NULL.
  * @retval - I2C_C_ERR_LOCK_ERR - when lock acquisition fails.
  * @retval - esp specific errors. 
  */

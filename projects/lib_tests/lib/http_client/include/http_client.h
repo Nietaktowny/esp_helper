@@ -29,7 +29,7 @@
  * @param post_data Data to add as post.
  * @param datalen Post data length.
  * 
- * @retval ERR_NULL_POINTER If ipv4_address, path or post_data is NULL.
+ * @retval ERR_C_NULL_POINTER If ipv4_address, path or post_data is NULL.
  * @retval ID of server response.
  * 
  */
@@ -46,7 +46,7 @@ int http_client_post(const char* ipv4_address, const char* path, const char* pos
  * @param buffer Buffer to store response.
  * @param buflen Buffer size.
  * 
- * @retval ERR_NULL_POINTER If ipv4_address, path or post_data is NULL.
+ * @retval ERR_C_NULL_POINTER If ipv4_address, path or post_data is NULL.
  * @retval ERR_C_MEMORY_ERR If buffer is not big enough to store response.
  * @retval ID of server response.
  * 

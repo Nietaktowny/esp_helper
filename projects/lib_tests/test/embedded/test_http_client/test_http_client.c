@@ -90,7 +90,7 @@ void test_if_http_get_returns_err_on_null_address(void) {
     err = http_client_get(NULL, path, resp, sizeof(resp));
 
     //then
-    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "http_client_get should return err on NULL address");
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_get should return err on NULL address");
 }
 
 void test_if_http_get_returns_err_on_null_path(void) {
@@ -106,7 +106,7 @@ void test_if_http_get_returns_err_on_null_path(void) {
     err = http_client_get(address, NULL, resp, sizeof(resp));
 
     //then
-    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "http_client_get should return err on NULL path");
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_get should return err on NULL path");
 }
 
 void test_if_http_get_returns_err_on_null_buffer(void) {
@@ -122,7 +122,7 @@ void test_if_http_get_returns_err_on_null_buffer(void) {
     err = http_client_get(address, path, NULL, 123);
 
     //then
-    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "http_client_get should return err on NULL buffer");
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_get should return err on NULL buffer");
 }
 
 void test_if_http_post_returns_err_on_null_address(void) {
@@ -138,7 +138,7 @@ void test_if_http_post_returns_err_on_null_address(void) {
     err = http_client_post(NULL, path, req, sizeof(req));
 
     //then
-    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "http_client_post should return err on NULL address");
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_post should return err on NULL address");
 }
 
 void test_if_http_post_returns_err_on_null_path(void) {
@@ -154,7 +154,7 @@ void test_if_http_post_returns_err_on_null_path(void) {
     err = http_client_post(address, NULL, req, sizeof(req));
 
     //then
-    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "http_client_post should return err on NULL path");
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_post should return err on NULL path");
 }
 
 void test_if_http_post_returns_err_on_null_buffer(void) {
@@ -170,7 +170,7 @@ void test_if_http_post_returns_err_on_null_buffer(void) {
     err = http_client_post(address, path, NULL, 123);
 
     //then
-    TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "http_client_post should return err on NULL buffer");
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_post should return err on NULL buffer");
 }
 
 void test_if_http_post_use_strlen_is_defined(void) {

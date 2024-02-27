@@ -1,51 +1,48 @@
+/**
+ * @file err_controller.c
+ * @author Wojciech Mytych
+ * @brief Error helper library source file.
+ * @version 1.0.3
+ * @date 2024-02-27
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include "err_controller.h"
 #include "errors_list.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#ifdef ESP_PLATFORM
 #include <esp_err.h>
+#endif
 
 err_c_t err_check_null_pointer(void* ptr) {
-    return !ptr ? ERR_NULL_POINTER : ERR_C_OK;
+    return !ptr ? ERR_C_NULL_POINTER : ERR_C_OK;
 }
 
 err_c_t err_check_bitmask(uint32_t mask, uint32_t value) {
     return ((mask&value) == mask) ? ERR_C_OK : 1;
 }
 
-void* wrap_malloc(size_t size) {
-    void* data = NULL;          // data to return
-    if(!size) {
-        LOG_WARN("zero size allocations are prohibited");
-        return NULL;
-    }
-    data = malloc(size);
-    if(!data) {
-        LOG_ERROR("no memory for allocation");
-        return NULL;
-    }
 
-    return data;
-}
-
-err_c_t wrap_free(void* allocated) {
-    CHECK_NULL_PTR(allocated, LOG_ERROR("cannot free NULL ptr"));
-    free(allocated);
-    return 0;
-}
-
-
-char* error_to_name(err_c_t err) {
+const char* error_to_name(err_c_t err) {
     switch (err)
     {
-    case ERR_NO_MEMORY:
+    case ERR_C_NO_MEMORY:
         return "error when allocating memory";
-    case ERR_NULL_POINTER:
+    case ERR_C_NULL_POINTER:
         return "passed NULL pointer";
-    case ERR_WRONG_ARGS:
+    case ERR_C_WRONG_ARGS:
         return "wrong arguments";
     default:
+        #ifdef ESP_PLATFORM
         return esp_err_to_name(err);
+        #else
+        return strerror(err);
+        #endif
     }
     return "i don't know?";
 }

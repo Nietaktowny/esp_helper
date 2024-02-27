@@ -69,7 +69,7 @@ void test_if_helper_prepare_url_returns_err_on_null_ota_url(void) {
   err = helper_prepare_url_with_device_id(NULL, device_id, url, sizeof(url));
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "helper_prepare_url_with_device_id should return err on NULL ota URL");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "helper_prepare_url_with_device_id should return err on NULL ota URL");
 }
 
 void test_if_helper_prepare_url_returns_err_on_null_device_id(void) {
@@ -85,7 +85,7 @@ void test_if_helper_prepare_url_returns_err_on_null_device_id(void) {
   err = helper_prepare_url_with_device_id(ota_url, NULL, url, sizeof(url));
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "helper_prepare_url_with_device_id should return err on NULL device_id");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "helper_prepare_url_with_device_id should return err on NULL device_id");
 }
 
 void test_if_helper_prepare_url_returns_err_on_null_buffer(void) {
@@ -101,7 +101,7 @@ void test_if_helper_prepare_url_returns_err_on_null_buffer(void) {
   err = helper_prepare_url_with_device_id(ota_url, device_id, NULL, 120);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "helper_prepare_url_with_device_id should return err on NULL buffer");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "helper_prepare_url_with_device_id should return err on NULL buffer");
 }
 
 void test_if_helper_prepare_url_returns_err_on_too_small_buffer(void) {

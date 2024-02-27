@@ -658,7 +658,7 @@ void test_if_wifi_c_scan_all_ap_returns_err_on_null_buffer(void) {
   err = wifi_c_scan_all_ap(NULL);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "wifi_c_scan_all_ap should return null pointer error on null buffer");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "wifi_c_scan_all_ap should return null pointer error on null buffer");
 
   //after
   afterEach();  
@@ -924,7 +924,7 @@ void test_if_ap_connect_handler_register_returns_err_on_null(void) {
   err = wifi_c_ap_register_connect_handler(NULL);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "ap connect handler register should return err on null handler function");  
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "ap connect handler register should return err on null handler function");  
 }
 
 void test_if_sta_connect_handler_register_returns_err_on_null(void) {
@@ -939,7 +939,7 @@ void test_if_sta_connect_handler_register_returns_err_on_null(void) {
   err = wifi_c_sta_register_connect_handler(NULL);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "sta connect handler register should return err on null handler function");  
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "sta connect handler register should return err on null handler function");  
 }
 
 void test_if_sta_disconnect_handler_is_set(void) {
@@ -986,7 +986,7 @@ void test_if_ap_disconnect_handler_register_returns_err_on_null(void) {
   err = wifi_c_ap_register_disconnect_handler(NULL);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "ap disconnect handler register should return err on null handler function");  
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "ap disconnect handler register should return err on null handler function");  
 }
 
 void test_if_sta_disconnect_handler_register_returns_err_on_null(void) {
@@ -1001,7 +1001,7 @@ void test_if_sta_disconnect_handler_register_returns_err_on_null(void) {
   err = wifi_c_sta_register_disconnect_handler(NULL);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "sta disconnect handler register should return err on null handler function");  
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "sta disconnect handler register should return err on null handler function");  
 }
 
 void test_if_get_mode_as_str_works_on_ap_mode(void) {
@@ -1179,7 +1179,7 @@ void test_if_scan_all_ap_returns_err_on_null_result_to_return(void) {
   err = wifi_c_scan_all_ap(NULL);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "wifi_c_scan_all_ap should return err on null result_to_return");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "wifi_c_scan_all_ap should return err on null result_to_return");
 
   //after
   wifi_c_deinit();
@@ -1237,7 +1237,7 @@ void test_if_scan_ssid_ap_returns_err_on_null_result_to_return(void) {
   err = wifi_c_scan_for_ap_with_ssid("ssid", NULL);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "wifi_c_scan_for_ap_with_ssid should return err on null ap_record");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "wifi_c_scan_for_ap_with_ssid should return err on null ap_record");
 
   //after
   wifi_c_deinit();
@@ -1257,7 +1257,7 @@ void test_if_scan_ssid_ap_returns_err_on_null_ssid_to_search(void) {
   err = wifi_c_scan_for_ap_with_ssid(NULL, &ap_record);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "wifi_c_scan_for_ap_with_ssid should return err on null ap_record");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "wifi_c_scan_for_ap_with_ssid should return err on null ap_record");
 
   //after
   wifi_c_deinit();
@@ -1313,7 +1313,7 @@ void test_if_get_status_as_json_returns_err_on_null_buffer(void) {
   err = wifi_c_get_status_as_json(NULL, 0);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "wifi_c_get_status_as_json should return err on NULL buffer");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "wifi_c_get_status_as_json should return err on NULL buffer");
 }
 
 void test_if_sta_connect_handler_is_null_after_deinit(void) {

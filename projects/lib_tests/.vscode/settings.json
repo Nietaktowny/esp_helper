@@ -18,6 +18,8 @@
         "wifi_controller.h": "c",
         "i2c_controller.h": "c",
         "cli_manager.h": "c",
-        "inttypes.h": "c"
+        "inttypes.h": "c",
+        "system_error": "c",
+        "cmath": "c"
     }
 }
