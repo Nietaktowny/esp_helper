@@ -20,7 +20,7 @@ typedef int socket_t;
  * @param socket_t*[out] pointer to where socket will be stored
  * 
  * @retval 0 on success
- * @retval ERR_NULL_POINTER on NULL socket_t* pointer
+ * @retval ERR_C_NULL_POINTER on NULL socket_t* pointer
  * @retval reads errno on other errors
 */
 int tcp_create_socket(socket_t* sock);
@@ -35,7 +35,7 @@ int tcp_create_socket(socket_t* sock);
  * @param sockaddr_in*[out] pointer to sockaddr_in structure where address result will be stored
  * 
  * @retval 0 on success
- * @retval ERR_NULL_POINTER when address/addr_ipv4 was NULL
+ * @retval ERR_C_NULL_POINTER when address/addr_ipv4 was NULL
  * @retval ERR_TCP_ADDR_ERROR when address was invalid
  * @retval ERR_TCP_INVALID_PORT when trying to use port < 1024
 */

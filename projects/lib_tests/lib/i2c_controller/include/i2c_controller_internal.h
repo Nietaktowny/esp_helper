@@ -9,7 +9,7 @@
  * @param timeout Time in miliseconds to wait for lock.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when device handle is NULL.
  * @retval - I2C_C_ERR_LOCK_ERR - when it fails to get lock before timeout expires.
 */
 int i2c_c_device_lock(i2c_c_device_handle_t const device, const uint32_t timeout);
@@ -20,7 +20,7 @@ int i2c_c_device_lock(i2c_c_device_handle_t const device, const uint32_t timeout
  * @param device Device handle.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when device handle is NULL.
  * @retval - I2C_C_ERR_LOCK_ERR - when it fails to return lock.
 */
 int i2c_c_device_unlock(i2c_c_device_handle_t const device);

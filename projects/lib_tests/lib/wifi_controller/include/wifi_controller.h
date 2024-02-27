@@ -214,7 +214,7 @@ wifi_c_status_t *wifi_c_get_status(void);
  * @param buffer Buffer to store wifi_c_status data.
  * @param buflen Size of buffer.
  * 
- * @retval ERR_NULL_POINTER if buffer is NULL. 
+ * @retval ERR_C_NULL_POINTER if buffer is NULL. 
  * @retval ERR_C_MEMORY_ERR if buffer cannot contain structure.
  * 
 */
@@ -331,7 +331,7 @@ int wifi_c_sta_reconnect(const char* SSID, const char* PASSWORD);
  * @retval WIFI_C_ERR_WRONG_MODE Wrong Wifi mode, scanning only possible in STA/APSTA mode.
  * @retval WIFI_C_ERR_WIFI_NOT_INIT WiFi was not initialized.
  * @retval WIFI_C_ERR_STA_NOT_STARTED STA was not started.
- * @retval ERR_NULL_POINTER Pointer to result buffer was NULL.
+ * @retval ERR_C_NULL_POINTER Pointer to result buffer was NULL.
  * @retval esp specific error codes
  */
 int wifi_c_scan_all_ap(wifi_c_scan_result_t** result_to_return);
@@ -403,7 +403,7 @@ void wifi_c_deinit(void);
  * @param connect_handler Pointer to handler function.
  * 
  * @retval 0 on success
- * @retval ERR_NULL_POINTER when connect_handler function pointer is NULL
+ * @retval ERR_C_NULL_POINTER when connect_handler function pointer is NULL
 */
 int wifi_c_sta_register_connect_handler(void (*connect_handler)(void));
 
@@ -413,7 +413,7 @@ int wifi_c_sta_register_connect_handler(void (*connect_handler)(void));
  * @param connect_handler Pointer to handler function.
  * 
  * @retval 0 on success
- * @retval ERR_NULL_POINTER when connect_handler function pointer is NULL
+ * @retval ERR_C_NULL_POINTER when connect_handler function pointer is NULL
 */
 int wifi_c_ap_register_connect_handler(void (*connect_handler)(void));
 
@@ -423,7 +423,7 @@ int wifi_c_ap_register_connect_handler(void (*connect_handler)(void));
  * @param connect_handler Pointer to handler function.
  * 
  * @retval 0 on success
- * @retval ERR_NULL_POINTER when disconnect_handler function pointer is NULL
+ * @retval ERR_C_NULL_POINTER when disconnect_handler function pointer is NULL
 */
 int wifi_c_sta_register_disconnect_handler(void (*disconnect_handler)(void));
 
@@ -433,6 +433,6 @@ int wifi_c_sta_register_disconnect_handler(void (*disconnect_handler)(void));
  * @param connect_handler Pointer to handler function.
  * 
  * @retval 0 on success
- * @retval ERR_NULL_POINTER when disconnect_handler function pointer is NULL
+ * @retval ERR_C_NULL_POINTER when disconnect_handler function pointer is NULL
 */
 int wifi_c_ap_register_disconnect_handler(void (*disconnect_handler)(void));

@@ -61,7 +61,7 @@ void test_if_cli_set_remote_log_returns_err_on_null_address(void)
   err = cli_set_remote_logging(27015, NULL);
 
   // then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "cli_set_remote_logging should return err on NULL address");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "cli_set_remote_logging should return err on NULL address");
 }
 
 void test_if_cli_set_remote_log_returns_err_on_reserved_port(void)

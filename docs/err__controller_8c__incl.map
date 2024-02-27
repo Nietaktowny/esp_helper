@@ -1,0 +1,22 @@
+<map id="projects/lib_tests/lib/err_controller/src/err_controller.c" name="projects/lib_tests/lib/err_controller/src/err_controller.c">
+<area shape="rect" id="Node000001" title="Error helper library source file." alt="" coords="307,5,439,61"/>
+<area shape="rect" id="Node000002" href="$err__controller_8h.html" title="Error helper library header." alt="" coords="113,109,219,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,64,210,105,208,100,307,59"/>
+<area shape="rect" id="Node000006" href="$errors__list_8h.html" title="Error helper library errors list." alt="" coords="226,183,314,208"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="334,63,311,85,291,110,280,139,274,168,269,167,275,138,287,108,307,81,331,60"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="301,109,360,135"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="362,62,345,96,340,94,357,60"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="384,109,447,135"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="388,60,405,94,400,96,384,62"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="471,109,534,135"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="415,59,473,98,470,103,412,64"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="557,109,618,135"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="441,59,544,100,542,105,439,64"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,183,82,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,138,78,177,76,172,144,133"/>
+<area shape="rect" id="Node000004" href="$CException_8h_source.html" title=" " alt="" coords="106,183,202,208"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="167,135,161,168,156,167,162,134"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="185,133,242,171,239,176,182,137"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="119,256,189,282"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="157,209,157,241,152,241,152,209"/>
+</map>

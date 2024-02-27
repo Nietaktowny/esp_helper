@@ -28,7 +28,7 @@ void sysutil_get_chip_base_mac(uint8_t mac[6]);
  * @param buffer Buffer to store string.
  * @param buflen Size of buffer.
  * 
- * @retval ERR_NULL_POINTER on NULL buffer.
+ * @retval ERR_C_NULL_POINTER on NULL buffer.
  * @retval ERR_C_MEMORY_ERR on too small buffer.
  */
 int sysutil_get_chip_base_mac_as_str(char* buffer, size_t buflen);

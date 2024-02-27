@@ -61,7 +61,7 @@ static void wifi_c_sta_event_handler(void *arg, esp_event_base_t event_base,
  * @retval WIFI_C_ERR_STA_CONNECT_FAIL if sta started, but connection failed.
  * @retval WIFI_C_ERR_STA_TIMEOUT_EXPIRE If sta couldn't connect before timeout time ended.
  * @retval WIFI_C_ERR_STA_NOT_STARTED If sta is not started.
- * @retval ERR_C_INVALID_ARGS If function doesn't bits value.
+ * @retval ERR_C_WRONG_ARGS If function doesn't bits value.
  * 
  */
 static err_c_t wifi_c_check_sta_connection_result(uint16_t timeout_sec);
@@ -81,7 +81,7 @@ static void wifi_c_netif_deinit(wifi_c_mode_t mode);
  * @param esp_record Pointer to esp-idf wifi_ap_record_t, used to traverse array of records.
  * @param num Number of records in array.
  * 
- * @retval ERR_NULL_POINTER If esp_record is NULL,
+ * @retval ERR_C_NULL_POINTER If esp_record is NULL,
  * @retval 0 on success
  */
 static int wifi_c_map_ap_records(wifi_ap_record_t *esp_record, uint16_t num);
@@ -212,7 +212,7 @@ static err_c_t wifi_c_check_sta_connection_result(uint16_t timeout_sec)
         return WIFI_C_ERR_STA_NOT_STARTED;
     default:
         LOG_DEBUG("i don't know which bits are set, see: %u", bits);
-        return ERR_C_INVALID_ARGS;
+        return ERR_C_WRONG_ARGS;
     }
 }
 

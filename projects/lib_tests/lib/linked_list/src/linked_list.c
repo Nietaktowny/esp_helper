@@ -161,7 +161,7 @@ int linkedl_delete(linkedl_t list, char* name) {
     CHECK_NULL_PTR(list, LOG_WARN("list is not initialized"));
     if(!name) {
         LOG_WARN("name cannot be null");
-        return ERR_WRONG_ARGS;
+        return ERR_C_WRONG_ARGS;
     }
     if (!list->head && list->items_num == 0)
     {
@@ -173,7 +173,7 @@ int linkedl_delete(linkedl_t list, char* name) {
     node_t node_to_delete = linkedl_find_node_with_id(list, id);
     if(!node_to_delete) {
         LOG_ERROR("not found with current id");
-        return ERR_WRONG_ARGS;
+        return ERR_C_WRONG_ARGS;
     }
     LOG_VERBOSE("node found, updating list information...");
     node_t previous_node = linkedl_find_previous_node(list, node_to_delete);

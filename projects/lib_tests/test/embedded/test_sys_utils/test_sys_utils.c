@@ -65,7 +65,7 @@ void test_if_get_base_mac_as_str_returns_err_on_null_buffer(void) {
   err = sysutil_get_chip_base_mac_as_str(NULL, 23);
 
   //then
-  TEST_ASSERT_EQUAL_MESSAGE(ERR_NULL_POINTER, err, "sysutil_get_chip_base_mac_as_str should return err on NULL pointer");
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "sysutil_get_chip_base_mac_as_str should return err on NULL pointer");
 }
 
 void test_if_get_base_mac_as_str_returns_err_on_too_smalL_buffer(void) {

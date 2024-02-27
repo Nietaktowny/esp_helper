@@ -103,8 +103,8 @@ $(document).ready(function(){initNavTree('tcp__controller_8c.html',''); initResi
 <code>#include &quot;<a class="el" href="tcp__c__errors_8h_source.html">tcp_c_errors.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
 <code>#include &quot;memory_utils.h&quot;</code><br />
-<code>#include &quot;err_controller.h&quot;</code><br />
-<code>#include &quot;errors_list.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="err__controller_8h_source.html">err_controller.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="errors__list_8h_source.html">errors_list.h</a>&quot;</code><br />
 <code>#include &quot;lwip/inet.h&quot;</code><br />
 <code>#include &quot;lwip/sockets.h&quot;</code><br />
 <code>#include &quot;ping/ping_sock.h&quot;</code><br />
@@ -131,14 +131,14 @@ Include dependency graph for tcp_controller.c:</div>
 <area shape="poly" title=" " alt="" coords="797,37,662,41,497,52,416,61,343,74,282,90,239,111,226,123,216,138,203,169,198,167,211,135,222,120,235,107,280,85,341,69,415,56,496,46,662,35,797,32"/>
 <area shape="rect" href="tcp__c__errors_8h.html" title="TCP Controller errors list." alt="" coords="249,109,353,135"/>
 <area shape="poly" title=" " alt="" coords="797,47,372,112,368,112,367,107,371,106,796,42"/>
-<area shape="rect" href="logger_8h.html" title="Logger library header file." alt="" coords="357,183,424,208"/>
-<area shape="poly" title=" " alt="" coords="797,40,698,47,586,60,484,81,445,95,417,111,407,123,401,137,394,168,389,167,395,136,403,120,414,107,442,90,482,75,585,54,698,41,797,34"/>
+<area shape="rect" href="logger_8h.html" title="Logger library header file." alt="" coords="333,183,400,208"/>
+<area shape="poly" title=" " alt="" coords="797,41,700,50,588,64,486,84,446,97,417,111,404,123,392,138,377,170,372,167,388,135,400,120,414,107,444,92,485,79,587,58,699,45,797,36"/>
 <area shape="rect" href="memory__utils_8h_source.html" title=" " alt="" coords="428,109,537,135"/>
 <area shape="poly" title=" " alt="" coords="798,52,551,108,550,103,796,47"/>
-<area shape="rect" href="err__controller_8h_source.html" title=" " alt="" coords="561,109,668,135"/>
+<area shape="rect" href="err__controller_8h.html" title="Error helper library header." alt="" coords="561,109,668,135"/>
 <area shape="poly" title=" " alt="" coords="798,60,665,106,663,101,796,55"/>
-<area shape="rect" href="errors__list_8h_source.html" title=" " alt="" coords="805,183,893,208"/>
-<area shape="poly" title=" " alt="" coords="798,58,761,79,745,94,733,110,729,121,729,130,741,148,763,163,791,175,789,180,760,168,737,152,724,132,723,120,728,108,741,90,758,75,795,53"/>
+<area shape="rect" href="errors__list_8h.html" title="Error helper library errors list." alt="" coords="730,183,819,208"/>
+<area shape="poly" title=" " alt="" coords="798,58,761,79,745,94,733,110,729,125,732,141,752,170,747,173,727,143,723,125,728,108,741,90,758,75,795,53"/>
 <area shape="rect" title=" " alt="" coords="742,109,860,135"/>
 <area shape="poly" title=" " alt="" coords="847,63,821,98,817,95,843,60"/>
 <area shape="rect" title=" " alt="" coords="884,109,974,135"/>
@@ -161,27 +161,24 @@ Include dependency graph for tcp_controller.c:</div>
 <area shape="poly" title=" " alt="" coords="933,34,1074,40,1267,53,1489,74,1717,106,1716,112,1488,80,1266,58,1074,46,933,39"/>
 <area shape="poly" title=" " alt="" coords="109,137,70,174,66,170,105,133"/>
 <area shape="poly" title=" " alt="" coords="134,133,173,170,169,174,130,137"/>
-<area shape="rect" href="ansi__colors_8h_source.html" title=" " alt="" coords="342,256,439,282"/>
-<area shape="poly" title=" " alt="" coords="393,209,393,241,388,241,388,209"/>
-<area shape="rect" title=" " alt="" coords="589,256,648,282"/>
-<area shape="poly" title=" " alt="" coords="425,205,574,251,573,256,423,210"/>
-<area shape="rect" title=" " alt="" coords="261,256,317,282"/>
-<area shape="poly" title=" " alt="" coords="375,211,320,249,317,245,372,207"/>
-<area shape="rect" title=" " alt="" coords="463,256,539,282"/>
-<area shape="poly" title=" " alt="" coords="411,207,471,245,468,250,408,211"/>
-<area shape="poly" title=" " alt="" coords="468,137,419,175,416,171,465,133"/>
-<area shape="poly" title=" " alt="" coords="485,135,489,208,496,241,491,242,484,209,480,135"/>
-<area shape="rect" title=" " alt="" coords="498,183,560,208"/>
-<area shape="poly" title=" " alt="" coords="492,133,515,168,511,171,488,136"/>
-<area shape="poly" title=" " alt="" coords="577,138,439,181,438,176,576,133"/>
-<area shape="poly" title=" " alt="" coords="617,135,620,241,615,241,612,135"/>
-<area shape="poly" title=" " alt="" coords="613,136,598,171,574,210,533,249,529,245,570,207,593,168,608,134"/>
-<area shape="poly" title=" " alt="" coords="602,137,556,175,553,171,598,133"/>
-<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="685,183,781,208"/>
-<area shape="poly" title=" " alt="" coords="636,133,701,172,699,177,633,137"/>
-<area shape="poly" title=" " alt="" coords="655,133,795,175,794,180,653,138"/>
-<area shape="rect" title=" " alt="" coords="698,256,768,282"/>
-<area shape="poly" title=" " alt="" coords="736,209,736,241,730,241,730,209"/>
+<area shape="rect" href="ansi__colors_8h_source.html" title=" " alt="" coords="175,256,272,282"/>
+<area shape="poly" title=" " alt="" coords="343,211,263,251,260,247,341,206"/>
+<area shape="rect" title=" " alt="" coords="297,256,356,282"/>
+<area shape="poly" title=" " alt="" coords="362,210,343,244,338,242,357,207"/>
+<area shape="rect" title=" " alt="" coords="380,256,436,282"/>
+<area shape="poly" title=" " alt="" coords="375,207,395,241,391,244,371,210"/>
+<area shape="rect" title=" " alt="" coords="460,256,537,282"/>
+<area shape="poly" title=" " alt="" coords="390,207,464,246,462,251,387,211"/>
+<area shape="poly" title=" " alt="" coords="464,137,400,177,397,172,461,133"/>
+<area shape="poly" title=" " alt="" coords="478,136,466,169,463,188,465,208,482,242,477,245,460,209,458,188,461,167,473,134"/>
+<area shape="rect" title=" " alt="" coords="474,183,536,208"/>
+<area shape="poly" title=" " alt="" coords="489,134,499,167,494,168,484,136"/>
+<area shape="poly" title=" " alt="" coords="607,136,550,210,520,246,516,243,546,207,603,133"/>
+<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="610,183,707,208"/>
+<area shape="poly" title=" " alt="" coords="624,133,645,168,641,171,619,136"/>
+<area shape="poly" title=" " alt="" coords="643,133,734,174,732,178,640,138"/>
+<area shape="rect" title=" " alt="" coords="623,256,694,282"/>
+<area shape="poly" title=" " alt="" coords="661,209,661,241,656,241,656,209"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -406,7 +403,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tcp_get_client_socket_
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>on success </td></tr>
-    <tr><td class="paramname">ERR_NULL_POINTER</td><td>on NULL socket_t* pointer </td></tr>
+    <tr><td class="paramname">ERR_C_NULL_POINTER</td><td>on NULL socket_t* pointer </td></tr>
     <tr><td class="paramname">reads</td><td>errno on other errors </td></tr>
   </table>
   </dd>
@@ -612,7 +609,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>tcp_get_client_socket_
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">0</td><td>on success </td></tr>
-    <tr><td class="paramname">ERR_NULL_POINTER</td><td>when address/addr_ipv4 was NULL </td></tr>
+    <tr><td class="paramname">ERR_C_NULL_POINTER</td><td>when address/addr_ipv4 was NULL </td></tr>
     <tr><td class="paramname">ERR_TCP_ADDR_ERROR</td><td>when address was invalid </td></tr>
     <tr><td class="paramname">ERR_TCP_INVALID_PORT</td><td>when trying to use port &lt; 1024 </td></tr>
   </table>
