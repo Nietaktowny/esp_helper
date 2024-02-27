@@ -37,6 +37,7 @@
  * @retval ERR_C_NULL_POINTER If address is NULL.
  * @retval CLI_ERR_CONNECT_FAIL If error occurs during setup of TCP server.
  * @retval CLI_ERR_NO_INTERNET If device has no internet connection.
+ * @retval 0 on success.
  */
 int cli_set_remote_logging(uint16_t port, const char* address);
 
