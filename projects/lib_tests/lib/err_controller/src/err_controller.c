@@ -17,6 +17,8 @@
 
 #ifdef ESP_PLATFORM
 #include <esp_err.h>
+#else
+#include <errno.h>
 #endif
 
 err_c_t err_check_null_pointer(void* ptr) {
@@ -41,6 +43,7 @@ const char* error_to_name(err_c_t err) {
         #ifdef ESP_PLATFORM
         return esp_err_to_name(err);
         #else
+        err = errno;
         return strerror(err);
         #endif
     }
