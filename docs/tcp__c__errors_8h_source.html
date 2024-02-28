@@ -102,11 +102,12 @@ $(document).ready(function(){initNavTree('tcp__c__errors_8h_source.html',''); in
 <a href="tcp__c__errors_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define INVALID_SOCKET          -1</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define ERR_TCP_ADDR_ERROR      0x0023</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define ERR_TCP_INVALID_PORT    0x0024</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define ERR_TCP_INVALID_SOCKET  0x0025</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define ERR_TCP_INVALID_ARGS    0x0026</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">   14</a></span><span class="preprocessor">#define ERR_TCP_BASE            0x012C                             </span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="tcp__c__errors_8h.html#a26769957ec1a2beaf223f33b66ee64ab">   15</a></span><span class="preprocessor">#define INVALID_SOCKET          0x0000-1 + ERR_TCP_BASE            </span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="tcp__c__errors_8h.html#a0023d05f8842a11462d688ab027d84d9">   16</a></span><span class="preprocessor">#define ERR_TCP_ADDR_ERROR      0x0023 + ERR_TCP_BASE              </span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="tcp__c__errors_8h.html#a53f479ce86e824df3167c5971cf57d06">   17</a></span><span class="preprocessor">#define ERR_TCP_INVALID_PORT    0x0024 + ERR_TCP_BASE              </span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="tcp__c__errors_8h.html#a8a47bc86d657d9d2a83bdcd43c2b1c42">   18</a></span><span class="preprocessor">#define ERR_TCP_INVALID_SOCKET  0x0025 + ERR_TCP_BASE              </span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="tcp__c__errors_8h.html#a7a0c0d0cff40ad8124a91a383f958049">   19</a></span><span class="preprocessor">#define ERR_TCP_INVALID_ARGS    0x0026 + ERR_TCP_BASE              </span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

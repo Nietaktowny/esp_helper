@@ -8,13 +8,13 @@
 <area shape="rect" id="edge1-headlabel" href="dir_000000_000038.html" title="1" alt="" coords="916,201,923,216"/>
 <area shape="rect" id="node3" href="dir_4f25e74943244e8ea3911a964b74fd47.html" title="bmp280" alt="" coords="293,137,360,162"/>
 <area shape="poly" id="edge4" href="dir_000001_000007.html" alt="" coords="352,160,434,201,431,205,350,165"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000001_000007.html" title="2" alt="" coords="430,187,437,202"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000001_000007.html" title="1" alt="" coords="430,187,437,202"/>
 <area shape="poly" id="edge3" href="dir_000001_000038.html" alt="" coords="361,157,374,160,531,183,687,199,922,217,922,222,687,205,531,188,373,165,360,162"/>
 <area shape="rect" id="edge3-headlabel" href="dir_000001_000038.html" title="1" alt="" coords="916,203,923,218"/>
 <area shape="rect" id="node4" href="dir_1cf053107e30248f91a0ee9f8fa95ed7.html" title="CException" alt="" coords="1242,63,1329,89"/>
 <area shape="rect" id="node5" href="dir_6e7fc6bf6f046ea8d07a281d45f8421b.html" title="cli_manager" alt="" coords="790,63,882,89"/>
 <area shape="poly" id="edge5" href="dir_000003_000007.html" alt="" coords="790,82,416,105,229,121,167,130,140,139,136,149,141,161,158,174,183,185,254,202,334,212,408,217,407,222,333,217,253,207,182,190,155,178,137,164,130,149,137,135,166,125,228,116,415,99,790,77"/>
-<area shape="rect" id="edge5-headlabel" href="dir_000003_000007.html" title="2" alt="" coords="401,204,408,219"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000003_000007.html" title="1" alt="" coords="401,204,408,219"/>
 <area shape="poly" id="edge7" href="dir_000003_000038.html" alt="" coords="882,77,1205,101,1364,118,1416,126,1440,135,1448,148,1445,160,1433,171,1415,179,1363,194,1294,205,1139,218,1009,224,1009,218,1138,213,1294,199,1362,189,1414,174,1430,166,1440,158,1442,149,1437,139,1414,131,1363,123,1205,107,882,83"/>
 <area shape="rect" id="edge7-headlabel" href="dir_000003_000038.html" title="1" alt="" coords="1009,222,1016,237"/>
 <area shape="rect" id="node19" href="dir_78ac67dc0aba7b8cbb62cfdee47ae8ea.html" title="tcp_controller" alt="" coords="786,137,886,162"/>
@@ -33,7 +33,7 @@
 <area shape="rect" id="edge11-headlabel" href="dir_000008_000100.html" title="1" alt="" coords="102,187,109,202"/>
 <area shape="rect" id="node8" href="dir_ee5e40fa0eda3d5a4b079cda0961046c.html" title="http_client" alt="" coords="385,137,466,162"/>
 <area shape="poly" id="edge12" href="dir_000012_000007.html" alt="" coords="435,161,457,196,453,199,431,164"/>
-<area shape="rect" id="edge12-headlabel" href="dir_000012_000007.html" title="2" alt="" coords="457,183,464,198"/>
+<area shape="rect" id="edge12-headlabel" href="dir_000012_000007.html" title="1" alt="" coords="457,183,464,198"/>
 <area shape="poly" id="edge13" href="dir_000012_000038.html" alt="" coords="467,157,479,160,729,195,922,215,921,220,729,200,478,165,466,163"/>
 <area shape="rect" id="edge13-headlabel" href="dir_000012_000038.html" title="1" alt="" coords="916,202,923,217"/>
 <area shape="rect" id="node9" href="dir_29acd90ebddc7397a51aae186bd6cfa3.html" title="http_server" alt="" coords="1042,63,1129,89"/>
@@ -46,11 +46,11 @@
 <area shape="rect" id="edge15-headlabel" href="dir_000013_000038.html" title="1" alt="" coords="1009,221,1016,236"/>
 <area shape="rect" id="node10" href="dir_8d8b1f1b72ed7295d85ce810b55b3662.html" title="i2c_controller" alt="" coords="568,137,667,162"/>
 <area shape="poly" id="edge18" href="dir_000014_000007.html" alt="" coords="594,165,511,205,508,201,591,160"/>
-<area shape="rect" id="edge18-headlabel" href="dir_000014_000007.html" title="2" alt="" coords="512,202,519,217"/>
+<area shape="rect" id="edge18-headlabel" href="dir_000014_000007.html" title="1" alt="" coords="512,202,519,217"/>
 <area shape="poly" id="edge17" href="dir_000014_000038.html" alt="" coords="667,158,923,210,922,216,666,164"/>
 <area shape="rect" id="edge17-headlabel" href="dir_000014_000038.html" title="1" alt="" coords="917,197,924,212"/>
 <area shape="poly" id="edge20" href="dir_000037_000007.html" alt="" coords="1046,163,1034,165,895,185,756,201,535,220,534,215,756,195,894,180,1033,160,1045,158"/>
-<area shape="rect" id="edge20-headlabel" href="dir_000037_000007.html" title="2" alt="" coords="535,218,542,233"/>
+<area shape="rect" id="edge20-headlabel" href="dir_000037_000007.html" title="1" alt="" coords="535,218,542,233"/>
 <area shape="poly" id="edge19" href="dir_000037_000038.html" alt="" coords="1066,165,1000,204,997,200,1064,161"/>
 <area shape="rect" id="edge19-headlabel" href="dir_000037_000038.html" title="1" alt="" coords="1002,200,1009,215"/>
 <area shape="rect" id="node13" href="dir_45ffbaea6560ed9ad62599eaf590dd8a.html" title="memory_utils" alt="" coords="1328,137,1427,162"/>
@@ -64,7 +64,7 @@
 <area shape="rect" id="edge23-headlabel" href="dir_000050_000038.html" title="1" alt="" coords="1010,209,1017,224"/>
 <area shape="rect" id="node16" href="dir_bb5474980ddec53f2dcbd80788562a1e.html" title="ota_controller" alt="" coords="376,63,475,89"/>
 <area shape="poly" id="edge25" href="dir_000051_000007.html" alt="" coords="376,88,215,115,145,129,114,139,109,150,114,161,133,175,161,187,239,204,327,214,407,218,406,223,326,219,238,209,160,192,130,180,110,164,104,150,110,135,144,124,214,110,375,82"/>
-<area shape="rect" id="edge25-headlabel" href="dir_000051_000007.html" title="2" alt="" coords="401,205,408,220"/>
+<area shape="rect" id="edge25-headlabel" href="dir_000051_000007.html" title="1" alt="" coords="401,205,408,220"/>
 <area shape="poly" id="edge26" href="dir_000051_000012.html" alt="" coords="428,89,428,121,423,121,423,89"/>
 <area shape="rect" id="edge26-headlabel" href="dir_000051_000012.html" title="1" alt="" coords="430,111,437,126"/>
 <area shape="poly" id="edge24" href="dir_000051_000038.html" alt="" coords="475,76,936,96,1170,113,1248,123,1284,135,1291,149,1285,164,1266,179,1237,191,1163,208,1080,218,1009,223,1009,218,1080,213,1162,203,1236,186,1263,174,1281,161,1286,149,1281,139,1247,129,1170,119,935,101,475,81"/>
@@ -79,12 +79,12 @@
 <area shape="poly" id="edge30" href="dir_000077_000038.html" alt="" coords="764,159,923,207,922,212,763,164"/>
 <area shape="rect" id="edge30-headlabel" href="dir_000077_000038.html" title="1" alt="" coords="918,193,925,208"/>
 <area shape="poly" id="edge31" href="dir_000078_000007.html" alt="" coords="786,163,534,212,533,207,785,158"/>
-<area shape="rect" id="edge31-headlabel" href="dir_000078_000007.html" title="2" alt="" coords="535,210,542,225"/>
+<area shape="rect" id="edge31-headlabel" href="dir_000078_000007.html" title="1" alt="" coords="535,210,542,225"/>
 <area shape="poly" id="edge32" href="dir_000078_000038.html" alt="" coords="859,161,931,200,929,205,857,165"/>
 <area shape="rect" id="edge32-headlabel" href="dir_000078_000038.html" title="1" alt="" coords="928,186,935,201"/>
 <area shape="rect" id="node21" href="dir_190fd12719d34a9d0bb15561b23da44b.html" title="wifi_manager" alt="" coords="171,137,269,162"/>
 <area shape="poly" id="edge33" href="dir_000101_000007.html" alt="" coords="263,160,414,203,413,208,262,165"/>
-<area shape="rect" id="edge33-headlabel" href="dir_000101_000007.html" title="3" alt="" coords="409,189,416,204"/>
+<area shape="rect" id="edge33-headlabel" href="dir_000101_000007.html" title="2" alt="" coords="409,189,416,204"/>
 <area shape="poly" id="edge34" href="dir_000101_000038.html" alt="" coords="270,158,282,160,468,182,651,198,921,217,921,222,650,204,467,187,281,165,269,163"/>
 <area shape="rect" id="edge34-headlabel" href="dir_000101_000038.html" title="2" alt="" coords="915,203,922,218"/>
 <area shape="poly" id="edge35" href="dir_000101_000100.html" alt="" coords="211,164,178,201,174,197,207,161"/>

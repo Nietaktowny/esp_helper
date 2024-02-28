@@ -2,7 +2,7 @@
  * @file sys_utils.h
 * @author Wojciech Mytych
  * @brief Source file of sys_utils library.
- * @version 1.0.2
+ * @version 1.0.3
  * @date 2024-02-17
  * 
  * @copyright Copyright (c) 2024

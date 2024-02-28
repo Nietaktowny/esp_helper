@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['linked_5flist_2ec_0',['linked_list.c',['../linked__list_8c.html',1,'']]],
-  ['linked_5flist_2eh_1',['linked_list.h',['../linked__list_8h.html',1,'']]],
-  ['linked_5flist_5ferrors_2eh_2',['linked_list_errors.h',['../linked__list__errors_8h.html',1,'']]],
-  ['linked_5flist_5finternal_2eh_3',['linked_list_internal.h',['../linked__list__internal_8h.html',1,'']]],
-  ['logger_2ec_4',['logger.c',['../logger_8c.html',1,'']]],
-  ['logger_2eh_5',['logger.h',['../logger_8h.html',1,'']]]
+  ['err_5fc_5ferrors_2eh_0',['err_c_errors.h',['../err__c__errors_8h.html',1,'']]],
+  ['err_5fc_5fnames_2ec_1',['err_c_names.c',['../err__c__names_8c.html',1,'']]],
+  ['err_5fcontroller_2ec_2',['err_controller.c',['../err__controller_8c.html',1,'']]],
+  ['err_5fcontroller_2eh_3',['err_controller.h',['../err__controller_8h.html',1,'']]],
+  ['esp_5fhelper_5ferrors_2eh_4',['esp_helper_errors.h',['../esp__helper__errors_8h.html',1,'']]],
+  ['esp_5fhelper_5futils_2ec_5',['esp_helper_utils.c',['../esp__helper__utils_8c.html',1,'']]],
+  ['esp_5fhelper_5futils_2eh_6',['esp_helper_utils.h',['../esp__helper__utils_8h.html',1,'']]]
 ];

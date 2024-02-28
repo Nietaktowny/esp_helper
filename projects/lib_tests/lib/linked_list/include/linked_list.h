@@ -2,7 +2,7 @@
  * @file linked_list.h
  * @author Wojciech Mytych
  * @brief Linked list library header file.
- * @version 1.0.6
+ * @version 1.0.7
  * @date 2024-02-26
  * 
  * @copyright Copyright (c) 2024

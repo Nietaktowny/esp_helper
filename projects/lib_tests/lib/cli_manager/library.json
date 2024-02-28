@@ -1,6 +1,6 @@
 {
 	"name": "cli_manager",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"keywords": "keyword",
 	"description": "Library used to control ESP32 board with CLI.",
 	"authors":
@@ -9,10 +9,10 @@
         "url": "https://github.com/Nietaktowny"
     },
 	"dependencies": {
-		"nietaktowny/logger": "2.0.2",
-		"nietaktowny/tcp_controller": "1.2.3",
-		"nietaktowny/err_controller": "1.0.3",
-		"nietaktowny/memory_utils": "1.0.5"
+		"nietaktowny/logger": "2.0.3",
+		"nietaktowny/tcp_controller": "1.2.5",
+		"nietaktowny/err_controller": "1.0.4",
+		"nietaktowny/memory_utils": "1.0.6"
 	  },
 	"frameworks": ["*"],
 	"platforms": ["*"]

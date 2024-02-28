@@ -1,0 +1,12 @@
+<map id="projects/lib_tests/lib/i2c_controller/include/i2c_c_errors.h" name="projects/lib_tests/lib/i2c_controller/include/i2c_c_errors.h">
+<area shape="rect" id="Node000001" title="I2C Controller errors list." alt="" coords="100,5,252,61"/>
+<area shape="rect" id="Node000002" href="$i2c__controller_8h_source.html" title=" " alt="" coords="97,109,255,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,77,179,108,173,108,173,77"/>
+<area shape="rect" id="Node000003" href="$bmp280_8h.html" title="BMP280 library header file." alt="" coords="5,220,139,276"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="142,178,100,222,96,218,138,174"/>
+<area shape="rect" id="Node000004" href="$bmp280_8c.html" title="BMP280 library source file." alt="" coords="39,331,209,372"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="174,181,166,231,153,284,136,332,131,330,148,283,160,230,168,180"/>
+<area shape="rect" id="Node000005" href="$i2c__controller__internal_8h_source.html" title=" " alt="" coords="213,213,360,283"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="216,174,254,210,250,214,212,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,288,117,330,112,332,90,291"/>
+</map>

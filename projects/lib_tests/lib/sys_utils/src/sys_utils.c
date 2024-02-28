@@ -5,7 +5,7 @@
  * 
  * @todo Implement FreeRTOS wrapper functions (delay, create task, delete task itd.) or use pthreads
  * 
- * @version 1.0.2
+ * @version 1.0.3
  * @date 2024-02-17
  * 
  * @copyright Copyright (c) 2024

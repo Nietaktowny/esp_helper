@@ -1,5 +1,7 @@
 <map id="projects/lib_tests/lib/cli_manager/include/cli_manager.h" name="projects/lib_tests/lib/cli_manager/include/cli_manager.h">
-<area shape="rect" id="Node000001" title="Cli Manager library header file." alt="" coords="5,5,163,61"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="46,109,122,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,61,87,93,81,93,81,61"/>
+<area shape="rect" id="Node000001" title="Cli Manager library header file." alt="" coords="32,5,189,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,109,82,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,63,64,98,60,95,87,60"/>
+<area shape="rect" id="Node000003" href="$cli__manager__errors_8h.html" title="CLI Manager library errors list." alt="" coords="106,109,248,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,60,160,95,156,98,129,63"/>
 </map>

@@ -2,8 +2,8 @@
  * @file err_controller.c
  * @author Wojciech Mytych
  * @brief Error helper library source file.
- * @version 1.0.3
- * @date 2024-02-27
+ * @version 1.0.4
+ * @date 2024-02-28
  * 
  * @copyright Copyright (c) 2024
  * 
@@ -27,25 +27,4 @@ err_c_t err_check_null_pointer(void* ptr) {
 
 err_c_t err_check_bitmask(uint32_t mask, uint32_t value) {
     return ((mask&value) == mask) ? ERR_C_OK : 1;
-}
-
-
-const char* error_to_name(err_c_t err) {
-    switch (err)
-    {
-    case ERR_C_NO_MEMORY:
-        return "error when allocating memory";
-    case ERR_C_NULL_POINTER:
-        return "passed NULL pointer";
-    case ERR_C_WRONG_ARGS:
-        return "wrong arguments";
-    default:
-        #ifdef ESP_PLATFORM
-        return esp_err_to_name(err);
-        #else
-        err = errno;
-        return strerror(err);
-        #endif
-    }
-    return "i don't know?";
 }

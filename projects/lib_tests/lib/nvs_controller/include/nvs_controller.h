@@ -1,9 +1,10 @@
+
+#pragma once
+
 #include <stddef.h>
+#include "nvs_c_errors.h"
 
 typedef struct nvs_c_handle_obj* nvs_c_handle_t;
-
-#define NVS_C_ERR_BASE                  0x7040
-#define NVS_C_ERR_WRONG_MODE            NVS_C_ERR_BASE + 0x0001
 
 
 int nvs_c_init_nvs (void);

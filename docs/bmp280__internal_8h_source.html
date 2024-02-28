@@ -99,46 +99,47 @@ $(document).ready(function(){initNavTree('bmp280__internal_8h_source.html',''); 
   <div class="headertitle"><div class="title">bmp280_internal.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define BMP_REG_CHIP_ID              UINT8_C(0xD0)      </span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define BMP_REG_RESET                UINT8_C(0xE0)      </span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define BMP_REG_STATUS               UINT8_C(0xF3)      </span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#define BMP_REG_CTRL_MEAS            UINT8_C(0xF4)      </span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define BMP_REG_CONFIG               UINT8_C(0xF5)      </span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define BMP_REG_PRESS_MSB            UINT8_C(0xF7)      </span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define BMP_REG_PRESS_LSB            UINT8_C(0xF8)      </span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define BMP_REG_PRESS_XLSB           UINT8_C(0xF9)      </span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define BMP_REG_TEMP_MSB             UINT8_C(0xFA)      </span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define BMP_REG_TEMP_LSB             UINT8_C(0xFB)      </span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#define BMP_REG_TEMP_XLSB            UINT8_C(0xFC)      </span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define BMP_REG_CAL_HI               UINT8_C(0xA1)      </span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define BMP_REG_CAL_LOW              UINT8_C(0x88)      </span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define BMP_CHIP_ID_FIRST            UINT8_C(0x56)      </span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define BMP_CHIP_ID_SECOND           UINT8_C(0x57)      </span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define BMP_CHIP_ID_THIRD            UINT8_C(0x58)      </span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define BME_CHIP_ID                  UINT8_C(0x60)      </span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define BMP_RESET_VECTOR             UINT8_C(0xB6)      </span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define BMP_STARTUP_TIME             UINT8_C(2)         </span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define BMP_I2C_ADDR_HI              UINT8_C(0xEE)      </span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define BMP_I2C_ADDR_LO              UINT8_C(0xEC)      </span></div>
+<a href="bmp280__internal_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a4d3546d67f7ac457433d1601763c76a8">   17</a></span><span class="preprocessor">#define BMP_REG_CHIP_ID              UINT8_C(0xD0)      </span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a29dc0576d58e8668c39899cf6581e024">   18</a></span><span class="preprocessor">#define BMP_REG_RESET                UINT8_C(0xE0)      </span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#adf3324e8a0d3444cf41ad21998cb183c">   19</a></span><span class="preprocessor">#define BMP_REG_STATUS               UINT8_C(0xF3)      </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#ac3b42f7c2b2fb8d87544538c15435374">   20</a></span><span class="preprocessor">#define BMP_REG_CTRL_MEAS            UINT8_C(0xF4)      </span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a1e2c691d268a94ffcf35de0c758beb98">   21</a></span><span class="preprocessor">#define BMP_REG_CONFIG               UINT8_C(0xF5)      </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#af2721d0fe182144b226a2c49ff694962">   22</a></span><span class="preprocessor">#define BMP_REG_PRESS_MSB            UINT8_C(0xF7)      </span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#ab6f35c412abd52a199100e0af0bb3f96">   23</a></span><span class="preprocessor">#define BMP_REG_PRESS_LSB            UINT8_C(0xF8)      </span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#afb73a657686acb0fd9a3c17238c19d46">   24</a></span><span class="preprocessor">#define BMP_REG_PRESS_XLSB           UINT8_C(0xF9)      </span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a9c96aa617b3e41422ddecfac13d21d56">   25</a></span><span class="preprocessor">#define BMP_REG_TEMP_MSB             UINT8_C(0xFA)      </span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#ad98eb2fdfdc30c40f5c378ad6fccb5b3">   26</a></span><span class="preprocessor">#define BMP_REG_TEMP_LSB             UINT8_C(0xFB)      </span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a17a07198ea16ae7aaa87133fe760fe98">   27</a></span><span class="preprocessor">#define BMP_REG_TEMP_XLSB            UINT8_C(0xFC)      </span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a1028118f2f00d202b2b251afda6413a5">   28</a></span><span class="preprocessor">#define BMP_REG_CAL_HI               UINT8_C(0xA1)      </span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a05e57a87f2ca892ae8e4f004e2f858d0">   29</a></span><span class="preprocessor">#define BMP_REG_CAL_LOW              UINT8_C(0x88)      </span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>int32_t bmp_compensate_T_int32(<a class="code hl_struct" href="structbmp__handle__obj.html">bmp_handle_t</a> bmp, int32_t adc_T);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>uint32_t bmp_compensate_P_int64(<a class="code hl_struct" href="structbmp__handle__obj.html">bmp_handle_t</a> bmp, int32_t adc_P);</div>
-<div class="ttc" id="astructbmp__handle__obj_html"><div class="ttname"><a href="structbmp__handle__obj.html">bmp_handle_obj</a></div><div class="ttdoc">BMP280 device object.</div><div class="ttdef"><b>Definition</b> bmp280.c:25</div></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a08f52651ae54f6102d1e7b16943a1126">   31</a></span><span class="preprocessor">#define BMP_CHIP_ID_FIRST            UINT8_C(0x56)      </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a4de15e43b624bbfe02a8ea930bb1cdba">   32</a></span><span class="preprocessor">#define BMP_CHIP_ID_SECOND           UINT8_C(0x57)      </span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a397bdad71ede09bfc08b2cb36a45af7a">   33</a></span><span class="preprocessor">#define BMP_CHIP_ID_THIRD            UINT8_C(0x58)      </span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#aab6a59335fde2d20c7d422497fb5a145">   34</a></span><span class="preprocessor">#define BME_CHIP_ID                  UINT8_C(0x60)      </span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#ac2107cf7ee20764136a21f2467d88686">   36</a></span><span class="preprocessor">#define BMP_RESET_VECTOR             UINT8_C(0xB6)      </span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a790cbfdb6af7953eef7c7f6a346c61ab">   37</a></span><span class="preprocessor">#define BMP_STARTUP_TIME             UINT8_C(2)         </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a7ef73c54ae733de5c411784ef86fe1a0">   39</a></span><span class="preprocessor">#define BMP_I2C_ADDR_HI              UINT8_C(0xEE)      </span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a25196f92ec893c8e6724993aac9e26a5">   40</a></span><span class="preprocessor">#define BMP_I2C_ADDR_LO              UINT8_C(0xEC)      </span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>int32_t bmp_compensate_T_int32(<a class="code hl_struct" href="structbmp__handle__obj.html">bmp_handle_t</a> bmp, int32_t adc_T);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>uint32_t bmp_compensate_P_int64(<a class="code hl_struct" href="structbmp__handle__obj.html">bmp_handle_t</a> bmp, int32_t adc_P);</div>
+<div class="ttc" id="astructbmp__handle__obj_html"><div class="ttname"><a href="structbmp__handle__obj.html">bmp_handle_obj</a></div><div class="ttdoc">BMP280 device object.</div><div class="ttdef"><b>Definition</b> bmp280.c:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_4f25e74943244e8ea3911a964b74fd47.html">bmp280</a></li><li class="navelem"><a class="el" href="dir_c23023a19bc55d1e9510b98912fd44c0.html">src</a></li><li class="navelem"><b>bmp280_internal.h</b></li>
+    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_4f25e74943244e8ea3911a964b74fd47.html">bmp280</a></li><li class="navelem"><a class="el" href="dir_c23023a19bc55d1e9510b98912fd44c0.html">src</a></li><li class="navelem"><a class="el" href="bmp280__internal_8h.html">bmp280_internal.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

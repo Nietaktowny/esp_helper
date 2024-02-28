@@ -2,7 +2,7 @@
  * @file wifi_controller.h
  * @author Wojciech Mytych (wojciech.lukasz.mytych@gmail.com)
  * @brief Wifi controller header file.
- * @version 1.4.0
+ * @version 2.0.3
  * @date 2024-02-09
  * 
  * @copyright Copyright (c) 2024
@@ -13,7 +13,7 @@
 #include <stdbool.h>
 #include <inttypes.h>
 #include <stddef.h>
-//#include "esp_wifi.h"
+#include "wifi_c_errors.h"
 
 /**
  * @brief Types of available WiFi modes.
@@ -113,28 +113,6 @@ struct wifi_c_scan_result_obj {
  * 
  */
 typedef struct wifi_c_scan_result_obj wifi_c_scan_result_t;
-
-/**
- * @brief Definitions of error codes for wifi_controller.
- * 
- */
-#define WIFI_C_ERR_BASE                 0x00FF                      ///< Error base used to indicate where wifi_controller errors numbers start.
-#define WIFI_C_ERR_NULL_SSID            WIFI_C_ERR_BASE + 0x01      ///< SSID for WiFi was null or zero length.
-#define WIFI_C_ERR_WRONG_MODE           WIFI_C_ERR_BASE + 0x02      ///< Mode type of WiFI was wrong.
-#define WIFI_C_ERR_NETIF_INIT_FAILED    WIFI_C_ERR_BASE + 0x03      ///< Failed to initialize netif - see wifi_c_init_netif() (CRITICAL).
-#define WIFI_C_ERR_WIFI_ALREADY_INIT    WIFI_C_ERR_BASE + 0x04      ///< WiFi was already initialized once.
-#define WIFI_C_ERR_NETIF_ALREADY_INIT   WIFI_C_ERR_BASE + 0x05      ///< Netif is already initialized.
-#define WIFI_C_ERR_WRONG_PASSWORD       WIFI_C_ERR_BASE + 0x06      ///< Password lenght is too short for WIFI_AUTH_WPA2_PSK (need at least 8 characters).
-#define WIFI_C_ERR_WIFI_NOT_STARTED     WIFI_C_ERR_BASE + 0x07      ///< Wifi was not started.
-#define WIFI_C_ERR_WIFI_NOT_INIT        WIFI_C_ERR_BASE + 0x08      ///< Wifi was not initialized.
-#define WIFI_C_ERR_SCAN_NOT_DONE        WIFI_C_ERR_BASE + 0x09      ///< Trying to read scan results without prior scanning.
-#define WIFI_C_ERR_STA_NOT_STARTED      WIFI_C_ERR_BASE + 0x0A      ///< Trying to scan without configuring nad starting STA.
-#define WIFI_C_ERR_AP_NOT_FOUND         WIFI_C_ERR_BASE + 0x0B      ///< Not found desired AP when scanning.
-#define WIFI_C_ERR_NEITF_NOT_INIT       WIFI_C_ERR_BASE + 0x0C      ///< Netif was not initialized.
-#define WIFI_C_ERR_EVENT_LOOP_NOT_INIT  WIFI_C_ERR_BASE + 0x0D      ///< Event loop was not started.
-#define WIFI_C_ERR_STA_NOT_CONNECTED    WIFI_C_ERR_BASE + 0x0E      ///< STA is not connected to any AP.
-#define WIFI_C_ERR_STA_CONNECT_FAIL     WIFI_C_ERR_BASE + 0x0F      ///< STA failed to connect to AP.
-#define WIFI_C_ERR_STA_TIMEOUT_EXPIRE   WIFI_C_ERR_BASE + 0x10      ///< wifi_c_start_sta function timeout expired, returned without connection to WiFi
 
 
 #define WIFI_C_STA_RETRY_COUNT          4                           ///< Number of times to try to connect to AP as STA.

@@ -2,7 +2,7 @@
  * @file wifi_controller.c
  * @author Wojciech Mytych (wojciech.lukasz.mytych@gmail.com)
  * @brief Wifi controller source file.
- * @version 1.4.0
+ * @version 2.0.3
  * @date 2024-02-09
  *
  * @copyright Copyright (c) 2024

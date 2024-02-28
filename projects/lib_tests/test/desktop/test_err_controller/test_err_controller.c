@@ -9,6 +9,9 @@
 #include "errors_list.h"
 #include "logger.h"
 
+//EXAMPLE ERRORS TO CHECK
+#define ERR_TCP_INVALID_PORT    0x0024 + 0x0523              ///< Invalid port number.
+
 void setUp(void) {
   // set stuff up here
   logger_init();
@@ -73,8 +76,24 @@ void test_if_check_and_throw_is_defined(void) {
     #endif
 }
 
+void test_if_err_to_name_translates_example_err(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  const char* expected_err_name = "Invalid port number.";
+  const char* ret_err_name = NULL;
+
+  //when
+  ret_err_name = error_to_name(ERR_TCP_INVALID_PORT);
+
+  //then
+  TEST_ASSERT_EQUAL_STRING_MESSAGE(expected_err_name, ret_err_name, "example error name different from expected");
+}
+
 int runUnityTests(void) {
   UNITY_BEGIN();
+  RUN_TEST(test_if_err_to_name_translates_example_err);
   RUN_TEST(test_if_check_and_throw_is_defined);
   RUN_TEST(test_if_check_log_and_throw_is_defined);
   RUN_TEST(test_if_check_set_and_throw_is_defined);

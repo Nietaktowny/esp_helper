@@ -1,0 +1,30 @@
+<map id="projects/lib_tests/lib/logger/include/logger_errors.h" name="projects/lib_tests/lib/logger/include/logger_errors.h">
+<area shape="rect" id="Node000001" title="Logger library errors list." alt="" coords="556,5,678,61"/>
+<area shape="rect" id="Node000002" href="$logger_8h.html" title="Logger library header file." alt="" coords="556,109,678,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="620,77,620,108,615,108,615,77"/>
+<area shape="rect" id="Node000003" href="$bmp280_8c.html" title="BMP280 library source file." alt="" coords="5,324,176,365"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="542,161,461,185,374,215,239,273,130,326,127,321,236,268,372,210,459,180,540,156"/>
+<area shape="rect" id="Node000004" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="199,316,334,372"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="546,174,468,215,380,269,307,318,304,314,378,264,465,210,544,169"/>
+<area shape="rect" id="Node000005" href="$esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="358,316,509,372"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="559,175,512,214,474,267,447,317,443,314,470,264,509,211,556,171"/>
+<area shape="rect" id="Node000006" href="$http__client_8c.html" title="Http client source file." alt="" coords="532,316,657,372"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="556,176,538,194,525,214,518,240,525,267,540,293,560,314,556,318,536,296,520,269,512,240,520,212,534,190,553,172"/>
+<area shape="rect" id="Node000007" href="$linked__list_8c.html" title="Linked list library source file." alt="" coords="681,316,804,372"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="678,172,697,190,714,211,727,237,736,265,744,315,739,316,731,266,722,239,710,214,693,194,674,176"/>
+<area shape="rect" id="Node000008" href="$logger_8c.html" title="Logger library source file." alt="" coords="876,220,1025,261"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="694,159,887,217,885,222,693,164"/>
+<area shape="rect" id="Node000009" href="$memory__utils_8h_source.html" title=" " alt="" coords="535,213,699,268"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="620,180,620,212,615,212,615,180"/>
+<area shape="rect" id="Node000010" href="$sys__utils_8c.html" title="Source file of sys_utils library." alt="" coords="828,316,967,372"/>
+<area shape="poly" id="edge16_Node000002_Node000010" title=" " alt="" coords="681,170,744,210,813,264,870,314,866,318,810,268,741,215,678,175"/>
+<area shape="rect" id="Node000011" href="$tcp__controller_8c.html" title="TCP Controller source file." alt="" coords="991,316,1126,372"/>
+<area shape="poly" id="edge17_Node000002_Node000011" title=" " alt="" coords="694,161,747,183,799,210,819,225,832,239,846,252,865,266,919,290,991,317,989,322,917,295,863,271,842,256,829,243,815,229,796,215,744,188,692,166"/>
+<area shape="poly" id="edge9_Node000009_Node000003" title=" " alt="" coords="520,259,364,284,188,319,160,326,159,321,187,314,363,279,519,253"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="521,270,346,319,335,322,333,317,344,314,519,264"/>
+<area shape="poly" id="edge11_Node000009_Node000005" title=" " alt="" coords="556,279,484,318,481,313,553,274"/>
+<area shape="poly" id="edge12_Node000009_Node000006" title=" " alt="" coords="610,284,603,316,598,315,605,283"/>
+<area shape="poly" id="edge13_Node000009_Node000007" title=" " alt="" coords="664,276,710,314,707,318,661,281"/>
+<area shape="poly" id="edge14_Node000009_Node000010" title=" " alt="" coords="707,271,828,315,826,320,705,276"/>
+<area shape="poly" id="edge15_Node000009_Node000011" title=" " alt="" coords="715,256,841,281,979,314,991,317,990,322,978,319,840,286,714,261"/>
+</map>

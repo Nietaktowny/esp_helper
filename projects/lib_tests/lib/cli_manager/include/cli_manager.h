@@ -2,7 +2,7 @@
  * @file cli_manager.h
  * @author Wojciech Mytych
  * @brief Cli Manager library header file.
- * @version 1.0.8
+ * @version 1.0.9
  * @date 2024-02-26
  * 
  * @copyright Copyright (c) 2024
@@ -12,6 +12,7 @@
 #pragma once
 
 #include "inttypes.h"
+#include "cli_manager_errors.h"
 
 #define CLI_DEFAULT_PORT                    27015                   ///< TCP Cli manager listen port.
 #define CLI_KEEPALIVE_IDLE                  5                       ///< TCP keep-alive idle time(s).
@@ -21,10 +22,6 @@
 #define CLI_CMD_ARGS_NUMBER                 64                      ///< Number of chars used to indicate arguments in received data.
 #define CLI_CMD_MAX_COMMANDS                64                      ///< Max number of commands to register.
 #define CLI_ACCEPT_TASK_DEFAULT_SIZE        2096                    ///< Default stack size used for cli_accept_task.
-
-#define CLI_ERR_BASE                    0x0500                  
-#define CLI_ERR_CONNECT_FAIL            0x0001 + CLI_ERR_BASE       ///< Error when trying to connect to remote host.
-#define CLI_ERR_NO_INTERNET             0x0002 + CLI_ERR_BASE       ///< Device has no internet connection.
 
 /**
  * @brief Log all logger library logs to remote host on TCP port.

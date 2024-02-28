@@ -2,8 +2,8 @@
  * @file err_controller.h
  * @author Wojciech Mytych
  * @brief Error helper library header.
- * @version 1.0.3
- * @date 2024-02-27
+ * @version 1.0.4
+ * @date 2024-02-28
  * 
  * @copyright Copyright (c) 2024
  * 
@@ -12,7 +12,7 @@
 
 #include <inttypes.h>
 #include "CException.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 
 /**
  * @brief Standard error type typedef.

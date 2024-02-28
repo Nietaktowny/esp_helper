@@ -1,22 +1,23 @@
 <map id="projects/lib_tests/lib/err_controller/src/err_controller.c" name="projects/lib_tests/lib/err_controller/src/err_controller.c">
-<area shape="rect" id="Node000001" title="Error helper library source file." alt="" coords="307,5,439,61"/>
-<area shape="rect" id="Node000002" href="$err__controller_8h.html" title="Error helper library header." alt="" coords="113,109,219,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,64,210,105,208,100,307,59"/>
-<area shape="rect" id="Node000006" href="$errors__list_8h.html" title="Error helper library errors list." alt="" coords="226,183,314,208"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="334,63,311,85,291,110,280,139,274,168,269,167,275,138,287,108,307,81,331,60"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="301,109,360,135"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="362,62,345,96,340,94,357,60"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="384,109,447,135"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="388,60,405,94,400,96,384,62"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="471,109,534,135"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="415,59,473,98,470,103,412,64"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="557,109,618,135"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="441,59,544,100,542,105,439,64"/>
+<area shape="rect" id="Node000001" title="Error helper library source file." alt="" coords="349,5,482,61"/>
+<area shape="rect" id="Node000002" href="$err__controller_8h.html" title="Error helper library header." alt="" coords="101,109,207,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="350,59,206,106,204,101,348,54"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="231,109,320,135"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="373,64,309,103,306,98,370,59"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="343,109,403,135"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="405,62,388,96,383,94,400,60"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="427,109,489,135"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="431,60,448,94,443,96,426,62"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="513,109,577,135"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="458,59,516,98,513,103,455,64"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="600,109,660,135"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="483,59,587,100,585,105,481,64"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,183,82,208"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,138,78,177,76,172,144,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="137,137,76,176,73,172,134,133"/>
 <area shape="rect" id="Node000004" href="$CException_8h_source.html" title=" " alt="" coords="106,183,202,208"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="167,135,161,168,156,167,162,134"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="185,133,242,171,239,176,182,137"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="157,135,157,167,152,167,152,135"/>
+<area shape="rect" id="Node000006" href="$err__c__errors_8h.html" title="Error helper library errors list." alt="" coords="227,183,327,208"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="176,133,245,172,242,177,174,138"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="119,256,189,282"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="157,209,157,241,152,241,152,209"/>
 </map>

@@ -87,6 +87,7 @@ var NAVTREE =
         [ "Functions", "globals_func.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -96,7 +97,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "CExceptionConfig_8h_source.html",
-"md_projects_2lib__tests_2README.html#autotoc_md59"
+"globals_s.html",
+"structwifi__c__status__obj.html#a65fd9a23996e5f027d093b9993953a5e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

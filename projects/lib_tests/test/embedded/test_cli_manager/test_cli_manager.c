@@ -9,7 +9,7 @@
 #define FATAL_COLOR PURPLE_BOLD
 
 #include "cli_manager.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include "logger.h"
 #include "wifi_controller.h"
 #include "nvs_controller.h"
