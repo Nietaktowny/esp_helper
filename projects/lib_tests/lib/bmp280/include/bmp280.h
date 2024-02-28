@@ -1,6 +1,18 @@
+/**
+ * @file bmp280.h
+ * @author Wojciech Mytych
+ * @brief BMP280 library header file.
+ * @version 1.0.4
+ * @date 2024-02-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #pragma once
 #include <inttypes.h>
 #include <stddef.h>
+#include "bmp280_errors.h"
 #include "i2c_controller.h"
 
 /**
@@ -84,10 +96,6 @@ struct bmp_config_obj {
 */
 typedef struct bmp_config_obj bmp_config_t;
 
-// ERROR CODES
-#define BMP_ERR_BASE                        0x0F00                          ///< BMP base for errors.
-#define BMP_ERR_NO_DEVICE_FOUND             BMP_ERR_BASE + 0x0001           ///< No BMP280 device was found on bus.
-#define BMP_ERR_MODE_ERROR                  BMP_ERR_BASE + 0x0003           ///< Cannot change BMP device operating mode.
 
 #define BMP_STANDARD_SEA_LEVEL_PRESSURE     1013.25                         ///< Standard pressure on sea level in hPa.
 

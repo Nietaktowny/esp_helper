@@ -10,7 +10,7 @@
 
 #include "http_client.h"
 #include "logger.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include "wifi_controller.h"
 #include "nvs_controller.h"
 

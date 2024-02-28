@@ -6,8 +6,8 @@
  * @todo Implement get and post versions using arena
  * @todo Implement ESP8266-RTOS-SDK compliant version
  * 
- * @version 1.0.5
- * @date 2024-02-25
+ * @version 1.0.6
+ * @date 2024-02-28
  * 
  * @copyright Copyright (c) 2024
  * 

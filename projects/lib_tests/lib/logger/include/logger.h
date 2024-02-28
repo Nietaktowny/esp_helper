@@ -2,7 +2,7 @@
  * @file logger.h
  * @author Wojciech Mytych
  * @brief Logger library header file.
- * @version 0.1
+ * @version 2.0.3
  * @date 2024-02-24
  * 
  * @copyright Copyright (c) 2024
@@ -13,13 +13,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <inttypes.h>
-
-#define LOGGER_ERR_BASE         0x0950                                ///< Logger error base.
-#define LOGGER_ERR_MUTEX_ERROR  0x0001 + LOGGER_ERR_BASE              ///< When some error with logger mutex occurred.
-#define LOGGER_MUTEX_TIMEOUT    0x0002 + LOGGER_ERR_BASE              ///< When function getting semaphore timeout expired and cannot obtain log_mutex.
-#define LOGGER_ERR_NULL_FILE    0x0003 + LOGGER_ERR_BASE              ///< When null pointer is passed as log file output.
-#define LOGGER_NO_FREE_FILES    0x0004 + LOGGER_ERR_BASE              ///< When there are no new slots for log files, max number of files has been reached.
-
+#include "logger_errors.h"
 
 #define LOGGER_MAX_OUTPUT_FILES 4                                     ///< Max number of files used as output.
 

@@ -9,7 +9,7 @@
 #define FATAL_COLOR PURPLE_BOLD
 
 #include "err_controller.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include "logger.h"
 
 void setUp(void) {

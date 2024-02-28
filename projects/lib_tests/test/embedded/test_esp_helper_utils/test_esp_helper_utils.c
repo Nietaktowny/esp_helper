@@ -10,7 +10,7 @@
 #define FATAL_COLOR PURPLE_BOLD
 
 #include "logger.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include "esp_helper_utils.h"
 
 void setUp(void) {

@@ -2,7 +2,7 @@
  * @file esp_helper_utils.h
  * @author Wojciech Mytych
  * @brief ESP Helper library header file.
- * @version 0.1
+ * @version 1.0.4
  * @date 2024-02-17
  * 
  * @copyright Copyright (c) 2024
@@ -11,12 +11,10 @@
 
 #include "inttypes.h"
 #include "stddef.h"
+#include "esp_helper_errors.h"
 
 #define ESP_HELPER_CHIP_ID_SIZE 6
 
-
-#define ESP_HELPER_ERR_BASE             0x2222                          ///< ESP Helper error base.
-#define ESP_HELPER_ERR_NOT_CONNECTED    ESP_HELPER_ERR_BASE + 0x0001    ///< When trying to perform OTA when STA is not connected.
 
 /**
  * @brief Get ESP Helper device ID.

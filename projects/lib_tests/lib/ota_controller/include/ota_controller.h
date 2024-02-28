@@ -1,8 +1,9 @@
+
+#pragma once
+
 #include <stddef.h>
 #include <inttypes.h>
-
-#define OTA_C_ERR_BASE                      0x0230
-#define OTA_C_ERR_IMAGES_THE_SAME           OTA_C_ERR_BASE + 0x0001
+#include "ota_c_errors.h"
 
 int ota_c_do_simple_ota(const char* url);
 

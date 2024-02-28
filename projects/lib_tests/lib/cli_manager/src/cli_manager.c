@@ -2,7 +2,7 @@
  * @file cli_manager.c
  * @author Wojciech Mytych
  * @brief Cli Manager library source file.
- * @version 1.0.8
+ * @version 1.0.9
  * @date 2024-02-26
  * 
  * @copyright Copyright (c) 2024

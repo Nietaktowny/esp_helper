@@ -1,4 +1,4 @@
 dependencies:
   idf: '>=5.0' 
 description: Simple memory arena.
-version: 1.0.5
+version: 1.0.6

@@ -1,3 +1,14 @@
+/**
+ * @file ansi_colors.h
+ * @author Wojciech Mytych
+ * @brief ANSI color codes for logger library.
+ * @version 2.0.3
+ * @date 2024-02-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #pragma once
 
 #define RESET                           "\e[0m"

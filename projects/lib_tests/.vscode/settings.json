@@ -20,6 +20,8 @@
         "cli_manager.h": "c",
         "inttypes.h": "c",
         "system_error": "c",
-        "cmath": "c"
+        "cmath": "c",
+        "err_c_errors.h": "c",
+        "tcp_controller.h": "c"
     }
 }

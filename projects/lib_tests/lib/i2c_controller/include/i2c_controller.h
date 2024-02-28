@@ -2,6 +2,7 @@
 
 #include <inttypes.h>
 #include <stddef.h>
+#include "i2c_c_errors.h"
 
 /**
  * @brief Handle representing I2C bus.
@@ -12,9 +13,6 @@ typedef struct i2c_c_bus_handle_obj *i2c_c_bus_handle_t;
  * @brief Handle representing I2C device.
 */
 typedef struct i2c_c_device_handle_obj *i2c_c_device_handle_t;
-
-#define I2C_C_ERR_BASE 0x0200
-#define I2C_C_ERR_LOCK_ERR I2C_C_ERR_BASE + 0x0001
 
 /**
  * @brief I2C port number, can be I2C_C_NUM_0, I2C_C_NUM_1.

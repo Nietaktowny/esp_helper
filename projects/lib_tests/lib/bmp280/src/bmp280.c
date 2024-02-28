@@ -1,3 +1,14 @@
+/**
+ * @file bmp280.c
+ * @author Wojciech Mytych
+ * @brief BMP280 library source file.
+ * @version 1.0.4
+ * @date 2024-02-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include "bmp280.h"
 #include "bmp280_internal.h"
 #include "logger.h"
