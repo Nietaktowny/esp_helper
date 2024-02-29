@@ -6,7 +6,6 @@
 #define FATAL_COLOR PURPLE_BOLD
 
 #include "err_controller.h"
-#include "errors_list.h"
 #include "logger.h"
 
 //EXAMPLE ERRORS TO CHECK
