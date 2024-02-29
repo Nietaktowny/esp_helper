@@ -1,6 +1,6 @@
 {
     "name": "wifi_controller",
-    "version": "1.4.1",
+    "version": "2.0.5",
     "keywords": "WiFi, driver, controller, espressif32",
     "description": "Controller library used to control WiFi with ESP-IDF.",
     "examples": [

@@ -1,1 +1,3 @@
-idf_component_register(SRCS "src/logger.c" INCLUDE_DIRS "include" REQUIRES err_controller memory_utils)
+idf_component_register(
+    SRCS "src/logger.c" 
+    INCLUDE_DIRS "include" )

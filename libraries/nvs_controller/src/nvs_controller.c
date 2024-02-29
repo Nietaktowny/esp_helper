@@ -28,7 +28,7 @@ int nvs_c_init_nvs (void) {
         ESP_ERROR_CHECK(nvs_flash_erase());
         err = nvs_flash_init();
     }
-    LOG_INFO("nvs was initialized");
+    LOG_DEBUG("nvs was initialized");
     return err;
 }
 
@@ -52,7 +52,7 @@ int nvs_c_open(nvs_c_handle_t* handle, char* namespace) {
     //store namespace name in handle
     memcpy(&((*handle)->namespace), namespace, strlen(namespace));
 
-    LOG_DEBUG("opened namespace %s for read and write operations", namespace);
+    LOG_VERBOSE("opened namespace %s for read and write operations", namespace);
     return err;  
 }
 
@@ -76,7 +76,7 @@ int nvs_c_open_read_only(nvs_c_handle_t* handle, char* namespace) {
     //store namespace name in handle
     memcpy(&((*handle)->namespace), namespace, strlen(namespace));
 
-    LOG_DEBUG("opened namespace %s for read only operations", namespace);
+    LOG_VERBOSE("opened namespace %s for read only operations", namespace);
     return err;    
 }
 
@@ -85,7 +85,7 @@ int nvs_c_close(nvs_c_handle_t handle) {
     ERR_C_CHECK_NULL_PTR(handle, LOG_ERROR("nvs handle cannot be NULL"));
 
     nvs_close(handle->esp_nvs);
-    LOG_DEBUG("nvs namespace: %s was closed", &(handle->namespace));
+    LOG_VERBOSE("nvs namespace: %s was closed", &(handle->namespace));
 
     return err;
 }
@@ -112,7 +112,7 @@ int nvs_c_write_string(nvs_c_handle_t handle, const char* key, const char* buffe
         return err;
     }
 
-    LOG_INFO("written %d bytes data into namespace %s", strlen(buffer), handle->namespace);
+    LOG_VERBOSE("written %d bytes data into namespace %s", strlen(buffer), handle->namespace);
     return err;
 }
 
@@ -128,7 +128,7 @@ int nvs_c_read_string(nvs_c_handle_t handle, const char* key, char* buffer, size
         return err;
     }
 
-    LOG_INFO("read %d bytes from namespace: %s", temp_buflen, handle->namespace);
+    LOG_DEBUG("read %d bytes from namespace: %s", temp_buflen, handle->namespace);
     return err;
 }
 

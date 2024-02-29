@@ -22,6 +22,7 @@
         "system_error": "c",
         "cmath": "c",
         "err_c_errors.h": "c",
-        "tcp_controller.h": "c"
+        "tcp_controller.h": "c",
+        "err_controller.h": "c"
     }
 }

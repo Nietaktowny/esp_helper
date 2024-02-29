@@ -3,13 +3,13 @@
  * @author Wojciech Mytych
  * @brief Auto generated file with ESP Helper libraries error names.
  * @version 1.0.3
- * @date 2024-02-28
+ * @date 2024-02-29
  * 
  * @copyright Copyright (c) 2024
  * 
  */
 #include "err_controller.h" 
-#include "err_c_errors.h"
+#include "errors_list.h"
 #include <string.h>
 
 #ifdef ESP_PLATFORM

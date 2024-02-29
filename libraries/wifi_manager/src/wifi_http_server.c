@@ -62,7 +62,7 @@ struct wifi_s_handle_obj {
 /* Our URI handler function to be called during GET /uri request */
 esp_err_t root_handler(httpd_req_t* req)
 {
-    LOG_DEBUG("serving GET \"/\" request...");
+    LOG_VERBOSE("serving GET \"/\" request...");
 	httpd_resp_set_status(req, http_200_hdr);
 	httpd_resp_set_type(req, http_content_type_html);
 	httpd_resp_send(req, (char*)index_html_start, HTTPD_RESP_USE_STRLEN);
@@ -72,7 +72,7 @@ esp_err_t root_handler(httpd_req_t* req)
 /* Our URI handler function to be called during GET /styles.css request */
 esp_err_t stylesheet_handler(httpd_req_t* req)
 {
-    LOG_DEBUG("serving GET \"/styles.css\" request...");
+    LOG_VERBOSE("serving GET \"/styles.css\" request...");
 	httpd_resp_set_status(req, http_200_hdr);
 	httpd_resp_set_type(req, http_content_type_css);
     httpd_resp_set_hdr(req, http_cache_control_hdr, http_cache_control_cache);
@@ -83,7 +83,7 @@ esp_err_t stylesheet_handler(httpd_req_t* req)
 /* Our URI handler function to be called during GET /code.js request */
 esp_err_t script_handler(httpd_req_t* req)
 {
-    LOG_DEBUG("serving GET \"/code.js\" request...");
+    LOG_VERBOSE("serving GET \"/code.js\" request...");
 	httpd_resp_set_status(req, http_200_hdr);
 	httpd_resp_set_type(req, http_content_type_js);
 	httpd_resp_send(req, (char*)code_js_start, HTTPD_RESP_USE_STRLEN);
@@ -94,7 +94,7 @@ esp_err_t script_handler(httpd_req_t* req)
 esp_err_t ap_json_handler(httpd_req_t* req) {
     err_c_t err = 0;
     char buffer[2096] = "Scanned AP: none";
-    LOG_DEBUG("serving GET \"/scan\" request...");
+    LOG_VERBOSE("serving GET \"/scan\" request...");
 
     err = wifi_manager_fetch_ap_list(&buffer[0], sizeof(buffer));
 
@@ -110,7 +110,7 @@ esp_err_t ap_json_handler(httpd_req_t* req) {
 esp_err_t state_json_handler(httpd_req_t* req) {
     err_c_t err = 0;
     char buffer[1096];
-    LOG_DEBUG("serving GET \"/state\" request...");
+    LOG_VERBOSE("serving GET \"/state\" request...");
 
     err = wifi_c_get_status_as_json(&buffer[0], sizeof(buffer));
 
@@ -132,7 +132,7 @@ esp_err_t connect_handler(httpd_req_t* req) {
     size_t password_len = 0;
 
     memutil_zero_memory(&buffer, sizeof(buffer));
-    LOG_DEBUG("serving POST \"/connect\" request...");
+    LOG_VERBOSE("serving POST \"/connect\" request...");
 
     err = httpd_req_recv(req, buffer, sizeof(buffer));
     if(err <= 0) {
@@ -184,7 +184,7 @@ esp_err_t saved_ap_json_handler(httpd_req_t* req) {
     err_c_t err = 0;
     char buffer[128];
 
-    LOG_DEBUG("serving GET \"/saved_ap\" request...");
+    LOG_VERBOSE("serving GET \"/saved_ap\" request...");
 
     err = wifi_manager_get_stored_ap_as_json(&buffer[0], sizeof(buffer));
     if(err != ERR_C_OK && err != 4354) {
@@ -203,7 +203,7 @@ esp_err_t saved_ap_json_handler(httpd_req_t* req) {
 /* Our URI handler function to be called during GET /restart request */
 esp_err_t restart_handler(httpd_req_t* req)
 {
-    LOG_DEBUG("serving GET \"/restart\" request...");
+    LOG_VERBOSE("serving GET \"/restart\" request...");
 	httpd_resp_set_status(req, http_200_hdr);
 	httpd_resp_send(req, "Device will now restart!", HTTPD_RESP_USE_STRLEN);
     vTaskDelay(pdMS_TO_TICKS(1000));
@@ -218,7 +218,7 @@ esp_err_t restart_handler(httpd_req_t* req)
 esp_err_t clear_handler(httpd_req_t* req)
 {
     err_c_t err = 0;
-    LOG_DEBUG("serving GET \"/clear\" request...");
+    LOG_VERBOSE("serving GET \"/clear\" request...");
 
     err = wifi_manager_erase_ap();
     if(err != ERR_C_OK) {

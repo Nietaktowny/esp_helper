@@ -11,6 +11,7 @@
 
 #include "logger.h"
 #include "err_c_errors.h"
+#include "err_controller.h"
 #include "esp_helper_utils.h"
 
 void setUp(void) {
@@ -69,6 +70,7 @@ void test_if_helper_prepare_url_returns_err_on_null_ota_url(void) {
   err = helper_prepare_url_with_device_id(NULL, device_id, url, sizeof(url));
 
   //then
+  LOG_ERROR("ERROR %#x, %s: ", err, error_to_name(err));
   TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "helper_prepare_url_with_device_id should return err on NULL ota URL");
 }
 

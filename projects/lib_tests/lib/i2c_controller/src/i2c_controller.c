@@ -1,7 +1,6 @@
 #include "i2c_controller.h"
 #include "i2c_controller_internal.h"
 #include "logger.h"
-#include "errors_list.h"
 #include "err_controller.h"
 #include "arena.h"
 #include "memory_utils.h"

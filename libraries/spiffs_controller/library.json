@@ -1,8 +1,13 @@
 {
 	"name": "spiffs_controller",
-	"version": "1.0.0",
-	"keywords": "keyword",
+	"version": "1.0.5",
+	"keywords": "spiffs, driver, esp32, esp, idf, filesystem",
 	"description": "Library used to use SPIFFS Filesystem on ESP32.",
+	"authors":
+    {
+        "name": "nietaktowny",
+        "url": "https://github.com/Nietaktowny"
+    },
 	"frameworks": ["espidf"],
 	"platforms": ["espressif32"]
 }

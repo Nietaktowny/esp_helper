@@ -51,7 +51,7 @@ static int spiffs_c_prepare_filepath(char* prefix_path, char* filename, char* ou
         return SPIFFS_C_ERR_NOT_ENOUGH_SPACE;
     }
 
-    LOG_DEBUG("prepared filepath: %s", ret_path);
+    LOG_VERBOSE("prepared filepath: %s", ret_path);
     //provide path to caller
     strlcpy(&ret_path[0], out_path, path_len);
     return 0;
@@ -60,7 +60,7 @@ static int spiffs_c_prepare_filepath(char* prefix_path, char* filename, char* ou
 
 int spiffs_c_init(const spiffs_c_handle_t* handle) {
     volatile err_c_t err = 0;
-    LOG_DEBUG("initializing SPIFFS...");
+    LOG_VERBOSE("initializing SPIFFS...");
 
     esp_vfs_spiffs_conf_t config = {
         .base_path = handle->base_name,
@@ -138,7 +138,7 @@ int spiffs_c_get_info(const char* partition_label, size_t* out_total, size_t* ou
 
 int spiffs_c_open_file(spiffs_c_handle_t* handle, char* filename, const char* mode, FILE** out_file) {
     int err = 0;
-    char path[128] = "/spiffs/styles.css";
+    char path[128];
     memutil_zero_memory(&path, sizeof(path));
 
     ERR_C_CHECK_NULL_PTR(filename, LOG_ERROR("filename cannot be NULL"));
@@ -147,7 +147,7 @@ int spiffs_c_open_file(spiffs_c_handle_t* handle, char* filename, const char* mo
     
     //prepare file path
     spiffs_c_prepare_filepath(handle->base_name, filename, &path[0], sizeof(path));
-    LOG_DEBUG("opening file on path: %s", path);
+    LOG_VERBOSE("opening file on path: %s", path);
     (*out_file) = fopen(path, mode);
 
     ERR_C_CHECK_NULL_PTR((*out_file), LOG_ERROR("failed to open file %s in mode %s", filename, mode));
@@ -157,7 +157,7 @@ int spiffs_c_open_file(spiffs_c_handle_t* handle, char* filename, const char* mo
 
 void spiffs_c_close_file(FILE* file, const char* filename) {
     if(filename != NULL) {
-        LOG_DEBUG("closing file: %s", filename);
+        LOG_VERBOSE("closing file: %s", filename);
     }
     fclose(file);
 }
@@ -192,7 +192,7 @@ int spiffs_c_read_file(spiffs_c_handle_t* handle, char* filename, char* out_data
     } else if(err != stats.st_size) {
         LOG_WARN("WARNING! Number of bytes read from file different from file size - not whole file was read");
     } else {
-        LOG_INFO("%d bytes was read from file %s", err, filename);
+        LOG_DEBUG("%d bytes was read from file %s", err, filename);
         return 0;       // fread returned number of bytes, so simply return 0 to signal success
     }
 

@@ -3,7 +3,7 @@
 #include <inttypes.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "spiffs_controller_errors.h"
+#include "spiffs_c_errors.h"
 
 
 struct spiffs_c_handle_obj {

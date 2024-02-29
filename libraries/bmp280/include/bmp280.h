@@ -1,6 +1,18 @@
+/**
+ * @file bmp280.h
+ * @author Wojciech Mytych
+ * @brief BMP280 library header file.
+ * @version 1.0.4
+ * @date 2024-02-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #pragma once
 #include <inttypes.h>
 #include <stddef.h>
+#include "bmp280_errors.h"
 #include "i2c_controller.h"
 
 /**
@@ -84,10 +96,6 @@ struct bmp_config_obj {
 */
 typedef struct bmp_config_obj bmp_config_t;
 
-// ERROR CODES
-#define BMP_ERR_BASE                        0x0F00                          ///< BMP base for errors.
-#define BMP_ERR_NO_DEVICE_FOUND             BMP_ERR_BASE + 0x0001           ///< No BMP280 device was found on bus.
-#define BMP_ERR_MODE_ERROR                  BMP_ERR_BASE + 0x0003           ///< Cannot change BMP device operating mode.
 
 #define BMP_STANDARD_SEA_LEVEL_PRESSURE     1013.25                         ///< Standard pressure on sea level in hPa.
 
@@ -143,7 +151,7 @@ int bmp_i2c_write(bmp_handle_t bmp, uint8_t addr, uint8_t* in_buffer, size_t buf
  * @param bmp BMP device handle.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_identify_chip(bmp_handle_t bmp);
@@ -203,7 +211,7 @@ uint8_t bmp_is_image_updating(uint8_t status);
  * @param bmp BMP device handle.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_reset_chip(bmp_handle_t bmp);
@@ -215,7 +223,7 @@ int bmp_i2c_reset_chip(bmp_handle_t bmp);
  * @param out_status[out] Location where store register value.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_get_status(bmp_handle_t bmp, uint8_t* out_status);
@@ -227,7 +235,7 @@ int bmp_i2c_get_status(bmp_handle_t bmp, uint8_t* out_status);
  * @param out_ctrl[out] Location where store register value.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_get_ctrl_meas(bmp_handle_t bmp, uint8_t* out_mode);
@@ -239,7 +247,7 @@ int bmp_i2c_get_ctrl_meas(bmp_handle_t bmp, uint8_t* out_mode);
  * @param out_config[out] Location where store register value.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_get_config(bmp_handle_t bmp, uint8_t* out_config);
@@ -251,7 +259,7 @@ int bmp_i2c_get_config(bmp_handle_t bmp, uint8_t* out_config);
  * @param mode One of three operating modes of BMP280.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_set_mode(bmp_handle_t bmp, bmp_mode_t mode);
@@ -263,7 +271,7 @@ int bmp_i2c_set_mode(bmp_handle_t bmp, bmp_mode_t mode);
  * @param time One of possible times. ex. BMP_STANDBY_1000M
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_set_standby_time(bmp_handle_t bmp, bmp_stdby_time_t time);
@@ -275,7 +283,7 @@ int bmp_i2c_set_standby_time(bmp_handle_t bmp, bmp_stdby_time_t time);
  * @param oversampling One of possible oversampling values, starting with BMP_OVERSAMPLING_...
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_set_press_oversampling(bmp_handle_t bmp, bmp_oversampling_t oversampling);
@@ -287,7 +295,7 @@ int bmp_i2c_set_press_oversampling(bmp_handle_t bmp, bmp_oversampling_t oversamp
  * @param oversampling One of possible oversampling values, starting with BMP_OVERSAMPLING_...
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_set_temp_oversampling(bmp_handle_t bmp, bmp_oversampling_t oversampling);
@@ -299,7 +307,7 @@ int bmp_i2c_set_temp_oversampling(bmp_handle_t bmp, bmp_oversampling_t oversampl
  * @param filter One of possible oversampling values, starting with BMP_IIR_...
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_set_iir_filter(bmp_handle_t bmp, bmp_iir_filter_t filter);
@@ -310,7 +318,7 @@ int bmp_i2c_set_iir_filter(bmp_handle_t bmp, bmp_iir_filter_t filter);
  * @param bmp BMP device handle.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when BMP device handle is NULL.
+ * @retval - ERR_C_NULL_POINTER - when BMP device handle is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_calibrate(bmp_handle_t bmp);
@@ -335,7 +343,7 @@ int bmp_configure(bmp_handle_t bmp, bmp_config_t* config);
  * @param pressure[out] Buffer to store pressure.
  * 
  * @retval - 0 on success
- * @retval - ERR_NULL_POINTER - when any of the arguments is NULL.
+ * @retval - ERR_C_NULL_POINTER - when any of the arguments is NULL.
  * @retval - esp specific error codes
 */
 int bmp_i2c_readout(bmp_handle_t bmp, int32_t* temperature, uint32_t* pressure);

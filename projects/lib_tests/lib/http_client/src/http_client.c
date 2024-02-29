@@ -22,7 +22,6 @@
 #include "esp_crt_bundle.h"
 
 #include "err_controller.h"
-#include "errors_list.h"
 #include "memory_utils.h"
 #include "arena.h"
 #include "logger.h"

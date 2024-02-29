@@ -1,8 +1,16 @@
 {
 	"name": "bmp280",
-	"version": "1.0.0",
+	"version": "1.0.5",
 	"keywords": "keyword",
 	"description": "Library used to control BMP280 chips with ESP-IDF.",
+	"authors":
+    {
+        "name": "nietaktowny",
+        "url": "https://github.com/Nietaktowny"
+    },
+	"dependencies": {
+		"nietaktowny/i2c_controller": "1.0.6"
+	  },
 	"frameworks": ["espidf"],
 	"platforms": ["espressif32"]
 }

@@ -1,7 +1,6 @@
 #include "i2c_controller.h"
 #include "i2c_controller_internal.h"
 #include "logger.h"
-#include "errors_list.h"
 #include "err_controller.h"
 #include "arena.h"
 #include "memory_utils.h"
@@ -36,6 +35,8 @@ struct i2c_c_device_handle_obj {
 int i2c_c_init_bus(const i2c_c_port_t port, const uint8_t scl, const uint8_t sda, i2c_c_bus_handle_t* out_handle) {
     err_c_t err = 0;
     ERR_C_CHECK_NULL_PTR(out_handle, LOG_ERROR("location where to store i2c bus handle cannot be NULL"));
+
+    LOG_VERBOSE("initializing i2c_controller bus, SCL: %d, SDA: %d", scl, sda);
 
     i2c_config_t config = {
         .mode = I2C_MODE_MASTER,
@@ -83,6 +84,8 @@ int i2c_c_add_device(const uint8_t addr, const i2c_c_bus_handle_t bus, i2c_c_dev
     err_c_t err = 0;
     CHECK_NULL_PTR(out_handle, LOG_ERROR("output handle cannot be NULL"));
     CHECK_NULL_PTR(bus, LOG_ERROR("I2C bus handle cannot be NULL"));
+
+    LOG_VERBOSE("adding new device with address: %d", addr);
 
     NEW((*out_handle), struct i2c_c_device_handle_obj); //allocate memory
     (*out_handle)->device_addr = addr;

@@ -13,7 +13,6 @@
 #include "bmp280_internal.h"
 #include "logger.h"
 #include "err_controller.h"
-#include "errors_list.h"
 #include "memory_utils.h"
 #include "i2c_controller.h"
 

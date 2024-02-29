@@ -28,7 +28,7 @@
 */
 #include <string.h>
 #include "err_controller.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include "wifi_controller.h"
 #include "logger.h"
 #include "memory_utils.h"

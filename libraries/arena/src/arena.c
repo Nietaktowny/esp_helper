@@ -150,7 +150,7 @@ arena_t* arena_init(size_t size, size_t count, char* name)
     size = max(size, sizeof(struct node*));
 
     size_t allocated = sizeof(arena_t) + count*size;
-    LOG_DEBUG("bytes to allocate for arena: %u", allocated);
+    LOG_VERBOSE("bytes to allocate for arena: %u", allocated);
 
     void* buf = ALLOC(allocated);
     if(buf == NULL) return NULL;
@@ -180,7 +180,7 @@ arena_t* arena_init_(size_t size, size_t count, void* mem, size_t len, char* nam
         .name      = name
     };
 
-    LOG_DEBUG("arena initialized with values\n\
+    LOG_VERBOSE("arena initialized with values\n\
     name = \t\t%-s\n\
     node size = \t%-u\n\
     node count = \t%-u\n\
@@ -190,7 +190,7 @@ arena_t* arena_init_(size_t size, size_t count, void* mem, size_t len, char* nam
     buffer = \t\t%-p\n\
     bufend = \t\t%-p",\
     a->name, a->size, a->count, a->lazy_init, (void*)a->free_list,(void*)a->bufstart, (void*)a->buffer, (void*)a->bufend);
-    LOG_INFO("arena initialized with size: %u", a->size);         
+    LOG_DEBUG("arena initialized with size: %u", a->size);         
     return a;
 }
 
@@ -201,7 +201,7 @@ void arena_reset(arena_t* a)
     a->lazy_init = true;
     a->bufstart  = a->buffer;
     a->free_list = NULL;
-    LOG_INFO("arena %s reset", a->name);
+    LOG_DEBUG("arena %s reset", a->name);
     // a->bufend never changes. Leave it alone.
 }
 
@@ -236,7 +236,7 @@ void* arena_alloc(arena_t* a)
 {
     void* allocated = a->lazy_init ? lazy_alloc(a)
                         : recycle(&a->free_list);
-    LOG_DEBUG("allocated node %p in arena %s", allocated, a->name);
+    LOG_VERBOSE("allocated node %p in arena %s", allocated, a->name);
     return allocated;
 }
 
@@ -261,6 +261,6 @@ void arena_free(arena_t* a, void* p)
 void arena_destroy(arena_t* a)
 {
     check_heap(a);
-    LOG_INFO("arena %s destroyed", a->name);
+    LOG_DEBUG("arena %s destroyed", a->name);
     FREE(a);
 }
