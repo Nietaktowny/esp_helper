@@ -141,7 +141,7 @@ int bmp_i2c_set_mode(bmp_handle_t bmp, bmp_mode_t mode) {
     err_c_t err = 0;
     uint8_t reg_val = 0;
 
-    CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
     //get current register value
     err = bmp_i2c_get_ctrl_meas(bmp, &reg_val);
     if(err != ERR_C_OK) {
@@ -165,7 +165,7 @@ int bmp_i2c_set_standby_time(bmp_handle_t bmp, bmp_stdby_time_t time) {
     uint8_t reg_value = 0;
     uint8_t mask = 0xe0;            // 1 1 1 0 0 0 0 0
 
-    CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
     err = bmp_i2c_get_config(bmp, &reg_value);
     if(err != ERR_C_OK) {
         LOG_ERROR("error %d during reading config register, cannot change standby time.");
@@ -188,7 +188,7 @@ int bmp_i2c_set_press_oversampling(bmp_handle_t bmp, bmp_oversampling_t oversamp
     uint8_t reg_val = 0;
     uint8_t mask = 0x1c;        // 0 0 0 1 1 1 0 0
 
-    CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
 
     err = bmp_i2c_get_ctrl_meas(bmp, &reg_val);
     if(err != ERR_C_OK) {
@@ -212,7 +212,7 @@ int bmp_i2c_set_temp_oversampling(bmp_handle_t bmp, bmp_oversampling_t oversampl
     uint8_t reg_val = 0;
     uint8_t mask = 0xe1;        // 0 0 0 1 1 1 0 0
 
-    CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
 
     err = bmp_i2c_get_ctrl_meas(bmp, &reg_val);
     if(err != ERR_C_OK) {
@@ -234,7 +234,7 @@ int bmp_i2c_set_temp_oversampling(bmp_handle_t bmp, bmp_oversampling_t oversampl
 int bmp_i2c_set_iir_filter(bmp_handle_t bmp, bmp_iir_filter_t filter) {
     volatile err_c_t err = 0;
 
-    CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
 
     Try {
         uint8_t config_reg = 0;
@@ -256,7 +256,7 @@ int bmp_i2c_calibrate(bmp_handle_t bmp) {
     uint8_t buf[26];
     memutil_zero_memory(&buf, sizeof(buf));
 
-    CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
     
     LOG_VERBOSE("reading BMP280 out calibration values...");
     err = bmp_i2c_read(bmp, BMP_REG_CAL_LOW, buf, sizeof(buf));
@@ -286,7 +286,7 @@ int bmp_i2c_identify_chip(bmp_handle_t bmp) {
     err_c_t err = 0;
     uint8_t id = 0;
 
-    CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
 
     //Try high address 0x77
     LOG_VERBOSE("Trying to find BMP280 device on bus with 0x77 address...");
@@ -331,9 +331,9 @@ float bmp_i2c_calculate_altitude(float pressure, float sea_level_hPa) {
 int bmp_i2c_readout(bmp_handle_t bmp, int32_t* temperature, uint32_t* pressure) {
     volatile err_c_t err = 0;
 
-    CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
-    CHECK_NULL_PTR(temperature, LOG_ERROR("value where temperature is stored cannot be NULL"));
-    CHECK_NULL_PTR(pressure, LOG_ERROR("value where pressure is stored cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bmp, LOG_ERROR("bmp device handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(temperature, LOG_ERROR("value where temperature is stored cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(pressure, LOG_ERROR("value where pressure is stored cannot be NULL"));
 
     Try {
         uint8_t buffer[3];

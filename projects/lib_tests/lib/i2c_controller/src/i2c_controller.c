@@ -71,7 +71,7 @@ int i2c_c_init_bus(const i2c_c_port_t port, const uint8_t scl, const uint8_t sda
 int i2c_c_delete_bus(i2c_c_bus_handle_t bus) {
     err_c_t err = 0;
     
-    CHECK_NULL_PTR(bus, LOG_ERROR("bus handle to delete cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bus, LOG_ERROR("bus handle to delete cannot be NULL"));
 
     LOG_DEBUG("deleting I2C bus on port: %d", bus->port);
     memutil_zero_memory(bus, sizeof(struct i2c_c_bus_handle_obj));
@@ -82,8 +82,8 @@ int i2c_c_delete_bus(i2c_c_bus_handle_t bus) {
 
 int i2c_c_add_device(const uint8_t addr, const i2c_c_bus_handle_t bus, i2c_c_device_handle_t* out_handle) {
     err_c_t err = 0;
-    CHECK_NULL_PTR(out_handle, LOG_ERROR("output handle cannot be NULL"));
-    CHECK_NULL_PTR(bus, LOG_ERROR("I2C bus handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(out_handle, LOG_ERROR("output handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bus, LOG_ERROR("I2C bus handle cannot be NULL"));
 
     LOG_VERBOSE("adding new device with address: %d", addr);
 
@@ -97,7 +97,7 @@ int i2c_c_add_device(const uint8_t addr, const i2c_c_bus_handle_t bus, i2c_c_dev
 int i2c_c_delete_device(i2c_c_device_handle_t device) {
     err_c_t err = 0;
 
-    CHECK_NULL_PTR(device, LOG_ERROR("device handle to delete cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(device, LOG_ERROR("device handle to delete cannot be NULL"));
 
     LOG_DEBUG("deleting I2C device with address: %#x", device->device_addr);
     vSemaphoreDelete(device->lock);

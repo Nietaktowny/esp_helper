@@ -154,12 +154,6 @@ Macros</h2></td></tr>
 <tr class="memitem:a9f59c807418d696cc49fda0fa24846c3" id="r_a9f59c807418d696cc49fda0fa24846c3"><td class="memItemLeft" align="right" valign="top"><a id="a9f59c807418d696cc49fda0fa24846c3" name="a9f59c807418d696cc49fda0fa24846c3"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ERR_C_WRONG_ARGS</b>&#160;&#160;&#160;0x0004  + <a class="el" href="err__c__errors_8h.html#aaacdc932526c9b0f4a962f52d6397d04">ERR_C_ERR_BASE</a></td></tr>
 <tr class="separator:a9f59c807418d696cc49fda0fa24846c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11856a3eed511213170f1bf82bf90662" id="r_a11856a3eed511213170f1bf82bf90662"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#a11856a3eed511213170f1bf82bf90662">CHECK_NULL_PTR</a>(ptr,  message)</td></tr>
-<tr class="separator:a11856a3eed511213170f1bf82bf90662"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c9789e03098700414cde56d94751091" id="r_a9c9789e03098700414cde56d94751091"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#a9c9789e03098700414cde56d94751091">CHECK_MEM_ALLOC</a>(ptr,  message)</td></tr>
-<tr class="separator:a9c9789e03098700414cde56d94751091"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3663022874e0533a9c93420509d33027" id="r_a3663022874e0533a9c93420509d33027"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#a3663022874e0533a9c93420509d33027">CHECK_ERROR</a>(statement,  message)</td></tr>
-<tr class="separator:a3663022874e0533a9c93420509d33027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9008e8ee8b0621530620698b5b5d8b4" id="r_ad9008e8ee8b0621530620698b5b5d8b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#ad9008e8ee8b0621530620698b5b5d8b4">ERR_C_CHECK_AND_THROW_ERR</a>(err)</td></tr>
 <tr class="memdesc:ad9008e8ee8b0621530620698b5b5d8b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks error and if it's different from ERR_C_OK throws error.  <br /></td></tr>
 <tr class="separator:ad9008e8ee8b0621530620698b5b5d8b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,9 +169,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a66d8b108d0729a113f324a67258e4aaf" id="r_a66d8b108d0729a113f324a67258e4aaf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#a66d8b108d0729a113f324a67258e4aaf">ERR_C_CHECK_MEM_ALLOC</a>(ptr,  message)</td></tr>
 <tr class="memdesc:a66d8b108d0729a113f324a67258e4aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if allocated pointer is NULL, if so logs message, and returns ERR_C_NO_MEMORY error.  <br /></td></tr>
 <tr class="separator:a66d8b108d0729a113f324a67258e4aaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacd8ebcf13c955afec7dece54d4b1914" id="r_aacd8ebcf13c955afec7dece54d4b1914"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#aacd8ebcf13c955afec7dece54d4b1914">ERR_C_CHECK_ERROR</a>(statement,  message)</td></tr>
-<tr class="memdesc:aacd8ebcf13c955afec7dece54d4b1914"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if error code is ERR_C_OK, if not then logs error message and returns passed error code.  <br /></td></tr>
-<tr class="separator:aacd8ebcf13c955afec7dece54d4b1914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76ac02f0b45ca28d3c37ca902dc52763" id="r_a76ac02f0b45ca28d3c37ca902dc52763"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#a76ac02f0b45ca28d3c37ca902dc52763">ERR_C_CHECK_ERROR</a>(err,  message)</td></tr>
+<tr class="memdesc:a76ac02f0b45ca28d3c37ca902dc52763"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if error code is ERR_C_OK, if not then logs error message and returns passed error code.  <br /></td></tr>
+<tr class="separator:a76ac02f0b45ca28d3c37ca902dc52763"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -194,9 +188,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a513df0b15ad91ccf741456a5a2bea37a" id="r_a513df0b15ad91ccf741456a5a2bea37a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#a513df0b15ad91ccf741456a5a2bea37a">err_check_bitmask</a> (uint32_t mask, uint32_t value)</td></tr>
 <tr class="memdesc:a513df0b15ad91ccf741456a5a2bea37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if bitmask matches value.  <br /></td></tr>
 <tr class="separator:a513df0b15ad91ccf741456a5a2bea37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a411b28d6c1edab673fa9adb1bfd50ffd" id="r_a411b28d6c1edab673fa9adb1bfd50ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8h.html#a411b28d6c1edab673fa9adb1bfd50ffd">err_check_null_pointer</a> (void *ptr)</td></tr>
-<tr class="memdesc:a411b28d6c1edab673fa9adb1bfd50ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check pointer it it's null.  <br /></td></tr>
-<tr class="separator:a411b28d6c1edab673fa9adb1bfd50ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Error helper library header. </p>
@@ -205,106 +196,6 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>2024-02-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a3663022874e0533a9c93420509d33027" name="a3663022874e0533a9c93420509d33027"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3663022874e0533a9c93420509d33027">&#9670;&#160;</a></span>CHECK_ERROR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHECK_ERROR</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">statement, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">message&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_typedef" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> val = statement;                      \</div>
-<div class="line">    if(!val) {                            \</div>
-<div class="line">        message;                            \</div>
-<div class="line">        <span class="keywordflow">return</span> val;                       \</div>
-<div class="line">    }</div>
-<div class="ttc" id="aerr__controller_8h_html_ac80c0e1856884650a683ec9ce2925f65"><div class="ttname"><a href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a></div><div class="ttdeci">int32_t err_c_t</div><div class="ttdoc">Standard error type typedef.</div><div class="ttdef"><b>Definition</b> err_controller.h:21</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a9c9789e03098700414cde56d94751091" name="a9c9789e03098700414cde56d94751091"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c9789e03098700414cde56d94751091">&#9670;&#160;</a></span>CHECK_MEM_ALLOC</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHECK_MEM_ALLOC</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ptr, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">message&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span>(!(<span class="keywordtype">void</span>*)ptr) {                               \</div>
-<div class="line">        message;                                    \</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_define" href="err__c__errors_8h.html#ab74fb175af56217c700ab9beaaea44e4">ERR_C_NO_MEMORY</a>;                    \</div>
-<div class="line">    }</div>
-<div class="ttc" id="aerr__c__errors_8h_html_ab74fb175af56217c700ab9beaaea44e4"><div class="ttname"><a href="err__c__errors_8h.html#ab74fb175af56217c700ab9beaaea44e4">ERR_C_NO_MEMORY</a></div><div class="ttdeci">#define ERR_C_NO_MEMORY</div><div class="ttdoc">Memory allocation failed.</div><div class="ttdef"><b>Definition</b> err_c_errors.h:17</div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a11856a3eed511213170f1bf82bf90662" name="a11856a3eed511213170f1bf82bf90662"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a11856a3eed511213170f1bf82bf90662">&#9670;&#160;</a></span>CHECK_NULL_PTR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CHECK_NULL_PTR</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">ptr, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">message&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span>(!(<span class="keywordtype">void</span>*)ptr) {                               \</div>
-<div class="line">        message;                                    \</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_define" href="err__c__errors_8h.html#ab63b606541f3d965afa17226322cf3f1">ERR_C_NULL_POINTER</a>;                    \</div>
-<div class="line">    }</div>
-<div class="ttc" id="aerr__c__errors_8h_html_ab63b606541f3d965afa17226322cf3f1"><div class="ttname"><a href="err__c__errors_8h.html#ab63b606541f3d965afa17226322cf3f1">ERR_C_NULL_POINTER</a></div><div class="ttdeci">#define ERR_C_NULL_POINTER</div><div class="ttdoc">Null pointer was passed or dereferenced.</div><div class="ttdef"><b>Definition</b> err_c_errors.h:16</div></div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="ad9008e8ee8b0621530620698b5b5d8b4" name="ad9008e8ee8b0621530620698b5b5d8b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9008e8ee8b0621530620698b5b5d8b4">&#9670;&#160;</a></span>ERR_C_CHECK_AND_THROW_ERR</h2>
 
@@ -320,13 +211,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <span class="keywordflow">do</span> {                                            \</div>
-<div class="line">            <a class="code hl_typedef" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> val_err = err;                       \</div>
-<div class="line">            if(val_err != 0) {                          \</div>
-<div class="line">                Throw(val_err);                          \</div>
-<div class="line">            }                                            \</div>
-<div class="line">                                                        \</div>
-<div class="line">        } <span class="keywordflow">while</span>(0)</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                 \</div>
+<div class="line">    {                                  \</div>
+<div class="line">        <a class="code hl_typedef" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> val_err = err;         \</div>
+<div class="line">        if (val_err != 0)              \</div>
+<div class="line">        {                              \</div>
+<div class="line">            Throw(val_err);            \</div>
+<div class="line">        }                              \</div>
+<div class="line">                                       \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="aerr__controller_8h_html_ac80c0e1856884650a683ec9ce2925f65"><div class="ttname"><a href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a></div><div class="ttdeci">int32_t err_c_t</div><div class="ttdoc">Standard error type typedef.</div><div class="ttdef"><b>Definition</b> err_controller.h:21</div></div>
 </div><!-- fragment -->
 <p>Checks error and if it's different from ERR_C_OK throws error. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -339,8 +233,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aacd8ebcf13c955afec7dece54d4b1914" name="aacd8ebcf13c955afec7dece54d4b1914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aacd8ebcf13c955afec7dece54d4b1914">&#9670;&#160;</a></span>ERR_C_CHECK_ERROR</h2>
+<a id="a76ac02f0b45ca28d3c37ca902dc52763" name="a76ac02f0b45ca28d3c37ca902dc52763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76ac02f0b45ca28d3c37ca902dc52763">&#9670;&#160;</a></span>ERR_C_CHECK_ERROR</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,7 +243,7 @@ Functions</h2></td></tr>
           <td class="memname">#define ERR_C_CHECK_ERROR</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">statement, </td>
+          <td class="paramname">err, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -364,20 +258,22 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> {                                           \</div>
-<div class="line">    <a class="code hl_typedef" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> val = statement;                      \</div>
-<div class="line">    if(!val) {                            \</div>
-<div class="line">        message;                            \</div>
-<div class="line">        <span class="keywordflow">return</span> val;                       \</div>
-<div class="line">    }                                       \</div>
-<div class="line">} <span class="keywordflow">while</span>(0)</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                  \</div>
+<div class="line">    {                                   \</div>
+<div class="line">        <a class="code hl_typedef" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> val = err;              \</div>
+<div class="line">        if (val)                        \</div>
+<div class="line">        {                               \</div>
+<div class="line">            message;                    \</div>
+<div class="line">            <span class="keywordflow">return</span> val;                 \</div>
+<div class="line">        }                               \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Checks if error code is ERR_C_OK, if not then logs error message and returns passed error code. </p>
 <dl class="section attention"><dt>Attention</dt><dd>message passed to macro IS NOT STRING, but whole logging function.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>This macro is used to return from function returning int value.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">statement</td><td>Value or function returning error code to check. </td></tr>
+    <tr><td class="paramname">err</td><td>Value or function returning error code to check. </td></tr>
     <tr><td class="paramname">message</td><td>Log function or macro to log error message (for example LOG_ERROR("error")) </td></tr>
   </table>
   </dd>
@@ -410,10 +306,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span>(!(<span class="keywordtype">void</span>*)ptr) {                               \</div>
-<div class="line">        message;                                    \</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_define" href="err__c__errors_8h.html#ab74fb175af56217c700ab9beaaea44e4">ERR_C_NO_MEMORY</a>;                    \</div>
-<div class="line">    }</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                      \</div>
+<div class="line">    {                                       \</div>
+<div class="line">        if (!(<span class="keywordtype">void</span> *)ptr)                   \</div>
+<div class="line">        {                                   \</div>
+<div class="line">            message;                        \</div>
+<div class="line">            <span class="keywordflow">return</span> <a class="code hl_define" href="err__c__errors_8h.html#ab74fb175af56217c700ab9beaaea44e4">ERR_C_NO_MEMORY</a>;         \</div>
+<div class="line">        }                                   \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="aerr__c__errors_8h_html_ab74fb175af56217c700ab9beaaea44e4"><div class="ttname"><a href="err__c__errors_8h.html#ab74fb175af56217c700ab9beaaea44e4">ERR_C_NO_MEMORY</a></div><div class="ttdeci">#define ERR_C_NO_MEMORY</div><div class="ttdoc">Memory allocation failed.</div><div class="ttdef"><b>Definition</b> err_c_errors.h:17</div></div>
 </div><!-- fragment -->
 <p>Checks if allocated pointer is NULL, if so logs message, and returns ERR_C_NO_MEMORY error. </p>
 <dl class="section attention"><dt>Attention</dt><dd>message passed to macro IS NOT STRING, but whole logging function.</dd></dl>
@@ -459,10 +360,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">if</span>(!(<span class="keywordtype">void</span>*)ptr) {                               \</div>
-<div class="line">        message;                                    \</div>
-<div class="line">        <span class="keywordflow">return</span> <a class="code hl_define" href="err__c__errors_8h.html#ab63b606541f3d965afa17226322cf3f1">ERR_C_NULL_POINTER</a>;                    \</div>
-<div class="line">    }</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                     \</div>
+<div class="line">    {                                      \</div>
+<div class="line">        if (!(<span class="keywordtype">void</span> *)ptr)                  \</div>
+<div class="line">        {                                  \</div>
+<div class="line">            message;                       \</div>
+<div class="line">            <span class="keywordflow">return</span> <a class="code hl_define" href="err__c__errors_8h.html#ab63b606541f3d965afa17226322cf3f1">ERR_C_NULL_POINTER</a>;     \</div>
+<div class="line">        }                                  \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
+<div class="ttc" id="aerr__c__errors_8h_html_ab63b606541f3d965afa17226322cf3f1"><div class="ttname"><a href="err__c__errors_8h.html#ab63b606541f3d965afa17226322cf3f1">ERR_C_NULL_POINTER</a></div><div class="ttdeci">#define ERR_C_NULL_POINTER</div><div class="ttdoc">Null pointer was passed or dereferenced.</div><div class="ttdef"><b>Definition</b> err_c_errors.h:16</div></div>
 </div><!-- fragment -->
 <p>Checks if passed pointer is NULL, if so logs message, and returns ERR_C_NULL_POINTER error. </p>
 <dl class="section attention"><dt>Attention</dt><dd>message passed to macro IS NOT STRING, but whole logging function.</dd></dl>
@@ -508,11 +414,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        <span class="keywordflow">if</span>(err != 0)  \</div>
-<div class="line">        {                                            \</div>
-<div class="line">                message;                                 \</div>
-<div class="line">                Throw(err);                          \</div>
-<div class="line">        }</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                        \</div>
+<div class="line">    {                                         \</div>
+<div class="line">        if (err != 0)                         \</div>
+<div class="line">        {                                     \</div>
+<div class="line">            message;                          \</div>
+<div class="line">            Throw(err);                       \</div>
+<div class="line">        }                                     \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Checks error and if it's different from ERR_C_OK throws error and logs error name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -552,8 +461,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">        err = err_code;                              \</div>
-<div class="line">        Throw(err)                                   \</div>
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span>                                         \</div>
+<div class="line">    {                                          \</div>
+<div class="line">        err = err_code;                        \</div>
+<div class="line">        Throw(err);                            \</div>
+<div class="line">    } <span class="keywordflow">while</span> (0)</div>
 </div><!-- fragment -->
 <p>Sets error holding variable to passed error code, and throws error. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -606,39 +518,6 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">ERR_C_OK</td><td>if value matches bitmask. </td></tr>
     <tr><td class="paramname">1</td><td>if value doesn't match bitmask. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a411b28d6c1edab673fa9adb1bfd50ffd" name="a411b28d6c1edab673fa9adb1bfd50ffd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a411b28d6c1edab673fa9adb1bfd50ffd">&#9670;&#160;</a></span>err_check_null_pointer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> err_check_null_pointer </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check pointer it it's null. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ptr</td><td>Pointer to check.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">ERR_C_NULL_POINTER</td><td>If pointer is null. </td></tr>
-    <tr><td class="paramname">ERR_C_OK</td><td>If pointer is not null. </td></tr>
   </table>
   </dd>
 </dl>

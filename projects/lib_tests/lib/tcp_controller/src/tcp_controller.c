@@ -174,7 +174,7 @@ int tcp_get_socket_option(socket_t socket, int level, int option) {
 
 int tcp_create_socket(socket_t* sock) {
     int err = 0;
-    CHECK_NULL_PTR(sock, LOG_ERROR("socket cannot be null"));
+    ERR_C_CHECK_NULL_PTR(sock, LOG_ERROR("socket cannot be null"));
 
     LOG_VERBOSE("preparing socket...");
     *sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -209,8 +209,8 @@ int tcp_set_reuse_addr(socket_t socket) {
 
 int tcp_prepare_address(uint16_t port, const char* address, struct sockaddr_in* addr_ipv4) {
     int err = 0;
-    CHECK_NULL_PTR(address, LOG_ERROR("address cannot be null"));
-    CHECK_NULL_PTR(addr_ipv4, LOG_ERROR("pointer to address structure cannot be null"));
+    ERR_C_CHECK_NULL_PTR(address, LOG_ERROR("address cannot be null"));
+    ERR_C_CHECK_NULL_PTR(addr_ipv4, LOG_ERROR("pointer to address structure cannot be null"));
     if(port < 1024 && port != 0) {
         LOG_ERROR("cannot use well-known ports");
         return ERR_TCP_INVALID_PORT;
@@ -297,7 +297,7 @@ int tcp_connect_ipv4(socket_t socket, struct sockaddr* address) {
     int err = 0;
     socklen_t len = sizeof(*address);
     struct sockaddr_in* addr_ipv4 = NULL;
-    CHECK_NULL_PTR(address, LOG_ERROR("address cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(address, LOG_ERROR("address cannot be NULL"));
     if(socket == INVALID_SOCKET) {
         LOG_ERROR("socket cannot be invalid");
         return ERR_TCP_INVALID_SOCKET;
@@ -322,7 +322,7 @@ int tcp_connect_ipv4(socket_t socket, struct sockaddr* address) {
 
 int tcp_receive(socket_t socket, void* buf, size_t buflen) {
     int err = 0;
-    CHECK_NULL_PTR(buf, LOG_ERROR("receive buffer cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(buf, LOG_ERROR("receive buffer cannot be NULL"));
     if(socket == INVALID_SOCKET) {
         LOG_ERROR("socket cannot be invalid");
         return ERR_TCP_INVALID_SOCKET;
@@ -344,7 +344,7 @@ int tcp_receive(socket_t socket, void* buf, size_t buflen) {
 
 int tcp_recv_all(socket_t socket, void* buf, size_t buflen) {
     int err = 0;
-    CHECK_NULL_PTR(buf, LOG_ERROR("receive buffer cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(buf, LOG_ERROR("receive buffer cannot be NULL"));
     if(socket == INVALID_SOCKET) {
         LOG_ERROR("socket cannot be invalid");
         return ERR_TCP_INVALID_SOCKET;
@@ -366,7 +366,7 @@ int tcp_recv_all(socket_t socket, void* buf, size_t buflen) {
 
 int tcp_send(socket_t socket, void* data, size_t datalen) {
     int err = 0;
-    CHECK_NULL_PTR(data, LOG_ERROR("receive buffer cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(data, LOG_ERROR("receive buffer cannot be NULL"));
     if(socket == INVALID_SOCKET) {
         LOG_ERROR("socket cannot be invalid");
         return ERR_TCP_INVALID_SOCKET;

@@ -135,9 +135,6 @@ Include dependency graph for err_controller.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a411b28d6c1edab673fa9adb1bfd50ffd" id="r_a411b28d6c1edab673fa9adb1bfd50ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8c.html#a411b28d6c1edab673fa9adb1bfd50ffd">err_check_null_pointer</a> (void *ptr)</td></tr>
-<tr class="memdesc:a411b28d6c1edab673fa9adb1bfd50ffd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check pointer it it's null.  <br /></td></tr>
-<tr class="separator:a411b28d6c1edab673fa9adb1bfd50ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a513df0b15ad91ccf741456a5a2bea37a" id="r_a513df0b15ad91ccf741456a5a2bea37a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="err__controller_8c.html#a513df0b15ad91ccf741456a5a2bea37a">err_check_bitmask</a> (uint32_t mask, uint32_t value)</td></tr>
 <tr class="memdesc:a513df0b15ad91ccf741456a5a2bea37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if bitmask matches value.  <br /></td></tr>
 <tr class="separator:a513df0b15ad91ccf741456a5a2bea37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,39 +184,6 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">ERR_C_OK</td><td>if value matches bitmask. </td></tr>
     <tr><td class="paramname">1</td><td>if value doesn't match bitmask. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a411b28d6c1edab673fa9adb1bfd50ffd" name="a411b28d6c1edab673fa9adb1bfd50ffd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a411b28d6c1edab673fa9adb1bfd50ffd">&#9670;&#160;</a></span>err_check_null_pointer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> err_check_null_pointer </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>ptr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check pointer it it's null. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ptr</td><td>Pointer to check.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">ERR_C_NULL_POINTER</td><td>If pointer is null. </td></tr>
-    <tr><td class="paramname">ERR_C_OK</td><td>If pointer is not null. </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,7 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"globals_s.html":[9,1,0,10],
-"globals_t.html":[9,1,0,11],
 "globals_type.html":[9,1,2],
 "globals_v.html":[9,1,0,12],
 "globals_w.html":[9,1,0,13],
@@ -249,5 +247,7 @@ var NAVTREEINDEX1 =
 "structwifi__c__status__obj.html":[8,0,20],
 "structwifi__c__status__obj.html#a176a6fdb01aea84172425ab1ad411818":[8,0,20,0],
 "structwifi__c__status__obj.html#a55cb14d2ab6cbf7a5a41cb227876c591":[8,0,20,3],
-"structwifi__c__status__obj.html#a6521ab6f8cb7b875232c0ae34d57267d":[8,0,20,2]
+"structwifi__c__status__obj.html#a6521ab6f8cb7b875232c0ae34d57267d":[8,0,20,2],
+"structwifi__c__status__obj.html#a65fd9a23996e5f027d093b9993953a5e":[8,0,20,6],
+"structwifi__c__status__obj.html#a8c5ba318e8d5035208ea57b23f812088":[8,0,20,7]
 };

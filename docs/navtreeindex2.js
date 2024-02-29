@@ -1,7 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"structwifi__c__status__obj.html#a65fd9a23996e5f027d093b9993953a5e":[8,0,20,6],
-"structwifi__c__status__obj.html#a8c5ba318e8d5035208ea57b23f812088":[8,0,20,7],
 "structwifi__c__status__obj.html#aa27b8850a0bc8feeae77388dd1a3ddbc":[8,0,20,1],
 "structwifi__c__status__obj.html#ab6218579259849450d54e7df1ad16a21":[8,0,20,8],
 "structwifi__c__status__obj.html#ad80a1c676a259b491888b2b3e393b1cc":[8,0,20,9],
