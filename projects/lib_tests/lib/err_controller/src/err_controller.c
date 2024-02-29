@@ -21,10 +21,6 @@
 #include <errno.h>
 #endif
 
-err_c_t err_check_null_pointer(void* ptr) {
-    return !ptr ? ERR_C_NULL_POINTER : ERR_C_OK;
-}
-
 err_c_t err_check_bitmask(uint32_t mask, uint32_t value) {
     return ((mask&value) == mask) ? ERR_C_OK : 1;
 }

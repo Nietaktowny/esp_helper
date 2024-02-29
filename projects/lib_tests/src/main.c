@@ -169,10 +169,13 @@ void app_main()
 
 #else
 #include "logger.h"
+#include "err_controller.h"
 
 int main() {
     logger_init();
     LOG_DEBUG("Hello world!");
+    int err = 2134;
+    ERR_C_CHECK_ERROR(err, LOG_ERROR("%s", error_to_name(err)));
     return 0;
 }
 #endif

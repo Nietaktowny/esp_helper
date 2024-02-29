@@ -2,7 +2,7 @@
  * @file err_c_errors.h
  * @author Wojciech Mytych
  * @brief Error helper library errors list.
- * @version 1.0.3
+ * @version 1.0.4
  * @date 2024-02-27
  * 
  * @copyright Copyright (c) 2024

@@ -43,7 +43,7 @@ linkedl_t linkedl_create(size_t item_size, char* name) {
 }
 
 int linkedl_destroy(linkedl_t list) {
-    CHECK_NULL_PTR(list, LOG_WARN("list is not initialized"));
+    ERR_C_CHECK_NULL_PTR(list, LOG_WARN("list is not initialized"));
     int err = linkedl_clear(list);
     if(err != 0) {
         LOG_ERROR("error %d when clearing list %s nodes", err, list->name);
@@ -53,7 +53,7 @@ int linkedl_destroy(linkedl_t list) {
 }
 
 int linkedl_clear(linkedl_t list) {
-    CHECK_NULL_PTR(list, LOG_WARN("list is not initialized"));
+    ERR_C_CHECK_NULL_PTR(list, LOG_WARN("list is not initialized"));
     LOG_VERBOSE("about to destroy list: %s", list->name);
 
     if(!(list->head) && !(list->items_num)) {
@@ -105,8 +105,8 @@ node_t linkedl_create_node(linkedl_t list, char* name) {
 uint64_t linkedl_add_last(linkedl_t list, void* data, char* name) {
     node_t new_node = NULL;
 
-    CHECK_NULL_PTR(list, LOG_ERROR("list is not initialized"));
-    CHECK_NULL_PTR(data, LOG_ERROR("data cannot be null"));
+    ERR_C_CHECK_NULL_PTR(list, LOG_ERROR("list is not initialized"));
+    ERR_C_CHECK_NULL_PTR(data, LOG_ERROR("data cannot be null"));
 
     // create node to hold item
     new_node = linkedl_create_node(list, name); //there is no need for checking allocation, this function will exit when it fails
@@ -135,10 +135,10 @@ uint64_t linkedl_add_last(linkedl_t list, void* data, char* name) {
 uint64_t linkedl_add_first(linkedl_t list, void* data, char* name) {
     node_t new_node = NULL;
 
-    CHECK_NULL_PTR(list, LOG_ERROR("list is not initialized"));
+    ERR_C_CHECK_NULL_PTR(list, LOG_ERROR("list is not initialized"));
 
     new_node = linkedl_create_node(list, name);
-    CHECK_MEM_ALLOC(new_node, LOG_ERROR("cannot create new node in list: %s", list->name));
+    ERR_C_CHECK_MEM_ALLOC(new_node, LOG_ERROR("cannot create new node in list: %s", list->name));
     memcpy(new_node->item, data, list->size);
 
     LOG_VERBOSE("updating list data...");
@@ -158,7 +158,7 @@ uint64_t linkedl_add_first(linkedl_t list, void* data, char* name) {
 }
 
 int linkedl_delete(linkedl_t list, char* name) {
-    CHECK_NULL_PTR(list, LOG_WARN("list is not initialized"));
+    ERR_C_CHECK_NULL_PTR(list, LOG_WARN("list is not initialized"));
     if(!name) {
         LOG_WARN("name cannot be null");
         return ERR_C_WRONG_ARGS;
