@@ -9,7 +9,6 @@
  * 
  */
 #include "err_controller.h" 
-#include "errors_list.h"
 #include <string.h>
 
 #ifdef ESP_PLATFORM

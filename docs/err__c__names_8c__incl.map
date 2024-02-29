@@ -1,13 +1,11 @@
 <map id="projects/lib_tests/lib/err_controller/src/err_c_names.c" name="projects/lib_tests/lib/err_controller/src/err_c_names.c">
-<area shape="rect" id="Node000001" title="Auto generated file with ESP Helper libraries error names." alt="" coords="259,5,391,61"/>
+<area shape="rect" id="Node000001" title="Auto generated file with ESP Helper libraries error names." alt="" coords="197,5,330,61"/>
 <area shape="rect" id="Node000002" href="$err__controller_8h.html" title="Error helper library header." alt="" coords="101,109,207,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="273,64,193,104,190,99,270,59"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="231,109,320,135"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="312,63,292,97,288,94,307,60"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="344,109,407,135"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="343,60,363,94,358,97,338,63"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="431,109,491,135"/>
-<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="369,59,430,98,427,103,366,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,63,183,101,180,97,228,59"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="232,109,295,135"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="266,61,266,93,261,93,261,61"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="319,109,379,135"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="292,59,328,96,324,100,288,63"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,183,82,208"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="137,137,76,176,73,172,134,133"/>
 <area shape="rect" id="Node000004" href="$CException_8h_source.html" title=" " alt="" coords="106,183,202,208"/>
