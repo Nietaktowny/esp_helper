@@ -15,7 +15,7 @@
 #include "logger.h"
 #include "err_controller.h"
 #include "memory_utils.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include <string.h>
 #include <stdlib.h>
 

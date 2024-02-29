@@ -14,7 +14,7 @@
 #include "logger.h"
 #include "memory_utils.h"
 #include "err_controller.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include "lwip/inet.h"
 #include "lwip/sockets.h"
 #include "ping/ping_sock.h"

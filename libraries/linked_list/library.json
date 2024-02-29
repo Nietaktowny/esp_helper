@@ -1,9 +1,9 @@
 {
     "name": "linked_list",
-    "version": "1.0.3",
+    "version": "1.0.8",
     "keywords": "linked, list",
     "description": "Single bound linked list.",
-    "authors":
+	"authors":
     {
         "name": "nietaktowny",
         "url": "https://github.com/Nietaktowny"

@@ -1,6 +1,6 @@
 {
     "name": "memory_utils",
-    "version": "1.0.2",
+    "version": "1.0.6",
     "keywords": "memory, base, utilities, utils",
     "description": "Basic memory utils.",
     "authors":
@@ -13,6 +13,10 @@
         "type": "git",
         "url": "https://github.com/Nietaktowny/base_libraries"
     },
+    "dependencies": {
+		"nietaktowny/logger": "2.0.3",
+		"nietaktowny/err_controller": "1.0.4"
+	  },
     "frameworks": ["*"],
     "platforms": ["*"]
 }

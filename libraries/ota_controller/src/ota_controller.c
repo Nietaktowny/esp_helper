@@ -1,7 +1,7 @@
 #include "ota_controller.h"
 #include "logger.h"
 #include "err_controller.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include "memory_utils.h"
 #include "http_client.h"
 
@@ -29,16 +29,16 @@ static void event_handler(void* arg, esp_event_base_t event_base,
                 LOG_INFO("Connected to server");
                 break;
             case ESP_HTTPS_OTA_GET_IMG_DESC:
-                LOG_INFO("Reading Image Description");
+                LOG_DEBUG("Reading Image Description");
                 break;
             case ESP_HTTPS_OTA_VERIFY_CHIP_ID:
-                LOG_INFO("Verifying chip id of new image: %d", *(esp_chip_id_t *)event_data);
+                LOG_DEBUG("Verifying chip id of new image: %d", *(esp_chip_id_t *)event_data);
                 break;
             case ESP_HTTPS_OTA_DECRYPT_CB:
-                LOG_INFO("Callback to decrypt function");
+                LOG_DEBUG("Callback to decrypt function");
                 break;
             case ESP_HTTPS_OTA_WRITE_FLASH:
-                LOG_DEBUG("Writing to flash: %d written", *(int *)event_data);
+                LOG_VERBOSE("Writing to flash: %d written", *(int *)event_data);
                 break;
             case ESP_HTTPS_OTA_UPDATE_BOOT_PARTITION:
                 LOG_INFO("Boot partition updated. Next Partition: %d", *(esp_partition_subtype_t *)event_data);
@@ -47,7 +47,7 @@ static void event_handler(void* arg, esp_event_base_t event_base,
                 LOG_INFO("OTA finish");
                 break;
             case ESP_HTTPS_OTA_ABORT:
-                LOG_INFO("OTA abort");
+                LOG_WARN("OTA abort");
                 break;
         }
     }
@@ -128,27 +128,13 @@ int ota_c_update_device_data(const char* url, const char* path, const char* devi
         app_info.idf_ver
     );
 
-    err = http_client_post("192.168.0.108:8081", "bmp280/ota.php", &post);
+    err = http_client_post("192.168.0.108:8081", "bmp280/ota.php", &post, HTTP_CLIENT_POST_USE_STRLEN);
     if(err != ERR_C_OK) {
         LOG_ERROR("error %d when sending device data to server: %s", err, error_to_name(err));
         return err;
     }
 
     LOG_DEBUG("device data send successfully to server");
-    return err;
-}
-
-int ota_c_prepare_url_with_device_id(char* url, uint64_t device_id, char* buffer, size_t buflen) {
-    err_c_t err = 0;
-    ERR_C_CHECK_NULL_PTR(url, LOG_ERROR("url to perfom ota cannot be NULL"));
-    ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("buffer to store URL cannot be NULL"));
-    if(buflen == 0) {
-        LOG_ERROR("buffer length to store URL cannot be NULL");
-        return ERR_C_MEMORY_ERR;
-    }
-
-    snprintf(buffer, buflen, "%s?device_id=%llu", url, device_id);
-    LOG_DEBUG("prepared url with device id for ota update:\n%s", buffer);
     return err;
 }
 

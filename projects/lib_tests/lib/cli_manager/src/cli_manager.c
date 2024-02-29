@@ -11,7 +11,6 @@
 
 #include "cli_manager.h"
 #include "err_controller.h"
-#include "errors_list.h"
 #include "tcp_controller.h"
 #include "tcp_c_errors.h"
 #include "logger.h"

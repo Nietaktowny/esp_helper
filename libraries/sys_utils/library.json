@@ -1,8 +1,13 @@
 {
 	"name": "sys_utils",
-	"version": "1.0.0",
-	"keywords": "keyword",
+	"version": "1.0.4",
+	"keywords": "system, esp32, esp, idf, utilities",
 	"description": "System utilities library.",
+	"authors":
+    {
+        "name": "nietaktowny",
+        "url": "https://github.com/Nietaktowny"
+    },
 	"frameworks": ["espidf"],
 	"platforms": ["espressif32"]
 }

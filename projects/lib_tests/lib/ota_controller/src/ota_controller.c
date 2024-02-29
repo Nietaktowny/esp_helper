@@ -1,7 +1,7 @@
 #include "ota_controller.h"
 #include "logger.h"
 #include "err_controller.h"
-#include "errors_list.h"
+#include "err_c_errors.h"
 #include "memory_utils.h"
 #include "http_client.h"
 

@@ -1,3 +1,14 @@
+/**
+ * @file bmp280_internal.h
+ * @author Wojciech Mytych
+ * @brief BMP280 library internal header file.
+ * @version 1.0.4
+ * @date 2024-02-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #pragma once
 #include <stdint.h>
 #include <stddef.h>

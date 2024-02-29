@@ -1,4 +1,4 @@
 dependencies:
   idf: '>=5.0' 
 description: Library used to use SPIFFS Filesystem on ESP32.
-version: 1.0.0
+version: 1.0.4

@@ -1,4 +1,0 @@
-dependencies:
-  idf: '>=5.0'
-description: Library used to control NVS.
-version: 1.0.5
