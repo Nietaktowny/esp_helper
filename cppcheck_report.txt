@@ -1,31 +1,13 @@
-libraries/logger/src/logger.c:62:12: style: Variable 'output' is reassigned a value before the old one has been used. [redundantAssignment]
-    output = vfprintf(stderr, format, args);
-           ^
-libraries/logger/src/logger.c:59:16: note: output is assigned
-        output = vfprintf(logfile, format, args);
-               ^
-libraries/logger/src/logger.c:62:12: note: output is overwritten
-    output = vfprintf(stderr, format, args);
-           ^
-libraries/logger/src/logger.c:82:12: style: Variable 'output' is reassigned a value before the old one has been used. [redundantAssignment]
-    output = vfprintf(stderr, format, args);
-           ^
-libraries/logger/src/logger.c:79:16: note: output is assigned
-        output = vfprintf(logfile, format, args);
-               ^
-libraries/logger/src/logger.c:82:12: note: output is overwritten
-    output = vfprintf(stderr, format, args);
-           ^
-libraries/ota_controller/src/ota_controller.c:150:5: warning: %llu in format string (no. 2) requires 'unsigned long long' but the argument type is 'unsigned long'. [invalidPrintfArgType_uint]
-    snprintf(buffer, buflen, "%s?device_id=%llu", url, device_id);
-    ^
+libraries/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err_c_t err = 0;
+                ^
 libraries/spiffs_controller/src/spiffs_controller.c:47:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-libraries/wifi_controller/src/wifi_controller.c:807:25: style: The scope of the variable 'record' can be reduced. [variableScope]
+libraries/wifi_controller/src/wifi_controller.c:808:25: style: The scope of the variable 'record' can be reduced. [variableScope]
     wifi_c_ap_record_t *record;
                         ^
-libraries/wifi_controller/src/wifi_controller.c:935:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
+libraries/wifi_controller/src/wifi_controller.c:936:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
         uint16_t ap_len = 0;
                  ^
 libraries/wifi_manager/src/wifi_http_server.c:99:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
@@ -112,7 +94,7 @@ projects/esp_startup/test/embedded/test_wifi_controller/test_wifi_controller.c:1
 projects/lib_tests/lib/CException/test/TestException.c:63:10: style: Variable 'Throw' is assigned a value that is never used. [unreadVariable]
     Throw(0xEF);
          ^
-projects/lib_tests/lib/cli_manager/src/cli_manager.c:29:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/lib_tests/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = 0;
                 ^
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:47:24: error: Uninitialized variable: ret_path [uninitvar]
@@ -211,7 +193,7 @@ projects/relays/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: 
 projects/relays/test/embedded/test_wifi_controller/test_wifi_controller.c:20:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
         err = nvs_flash_init();
             ^
-libraries/wifi_controller/examples/example_project/src/main.c:5:0: style: The function 'app_main' is never used. [unusedFunction]
+libraries/logger/examples/add_log_file.c:4:0: style: The function 'app_main' is never used. [unusedFunction]
 
 ^
 libraries/arena/src/arena.c:235:0: style: The function 'arena_alloc' is never used. [unusedFunction]
@@ -229,31 +211,31 @@ libraries/arena/src/arena.c:147:0: style: The function 'arena_init' is never use
 libraries/arena/src/arena.c:197:0: style: The function 'arena_reset' is never used. [unusedFunction]
 
 ^
-libraries/bmp280/src/bmp280.c:99:0: style: The function 'bmp_i2c_get_status' is never used. [unusedFunction]
+libraries/bmp280/src/bmp280.c:108:0: style: The function 'bmp_i2c_get_status' is never used. [unusedFunction]
 
 ^
-libraries/bmp280/src/bmp280.c:322:0: style: The function 'bmp_i2c_readout' is never used. [unusedFunction]
+libraries/bmp280/src/bmp280.c:331:0: style: The function 'bmp_i2c_readout' is never used. [unusedFunction]
 
 ^
-libraries/bmp280/src/bmp280.c:113:0: style: The function 'bmp_i2c_reset_chip' is never used. [unusedFunction]
+libraries/bmp280/src/bmp280.c:122:0: style: The function 'bmp_i2c_reset_chip' is never used. [unusedFunction]
 
 ^
-libraries/bmp280/src/bmp280.c:61:0: style: The function 'bmp_is_image_updating' is never used. [unusedFunction]
+libraries/bmp280/src/bmp280.c:70:0: style: The function 'bmp_is_image_updating' is never used. [unusedFunction]
 
 ^
-libraries/bmp280/src/bmp280.c:57:0: style: The function 'bmp_is_measuring' is never used. [unusedFunction]
+libraries/bmp280/src/bmp280.c:66:0: style: The function 'bmp_is_measuring' is never used. [unusedFunction]
 
 ^
-libraries/cli_manager/src/cli_manager.c:22:0: style: The function 'cli_connect_to_wifi' is never used. [unusedFunction]
+projects/esp_startup/lib/cli_manager/src/cli_manager.c:22:0: style: The function 'cli_connect_to_wifi' is never used. [unusedFunction]
 
 ^
-libraries/err_controller/src/err_controller.c:12:0: style: The function 'err_check_bitmask' is never used. [unusedFunction]
+libraries/err_controller/src/err_controller.c:28:0: style: The function 'err_check_bitmask' is never used. [unusedFunction]
 
 ^
-libraries/err_controller/src/err_controller.c:8:0: style: The function 'err_check_null_pointer' is never used. [unusedFunction]
+libraries/err_controller/src/err_controller.c:24:0: style: The function 'err_check_null_pointer' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/esp_helper_utils/src/esp_helper_utils.c:30:0: style: The function 'helper_get_chip_id' is never used. [unusedFunction]
+libraries/esp_helper_utils/src/esp_helper_utils.c:30:0: style: The function 'helper_get_chip_id' is never used. [unusedFunction]
 
 ^
 libraries/http_server/src/http_server.c:45:0: style: The function 'http_server_deinit' is never used. [unusedFunction]
@@ -262,49 +244,49 @@ libraries/http_server/src/http_server.c:45:0: style: The function 'http_server_d
 libraries/http_server/src/http_server.c:29:0: style: The function 'http_server_init' is never used. [unusedFunction]
 
 ^
-libraries/http_client/src/http_client.c:89:0: style: The function 'https_client_post' is never used. [unusedFunction]
+projects/esp_startup/lib/http_client/src/http_client.c:89:0: style: The function 'https_client_post' is never used. [unusedFunction]
 
 ^
-libraries/i2c_controller/src/i2c_controller.c:70:0: style: The function 'i2c_c_delete_bus' is never used. [unusedFunction]
+libraries/i2c_controller/src/i2c_controller.c:71:0: style: The function 'i2c_c_delete_bus' is never used. [unusedFunction]
 
 ^
-libraries/i2c_controller/src/i2c_controller.c:94:0: style: The function 'i2c_c_delete_device' is never used. [unusedFunction]
+libraries/i2c_controller/src/i2c_controller.c:97:0: style: The function 'i2c_c_delete_device' is never used. [unusedFunction]
 
 ^
-libraries/linked_list/src/linked_list.c:124:0: style: The function 'linkedl_add_first' is never used. [unusedFunction]
+libraries/linked_list/src/linked_list.c:135:0: style: The function 'linkedl_add_first' is never used. [unusedFunction]
 
 ^
-libraries/linked_list/src/linked_list.c:94:0: style: The function 'linkedl_add_last' is never used. [unusedFunction]
+libraries/linked_list/src/linked_list.c:105:0: style: The function 'linkedl_add_last' is never used. [unusedFunction]
 
 ^
-libraries/linked_list/src/linked_list.c:12:0: style: The function 'linkedl_create' is never used. [unusedFunction]
+libraries/linked_list/src/linked_list.c:23:0: style: The function 'linkedl_create' is never used. [unusedFunction]
 
 ^
-libraries/linked_list/src/linked_list.c:149:0: style: The function 'linkedl_delete' is never used. [unusedFunction]
+libraries/linked_list/src/linked_list.c:160:0: style: The function 'linkedl_delete' is never used. [unusedFunction]
 
 ^
-libraries/linked_list/src/linked_list.c:34:0: style: The function 'linkedl_destroy' is never used. [unusedFunction]
+libraries/linked_list/src/linked_list.c:45:0: style: The function 'linkedl_destroy' is never used. [unusedFunction]
 
 ^
-libraries/linked_list/src/linked_list.c:269:0: style: The function 'linkedl_find' is never used. [unusedFunction]
+libraries/linked_list/src/linked_list.c:280:0: style: The function 'linkedl_find' is never used. [unusedFunction]
 
 ^
-libraries/linked_list/src/linked_list.c:288:0: style: The function 'linkedl_find_with_id' is never used. [unusedFunction]
+libraries/linked_list/src/linked_list.c:299:0: style: The function 'linkedl_find_with_id' is never used. [unusedFunction]
 
 ^
-libraries/logger/src/logger.c:88:0: style: The function 'logger_flush_logs' is never used. [unusedFunction]
+libraries/logger/src/logger.c:220:0: style: The function 'logger_flush_logs' is never used. [unusedFunction]
 
 ^
-libraries/logger/src/logger.c:44:0: style: The function 'logger_get_lock' is never used. [unusedFunction]
+libraries/logger/src/logger.c:158:0: style: The function 'logger_get_lock' is never used. [unusedFunction]
 
 ^
-libraries/logger/src/logger.c:33:0: style: The function 'logger_redirect_esp_logs' is never used. [unusedFunction]
+projects/esp_startup/lib/logger/src/logger.c:33:0: style: The function 'logger_redirect_esp_logs' is never used. [unusedFunction]
 
 ^
-libraries/logger/src/logger.c:48:0: style: The function 'logger_return_lock' is never used. [unusedFunction]
+libraries/logger/src/logger.c:163:0: style: The function 'logger_return_lock' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/logger/src/logger.c:107:0: style: The function 'logger_stop_logging' is never used. [unusedFunction]
+libraries/logger/src/logger.c:107:0: style: The function 'logger_stop_logging' is never used. [unusedFunction]
 
 ^
 libraries/memory_utils/src/memory_utils.c:26:0: style: The function 'memutil_htonll' is never used. [unusedFunction]
@@ -322,7 +304,7 @@ libraries/ota_controller/src/ota_controller.c:105:0: style: The function 'ota_c_
 projects/bmp280/test/desktop/test_wifi_controller/test_wifi_controller.c:4:0: style: The function 'setUp' is never used. [unusedFunction]
 
 ^
-libraries/cli_manager/src/cli_manager.c:75:0: style: The function 'set_logging_to_socket' is never used. [unusedFunction]
+projects/esp_startup/lib/cli_manager/src/cli_manager.c:75:0: style: The function 'set_logging_to_socket' is never used. [unusedFunction]
 
 ^
 libraries/spiffs_controller/src/spiffs_controller.c:117:0: style: The function 'spiffs_c_get_info' is never used. [unusedFunction]
@@ -334,25 +316,25 @@ libraries/spiffs_controller/src/spiffs_controller.c:61:0: style: The function 's
 libraries/spiffs_controller/src/spiffs_controller.c:165:0: style: The function 'spiffs_c_read_file' is never used. [unusedFunction]
 
 ^
-libraries/tcp_controller/src/tcp_controller.c:285:0: style: The function 'tcp_connect_ipv4' is never used. [unusedFunction]
+libraries/tcp_controller/src/tcp_controller.c:296:0: style: The function 'tcp_connect_ipv4' is never used. [unusedFunction]
 
 ^
-libraries/tcp_controller/src/tcp_controller.c:41:0: style: The function 'tcp_get_client_socket_port' is never used. [unusedFunction]
+libraries/tcp_controller/src/tcp_controller.c:52:0: style: The function 'tcp_get_client_socket_port' is never used. [unusedFunction]
 
 ^
-libraries/tcp_controller/src/tcp_controller.c:148:0: style: The function 'tcp_get_socket_option' is never used. [unusedFunction]
+libraries/tcp_controller/src/tcp_controller.c:159:0: style: The function 'tcp_get_socket_option' is never used. [unusedFunction]
 
 ^
-libraries/tcp_controller/src/tcp_controller.c:312:0: style: The function 'tcp_receive' is never used. [unusedFunction]
+libraries/tcp_controller/src/tcp_controller.c:323:0: style: The function 'tcp_receive' is never used. [unusedFunction]
 
 ^
-libraries/tcp_controller/src/tcp_controller.c:334:0: style: The function 'tcp_recv_all' is never used. [unusedFunction]
+libraries/tcp_controller/src/tcp_controller.c:345:0: style: The function 'tcp_recv_all' is never used. [unusedFunction]
 
 ^
-libraries/tcp_controller/src/tcp_controller.c:356:0: style: The function 'tcp_send' is never used. [unusedFunction]
+libraries/tcp_controller/src/tcp_controller.c:367:0: style: The function 'tcp_send' is never used. [unusedFunction]
 
 ^
-libraries/tcp_controller/src/tcp_controller.c:179:0: style: The function 'tcp_set_reuse_addr' is never used. [unusedFunction]
+libraries/tcp_controller/src/tcp_controller.c:190:0: style: The function 'tcp_set_reuse_addr' is never used. [unusedFunction]
 
 ^
 projects/bmp280/test/desktop/test_wifi_controller/test_wifi_controller.c:8:0: style: The function 'tearDown' is never used. [unusedFunction]
@@ -415,10 +397,10 @@ projects/lib_tests/test/desktop/test_logger/test_logger.c:222:0: style: The func
 libraries/wifi_manager/src/wifi_manager.c:167:0: style: The function 'wifi_manager_start_ap_and_server' is never used. [unusedFunction]
 
 ^
-libraries/err_controller/src/err_controller.c:31:0: style: The function 'wrap_free' is never used. [unusedFunction]
+projects/esp_startup/lib/err_controller/src/err_controller.c:31:0: style: The function 'wrap_free' is never used. [unusedFunction]
 
 ^
-libraries/err_controller/src/err_controller.c:16:0: style: The function 'wrap_malloc' is never used. [unusedFunction]
+projects/esp_startup/lib/err_controller/src/err_controller.c:16:0: style: The function 'wrap_malloc' is never used. [unusedFunction]
 
 ^
 nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
