@@ -1,4 +1,4 @@
-name: Build lib tests
+name: Run desktop tests.
 
 on: [push]
 
