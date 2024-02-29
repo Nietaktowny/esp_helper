@@ -9,9 +9,6 @@
 #include "errors_list.h"
 #include "logger.h"
 
-//EXAMPLE ERRORS TO CHECK
-#define ERR_TCP_INVALID_PORT    0x0024 + 0x0523              ///< Invalid port number.
-
 void setUp(void) {
   // set stuff up here
   logger_init();
@@ -81,11 +78,11 @@ void test_if_err_to_name_translates_example_err(void) {
   LOG_FATAL("RUNNING: %s", __func__);
 
   //given
-  const char* expected_err_name = "Invalid port number.";
+  const char* expected_err_name = "Null pointer was passed or dereferenced.";
   const char* ret_err_name = NULL;
 
   //when
-  ret_err_name = error_to_name(ERR_TCP_INVALID_PORT);
+  ret_err_name = error_to_name(ERR_C_NULL_POINTER);
 
   //then
   TEST_ASSERT_EQUAL_STRING_MESSAGE(expected_err_name, ret_err_name, "example error name different from expected");
