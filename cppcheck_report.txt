@@ -100,10 +100,7 @@ projects/lib_tests/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:47:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:808:25: style: The scope of the variable 'record' can be reduced. [variableScope]
-    wifi_c_ap_record_t *record;
-                        ^
-projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:936:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
+projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:935:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
         uint16_t ap_len = 0;
                  ^
 projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:99:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
