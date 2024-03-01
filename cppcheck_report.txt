@@ -229,9 +229,6 @@ libraries/bmp280/src/bmp280.c:66:0: style: The function 'bmp_is_measuring' is ne
 projects/esp_startup/lib/cli_manager/src/cli_manager.c:22:0: style: The function 'cli_connect_to_wifi' is never used. [unusedFunction]
 
 ^
-libraries/err_controller/src/err_controller.c:28:0: style: The function 'err_check_bitmask' is never used. [unusedFunction]
-
-^
 libraries/err_controller/src/err_controller.c:24:0: style: The function 'err_check_null_pointer' is never used. [unusedFunction]
 
 ^

@@ -427,8 +427,8 @@ int bmp_configure(bmp_handle_t bmp, bmp_config_t* config) {
 
 int bmp_init(bmp_handle_t* out_handle, i2c_c_bus_handle_t bus) {
     volatile err_c_t err = 0;
-    CHECK_NULL_PTR(out_handle, LOG_ERROR("BMP handle cannot be NULL"));
-    CHECK_NULL_PTR(bus, LOG_ERROR("I2C bus handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(out_handle, LOG_ERROR("BMP handle cannot be NULL"));
+    ERR_C_CHECK_NULL_PTR(bus, LOG_ERROR("I2C bus handle cannot be NULL"));
 
     Try {
         uint8_t reg_val = 0;
