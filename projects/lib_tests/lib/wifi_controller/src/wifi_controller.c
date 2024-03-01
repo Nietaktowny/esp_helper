@@ -805,7 +805,6 @@ int wifi_c_scan_for_ap_with_ssid(const char *searched_ssid, wifi_c_ap_record_t *
     volatile err_c_t err = ERR_C_OK;
     ERR_C_CHECK_NULL_PTR(searched_ssid, LOG_ERROR("ssid to search cannot be NULL"));
     ERR_C_CHECK_NULL_PTR(ap_record, LOG_ERROR("location to store scan result cannot be NULL"));
-    wifi_c_ap_record_t *record;
     bool success = false;
     wifi_c_scan_result_t *scan_result = &wifi_scan_info;
 
@@ -817,7 +816,7 @@ int wifi_c_scan_for_ap_with_ssid(const char *searched_ssid, wifi_c_ap_record_t *
             LOG_ERROR("error %d when scanning for ssid: %s, error: %s", err, searched_ssid, error_to_name(err));
             return err;
         }
-        record = wifi_scan_info.ap_record;
+        wifi_c_ap_record_t* record = wifi_scan_info.ap_record;
         uint8_t ssid_len = strlen(searched_ssid);
 
         for (uint16_t i = 0; i < wifi_scan_info.ap_count; i++)
