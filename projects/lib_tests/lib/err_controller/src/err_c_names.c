@@ -3,12 +3,12 @@
  * @author Wojciech Mytych
  * @brief Auto generated file with ESP Helper libraries error names.
  * @version 1.0.3
- * @date 2024-02-29
+ * @date 2024-03-02
  * 
  * @copyright Copyright (c) 2024
  * 
  */
-#include "err_controller.h" 
+#include "err_controller.h"
 #include <string.h>
 
 #ifdef ESP_PLATFORM
@@ -95,7 +95,15 @@ const char* error_to_name(err_c_t err) {
 	case 0x10 + 0x00C8:
 		return "wifi_c_start_sta function timeout expired.";
 	case 0x0001 + 0x0258:
-		return "NVS was init in read only mode.";
+		return "NVS namespace was opened in read only mode.";
+	case 0x0002 + 0x0258:
+		return "NVS was not init.";
+	case 0x0003 + 0x0258:
+		return "NVS partition was not found.";
+	case 0x0004 + 0x0258:
+		return "NVS namespace was not found in partition.";
+	case 0x0005 + 0x0258:
+		return "NVS key was not found in namespace.";
 	case 0x0001 + 0x03E8:
 		return "Error when trying to connect to remote host.";
 	case 0x0002 + 0x03E8:

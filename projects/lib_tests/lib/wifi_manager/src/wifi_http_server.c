@@ -1,4 +1,3 @@
-#include "wifi_http_server.h"
 #include "wifi_manager_internal.h"
 #include "err_controller.h"
 #include "logger.h"

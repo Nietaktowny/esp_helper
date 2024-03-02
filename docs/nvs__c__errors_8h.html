@@ -105,7 +105,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="nvs__c__errors_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2nvs__controller_2include_2nvs__c__errors_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2nvs__controller_2include_2nvs__c__errors_8hdep" id="aprojects_2lib__tests_2lib_2nvs__controller_2include_2nvs__c__errors_8hdep">
 <area shape="rect" title="NVS Controller library errors list." alt="" coords="8,5,164,61"/>
-<area shape="rect" href="nvs__controller_8h_source.html" title=" " alt="" coords="5,109,167,165"/>
+<area shape="rect" href="nvs__controller_8h.html" title="NVS Controller library header file." alt="" coords="5,109,167,165"/>
 <area shape="poly" title=" " alt="" coords="89,77,89,108,83,108,83,77"/>
 </map>
 </div>
@@ -120,8 +120,24 @@ Macros</h2></td></tr>
 <tr class="separator:a22205e7e67ec09e99f5d9643af1bd147"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9421bba467dd13a8d124a05324a0dd3" id="r_ad9421bba467dd13a8d124a05324a0dd3"><td class="memItemLeft" align="right" valign="top"><a id="ad9421bba467dd13a8d124a05324a0dd3" name="ad9421bba467dd13a8d124a05324a0dd3"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>NVS_C_ERR_WRONG_MODE</b>&#160;&#160;&#160;0x0001 + <a class="el" href="nvs__c__errors_8h.html#a22205e7e67ec09e99f5d9643af1bd147">NVS_C_ERR_BASE</a></td></tr>
-<tr class="memdesc:ad9421bba467dd13a8d124a05324a0dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVS was init in read only mode. <br /></td></tr>
+<tr class="memdesc:ad9421bba467dd13a8d124a05324a0dd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVS namespace was opened in read only mode. <br /></td></tr>
 <tr class="separator:ad9421bba467dd13a8d124a05324a0dd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ec880f77e21d738f65a3ef5c319701b" id="r_a5ec880f77e21d738f65a3ef5c319701b"><td class="memItemLeft" align="right" valign="top"><a id="a5ec880f77e21d738f65a3ef5c319701b" name="a5ec880f77e21d738f65a3ef5c319701b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NVS_C_ERR_NOT_INIT</b>&#160;&#160;&#160;0x0002 + <a class="el" href="nvs__c__errors_8h.html#a22205e7e67ec09e99f5d9643af1bd147">NVS_C_ERR_BASE</a></td></tr>
+<tr class="memdesc:a5ec880f77e21d738f65a3ef5c319701b"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVS was not init. <br /></td></tr>
+<tr class="separator:a5ec880f77e21d738f65a3ef5c319701b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09cdd8740bdbf75c1da03e661ba9d03b" id="r_a09cdd8740bdbf75c1da03e661ba9d03b"><td class="memItemLeft" align="right" valign="top"><a id="a09cdd8740bdbf75c1da03e661ba9d03b" name="a09cdd8740bdbf75c1da03e661ba9d03b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NVS_C_ERR_PARTITION_NOT_FOUND</b>&#160;&#160;&#160;0x0003 + <a class="el" href="nvs__c__errors_8h.html#a22205e7e67ec09e99f5d9643af1bd147">NVS_C_ERR_BASE</a></td></tr>
+<tr class="memdesc:a09cdd8740bdbf75c1da03e661ba9d03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVS partition was not found. <br /></td></tr>
+<tr class="separator:a09cdd8740bdbf75c1da03e661ba9d03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eb430f04ddef89096e7333456ee4a76" id="r_a7eb430f04ddef89096e7333456ee4a76"><td class="memItemLeft" align="right" valign="top"><a id="a7eb430f04ddef89096e7333456ee4a76" name="a7eb430f04ddef89096e7333456ee4a76"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NVS_C_ERR_NAMESPACE_NOT_FOUND</b>&#160;&#160;&#160;0x0004 + <a class="el" href="nvs__c__errors_8h.html#a22205e7e67ec09e99f5d9643af1bd147">NVS_C_ERR_BASE</a></td></tr>
+<tr class="memdesc:a7eb430f04ddef89096e7333456ee4a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVS namespace was not found in partition. <br /></td></tr>
+<tr class="separator:a7eb430f04ddef89096e7333456ee4a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1198bc320cb3cd8e397e6276c2d1a2cc" id="r_a1198bc320cb3cd8e397e6276c2d1a2cc"><td class="memItemLeft" align="right" valign="top"><a id="a1198bc320cb3cd8e397e6276c2d1a2cc" name="a1198bc320cb3cd8e397e6276c2d1a2cc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NVS_C_ERR_KEY_NOT_FOUND</b>&#160;&#160;&#160;0x0005 + <a class="el" href="nvs__c__errors_8h.html#a22205e7e67ec09e99f5d9643af1bd147">NVS_C_ERR_BASE</a></td></tr>
+<tr class="memdesc:a1198bc320cb3cd8e397e6276c2d1a2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">NVS key was not found in namespace. <br /></td></tr>
+<tr class="separator:a1198bc320cb3cd8e397e6276c2d1a2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>NVS Controller library errors list. </p>

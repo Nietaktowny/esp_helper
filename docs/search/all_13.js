@@ -70,10 +70,11 @@ var searchData=
   ['wifi_5fcontroller_2ec_67',['wifi_controller.c',['../wifi__controller_8c.html',1,'']]],
   ['wifi_5fcontroller_2eh_68',['wifi_controller.h',['../wifi__controller_8h.html',1,'']]],
   ['wifi_5finitialized_69',['wifi_initialized',['../structwifi__c__status__obj.html#ab6218579259849450d54e7df1ad16a21',1,'wifi_c_status_obj']]],
-  ['wifi_5fmode_70',['wifi_mode',['../structwifi__c__status__obj.html#ad80a1c676a259b491888b2b3e393b1cc',1,'wifi_c_status_obj']]],
-  ['wifi_5fs_5fhandle_5fobj_71',['wifi_s_handle_obj',['../structwifi__s__handle__obj.html',1,'']]],
-  ['wifi_5fs_5furls_5fobj_72',['wifi_s_urls_obj',['../structwifi__s__urls__obj.html',1,'']]],
-  ['with_20cexception_3a_73',['Error Handling with CException:',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md32',1,'']]],
-  ['workflows_20ci_20badge_20svg_20alt_20ci_74',['CException &lt;img src=&quot;https://github.com/ThrowTheSwitch/CException/workflows/CI/badge.svg&quot; alt=&quot;CI&quot;/&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html',1,'']]],
-  ['world_20example_75',['Hello World Example',['../md_projects_2lib__tests_2README.html#autotoc_md59',1,'']]]
+  ['wifi_5fmanager_5ferr_5fbase_70',['WIFI_MANAGER_ERR_BASE',['../wifi__manager__errors_8h.html#aba94c5fceae77bfd18c757b4afac2802',1,'wifi_manager_errors.h']]],
+  ['wifi_5fmanager_5ferrors_2eh_71',['wifi_manager_errors.h',['../wifi__manager__errors_8h.html',1,'']]],
+  ['wifi_5fmode_72',['wifi_mode',['../structwifi__c__status__obj.html#ad80a1c676a259b491888b2b3e393b1cc',1,'wifi_c_status_obj']]],
+  ['wifi_5fs_5fhandle_5fobj_73',['wifi_s_handle_obj',['../structwifi__s__handle__obj.html',1,'']]],
+  ['with_20cexception_3a_74',['Error Handling with CException:',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md32',1,'']]],
+  ['workflows_20ci_20badge_20svg_20alt_20ci_75',['CException &lt;img src=&quot;https://github.com/ThrowTheSwitch/CException/workflows/CI/badge.svg&quot; alt=&quot;CI&quot;/&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html',1,'']]],
+  ['world_20example_76',['Hello World Example',['../md_projects_2lib__tests_2README.html#autotoc_md59',1,'']]]
 ];

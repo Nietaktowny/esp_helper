@@ -9,5 +9,6 @@ var searchData=
   ['p7_6',['P7',['../structbmp__handle__obj.html#abc86bf465c0af0a7b60e1fcf0ae08470',1,'bmp_handle_obj']]],
   ['p8_7',['P8',['../structbmp__handle__obj.html#ade420b5e69f1165293e98e5e8df5d05a',1,'bmp_handle_obj']]],
   ['p9_8',['P9',['../structbmp__handle__obj.html#a64f24dc105cf2638e0f210b965fb6171',1,'bmp_handle_obj']]],
-  ['press_5fover_9',['press_over',['../structbmp__config__obj.html#a185d0cc701dfd68c250434c54459c9b4',1,'bmp_config_obj']]]
+  ['partition_9',['partition',['../structnvs__c__handle__obj.html#a5558ac44bc090acefdc6963785b1b426',1,'nvs_c_handle_obj']]],
+  ['press_5fover_10',['press_over',['../structbmp__config__obj.html#a185d0cc701dfd68c250434c54459c9b4',1,'bmp_config_obj']]]
 ];

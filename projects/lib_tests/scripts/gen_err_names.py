@@ -18,8 +18,7 @@ lookup_table_beg = """/**
  * @copyright Copyright (c) 2024
  * 
  */
-#include "err_controller.h" 
-#include "errors_list.h"
+#include "err_controller.h"
 #include <string.h>
 
 #ifdef ESP_PLATFORM

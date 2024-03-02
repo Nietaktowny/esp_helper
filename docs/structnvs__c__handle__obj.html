@@ -97,18 +97,48 @@ $(document).ready(function(){initNavTree('structnvs__c__handle__obj.html',''); i
   <div class="headertitle"><div class="title">nvs_c_handle_obj Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>NVS Controller object stuct containing needed context.  
+ <a href="structnvs__c__handle__obj.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="nvs__controller_8h_source.html">nvs_controller.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a48e250e278eebbec3ab91b61a0dd2ecd" id="r_a48e250e278eebbec3ab91b61a0dd2ecd"><td class="memItemLeft" align="right" valign="top"><a id="a48e250e278eebbec3ab91b61a0dd2ecd" name="a48e250e278eebbec3ab91b61a0dd2ecd"></a>
-nvs_handle_t&#160;</td><td class="memItemRight" valign="bottom"><b>esp_nvs</b></td></tr>
-<tr class="separator:a48e250e278eebbec3ab91b61a0dd2ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98c404990c7b7d7e48e165ba04267107" id="r_a98c404990c7b7d7e48e165ba04267107"><td class="memItemLeft" align="right" valign="top"><a id="a98c404990c7b7d7e48e165ba04267107" name="a98c404990c7b7d7e48e165ba04267107"></a>
-nvs_open_mode_t&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b></td></tr>
-<tr class="separator:a98c404990c7b7d7e48e165ba04267107"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d2e7a8aea2df93fc4bd2b78aa4bf97b" id="r_a2d2e7a8aea2df93fc4bd2b78aa4bf97b"><td class="memItemLeft" align="right" valign="top"><a id="a2d2e7a8aea2df93fc4bd2b78aa4bf97b" name="a2d2e7a8aea2df93fc4bd2b78aa4bf97b"></a>
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>esp_nvs</b></td></tr>
+<tr class="memdesc:a2d2e7a8aea2df93fc4bd2b78aa4bf97b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP-IDF specific NVS handle. <br /></td></tr>
+<tr class="separator:a2d2e7a8aea2df93fc4bd2b78aa4bf97b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5558ac44bc090acefdc6963785b1b426" id="r_a5558ac44bc090acefdc6963785b1b426"><td class="memItemLeft" align="right" valign="top"><a id="a5558ac44bc090acefdc6963785b1b426" name="a5558ac44bc090acefdc6963785b1b426"></a>
+char&#160;</td><td class="memItemRight" valign="bottom"><b>partition</b> [16]</td></tr>
+<tr class="memdesc:a5558ac44bc090acefdc6963785b1b426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of currently used NVS partition. <br /></td></tr>
+<tr class="separator:a5558ac44bc090acefdc6963785b1b426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5426df49e5d72812259d68c6d5a4d37f" id="r_a5426df49e5d72812259d68c6d5a4d37f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="nvs__controller_8h.html#a6689ef55a745136011533e08b2b357e6">nvs_c_open_mode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnvs__c__handle__obj.html#a5426df49e5d72812259d68c6d5a4d37f">mode</a></td></tr>
+<tr class="memdesc:a5426df49e5d72812259d68c6d5a4d37f"><td class="mdescLeft">&#160;</td><td class="mdescRight">&lt; Name of currently used NVS namespace.  <br /></td></tr>
+<tr class="separator:a5426df49e5d72812259d68c6d5a4d37f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>NVS Controller object stuct containing needed context. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5426df49e5d72812259d68c6d5a4d37f" name="a5426df49e5d72812259d68c6d5a4d37f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5426df49e5d72812259d68c6d5a4d37f">&#9670;&#160;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="nvs__controller_8h.html#a6689ef55a745136011533e08b2b357e6">nvs_c_open_mode_t</a> nvs_c_handle_obj::mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>&lt; Name of currently used NVS namespace. </p>
+<p>Type of open mode (read only or read-write). </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>projects/lib_tests/lib/nvs_controller/src/<b>nvs_controller.c</b></li>
+<li>projects/lib_tests/lib/nvs_controller/include/<a class="el" href="nvs__controller_8h_source.html">nvs_controller.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

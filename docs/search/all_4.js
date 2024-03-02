@@ -37,10 +37,11 @@ var searchData=
   ['esp_5fhelper_5futils_34',['esp_helper_utils',['../md_projects_2lib__tests_2lib_2esp__helper__utils_2README.html',1,'']]],
   ['esp_5fhelper_5futils_2ec_35',['esp_helper_utils.c',['../esp__helper__utils_8c.html',1,'']]],
   ['esp_5fhelper_5futils_2eh_36',['esp_helper_utils.h',['../esp__helper__utils_8h.html',1,'']]],
-  ['even_5floop_5fstarted_37',['even_loop_started',['../structwifi__c__status__obj.html#a6521ab6f8cb7b875232c0ae34d57267d',1,'wifi_c_status_obj']]],
-  ['example_38',['example',['../md_projects_2lib__tests_2README.html#autotoc_md59',1,'Hello World Example'],['../md_projects_2lib__tests_2README.html#autotoc_md60',1,'How to use example']]],
-  ['example_20folder_20contents_39',['Example folder contents',['../md_projects_2lib__tests_2README.html#autotoc_md61',1,'']]],
-  ['exception_20h_40',['Exception.h',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md9',1,'']]],
-  ['exittry_41',['ExitTry()',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md7',1,'']]],
-  ['exittry_20tt_42',['&lt;tt&gt;ExitTry()&lt;/tt&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md46',1,'']]]
+  ['esp_5fnvs_37',['esp_nvs',['../structnvs__c__handle__obj.html#a2d2e7a8aea2df93fc4bd2b78aa4bf97b',1,'nvs_c_handle_obj']]],
+  ['even_5floop_5fstarted_38',['even_loop_started',['../structwifi__c__status__obj.html#a6521ab6f8cb7b875232c0ae34d57267d',1,'wifi_c_status_obj']]],
+  ['example_39',['example',['../md_projects_2lib__tests_2README.html#autotoc_md59',1,'Hello World Example'],['../md_projects_2lib__tests_2README.html#autotoc_md60',1,'How to use example']]],
+  ['example_20folder_20contents_40',['Example folder contents',['../md_projects_2lib__tests_2README.html#autotoc_md61',1,'']]],
+  ['exception_20h_41',['Exception.h',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md9',1,'']]],
+  ['exittry_42',['ExitTry()',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md7',1,'']]],
+  ['exittry_20tt_43',['&lt;tt&gt;ExitTry()&lt;/tt&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md46',1,'']]]
 ];

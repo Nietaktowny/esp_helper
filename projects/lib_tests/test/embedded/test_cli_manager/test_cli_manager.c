@@ -170,7 +170,7 @@ int runUnityTests(void)
  */
 void app_main(void)
 {
-  nvs_c_init_nvs();
+  nvs_c_init_default_partition();
   wifi_c_init_wifi(WIFI_C_MODE_STA);
   wifi_c_start_sta(MY_SSID, MY_PSK);
   runUnityTests();

@@ -1,1 +1,1 @@
-<testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="20.610" timestamp="2024-02-25T22:54:38.040637" hostname="wmytych"><testcase classname="test_cli_manager.pytest_cli_manager" name="test_cli_manager" time="20.560" /></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="0" time="0.018" timestamp="2024-03-02T08:39:49.601644" hostname="wmytych" /></testsuites>
