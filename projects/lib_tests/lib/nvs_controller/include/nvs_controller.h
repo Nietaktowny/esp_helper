@@ -22,8 +22,8 @@
  */
 typedef enum
 {
-    NVS_C_READONLY, ///< Read only
-    NVS_C_READWRITE ///< Read and write
+    NVS_C_READONLY, ///< Read only NVS namespace mode.
+    NVS_C_READWRITE ///< Read and write NVS namespace mode.
 } nvs_c_open_mode_t;
 
 /**
