@@ -846,7 +846,7 @@ void test_if_nvs_c_deinit_partition_should_return_zero(void) {
     err = nvs_c_deinit_partition(partition_label);
 
     //then
-    TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NOT_INIT, err, "nvs_c_deinit_partition should return zero");
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_deinit_partition should return zero");
 }
 
 int runUnityTests(void) {
