@@ -144,7 +144,7 @@ void app_main()
     logger_create_semphr();
 
     // Initialize NVS
-    nvs_c_init_nvs();
+    nvs_c_init_default_partition();
 
 // ESP-WROVE-KIT has 3 LEDs, turn all off
 #ifdef ESP_WROVER_KIT

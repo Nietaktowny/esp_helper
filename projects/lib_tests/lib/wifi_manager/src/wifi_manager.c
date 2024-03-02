@@ -1,7 +1,7 @@
 #include "wifi_manager.h"
+#include "wifi_manager_internal.h"
 #include "logger.h"
 #include "err_controller.h"
-#include "wifi_http_server.h"
 #include "wifi_controller.h"
 #include "memory_utils.h"
 #include "nvs_controller.h"
@@ -10,18 +10,18 @@
 #include <stdbool.h>
 
 
-#define WIFI_MANAGER_NVS_NAMESPACE "nvs"
+#define WIFI_MANAGER_NVS_NAMESPACE "wifi_manager"
 
 int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
     err_c_t err = 0;
     char ssid[64];
     ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("location to store stored APs JSON cannot be NULL"));
     
-    err = wifi_manager_get_stored_ap(&ssid[0], sizeof(ssid), NULL, 0);
+    err = wifi_manager_get_stored_ap(ssid, sizeof(ssid), NULL, 0);
     if(err != ERR_C_OK && err != 4354) {
         LOG_ERROR("cannot generate AP JSON, error %d: %s", err, error_to_name(err));
         return err;
-    } else if(err == 4354 ) {   //ESP_ERR_NVS_NOT_FOUND
+    } else if(err == NVS_C_ERR_KEY_NOT_FOUND ) {
         LOG_WARN("not found any stored AP, generating empty list message...");
         snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", "empty");
         return err;
@@ -41,7 +41,7 @@ int wifi_manager_store_ap(char* ssid, size_t ssid_len, char* password, size_t pa
     ERR_C_CHECK_NULL_PTR(ssid, LOG_ERROR("ssid key cannot be NULL"));
     ERR_C_CHECK_NULL_PTR(password, LOG_ERROR("password key cannot be NULL"));
 
-    err = nvs_c_open(&nvs, &namespace[0]);
+    err = nvs_c_open(&nvs, namespace, NVS_C_READWRITE);
     if(err != ERR_C_OK) {
         LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err));
         return err;
@@ -59,7 +59,7 @@ int wifi_manager_store_ap(char* ssid, size_t ssid_len, char* password, size_t pa
         return err;
     }
 
-    nvs_c_close(nvs);
+    nvs_c_close(&nvs);
 
     LOG_DEBUG("stored AP SSID and password in NVS:\nSSID: %s\nPassword: %s", ssid, password);
     return err;
@@ -73,7 +73,7 @@ int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size
 
 
     Try {
-        ERR_C_CHECK_AND_THROW_ERR(nvs_c_open_read_only(&nvs, &namespace[0]));
+        ERR_C_CHECK_AND_THROW_ERR(nvs_c_open(&nvs, namespace, NVS_C_READONLY));
         ERR_C_CHECK_AND_THROW_ERR(nvs_c_read_string(nvs, "ssid", ssid, ssid_len));
         LOG_DEBUG("found stored SSID in NVS: %s", ssid);
         //conditionally read password 
@@ -81,11 +81,11 @@ int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size
             ERR_C_CHECK_AND_THROW_ERR(nvs_c_read_string(nvs, "password", password, password_len));
             LOG_DEBUG("found stored password in NVS: %s", password);
         }
-        nvs_c_close(nvs);
+        nvs_c_close(&nvs);
     } Catch(err) {
         switch (err)
         {
-        case 4354:  //ESP_ERR_NVS_NOT_FOUND
+        case NVS_C_ERR_KEY_NOT_FOUND:
             LOG_WARN("Cannot find any stored AP in NVS");
             return err;
         default:
@@ -145,7 +145,7 @@ int wifi_manager_erase_ap(void) {
     err_c_t err = 0;
     nvs_c_handle_t nvs = NULL;
 
-    err = nvs_c_open(&nvs, WIFI_MANAGER_NVS_NAMESPACE);
+    err = nvs_c_open(&nvs, WIFI_MANAGER_NVS_NAMESPACE, NVS_C_READWRITE);
     if(err != ERR_C_OK) {
         LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err));
         return err;
@@ -157,7 +157,7 @@ int wifi_manager_erase_ap(void) {
         return err;
     }
 
-    nvs_c_close(nvs);
+    nvs_c_close(&nvs);
 
     LOG_INFO("Wifi manager stored AP erased");
     return err;
@@ -171,7 +171,7 @@ int wifi_manager_start_ap_and_server(void) {
     status = wifi_c_get_status();
 
     if(status->wifi_initialized == false) {
-        err = nvs_c_init_nvs();
+        err = nvs_c_init_default_partition();
         if(err != ERR_C_OK) {
             LOG_ERROR("wifi manager cannot continue, nvs error %d: %s", err, error_to_name(err));
             return err;
@@ -214,7 +214,7 @@ int wifi_manager_init(void) {
     memutil_zero_memory(&ssid, sizeof(ssid));
     memutil_zero_memory(&password, sizeof(password));
 
-    err = nvs_c_init_nvs();
+    err = nvs_c_init_default_partition();
     if(err != ERR_C_OK) {
         LOG_ERROR("wifi manager cannot continue, nvs error %d: %s", err, error_to_name(err));
         return err;

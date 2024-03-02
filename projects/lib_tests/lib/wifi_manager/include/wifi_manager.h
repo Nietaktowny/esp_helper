@@ -1,5 +1,5 @@
 #include <stddef.h>
-
+#include "wifi_manager_errors.h"
 
 
 
