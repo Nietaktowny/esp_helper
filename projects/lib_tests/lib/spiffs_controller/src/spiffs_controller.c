@@ -1,3 +1,6 @@
+
+
+#ifdef ESP_PLATFORM
 #include "spiffs_controller.h"
 #include "err_controller.h"
 #include "logger.h"
@@ -199,3 +202,5 @@ int spiffs_c_read_file(spiffs_c_handle_t* handle, char* filename, char* out_data
     spiffs_c_close_file(file, filename);
     return err;
 }
+
+#endif //ESP_PLATFORM
