@@ -97,16 +97,19 @@ projects/lib_tests/lib/CException/test/TestException.c:63:10: style: Variable 'T
 projects/lib_tests/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = 0;
                 ^
+projects/lib_tests/lib/nvs_controller/src/nvs_controller.c:214:138: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+        LOG_ERROR("error %d when committing data with key '%s' into namespace '%s': %s", err, key, handle->namespace, error_to_name(err)););
+                                                                                                                                         ^
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:47:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
 projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:935:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
         uint16_t ap_len = 0;
                  ^
-projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:99:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:98:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err = wifi_manager_fetch_ap_list(&buffer[0], sizeof(buffer));
         ^
-projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:115:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:114:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err = wifi_c_get_status_as_json(&buffer[0], sizeof(buffer));
         ^
 projects/lib_tests/src/main.c:102:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
@@ -386,6 +389,12 @@ projects/bmp280/test/embedded/test_wifi_controller/test_wifi_controller.c:45:0: 
 
 ^
 projects/lib_tests/test/desktop/test_logger/test_logger.c:222:0: style: The function 'test_if_clear_all_files_sets_all_files_to_null' is never used. [unusedFunction]
+
+^
+projects/lib_tests/test/embedded/test_nvs_controller/test_nvs_controller.c:294:0: style: The function 'test_if_nvs_open_from_partition_returns_zero' is never used. [unusedFunction]
+
+^
+projects/lib_tests/test/desktop/test_nvs_controller/test_nvs_controller.c:174:0: style: The function 'test_if_struct_nvs_c_obj_contains_nvs_mode' is never used. [unusedFunction]
 
 ^
 libraries/wifi_manager/src/wifi_manager.c:167:0: style: The function 'wifi_manager_start_ap_and_server' is never used. [unusedFunction]
