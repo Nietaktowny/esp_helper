@@ -1,1 +1,1 @@
-<testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="15.987" timestamp="2024-03-02T15:35:43.537542" hostname="wmytych"><testcase classname="test_wifi_manager.pytest_wifi_manager" name="test_wifi_manager" time="15.948" /></testsuite></testsuites>
+<testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="15.351" timestamp="2024-03-03T08:41:24.855136" hostname="wmytych"><testcase classname="test_wifi_manager.pytest_wifi_manager" name="test_wifi_manager" time="15.297" /></testsuite></testsuites>
