@@ -106,14 +106,11 @@ projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: U
 projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:935:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
         uint16_t ap_len = 0;
                  ^
-projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:98:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err = wifi_manager_fetch_ap_list(&buffer[0], sizeof(buffer));
+projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:94:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err = wifi_manager_get_scanned_aps(&buffer[0], sizeof(buffer));
         ^
-projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:114:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:111:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err = wifi_c_get_status_as_json(&buffer[0], sizeof(buffer));
-        ^
-projects/lib_tests/src/main.c:47:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err = nvs_c_erase_key(handle, key);
         ^
 projects/lib_tests/test/embedded/test_http_client/test_http_client.c:63:0: error: Syntax error in #elif [preprocessorErrorDirective]
     #elif
