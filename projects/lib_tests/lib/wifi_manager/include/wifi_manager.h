@@ -7,6 +7,21 @@ int wifi_manager_init(void);
 
 int wifi_manager_start_ap_and_server(void);
 
+
+/* -------------------------------*/
+/**
+ * @brief  Get stored credentials of Wifi manager last stored access point.
+ *
+ * @param ssid Buffer to store access point SSID.
+ * @param ssid_len SSID buffer length.
+ * @param password Buffer to store access point password.
+ * @param password_len Password buffer length.
+ *
+ * @retval ERR_C_OK on success.
+ * @retval ERR_C_NULL_POINTER on NULL ssid or password.
+ * @retval NVS_C_ERR_KEY_NOT_FOUND when not found any stored access point.
+ */
+/* ---------------------------------*/
 int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size_t password_len);
 
 /**
@@ -15,10 +30,10 @@ int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size
  * @param ssid SSID of access point to store. 
  * @param ssid_len Length of SSID.
  * @param password Password of access point to store.
- * @param password_len Length of password.
+ * @param password length of password.
  * 
  * @retval ERR_C_OK on success.
- * @retval ERR_C_NULL_POINTER on NULL ssid or password.
+ * @retval ERR_C_NULL_POINTER on NULL SSID or password.
  * @retval NVS Controller specific errors.
  * 
  */
