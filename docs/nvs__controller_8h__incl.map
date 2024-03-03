@@ -1,7 +1,9 @@
 <map id="projects/lib_tests/lib/nvs_controller/include/nvs_controller.h" name="projects/lib_tests/lib/nvs_controller/include/nvs_controller.h">
-<area shape="rect" id="Node000001" title="NVS Controller library header file." alt="" coords="13,5,174,61"/>
+<area shape="rect" id="Node000001" title="NVS Controller library header file." alt="" coords="48,5,209,61"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,109,73,135"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,63,57,97,53,94,74,60"/>
-<area shape="rect" id="Node000003" href="$nvs__c__errors_8h.html" title="NVS Controller library errors list." alt="" coords="97,109,203,135"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="113,60,136,94,131,97,109,63"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,63,64,100,61,96,99,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,109,160,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,61,131,93,126,93,126,61"/>
+<area shape="rect" id="Node000004" href="$nvs__c__errors_8h.html" title="NVS Controller library errors list." alt="" coords="185,109,291,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="164,59,212,97,209,101,161,63"/>
 </map>

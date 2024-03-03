@@ -12,6 +12,7 @@
 #pragma once
 
 #include <stddef.h>
+#include <stdint.h>
 #include "nvs_c_errors.h"
 
 #define NVS_C_DEFAULT_NVS_PART_NAME "nvs" ///< Name of default NVS partition.
@@ -22,8 +23,8 @@
  */
 typedef enum
 {
-    NVS_C_READONLY, ///< Read only NVS namespace mode.
-    NVS_C_READWRITE ///< Read and write NVS namespace mode.
+	NVS_C_READONLY, 	///< Read only NVS namespace mode.
+    NVS_C_READWRITE, 	///< Read and write NVS namespace mode.
 } nvs_c_open_mode_t;
 
 /**

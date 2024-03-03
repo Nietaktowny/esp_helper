@@ -3059,14 +3059,15 @@ void test_if_nvs_c_erase_namespace_returns_err_on_read_only_namespace(void)
 
     //when
     nvs_c_init_default_partition();
-    nvs_c_open(&handle, "testsdsda", NVS_C_READONLY);
+    nvs_c_open(&handle, "testsdsda", NVS_C_READWRITE);
+	nvs_c_close(&handle);
+	nvs_c_open(&handle, "testsdsda", NVS_C_READONLY);
     err = nvs_c_erase_namespace(handle);
 
     //then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_WRONG_MODE, err, "nvs_c_erase_namespace should return err on read only namespace");
 
     //after
-    nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
@@ -3159,7 +3160,7 @@ void test_if_nvs_c_erase_default_partition_deletes_namespace(void)
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NAMESPACE_NOT_FOUND, err, "nvs_c_erase_default_partition should delete namespace");
 
     //after
-    nvs_c_close(&handle);
+    //nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
@@ -3247,7 +3248,7 @@ void test_if_nvs_c_erase_partition_deletes_namespace(void)
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NAMESPACE_NOT_FOUND, err, "nvs_c_erase_partition should delete namespace");
 
     //after
-    nvs_c_close(&handle);
+	
 }
 
 void test_if_nvs_c_erase_partition_deletes_key(void)

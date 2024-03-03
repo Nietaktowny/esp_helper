@@ -54,9 +54,13 @@ int wifi_manager_store_ap(const char* ssid, size_t ssid_len,
 	LOG_ERROR(
 	    "error %d when trying to store AP password and ssid in NVS: %s",
 	    err, error_to_name(err));
+		return err;
     }
-
-    nvs_c_close(&nvs);
+	
+	//additional NULL check.
+	if((nvs) != NULL) {
+    	nvs_c_close(&nvs);
+	}
 
     LOG_DEBUG("stored AP SSID and password in NVS:\nSSID: %s\nPassword: %s",
 	      ssid, password);
