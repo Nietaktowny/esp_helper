@@ -1,1 +1,1 @@
-<testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="8.159" timestamp="2024-03-02T23:47:41.873111" hostname="wmytych"><testcase classname="test_nvs_controller.pytest_nvs_controller" name="test_nvs_controller" time="8.115" /></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="0" time="0.027" timestamp="2024-03-03T16:12:36.662456" hostname="wmytych" /></testsuites>
