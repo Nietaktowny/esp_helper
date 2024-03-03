@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"globals_func_n.html":[9,1,1,5],
 "globals_func_s.html":[9,1,1,6],
 "globals_func_t.html":[9,1,1,7],
 "globals_func_w.html":[9,1,1,8],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "structbmp__handle__obj.html#a6560092f2324ad8d53fa349c2d0e22e1":[8,0,3,14],
 "structbmp__handle__obj.html#a733d04d5948a9ab6a211be7288c8439f":[8,0,3,6],
 "structbmp__handle__obj.html#a781e7b0477daab272a8a37434efa970f":[8,0,3,5],
-"structbmp__handle__obj.html#a81c6cca6f837c903173d46bb0fe7896a":[8,0,3,0],
-"structbmp__handle__obj.html#a8778dd9963aedc2155fd75adcc1bcd2c":[8,0,3,8]
+"structbmp__handle__obj.html#a81c6cca6f837c903173d46bb0fe7896a":[8,0,3,0]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"structbmp__handle__obj.html#a8778dd9963aedc2155fd75adcc1bcd2c":[8,0,3,8],
 "structbmp__handle__obj.html#a94b10d1c43ab04276cf678ca9914b630":[8,0,3,1],
 "structbmp__handle__obj.html#aa07564ad8b5c6e514db09f75786bdeb7":[8,0,3,3],
 "structbmp__handle__obj.html#ab2ba29f0c82def46c4247700b40c1e8c":[8,0,3,10],
@@ -112,6 +113,7 @@ var NAVTREEINDEX2 =
 "tcp__controller_8h.html#acdf36e9d70cc6aa06f6cf26b88ae0d6e":[9,0,0,0,0,17,0,1,13],
 "tcp__controller_8h.html#ae0b781bbcb6353cf585fcb0003c42465":[9,0,0,0,0,17,0,1,5],
 "tcp__controller_8h_source.html":[9,0,0,0,0,17,0,1],
+"test__logger_8h_source.html":[9,0,0,0,0,10,2,0],
 "test__nvs__controller_8h_source.html":[9,0,0,0,0,13,2,0],
 "todo.html":[7],
 "wifi__c__errors_8h.html":[9,0,0,0,0,18,0,0],
