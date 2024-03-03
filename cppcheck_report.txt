@@ -373,7 +373,7 @@ projects/lib_tests/lib/CException/test/TestException.c:77:0: style: The function
 projects/bmp280/test/embedded/test_wifi_controller/test_wifi_controller.c:45:0: style: The function 'test_check_if_wifi_status_is_initialized' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/test/desktop/test_logger/test_logger.c:222:0: style: The function 'test_if_clear_all_files_sets_all_files_to_null' is never used. [unusedFunction]
+projects/lib_tests/lib/logger/test/test_logger.c:226:0: style: The function 'test_if_clear_all_files_sets_all_files_to_null' is never used. [unusedFunction]
 
 ^
 projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:1159:0: style: The function 'test_if_nvs_c_write_int16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
