@@ -1,7 +1,7 @@
 #include <stddef.h>
 #include "wifi_manager_errors.h"
 
-
+#define WIFI_MANAGER_NVS_NAMESPACE "wifi_manager"
 
 int wifi_manager_init(void);
 
