@@ -28,7 +28,7 @@ jobs:
           ${IDF_PATH}/./install.sh --enable-pytest
           . ${IDF_PATH}/export.sh
           python clean_all.py
-          python build_all.py
+          python build_all.py -u
           pytest --embedded-services=qemu,idf -m qemu --junitxml "junit/test_reports"
       - name: Run junit2html on test results
         working-directory: projects/lib_tests
