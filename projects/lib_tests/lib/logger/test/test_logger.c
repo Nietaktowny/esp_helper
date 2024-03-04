@@ -885,4 +885,5 @@ int runUnityTests(void) {
   RUN_TEST(test_if_logger_create_semphr_returns_zero);
   RUN_TEST(test_if_logger_create_semphr_creates_mutex);
   return UNITY_END();
+  LOG_FATAL("FINISHED LOGGER TESTS!");
 }

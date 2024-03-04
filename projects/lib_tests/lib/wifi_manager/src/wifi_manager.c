@@ -10,15 +10,13 @@
 #include "wifi_controller.h"
 #include "wifi_manager_internal.h"
 
-#define WIFI_MANAGER_NVS_NAMESPACE "wifi_manager"
-
 int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
 	err_c_t err = 0;
 	char ssid[64] = {0};
 	ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("location to store stored APs JSON cannot be NULL"));
 
 	err = wifi_manager_get_stored_ap(ssid, sizeof(ssid), NULL, 0);
-	if (err != ERR_C_OK && err != 4354) {
+	if (err != ERR_C_OK && err != NVS_C_ERR_KEY_NOT_FOUND) {
 		LOG_ERROR("cannot generate AP JSON, error %d: %s", err, error_to_name(err));
 		return err;
 	} else if (err == NVS_C_ERR_KEY_NOT_FOUND) {
@@ -27,7 +25,7 @@ int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
 		return err;
 	}
 
-	snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", &ssid[0]);
+	snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", ssid);
 
 	LOG_VERBOSE("generated stored AP as JSON");
 	return err;
@@ -65,13 +63,9 @@ int wifi_manager_get_stored_ap(char* ssid, size_t ssid_len, char* password, size
 	nvs_c_handle_t nvs = NULL;
 	char namespace[15] = WIFI_MANAGER_NVS_NAMESPACE;
 	ERR_C_CHECK_NULL_PTR(ssid, LOG_ERROR("location to store SSID cannot be NULL"));
-	ERR_C_CHECK_NULL_PTR(password, LOG_DEBUG("location to store password cannot be NULL"));
 
 	Try {
 		// init variables
-		// memutil_zero_memory(ssid, ssid_len);
-		// memutil_zero_memory(password, password_len);
-
 		ERR_C_CHECK_AND_THROW_ERR(nvs_c_open(&nvs, namespace, NVS_C_READONLY));
 		ERR_C_CHECK_AND_THROW_ERR(nvs_c_read_string(nvs, "ssid", ssid, ssid_len));
 		LOG_DEBUG("found stored SSID in NVS: %s", ssid);
