@@ -2971,7 +2971,10 @@ void test_if_nvs_c_erase_key_returns_err_on_read_only_namespace(void)
 
     //when
     nvs_c_init_default_partition();
-    nvs_c_open(&handle, "testsdsda", NVS_C_READONLY);
+    nvs_c_open(&handle, "testsdsda", NVS_C_READWRITE);
+	nvs_c_close(&handle);
+
+	nvs_c_open(&handle, "testsdsda", NVS_C_READONLY);
     err = nvs_c_erase_key(handle, key);
 
     //then
