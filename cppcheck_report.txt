@@ -97,6 +97,9 @@ projects/lib_tests/lib/CException/test/TestException.c:63:10: style: Variable 'T
 projects/lib_tests/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = 0;
                 ^
+projects/lib_tests/lib/logger/test/test_logger.c:888:3: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+  LOG_FATAL("FINISHED LOGGER TESTS!");
+  ^
 projects/lib_tests/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
         err, key, handle->namespace, error_to_name(err)););
                                                         ^
