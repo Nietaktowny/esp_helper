@@ -248,11 +248,77 @@ void test_if_wifi_manager_get_ap_json_returns_err_not_found_ssid(void) {
 	nvs_c_close(&nvs);
 }
 
+void test_if_wifi_manager_get_ap_json_returns_zero(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	int err = -1;
+	const char* ssid = "ssid";
+	const char* pass = "pass";
+	char buffer[64] = {0};
+
+	// when
+	
+	wifi_manager_store_ap(ssid, strlen(ssid), pass, strlen(pass));
+	err = wifi_manager_get_stored_ap_as_json(buffer, sizeof(buffer));
+
+	// then
+	TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "wifi_manager_get_ap_as_json should return ERR_C_OK");
+
+	//after
+}
+
+void test_if_wifi_manager_get_ap_json_returns_correct_string(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	const char* expected = "{\"stored_ssid\": \"ssid\"}";
+	const char* ssid = "ssid";
+	const char* pass = "pass";
+	char buffer[64] = {0};
+
+	// when
+	
+	wifi_manager_store_ap(ssid, strlen(ssid), pass, strlen(pass));
+	wifi_manager_get_stored_ap_as_json(buffer, sizeof(buffer));
+
+	// then
+	TEST_ASSERT_EQUAL_STRING_MESSAGE(expected, buffer, "wifi_manager_get_ap_as_json should return correct json string");
+
+	//after
+}
+
+void test_if_wifi_manager_get_ap_json_returns_err_on_too_small_buffer(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	int err = -1;
+	const char* ssid = "ssid";
+	const char* pass = "pass";
+	char buffer[5] = {0};
+
+	// when
+	
+	wifi_manager_store_ap(ssid, strlen(ssid), pass, strlen(pass));
+	err = wifi_manager_get_stored_ap_as_json(buffer, sizeof(buffer));
+
+	// then
+	TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NO_MEMORY, err, "wifi_manager_get_ap_as_json should return err on too small buffer");
+
+	//after
+}
+
 
 
 
 int runUnityTests(void) {
 	UNITY_BEGIN();
+	RUN_TEST(test_if_wifi_manager_get_ap_json_returns_err_on_too_small_buffer);
+	RUN_TEST(test_if_wifi_manager_get_ap_json_returns_correct_string);
+	RUN_TEST(test_if_wifi_manager_get_ap_json_returns_zero);
 	RUN_TEST(test_if_wifi_manager_get_ap_json_returns_err_not_found_ssid);
 	RUN_TEST(test_if_wifi_manager_get_ap_json_returns_err_on_null_buffer);
 	RUN_TEST(test_if_wifi_manager_gets_stored_ap_pass);

@@ -13,9 +13,19 @@
 int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
 	err_c_t err = 0;
 	char ssid[64] = {0};
+	size_t required_length = 0; 
 	ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("location to store stored APs JSON cannot be NULL"));
 
 	err = wifi_manager_get_stored_ap(ssid, sizeof(ssid), NULL, 0);
+	
+	required_length = strlen(ssid) + strlen("{\"stored_ssid\": \"\"}");
+	
+	if(required_length > bufflen) {
+		err = ERR_C_NO_MEMORY; 
+		LOG_ERROR("error %d, required length to store ap as json (%lu) larger than buffer size (%lu)", err, required_length, bufflen);
+		return err;
+	}
+
 	if (err != ERR_C_OK && err != NVS_C_ERR_KEY_NOT_FOUND) {
 		LOG_ERROR("cannot generate AP JSON, error %d: %s", err, error_to_name(err));
 		return err;
@@ -24,7 +34,7 @@ int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
 		snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", "empty");
 		return err;
 	}
-
+	
 	snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", ssid);
 
 	LOG_VERBOSE("generated stored AP as JSON");
