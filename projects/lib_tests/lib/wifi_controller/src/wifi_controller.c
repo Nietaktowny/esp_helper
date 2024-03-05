@@ -932,18 +932,26 @@ int wifi_c_store_scan_result_as_json(char *buffer, uint16_t buflen)
         }
 
         char ap[100];
-        uint16_t ap_len = 0;
         uint16_t space_left = buflen;
         uint16_t index = 0;
         wifi_c_ap_record_t *record = wifi_scan_info.ap_record;
         for (uint16_t i = 0; i < wifi_scan_info.ap_count; i++)
         {
-            memutil_zero_memory(&ap, sizeof(ap));
+        	uint16_t ap_len = 0;
+		
+			memutil_zero_memory(&ap, sizeof(ap));
             char *ssid = (char *)(record->ssid);
 
-            sprintf(&ap[0], ", {\"ssid\": \"%s\", \"rssi\": %d}", ssid, record->rssi);
-            ap_len = strlen(&ap[0]);
-            memcpy(&(buffer[index]), &ap[0], ap_len);
+            snprintf(ap, buflen, ", {\"ssid\": \"%s\", \"rssi\": %d}", ssid, record->rssi);
+            ap_len = strlen(ap);
+			//if space left is not enough to store AP data, abort and clean what has been copied.
+       		if(ap_len > space_left) {
+				LOG_ERROR("buffer not big enough to store all scanned aps as json, aborting...");
+				memutil_zero_memory(buffer, buflen);
+				return ERR_C_NO_MEMORY;
+			}	
+		
+			memcpy(&(buffer[index]), ap, ap_len);
             space_left -= ap_len;
             index += ap_len;
             record++;

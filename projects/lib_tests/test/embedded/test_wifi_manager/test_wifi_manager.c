@@ -311,11 +311,128 @@ void test_if_wifi_manager_get_ap_json_returns_err_on_too_small_buffer(void) {
 	//after
 }
 
+void test_if_wifi_manager_get_scanned_aps_returns_err_on_null_buffer(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	int err = -1;
+
+	// when
+	err = wifi_manager_get_scanned_aps(NULL, 0);
+
+	// then
+	TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "wifi_manager_get_ap_as_json should return err on null buffer");
+
+	//after
+}
+
+
+void test_if_wifi_manager_get_scanned_aps_returns_err_on_too_small_buffer(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	int err = -1;
+	char buffer[12] = {0};
+
+	// when
+	err = wifi_manager_get_scanned_aps(buffer, sizeof(buffer));
+
+	// then
+	TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NO_MEMORY, err, "wifi_manager_get_ap_as_json should return err on too small buffer");
+
+	//after
+}
+
+
+
+
+void test_if_wifi_manager_get_scanned_aps_returns_zero(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	int err = -1;
+	char buffer[400] = {0};
+
+	// when
+	err = wifi_manager_get_scanned_aps(buffer, sizeof(buffer));
+
+	// then
+	TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "wifi_manager_get_ap_as_json should return ERR_C_OK");
+
+	//after
+}
+
+void test_if_wifi_manager_get_scanned_aps_returns_non_zero_len_string(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	char buffer[400] = {0};
+
+	// when
+	wifi_manager_get_scanned_aps(buffer, sizeof(buffer));
+
+	// then
+	TEST_ASSERT_NOT_EQUAL_MESSAGE(0, strlen(buffer), "wifi_manager_get_ap_as_json should return non zero length string");
+
+	//after
+}
+
+
+
+void test_if_wifi_manager_erase_ap_returns_zero(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	int err = -1;
+
+	// when
+	err = wifi_manager_erase_ap();
+
+	// then
+	TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "wifi_manager_get_ap_as_json should return ERR_C_OK");
+
+	//after
+}
+
+
+
+void test_if_wifi_manager_erase_ap_erases_ap(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	int err = -1;
+	char ssid[64] = {0};
+	char pass[64] = {0};
+	const char* stored_ssid = "ssid";
+	const char* stored_pass = "pass";
+
+	// when
+	wifi_manager_store_ap(stored_ssid, strlen(stored_ssid), stored_pass, strlen(stored_pass)); 
+	wifi_manager_erase_ap();
+	err = wifi_manager_get_stored_ap(ssid, sizeof(ssid), pass, sizeof(pass));
+
+	// then
+	TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_KEY_NOT_FOUND, err, "wifi_manager_get_ap_as_json should erase stored keys");
+
+	//after
+}
 
 
 
 int runUnityTests(void) {
 	UNITY_BEGIN();
+	RUN_TEST(test_if_wifi_manager_erase_ap_erases_ap);
+	RUN_TEST(test_if_wifi_manager_erase_ap_returns_zero);
+	RUN_TEST(test_if_wifi_manager_get_scanned_aps_returns_non_zero_len_string);
+	RUN_TEST(test_if_wifi_manager_get_scanned_aps_returns_zero);
+	RUN_TEST(test_if_wifi_manager_get_scanned_aps_returns_err_on_too_small_buffer);
+	RUN_TEST(test_if_wifi_manager_get_scanned_aps_returns_err_on_null_buffer);
 	RUN_TEST(test_if_wifi_manager_get_ap_json_returns_err_on_too_small_buffer);
 	RUN_TEST(test_if_wifi_manager_get_ap_json_returns_correct_string);
 	RUN_TEST(test_if_wifi_manager_get_ap_json_returns_zero);

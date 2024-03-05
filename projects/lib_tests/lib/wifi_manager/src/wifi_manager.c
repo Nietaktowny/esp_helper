@@ -1,3 +1,12 @@
+/**
+ * @file wifi_manager.c
+ * @brief  Wifi manager source file.
+ * @author Wojciech Mytych
+ * @version 1.1.4
+ * @date 2024-03-05
+ */
+
+
 #include "wifi_manager.h"
 
 #include <stdbool.h>
