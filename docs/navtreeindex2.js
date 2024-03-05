@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"structbmp__handle__obj.html#a81c6cca6f837c903173d46bb0fe7896a":[8,0,3,0],
 "structbmp__handle__obj.html#a8778dd9963aedc2155fd75adcc1bcd2c":[8,0,3,8],
 "structbmp__handle__obj.html#a94b10d1c43ab04276cf678ca9914b630":[8,0,3,1],
 "structbmp__handle__obj.html#aa07564ad8b5c6e514db09f75786bdeb7":[8,0,3,3],
@@ -180,9 +181,22 @@ var NAVTREEINDEX2 =
 "wifi__controller_8h.html#afefafe0d63b68389057e631283b3f890":[9,0,0,0,0,18,0,1,36],
 "wifi__controller_8h.html#affbfd7d0d067642ab70151c8f7491a5c":[9,0,0,0,0,18,0,1,23],
 "wifi__controller_8h_source.html":[9,0,0,0,0,18,0,1],
+"wifi__manager_8c.html":[9,0,0,0,0,19,1,0],
+"wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee":[9,0,0,0,0,19,1,0,2],
+"wifi__manager_8c.html#a7bb30c48143ab3688c2a2573683eac62":[9,0,0,0,0,19,1,0,3],
+"wifi__manager_8c.html#a92b6a91a3d31bfa35ff0409d0e7befdc":[9,0,0,0,0,19,1,0,1],
+"wifi__manager_8c.html#ae40d3fa65c5e68e8fa280cc45a81e8b0":[9,0,0,0,0,19,1,0,0],
+"wifi__manager_8h.html":[9,0,0,0,0,19,0,0],
+"wifi__manager_8h.html#a1bb2312786a60b8f18002dd6a93e7eee":[9,0,0,0,0,19,0,0,3],
+"wifi__manager_8h.html#a7bb30c48143ab3688c2a2573683eac62":[9,0,0,0,0,19,0,0,4],
+"wifi__manager_8h.html#a7c4bf362b8638c89efd5d61af0a2e895":[9,0,0,0,0,19,0,0,0],
+"wifi__manager_8h.html#a92b6a91a3d31bfa35ff0409d0e7befdc":[9,0,0,0,0,19,0,0,2],
+"wifi__manager_8h.html#ae40d3fa65c5e68e8fa280cc45a81e8b0":[9,0,0,0,0,19,0,0,1],
 "wifi__manager_8h_source.html":[9,0,0,0,0,19,0,0],
 "wifi__manager__errors_8h.html":[9,0,0,0,0,19,0,1],
 "wifi__manager__errors_8h.html#aba94c5fceae77bfd18c757b4afac2802":[9,0,0,0,0,19,0,1,0],
 "wifi__manager__errors_8h_source.html":[9,0,0,0,0,19,0,1],
+"wifi__manager__internal_8h.html":[9,0,0,0,0,19,0,2],
+"wifi__manager__internal_8h.html#aa629ca7532d4fa607743b038462a454d":[9,0,0,0,0,19,0,2,0],
 "wifi__manager__internal_8h_source.html":[9,0,0,0,0,19,0,2]
 };

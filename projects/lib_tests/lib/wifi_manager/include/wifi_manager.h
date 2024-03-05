@@ -1,8 +1,24 @@
+/**
+ * @file wifi_manager.h
+ * @brief  Wifi manager source file.
+ * @author Wojciech Mytych
+ * @version 1.1.4
+ * @date 2024-03-05
+ */
+
 #include <stddef.h>
 #include "wifi_manager_errors.h"
 
-#define WIFI_MANAGER_NVS_NAMESPACE "wifi_manager"
+#define WIFI_MANAGER_NVS_NAMESPACE "wifi_manager"					///< Wifi manager namespace name.
 
+
+/* -------------------------------*/
+/**
+ * @brief  Initialize wifi manager library.
+ *
+ * @retval   ERR_C_OK on success.
+ */
+/* ---------------------------------*/
 int wifi_manager_init(void);
 
 int wifi_manager_start_ap_and_server(void);
@@ -41,4 +57,13 @@ int wifi_manager_store_ap(const char* ssid, size_t ssid_len, const char* passwor
 
 int wifi_manager_check_for_stored_ap(void);
 
+
+/* -------------------------------*/
+/**
+ * @brief  Erase all data stored in wifi manager NVS namespace.
+ *
+ * @retval ERR_C_OK on success.
+ * @retval NVS Controller specific errors.
+ */
+/* ---------------------------------*/
 int wifi_manager_erase_ap(void);

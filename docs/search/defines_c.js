@@ -26,5 +26,6 @@ var searchData=
   ['wifi_5fc_5fsta_5fretry_5fcount_23',['WIFI_C_STA_RETRY_COUNT',['../wifi__controller_8h.html#afb4dc90ee0c7aa67531693b62692f558',1,'wifi_controller.h']]],
   ['wifi_5fc_5fsta_5fstarted_5fbit_24',['WIFI_C_STA_STARTED_BIT',['../wifi__controller_8h.html#a7a7a34e87d87f9d0b315367b079c9098',1,'wifi_controller.h']]],
   ['wifi_5fc_5fsta_5ftimeout_25',['WIFI_C_STA_TIMEOUT',['../wifi__controller_8h.html#a8b9ef9f8cd492500103ac3b1b86d899b',1,'wifi_controller.h']]],
-  ['wifi_5fmanager_5ferr_5fbase_26',['WIFI_MANAGER_ERR_BASE',['../wifi__manager__errors_8h.html#aba94c5fceae77bfd18c757b4afac2802',1,'wifi_manager_errors.h']]]
+  ['wifi_5fmanager_5ferr_5fbase_26',['WIFI_MANAGER_ERR_BASE',['../wifi__manager__errors_8h.html#aba94c5fceae77bfd18c757b4afac2802',1,'wifi_manager_errors.h']]],
+  ['wifi_5fmanager_5fnvs_5fnamespace_27',['WIFI_MANAGER_NVS_NAMESPACE',['../wifi__manager_8h.html#a7c4bf362b8638c89efd5d61af0a2e895',1,'wifi_manager.h']]]
 ];
