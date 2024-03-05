@@ -106,9 +106,6 @@ projects/lib_tests/lib/nvs_controller/src/nvs_controller.c:273:57: error: There 
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/lib_tests/lib/wifi_controller/src/wifi_controller.c:935:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
-        uint16_t ap_len = 0;
-                 ^
 projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:94:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err = wifi_manager_get_scanned_aps(&buffer[0], sizeof(buffer));
         ^
