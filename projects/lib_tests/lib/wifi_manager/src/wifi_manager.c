@@ -6,7 +6,6 @@
  * @date 2024-03-05
  */
 
-
 #include "wifi_manager.h"
 
 #include <stdbool.h>
@@ -22,16 +21,17 @@
 int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
 	err_c_t err = 0;
 	char ssid[64] = {0};
-	size_t required_length = 0; 
+	size_t required_length = 0;
 	ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("location to store stored APs JSON cannot be NULL"));
 
 	err = wifi_manager_get_stored_ap(ssid, sizeof(ssid), NULL, 0);
-	
+
 	required_length = strlen(ssid) + strlen("{\"stored_ssid\": \"\"}");
-	
-	if(required_length > bufflen) {
-		err = ERR_C_NO_MEMORY; 
-		LOG_ERROR("error %d, required length to store ap as json (%lu) larger than buffer size (%lu)", err, required_length, bufflen);
+
+	if (required_length > bufflen) {
+		err = ERR_C_NO_MEMORY;
+		LOG_ERROR("error %d, required length to store ap as json (%lu) larger than buffer size (%lu)", err,
+				  required_length, bufflen);
 		return err;
 	}
 
@@ -43,7 +43,7 @@ int wifi_manager_get_stored_ap_as_json(char* buffer, size_t bufflen) {
 		snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", "empty");
 		return err;
 	}
-	
+
 	snprintf(buffer, bufflen, "{\"stored_ssid\": \"%s\"}", ssid);
 
 	LOG_VERBOSE("generated stored AP as JSON");
@@ -134,7 +134,14 @@ int wifi_manager_erase_ap(void) {
 	nvs_c_handle_t nvs = NULL;
 
 	err = nvs_c_open(&nvs, WIFI_MANAGER_NVS_NAMESPACE, NVS_C_READWRITE);
-	if (err != ERR_C_OK) {
+	if (err == NVS_C_ERR_NOT_INIT) {
+		// nvs not init, try init NVS and open again.
+		ERR_C_CHECK_ERROR(nvs_c_init_default_partition(),
+						  LOG_ERROR("error %d, cannot init NVS for wifi manager: %s", err, error_to_name(err)));
+		ERR_C_CHECK_ERROR(nvs_c_open(&nvs, WIFI_MANAGER_NVS_NAMESPACE, NVS_C_READWRITE),
+						  LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err,
+									WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+	} else if (err != ERR_C_OK) {
 		LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE,
 				  error_to_name(err));
 		return err;
@@ -201,11 +208,8 @@ int wifi_manager_start_ap_and_server(void) {
 int wifi_manager_init(void) {
 	err_c_t err = 0;
 	wifi_s_handle_t server = NULL;
-	char ssid[64];
-	char password[64];
-
-	memutil_zero_memory(&ssid, sizeof(ssid));
-	memutil_zero_memory(&password, sizeof(password));
+	char ssid[64] = {0};
+	char password[64] = {0};
 
 	err = nvs_c_init_default_partition();
 	if (err != ERR_C_OK) {

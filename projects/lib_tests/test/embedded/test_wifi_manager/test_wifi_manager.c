@@ -425,8 +425,27 @@ void test_if_wifi_manager_erase_ap_erases_ap(void) {
 
 
 
+void test_if_wifi_manager_init_returns_zero_when_not_stored_ap_credentials(void) {
+	// before
+	LOG_FATAL("RUNNING: %s", __func__);
+
+	// given
+	int err = -1;
+
+	// when
+	err = wifi_manager_init();
+
+	// then
+	TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "wifi_manager_init should return ERR_C_OK when there isn't any stored AP credentials in NVS");
+
+	//after
+}
+
+
+
 int runUnityTests(void) {
 	UNITY_BEGIN();
+	//RUN_TEST(test_if_wifi_manager_init_returns_zero_when_not_stored_ap_credentials);
 	RUN_TEST(test_if_wifi_manager_erase_ap_erases_ap);
 	RUN_TEST(test_if_wifi_manager_erase_ap_returns_zero);
 	RUN_TEST(test_if_wifi_manager_get_scanned_aps_returns_non_zero_len_string);

@@ -52,13 +52,20 @@ extern const uint8_t code_js_end[] asm("_binary_code_js_end");
 extern const uint8_t index_html_start[] asm("_binary_index_html_start");
 extern const uint8_t index_html_end[] asm("_binary_index_html_end");
 
+
+
+/* -------------------------------*/
+/**
+ * @brief  Wifi manager http server handle object.
+ */
+/* ---------------------------------*/
 struct wifi_s_handle_obj {
-    httpd_handle_t esp_handle;
-    httpd_config_t esp_config;
+    httpd_handle_t esp_handle;		/*!< ESP HTTP server handle.  */	
+    httpd_config_t esp_config;		/*!< ESP HTTP server config.  */
 };
 
 /* Our URI handler function to be called during GET /uri request */
-esp_err_t root_handler(httpd_req_t* req) {
+static esp_err_t root_handler(httpd_req_t* req) {
     LOG_VERBOSE("serving GET \"/\" request...");
     httpd_resp_set_status(req, http_200_hdr);
     httpd_resp_set_type(req, http_content_type_html);
@@ -67,7 +74,7 @@ esp_err_t root_handler(httpd_req_t* req) {
 }
 
 /* Our URI handler function to be called during GET /styles.css request */
-esp_err_t stylesheet_handler(httpd_req_t* req) {
+static esp_err_t stylesheet_handler(httpd_req_t* req) {
     LOG_VERBOSE("serving GET \"/styles.css\" request...");
     httpd_resp_set_status(req, http_200_hdr);
     httpd_resp_set_type(req, http_content_type_css);
@@ -77,7 +84,7 @@ esp_err_t stylesheet_handler(httpd_req_t* req) {
 }
 
 /* Our URI handler function to be called during GET /code.js request */
-esp_err_t script_handler(httpd_req_t* req) {
+static esp_err_t script_handler(httpd_req_t* req) {
     LOG_VERBOSE("serving GET \"/code.js\" request...");
     httpd_resp_set_status(req, http_200_hdr);
     httpd_resp_set_type(req, http_content_type_js);
@@ -86,7 +93,7 @@ esp_err_t script_handler(httpd_req_t* req) {
 }
 
 /* Our URI handler function to be called during GET /scan request */
-esp_err_t ap_json_handler(httpd_req_t* req) {
+static esp_err_t ap_json_handler(httpd_req_t* req) {
     err_c_t err = 0;
     char buffer[2096] = "Scanned AP: none";
     LOG_VERBOSE("serving GET \"/scan\" request...");
@@ -103,7 +110,7 @@ esp_err_t ap_json_handler(httpd_req_t* req) {
 }
 
 /* Our URI handler function to be called during GET /state request */
-esp_err_t state_json_handler(httpd_req_t* req) {
+static esp_err_t state_json_handler(httpd_req_t* req) {
     err_c_t err = 0;
     char buffer[1096];
     LOG_VERBOSE("serving GET \"/state\" request...");
@@ -120,7 +127,7 @@ esp_err_t state_json_handler(httpd_req_t* req) {
 }
 
 /* Our URI handler function to be called during POST /connect request */
-esp_err_t connect_handler(httpd_req_t* req) {
+static esp_err_t connect_handler(httpd_req_t* req) {
     err_c_t err = 0;
     char buffer[256];
     char ssid[64];
@@ -185,7 +192,7 @@ esp_err_t connect_handler(httpd_req_t* req) {
 }
 
 /* Our URI handler function to be called during GET /saved_ap request */
-esp_err_t saved_ap_json_handler(httpd_req_t* req) {
+static esp_err_t saved_ap_json_handler(httpd_req_t* req) {
     err_c_t err = 0;
     char buffer[128];
 
@@ -209,7 +216,7 @@ esp_err_t saved_ap_json_handler(httpd_req_t* req) {
 }
 
 /* Our URI handler function to be called during GET /restart request */
-esp_err_t restart_handler(httpd_req_t* req) {
+static esp_err_t restart_handler(httpd_req_t* req) {
     LOG_VERBOSE("serving GET \"/restart\" request...");
     httpd_resp_set_status(req, http_200_hdr);
     httpd_resp_send(req, "Device will now restart!", HTTPD_RESP_USE_STRLEN);
@@ -222,7 +229,7 @@ esp_err_t restart_handler(httpd_req_t* req) {
 }
 
 /* Our URI handler function to be called during GET /clear request */
-esp_err_t clear_handler(httpd_req_t* req) {
+static esp_err_t clear_handler(httpd_req_t* req) {
     err_c_t err = 0;
     LOG_VERBOSE("serving GET \"/clear\" request...");
 
@@ -240,7 +247,7 @@ esp_err_t clear_handler(httpd_req_t* req) {
 }
 
 /* URI handler structure for GET / */
-httpd_uri_t uri_get_root = {
+static httpd_uri_t uri_get_root = {
     .uri = "/", .method = HTTP_GET, .handler = root_handler, .user_ctx = NULL};
 
 /* URI handler structure for GET /styles.css */
