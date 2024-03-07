@@ -66,6 +66,8 @@ var NAVTREEINDEX2 =
 "structwifi__c__status__obj.html#af07d47de0563a9b4e7063803b2dcb56a":[8,0,20,4],
 "structwifi__c__status__obj.html#af5bbc3c6e47a8f1457857a6d0baf0f0d":[8,0,20,5],
 "structwifi__s__handle__obj.html":[8,0,21],
+"structwifi__s__handle__obj.html#a41222b6e83a5dcbd0ad91b21c77e6117":[8,0,21,0],
+"structwifi__s__handle__obj.html#afbd0e67872df17b81f3e3c5094fd3a4a":[8,0,21,1],
 "sys__utils_8c.html":[9,0,0,0,0,16,1,0],
 "sys__utils_8c.html#a83d18d05750f1c594860687ff0ec3882":[9,0,0,0,0,16,1,0,1],
 "sys__utils_8c.html#ab39f400f14d827d848f3f907b2d5a7d8":[9,0,0,0,0,16,1,0,0],

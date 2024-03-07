@@ -20,10 +20,10 @@
  * 
  */
 typedef enum {
-    WIFI_C_NO_MODE,         /*No mode currently set.*/
-    WIFI_C_MODE_STA,        /*Use WiFi as STA.*/
-    WIFI_C_MODE_AP,         /*Use WiFi as AP.*/
-    WIFI_C_MODE_APSTA,      /*Use WiFi as AP+STA.*/
+    WIFI_C_NO_MODE,         /*!< No mode currently set.*/
+    WIFI_C_MODE_STA,        /*!< Use WiFi as STA.*/
+    WIFI_C_MODE_AP,         /*!< Use WiFi as AP.*/
+    WIFI_C_MODE_APSTA,      /*!< Use WiFi as AP+STA.*/
 } wifi_c_mode_t;
 
 /**

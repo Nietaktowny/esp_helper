@@ -21,5 +21,5 @@ var annotated_dup =
     [ "wifi_c_scan_result_obj", "structwifi__c__scan__result__obj.html", "structwifi__c__scan__result__obj" ],
     [ "wifi_c_sta_status_obj", "structwifi__c__sta__status__obj.html", "structwifi__c__sta__status__obj" ],
     [ "wifi_c_status_obj", "structwifi__c__status__obj.html", "structwifi__c__status__obj" ],
-    [ "wifi_s_handle_obj", "structwifi__s__handle__obj.html", null ]
+    [ "wifi_s_handle_obj", "structwifi__s__handle__obj.html", "structwifi__s__handle__obj" ]
 ];
