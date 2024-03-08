@@ -2,7 +2,7 @@
  * @file wifi_manager_errors.h
  * @author Wojciech Mytych
  * @brief Wifi manager library errors list.
- * @version 0.1
+ * @version 1.1.4
  * @date 2024-03-01
  * 
  * @copyright Copyright (c) 2024

@@ -1,5 +1,7 @@
 <map id="projects/lib_tests/lib/wifi_manager/include/wifi_manager.h" name="projects/lib_tests/lib/wifi_manager/include/wifi_manager.h">
-<area shape="rect" id="Node000001" title="Wifi manager source file." alt="" coords="5,5,169,61"/>
-<area shape="rect" id="Node000002" href="$wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="17,109,157,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,77,90,108,84,108,84,77"/>
+<area shape="rect" id="Node000001" title="Wifi manager source file." alt="" coords="75,5,239,61"/>
+<area shape="rect" id="Node000002" href="$wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="5,109,146,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,75,99,110,95,107,123,72"/>
+<area shape="rect" id="Node000003" href="$wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="169,109,310,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,72,219,107,215,110,187,75"/>
 </map>

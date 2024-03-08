@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['err_5fcheck_5fbitmask_0',['err_check_bitmask',['../err__controller_8h.html#a513df0b15ad91ccf741456a5a2bea37a',1,'err_check_bitmask(uint32_t mask, uint32_t value):&#160;err_controller.c'],['../err__controller_8c.html#a513df0b15ad91ccf741456a5a2bea37a',1,'err_check_bitmask(uint32_t mask, uint32_t value):&#160;err_controller.c']]],
-  ['error_5fto_5fname_1',['error_to_name',['../err__controller_8h.html#ad8f4caa10a5c3bbc6b73762ed9f87840',1,'error_to_name(err_c_t err):&#160;err_c_names.c'],['../err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840',1,'error_to_name(err_c_t err):&#160;err_c_names.c']]]
+  ['cli_5faccept_5ftask_0',['cli_accept_task',['../cli__manager_8h.html#a6cf547424c3b4d26fa301c9f2bc79688',1,'cli_accept_task(void *socket):&#160;cli_manager.c'],['../cli__manager_8c.html#a6cf547424c3b4d26fa301c9f2bc79688',1,'cli_accept_task(void *socket):&#160;cli_manager.c']]],
+  ['cli_5fset_5fremote_5flogging_1',['cli_set_remote_logging',['../cli__manager_8h.html#a4b80c5127fd2867a5881d9c1f9d2cfda',1,'cli_set_remote_logging(uint16_t port, const char *address):&#160;cli_manager.c'],['../cli__manager_8c.html#a4b80c5127fd2867a5881d9c1f9d2cfda',1,'cli_set_remote_logging(uint16_t port, const char *address):&#160;cli_manager.c']]]
 ];

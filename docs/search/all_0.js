@@ -13,5 +13,6 @@ var searchData=
   ['ap_5frecord_10',['ap_record',['../structwifi__c__scan__result__obj.html#ac60f55ce3fd9f17e327a6137f16047e2',1,'wifi_c_scan_result_obj']]],
   ['ap_5fstarted_11',['ap_started',['../structwifi__c__status__obj.html#aa27b8850a0bc8feeae77388dd1a3ddbc',1,'wifi_c_status_obj']]],
   ['api_12',['api',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md3',1,'API'],['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md42',1,'CException API']]],
-  ['arena_5fobj_13',['arena_obj',['../structarena__obj.html',1,'']]]
+  ['arena_5fobj_13',['arena_obj',['../structarena__obj.html',1,'']]],
+  ['asm_14',['asm',['../wifi__http__server_8c.html#a98339200ece5bb03129ce899af3d7234',1,'wifi_http_server.c']]]
 ];
