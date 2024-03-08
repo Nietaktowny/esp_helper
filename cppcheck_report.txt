@@ -106,12 +106,6 @@ projects/lib_tests/lib/nvs_controller/src/nvs_controller.c:273:57: error: There 
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:101:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err = wifi_manager_get_scanned_aps(&buffer[0], sizeof(buffer));
-        ^
-projects/lib_tests/lib/wifi_manager/src/wifi_http_server.c:118:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err = wifi_c_get_status_as_json(&buffer[0], sizeof(buffer));
-        ^
 projects/lib_tests/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
          WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                         ^
