@@ -442,10 +442,8 @@ void test_if_wifi_manager_init_returns_zero_when_not_stored_ap_credentials(void)
 }
 
 
-
 int runUnityTests(void) {
 	UNITY_BEGIN();
-	//RUN_TEST(test_if_wifi_manager_init_returns_zero_when_not_stored_ap_credentials);
 	RUN_TEST(test_if_wifi_manager_erase_ap_erases_ap);
 	RUN_TEST(test_if_wifi_manager_erase_ap_returns_zero);
 	RUN_TEST(test_if_wifi_manager_get_scanned_aps_returns_non_zero_len_string);
