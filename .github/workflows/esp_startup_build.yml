@@ -23,4 +23,5 @@ jobs:
       - name: Build PlatformIO Project
         run: |
           cd projects/esp_startup
+          platformio lib install -f lib/CException
           platformio run -e esp-dev
