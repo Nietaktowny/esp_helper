@@ -26,3 +26,6 @@ jobs:
       - name: Build bmp280
         working-directory: projects/bmp280
         run: platformio run
+      - name: Build plantsitter
+        working-directory: projects/plantsitter
+        run: platformio run
