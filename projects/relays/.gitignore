@@ -5,3 +5,6 @@
 .vscode/ipch
 logs
 build
+*.swp
+*.swn
+*.swo

@@ -2,7 +2,7 @@
  * @file esp_helper_utils.c
  * @author Wojciech Mytych
  * @brief ESP Helper utils library source file.
- * @version 1.0.4
+ * @version 1.0.6
  * @date 2024-02-17
  * 
  * @copyright Copyright (c) 2024

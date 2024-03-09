@@ -2,7 +2,7 @@
  * @file esp_helper_errors.h
  * @author Wojciech Mytych
  * @brief ESP Helper library errors list.
- * @version 1.0.4
+ * @version 1.0.6
  * @date 2024-02-28
  * 
  * @copyright Copyright (c) 2024

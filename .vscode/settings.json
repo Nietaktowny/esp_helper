@@ -1,3 +1,7 @@
 {
-    "cmake.sourceDirectory": "/home/wmytych/Projects/esp_helper/cli_helper_client"
+    "cmake.sourceDirectory": "/home/wmytych/Projects/esp_helper/cli_helper_client",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "esp_helper_utils.h": "c"
+    }
 }

@@ -1,8 +1,0 @@
-{
-	"name": "bmp280",
-	"version": "1.0.0",
-	"keywords": "keyword",
-	"description": "Library used to control BMP280 chips with ESP-IDF.",
-	"frameworks": ["espidf"],
-	"platforms": ["espressif32"]
-}

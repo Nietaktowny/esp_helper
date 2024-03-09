@@ -14,3 +14,6 @@ test.log
 */dependencies.lock
 sdkconfig
 */sdkconfig
+*.swp
+*.swn
+*.swo
