@@ -23,4 +23,4 @@ jobs:
       - name: Build PlatformIO Project
         run: |
           cd projects/bmp280
-          platformio run
+          platformio run -e esp-dev
