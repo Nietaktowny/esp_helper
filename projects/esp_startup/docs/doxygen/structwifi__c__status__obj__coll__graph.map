@@ -1,5 +1,0 @@
-<map id="wifi_c_status_obj" name="wifi_c_status_obj">
-<area shape="rect" id="node1" title="Object showing and maintaining current status of wifi_controller." alt="" coords="109,95,243,121"/>
-<area shape="rect" id="node2" href="$structwifi__c__sta__status__obj.html" title=" " alt="" coords="5,5,165,32"/>
-<area shape="rect" id="node3" href="$structwifi__c__ap__status__obj.html" title=" " alt="" coords="190,5,346,32"/>
-</map>
