@@ -153,7 +153,7 @@ void app_main()
     logger_set_log_level(LOG_LEVEL_VERBOSE);
 
     // Initialize NVS
-    nvs_c_init_nvs();
+    nvs_c_init_default_partition();
 
     char device_id[20] = {0};
     sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
