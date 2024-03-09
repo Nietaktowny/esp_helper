@@ -1,1 +1,4 @@
 cli_helper_client/lib/CException
+*.swp
+*.swn
+*.swo

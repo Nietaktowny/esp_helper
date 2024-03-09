@@ -1,6 +1,6 @@
 {
 	"name": "esp_helper_utils",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"keywords": "esp_helper, utilities, esp32, esp, idf, helper",
 	"description": "ESP Helper utilities library.",
 	"authors":
@@ -9,7 +9,7 @@
         "url": "https://github.com/Nietaktowny"
     },
 	"dependencies": {
-		"nietaktowny/wifi_controller": "2.0.5",
+		"nietaktowny/wifi_controller": "2.0.6",
 		"nietaktowny/ota_controller": "1.0.6",
 		"nietaktowny/sys_utils": "1.0.4"
 	  },
