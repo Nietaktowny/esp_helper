@@ -19,7 +19,7 @@ jobs:
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
       - name: Install Flawfinder
-        run: pip install flawfinder    
+        run: pip install flawfinder
       - name: Build PlatformIO Project
         run: |
           cd projects/bmp280
