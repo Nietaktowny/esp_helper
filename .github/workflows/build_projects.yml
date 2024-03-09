@@ -1,4 +1,4 @@
-name: Build esp_startup
+name: Build all projects
 
 on: [push]
 
