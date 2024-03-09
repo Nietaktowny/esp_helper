@@ -73,13 +73,28 @@ projects/esp_startup/lib/spiffs_controller/src/spiffs_controller.c:50:24: error:
 projects/esp_startup/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
          WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                         ^
-projects/esp_startup/src/main.c:53:11: style: The scope of the variable 'altitude' can be reduced. [variableScope]
-    float altitude = 0;
-          ^
-projects/esp_startup/src/main.c:53:20: style: Variable 'altitude' is assigned a value that is never used. [unreadVariable]
-    float altitude = 0;
-                   ^
-projects/esp_startup/test/embedded/test_wifi_controller/test_wifi_controller.c:18:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/esp_startup/src/main.c:105:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+                 ^
+projects/esp_startup/src/main.c:95:25: note: Assignment 'device_info=NULL', assigned value is 0
+    char *device_info = NULL;
+                        ^
+projects/esp_startup/src/main.c:105:18: note: Null pointer dereference
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+                 ^
+projects/esp_startup/src/main.c:105:76: warning:inconclusive: Possible null pointer dereference: wifi_c_info [nullPointer]
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+                                                                           ^
+projects/esp_startup/src/main.c:92:25: note: Assignment 'wifi_c_info=NULL', assigned value is 0
+    char *wifi_c_info = NULL;
+                        ^
+projects/esp_startup/src/main.c:105:76: note: Null pointer dereference
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+                                                                           ^
+projects/esp_startup/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
+  wifi_c_status_t wifi_c_test_status;
+                  ^
+projects/esp_startup/test/embedded/test_wifi_controller/test_wifi_controller.c:20:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
         err = nvs_flash_init();
             ^
 projects/lib_tests/lib/CException/test/TestException.c:63:10: style: Variable 'Throw' is assigned a value that is never used. [unreadVariable]
