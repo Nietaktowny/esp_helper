@@ -21,12 +21,7 @@ jobs:
         run: pip install --upgrade platformio
       - name: Install Flawfinder
         run: pip install flawfinder
-      - name: Install GitPython
-        run: pip install gitpython
-      - name: Install TQDM
-        run: pip install tqdm
       - name: Build PlatformIO Project
         run: |
           cd projects/esp_startup
-          platformio run --environment esp-wrover-kit
-          platformio run --environment esp-dev
+          platformio run
