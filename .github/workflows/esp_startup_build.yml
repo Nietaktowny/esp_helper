@@ -1,4 +1,4 @@
-name: Build esp_startup
+name: Build relays
 
 on: [push]
 
@@ -23,5 +23,4 @@ jobs:
       - name: Build PlatformIO Project
         run: |
           cd projects/esp_startup
-          platformio lib install -f lib/CException
-          platformio run -e esp-dev
+          platformio run
