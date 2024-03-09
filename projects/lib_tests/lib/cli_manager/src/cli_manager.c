@@ -34,7 +34,7 @@ void cli_accept_task(void* socket) {
             //listen socket is invalid, from here there is nothing this task can to, delete it.
             LOG_ERROR("error %d, listen socket of cli manager is invalid, deleting cli_accept_task", err);
             vTaskDelete(NULL);
-        } else if(!err) {
+        } else if(err != ERR_C_OK) {
             err = errno;
             LOG_ERROR("error %d when trying to accept new client: %s", err, strerror(err));
             continue;  //next time it may work, just this iteration is broken.

@@ -1,21 +1,33 @@
 libraries/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = 0;
                 ^
+libraries/nvs_controller/src/nvs_controller.c:273:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+        err, key, handle->namespace, error_to_name(err)););
+                                                        ^
 libraries/spiffs_controller/src/spiffs_controller.c:47:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-libraries/wifi_controller/src/wifi_controller.c:808:25: style: The scope of the variable 'record' can be reduced. [variableScope]
-    wifi_c_ap_record_t *record;
-                        ^
-libraries/wifi_controller/src/wifi_controller.c:936:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
-        uint16_t ap_len = 0;
-                 ^
-libraries/wifi_manager/src/wifi_http_server.c:99:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err = wifi_manager_fetch_ap_list(&buffer[0], sizeof(buffer));
-        ^
-libraries/wifi_manager/src/wifi_http_server.c:115:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err = wifi_c_get_status_as_json(&buffer[0], sizeof(buffer));
-        ^
+libraries/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+         WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                        ^
+projects/bmp280/lib/CException/test/TestException.c:63:10: style: Variable 'Throw' is assigned a value that is never used. [unreadVariable]
+    Throw(0xEF);
+         ^
+projects/bmp280/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err_c_t err = 0;
+                ^
+projects/bmp280/lib/logger/test/test_logger.c:888:3: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+  LOG_FATAL("FINISHED LOGGER TESTS!");
+  ^
+projects/bmp280/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+        err, key, handle->namespace, error_to_name(err)););
+                                                        ^
+projects/bmp280/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
+    path_len = strlen(&ret_path[0]);
+                       ^
+projects/bmp280/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+         WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                        ^
 projects/bmp280/src/main.c:106:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
         snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
                  ^
@@ -46,42 +58,21 @@ projects/bmp280/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: 
 projects/bmp280/test/embedded/test_wifi_controller/test_wifi_controller.c:16:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
         err = nvs_flash_init();
             ^
-projects/esp_startup/lib/logger/src/logger.c:62:12: style: Variable 'output' is reassigned a value before the old one has been used. [redundantAssignment]
-    output = vfprintf(stderr, format, args);
-           ^
-projects/esp_startup/lib/logger/src/logger.c:59:16: note: output is assigned
-        output = vfprintf(logfile, format, args);
-               ^
-projects/esp_startup/lib/logger/src/logger.c:62:12: note: output is overwritten
-    output = vfprintf(stderr, format, args);
-           ^
-projects/esp_startup/lib/logger/src/logger.c:82:12: style: Variable 'output' is reassigned a value before the old one has been used. [redundantAssignment]
-    output = vfprintf(stderr, format, args);
-           ^
-projects/esp_startup/lib/logger/src/logger.c:79:16: note: output is assigned
-        output = vfprintf(logfile, format, args);
-               ^
-projects/esp_startup/lib/logger/src/logger.c:82:12: note: output is overwritten
-    output = vfprintf(stderr, format, args);
-           ^
-projects/esp_startup/lib/ota_controller/src/ota_controller.c:150:5: warning: %llu in format string (no. 2) requires 'unsigned long long' but the argument type is 'unsigned long'. [invalidPrintfArgType_uint]
-    snprintf(buffer, buflen, "%s?device_id=%llu", url, device_id);
-    ^
-projects/esp_startup/lib/spiffs_controller/src/spiffs_controller.c:47:24: error: Uninitialized variable: ret_path [uninitvar]
+projects/esp_startup/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err_c_t err = 0;
+                ^
+projects/esp_startup/lib/logger/test/test_logger.c:888:3: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+  LOG_FATAL("FINISHED LOGGER TESTS!");
+  ^
+projects/esp_startup/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+        err, key, handle->namespace, error_to_name(err)););
+                                                        ^
+projects/esp_startup/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/esp_startup/lib/wifi_controller/src/wifi_controller.c:807:25: style: The scope of the variable 'record' can be reduced. [variableScope]
-    wifi_c_ap_record_t *record;
-                        ^
-projects/esp_startup/lib/wifi_controller/src/wifi_controller.c:935:18: style: The scope of the variable 'ap_len' can be reduced. [variableScope]
-        uint16_t ap_len = 0;
-                 ^
-projects/esp_startup/lib/wifi_manager/src/wifi_http_server.c:99:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err = wifi_manager_fetch_ap_list(&buffer[0], sizeof(buffer));
-        ^
-projects/esp_startup/lib/wifi_manager/src/wifi_http_server.c:115:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err = wifi_c_get_status_as_json(&buffer[0], sizeof(buffer));
-        ^
+projects/esp_startup/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+         WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                        ^
 projects/esp_startup/src/main.c:52:11: style: The scope of the variable 'altitude' can be reduced. [variableScope]
     float altitude = 0;
           ^
@@ -148,6 +139,24 @@ projects/lib_tests/test_http_client/main/main.c:44:37: style: Variable 'expected
 projects/lib_tests/test_http_client/main/main.c:47:9: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err = http_client_get(address, path, resp, 1024);
         ^
+projects/relays/lib/CException/test/TestException.c:63:10: style: Variable 'Throw' is assigned a value that is never used. [unreadVariable]
+    Throw(0xEF);
+         ^
+projects/relays/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err_c_t err = 0;
+                ^
+projects/relays/lib/logger/test/test_logger.c:888:3: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+  LOG_FATAL("FINISHED LOGGER TESTS!");
+  ^
+projects/relays/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+        err, key, handle->namespace, error_to_name(err)););
+                                                        ^
+projects/relays/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
+    path_len = strlen(&ret_path[0]);
+                       ^
+projects/relays/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+         WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                        ^
 projects/relays/src/main.c:105:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
         snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
                  ^
@@ -205,9 +214,6 @@ libraries/bmp280/src/bmp280.c:70:0: style: The function 'bmp_is_image_updating' 
 libraries/bmp280/src/bmp280.c:66:0: style: The function 'bmp_is_measuring' is never used. [unusedFunction]
 
 ^
-projects/esp_startup/lib/cli_manager/src/cli_manager.c:22:0: style: The function 'cli_connect_to_wifi' is never used. [unusedFunction]
-
-^
 libraries/err_controller/src/err_controller.c:24:0: style: The function 'err_check_null_pointer' is never used. [unusedFunction]
 
 ^
@@ -218,9 +224,6 @@ libraries/http_server/src/http_server.c:45:0: style: The function 'http_server_d
 
 ^
 libraries/http_server/src/http_server.c:29:0: style: The function 'http_server_init' is never used. [unusedFunction]
-
-^
-projects/esp_startup/lib/http_client/src/http_client.c:89:0: style: The function 'https_client_post' is never used. [unusedFunction]
 
 ^
 libraries/i2c_controller/src/i2c_controller.c:71:0: style: The function 'i2c_c_delete_bus' is never used. [unusedFunction]
@@ -250,13 +253,13 @@ libraries/linked_list/src/linked_list.c:280:0: style: The function 'linkedl_find
 libraries/linked_list/src/linked_list.c:299:0: style: The function 'linkedl_find_with_id' is never used. [unusedFunction]
 
 ^
+libraries/logger/src/logger.c:168:0: style: The function 'logger_esp_log' is never used. [unusedFunction]
+
+^
 libraries/logger/src/logger.c:220:0: style: The function 'logger_flush_logs' is never used. [unusedFunction]
 
 ^
 libraries/logger/src/logger.c:158:0: style: The function 'logger_get_lock' is never used. [unusedFunction]
-
-^
-projects/esp_startup/lib/logger/src/logger.c:33:0: style: The function 'logger_redirect_esp_logs' is never used. [unusedFunction]
 
 ^
 libraries/logger/src/logger.c:163:0: style: The function 'logger_return_lock' is never used. [unusedFunction]
@@ -277,10 +280,7 @@ libraries/ota_controller/src/ota_controller.c:56:0: style: The function 'ota_c_d
 libraries/ota_controller/src/ota_controller.c:105:0: style: The function 'ota_c_update_device_data' is never used. [unusedFunction]
 
 ^
-projects/bmp280/test/desktop/test_wifi_controller/test_wifi_controller.c:4:0: style: The function 'setUp' is never used. [unusedFunction]
-
-^
-projects/esp_startup/lib/cli_manager/src/cli_manager.c:75:0: style: The function 'set_logging_to_socket' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:7:0: style: The function 'setUp' is never used. [unusedFunction]
 
 ^
 libraries/spiffs_controller/src/spiffs_controller.c:117:0: style: The function 'spiffs_c_get_info' is never used. [unusedFunction]
@@ -313,88 +313,88 @@ libraries/tcp_controller/src/tcp_controller.c:367:0: style: The function 'tcp_se
 libraries/tcp_controller/src/tcp_controller.c:190:0: style: The function 'tcp_set_reuse_addr' is never used. [unusedFunction]
 
 ^
-projects/bmp280/test/desktop/test_wifi_controller/test_wifi_controller.c:8:0: style: The function 'tearDown' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:13:0: style: The function 'tearDown' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:309:0: style: The function 'test_AThrowWithoutATryCatchWillUseDefaultHandlerIfSpecified' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:309:0: style: The function 'test_AThrowWithoutATryCatchWillUseDefaultHandlerIfSpecified' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:321:0: style: The function 'test_AThrowWithoutOutsideATryCatchWillUseDefaultHandlerEvenAfterTryCatch' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:321:0: style: The function 'test_AThrowWithoutOutsideATryCatchWillUseDefaultHandlerEvenAfterTryCatch' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:365:0: style: The function 'test_AbilityToExitTryWillOnlyExitOneLevel' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:365:0: style: The function 'test_AbilityToExitTryWillOnlyExitOneLevel' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:344:0: style: The function 'test_AbilityToExitTryWithoutThrowingAnError' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:344:0: style: The function 'test_AbilityToExitTryWithoutThrowingAnError' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:38:0: style: The function 'test_BasicThrowAndCatch' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:38:0: style: The function 'test_BasicThrowAndCatch' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:57:0: style: The function 'test_BasicThrowAndCatch_WithMiniSyntax' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:57:0: style: The function 'test_BasicThrowAndCatch_WithMiniSyntax' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:17:0: style: The function 'test_BasicTryDoesNothingIfNoThrow' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:17:0: style: The function 'test_BasicTryDoesNothingIfNoThrow' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:230:0: style: The function 'test_CanHaveMultipleTryBlocksInASingleFunction' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:230:0: style: The function 'test_CanHaveMultipleTryBlocksInASingleFunction' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:255:0: style: The function 'test_CanHaveNestedTryBlocksInASingleFunction_ThrowInside' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:255:0: style: The function 'test_CanHaveNestedTryBlocksInASingleFunction_ThrowInside' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:282:0: style: The function 'test_CanHaveNestedTryBlocksInASingleFunction_ThrowOutside' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:282:0: style: The function 'test_CanHaveNestedTryBlocksInASingleFunction_ThrowOutside' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:203:0: style: The function 'test_ThrowAnErrorThenEnterATryBlockFromWithinCatch_VerifyThatEachExceptionIdIndependent' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:203:0: style: The function 'test_ThrowAnErrorThenEnterATryBlockFromWithinCatch_VerifyThatEachExceptionIdIndependent' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:185:0: style: The function 'test_ThrowAnErrorThenEnterATryBlockFromWithinCatch_VerifyThisDoesntCorruptExceptionId' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:185:0: style: The function 'test_ThrowAnErrorThenEnterATryBlockFromWithinCatch_VerifyThisDoesntCorruptExceptionId' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:168:0: style: The function 'test_ThrowAndCatchFromASubFunctionAndNoRethrowToCatchInRootFunc' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:168:0: style: The function 'test_ThrowAndCatchFromASubFunctionAndNoRethrowToCatchInRootFunc' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:149:0: style: The function 'test_ThrowAndCatchFromASubFunctionAndRethrowToCatchInRootFunc' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:149:0: style: The function 'test_ThrowAndCatchFromASubFunctionAndRethrowToCatchInRootFunc' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:106:0: style: The function 'test_ThrowFromASubFunctionAndCatchInRootFunc' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:106:0: style: The function 'test_ThrowFromASubFunctionAndCatchInRootFunc' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/CException/test/TestException.c:77:0: style: The function 'test_VerifyVolatilesSurviveThrowAndCatch' is never used. [unusedFunction]
+projects/bmp280/lib/CException/test/TestException.c:77:0: style: The function 'test_VerifyVolatilesSurviveThrowAndCatch' is never used. [unusedFunction]
 
 ^
 projects/bmp280/test/embedded/test_wifi_controller/test_wifi_controller.c:45:0: style: The function 'test_check_if_wifi_status_is_initialized' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/logger/test/test_logger.c:226:0: style: The function 'test_if_clear_all_files_sets_all_files_to_null' is never used. [unusedFunction]
+projects/bmp280/lib/logger/test/test_logger.c:226:0: style: The function 'test_if_clear_all_files_sets_all_files_to_null' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:1159:0: style: The function 'test_if_nvs_c_write_int16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1159:0: style: The function 'test_if_nvs_c_write_int16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:1351:0: style: The function 'test_if_nvs_c_write_int32_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1351:0: style: The function 'test_if_nvs_c_write_int32_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:1543:0: style: The function 'test_if_nvs_c_write_int64_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1543:0: style: The function 'test_if_nvs_c_write_int64_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:1050:0: style: The function 'test_if_nvs_c_write_int8_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1050:0: style: The function 'test_if_nvs_c_write_int8_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:1927:0: style: The function 'test_if_nvs_c_write_uint16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1927:0: style: The function 'test_if_nvs_c_write_uint16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:2119:0: style: The function 'test_if_nvs_c_write_uint32_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:2119:0: style: The function 'test_if_nvs_c_write_uint32_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:2311:0: style: The function 'test_if_nvs_c_write_uint64_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:2311:0: style: The function 'test_if_nvs_c_write_uint64_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:1818:0: style: The function 'test_if_nvs_c_write_uint8_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1818:0: style: The function 'test_if_nvs_c_write_uint8_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/nvs_controller/test/test_nvs_controller.c:316:0: style: The function 'test_if_nvs_open_from_partition_returns_zero' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:316:0: style: The function 'test_if_nvs_open_from_partition_returns_zero' is never used. [unusedFunction]
 
 ^
 projects/lib_tests/test/desktop/test_nvs_controller/test_nvs_controller.c:174:0: style: The function 'test_if_struct_nvs_c_obj_contains_nvs_mode' is never used. [unusedFunction]
@@ -403,13 +403,10 @@ projects/lib_tests/test/desktop/test_nvs_controller/test_nvs_controller.c:174:0:
 projects/lib_tests/test/embedded/test_wifi_manager/test_wifi_manager.c:428:0: style: The function 'test_if_wifi_manager_init_returns_zero_when_not_stored_ap_credentials' is never used. [unusedFunction]
 
 ^
-libraries/wifi_manager/src/wifi_manager.c:167:0: style: The function 'wifi_manager_start_ap_and_server' is never used. [unusedFunction]
+libraries/wifi_controller/src/wifi_controller.c:912:0: style: The function 'wifi_c_store_scan_result_as_json' is never used. [unusedFunction]
 
 ^
-projects/esp_startup/lib/err_controller/src/err_controller.c:31:0: style: The function 'wrap_free' is never used. [unusedFunction]
-
-^
-projects/esp_startup/lib/err_controller/src/err_controller.c:16:0: style: The function 'wrap_malloc' is never used. [unusedFunction]
+libraries/wifi_manager/src/wifi_http_server.c:282:0: style: The function 'wifi_manager_server_init' is never used. [unusedFunction]
 
 ^
 nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
