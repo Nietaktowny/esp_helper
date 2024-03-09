@@ -1,3 +1,4 @@
+#include "CException.h"
 #include "wifi_controller.h"
 #include "memory_utils.h"
 #include "err_controller.h"
