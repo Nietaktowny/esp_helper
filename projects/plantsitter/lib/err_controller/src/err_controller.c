@@ -14,7 +14,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "CException.h"
 
 #ifdef ESP_PLATFORM
 #include <esp_err.h>
