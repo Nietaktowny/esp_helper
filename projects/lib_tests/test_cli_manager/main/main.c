@@ -2,6 +2,8 @@
 
 #include "nvs_flash.h"
 #include "esp_err.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 #include "logger.h"
 #include "wifi_controller.h"
@@ -38,4 +40,15 @@ void app_main(void)
 
     //start CLI manager
     cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
+
+
+    while(1) {
+		LOG_VERBOSE("LOG VERBOSE from \n device!");
+        LOG_DEBUG("LOG DEBUG from \nmy\n device!");
+		LOG_INFO("LOG INFO from device!");
+		LOG_WARN("LOG WARN from device!");
+		LOG_ERROR("LOG ERROR from device!");
+		LOG_FATAL("LOG FATAL from device!");
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
 }

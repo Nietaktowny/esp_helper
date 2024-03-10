@@ -123,7 +123,7 @@ void on_connect_handler(void)
     esp_netif_sntp_init(&config);
 #endif
 
-    // helper_perform_ota();
+    helper_perform_ota();
     xTaskCreate(switch_gpio_task, "gpio_task", 1024 * 6, NULL, 2, NULL);
     xTaskCreate(inspect_task, "inspect_heap_task", 1024 * 6, NULL, 3, NULL);
 }
