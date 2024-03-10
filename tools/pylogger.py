@@ -33,13 +33,15 @@ def setup_log_level():
                     levels.append('| DEBUG |')
                elif(arg == 'i'):
                     levels.append('| INFO  |')
+               elif(arg == 'w'):
+                    levels.append('| WARN  |')
                elif(arg == 'e'):
                     levels.append('| ERROR |')
                elif(arg == 'f'):
                     levels.append('| FATAL |')        
           
 if(len(sys.argv) == 2):
-     levels = ['| VERBOSE |', '| DEBUG |' ,'| INFO  |', '| ERROR |', '| FATAL |']
+     levels = ['| VERBOSE |', '| DEBUG |' ,'| INFO  |',  '| WARN  |', '| ERROR |', '| FATAL |']
      connect(sys.argv[1])
 elif(len(sys.argv) >= 3):
      setup_log_level()
