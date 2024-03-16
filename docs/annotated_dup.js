@@ -5,6 +5,7 @@ var annotated_dup =
     [ "bmp_config_obj", "structbmp__config__obj.html", "structbmp__config__obj" ],
     [ "bmp_handle_obj", "structbmp__handle__obj.html", "structbmp__handle__obj" ],
     [ "CEXCEPTION_FRAME_T", "structCEXCEPTION__FRAME__T.html", null ],
+    [ "http_client_obj", "structhttp__client__obj.html", "structhttp__client__obj" ],
     [ "http_s_handle_obj", "structhttp__s__handle__obj.html", null ],
     [ "http_s_uri_t", "structhttp__s__uri__t.html", null ],
     [ "i2c_c_bus_handle_obj", "structi2c__c__bus__handle__obj.html", null ],

@@ -4,8 +4,26 @@ import sys
 import socket
 
 levels = []
+buffer = []
 
-def connect(host):
+
+
+
+
+def connect_debug(host):
+     try:
+          print("Connecting with host: " + host)
+          s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+          s.connect((host, 27015))
+          print("Connected to {:s}".format(repr((host, 27015))))
+          while True:
+               message = s.recv(128)
+               print(message)
+     except KeyboardInterrupt:
+          sys.exit()
+
+
+def connect_and_filter(host):
      try:
           print("Connecting with host: " + host)
           s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -18,7 +36,24 @@ def connect(host):
                     logs = logs.split('\x1b[0m')
                     for log in logs:
                          if level in log:
-                              print(log)
+                             if log.endswith('\n') or log.startswith('\n'):
+                                 print(log, end='')
+                             else:
+                                 print(log)
+     except KeyboardInterrupt:
+          sys.exit()
+
+
+def connect(host):
+     try:
+          print("Connecting with host: " + host)
+          s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+          s.connect((host, 27015))
+          print("Connected to {:s}".format(repr((host, 27015))))
+          while True:
+               message = s.recv(256)
+               logs = message.decode('utf-8', 'strict')
+               print(logs, end='')
      except KeyboardInterrupt:
           sys.exit()
           
@@ -41,10 +76,11 @@ def setup_log_level():
                     levels.append('| FATAL |')        
           
 if(len(sys.argv) == 2):
-     levels = ['| VERBOSE |', '| DEBUG |' ,'| INFO  |',  '| WARN  |', '| ERROR |', '| FATAL |']
      connect(sys.argv[1])
-elif(len(sys.argv) >= 3):
+elif(len(sys.argv) == 3 and sys.argv[2] == '-x'):
+    connect_debug(sys.argv[1])
+elif(len(sys.argv) >= 3 and sys.argv[2] != '-x'):
      setup_log_level()
-     connect(sys.argv[1])      
+     connect_and_filter(sys.argv[1])      
 else:
      print("Provide arguments to pylogger")

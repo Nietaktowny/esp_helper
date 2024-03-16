@@ -98,7 +98,7 @@ var NAVTREEINDEX =
 [
 "CExceptionConfig_8h_source.html",
 "globals_func_e.html",
-"structbmp__handle__obj.html#a733d04d5948a9ab6a211be7288c8439f"
+"structbmp__config__obj.html#aa2848532cfc4e087194bd5e91409e64a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

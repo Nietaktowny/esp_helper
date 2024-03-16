@@ -36,7 +36,7 @@ void app_main(void)
     //Start STA and connect to AP:
     ESP_ERROR_CHECK(wifi_c_start_sta(MY_SSID, MY_PSK));
 
-    helper_perform_ota();
+	sysutil_setup_ntp_server("pool.ntp.org", 1);
 
     //start CLI manager
     cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());

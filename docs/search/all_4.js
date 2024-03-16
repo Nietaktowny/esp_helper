@@ -31,7 +31,7 @@ var searchData=
   ['error_5ftag_28',['ERROR_TAG',['../logger_8h.html#aa29007116d11e676da62a3ae1dae4402',1,'logger.h']]],
   ['error_5fto_5fname_29',['error_to_name',['../err__controller_8h.html#ad8f4caa10a5c3bbc6b73762ed9f87840',1,'error_to_name(err_c_t err):&#160;err_c_names.c'],['../err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840',1,'error_to_name(err_c_t err):&#160;err_c_names.c']]],
   ['esp_5fconfig_30',['esp_config',['../structwifi__s__handle__obj.html#a41222b6e83a5dcbd0ad91b21c77e6117',1,'wifi_s_handle_obj']]],
-  ['esp_5fhandle_31',['esp_handle',['../structwifi__s__handle__obj.html#afbd0e67872df17b81f3e3c5094fd3a4a',1,'wifi_s_handle_obj']]],
+  ['esp_5fhandle_31',['esp_handle',['../structhttp__client__obj.html#a226414903dc14c1f7ce43e8486de3b36',1,'http_client_obj::esp_handle'],['../structwifi__s__handle__obj.html#afbd0e67872df17b81f3e3c5094fd3a4a',1,'wifi_s_handle_obj::esp_handle']]],
   ['esp_5fhelper_5ferr_5fbase_32',['ESP_HELPER_ERR_BASE',['../esp__helper__errors_8h.html#a21bf2341855cdec9e6a891523faf982d',1,'esp_helper_errors.h']]],
   ['esp_5fhelper_5ferr_5fnot_5fconnected_33',['ESP_HELPER_ERR_NOT_CONNECTED',['../esp__helper__errors_8h.html#a2ee13b4abef394a8757aca74f2db87da',1,'esp_helper_errors.h']]],
   ['esp_5fhelper_5ferrors_2eh_34',['esp_helper_errors.h',['../esp__helper__errors_8h.html',1,'']]],
