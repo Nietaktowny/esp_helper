@@ -41,7 +41,17 @@ void cli_accept_task(void* socket) {
         }
 
         vTaskDelay(pdMS_TO_TICKS(500));    //delay to setup connection
-        logger_add_log_file(fdopen(client, "w+"));
+		FILE* new_logfile =  fdopen(client, "w+");
+        err = logger_add_log_file(new_logfile);
+		if(err == LOGGER_NO_FREE_FILES) {
+			LOG_WARN("maximum number of logfiles reached, clearing old ones...");
+			logger_clear_all_log_files();
+			err = logger_add_log_file(new_logfile);
+			if(err != ERR_C_OK) {
+				LOG_ERROR("error %d, cannot add new logfile: %s", err, error_to_name(err));
+				continue;
+			}
+		}
     }
 }
 
