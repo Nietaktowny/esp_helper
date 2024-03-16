@@ -9,8 +9,11 @@
  * 
  */
 
+#pragma once
+
 #include "inttypes.h"
 #include "stddef.h"
+#include <stdbool.h>
 
 /**
  * @brief Get base chip MAC address.
@@ -32,3 +35,22 @@ void sysutil_get_chip_base_mac(uint8_t mac[6]);
  * @retval ERR_C_MEMORY_ERR on too small buffer.
  */
 int sysutil_get_chip_base_mac_as_str(char* buffer, size_t buflen);
+
+
+
+/* -------------------------------*/
+/**
+ * @brief Setup SNTP server for adjusting system time.
+ 
+ * @note  Timezone is set to UTC-1
+ *
+ * @note If block is set to true, function will block till time is updated.
+ *
+ * @param ntp_server Name of SNTP server.
+ * @param block Block if true.
+ *
+ * @retval   ERR_C_OK on success.
+ * @retval   esp-idf specific errors.
+ */
+/* ---------------------------------*/
+int sysutil_setup_ntp_server(const char* ntp_server, bool block);

@@ -21,7 +21,7 @@
 #define CLI_CMD_INTS_NUMBER                 2                       ///< Number of ints used to indicate command in received data.
 #define CLI_CMD_ARGS_NUMBER                 64                      ///< Number of chars used to indicate arguments in received data.
 #define CLI_CMD_MAX_COMMANDS                64                      ///< Max number of commands to register.
-#define CLI_ACCEPT_TASK_DEFAULT_SIZE        1024*4                  ///< Default stack size used for cli_accept_task.
+#define CLI_ACCEPT_TASK_DEFAULT_SIZE        4*1024                  ///< Default stack size used for cli_accept_task.
 
 /**
  * @brief Log all logger library logs to remote host on TCP port.

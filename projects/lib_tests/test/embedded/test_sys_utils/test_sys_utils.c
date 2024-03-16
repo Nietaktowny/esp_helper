@@ -83,8 +83,39 @@ void test_if_get_base_mac_as_str_returns_err_on_too_smalL_buffer(void) {
   TEST_ASSERT_EQUAL_MESSAGE(ERR_C_MEMORY_ERR, err, "sysutil_get_chip_base_mac_as_str should return err on too small buffer");
 }
 
+void test_if_setup_ntp_server_returns_err_on_null_ntp_server(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  int err = 0;
+
+  //when
+  err = sysutil_setup_ntp_server(NULL, false);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "sysutil_setup_ntp_server should return err on null ntp server");
+}
+
+void test_if_setup_ntp_server_returns_zero(void) {
+  //before
+  LOG_FATAL("RUNNING: %s", __func__);
+
+  //given
+  int err = 0;
+  const char* ntp_server = "pool.ntp.org";
+
+  //when
+  err = sysutil_setup_ntp_server(ntp_server, false);
+
+  //then
+  TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "sysutil_setup_ntp_server should return ERR_C_OK");
+}
+
 int runUnityTests(void) {
   UNITY_BEGIN();
+  RUN_TEST(test_if_setup_ntp_server_returns_zero);
+  RUN_TEST(test_if_setup_ntp_server_returns_err_on_null_ntp_server);
   RUN_TEST(test_if_get_base_mac_as_str_returns_err_on_too_smalL_buffer);
   RUN_TEST(test_if_get_base_mac_as_str_returns_err_on_null_buffer);
   RUN_TEST(test_if_get_base_mac_as_str_has_non_zero_length);

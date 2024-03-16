@@ -6,8 +6,8 @@
  * @todo Implement get and post versions using arena
  * @todo Implement ESP8266-RTOS-SDK compliant version
  *
- * @version 1.0.6
- * @date 2024-02-28
+ * @version 1.0.7
+ * @date 2024-03-15
  *
  * @copyright Copyright (c) 2024
  *
@@ -35,9 +35,9 @@
  */
 struct http_client_obj
 {
-	esp_http_client_config_t esp_cfg; /**!< ESP HTTP Client config.*/
-	esp_http_client_handle_t esp_handle;
-	char url[HTTP_CLIENT_MAX_URL_LENGTH];
+	esp_http_client_config_t esp_cfg; 			/**!< ESP HTTP Client config.*/
+	esp_http_client_handle_t esp_handle;		/**!< ESP HTTP Client handle.*/
+	char url[HTTP_CLIENT_MAX_URL_LENGTH];		/**!< URL to make connection with.*/
 };
 
 /**
@@ -251,7 +251,7 @@ int http_client_init_reuse(http_client_t *handle, const char *ipv4_address, cons
 
 	NEW(*handle, struct http_client_obj);
 
-	snprintf((*handle)->url, HTTP_CLIENT_MAX_URL_LENGTH, "http://%s/%s%c", ipv4_address, path, '\0');
+	snprintf((*handle)->url, HTTP_CLIENT_MAX_URL_LENGTH, "http://%s/%s", ipv4_address, path);
 	LOG_VERBOSE("preparing http client handle for address: %s", (*handle)->url);
 
 	// prepare client handle
@@ -280,6 +280,7 @@ int http_client_deinit_reuse(http_client_t *handle)
 	err_c_t err = 0;
 
 	ERR_C_CHECK_NULL_PTR(handle, LOG_ERROR("Location to store http_client handle cannot be NULL"));
+	ERR_C_CHECK_NULL_PTR(*handle, LOG_ERROR("http_client handle must be initialized."));
 
 	// free esp specific resources
 	esp_http_client_cleanup((*handle)->esp_handle);
@@ -289,7 +290,7 @@ int http_client_deinit_reuse(http_client_t *handle)
 	// free http client handle
 	DELETE((*handle));
 
-	LOG_DEBUG("http client handle prepared for reusing with multiple requests for url: %s", (*handle)->url);
+	LOG_DEBUG("http client handle deinit");
 
 	return err;
 }
@@ -301,6 +302,7 @@ int http_client_deinit_reuse(http_client_t *handle)
 int http_client_get_reuse(http_client_t handle, char *buffer, size_t buflen)
 {
 	err_c_t err = 0;
+	//uint64_t id = 0;
 	char local_response_buffer[HTTP_CLIENT_MAX_OUTPUT_BUFFER_SIZE] = {0};
 
 	ERR_C_CHECK_NULL_PTR(buffer, LOG_ERROR("Buffer to store http get result cannot be NULL"));
@@ -323,6 +325,7 @@ int http_client_get_reuse(http_client_t handle, char *buffer, size_t buflen)
 				  esp_http_client_get_status_code(handle->esp_handle),
 				  esp_http_client_get_content_length(handle->esp_handle));
 		LOG_DEBUG("\n%s", local_response_buffer);
+		//id = strtol(local_response_buffer, NULL, 10);
 
 		// copy result into user buffer
 		size_t resplen = strlen(local_response_buffer);
