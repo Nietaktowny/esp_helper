@@ -19,7 +19,6 @@
 #include <errno.h>
 #include <string.h>
 
-
 /**
  * @brief Logger context structure.
  * 
