@@ -342,6 +342,9 @@ int http_client_get_reuse(http_client_t handle, char *buffer, size_t buflen)
 	else
 	{
 		LOG_ERROR("HTTP GET request failed: %s", esp_err_to_name(err));
+		LOG_WARN("Trying to reopen the connection...");
+		ERR_C_CHECK_ERROR(esp_http_client_close(handle->esp_handle), LOG_ERROR("Closing old connection failed."));
+		ERR_C_CHECK_ERROR(esp_http_client_open(handle->esp_handle, 0), LOG_ERROR("Trying to open new connection failed."));
 	}
 	return err;
 }
