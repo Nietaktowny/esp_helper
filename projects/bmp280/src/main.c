@@ -169,8 +169,7 @@ void app_main()
     wifi_manager_init();
 
 #ifndef ESP32_C3_SUPERMINI
-    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
-    esp_netif_sntp_init(&config);
-    cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
+	sysutil_setup_ntp_server("pool.ntp.org", 1);
+	cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
 #endif
 }

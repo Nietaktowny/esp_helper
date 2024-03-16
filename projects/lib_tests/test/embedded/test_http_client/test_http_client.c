@@ -239,8 +239,309 @@ void test_if_http_post_returns_zero_on_success(void) {
     TEST_ASSERT_EQUAL_MESSAGE(0, err, "http_client_post should return 0");
 }
 
+void test_if_http_init_reuse_returns_zero(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+    const char* address = "wmytych.usermd.net";
+    const char* path = "modules/getters/get_gpio_state.php";
+    http_client_t client = NULL;
+
+    //when
+    err = http_client_init_reuse(&client, address, path);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "http_client_init_reuse should return ERR_C_OK");
+
+    //after
+    http_client_deinit_reuse(&client);
+}
+
+void test_if_http_deinit_reuse_returns_zero(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+	ABORT_IF_STA_CONNECTED_STATUS(false);
+
+    //given
+    int err = -1;
+    const char* address = "wmytych.usermd.net";
+    const char* path = "modules/getters/get_gpio_state.php";
+    http_client_t client = NULL;
+
+    //when
+	http_client_init_reuse(&client, address, path);
+    err = http_client_deinit_reuse(&client);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "http_client_deinit_reuse should return ERR_C_OK");
+
+    //after
+}
+
+
+void test_if_http_post_reuse_returns_err_on_null_request(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+    const char* address = "wmytych.usermd.net";
+    const char* path = "modules/getters/get_gpio_state.php";
+    http_client_t client = NULL;
+    http_client_init_reuse(&client, address, path);
+
+    //when
+    err = http_client_post_reuse(client, NULL, HTTP_CLIENT_POST_USE_STRLEN);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_post_reuse should return ERR_C_NULL_POINTER on NULL request");
+
+    //after
+    http_client_deinit_reuse(&client);
+}
+
+
+void test_if_http_post_reuse_returns_err_on_null_handle(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+	const char* req = "device_id=222222";
+
+    //when
+    err = http_client_post_reuse(NULL, req, HTTP_CLIENT_POST_USE_STRLEN);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_post_reuse should return ERR_C_NULL_POINTER on NULL handle");
+
+    //after
+}
+
+
+void test_if_http_post_reuse_returns_zero_on_success(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+    ABORT_IF_STA_CONNECTED_STATUS(false);
+
+    //given
+    int err = -1;
+    const char* address = "wmytych.usermd.net";
+    const char* path = "modules/getters/get_gpio_state.php";
+    const char* req = "device_id=222222";
+	http_client_t handle = NULL;
+	http_client_init_reuse(&handle, address, path);
+
+    //when
+    err = http_client_post_reuse(handle, req, HTTP_CLIENT_POST_USE_STRLEN);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(0, err, "http_client_post_reuse should return 0");
+
+	//after
+	http_client_deinit_reuse(&handle);
+}
+
+void test_if_http_deinit_reuse_returns_err_on_null_handle(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+
+    //when
+    err = http_client_deinit_reuse(NULL);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_deinit_reuse should return ERR_C_NULL_POINTER on null handle");
+
+    //after
+}
+
+void test_if_http_deinit_reuse_returns_err_on_not_init_handle(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+	http_client_t handle = NULL;
+
+    //when
+    err = http_client_deinit_reuse(&handle);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_deinit_reuse should return ERR_C_NULL_POINTER on not init handle");
+
+    //after
+}
+
+void test_if_http_init_reuse_returns_err_on_null_handle(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+    const char* address = "wmytych.usermd.net";
+    const char* path = "modules/getters/get_gpio_state.php";
+
+    //when
+    err = http_client_init_reuse(NULL, address, path);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_init_reuse should return ERR_C_NULL_POINTER on null handle");
+
+    //after
+}
+
+
+void test_if_http_init_reuse_returns_err_on_null_path(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+    const char* address = "wmytych.usermd.net";
+	http_client_t handle = NULL;
+
+
+    //when
+    err = http_client_init_reuse(&handle, address, NULL);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_init_reuse should return ERR_C_NULL_POINTER on null path");
+
+    //after
+}
+
+
+void test_if_http_init_reuse_returns_err_on_null_address(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+    const char* path = "modules/getters/get_gpio_state.php";
+	http_client_t handle = NULL;
+
+
+    //when
+    err = http_client_init_reuse(&handle, NULL, path);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_init_reuse should return ERR_C_NULL_POINTER on null address");
+
+    //after
+}
+
+
+void test_if_http_get_reuse_returns_err_on_null_buffer(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+    const char* address = "wmytych.usermd.net";
+    const char* path = "modules/getters/get_gpio_state.php"; 
+	http_client_t client = NULL;
+	http_client_init_reuse(&client, address, path);
+
+    //when
+    err = http_client_get_reuse(client, NULL, 0);
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_get_reuse should return ERR_C_NULL_POINTER on NULL buffer");
+
+    //after
+    http_client_deinit_reuse(&client);
+}
+
+
+void test_if_http_get_reuse_returns_err_on_null_handle(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+
+    //given
+    int err = -1;
+	char buffer[200] = {0};
+
+    //when
+    err = http_client_get_reuse(NULL, buffer, sizeof(buffer));
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "http_client_get_reuse should return ERR_C_NULL_POINTER on NULL handle");
+
+    //after
+}
+
+
+void test_if_http_get_reuse_returns_zero_on_success(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+    ABORT_IF_STA_CONNECTED_STATUS(false);
+
+    //given
+    int err = -1;
+    const char* address = "wmytych.usermd.net";
+    const char* path = "modules/getters/get_gpio_state.php";
+	char buffer[200] = {0};
+	http_client_t handle = NULL;
+	http_client_init_reuse(&handle, address, path);
+
+    //when
+    err = http_client_get_reuse(handle, buffer, sizeof(buffer));
+
+    //then
+    TEST_ASSERT_EQUAL_MESSAGE(0, err, "http_client_get_reuse should return 0");
+
+	//after
+	http_client_deinit_reuse(&handle);
+}
+
+
+void test_if_http_get_reuse_returns_expected_server_response(void) {
+    //before
+    LOG_FATAL("RUNNING: %s", __func__);
+    ABORT_IF_STA_CONNECTED_STATUS(false);
+
+    //given
+    const char* address = "wmytych.usermd.net";
+    const char* path = "modules/getters/get_gpio_state.php?device_id=222222";
+	char buffer[200] = {0};
+	http_client_t handle = NULL;
+	http_client_init_reuse(&handle, address, path);
+    const char* const expected_resp = "[{\"gpio\":22,\"state\":1,\"gpio_alias\":\"Relay\"},{\"gpio\":2,\"state\":1,\"gpio_alias\":\"Onboard LED\"}]";
+
+
+    //when
+    http_client_get_reuse(handle, buffer, sizeof(buffer));
+
+    //then
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(expected_resp, buffer, "http_client_get_reuse server response different from expected");
+
+	//after
+	http_client_deinit_reuse(&handle);
+}
+
+
+
 int runUnityTests(void) {
   UNITY_BEGIN();
+  RUN_TEST(test_if_http_get_reuse_returns_expected_server_response);
+  RUN_TEST(test_if_http_get_reuse_returns_zero_on_success);
+  RUN_TEST(test_if_http_get_reuse_returns_err_on_null_buffer);
+  RUN_TEST(test_if_http_get_reuse_returns_err_on_null_handle);
+  RUN_TEST(test_if_http_init_reuse_returns_err_on_null_address);
+  RUN_TEST(test_if_http_init_reuse_returns_err_on_null_path);
+  RUN_TEST(test_if_http_init_reuse_returns_err_on_null_handle);
+  RUN_TEST(test_if_http_deinit_reuse_returns_err_on_not_init_handle);
+  RUN_TEST(test_if_http_deinit_reuse_returns_err_on_null_handle);
+  RUN_TEST(test_if_http_post_reuse_returns_zero_on_success);
+  RUN_TEST(test_if_http_post_reuse_returns_err_on_null_handle);
+  RUN_TEST(test_if_http_deinit_reuse_returns_zero);
+  RUN_TEST(test_if_http_init_reuse_returns_zero);
+  RUN_TEST(test_if_http_post_reuse_returns_err_on_null_request);
   RUN_TEST(test_if_http_post_returns_zero_on_success);
   RUN_TEST(test_if_http_get_returns_zero_on_success);
   RUN_TEST(test_if_http_get_returns_expected_response);

@@ -17,7 +17,6 @@
 
 #ifndef ESP32_C3_SUPERMINI
 #include "cli_manager.h"
-#include "esp_netif_sntp.h"
 #endif
 
 #define MY_SSID "TP-LINK_AD8313"
@@ -119,8 +118,9 @@ void on_connect_handler(void)
     gpio_set_direction(ESP_DEVICE_WIFI_LED, GPIO_MODE_OUTPUT);
     gpio_set_level(ESP_DEVICE_WIFI_LED, 1);
     LOG_INFO("Onboard LED turned on!");
-    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
-    esp_netif_sntp_init(&config);
+
+	// Setup Timezone
+	sysutil_setup_ntp_server("pool.ntp.org", 1);
 #endif
 
     // helper_perform_ota();
