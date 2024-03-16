@@ -133,22 +133,22 @@ projects/plantsitter/lib/spiffs_controller/src/spiffs_controller.c:50:24: error:
 projects/plantsitter/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
          WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                         ^
-projects/plantsitter/src/main.c:105:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
+projects/plantsitter/src/main.c:104:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
         snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
                  ^
-projects/plantsitter/src/main.c:95:25: note: Assignment 'device_info=NULL', assigned value is 0
+projects/plantsitter/src/main.c:94:25: note: Assignment 'device_info=NULL', assigned value is 0
     char *device_info = NULL;
                         ^
-projects/plantsitter/src/main.c:105:18: note: Null pointer dereference
+projects/plantsitter/src/main.c:104:18: note: Null pointer dereference
         snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
                  ^
-projects/plantsitter/src/main.c:105:76: warning:inconclusive: Possible null pointer dereference: wifi_c_info [nullPointer]
+projects/plantsitter/src/main.c:104:76: warning:inconclusive: Possible null pointer dereference: wifi_c_info [nullPointer]
         snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
                                                                            ^
-projects/plantsitter/src/main.c:92:25: note: Assignment 'wifi_c_info=NULL', assigned value is 0
+projects/plantsitter/src/main.c:91:25: note: Assignment 'wifi_c_info=NULL', assigned value is 0
     char *wifi_c_info = NULL;
                         ^
-projects/plantsitter/src/main.c:105:76: note: Null pointer dereference
+projects/plantsitter/src/main.c:104:76: note: Null pointer dereference
         snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
                                                                            ^
 projects/plantsitter/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
@@ -175,24 +175,18 @@ projects/relays/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Unin
 projects/relays/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
          WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                         ^
-projects/relays/src/main.c:105:18: warning:inconclusive: Possible null pointer dereference: device_info [nullPointer]
-        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
-                 ^
-projects/relays/src/main.c:95:25: note: Assignment 'device_info=NULL', assigned value is 0
-    char *device_info = NULL;
-                        ^
-projects/relays/src/main.c:105:18: note: Null pointer dereference
-        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
-                 ^
-projects/relays/src/main.c:105:76: warning:inconclusive: Possible null pointer dereference: wifi_c_info [nullPointer]
-        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
-                                                                           ^
-projects/relays/src/main.c:92:25: note: Assignment 'wifi_c_info=NULL', assigned value is 0
-    char *wifi_c_info = NULL;
-                        ^
-projects/relays/src/main.c:105:76: note: Null pointer dereference
-        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
-                                                                           ^
+projects/relays/src/main.c:117:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+        err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
+            ^
+projects/relays/src/main.c:114:13: note: err is assigned
+        err = wifi_c_get_status_as_json(wifi_c_info, 300);
+            ^
+projects/relays/src/main.c:117:13: note: err is overwritten
+        err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
+            ^
+projects/relays/src/main.c:104:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err_c_t err = ERR_C_OK;
+                ^
 projects/relays/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
   wifi_c_status_t wifi_c_test_status;
                   ^
@@ -236,6 +230,9 @@ libraries/err_controller/src/err_controller.c:24:0: style: The function 'err_che
 
 ^
 libraries/esp_helper_utils/src/esp_helper_utils.c:30:0: style: The function 'helper_get_chip_id' is never used. [unusedFunction]
+
+^
+projects/lib_tests/lib/http_client/src/http_client.c:353:0: style: The function 'http_client_post_reuse' is never used. [unusedFunction]
 
 ^
 libraries/http_server/src/http_server.c:45:0: style: The function 'http_server_deinit' is never used. [unusedFunction]
