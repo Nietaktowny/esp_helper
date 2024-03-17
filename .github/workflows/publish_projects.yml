@@ -1,4 +1,4 @@
-name: Build all projects
+name: Build and publish all projects
 
 on: [push]
 
@@ -29,3 +29,6 @@ jobs:
       - name: Build plantsitter
         working-directory: projects/plantsitter
         run: platformio run -e esp-dev
+      - name: Publish projects firmware
+        working-directory: tools/
+        run: python publish_firmware.py
