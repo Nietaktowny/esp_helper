@@ -29,6 +29,6 @@ jobs:
       - name: Build plantsitter
         working-directory: projects/plantsitter
         run: platformio run -e esp-dev
-      - name: Publish projects firmware
-        working-directory: tools/
-        run: python pyblisher.py --ci
+#      - name: Publish projects firmware
+#        working-directory: tools/
+#        run: python pyblisher.py --ci
