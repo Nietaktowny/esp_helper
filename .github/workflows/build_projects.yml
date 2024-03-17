@@ -28,4 +28,4 @@ jobs:
         run: platformio run
       - name: Build plantsitter
         working-directory: projects/plantsitter
-        run: platformio run
+        run: platformio run -e esp-dev
