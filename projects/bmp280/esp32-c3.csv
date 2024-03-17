@@ -1,0 +1,9 @@
+# Name,   Type, SubType, Offset,   Size, Flags
+# Note: if you have increased the bootloader size, make sure to update the offsets to avoid overlap
+# Partition table with both OTA and NVS features
+# Name,   Type, SubType, Offset,  Size, Flags
+nvs,      data, nvs,     0xa000,  0x4000,
+otadata,  data, ota,     0xe000,  0x2000,
+phy_init, data, phy,     0x10000, 0x1000,
+ota_0,    app,  ota_0,   0x20000, 0x150000,
+ota_1,    app,  ota_1,   0x170000,0x150000,
