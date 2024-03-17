@@ -232,7 +232,7 @@ libraries/err_controller/src/err_controller.c:24:0: style: The function 'err_che
 libraries/esp_helper_utils/src/esp_helper_utils.c:30:0: style: The function 'helper_get_chip_id' is never used. [unusedFunction]
 
 ^
-projects/lib_tests/lib/http_client/src/http_client.c:353:0: style: The function 'http_client_post_reuse' is never used. [unusedFunction]
+projects/bmp280/lib/http_client/src/http_client.c:356:0: style: The function 'http_client_post_reuse' is never used. [unusedFunction]
 
 ^
 libraries/http_server/src/http_server.c:45:0: style: The function 'http_server_deinit' is never used. [unusedFunction]
