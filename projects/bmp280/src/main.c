@@ -13,10 +13,8 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
-
 #include "cli_manager.h"
 #include <driver/gpio.h>
-
 
 #define MY_SSID "TP-LINK_AD8313"
 #define MY_PSK "20232887"
@@ -66,14 +64,15 @@ void read_temperature_task(void *args)
     if (err != ERR_C_OK)
     {
         LOG_ERROR("cannot configure BMP280 device");
-        vTaskDelete(NULL);
+        //  vTaskDelete(NULL);
     }
     LOG_INFO("Identified BMP280 device:\n address: %x\n chip id: %x\n mode: %x", bmp_get_i2c_addr(bmp), bmp_get_chip_id(bmp), bmp_get_mode(bmp));
-    
+
     err = http_client_init_reuse(&client, "wmytych.usermd.net", "modules/setters/insert_data.php");
-    if(err != ERR_C_OK) {
+    if (err != ERR_C_OK)
+    {
         LOG_ERROR("error %d when trying to prepare http_client handle for reuse: %s", err, error_to_name(err));
-        vTaskDelete(NULL);
+        //    vTaskDelete(NULL);
     }
 
     while (1)
@@ -86,12 +85,25 @@ void read_temperature_task(void *args)
         sprintf(post_data, "device_id=%s&temperature=%.2f&pressure=%.2f&altitude=%.2f", device_id, temperature, pressure * 0.01, altitude);
         LOG_VERBOSE("data to send to database: %s", post_data);
         err = http_client_post_reuse(client, post_data, HTTP_CLIENT_POST_USE_STRLEN);
+        if (err != ERR_C_OK)
+        {
+            LOG_ERROR("Client POST request returned error %d: %s", err, error_to_name(err));
+            LOG_WARN("Reestablishing connection...");
+            http_client_deinit_reuse(&client);
+            err = http_client_init_reuse(&client, "wmytych.usermd.net", "modules/setters/insert_data.php");
+            if (err != ERR_C_OK)
+            {
+                LOG_ERROR("error %d when trying to reestablish connection: %s", err, error_to_name(err));
+                vTaskDelay(pdMS_TO_TICKS(30000));
+                continue;
+            }
+        }
         LOG_VERBOSE("Client POST request returned: %d", err);
         vTaskDelay(pdMS_TO_TICKS(30000));
     }
 
     http_client_deinit_reuse(&client);
-    //if ever task got here, delete it
+    // if ever task got here, delete it
     vTaskDelete(NULL);
 }
 
@@ -134,7 +146,8 @@ void inspect_heap_task(void *args)
         LOG_DEBUG("Currently available heap: %lu", free_heap);
         LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
 
-        if(free_heap < 8000) {
+        if (free_heap < 8000)
+        {
             LOG_ERROR("Currently free heap very low, restarting...");
             esp_restart();
         }
@@ -199,6 +212,6 @@ void app_main()
     wifi_c_sta_register_connect_handler(on_connect_handler);
 
     wifi_manager_init();
-	
-	cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
+
+    cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
 }

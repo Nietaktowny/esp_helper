@@ -35,6 +35,7 @@
 
 void switch_gpio_task(void *args)
 {
+    err_c_t err = ERR_C_OK;
     char response[500] = {0};
     char url[120] = {0};
     char device_id[20] = {0};
@@ -43,16 +44,31 @@ void switch_gpio_task(void *args)
     snprintf(url, sizeof(url), "%s?device_id=%s", PHP_GET_GPIO_STATES_URL, device_id);
 
     http_client_t client = NULL;
-    http_client_init_reuse(&client, SERVER_URL, url);
+    err = http_client_init_reuse(&client, SERVER_URL, url);
+    if (err != ERR_C_OK)
+    {
+        LOG_ERROR("error %d when trying to prepare http_client handle for reuse: %s", err, error_to_name(err));
+    }
+
 
     cJSON *array = NULL;
     const cJSON *element = NULL;
     while (1)
     {
-        http_client_get_reuse(
-            client,
-            response,
-            sizeof(response));
+        err = http_client_get_reuse(client, response, sizeof(response));
+        if (err != ERR_C_OK)
+        {
+            LOG_ERROR("Client GET request returned error %d: %s", err, error_to_name(err));
+            LOG_WARN("Reestablishing connection...");
+            http_client_deinit_reuse(&client);
+            err = http_client_init_reuse(&client, SERVER_URL, url);
+            if (err != ERR_C_OK)
+            {
+                LOG_ERROR("error %d when trying to reestablish connection: %s", err, error_to_name(err));
+                vTaskDelay(pdMS_TO_TICKS(2000));
+                continue;
+            }
+        }
 
         LOG_DEBUG("HTTP GET RESPONSE: %s", response);
 
@@ -89,7 +105,6 @@ void switch_gpio_task(void *args)
             LOG_INFO("switching gpio: %d to state: %d", gpio->valueint, state->valueint);
             gpio_set_direction(gpio->valueint, GPIO_MODE_OUTPUT);
             gpio_set_level(gpio->valueint, state->valueint);
-
         }
 
         cJSON_Delete(array);
@@ -138,7 +153,8 @@ void inspect_heap_task(void *args)
         LOG_DEBUG("Currently available heap: %lu", free_heap);
         LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
 
-        if(free_heap < 8000) {
+        if (free_heap < 8000)
+        {
             LOG_ERROR("Currently free heap very low, restarting...");
             esp_restart();
         }

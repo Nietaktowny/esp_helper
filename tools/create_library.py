@@ -1,3 +1,6 @@
+#! /usr/bin/python3
+
+
 import os
 lib_name = input("Enter library name: ")
 lib_description = input("Enter library description: ")
@@ -28,7 +31,7 @@ src_c_file_text = "#include \"" + header_file + "\""
 mode = 0o777
 
 
-os.chdir('../libraries')
+os.chdir('~/Projects/esp_helper/libraries/')
 libraries_path = os.getcwd()
 print(libraries_path)
 
