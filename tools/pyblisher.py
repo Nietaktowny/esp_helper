@@ -5,6 +5,7 @@ import os
 import requests
 import sys
 import json
+import builder
 
 ci = False   # if set to true, don't update with git describe, only read currently saved values from version.txt texts.
     
@@ -130,6 +131,10 @@ if(len(sys.argv) != 1 and sys.argv[1] == "--ci"):
     publish_all_projects()
 elif(len(sys.argv) != 1 and sys.argv[1] == "--local"):
     os.chdir('/home/wmytych/Projects/esp_helper/')
+    publish_all_projects()
+elif(len(sys.argv) != 1 and sys.argv[1] == "--build"):
+    os.chdir('/home/wmytych/Projects/esp_helper/')
+    builder.pio_build_all_projects_ignore('plantsitter, lib_tests')
     publish_all_projects()
 elif(len(sys.argv) == 3 and sys.argv[1] == "--update" and sys.argv[2] == "all"):
     os.chdir('..')
