@@ -31,4 +31,4 @@ jobs:
         run: platformio run -e esp-dev
       - name: Publish projects firmware
         working-directory: tools/
-        run: python publish_firmware.py
+        run: python pyblisher.py --ci
