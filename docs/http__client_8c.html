@@ -186,7 +186,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae0beeb232473e1e9bf8198957edd455b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init http_client_t handle for reusing with multiple connections.  <br /></td></tr>
 <tr class="separator:ae0beeb232473e1e9bf8198957edd455b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b2ab87e18213803c735bcf8c6a9cdae" id="r_a4b2ab87e18213803c735bcf8c6a9cdae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8c.html#a4b2ab87e18213803c735bcf8c6a9cdae">http_client_deinit_reuse</a> (<a class="el" href="http__client_8h.html#ac50691f194d0e4451f8658de4246ea2d">http_client_t</a> *handle)</td></tr>
-<tr class="memdesc:a4b2ab87e18213803c735bcf8c6a9cdae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function frees resources allocated with <a class="el" href="http__client_8h.html#abdab8abaaf7b1323aa95a9c97c8872cc" title="Make a HTTP POST request to the already made connection.">http_client_post_reuse()</a> and closes connection. <a class="el" href="http__client_8h.html#abdab8abaaf7b1323aa95a9c97c8872cc">http_client_post_reuse()</a> <br /></td></tr>
+<tr class="memdesc:a4b2ab87e18213803c735bcf8c6a9cdae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function frees resources allocated with <a class="el" href="http__client_8h.html#abdab8abaaf7b1323aa95a9c97c8872cc" title="Make a HTTP POST request to the already made connection.">http_client_post_reuse()</a> and closes connection.  <br /></td></tr>
 <tr class="separator:a4b2ab87e18213803c735bcf8c6a9cdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a524624e480ef689e54e6ca644b903c" id="r_a7a524624e480ef689e54e6ca644b903c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8c.html#a7a524624e480ef689e54e6ca644b903c">http_client_get_reuse</a> (<a class="el" href="http__client_8h.html#ac50691f194d0e4451f8658de4246ea2d">http_client_t</a> handle, char *buffer, size_t buflen)</td></tr>
 <tr class="memdesc:a7a524624e480ef689e54e6ca644b903c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a HTTP GET request reusing the already made connection.  <br /></td></tr>
@@ -221,7 +221,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function frees resources allocated with <a class="el" href="http__client_8h.html#abdab8abaaf7b1323aa95a9c97c8872cc" title="Make a HTTP POST request to the already made connection.">http_client_post_reuse()</a> and closes connection. <a class="el" href="http__client_8h.html#abdab8abaaf7b1323aa95a9c97c8872cc">http_client_post_reuse()</a></p>
+<p>This function frees resources allocated with <a class="el" href="http__client_8h.html#abdab8abaaf7b1323aa95a9c97c8872cc" title="Make a HTTP POST request to the already made connection.">http_client_post_reuse()</a> and closes connection. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="http__client_8h.html#abdab8abaaf7b1323aa95a9c97c8872cc" title="Make a HTTP POST request to the already made connection.">http_client_post_reuse()</a></dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">handle</td><td>http_client_t handle to deinit.</td></tr>
@@ -351,7 +352,23 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Init http_client_t handle for reusing with multiple connections. </p>
-<dl class="section note"><dt>Note</dt><dd>This function allocates memory that needs to be freed with <a class="el" href="http__client_8h.html#a4b2ab87e18213803c735bcf8c6a9cdae" title="This function frees resources allocated with http_client_post_reuse() and closes connection....">http_client_deinit_reuse()</a> <a class="el" href="http__client_8h.html#a4b2ab87e18213803c735bcf8c6a9cdae">handle Location to store http_client_t handle.  ipv4_address Domain address.  path Resource path.  ERR_C_OK on success.  ERR_C_NULL_POINTER If handle, ipv4_address or path is NULL. </a></dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This function allocates memory that needs to be freed with <a class="el" href="http__client_8h.html#a4b2ab87e18213803c735bcf8c6a9cdae" title="This function frees resources allocated with http_client_post_reuse() and closes connection.">http_client_deinit_reuse()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="http__client_8h.html#a4b2ab87e18213803c735bcf8c6a9cdae" title="This function frees resources allocated with http_client_post_reuse() and closes connection.">http_client_deinit_reuse()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">handle</td><td>Location to store http_client_t handle. </td></tr>
+    <tr><td class="paramname">ipv4_address</td><td>Domain address. </td></tr>
+    <tr><td class="paramname">path</td><td>Resource path.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">ERR_C_OK</td><td>on success. </td></tr>
+    <tr><td class="paramname">ERR_C_NULL_POINTER</td><td>If handle, ipv4_address or path is NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
