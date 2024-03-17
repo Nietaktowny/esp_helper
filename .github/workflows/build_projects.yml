@@ -22,10 +22,10 @@ jobs:
         run: pip install flawfinder
       - name: Build relays
         working-directory: projects/relays
-        run: platformio run -e esp-dev
+        run: platformio run
       - name: Build bmp280
         working-directory: projects/bmp280
-        run: platformio run -e esp-dev
+        run: platformio run
       - name: Build plantsitter
         working-directory: projects/plantsitter
-        run: platformio run -e esp-dev
+        run: platformio run
