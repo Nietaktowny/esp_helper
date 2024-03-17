@@ -4,20 +4,18 @@
 #include "logger.h"
 #include "http_client.h"
 #include "wifi_manager.h"
-#include "ota_controller.h"
-#include "nvs_controller.h"
 #include "esp_helper_utils.h"
 #include "sys_utils.h"
+#include "nvs_controller.h"
+#include "cli_manager.h"
 
 #include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "cJSON.h"
-#include <driver/gpio.h>
 
-#ifndef ESP32_C3_SUPERMINI
-#include "cli_manager.h"
-#endif
+#include <driver/gpio.h>
+#include <driver/adc.h>
+#include <esp_adc_cal.h>
 
 #define MY_SSID "TP-LINK_AD8313"
 #define MY_PSK "20232887"
@@ -26,90 +24,117 @@
 
 #ifdef ESP_WROVER_KIT
 #define ESP_DEVICE_WIFI_LED GPIO_NUM_2
+#define BUS_GPIO_SCL 22
+#define BUS_GPIO_SDA 21
 #elif ESP_DEV_MODULE
 #define ESP_DEVICE_WIFI_LED GPIO_NUM_2
+#define BUS_GPIO_SCL 22
+#define BUS_GPIO_SDA 21
 #elif ESP32_C3_SUPERMINI
+#define BUS_GPIO_SCL 9
+#define BUS_GPIO_SDA 8
 #endif
 
-#define SERVER_URL "wmytych.usermd.net"
-#define PHP_GET_GPIO_STATES_URL "modules/getters/get_gpio_state.php"
 
-void switch_gpio_task(void *args)
+static esp_adc_cal_characteristics_t adc1_chars;
+
+static bool adc_calibration_init(void)
 {
-    char response[500] = {0};
-    char url[120] = {0};
-    char device_id[20] = {0};
-    sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
-    LOG_DEBUG("getting gpio state for device with ID: %s", device_id);
-    snprintf(url, sizeof(url), "%s?device_id=%s", PHP_GET_GPIO_STATES_URL, device_id);
+    esp_err_t ret;
+    bool cali_enable = false;
 
-    cJSON *array = NULL;
-    const cJSON *element = NULL;
-    while (1)
-    {
-        http_client_get(
-            SERVER_URL,
-            url,
-            response,
-            sizeof(response));
+    ret = esp_adc_cal_check_efuse(ESP_ADC_CAL_VAL_EFUSE_VREF);
+    if (ret == ESP_ERR_NOT_SUPPORTED) {
+        LOG_WARN("Calibration scheme not supported, skip software calibration");
+    } else if (ret == ESP_ERR_INVALID_VERSION) {
+        LOG_WARN("eFuse not burnt, skip software calibration");
+    } else if (ret == ESP_OK) {
+        cali_enable = true;
+        esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_11, ADC_WIDTH_BIT_DEFAULT, 0, &adc1_chars);
+    } else {
+        LOG_ERROR("Invalid arg");
+    }
 
-        LOG_DEBUG("HTTP GET RESPONSE: %s", response);
-
-        array = cJSON_Parse(response);
-        if (!array)
-        {
-            const char *error_ptr = cJSON_GetErrorPtr();
-            if (error_ptr)
-            {
-                LOG_ERROR("cJSON parsing error: %s", error_ptr);
-            }
-            cJSON_Delete(array);
-        }
-
-        cJSON_ArrayForEach(element, array)
-        {
-            cJSON *gpio = cJSON_GetObjectItemCaseSensitive(element, "gpio");
-            cJSON *state = cJSON_GetObjectItemCaseSensitive(element, "state");
-
-            if (!cJSON_IsNumber(gpio) || !cJSON_IsNumber(state))
-            {
-                LOG_ERROR("cannot access gpio and state JSON members");
-                continue;
-            }
-
-            LOG_INFO("switching gpio: %d to state: %d", gpio->valueint, state->valueint);
-            gpio_set_direction(gpio->valueint, GPIO_MODE_OUTPUT);
-            gpio_set_level(gpio->valueint, state->valueint);
-        }
-
-        vTaskDelay(pdMS_TO_TICKS(2000));
-    };
+    return cali_enable;
 }
 
-void inspect_task(void *args)
+
+
+void read_soil_moisture_task(void *args)
 {
-    char *wifi_c_info = NULL;
-    NEW_SIZE(wifi_c_info, 300); /** @todo add constant to wifi_controller, something like WIFI_C_STATUS_JSON_MIN_BUFLEN */
+    err_c_t err = ERR_C_OK;
+    int adc_raw[2][10] = {0};
+    uint32_t voltage = 0;
+    bool cali_enable = adc_calibration_init();
+    err = adc1_config_width(ADC_WIDTH_BIT_DEFAULT);
+    if(err != ERR_C_OK) {
+        LOG_ERROR("error %d when setting channel ADC1 width: %s", err, error_to_name(err));
+    }
+     
+    err = adc1_config_channel_atten(ADC1_CHANNEL_7, ADC_ATTEN_DB_11);
+    if(err != ERR_C_OK) {
+        LOG_ERROR("error %d when setting channel attenuation: %s", err, error_to_name(err));
+    }
+     
+    while (1)
+    {
+        adc_raw[0][0] = adc1_get_raw(ADC1_CHANNEL_1);
+        LOG_DEBUG("raw data: %d mV", adc_raw[0][0]);
+        if(cali_enable) {
+            voltage = esp_adc_cal_raw_to_voltage(adc_raw[0][0], &adc1_chars);
+            LOG_INFO("calibrated data: %d mV", voltage);
+        }
 
-    char *device_info = NULL;
-    NEW_SIZE(device_info, 350);
+        vTaskDelay(pdMS_TO_TICKS(1000));
+    }
+}
 
+void update_wifi_info_task(void *args)
+{
+    err_c_t err = ERR_C_OK;
+    char wifi_c_info[300] = {0};
+    char device_info[350] = {0};
     char device_id[20] = {0};
+
     sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
+
+    while (1)
+    {
+
+        err = wifi_c_get_status_as_json(wifi_c_info, 300);
+
+        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
+        err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
+        if (err != ERR_C_OK)
+        {
+            LOG_ERROR("error %d when posting device info data: %s", error_to_name(err));
+            memutil_zero_memory(wifi_c_info, sizeof(wifi_c_info));
+            memutil_zero_memory(device_info, sizeof(device_info));
+            vTaskDelay(pdMS_TO_TICKS(60000 * 3));
+            continue;
+        }
+
+        LOG_VERBOSE("sent wifi_c_status to the server");
+        vTaskDelay(pdMS_TO_TICKS(60000 * 3)); /** @todo Make it a constant or configuration variable? */
+    }
+}
+
+void inspect_heap_task(void *args)
+{
     while (1)
     {
         uint32_t free_heap = esp_get_free_heap_size();
         uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
-        wifi_c_get_status_as_json(wifi_c_info, 300);
-        snprintf(device_info, 350, "device_id=%s&wifi_info=%s", device_id, wifi_c_info);
-        http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
-        LOG_DEBUG("sent wifi_c_status to the server");
         LOG_DEBUG("Currently available heap: %lu", free_heap);
         LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
-        vTaskDelay(pdMS_TO_TICKS(60000 * 3)); /** @todo Make it a constant or configuration variable? */ 
+
+        if (free_heap < 8000)
+        {
+            LOG_ERROR("Currently free heap very low, restarting...");
+            esp_restart();
+        }
+        vTaskDelay(pdMS_TO_TICKS(2000));
     }
-    DELETE(wifi_c_info);
-    DELETE(device_info);
 }
 
 void on_connect_handler(void)
@@ -118,14 +143,15 @@ void on_connect_handler(void)
     gpio_set_direction(ESP_DEVICE_WIFI_LED, GPIO_MODE_OUTPUT);
     gpio_set_level(ESP_DEVICE_WIFI_LED, 1);
     LOG_INFO("Onboard LED turned on!");
-
-	// Setup Timezone
-	sysutil_setup_ntp_server("pool.ntp.org", 1);
 #endif
 
-    // helper_perform_ota();
-    xTaskCreate(switch_gpio_task, "gpio_task", 1024 * 6, NULL, 2, NULL);
-    xTaskCreate(inspect_task, "inspect_heap_task", 1024 * 6, NULL, 3, NULL);
+    helper_perform_ota();
+
+    sysutil_setup_ntp_server("pool.ntp.org", 1);
+
+    xTaskCreate(inspect_heap_task, "inspect_task", 1024 * 2, NULL, 4, NULL);
+    xTaskCreate(read_soil_moisture_task, "read_moisture_task", 1024*3, NULL, 2, NULL);
+    xTaskCreate(update_wifi_info_task, "inspect_heap_task", 1024 * 6, NULL, 3, NULL);
 }
 
 #ifdef ESP_WROVER_KIT
@@ -166,7 +192,6 @@ void app_main()
     wifi_c_sta_register_connect_handler(on_connect_handler);
 
     wifi_manager_init();
-#ifndef ESP32_C3_SUPERMINI
+
     cli_set_remote_logging(27015, wifi_c_get_sta_ipv4());
-#endif
 }
