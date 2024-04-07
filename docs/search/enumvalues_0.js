@@ -1,6 +1,28 @@
 var searchData=
 [
-  ['bmp_5fmode_5fforced_0',['BMP_MODE_FORCED',['../bmp280_8h.html#ab7d637c33129e66fd7daad75e9aa28f0af65c68939c762268f21c5d86d691e3c8',1,'bmp280.h']]],
-  ['bmp_5fmode_5fnormal_1',['BMP_MODE_NORMAL',['../bmp280_8h.html#ab7d637c33129e66fd7daad75e9aa28f0ab09fc875d42598f5d18cba2b0ffbf7b1',1,'bmp280.h']]],
-  ['bmp_5fmode_5fsleep_2',['BMP_MODE_SLEEP',['../bmp280_8h.html#ab7d637c33129e66fd7daad75e9aa28f0ac65f2d9bdf17bc3753a5418c82e5a400',1,'bmp280.h']]]
+  ['adc_5fc_5f_5fgpio_5f4_0',['ADC_C__GPIO_4',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327acaeab03a3a83a375aaf3b8acb411ec03',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f0_1',['ADC_C_CHANNEL_0',['../adc__controller_8h.html#a01506b4a486e08265871579367260019a2f90bed37d2883c84d40bdcd97426c87',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f1_2',['ADC_C_CHANNEL_1',['../adc__controller_8h.html#a01506b4a486e08265871579367260019a2e06ef56ad938bcadf7926f719443fe8',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f2_3',['ADC_C_CHANNEL_2',['../adc__controller_8h.html#a01506b4a486e08265871579367260019ab9eccf0f0484b2b830d041400decb50b',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f3_4',['ADC_C_CHANNEL_3',['../adc__controller_8h.html#a01506b4a486e08265871579367260019a21da8631767c43c6c14687d235c6f8c5',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f4_5',['ADC_C_CHANNEL_4',['../adc__controller_8h.html#a01506b4a486e08265871579367260019a64626b043a3d7ddc6b3e07b92350b01a',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f5_6',['ADC_C_CHANNEL_5',['../adc__controller_8h.html#a01506b4a486e08265871579367260019a21ba112fd2625e70701a6009e575ca8c',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f6_7',['ADC_C_CHANNEL_6',['../adc__controller_8h.html#a01506b4a486e08265871579367260019ae746e957d697c8aa1ba759680cc8d34e',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f7_8',['ADC_C_CHANNEL_7',['../adc__controller_8h.html#a01506b4a486e08265871579367260019a6cc78faf7aa5edb1bd686db812c14111',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f8_9',['ADC_C_CHANNEL_8',['../adc__controller_8h.html#a01506b4a486e08265871579367260019ab19ab10454eb3c40a56a1648e7ca2462',1,'adc_controller.h']]],
+  ['adc_5fc_5fchannel_5f9_10',['ADC_C_CHANNEL_9',['../adc__controller_8h.html#a01506b4a486e08265871579367260019abda76a93181b1caa89a10aeae4a57c9f',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f12_11',['ADC_C_GPIO_12',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327ae186d9597bdc2a040c29919698550b34',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f13_12',['ADC_C_GPIO_13',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327a0a67d1079a983d9fe233de1b8b31cfe0',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f14_13',['ADC_C_GPIO_14',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327abb53f030821d7b870b71c455a2d54ccf',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f15_14',['ADC_C_GPIO_15',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327ad0bae002f1773b0b797217ec6405444f',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f2_15',['ADC_C_GPIO_2',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327abe6dcdb39d853844665d5dcca8f5fcfa',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f25_16',['ADC_C_GPIO_25',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327abba297bc5745f95d611b4b3e6f7d4051',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f26_17',['ADC_C_GPIO_26',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327a72882afd34a55605cef016e83388b9a3',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f27_18',['ADC_C_GPIO_27',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327abd40e27274cb7f04080e74f5e4ade5dd',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f32_19',['ADC_C_GPIO_32',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327ac4ceb7581a7957ce58ffea5577309b12',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f33_20',['ADC_C_GPIO_33',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327ae1623ada1d761af07634c7ca13054b5b',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f34_21',['ADC_C_GPIO_34',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327a527ab73de2d4e5fceb691e57c98935c5',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f35_22',['ADC_C_GPIO_35',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327a0ced992fc0821e7e65c28a70955296b1',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f36_23',['ADC_C_GPIO_36',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327a50f1cafb7bb5e116643785140c331b72',1,'adc_controller.h']]],
+  ['adc_5fc_5fgpio_5f39_24',['ADC_C_GPIO_39',['../adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327ab41c2e2c334ba35df9473d6a7afff966',1,'adc_controller.h']]]
 ];

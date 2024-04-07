@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['e_0',['e',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md5',1,'Catch(e)'],['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md6',1,'Throw(e)']]],
-  ['e_20tt_1',['e tt',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md44',1,'&lt;tt&gt;Catch(e) { }&lt;/tt&gt;'],['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md45',1,'&lt;tt&gt;Throw(e)&lt;/tt&gt;']]],
+  ['e_0',['e',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md6',1,'Catch(e)'],['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md7',1,'Throw(e)']]],
+  ['e_20tt_1',['e tt',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md45',1,'&lt;tt&gt;Catch(e) { }&lt;/tt&gt;'],['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md46',1,'&lt;tt&gt;Throw(e)&lt;/tt&gt;']]],
   ['err_5fc_5fcheck_5fand_5fthrow_5ferr_2',['ERR_C_CHECK_AND_THROW_ERR',['../err__controller_8h.html#ad9008e8ee8b0621530620698b5b5d8b4',1,'err_controller.h']]],
   ['err_5fc_5fcheck_5ferror_3',['ERR_C_CHECK_ERROR',['../err__controller_8h.html#a76ac02f0b45ca28d3c37ca902dc52763',1,'err_controller.h']]],
   ['err_5fc_5fcheck_5fmem_5falloc_4',['ERR_C_CHECK_MEM_ALLOC',['../err__controller_8h.html#a66d8b108d0729a113f324a67258e4aaf',1,'err_controller.h']]],
@@ -27,7 +27,7 @@ var searchData=
   ['err_5ftcp_5finvalid_5fargs_24',['ERR_TCP_INVALID_ARGS',['../tcp__c__errors_8h.html#a7a0c0d0cff40ad8124a91a383f958049',1,'tcp_c_errors.h']]],
   ['err_5ftcp_5finvalid_5fport_25',['ERR_TCP_INVALID_PORT',['../tcp__c__errors_8h.html#a53f479ce86e824df3167c5971cf57d06',1,'tcp_c_errors.h']]],
   ['err_5ftcp_5finvalid_5fsocket_26',['ERR_TCP_INVALID_SOCKET',['../tcp__c__errors_8h.html#a8a47bc86d657d9d2a83bdcd43c2b1c42',1,'tcp_c_errors.h']]],
-  ['error_20handling_20with_20cexception_3a_27',['Error Handling with CException:',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md32',1,'']]],
+  ['error_20handling_20with_20cexception_3a_27',['Error Handling with CException:',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md33',1,'']]],
   ['error_5ftag_28',['ERROR_TAG',['../logger_8h.html#aa29007116d11e676da62a3ae1dae4402',1,'logger.h']]],
   ['error_5fto_5fname_29',['error_to_name',['../err__controller_8h.html#ad8f4caa10a5c3bbc6b73762ed9f87840',1,'error_to_name(err_c_t err):&#160;err_c_names.c'],['../err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840',1,'error_to_name(err_c_t err):&#160;err_c_names.c']]],
   ['esp_5fconfig_30',['esp_config',['../structwifi__s__handle__obj.html#a41222b6e83a5dcbd0ad91b21c77e6117',1,'wifi_s_handle_obj']]],
@@ -41,9 +41,9 @@ var searchData=
   ['esp_5fhelper_5futils_2eh_38',['esp_helper_utils.h',['../esp__helper__utils_8h.html',1,'']]],
   ['esp_5fnvs_39',['esp_nvs',['../structnvs__c__handle__obj.html#a2d2e7a8aea2df93fc4bd2b78aa4bf97b',1,'nvs_c_handle_obj']]],
   ['even_5floop_5fstarted_40',['even_loop_started',['../structwifi__c__status__obj.html#a6521ab6f8cb7b875232c0ae34d57267d',1,'wifi_c_status_obj']]],
-  ['example_41',['example',['../md_projects_2lib__tests_2README.html#autotoc_md59',1,'Hello World Example'],['../md_projects_2lib__tests_2README.html#autotoc_md60',1,'How to use example']]],
-  ['example_20folder_20contents_42',['Example folder contents',['../md_projects_2lib__tests_2README.html#autotoc_md61',1,'']]],
-  ['exception_20h_43',['Exception.h',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md9',1,'']]],
-  ['exittry_44',['ExitTry()',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md7',1,'']]],
-  ['exittry_20tt_45',['&lt;tt&gt;ExitTry()&lt;/tt&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md46',1,'']]]
+  ['example_41',['example',['../md_projects_2lib__tests_2README.html#autotoc_md60',1,'Hello World Example'],['../md_projects_2lib__tests_2README.html#autotoc_md61',1,'How to use example']]],
+  ['example_20folder_20contents_42',['Example folder contents',['../md_projects_2lib__tests_2README.html#autotoc_md62',1,'']]],
+  ['exception_20h_43',['Exception.h',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md10',1,'']]],
+  ['exittry_44',['ExitTry()',['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md8',1,'']]],
+  ['exittry_20tt_45',['&lt;tt&gt;ExitTry()&lt;/tt&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md47',1,'']]]
 ];

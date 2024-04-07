@@ -1,5 +1,6 @@
 var dir_855d5b67a0b6a1e95f97d8678c396cca =
 [
+    [ "adc_controller", "dir_33476384c321c683f638b0d4722da187.html", "dir_33476384c321c683f638b0d4722da187" ],
     [ "arena", "dir_9695e3fe3c459107de2614e28913d774.html", "dir_9695e3fe3c459107de2614e28913d774" ],
     [ "bmp280", "dir_4f25e74943244e8ea3911a964b74fd47.html", "dir_4f25e74943244e8ea3911a964b74fd47" ],
     [ "CException", "dir_1cf053107e30248f91a0ee9f8fa95ed7.html", "dir_1cf053107e30248f91a0ee9f8fa95ed7" ],

@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['want_20something_20simple_0',['You want something simple...',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md35',1,'']]],
+  ['want_20something_20simple_0',['You want something simple...',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md36',1,'']]],
   ['warn_5ftag_1',['WARN_TAG',['../logger_8h.html#a9f3c820adf2fbb5aba0567cc91d63975',1,'logger.h']]],
-  ['what_20s_20it_20good_20for_2',['So what&apos;s it good for?',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md31',1,'']]],
-  ['whitespace_3',['whitespace',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md26',1,'Whitespace'],['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md21',1,'Whitespace']]],
-  ['why_4',['Why?',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md33',1,'']]],
-  ['why_20have_20a_20coding_20standard_5',['Why Have A Coding Standard?',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md13',1,'']]],
+  ['what_20s_20it_20good_20for_2',['So what&apos;s it good for?',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md32',1,'']]],
+  ['whitespace_3',['whitespace',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md27',1,'Whitespace'],['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md22',1,'Whitespace']]],
+  ['why_4',['Why?',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md34',1,'']]],
+  ['why_20have_20a_20coding_20standard_5',['Why Have A Coding Standard?',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md14',1,'']]],
   ['wifi_5fc_5fap_5fget_5fssid_6',['wifi_c_ap_get_ssid',['../wifi__controller_8h.html#a2226f799d81d2e553dfe4da5e3a76686',1,'wifi_controller.h']]],
   ['wifi_5fc_5fap_5frecord_5fobj_7',['wifi_c_ap_record_obj',['../structwifi__c__ap__record__obj.html',1,'']]],
   ['wifi_5fc_5fap_5frecord_5ft_8',['wifi_c_ap_record_t',['../wifi__controller_8h.html#a9bfe6c8ed10f036d73ce57db06282b5b',1,'wifi_controller.h']]],
@@ -91,7 +91,7 @@ var searchData=
   ['wifi_5fmode_88',['wifi_mode',['../structwifi__c__status__obj.html#ad80a1c676a259b491888b2b3e393b1cc',1,'wifi_c_status_obj']]],
   ['wifi_5fs_5fhandle_5fobj_89',['wifi_s_handle_obj',['../structwifi__s__handle__obj.html',1,'']]],
   ['wifi_5fs_5fhandle_5ft_90',['wifi_s_handle_t',['../wifi__manager__internal_8h.html#aa629ca7532d4fa607743b038462a454d',1,'wifi_manager_internal.h']]],
-  ['with_20cexception_3a_91',['Error Handling with CException:',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md32',1,'']]],
+  ['with_20cexception_3a_91',['Error Handling with CException:',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md33',1,'']]],
   ['workflows_20ci_20badge_20svg_20alt_20ci_92',['CException &lt;img src=&quot;https://github.com/ThrowTheSwitch/CException/workflows/CI/badge.svg&quot; alt=&quot;CI&quot;/&gt;',['../md_projects_2lib__tests_2lib_2CException_2README.html',1,'']]],
-  ['world_20example_93',['Hello World Example',['../md_projects_2lib__tests_2README.html#autotoc_md59',1,'']]]
+  ['world_20example_93',['Hello World Example',['../md_projects_2lib__tests_2README.html#autotoc_md60',1,'']]]
 ];

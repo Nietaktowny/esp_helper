@@ -76,9 +76,35 @@ def setup_log_level():
                     levels.append('| ERROR |')
                elif(arg == 'f'):
                     levels.append('| FATAL |')        
-          
-if(len(sys.argv) == 2):
+
+
+def pylogger_print_help():
+    help_text = """
+    This python program is used to capture logs from ESP Helper devices on local network.
+    You need first to know your ESP Helper device local IPv4 address, it can be found on
+    https://wmytych.usermd.net/public/configuration.php page after selecting your device in "Device information"
+
+    Usage:
+    pylogger.py ipv4 -options
+
+    Options:
+    -x                  -           Print all captured data without decoding it, used mostly for debugging.
+    -v                  -           Log verbose logs
+    -d                  -           Log debug logs
+    -i                  -           Log info logs
+    -w                  -           Log warn logs
+    -e                  -           Log error logs
+    -f                  -           Log fatal logs
+
+    If no log levels will be specified, no filtering on log level will be done.
+    """
+    print(help_text)
+
+
+if(len(sys.argv) == 2 and sys.argv[1] != '-h'):
      connect(sys.argv[1])
+elif(len(sys.argv) == 2 and sys.argv[1] == '-h'):
+    pylogger_print_help()
 elif(len(sys.argv) == 3 and sys.argv[2] == '-x'):
     connect_debug(sys.argv[1])
 elif(len(sys.argv) >= 3 and sys.argv[2] != '-x'):

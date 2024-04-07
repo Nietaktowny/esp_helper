@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wifi_5fc_5fmode_5ft_0',['wifi_c_mode_t',['../wifi__controller_8h.html#a062956c3402e036ec000008d21cdec8d',1,'wifi_controller.h']]]
+  ['nvs_5fc_5fopen_5fmode_5ft_0',['nvs_c_open_mode_t',['../nvs__controller_8h.html#a6689ef55a745136011533e08b2b357e6',1,'nvs_controller.h']]]
 ];

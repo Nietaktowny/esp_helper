@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('md_projects_2lib__tests_2lib_2CExcepti
 <li>Performance... CException can be configured for single tasking or multitasking. In single tasking, there is very little overhead past the setjmp/longjmp calls (which are already fast). In multitasking, your only additional overhead is the time it takes you to determine a unique task id 0 - num_tasks.</li>
 </ol>
 <p>For the latest version, go to <a href="http://throwtheswitch.org">ThrowTheSwitch.org</a></p>
-<h1><a class="anchor" id="autotoc_md0"></a>
+<h1><a class="anchor" id="autotoc_md1"></a>
 CONTENTS OF THIS DOCUMENT</h1>
 <ul>
 <li>Usage</li>
@@ -113,12 +113,12 @@ CONTENTS OF THIS DOCUMENT</h1>
 <li>Testing</li>
 <li>License</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md1"></a>
+<h2><a class="anchor" id="autotoc_md2"></a>
 Usage</h2>
 <p>Code that is to be protected are wrapped in <code>Try { } Catch { }</code> blocks. The code directly following the Try call is "protected", meaning that if any Throws occur, program control is directly transferred to the start of the Catch block.</p>
 <p>A numerical exception ID is included with Throw, and is made accessible from the Catch block.</p>
 <p>Throws can occur from within function calls (nested as deeply as you like) or directly from within the function itself.</p>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md3"></a>
 Limitations</h2>
 <p>This library was made to be as fast as possible, and provide basic exception handling. It is not a full-blown exception library. Because of this, there are a few limitations that should be observed in order to successfully utilize this library:</p>
 <ol type="1">
@@ -157,30 +157,30 @@ Limitations</h2>
 <p class="startli">There's just no easy way to track <code>malloc</code>'d memory, etc., without replacing or wrapping malloc calls or something like that. This is a light framework, so these options were not desirable.</p>
 </li>
 </ol>
-<h2><a class="anchor" id="autotoc_md3"></a>
+<h2><a class="anchor" id="autotoc_md4"></a>
 API</h2>
-<h3><a class="anchor" id="autotoc_md4"></a>
+<h3><a class="anchor" id="autotoc_md5"></a>
 Try</h3>
 <p><code>Try</code> is a macro which starts a protected block. It MUST be followed by a pair of braces or a single protected line (similar to an 'if'), enclosing the data that is to be protected. It <b>must</b> be followed by a <code>Catch</code> block (don't worry, you'll get compiler errors to let you know if you mess any of that up).</p>
-<h3><a class="anchor" id="autotoc_md5"></a>
+<h3><a class="anchor" id="autotoc_md6"></a>
 Catch(e)</h3>
 <p><code>Catch</code> is a macro which ends the <code>Try</code> block and starts the error handling block. The <code>Catch</code> block is called if and only if an exception was thrown while within the <code>Try</code> block. This error was thrown by a <code>Throw</code> call somewhere within <code>Try</code> (or within a function called within <code>Try</code>, or a function called by a function called within <code>Try</code>, etc).</p>
 <p>The single parameter <code>e</code> is filled with the error code which was thrown. This can be used for reporting, conditional cleanup, etc. (or you can just ignore it if you really want... people ignore return codes all the time, right?). <code>e</code> should be of type <code>EXCEPTION_T</code></p>
-<h3><a class="anchor" id="autotoc_md6"></a>
+<h3><a class="anchor" id="autotoc_md7"></a>
 Throw(e)</h3>
 <p>This is the method of throwing an error. A <code>Throw</code> should only occur from within a protected (<code>Try</code> ... <code>Catch</code>) block, though it may easily be nested many function calls deep without an impact on performance or functionality. <code>Throw</code> takes a single argument, which is an exception id which will be passed to <code>Catch</code> as the reason for the error.</p>
 <p>If you wish to rethrow an error, this can be done by calling <code>Throw(e)</code> with the error code you just caught. It <b>is</b> valid to throw from a catch block.</p>
-<h3><a class="anchor" id="autotoc_md7"></a>
+<h3><a class="anchor" id="autotoc_md8"></a>
 ExitTry()</h3>
 <p>On rare occasion, you might want to immediately exit your current <code>Try</code> block but <b>not</b> treat this as an error. Don't run the <code>Catch</code>. Just start executing from after the <code>Catch</code> as if nothing had happened... That's what <code>ExitTry</code> is for.</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 CONFIGURATION</h2>
 <p>CException is a mostly portable library. It has one universal dependency, and some macros which are required if working in a multi-tasking environment.</p>
 <ol type="1">
 <li>The standard C library setjmp must be available. Since this is part of the standard library, chances are good that you'll be fine.</li>
 <li>If working in a multitasking environment, methods for obtaining an index into an array of frames and to get the overall number of id's are required. If the OS supports a method to retrieve Task ID's, and those Tasks are number 0, 1, 2... you are in an ideal situation. Otherwise, a more creative mapping function may be required. Note that this function is likely to be called twice for each protected block and once during a throw. This is the only overhead in the system.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md9"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Exception.h</h2>
 <p>By convention, most projects include <code>Exception.h</code> which defines any further requirements, then calls <code><a class="el" href="CException_8h_source.html">CException.h</a></code> to do the gruntwork. All of these are optional. You could directly include <code><a class="el" href="CException_8h_source.html">CException.h</a></code> if you wanted and just use the defaults provided.</p>
 <ul>
@@ -225,7 +225,7 @@ Exception.h</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 TESTING</h2>
 <p>If you want to validate that CException works with your tools or that it works with your custom configuration, you may want to run the test suite.</p>
 <p>The test suite included makes use of the <code>Unity</code> Test Framework. It will require a native C compiler. The example makefile uses MinGW's gcc. Modify the makefile to include the proper paths to tools, then run <code>make</code> to compile and run the test application.</p>
@@ -243,7 +243,7 @@ TESTING</h2>
 </ul>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 LICENSE</h2>
 <p>This software is licensed under the MIT License</p>
 <p>Copyright (c) 2007-2021 Mark VanderVoord</p>

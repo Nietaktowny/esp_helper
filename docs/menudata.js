@@ -95,8 +95,13 @@ var menudata={children:[
 {text:"w",url:"globals_func_w.html#index_w"}]},
 {text:"Typedefs",url:"globals_type.html"},
 {text:"Enumerations",url:"globals_enum.html"},
-{text:"Enumerator",url:"globals_eval.html"},
+{text:"Enumerator",url:"globals_eval.html",children:[
+{text:"a",url:"globals_eval.html#index_a"},
+{text:"b",url:"globals_eval.html#index_b"},
+{text:"n",url:"globals_eval.html#index_n"},
+{text:"w",url:"globals_eval.html#index_w"}]},
 {text:"Macros",url:"globals_defs.html",children:[
+{text:"a",url:"globals_defs.html#index_a"},
 {text:"b",url:"globals_defs.html#index_b"},
 {text:"c",url:"globals_defs.html#index_c"},
 {text:"d",url:"globals_defs.html#index_d"},

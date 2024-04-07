@@ -2,3 +2,6 @@ cli_helper_client/lib/CException
 *.swp
 *.swn
 *.swo
+*/build
+build
+*/build/*

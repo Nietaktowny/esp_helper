@@ -1,8 +1,8 @@
 var searchData=
 [
   ['level_0',['level',['../structlogger__contex.html#a1ea4101a8ff3352c65cc9a003ba400eb',1,'logger_contex']]],
-  ['license_1',['license',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md55',1,'License'],['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md11',1,'LICENSE']]],
-  ['limitations_2',['limitations',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md38',1,'Limitations'],['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md2',1,'Limitations']]],
+  ['license_1',['license',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md56',1,'License'],['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md12',1,'LICENSE']]],
+  ['limitations_2',['limitations',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md39',1,'Limitations'],['../md_projects_2lib__tests_2lib_2CException_2docs_2CException.html#autotoc_md3',1,'Limitations']]],
   ['linked_3',['Linked',['../structLinked.html',1,'']]],
   ['linked_5flist_2ec_4',['linked_list.c',['../linked__list_8c.html',1,'']]],
   ['linked_5flist_2eh_5',['linked_list.h',['../linked__list_8h.html',1,'']]],
@@ -25,7 +25,7 @@ var searchData=
   ['linkedl_5fhash_5fstring_22',['linkedl_hash_string',['../linked__list__internal_8h.html#ac84fd780c8b8fe8376d6e659d4f2703a',1,'linkedl_hash_string(char *string):&#160;linked_list.c'],['../linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a',1,'linkedl_hash_string(char *string):&#160;linked_list.c']]],
   ['linkedl_5ft_23',['linkedl_t',['../linked__list_8h.html#a6da4f4dbb42aa9473bafdac6acc02863',1,'linked_list.h']]],
   ['list_24',['Todo List',['../todo.html',1,'']]],
-  ['local_20variables_25',['Local Variables',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md40',1,'']]],
+  ['local_20variables_25',['Local Variables',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md41',1,'']]],
   ['log_5fdebug_26',['LOG_DEBUG',['../logger_8h.html#a754b3d074e0af4ad3c7b918dd77ecb2d',1,'logger.h']]],
   ['log_5ferror_27',['LOG_ERROR',['../logger_8h.html#ad4a9117ce894e3319e903142347a0f63',1,'logger.h']]],
   ['log_5ffatal_28',['LOG_FATAL',['../logger_8h.html#a89cecd05aeaafc715ebc091cf74d10fe',1,'logger.h']]],

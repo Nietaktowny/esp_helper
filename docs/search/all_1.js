@@ -65,6 +65,6 @@ var searchData=
   ['bmp_5fstandard_5fsea_5flevel_5fpressure_62',['BMP_STANDARD_SEA_LEVEL_PRESSURE',['../bmp280_8h.html#af744e1b58f5bc4dde2b53f4c096d2a46',1,'bmp280.h']]],
   ['bmp_5fstartup_5ftime_63',['BMP_STARTUP_TIME',['../bmp280__internal_8h.html#a790cbfdb6af7953eef7c7f6a346c61ab',1,'bmp280_internal.h']]],
   ['bmp_5fstdby_5ftime_5ft_64',['bmp_stdby_time_t',['../bmp280_8h.html#a7e16473d0fcc239a4216896127c57a6d',1,'bmp280.h']]],
-  ['braces_65',['Braces',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md23',1,'']]],
+  ['braces_65',['Braces',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md24',1,'']]],
   ['bssid_66',['bssid',['../structwifi__c__ap__record__obj.html#a2ad61a3fad331d95100f9fd2eca3b016',1,'wifi_c_ap_record_obj']]]
 ];

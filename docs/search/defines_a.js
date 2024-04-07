@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['set_5flog_5flevel_0',['SET_LOG_LEVEL',['../logger_8h.html#abb04789b359d75db5b8a5fba6aefca8f',1,'logger.h']]]
+  ['ota_5fc_5ferr_5fbase_0',['OTA_C_ERR_BASE',['../ota__c__errors_8h.html#a843a68c72a5c1d7b9c7c5613ecd061f8',1,'ota_c_errors.h']]],
+  ['ota_5fc_5ferr_5fimages_5fthe_5fsame_1',['OTA_C_ERR_IMAGES_THE_SAME',['../ota__c__errors_8h.html#a6a99c5bc04728ff98a6cab9bcb1eee0b',1,'ota_c_errors.h']]]
 ];
