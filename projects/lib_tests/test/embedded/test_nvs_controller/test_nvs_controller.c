@@ -1,35 +1,32 @@
-#include "unity.h"
 #include "esp_system.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "unity.h"
 #include <stdio.h>
 
 // Change fatal color to purple, to use it to log test names.
 #include "ansi_colors.h"
 #define FATAL_COLOR PURPLE_BOLD
 
-#include "nvs_controller.h"
-#include "logger.h"
 #include "err_controller.h"
+#include "logger.h"
+#include "nvs_controller.h"
 
 #include "nvs.h"
 #include "nvs_flash.h"
 #include "string.h"
 
-void setUp(void)
-{
+void setUp(void) {
     // set stuff up here
     logger_init();
     logger_set_log_level(LOG_LEVEL_VERBOSE);
 }
 
-void tearDown(void)
-{
+void tearDown(void) {
     // clean stuff up here
 }
 
-void test_if_nvs_init_returns_zero(void)
-{
+void test_if_nvs_init_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -46,8 +43,7 @@ void test_if_nvs_init_returns_zero(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_init_partition_returns_err_when_partition_not_found(void)
-{
+void test_if_nvs_init_partition_returns_err_when_partition_not_found(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -58,11 +54,11 @@ void test_if_nvs_init_partition_returns_err_when_partition_not_found(void)
     err = nvs_c_init_partition("partition");
 
     // then
-    TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_PARTITION_NOT_FOUND, err, "nvs_c_init_partition should return NVS_C_ERR_NOT_FOUND when partition not found");
+    TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_PARTITION_NOT_FOUND, err,
+                              "nvs_c_init_partition should return NVS_C_ERR_NOT_FOUND when partition not found");
 }
 
-void test_if_nvs_init_partition_returns_zero(void)
-{
+void test_if_nvs_init_partition_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -79,8 +75,7 @@ void test_if_nvs_init_partition_returns_zero(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_init_partition_returns_err_on_null_label(void)
-{
+void test_if_nvs_init_partition_returns_err_on_null_label(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -94,8 +89,7 @@ void test_if_nvs_init_partition_returns_err_on_null_label(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_init_partition should return err on null label");
 }
 
-void test_if_nvs_err_base_is_defined(void)
-{
+void test_if_nvs_err_base_is_defined(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -105,8 +99,7 @@ void test_if_nvs_err_base_is_defined(void)
 #endif
 }
 
-void test_if_nvs_err_wrong_mode_is_defined(void)
-{
+void test_if_nvs_err_wrong_mode_is_defined(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -116,8 +109,7 @@ void test_if_nvs_err_wrong_mode_is_defined(void)
 #endif
 }
 
-void test_if_nvs_err_nvs_not_init_is_defined(void)
-{
+void test_if_nvs_err_nvs_not_init_is_defined(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -127,8 +119,7 @@ void test_if_nvs_err_nvs_not_init_is_defined(void)
 #endif
 }
 
-void test_if_nvs_err_nvs_partition_not_found_is_defined(void)
-{
+void test_if_nvs_err_nvs_partition_not_found_is_defined(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -138,8 +129,7 @@ void test_if_nvs_err_nvs_partition_not_found_is_defined(void)
 #endif
 }
 
-void test_if_err_to_name_returns_string_on_nvs_err_partition_not_found(void)
-{
+void test_if_err_to_name_returns_string_on_nvs_err_partition_not_found(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -151,8 +141,7 @@ void test_if_err_to_name_returns_string_on_nvs_err_partition_not_found(void)
     TEST_ASSERT_EQUAL_STRING_MESSAGE(exp_name, error_name, "error_to_name error string different from expected");
 }
 
-void test_if_err_to_name_returns_string_on_nvs_err_wrong_mode(void)
-{
+void test_if_err_to_name_returns_string_on_nvs_err_wrong_mode(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -164,8 +153,7 @@ void test_if_err_to_name_returns_string_on_nvs_err_wrong_mode(void)
     TEST_ASSERT_EQUAL_STRING_MESSAGE(exp_name, error_name, "error_to_name error string different from expected");
 }
 
-void test_if_err_to_name_returns_string_on_nvs_err_not_init(void)
-{
+void test_if_err_to_name_returns_string_on_nvs_err_not_init(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -177,8 +165,7 @@ void test_if_err_to_name_returns_string_on_nvs_err_not_init(void)
     TEST_ASSERT_EQUAL_STRING_MESSAGE(exp_name, error_name, "error_to_name error string different from expected");
 }
 
-void test_if_nvs_open_returns_err_on_null_handle(void)
-{
+void test_if_nvs_open_returns_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -193,8 +180,7 @@ void test_if_nvs_open_returns_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_open should return err on NULL handle");
 }
 
-void test_if_nvs_open_returns_err_on_null_namespace(void)
-{
+void test_if_nvs_open_returns_err_on_null_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -209,8 +195,7 @@ void test_if_nvs_open_returns_err_on_null_namespace(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_open should return err on NULL namespace");
 }
 
-void test_if_nvs_open_returns_zero(void)
-{
+void test_if_nvs_open_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -230,8 +215,7 @@ void test_if_nvs_open_returns_zero(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_err_nvs_namespace_not_found_is_defined(void)
-{
+void test_if_nvs_err_nvs_namespace_not_found_is_defined(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -241,8 +225,7 @@ void test_if_nvs_err_nvs_namespace_not_found_is_defined(void)
 #endif
 }
 
-void test_if_nvs_err_nvs_key_not_found_is_defined(void)
-{
+void test_if_nvs_err_nvs_key_not_found_is_defined(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -252,8 +235,7 @@ void test_if_nvs_err_nvs_key_not_found_is_defined(void)
 #endif
 }
 
-void test_if_err_to_name_returns_string_on_nvs_err_namespace_not_found(void)
-{
+void test_if_err_to_name_returns_string_on_nvs_err_namespace_not_found(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -265,8 +247,7 @@ void test_if_err_to_name_returns_string_on_nvs_err_namespace_not_found(void)
     TEST_ASSERT_EQUAL_STRING_MESSAGE(exp_name, error_name, "error_to_name error string different from expected");
 }
 
-void test_if_err_to_name_returns_string_on_nvs_err_key_not_found(void)
-{
+void test_if_err_to_name_returns_string_on_nvs_err_key_not_found(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -278,8 +259,7 @@ void test_if_err_to_name_returns_string_on_nvs_err_key_not_found(void)
     TEST_ASSERT_EQUAL_STRING_MESSAGE(exp_name, error_name, "error_to_name error string different from expected");
 }
 
-void test_if_nvs_open_returns_err_when_partition_not_init(void)
-{
+void test_if_nvs_open_returns_err_when_partition_not_init(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -295,8 +275,7 @@ void test_if_nvs_open_returns_err_when_partition_not_init(void)
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NOT_INIT, err, "nvs_c_open should return err when default partition not init");
 }
 
-void test_if_nvs_open_from_partition_returns_err_when_partition_not_init(void)
-{
+void test_if_nvs_open_from_partition_returns_err_when_partition_not_init(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -313,8 +292,7 @@ void test_if_nvs_open_from_partition_returns_err_when_partition_not_init(void)
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NOT_INIT, err, "nvs_c_open_from_partition should return err when partition not init");
 }
 
-void test_if_nvs_open_from_partition_returns_zero(void)
-{
+void test_if_nvs_open_from_partition_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -335,8 +313,7 @@ void test_if_nvs_open_from_partition_returns_zero(void)
     nvs_c_deinit_partition(partition_label);
 }
 
-void test_if_nvs_open_from_partition_returns_err_on_null_handle(void)
-{
+void test_if_nvs_open_from_partition_returns_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -352,8 +329,7 @@ void test_if_nvs_open_from_partition_returns_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_open_from_partition should return err on NULL handle");
 }
 
-void test_if_nvs_open_from_partition_returns_err_on_null_namespace(void)
-{
+void test_if_nvs_open_from_partition_returns_err_on_null_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -369,8 +345,7 @@ void test_if_nvs_open_from_partition_returns_err_on_null_namespace(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_open_from_partition should return err on NULL namespace");
 }
 
-void test_if_nvs_open_from_partition_returns_err_on_null_partition_label(void)
-{
+void test_if_nvs_open_from_partition_returns_err_on_null_partition_label(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -386,8 +361,7 @@ void test_if_nvs_open_from_partition_returns_err_on_null_partition_label(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_open_from_partition should return err on NULL partition label");
 }
 
-void test_if_nvs_open_stores_correct_partition_name_in_handle(void)
-{
+void test_if_nvs_open_stores_correct_partition_name_in_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -400,14 +374,14 @@ void test_if_nvs_open_stores_correct_partition_name_in_handle(void)
     nvs_c_open(&handle, namespace, NVS_C_READWRITE);
 
     // then
-    TEST_ASSERT_EQUAL_STRING_MESSAGE(NVS_C_DEFAULT_NVS_PART_NAME, (struct nvs_c_handle_obj *)handle->partition, "nvs_c_open should store correct default nvs partition name");
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(NVS_C_DEFAULT_NVS_PART_NAME, (struct nvs_c_handle_obj *)handle->partition,
+                                     "nvs_c_open should store correct default nvs partition name");
 
     // after
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_open_stores_correct_namespace_name_in_handle(void)
-{
+void test_if_nvs_open_stores_correct_namespace_name_in_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -420,14 +394,14 @@ void test_if_nvs_open_stores_correct_namespace_name_in_handle(void)
     nvs_c_open(&handle, namespace, NVS_C_READWRITE);
 
     // then
-    TEST_ASSERT_EQUAL_STRING_MESSAGE(namespace, (struct nvs_c_handle_obj *)handle->namespace, "nvs_c_open should store correct nvs namespace name");
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(namespace, (struct nvs_c_handle_obj *)handle->namespace,
+                                     "nvs_c_open should store correct nvs namespace name");
 
     // after
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_open_from_partition_stores_correct_partition_name_in_handle(void)
-{
+void test_if_nvs_open_from_partition_stores_correct_partition_name_in_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -441,14 +415,14 @@ void test_if_nvs_open_from_partition_stores_correct_partition_name_in_handle(voi
     TEST_ASSERT_FALSE(nvs_c_open_from_partition(&handle, partition_label, namespace, NVS_C_READWRITE));
 
     // then
-    TEST_ASSERT_EQUAL_STRING_MESSAGE(partition_label, (struct nvs_c_handle_obj *)handle->partition, "nvs_c_open_from_partition should store correct nvs partition name");
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(partition_label, (struct nvs_c_handle_obj *)handle->partition,
+                                     "nvs_c_open_from_partition should store correct nvs partition name");
 
     // after
     nvs_c_deinit_partition(partition_label);
 }
 
-void test_if_nvs_open_from_partition_stores_correct_namespace_name_in_handle(void)
-{
+void test_if_nvs_open_from_partition_stores_correct_namespace_name_in_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -462,14 +436,14 @@ void test_if_nvs_open_from_partition_stores_correct_namespace_name_in_handle(voi
     nvs_c_open_from_partition(&handle, partition_label, namespace, NVS_C_READWRITE);
 
     // then
-    TEST_ASSERT_EQUAL_STRING_MESSAGE(namespace, (struct nvs_c_handle_obj *)handle->namespace, "nvs_c_open_from_partition should store correct nvs namespace name");
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(namespace, (struct nvs_c_handle_obj *)handle->namespace,
+                                     "nvs_c_open_from_partition should store correct nvs namespace name");
 
     // after
     nvs_c_deinit_partition(partition_label);
 }
 
-void test_if_nvs_init_partition_returns_wrong_args_err_name_on_too_long_partition_name(void)
-{
+void test_if_nvs_init_partition_returns_wrong_args_err_name_on_too_long_partition_name(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -482,11 +456,11 @@ void test_if_nvs_init_partition_returns_wrong_args_err_name_on_too_long_partitio
     err = nvs_c_init_partition(partition_label);
 
     // then
-    TEST_ASSERT_EQUAL_STRING_MESSAGE(expected_error_name, error_to_name(err), "nvs_c_init_partition should return correct error name on too long partition name");
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(expected_error_name, error_to_name(err),
+                                     "nvs_c_init_partition should return correct error name on too long partition name");
 }
 
-void test_if_nvs_init_partition_returns_wrong_args_err_on_too_long_partition_name(void)
-{
+void test_if_nvs_init_partition_returns_wrong_args_err_on_too_long_partition_name(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -501,8 +475,7 @@ void test_if_nvs_init_partition_returns_wrong_args_err_on_too_long_partition_nam
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_WRONG_ARGS, err, "nvs_c_init_partition should return ERR_C_WRONG_ARGS on too long partition name");
 }
 
-void test_if_nvs_open_from_partition_read_only_returns_err_on_partition_not_found(void)
-{
+void test_if_nvs_open_from_partition_read_only_returns_err_on_partition_not_found(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -517,14 +490,14 @@ void test_if_nvs_open_from_partition_read_only_returns_err_on_partition_not_foun
     err = nvs_c_open_from_partition(&handle, partition_label, namespace, NVS_C_READONLY);
 
     // then
-    TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NAMESPACE_NOT_FOUND, err, "nvs_c_open_from_partition when read only mode is used should return err when namespace not found");
+    TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NAMESPACE_NOT_FOUND, err,
+                              "nvs_c_open_from_partition when read only mode is used should return err when namespace not found");
 
     // after
     nvs_c_deinit_partition(partition_label);
 }
 
-void test_if_nvs_close_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_close_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -538,8 +511,7 @@ void test_if_nvs_close_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_close should return err on NULL handle");
 }
 
-void test_if_nvs_close_should_return_zero(void)
-{
+void test_if_nvs_close_should_return_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -554,8 +526,7 @@ void test_if_nvs_close_should_return_zero(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_close should return zero");
 }
 
-void test_if_nvs_c_write_string_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_string_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -571,8 +542,7 @@ void test_if_nvs_c_write_string_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_string should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_string_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_string_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -589,8 +559,7 @@ void test_if_nvs_c_write_string_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_string should return err on NULL key");
 }
 
-void test_if_nvs_c_write_string_should_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_write_string_should_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -607,8 +576,7 @@ void test_if_nvs_c_write_string_should_return_err_on_null_buffer(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_string should return err on NULL buffer");
 }
 
-void test_if_nvs_c_write_string_should_return_err_read_only_namespace(void)
-{
+void test_if_nvs_c_write_string_should_return_err_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -633,8 +601,7 @@ void test_if_nvs_c_write_string_should_return_err_read_only_namespace(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_write_string_should_return_zero(void)
-{
+void test_if_nvs_c_write_string_should_return_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -657,8 +624,7 @@ void test_if_nvs_c_write_string_should_return_zero(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_written_string_can_be_read(void)
-{
+void test_if_written_string_can_be_read(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -674,7 +640,6 @@ void test_if_written_string_can_be_read(void)
     nvs_c_open(&handle, "nvs", NVS_C_READWRITE);
     nvs_c_write_string(handle, key, written);
     nvs_c_read_string(handle, key, read, sizeof(read));
-    
 
     // then
     TEST_ASSERT_EQUAL_STRING_MESSAGE(written, read, "nvs_c_write_string should return ERR_C_OK");
@@ -685,8 +650,7 @@ void test_if_written_string_can_be_read(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_string_returns_zero(void)
-{
+void test_if_nvs_c_read_string_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -713,8 +677,7 @@ void test_if_nvs_c_read_string_returns_zero(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_read_string_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_string_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -730,8 +693,7 @@ void test_if_nvs_c_read_string_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_string should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_string_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_string_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -748,8 +710,7 @@ void test_if_nvs_c_read_string_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_string should return err on NULL key");
 }
 
-void test_if_nvs_c_read_string_should_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_string_should_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -766,8 +727,7 @@ void test_if_nvs_c_read_string_should_return_err_on_null_buffer(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_string should return err on NULL buffer");
 }
 
-void test_if_nvs_c_erase_namespace_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_erase_namespace_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -781,8 +741,7 @@ void test_if_nvs_c_erase_namespace_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_erase_namespace should return err on NULL handle");
 }
 
-void test_if_nvs_c_erase_namespace_should_return_zero(void)
-{
+void test_if_nvs_c_erase_namespace_should_return_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -802,8 +761,7 @@ void test_if_nvs_c_erase_namespace_should_return_zero(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_close_should_free_handle(void)
-{
+void test_if_nvs_close_should_free_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -818,8 +776,7 @@ void test_if_nvs_close_should_free_handle(void)
     TEST_ASSERT_NULL_MESSAGE(handle, "nvs_c_close should free handle");
 }
 
-void test_if_nvs_c_erase_namespace_should_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_erase_namespace_should_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -841,8 +798,7 @@ void test_if_nvs_c_erase_namespace_should_err_on_read_only_namespace(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_deinit_default_partition_should_return_err_on_not_init_partition(void)
-{
+void test_if_nvs_c_deinit_default_partition_should_return_err_on_not_init_partition(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -856,8 +812,7 @@ void test_if_nvs_c_deinit_default_partition_should_return_err_on_not_init_partit
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NOT_INIT, err, "nvs_c_deinit_default_partition should return err on not init nvs partition");
 }
 
-void test_if_nvs_c_deinit_partition_should_return_err_on_not_init_partition(void)
-{
+void test_if_nvs_c_deinit_partition_should_return_err_on_not_init_partition(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -872,8 +827,7 @@ void test_if_nvs_c_deinit_partition_should_return_err_on_not_init_partition(void
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NOT_INIT, err, "nvs_c_deinit_partition should return err on not init nvs partition");
 }
 
-void test_if_nvs_c_deinit_default_partition_should_return_zero(void)
-{
+void test_if_nvs_c_deinit_default_partition_should_return_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -888,8 +842,7 @@ void test_if_nvs_c_deinit_default_partition_should_return_zero(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_deinit_default_partition should return zero");
 }
 
-void test_if_nvs_c_deinit_partition_should_return_zero(void)
-{
+void test_if_nvs_c_deinit_partition_should_return_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -905,8 +858,7 @@ void test_if_nvs_c_deinit_partition_should_return_zero(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_deinit_partition should return zero");
 }
 
-void test_if_nvs_c_write_int8_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_int8_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -922,8 +874,7 @@ void test_if_nvs_c_write_int8_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_int8 should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_int8_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_int8_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -940,8 +891,7 @@ void test_if_nvs_c_write_int8_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_int8 should return err on NULL key");
 }
 
-void test_if_nvs_c_write_int8_returns_zero(void)
-{
+void test_if_nvs_c_write_int8_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -964,8 +914,7 @@ void test_if_nvs_c_write_int8_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_int8_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_int8_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -981,8 +930,7 @@ void test_if_nvs_c_read_int8_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_int8 should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_int8_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_int8_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -999,8 +947,7 @@ void test_if_nvs_c_read_int8_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_int8 should return err on NULL key");
 }
 
-void test_if_nvs_c_read_int8_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_int8_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1022,8 +969,7 @@ void test_if_nvs_c_read_int8_return_err_on_null_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_int8_returns_zero(void)
-{
+void test_if_nvs_c_read_int8_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1047,8 +993,7 @@ void test_if_nvs_c_read_int8_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int8_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_write_int8_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1072,8 +1017,7 @@ void test_if_nvs_c_write_int8_returns_err_on_read_only_namespace(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int8_writes_data(void)
-{
+void test_if_nvs_c_write_int8_writes_data(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1097,8 +1041,7 @@ void test_if_nvs_c_write_int8_writes_data(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int16_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_int16_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1114,8 +1057,7 @@ void test_if_nvs_c_write_int16_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_int16 should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_int16_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_int16_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1132,8 +1074,7 @@ void test_if_nvs_c_write_int16_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_int16 should return err on NULL key");
 }
 
-void test_if_nvs_c_write_int16_returns_zero(void)
-{
+void test_if_nvs_c_write_int16_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1156,8 +1097,7 @@ void test_if_nvs_c_write_int16_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int16_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_write_int16_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1181,8 +1121,7 @@ void test_if_nvs_c_write_int16_returns_err_on_read_only_namespace(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_int16_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_int16_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1198,8 +1137,7 @@ void test_if_nvs_c_read_int16_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_int16 should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_int16_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_int16_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1216,8 +1154,7 @@ void test_if_nvs_c_read_int16_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_int16 should return err on NULL key");
 }
 
-void test_if_nvs_c_read_int16_returns_zero(void)
-{
+void test_if_nvs_c_read_int16_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1241,8 +1178,7 @@ void test_if_nvs_c_read_int16_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_int16_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_int16_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1264,8 +1200,7 @@ void test_if_nvs_c_read_int16_return_err_on_null_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int16_writes_data(void)
-{
+void test_if_nvs_c_write_int16_writes_data(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1289,8 +1224,7 @@ void test_if_nvs_c_write_int16_writes_data(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int32_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_int32_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1306,8 +1240,7 @@ void test_if_nvs_c_write_int32_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_int32 should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_int32_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_int32_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1324,8 +1257,7 @@ void test_if_nvs_c_write_int32_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_int32 should return err on NULL key");
 }
 
-void test_if_nvs_c_write_int32_returns_zero(void)
-{
+void test_if_nvs_c_write_int32_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1348,8 +1280,7 @@ void test_if_nvs_c_write_int32_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int32_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_write_int32_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1373,8 +1304,7 @@ void test_if_nvs_c_write_int32_returns_err_on_read_only_namespace(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_int32_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_int32_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1390,8 +1320,7 @@ void test_if_nvs_c_read_int32_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_int32 should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_int32_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_int32_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1408,8 +1337,7 @@ void test_if_nvs_c_read_int32_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_int32 should return err on NULL key");
 }
 
-void test_if_nvs_c_read_int32_returns_zero(void)
-{
+void test_if_nvs_c_read_int32_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1433,8 +1361,7 @@ void test_if_nvs_c_read_int32_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_int32_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_int32_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1456,8 +1383,7 @@ void test_if_nvs_c_read_int32_return_err_on_null_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int32_writes_data(void)
-{
+void test_if_nvs_c_write_int32_writes_data(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1481,8 +1407,7 @@ void test_if_nvs_c_write_int32_writes_data(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int64_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_int64_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1498,8 +1423,7 @@ void test_if_nvs_c_write_int64_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_int64 should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_int64_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_int64_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1516,8 +1440,7 @@ void test_if_nvs_c_write_int64_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_int64 should return err on NULL key");
 }
 
-void test_if_nvs_c_write_int64_returns_zero(void)
-{
+void test_if_nvs_c_write_int64_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1540,8 +1463,7 @@ void test_if_nvs_c_write_int64_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int64_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_write_int64_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1565,8 +1487,7 @@ void test_if_nvs_c_write_int64_returns_err_on_read_only_namespace(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_int64_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_int64_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1582,8 +1503,7 @@ void test_if_nvs_c_read_int64_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_int64 should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_int64_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_int64_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1600,8 +1520,7 @@ void test_if_nvs_c_read_int64_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_int64 should return err on NULL key");
 }
 
-void test_if_nvs_c_read_int64_returns_zero(void)
-{
+void test_if_nvs_c_read_int64_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1625,8 +1544,7 @@ void test_if_nvs_c_read_int64_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_int64_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_int64_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1648,8 +1566,7 @@ void test_if_nvs_c_read_int64_return_err_on_null_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_int64_writes_data(void)
-{
+void test_if_nvs_c_write_int64_writes_data(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1673,8 +1590,7 @@ void test_if_nvs_c_write_int64_writes_data(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint8_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_uint8_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1690,8 +1606,7 @@ void test_if_nvs_c_write_uint8_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_uint8 should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_uint8_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_uint8_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1708,8 +1623,7 @@ void test_if_nvs_c_write_uint8_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_uint8 should return err on NULL key");
 }
 
-void test_if_nvs_c_write_uint8_returns_zero(void)
-{
+void test_if_nvs_c_write_uint8_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1732,8 +1646,7 @@ void test_if_nvs_c_write_uint8_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_uint8_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_uint8_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1749,8 +1662,7 @@ void test_if_nvs_c_read_uint8_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_uint8 should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_uint8_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_uint8_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1767,8 +1679,7 @@ void test_if_nvs_c_read_uint8_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_uint8 should return err on NULL key");
 }
 
-void test_if_nvs_c_read_uint8_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_uint8_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1790,8 +1701,7 @@ void test_if_nvs_c_read_uint8_return_err_on_null_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_uint8_returns_zero(void)
-{
+void test_if_nvs_c_read_uint8_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1815,8 +1725,7 @@ void test_if_nvs_c_read_uint8_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint8_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_write_uint8_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1840,8 +1749,7 @@ void test_if_nvs_c_write_uint8_returns_err_on_read_only_namespace(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint8_writes_data(void)
-{
+void test_if_nvs_c_write_uint8_writes_data(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1865,8 +1773,7 @@ void test_if_nvs_c_write_uint8_writes_data(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint16_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_uint16_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1882,8 +1789,7 @@ void test_if_nvs_c_write_uint16_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_uint16 should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_uint16_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_uint16_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1900,8 +1806,7 @@ void test_if_nvs_c_write_uint16_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_uint16 should return err on NULL key");
 }
 
-void test_if_nvs_c_write_uint16_returns_zero(void)
-{
+void test_if_nvs_c_write_uint16_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1924,8 +1829,7 @@ void test_if_nvs_c_write_uint16_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint16_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_write_uint16_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1949,8 +1853,7 @@ void test_if_nvs_c_write_uint16_returns_err_on_read_only_namespace(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_uint16_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_uint16_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1966,8 +1869,7 @@ void test_if_nvs_c_read_uint16_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_uint16 should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_uint16_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_uint16_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -1984,8 +1886,7 @@ void test_if_nvs_c_read_uint16_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_uint16 should return err on NULL key");
 }
 
-void test_if_nvs_c_read_uint16_returns_zero(void)
-{
+void test_if_nvs_c_read_uint16_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2009,8 +1910,7 @@ void test_if_nvs_c_read_uint16_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_uint16_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_uint16_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2032,8 +1932,7 @@ void test_if_nvs_c_read_uint16_return_err_on_null_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint16_writes_data(void)
-{
+void test_if_nvs_c_write_uint16_writes_data(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2057,8 +1956,7 @@ void test_if_nvs_c_write_uint16_writes_data(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint32_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_uint32_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2074,8 +1972,7 @@ void test_if_nvs_c_write_uint32_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_uint32 should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_uint32_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_uint32_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2092,8 +1989,7 @@ void test_if_nvs_c_write_uint32_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_uint32 should return err on NULL key");
 }
 
-void test_if_nvs_c_write_uint32_returns_zero(void)
-{
+void test_if_nvs_c_write_uint32_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2116,8 +2012,7 @@ void test_if_nvs_c_write_uint32_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint32_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_write_uint32_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2141,8 +2036,7 @@ void test_if_nvs_c_write_uint32_returns_err_on_read_only_namespace(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_uint32_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_uint32_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2158,8 +2052,7 @@ void test_if_nvs_c_read_uint32_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_uint32 should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_uint32_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_uint32_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2176,8 +2069,7 @@ void test_if_nvs_c_read_uint32_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_uint32 should return err on NULL key");
 }
 
-void test_if_nvs_c_read_uint32_returns_zero(void)
-{
+void test_if_nvs_c_read_uint32_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2201,8 +2093,7 @@ void test_if_nvs_c_read_uint32_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_uint32_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_uint32_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2224,8 +2115,7 @@ void test_if_nvs_c_read_uint32_return_err_on_null_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint32_writes_data(void)
-{
+void test_if_nvs_c_write_uint32_writes_data(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2249,8 +2139,7 @@ void test_if_nvs_c_write_uint32_writes_data(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint64_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_uint64_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2266,8 +2155,7 @@ void test_if_nvs_c_write_uint64_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_uint64 should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_uint64_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_uint64_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2284,8 +2172,7 @@ void test_if_nvs_c_write_uint64_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_uint64 should return err on NULL key");
 }
 
-void test_if_nvs_c_write_uint64_returns_zero(void)
-{
+void test_if_nvs_c_write_uint64_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2308,8 +2195,7 @@ void test_if_nvs_c_write_uint64_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint64_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_write_uint64_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2333,8 +2219,7 @@ void test_if_nvs_c_write_uint64_returns_err_on_read_only_namespace(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_uint64_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_uint64_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2350,8 +2235,7 @@ void test_if_nvs_c_read_uint64_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_uint64 should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_uint64_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_uint64_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2368,8 +2252,7 @@ void test_if_nvs_c_read_uint64_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_uint64 should return err on NULL key");
 }
 
-void test_if_nvs_c_read_uint64_returns_zero(void)
-{
+void test_if_nvs_c_read_uint64_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2393,8 +2276,7 @@ void test_if_nvs_c_read_uint64_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_uint64_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_uint64_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2416,8 +2298,7 @@ void test_if_nvs_c_read_uint64_return_err_on_null_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_uint64_writes_data(void)
-{
+void test_if_nvs_c_write_uint64_writes_data(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2441,8 +2322,7 @@ void test_if_nvs_c_write_uint64_writes_data(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_write_blob_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_write_blob_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2458,8 +2338,7 @@ void test_if_nvs_c_write_blob_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_blob should return err on NULL handle");
 }
 
-void test_if_nvs_c_write_blob_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_write_blob_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2476,8 +2355,7 @@ void test_if_nvs_c_write_blob_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_blob should return err on NULL key");
 }
 
-void test_if_nvs_c_write_blob_should_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_write_blob_should_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2494,8 +2372,7 @@ void test_if_nvs_c_write_blob_should_return_err_on_null_buffer(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_write_blob should return err on NULL buffer");
 }
 
-void test_if_nvs_c_write_blob_should_return_err_read_only_namespace(void)
-{
+void test_if_nvs_c_write_blob_should_return_err_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2520,8 +2397,7 @@ void test_if_nvs_c_write_blob_should_return_err_read_only_namespace(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_write_blob_should_return_zero(void)
-{
+void test_if_nvs_c_write_blob_should_return_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2544,8 +2420,7 @@ void test_if_nvs_c_write_blob_should_return_zero(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_written_blob_can_be_read(void)
-{
+void test_if_written_blob_can_be_read(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2570,14 +2445,14 @@ void test_if_written_blob_can_be_read(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_read_blob_returns_zero(void)
-{
+void test_if_nvs_c_read_blob_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
     // given
     int err = ERR_C_OK;
     const char *key = "key";
+    const char *namespace = "nvs";
     struct nvs_c_handle_obj nvs = {0};
     nvs_c_handle_t handle = &nvs;
     char written[] = "data";
@@ -2585,7 +2460,7 @@ void test_if_nvs_c_read_blob_returns_zero(void)
 
     // when
     nvs_c_init_default_partition();
-    nvs_c_open(&handle, "nvs", NVS_C_READWRITE);
+    nvs_c_open(&handle, namespace, NVS_C_READWRITE);
     nvs_c_write_blob(handle, key, written, sizeof(written));
     err = nvs_c_read_blob(handle, key, read, sizeof(read));
 
@@ -2598,8 +2473,7 @@ void test_if_nvs_c_read_blob_returns_zero(void)
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_read_blob_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_blob_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2615,8 +2489,7 @@ void test_if_nvs_c_read_blob_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_blob should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_blob_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_blob_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2633,8 +2506,7 @@ void test_if_nvs_c_read_blob_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_blob should return err on NULL key");
 }
 
-void test_if_nvs_c_read_blob_should_return_err_on_null_buffer(void)
-{
+void test_if_nvs_c_read_blob_should_return_err_on_null_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2651,8 +2523,7 @@ void test_if_nvs_c_read_blob_should_return_err_on_null_buffer(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_blob should return err on NULL buffer");
 }
 
-void test_if_nvs_c_read_string_returns_err_on_too_small_buffer(void)
-{
+void test_if_nvs_c_read_string_returns_err_on_too_small_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2678,8 +2549,7 @@ void test_if_nvs_c_read_string_returns_err_on_too_small_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_blob_returns_err_on_too_small_buffer(void)
-{
+void test_if_nvs_c_read_blob_returns_err_on_too_small_buffer(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2694,7 +2564,7 @@ void test_if_nvs_c_read_blob_returns_err_on_too_small_buffer(void)
     // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "nvs", NVS_C_READWRITE);
-    nvs_c_write_blob(handle, key, written, strlen(written));
+    nvs_c_write_blob(handle, key, written, 16);
     err = nvs_c_read_blob(handle, key, read, sizeof(read));
     nvs_c_close(&handle);
 
@@ -2705,8 +2575,7 @@ void test_if_nvs_c_read_blob_returns_err_on_too_small_buffer(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_string_length_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_string_length_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2722,8 +2591,7 @@ void test_if_nvs_c_read_string_length_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_string_length should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_string_length_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_string_length_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2740,8 +2608,7 @@ void test_if_nvs_c_read_string_length_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_string_length should return err on NULL key");
 }
 
-void test_if_nvs_c_read_string_length_should_return_err_on_null_size(void)
-{
+void test_if_nvs_c_read_string_length_should_return_err_on_null_size(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2758,8 +2625,7 @@ void test_if_nvs_c_read_string_length_should_return_err_on_null_size(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_string_length should return err on NULL size");
 }
 
-void test_if_nvs_c_read_string_length_returns_zero(void)
-{
+void test_if_nvs_c_read_string_length_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2776,7 +2642,7 @@ void test_if_nvs_c_read_string_length_returns_zero(void)
     nvs_c_open(&handle, "nvs", NVS_C_READWRITE);
     nvs_c_write_string(handle, key, written);
     err = nvs_c_read_string_length(handle, key, &size);
-    
+
     // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_read_string_length should return zero");
 
@@ -2786,8 +2652,7 @@ void test_if_nvs_c_read_string_length_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_string_length_returns_written_string_size(void)
-{
+void test_if_nvs_c_read_string_length_returns_written_string_size(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2803,7 +2668,7 @@ void test_if_nvs_c_read_string_length_returns_written_string_size(void)
     nvs_c_open(&handle, "nvs", NVS_C_READWRITE);
     nvs_c_write_string(handle, key, written);
     nvs_c_read_string_length(handle, key, &size);
-    
+
     // then
     TEST_ASSERT_EQUAL_MESSAGE(strlen(written) + 1, size, "nvs_c_read_string_length should return correct written data size");
 
@@ -2813,8 +2678,7 @@ void test_if_nvs_c_read_string_length_returns_written_string_size(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_blob_length_should_return_err_on_null_handle(void)
-{
+void test_if_nvs_c_read_blob_length_should_return_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2830,8 +2694,7 @@ void test_if_nvs_c_read_blob_length_should_return_err_on_null_handle(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_blob_length should return err on NULL handle");
 }
 
-void test_if_nvs_c_read_blob_length_should_return_err_on_null_key(void)
-{
+void test_if_nvs_c_read_blob_length_should_return_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2848,8 +2711,7 @@ void test_if_nvs_c_read_blob_length_should_return_err_on_null_key(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_blob_length should return err on NULL key");
 }
 
-void test_if_nvs_c_read_blob_length_should_return_err_on_null_size(void)
-{
+void test_if_nvs_c_read_blob_length_should_return_err_on_null_size(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2866,8 +2728,7 @@ void test_if_nvs_c_read_blob_length_should_return_err_on_null_size(void)
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_read_blob_length should return err on NULL size");
 }
 
-void test_if_nvs_c_read_blob_length_returns_zero(void)
-{
+void test_if_nvs_c_read_blob_length_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2884,7 +2745,7 @@ void test_if_nvs_c_read_blob_length_returns_zero(void)
     nvs_c_open(&handle, "nvs", NVS_C_READWRITE);
     nvs_c_write_blob(handle, key, written, sizeof(written));
     err = nvs_c_read_blob_length(handle, key, &size);
-    
+
     // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_read_blob_length should return zero");
 
@@ -2894,8 +2755,7 @@ void test_if_nvs_c_read_blob_length_returns_zero(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_read_blob_length_returns_written_blob_size(void)
-{
+void test_if_nvs_c_read_blob_length_returns_written_blob_size(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
@@ -2903,17 +2763,17 @@ void test_if_nvs_c_read_blob_length_returns_written_blob_size(void)
     const char *key = "key";
     struct nvs_c_handle_obj nvs = {0};
     nvs_c_handle_t handle = &nvs;
-    char written[] = "data";
+    char written[] = "data123";
     size_t size = 0;
 
     // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "nvs", NVS_C_READWRITE);
-    nvs_c_write_blob(handle, key, written, sizeof(written));
+    nvs_c_write_blob(handle, key, written, 4);
     nvs_c_read_blob_length(handle, key, &size);
-    
+
     // then
-    TEST_ASSERT_EQUAL_MESSAGE(strlen(written) + 1, size, "nvs_c_read_blob_length should return correct written data size");
+    TEST_ASSERT_EQUAL_MESSAGE(4, size, "nvs_c_read_blob_length should return correct written data size");
 
     // after
     nvs_c_erase_namespace(handle);
@@ -2921,236 +2781,225 @@ void test_if_nvs_c_read_blob_length_returns_written_blob_size(void)
     nvs_c_erase_default_partition();
 }
 
-void test_if_nvs_c_erase_key_returns_err_on_null_handle(void)
-{
+void test_if_nvs_c_erase_key_returns_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* key = "key";
+    const char *key = "key";
 
-    //when
+    // when
     err = nvs_c_erase_key(NULL, key);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_erase_key should return err on NULL handle");
 }
 
-void test_if_nvs_c_erase_key_returns_err_on_null_key(void)
-{
+void test_if_nvs_c_erase_key_returns_err_on_null_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "testsdsda", NVS_C_READWRITE);
     err = nvs_c_erase_key(handle, NULL);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_erase_key should return err on NULL key");
 
-    //after
+    // after
     nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_key_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_erase_key_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* key = "key";
+    const char *key = "key";
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "testsdsda", NVS_C_READWRITE);
-	nvs_c_close(&handle);
+    nvs_c_close(&handle);
 
-	nvs_c_open(&handle, "testsdsda", NVS_C_READONLY);
+    nvs_c_open(&handle, "testsdsda", NVS_C_READONLY);
     err = nvs_c_erase_key(handle, key);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_WRONG_MODE, err, "nvs_c_erase_key should return err on read only namespace");
 
-    //after
+    // after
     nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_key_returns_zero(void)
-{
+void test_if_nvs_c_erase_key_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* key = "asdwadq";
+    const char *key = "asdwadq";
     uint8_t data = 12;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
     nvs_c_write_uint8(handle, key, data);
     err = nvs_c_erase_key(handle, key);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_erase_key should return zero");
 
-    //after
+    // after
     nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_key_deletes_key(void)
-{
+void test_if_nvs_c_erase_key_deletes_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* key = "asdwadq";
+    const char *key = "asdwadq";
     uint8_t data = 12;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
     nvs_c_write_uint8(handle, key, data);
     nvs_c_erase_key(handle, key);
     err = nvs_c_read_uint8(handle, key, &data);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_KEY_NOT_FOUND, err, "nvs_c_erase_key should delete key");
 
-    //after
+    // after
     nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_namespace_returns_err_on_null_handle(void)
-{
+void test_if_nvs_c_erase_namespace_returns_err_on_null_handle(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
 
-    //when
+    // when
     err = nvs_c_erase_namespace(NULL);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_erase_namespace should return err on NULL handle");
 }
 
-void test_if_nvs_c_erase_namespace_returns_err_on_read_only_namespace(void)
-{
+void test_if_nvs_c_erase_namespace_returns_err_on_read_only_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "testsdsda", NVS_C_READWRITE);
-	nvs_c_close(&handle);
-	nvs_c_open(&handle, "testsdsda", NVS_C_READONLY);
+    nvs_c_close(&handle);
+    nvs_c_open(&handle, "testsdsda", NVS_C_READONLY);
     err = nvs_c_erase_namespace(handle);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_WRONG_MODE, err, "nvs_c_erase_namespace should return err on read only namespace");
 
-    //after
+    // after
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_namespace_returns_zero(void)
-{
+void test_if_nvs_c_erase_namespace_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
     err = nvs_c_erase_namespace(handle);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_erase_namespace should return zero");
 
-    //after
+    // after
     nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_namespace_deletes_key(void)
-{
+void test_if_nvs_c_erase_namespace_deletes_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* key = "asdwadq";
+    const char *key = "asdwadq";
     uint8_t data = 12;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
     nvs_c_write_uint8(handle, key, data);
     nvs_c_erase_namespace(handle);
     err = nvs_c_read_uint8(handle, key, &data);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_KEY_NOT_FOUND, err, "nvs_c_erase_namespace should delete key from namespace");
 
-    //after
+    // after
     nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_default_partition_returns_zero(void)
-{
+void test_if_nvs_c_erase_default_partition_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     err = nvs_c_erase_default_partition();
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_erase_default_partition should return zero");
 
-    //after
+    // after
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_default_partition_deletes_namespace(void)
-{
+void test_if_nvs_c_erase_default_partition_deletes_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
 
@@ -3159,26 +3008,25 @@ void test_if_nvs_c_erase_default_partition_deletes_namespace(void)
     nvs_c_init_default_partition();
     err = nvs_c_open(&handle, "test", NVS_C_READONLY);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NAMESPACE_NOT_FOUND, err, "nvs_c_erase_default_partition should delete namespace");
 
-    //after
-    //nvs_c_close(&handle);
+    // after
+    // nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_default_partition_deletes_key(void)
-{
+void test_if_nvs_c_erase_default_partition_deletes_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* key = "asdwadq";
+    const char *key = "asdwadq";
     uint8_t data = 12;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_default_partition();
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
     nvs_c_write_uint8(handle, key, data);
@@ -3188,57 +3036,54 @@ void test_if_nvs_c_erase_default_partition_deletes_key(void)
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
     err = nvs_c_read_uint8(handle, key, &data);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_KEY_NOT_FOUND, err, "nvs_c_erase_default_partition should delete key from namespace");
 
-    //after
+    // after
     nvs_c_close(&handle);
     nvs_c_deinit_default_partition();
 }
 
-void test_if_nvs_c_erase_partition_returns_err_on_null_partition_label(void)
-{
+void test_if_nvs_c_erase_partition_returns_err_on_null_partition_label(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
 
-    //when
+    // when
     err = nvs_c_erase_partition(NULL);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_NULL_POINTER, err, "nvs_c_erase_partition should return err on NULL partition_label");
 }
 
-void test_if_nvs_c_erase_partition_returns_zero(void)
-{
+void test_if_nvs_c_erase_partition_returns_zero(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* partition_label = NVS_C_DEFAULT_NVS_PART_NAME;
+    const char *partition_label = NVS_C_DEFAULT_NVS_PART_NAME;
 
-    //when
+    // when
     nvs_c_init_partition(partition_label);
     err = nvs_c_erase_partition(partition_label);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(ERR_C_OK, err, "nvs_c_erase_partition should return zero");
 }
 
-void test_if_nvs_c_erase_partition_deletes_namespace(void)
-{
+void test_if_nvs_c_erase_partition_deletes_namespace(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* partition_label = NVS_C_DEFAULT_NVS_PART_NAME;
+    const char *partition_label = NVS_C_DEFAULT_NVS_PART_NAME;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_partition(partition_label);
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
 
@@ -3247,26 +3092,24 @@ void test_if_nvs_c_erase_partition_deletes_namespace(void)
     nvs_c_init_partition(partition_label);
     err = nvs_c_open(&handle, "test", NVS_C_READONLY);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_NAMESPACE_NOT_FOUND, err, "nvs_c_erase_partition should delete namespace");
 
-    //after
-	
+    // after
 }
 
-void test_if_nvs_c_erase_partition_deletes_key(void)
-{
+void test_if_nvs_c_erase_partition_deletes_key(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* partition_label = NVS_C_DEFAULT_NVS_PART_NAME;
-    const char* key = "asdwadq";
+    const char *partition_label = NVS_C_DEFAULT_NVS_PART_NAME;
+    const char *key = "asdwadq";
     uint8_t data = 12;
     nvs_c_handle_t handle = NULL;
 
-    //when
+    // when
     nvs_c_init_partition(partition_label);
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
     nvs_c_write_uint8(handle, key, data);
@@ -3276,32 +3119,29 @@ void test_if_nvs_c_erase_partition_deletes_key(void)
     nvs_c_open(&handle, "test", NVS_C_READWRITE);
     err = nvs_c_read_uint8(handle, key, &data);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_KEY_NOT_FOUND, err, "nvs_c_erase_partition should delete key from namespace");
 
-    //after
+    // after
     nvs_c_close(&handle);
 }
 
-void test_if_nvs_c_erase_partition_returns_err_on_not_known_partition(void)
-{
+void test_if_nvs_c_erase_partition_returns_err_on_not_known_partition(void) {
     // before
     LOG_FATAL("RUNNING: %s", __func__);
 
-    //given
+    // given
     int err = 0;
-    const char* partition_label = "asdasdwqe2";
+    const char *partition_label = "asdasdwqe2";
 
-    //when
+    // when
     err = nvs_c_erase_partition(partition_label);
 
-    //then
+    // then
     TEST_ASSERT_EQUAL_MESSAGE(NVS_C_ERR_PARTITION_NOT_FOUND, err, "nvs_c_erase_partition should return err when partition not found");
 }
 
-
-int runUnityTests(void)
-{
+int runUnityTests(void) {
     UNITY_BEGIN();
     RUN_TEST(test_if_nvs_c_erase_partition_returns_err_on_not_known_partition);
     RUN_TEST(test_if_nvs_c_erase_partition_deletes_key);
@@ -3463,8 +3303,7 @@ int runUnityTests(void)
 /**
  * For ESP-IDF framework
  */
-void app_main(void)
-{
+void app_main(void) {
     runUnityTests();
     vTaskDelay(200);
     fflush(stdout);
