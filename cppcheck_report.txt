@@ -25,9 +25,9 @@ projects/bmp280/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is 
 projects/bmp280/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/bmp280/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
-         WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
-                                                        ^
+projects/bmp280/lib/wifi_manager/src/wifi_manager.c:141:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+            LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                                                                                                        ^
 projects/bmp280/src/main.c:125:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
@@ -67,9 +67,9 @@ projects/lib_tests/lib/nvs_controller/src/nvs_controller.c:273:57: error: There 
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/lib_tests/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
-         WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
-                                                        ^
+projects/lib_tests/lib/wifi_manager/src/wifi_manager.c:141:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+            LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                                                                                                        ^
 projects/lib_tests/test/embedded/test_http_client/test_http_client.c:63:0: error: Syntax error in #elif [preprocessorErrorDirective]
     #elif
 ^
@@ -124,9 +124,9 @@ projects/plantsitter/lib/nvs_controller/src/nvs_controller.c:273:57: error: Ther
 projects/plantsitter/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/plantsitter/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
-         WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
-                                                        ^
+projects/plantsitter/lib/wifi_manager/src/wifi_manager.c:141:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+            LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                                                                                                        ^
 projects/plantsitter/src/main.c:107:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
@@ -163,9 +163,9 @@ projects/relays/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is 
 projects/relays/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/relays/lib/wifi_manager/src/wifi_manager.c:143:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
-         WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
-                                                        ^
+projects/relays/lib/wifi_manager/src/wifi_manager.c:141:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+            LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                                                                                                        ^
 projects/relays/src/main.c:132:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
@@ -184,6 +184,18 @@ projects/relays/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: 
 projects/relays/test/embedded/test_wifi_controller/test_wifi_controller.c:20:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
         err = nvs_flash_init();
             ^
+projects/bmp280/lib/adc_controller/src/adc_controller.c:108:0: style: The function 'adc_c_deinit_oneshot' is never used. [unusedFunction]
+
+^
+projects/bmp280/lib/adc_controller/src/adc_controller.c:58:0: style: The function 'adc_c_init_oneshot' is never used. [unusedFunction]
+
+^
+projects/bmp280/lib/adc_controller/src/adc_controller.c:167:0: style: The function 'adc_c_oneshot_read_channel' is never used. [unusedFunction]
+
+^
+projects/bmp280/lib/adc_controller/src/adc_controller.c:195:0: style: The function 'adc_c_oneshot_read_gpio' is never used. [unusedFunction]
+
+^
 libraries/logger/examples/add_log_file.c:4:0: style: The function 'app_main' is never used. [unusedFunction]
 
 ^
@@ -373,31 +385,31 @@ projects/bmp280/test/embedded/test_wifi_controller/test_wifi_controller.c:45:0: 
 projects/bmp280/lib/logger/test/test_logger.c:226:0: style: The function 'test_if_clear_all_files_sets_all_files_to_null' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1159:0: style: The function 'test_if_nvs_c_write_int16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1100:0: style: The function 'test_if_nvs_c_write_int16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1351:0: style: The function 'test_if_nvs_c_write_int32_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1283:0: style: The function 'test_if_nvs_c_write_int32_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1543:0: style: The function 'test_if_nvs_c_write_int64_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1466:0: style: The function 'test_if_nvs_c_write_int64_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1050:0: style: The function 'test_if_nvs_c_write_int8_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:996:0: style: The function 'test_if_nvs_c_write_int8_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1927:0: style: The function 'test_if_nvs_c_write_uint16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1832:0: style: The function 'test_if_nvs_c_write_uint16_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:2119:0: style: The function 'test_if_nvs_c_write_uint32_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:2015:0: style: The function 'test_if_nvs_c_write_uint32_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:2311:0: style: The function 'test_if_nvs_c_write_uint64_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:2198:0: style: The function 'test_if_nvs_c_write_uint64_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1818:0: style: The function 'test_if_nvs_c_write_uint8_returns_err_on_read_only_namespace' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:1728:0: style: The function 'test_if_nvs_c_write_uint8_returns_err_on_read_only_namespace' is never used. [unusedFunction]
 
 ^
-projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:316:0: style: The function 'test_if_nvs_open_from_partition_returns_zero' is never used. [unusedFunction]
+projects/bmp280/lib/nvs_controller/test/test_nvs_controller.c:295:0: style: The function 'test_if_nvs_open_from_partition_returns_zero' is never used. [unusedFunction]
 
 ^
 projects/lib_tests/test/desktop/test_nvs_controller/test_nvs_controller.c:174:0: style: The function 'test_if_struct_nvs_c_obj_contains_nvs_mode' is never used. [unusedFunction]
