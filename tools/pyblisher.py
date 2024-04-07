@@ -125,10 +125,29 @@ def publish_all_projects():
         os.chdir('../../..')
 
 
+def print_help():
+    help_text = """
+    This python program is used to simplify publishing Esp Helper firmware to database.
+    Options:
+    --ci             -   running on CI, don't use standard local project directory
+    --help           -   print help
+    --local          -   use local project directory: \'/home/wmytych/Projects/esp_helper/\'
+    --build          -   build all platformio projects (currently igored: plantsitter, lib_tests)
+    --update:
+        'alias'      -   publish firmware for device with specified alias
+        all          -   publish firmware for all projects and devices
+        --project    -   publish firmware for specific project
+        --version    -   manually pass version of new firmware
+    """
+    print(help_text)
+
+
 if(len(sys.argv) != 1 and sys.argv[1] == "--ci"):
     ci = True
     os.chdir('..')
     publish_all_projects()
+elif(len(sys.argv) != 1 and sys.argv[1] == "--help"):
+    print_help()
 elif(len(sys.argv) != 1 and sys.argv[1] == "--local"):
     os.chdir('/home/wmytych/Projects/esp_helper/')
     publish_all_projects()
