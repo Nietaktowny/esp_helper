@@ -1,0 +1,32 @@
+[
+    {
+        "command": "/usr/bin/gcc -o .pio/build/linux/lib1a8/CException/CException.o -c -fprofile-abs-path -O0 --coverage -DPLATFORMIO=60114 -Ilib/CException/include -Ilib/CException/src lib/CException/src/CException.c",
+        "directory": "/home/wmytych/Projects/esp_helper/projects/lib_tests",
+        "file": "lib/CException/src/CException.c",
+        "output": ".pio/build/linux/lib1a8/CException/CException.o"
+    },
+    {
+        "command": "/usr/bin/gcc -o .pio/build/linux/libb18/err_controller/err_c_names.o -c -fprofile-abs-path -O0 --coverage -DPLATFORMIO=60114 -Ilib/err_controller/include -Ilib/err_controller/src -Ilib/CException/include -Ilib/CException/src lib/err_controller/src/err_c_names.c",
+        "directory": "/home/wmytych/Projects/esp_helper/projects/lib_tests",
+        "file": "lib/err_controller/src/err_c_names.c",
+        "output": ".pio/build/linux/libb18/err_controller/err_c_names.o"
+    },
+    {
+        "command": "/usr/bin/gcc -o .pio/build/linux/libb18/err_controller/err_controller.o -c -fprofile-abs-path -O0 --coverage -DPLATFORMIO=60114 -Ilib/err_controller/include -Ilib/err_controller/src -Ilib/CException/include -Ilib/CException/src lib/err_controller/src/err_controller.c",
+        "directory": "/home/wmytych/Projects/esp_helper/projects/lib_tests",
+        "file": "lib/err_controller/src/err_controller.c",
+        "output": ".pio/build/linux/libb18/err_controller/err_controller.o"
+    },
+    {
+        "command": "/usr/bin/gcc -o .pio/build/linux/lib85d/logger/logger.o -c -fprofile-abs-path -O0 --coverage -DPLATFORMIO=60114 -Ilib/logger/include -Ilib/logger/src lib/logger/src/logger.c",
+        "directory": "/home/wmytych/Projects/esp_helper/projects/lib_tests",
+        "file": "lib/logger/src/logger.c",
+        "output": ".pio/build/linux/lib85d/logger/logger.o"
+    },
+    {
+        "command": "/usr/bin/gcc -o .pio/build/linux/src/main.o -c -fprofile-abs-path -O0 --coverage -DPLATFORMIO=60114 -Isrc -Ilib/logger/include -Ilib/logger/src -Ilib/err_controller/include -Ilib/err_controller/src -Ilib/CException/include -Ilib/CException/src src/main.c",
+        "directory": "/home/wmytych/Projects/esp_helper/projects/lib_tests",
+        "file": "src/main.c",
+        "output": ".pio/build/linux/src/main.o"
+    }
+]

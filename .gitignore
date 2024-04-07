@@ -12,3 +12,5 @@ build
 *.esp-dev
 *.esp32-c3
 cppcheck_report.txt
+
+projects/lib_tests/.cache/

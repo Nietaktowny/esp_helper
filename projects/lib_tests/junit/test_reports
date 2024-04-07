@@ -1,1 +1,265 @@
-<testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="8" time="117.482" timestamp="2024-03-16T22:39:13.395296" hostname="wmytych"><testcase classname="test_wifi_controller.pytest_wifi_controller" name="test_wifi_controller" time="18.583" /><testcase classname="test_wifi_manager.pytest_wifi_manager" name="test_wifi_manager" time="14.971" /><testcase classname="test_cli_manager.pytest_cli_manager" name="test_cli_manager" time="24.343" /><testcase classname="test_logger.test.pytest_logger" name="test_nvs_controller" time="8.498" /><testcase classname="test_sys_utils.pytest_sys_utils" name="test_sys_utils" time="7.920" /><testcase classname="test_esp_helper_utils.pytest_esp_helper_utils" name="test_esp_helper_utils" time="19.356" /><testcase classname="test_nvs_controller.test.pytest_nvs_controller" name="test_nvs_controller" time="7.509" /><testcase classname="test_bmp_project.pytest_bmp_project" name="test_bmp_project" time="16.190" /></testsuite></testsuites>
+<testsuites><testsuite name="pytest" errors="8" failures="0" skipped="0" tests="8" time="0.719" timestamp="2024-04-07T14:25:49.649546" hostname="wmytych"><testcase classname="test_wifi_controller.pytest_wifi_controller" name="test_wifi_controller" time="0.081"><error message="failed on setup with &quot;ValueError: flasher_args.json not found&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...che={}, logfile_extension='.log'), 'skip_check_coredump': None, 'panic_output_decode_script': None, 'serial': None}}))}
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if _COUNT == 1:
+            if func.__name__ == 'dut_index':
+                kwargs['count'] = 1
+&gt;           return func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1330: in app
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:70: in __init__
+    self.flash_args, self.flash_files, self.flash_settings = self._parse_flash_args_json()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.app.IdfApp object at 0x7f3efe189e90&gt;
+
+    def _parse_flash_args_json(
+        self,
+    ) -&gt; Tuple[Dict[str, Any], List[FlashFile], Dict[str, str]]:
+        flash_args_json_filepath = None
+        for fn in os.listdir(self.binary_path):
+            if fn == self.FLASH_ARGS_JSON_FILENAME:
+                flash_args_json_filepath = os.path.realpath(os.path.join(self.binary_path, fn))
+                break
+    
+        if not flash_args_json_filepath:
+&gt;           raise ValueError(f'{self.FLASH_ARGS_JSON_FILENAME} not found')
+E           ValueError: flasher_args.json not found
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:231: ValueError</error></testcase><testcase classname="test_wifi_manager.pytest_wifi_manager" name="test_wifi_manager" time="0.015"><error message="failed on setup with &quot;ValueError: flasher_args.json not found&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...che={}, logfile_extension='.log'), 'skip_check_coredump': None, 'panic_output_decode_script': None, 'serial': None}}))}
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if _COUNT == 1:
+            if func.__name__ == 'dut_index':
+                kwargs['count'] = 1
+&gt;           return func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1330: in app
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:70: in __init__
+    self.flash_args, self.flash_files, self.flash_settings = self._parse_flash_args_json()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.app.IdfApp object at 0x7f3efe061710&gt;
+
+    def _parse_flash_args_json(
+        self,
+    ) -&gt; Tuple[Dict[str, Any], List[FlashFile], Dict[str, str]]:
+        flash_args_json_filepath = None
+        for fn in os.listdir(self.binary_path):
+            if fn == self.FLASH_ARGS_JSON_FILENAME:
+                flash_args_json_filepath = os.path.realpath(os.path.join(self.binary_path, fn))
+                break
+    
+        if not flash_args_json_filepath:
+&gt;           raise ValueError(f'{self.FLASH_ARGS_JSON_FILENAME} not found')
+E           ValueError: flasher_args.json not found
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:231: ValueError</error></testcase><testcase classname="test_cli_manager.pytest_cli_manager" name="test_cli_manager" time="0.015"><error message="failed on setup with &quot;ValueError: flasher_args.json not found&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...che={}, logfile_extension='.log'), 'skip_check_coredump': None, 'panic_output_decode_script': None, 'serial': None}}))}
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if _COUNT == 1:
+            if func.__name__ == 'dut_index':
+                kwargs['count'] = 1
+&gt;           return func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1330: in app
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:70: in __init__
+    self.flash_args, self.flash_files, self.flash_settings = self._parse_flash_args_json()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.app.IdfApp object at 0x7f3efdff5a10&gt;
+
+    def _parse_flash_args_json(
+        self,
+    ) -&gt; Tuple[Dict[str, Any], List[FlashFile], Dict[str, str]]:
+        flash_args_json_filepath = None
+        for fn in os.listdir(self.binary_path):
+            if fn == self.FLASH_ARGS_JSON_FILENAME:
+                flash_args_json_filepath = os.path.realpath(os.path.join(self.binary_path, fn))
+                break
+    
+        if not flash_args_json_filepath:
+&gt;           raise ValueError(f'{self.FLASH_ARGS_JSON_FILENAME} not found')
+E           ValueError: flasher_args.json not found
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:231: ValueError</error></testcase><testcase classname="test_logger.test.pytest_logger" name="test_nvs_controller" time="0.015"><error message="failed on setup with &quot;ValueError: flasher_args.json not found&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...che={}, logfile_extension='.log'), 'skip_check_coredump': None, 'panic_output_decode_script': None, 'serial': None}}))}
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if _COUNT == 1:
+            if func.__name__ == 'dut_index':
+                kwargs['count'] = 1
+&gt;           return func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1330: in app
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:70: in __init__
+    self.flash_args, self.flash_files, self.flash_settings = self._parse_flash_args_json()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.app.IdfApp object at 0x7f3efe3fd510&gt;
+
+    def _parse_flash_args_json(
+        self,
+    ) -&gt; Tuple[Dict[str, Any], List[FlashFile], Dict[str, str]]:
+        flash_args_json_filepath = None
+        for fn in os.listdir(self.binary_path):
+            if fn == self.FLASH_ARGS_JSON_FILENAME:
+                flash_args_json_filepath = os.path.realpath(os.path.join(self.binary_path, fn))
+                break
+    
+        if not flash_args_json_filepath:
+&gt;           raise ValueError(f'{self.FLASH_ARGS_JSON_FILENAME} not found')
+E           ValueError: flasher_args.json not found
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:231: ValueError</error></testcase><testcase classname="test_sys_utils.pytest_sys_utils" name="test_sys_utils" time="0.016"><error message="failed on setup with &quot;ValueError: flasher_args.json not found&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...che={}, logfile_extension='.log'), 'skip_check_coredump': None, 'panic_output_decode_script': None, 'serial': None}}))}
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if _COUNT == 1:
+            if func.__name__ == 'dut_index':
+                kwargs['count'] = 1
+&gt;           return func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1330: in app
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:70: in __init__
+    self.flash_args, self.flash_files, self.flash_settings = self._parse_flash_args_json()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.app.IdfApp object at 0x7f3efe189290&gt;
+
+    def _parse_flash_args_json(
+        self,
+    ) -&gt; Tuple[Dict[str, Any], List[FlashFile], Dict[str, str]]:
+        flash_args_json_filepath = None
+        for fn in os.listdir(self.binary_path):
+            if fn == self.FLASH_ARGS_JSON_FILENAME:
+                flash_args_json_filepath = os.path.realpath(os.path.join(self.binary_path, fn))
+                break
+    
+        if not flash_args_json_filepath:
+&gt;           raise ValueError(f'{self.FLASH_ARGS_JSON_FILENAME} not found')
+E           ValueError: flasher_args.json not found
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:231: ValueError</error></testcase><testcase classname="test_esp_helper_utils.pytest_esp_helper_utils" name="test_esp_helper_utils" time="0.019"><error message="failed on setup with &quot;ValueError: flasher_args.json not found&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...che={}, logfile_extension='.log'), 'skip_check_coredump': None, 'panic_output_decode_script': None, 'serial': None}}))}
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if _COUNT == 1:
+            if func.__name__ == 'dut_index':
+                kwargs['count'] = 1
+&gt;           return func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1330: in app
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:70: in __init__
+    self.flash_args, self.flash_files, self.flash_settings = self._parse_flash_args_json()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.app.IdfApp object at 0x7f3efe218590&gt;
+
+    def _parse_flash_args_json(
+        self,
+    ) -&gt; Tuple[Dict[str, Any], List[FlashFile], Dict[str, str]]:
+        flash_args_json_filepath = None
+        for fn in os.listdir(self.binary_path):
+            if fn == self.FLASH_ARGS_JSON_FILENAME:
+                flash_args_json_filepath = os.path.realpath(os.path.join(self.binary_path, fn))
+                break
+    
+        if not flash_args_json_filepath:
+&gt;           raise ValueError(f'{self.FLASH_ARGS_JSON_FILENAME} not found')
+E           ValueError: flasher_args.json not found
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:231: ValueError</error></testcase><testcase classname="test_nvs_controller.test.pytest_nvs_controller" name="test_nvs_controller" time="0.016"><error message="failed on setup with &quot;ValueError: flasher_args.json not found&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...che={}, logfile_extension='.log'), 'skip_check_coredump': None, 'panic_output_decode_script': None, 'serial': None}}))}
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if _COUNT == 1:
+            if func.__name__ == 'dut_index':
+                kwargs['count'] = 1
+&gt;           return func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1330: in app
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:70: in __init__
+    self.flash_args, self.flash_files, self.flash_settings = self._parse_flash_args_json()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.app.IdfApp object at 0x7f3efdfbc2d0&gt;
+
+    def _parse_flash_args_json(
+        self,
+    ) -&gt; Tuple[Dict[str, Any], List[FlashFile], Dict[str, str]]:
+        flash_args_json_filepath = None
+        for fn in os.listdir(self.binary_path):
+            if fn == self.FLASH_ARGS_JSON_FILENAME:
+                flash_args_json_filepath = os.path.realpath(os.path.join(self.binary_path, fn))
+                break
+    
+        if not flash_args_json_filepath:
+&gt;           raise ValueError(f'{self.FLASH_ARGS_JSON_FILENAME} not found')
+E           ValueError: flasher_args.json not found
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:231: ValueError</error></testcase><testcase classname="test_bmp_project.pytest_bmp_project" name="test_bmp_project" time="0.019"><error message="failed on setup with &quot;ValueError: flasher_args.json not found&quot;">args = ()
+kwargs = {'_fixture_classes_and_options': ClassCliOptions(classes={'app': &lt;class 'pytest_embedded_idf.app.IdfApp'&gt;, 'serial': &lt;...che={}, logfile_extension='.log'), 'skip_check_coredump': None, 'panic_output_decode_script': None, 'serial': None}}))}
+
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        if _COUNT == 1:
+            if func.__name__ == 'dut_index':
+                kwargs['count'] = 1
+&gt;           return func(*args, **kwargs)
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:382: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded/plugin.py:1330: in app
+    return cls(**_drop_none_kwargs(kwargs))
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:70: in __init__
+    self.flash_args, self.flash_files, self.flash_settings = self._parse_flash_args_json()
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pytest_embedded_idf.app.IdfApp object at 0x7f3efdfd3190&gt;
+
+    def _parse_flash_args_json(
+        self,
+    ) -&gt; Tuple[Dict[str, Any], List[FlashFile], Dict[str, str]]:
+        flash_args_json_filepath = None
+        for fn in os.listdir(self.binary_path):
+            if fn == self.FLASH_ARGS_JSON_FILENAME:
+                flash_args_json_filepath = os.path.realpath(os.path.join(self.binary_path, fn))
+                break
+    
+        if not flash_args_json_filepath:
+&gt;           raise ValueError(f'{self.FLASH_ARGS_JSON_FILENAME} not found')
+E           ValueError: flasher_args.json not found
+
+../../../../.espressif/python_env/idf5.3_py3.11_env/lib/python3.11/site-packages/pytest_embedded_idf/app.py:231: ValueError</error></testcase></testsuite></testsuites>
