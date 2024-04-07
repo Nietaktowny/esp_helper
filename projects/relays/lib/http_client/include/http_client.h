@@ -99,7 +99,7 @@ int http_client_post_reuse(http_client_t handle ,const char *post_data, size_t d
  * @brief Init http_client_t handle for reusing with multiple connections.
  * 
  * @note This function allocates memory that needs to be freed with http_client_deinit_reuse()
- * @link http_client_deinit_reuse()
+ * @see http_client_deinit_reuse()
  * 
  * @param handle Location to store http_client_t handle.
  * @param ipv4_address Domain address.
@@ -112,7 +112,7 @@ int http_client_init_reuse(http_client_t *handle, const char *ipv4_address, cons
 
 /**
  * @brief This function frees resources allocated with http_client_post_reuse() and closes connection.
- * @link http_client_post_reuse()
+ * @see http_client_post_reuse()
  * 
  * @param handle http_client_t handle to deinit.
  * 
