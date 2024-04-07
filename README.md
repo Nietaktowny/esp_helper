@@ -3,7 +3,7 @@
 
 # ESP Helper
 
-My own IOT framework build on top of the ESP-IDF framework.
+My own IOT set of projects and libraries build on top of the ESP-IDF framework.
 
 It's mainly made of four parts:
  - IOT projects build on ESP32 chips, written in C using ESP-IDF - they are stored in [projects/](/projects/) directory.
