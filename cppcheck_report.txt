@@ -61,13 +61,13 @@ projects/lib_tests/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err
 projects/lib_tests/lib/logger/test/test_logger.c:888:3: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
   LOG_FATAL("FINISHED LOGGER TESTS!");
   ^
-projects/lib_tests/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
-        err, key, handle->namespace, error_to_name(err)););
-                                                        ^
+projects/lib_tests/lib/nvs_controller/src/nvs_controller.c:260:110: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+                                                             err, key, handle->namespace, error_to_name(err)););
+                                                                                                             ^
 projects/lib_tests/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/lib_tests/lib/wifi_manager/src/wifi_manager.c:141:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+projects/lib_tests/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
 projects/lib_tests/test/embedded/test_http_client/test_http_client.c:63:0: error: Syntax error in #elif [preprocessorErrorDirective]
