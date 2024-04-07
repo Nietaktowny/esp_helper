@@ -5,3 +5,10 @@ cli_helper_client/lib/CException
 */build
 build
 */build/*
+*/sdkconfig.esp-wrover-kit
+*/sdkconfig.esp32-c3
+*/sdkconfig.esp-dev
+
+*.esp-wrover-kit
+*.esp-dev
+*.esp32-c3
