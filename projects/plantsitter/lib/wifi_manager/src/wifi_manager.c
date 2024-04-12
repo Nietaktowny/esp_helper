@@ -9,6 +9,7 @@
 #include "wifi_manager.h"
 
 #include <stdbool.h>
+#include <stdio.h>
 #include <string.h>
 
 #include "err_controller.h"
@@ -28,9 +29,10 @@ int wifi_manager_get_stored_ap_as_json(char *buffer, size_t bufflen) {
 
     required_length = strlen(ssid) + strlen("{\"stored_ssid\": \"\"}");
 
+    LOG_VERBOSE("space required to store AP: %zu, provided space: %zu", required_length, bufflen);
     if (required_length > bufflen) {
         err = ERR_C_NO_MEMORY;
-        LOG_ERROR("error %d, required length to store ap as json (%lu) larger than buffer size (%lu)", err, required_length, bufflen);
+        LOG_ERROR("error %d, required length to store ap as json (%zu) larger than buffer size (%zu)", err, required_length, bufflen);
         return err;
     }
 
@@ -122,6 +124,17 @@ int wifi_manager_get_scanned_aps(char *out_buffer, size_t buflen) {
     ERR_C_CHECK_ERROR(wifi_c_store_scan_result_as_json(out_buffer, buflen), LOG_ERROR("error %d when getting APs scan result as json "
                                                                                       "for wifi manager: %s",
                                                                                       err, error_to_name(err)));
+
+    if (scan_results->ap_count == 0) {
+        const char *none_str = "[{SSID: none, RRSI: 0}]\0";
+        size_t none_len = strlen(none_str);
+        if (buflen < none_len) {
+            LOG_ERROR("buffer not big enough to store scan result, size: %zu, required size: %zu", buflen, none_len);
+            return ERR_C_NO_MEMORY;
+        }
+        LOG_WARN("warning! not found any scanned access points STA can connect to");
+        snprintf(out_buffer, buflen, "%s", none_str);
+    }
 
     LOG_VERBOSE("wifi manager scan complete, scanned: %d APs", scan_results->ap_count);
     return err;
