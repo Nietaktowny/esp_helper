@@ -44,7 +44,7 @@ def translate_board(env):
 
 def get_project_version():
     version_file = open('version.txt', 'r+')
-    firmware_ver = version_file.readline()
+    firmware_ver = version_file.readline().strip()
     print("Current project version is: " + firmware_ver)
     return firmware_ver
 
@@ -106,7 +106,7 @@ def update_all_devices():
 
 def publish_all_projects():
     for project in os.listdir("projects"):
-        if(project == 'lib_tests' or project == 'plantsitter'):
+        if(project == 'lib_tests'):
             continue
         os.chdir("projects/" + project)
         print("\x1b[1;32mPublishing firmware of project: " + project + '\x1b[0m')
@@ -132,7 +132,7 @@ def print_help():
     --ci             -   running on CI, don't use standard local project directory
     --help           -   print help
     --local          -   use local project directory: \'/home/wmytych/Projects/esp_helper/\'
-    --build          -   build all platformio projects (currently igored: plantsitter, lib_tests)
+    --build          -   build all platformio projects (currently igored: lib_tests)
     --update:
         'alias'      -   publish firmware for device with specified alias
         all          -   publish firmware for all projects and devices
@@ -153,7 +153,7 @@ elif(len(sys.argv) != 1 and sys.argv[1] == "--local"):
     publish_all_projects()
 elif(len(sys.argv) != 1 and sys.argv[1] == "--build"):
     os.chdir('/home/wmytych/Projects/esp_helper/')
-    builder.pio_build_all_projects_ignore('plantsitter, lib_tests')
+    builder.pio_build_all_projects_ignore('lib_tests')
     publish_all_projects()
 elif(len(sys.argv) == 3 and sys.argv[1] == "--update" and sys.argv[2] == "all"):
     os.chdir('..')
