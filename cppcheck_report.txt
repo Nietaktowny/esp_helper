@@ -19,31 +19,31 @@ projects/bmp280/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' i
 projects/bmp280/lib/logger/test/test_logger.c:888:3: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
   LOG_FATAL("FINISHED LOGGER TESTS!");
   ^
-projects/bmp280/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
-        err, key, handle->namespace, error_to_name(err)););
-                                                        ^
+projects/bmp280/lib/nvs_controller/src/nvs_controller.c:260:110: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+                                                             err, key, handle->namespace, error_to_name(err)););
+                                                                                                             ^
 projects/bmp280/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/bmp280/lib/wifi_manager/src/wifi_manager.c:141:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+projects/bmp280/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
-projects/bmp280/src/main.c:125:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+projects/bmp280/src/main.c:112:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/bmp280/src/main.c:122:13: note: err is assigned
+projects/bmp280/src/main.c:109:13: note: err is assigned
         err = wifi_c_get_status_as_json(wifi_c_info, 300);
             ^
-projects/bmp280/src/main.c:125:13: note: err is overwritten
+projects/bmp280/src/main.c:112:13: note: err is overwritten
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/bmp280/src/main.c:45:11: style: The scope of the variable 'altitude' can be reduced. [variableScope]
+projects/bmp280/src/main.c:39:11: style: The scope of the variable 'altitude' can be reduced. [variableScope]
     float altitude = 0;
           ^
-projects/bmp280/src/main.c:45:20: style: Variable 'altitude' is assigned a value that is never used. [unreadVariable]
+projects/bmp280/src/main.c:39:20: style: Variable 'altitude' is assigned a value that is never used. [unreadVariable]
     float altitude = 0;
                    ^
-projects/bmp280/src/main.c:112:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/bmp280/src/main.c:100:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = ERR_C_OK;
                 ^
 projects/bmp280/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
@@ -127,16 +127,16 @@ projects/plantsitter/lib/spiffs_controller/src/spiffs_controller.c:50:24: error:
 projects/plantsitter/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
-projects/plantsitter/src/main.c:115:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+projects/plantsitter/src/main.c:110:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/plantsitter/src/main.c:112:13: note: err is assigned
+projects/plantsitter/src/main.c:107:13: note: err is assigned
         err = wifi_c_get_status_as_json(wifi_c_info, 300);
             ^
-projects/plantsitter/src/main.c:115:13: note: err is overwritten
+projects/plantsitter/src/main.c:110:13: note: err is overwritten
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/plantsitter/src/main.c:103:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/plantsitter/src/main.c:98:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = 0;
                 ^
 projects/plantsitter/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
@@ -154,25 +154,25 @@ projects/relays/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' i
 projects/relays/lib/logger/test/test_logger.c:888:3: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
   LOG_FATAL("FINISHED LOGGER TESTS!");
   ^
-projects/relays/lib/nvs_controller/src/nvs_controller.c:273:57: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
-        err, key, handle->namespace, error_to_name(err)););
-                                                        ^
+projects/relays/lib/nvs_controller/src/nvs_controller.c:260:110: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+                                                             err, key, handle->namespace, error_to_name(err)););
+                                                                                                             ^
 projects/relays/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
     path_len = strlen(&ret_path[0]);
                        ^
-projects/relays/lib/wifi_manager/src/wifi_manager.c:141:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+projects/relays/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
-projects/relays/src/main.c:132:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+projects/relays/src/main.c:114:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/relays/src/main.c:129:13: note: err is assigned
+projects/relays/src/main.c:111:13: note: err is assigned
         err = wifi_c_get_status_as_json(wifi_c_info, 300);
             ^
-projects/relays/src/main.c:132:13: note: err is overwritten
+projects/relays/src/main.c:114:13: note: err is overwritten
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/relays/src/main.c:119:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/relays/src/main.c:102:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = ERR_C_OK;
                 ^
 projects/relays/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
