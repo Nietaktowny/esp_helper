@@ -18,3 +18,5 @@ projects/lib_tests/.cache/
 projects/bmp280/.cache/
 
 projects/plantsitter/.cache/
+
+projects/relays/.cache/

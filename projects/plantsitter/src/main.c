@@ -19,11 +19,6 @@
 
 #include <driver/gpio.h>
 
-#define MY_SSID "TP-LINK_AD8313"
-#define MY_PSK "20232887"
-#define SOL_SSID "OstNet-952235"
-#define SOL_PSK "Solonka106"
-
 #ifdef ESP_WROVER_KIT
 #define ESP_DEVICE_WIFI_LED GPIO_NUM_2
 #define SOIL_ADC_READ_GPIO ADC_C_GPIO_32

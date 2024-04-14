@@ -125,6 +125,28 @@ def publish_all_projects():
         os.chdir('../../..')
 
 
+def publish_project(target):
+    for project in os.listdir("projects"):
+        if(project != target):
+            continue
+        os.chdir("projects/" + project)
+        print("\x1b[1;32mPublishing firmware of project: " + project + '\x1b[0m')
+        describe_project()
+        firmware_ver = get_project_version()
+        project_ver = project
+        esp_idf_ver = '6.5.0'
+        os.chdir('.pio')
+        for board in os.listdir('build'):
+            if(board == 'project.checksum'):
+                continue
+            board_ver = translate_board(board)
+            os.chdir("build/" + board)
+            publish_env(project_ver, board_ver, esp_idf_ver, firmware_ver)
+            os.chdir('../..')
+        os.chdir('../../..')
+
+
+
 def print_help():
     help_text = """
     This python program is used to simplify publishing Esp Helper firmware to database.
@@ -138,6 +160,9 @@ def print_help():
         all          -   publish firmware for all projects and devices
         --project    -   publish firmware for specific project
         --version    -   manually pass version of new firmware
+    --upload         -   upload firmware to database
+        --project    -   upload firmware of specific project
+        all          -   upload firmware of all projects
     """
     print(help_text)
 
@@ -148,7 +173,7 @@ if(len(sys.argv) != 1 and sys.argv[1] == "--ci"):
     publish_all_projects()
 elif(len(sys.argv) != 1 and sys.argv[1] == "--help"):
     print_help()
-elif(len(sys.argv) != 1 and sys.argv[1] == "--local"):
+elif(len(sys.argv) != 1 and sys.argv[1] == "--upload" and sys.argv[2] == "all"):
     os.chdir('/home/wmytych/Projects/esp_helper/')
     publish_all_projects()
 elif(len(sys.argv) != 1 and sys.argv[1] == "--build"):
@@ -167,6 +192,9 @@ elif(len(sys.argv) == 5 and sys.argv[1] == "--update" and sys.argv[3] == '--proj
 elif(len(sys.argv) == 5 and sys.argv[1] == "--update" and sys.argv[3] == '--version'):
     os.chdir('..')
     update_device_with_alias(sys.argv[2], 'none', sys.argv[4])
+elif(len(sys.argv) == 4 and sys.argv[1] == "--upload" and sys.argv[2] == "--project"):
+    os.chdir('..')
+    publish_project(sys.argv[3])
 else:
     os.chdir('..')
     publish_all_projects()

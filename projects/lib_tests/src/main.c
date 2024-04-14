@@ -16,11 +16,6 @@
 #include "wifi_controller.h"
 #include "wifi_manager.h"
 
-#define MY_SSID "TP-LINK_AD8313"
-#define MY_PSK "20232887"
-#define SOL_SSID "OstNet-952235"
-#define SOL_PSK "Solonka106"
-
 void app_main() {
     // Allow other core to finish initialization
     vTaskDelay(pdMS_TO_TICKS(100));
@@ -30,7 +25,7 @@ void app_main() {
     logger_set_log_level(LOG_LEVEL_VERBOSE);
 
     // given
-    const char* key = "asdwadq";
+    const char *key = "asdwadq";
     uint8_t data = 12;
     nvs_c_handle_t handle = NULL;
 
