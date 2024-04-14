@@ -28,22 +28,16 @@ projects/bmp280/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Unin
 projects/bmp280/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
-projects/bmp280/src/main.c:112:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+projects/bmp280/src/main.c:169:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/bmp280/src/main.c:109:13: note: err is assigned
+projects/bmp280/src/main.c:166:13: note: err is assigned
         err = wifi_c_get_status_as_json(wifi_c_info, 300);
             ^
-projects/bmp280/src/main.c:112:13: note: err is overwritten
+projects/bmp280/src/main.c:169:13: note: err is overwritten
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/bmp280/src/main.c:39:11: style: The scope of the variable 'altitude' can be reduced. [variableScope]
-    float altitude = 0;
-          ^
-projects/bmp280/src/main.c:39:20: style: Variable 'altitude' is assigned a value that is never used. [unreadVariable]
-    float altitude = 0;
-                   ^
-projects/bmp280/src/main.c:100:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/bmp280/src/main.c:157:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = ERR_C_OK;
                 ^
 projects/bmp280/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
@@ -127,16 +121,16 @@ projects/plantsitter/lib/spiffs_controller/src/spiffs_controller.c:50:24: error:
 projects/plantsitter/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
-projects/plantsitter/src/main.c:110:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+projects/plantsitter/src/main.c:131:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/plantsitter/src/main.c:107:13: note: err is assigned
+projects/plantsitter/src/main.c:128:13: note: err is assigned
         err = wifi_c_get_status_as_json(wifi_c_info, 300);
             ^
-projects/plantsitter/src/main.c:110:13: note: err is overwritten
+projects/plantsitter/src/main.c:131:13: note: err is overwritten
         err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
             ^
-projects/plantsitter/src/main.c:98:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/plantsitter/src/main.c:119:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
     err_c_t err = 0;
                 ^
 projects/plantsitter/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
