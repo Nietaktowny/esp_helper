@@ -139,7 +139,7 @@ int adc_c_oneshot_calibrate(adc_c_oneshot_handle_t handle) {
 
     adc_cali_curve_fitting_config_t cali_config = {
         .unit_id = handle->esp_config.unit_id,
-        .atten = ADC_ATTEN_DB_12,
+        .atten = ADC_ATTEN_DB_11,
         .bitwidth = ADC_BITWIDTH_DEFAULT,
     };
 
