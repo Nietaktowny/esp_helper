@@ -14,6 +14,7 @@
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -29,20 +30,29 @@
 #define SOIL_ADC_READ_GPIO ADC_C_GPIO_4
 #endif
 
-#define SOIL_MOISTURE_WET 1000 ///< ADC read value when sensor is put into water.
-#define SOIL_MOISTURE_DRY 2300 ///< ADC read value when sensor is in the air.
+#define SOIL_MOISTURE_WET 1000         ///< ADC read value when sensor is put into water.
+#define SOIL_MOISTURE_DRY 2300         ///< ADC read value when sensor is in the air.
+#define SOIL_MOISTURE_DELAY_TIME 60000 ///< Time of delay before next reading soil moisture value.
+///< Number of times soil moisture will be read, before calculating average value and sending it to database.
+#define SOIL_MOISTURE_READINGS_NUMBER 5
 
 long map(long x, long in_min, long in_max, long out_min, long out_max) {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+// This function will read soil moisture each iteration with delay between iterations specified by SOIL_MOISTURE_DELAY_TIME
+// After that average value from number of readings will be calculated and send to the database.
+// So time between each HTTP POST request to database is: number of read values * delay between each read = SOIL_MOISTURE_READINGS_NUMBER *
+// SOIL_MOISTURE_DELAY_TIME Due to long time between requests, connection is not keep opened between requests.
 void read_soil_moisture_task(void *args) {
     err_c_t err = ERR_C_OK;
     int voltage = 0;
     adc_c_oneshot_handle_t adc = NULL;
-    http_client_t client = NULL;
     char post_data[256] = {0};
     char device_id[64] = {0};
+    uint8_t iteration = 0;
+    long moisture[SOIL_MOISTURE_READINGS_NUMBER] = {0};
+    long moisture_avg = 0;
 
     sysutil_get_chip_base_mac_as_str(device_id, sizeof(device_id));
 
@@ -50,13 +60,6 @@ void read_soil_moisture_task(void *args) {
     if (err != ERR_C_OK) {
         LOG_ERROR("error %d when trying to init ADC Oneshot Controller, read_soil_moisture_task cannot continue: %s", err,
                   error_to_name(err));
-        vTaskDelete(NULL);
-    }
-
-    err = http_client_init_reuse(&client, "wmytych.usermd.net", "modules/setters/add_moisture_read.php");
-    if (err != ERR_C_OK) {
-        LOG_ERROR("error %d when trying to prepare http_client for reuse: %s", err, error_to_name(err));
-        adc_c_deinit_oneshot(&adc);
         vTaskDelete(NULL);
     }
 
@@ -68,29 +71,47 @@ void read_soil_moisture_task(void *args) {
         }
 
         // calculate moisture and map it to percentage
-        long moisture = map(voltage, SOIL_MOISTURE_DRY, SOIL_MOISTURE_WET, 0, 100);
-        LOG_INFO("calculated soil moisture: %d%%", moisture);
+        moisture[iteration] = map(voltage, SOIL_MOISTURE_DRY, SOIL_MOISTURE_WET, 0, 100);
+        LOG_INFO("calculated soil moisture: %ld%%", moisture[iteration]);
 
-        snprintf(post_data, sizeof(post_data), "device_id=%s&moisture=%ld", device_id, moisture);
+        if (iteration < SOIL_MOISTURE_READINGS_NUMBER) {
+            iteration++;
+            LOG_VERBOSE("number of collected soil moisture values: %d", iteration + 1);
+            vTaskDelay(pdMS_TO_TICKS(SOIL_MOISTURE_DELAY_TIME));
+            continue;
+        }
+        // sum all values - use for loop, because it needs to be able to cope with changing number of readings to do
+        for (uint8_t i = 0; i < SOIL_MOISTURE_READINGS_NUMBER; i++) {
+            moisture_avg += moisture[i];
+            LOG_VERBOSE("read value number %u is: %ld", i, moisture[i]);
+        }
+        moisture_avg = moisture_avg / SOIL_MOISTURE_READINGS_NUMBER;
+        LOG_DEBUG("average soil moisture from %d read values is: %ld", iteration, moisture_avg);
+
+        // reset collected moisture values counter
+        iteration = 0;
+
+        // here we got calculated average soil moisture, send it to database
+        snprintf(post_data, sizeof(post_data), "device_id=%s&moisture=%ld", device_id, moisture_avg);
         LOG_VERBOSE("data to send to database: %s", post_data);
-        err = http_client_post_reuse(client, post_data, HTTP_CLIENT_POST_USE_STRLEN);
+        err = http_client_post("wmytych.usermd.net", "modules/setters/add_moisture_read.php", post_data, HTTP_CLIENT_POST_USE_STRLEN);
         if (err != ERR_C_OK) {
             LOG_ERROR("client POST request returned error %d: %s", err, error_to_name(err));
-            LOG_WARN("reestablishing connection...");
-            http_client_deinit_reuse(&client);
-            err = http_client_init_reuse(&client, "wmytych.usermd.net", "modules/setters/add_moisture_read.php");
+            LOG_WARN("trying again to make POST request...");
+            err = http_client_post("wmytych.usermd.net", "modules/setters/add_moisture_read.php", post_data, HTTP_CLIENT_POST_USE_STRLEN);
             if (err != ERR_C_OK) {
                 LOG_ERROR("error %d when trying to post moisture data to database: %s", err, error_to_name(err));
-                vTaskDelay(pdMS_TO_TICKS(300000));
+                vTaskDelay(pdMS_TO_TICKS(SOIL_MOISTURE_DELAY_TIME));
                 continue;
             }
         }
         LOG_VERBOSE("Client POST request returned: %d", err);
-        vTaskDelay(pdMS_TO_TICKS(300000));
+        vTaskDelay(pdMS_TO_TICKS(SOIL_MOISTURE_DELAY_TIME));
     }
     // if ever task got here, delete it
-    http_client_deinit_reuse(&client);
     adc_c_deinit_oneshot(&adc);
+    memutil_zero_memory(post_data, sizeof(post_data));
+    memutil_zero_memory(device_id, sizeof(device_id));
     vTaskDelete(NULL);
 }
 
@@ -125,8 +146,8 @@ void inspect_heap_task(void *args) {
     while (1) {
         uint32_t free_heap = esp_get_free_heap_size();
         uint32_t ever_free_heap = esp_get_minimum_free_heap_size();
-        LOG_DEBUG("Currently available heap: %lu", free_heap);
-        LOG_DEBUG("The minimum heap size that was ever available: %lu", ever_free_heap);
+        LOG_VERBOSE("Currently available heap: %lu", free_heap);
+        LOG_VERBOSE("The minimum heap size that was ever available: %lu", ever_free_heap);
 
         if (free_heap < 8000) {
             LOG_ERROR("Currently free heap very low, restarting...");
@@ -143,7 +164,7 @@ void on_connect_handler(void) {
     LOG_INFO("Onboard LED turned on!");
 #endif
 
-    helper_perform_ota();
+    //   helper_perform_ota();
 
     sysutil_setup_ntp_server("pool.ntp.org", 1);
 
