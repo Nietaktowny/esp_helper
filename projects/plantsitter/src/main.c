@@ -86,12 +86,12 @@ void read_soil_moisture_task(void *args) {
             err = http_client_init_reuse(&client, "wmytych.usermd.net", "modules/setters/add_moisture_read.php");
             if (err != ERR_C_OK) {
                 LOG_ERROR("error %d when trying to post moisture data to database: %s", err, error_to_name(err));
-                vTaskDelay(pdMS_TO_TICKS(10000));
+                vTaskDelay(pdMS_TO_TICKS(300000));
                 continue;
             }
         }
         LOG_VERBOSE("Client POST request returned: %d", err);
-        vTaskDelay(pdMS_TO_TICKS(10000));
+        vTaskDelay(pdMS_TO_TICKS(300000));
     }
     // if ever task got here, delete it
     http_client_deinit_reuse(&client);
