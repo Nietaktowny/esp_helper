@@ -28,18 +28,18 @@ projects/bmp280/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Unin
 projects/bmp280/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
-projects/bmp280/src/main.c:169:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
-        err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
-            ^
-projects/bmp280/src/main.c:166:13: note: err is assigned
-        err = wifi_c_get_status_as_json(wifi_c_info, 300);
-            ^
-projects/bmp280/src/main.c:169:13: note: err is overwritten
-        err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
-            ^
-projects/bmp280/src/main.c:157:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err_c_t err = ERR_C_OK;
-                ^
+projects/bmp280/src/main.c:194:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = http_client_post(SERVER_ADDRESS, SERVER_WIFI_INFO_INPUT_ACTION,
+        ^
+projects/bmp280/src/main.c:190:9: note: err is assigned
+    err = wifi_c_get_status_as_json(wifi_c_info, 300);
+        ^
+projects/bmp280/src/main.c:194:9: note: err is overwritten
+    err = http_client_post(SERVER_ADDRESS, SERVER_WIFI_INFO_INPUT_ACTION,
+        ^
+projects/bmp280/src/main.c:181:15: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+  err_c_t err = ERR_C_OK;
+              ^
 projects/bmp280/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
   wifi_c_status_t wifi_c_test_status;
                   ^
@@ -121,18 +121,18 @@ projects/plantsitter/lib/spiffs_controller/src/spiffs_controller.c:50:24: error:
 projects/plantsitter/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
-projects/plantsitter/src/main.c:131:13: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
-        err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
-            ^
-projects/plantsitter/src/main.c:128:13: note: err is assigned
-        err = wifi_c_get_status_as_json(wifi_c_info, 300);
-            ^
-projects/plantsitter/src/main.c:131:13: note: err is overwritten
-        err = http_client_post("wmytych.usermd.net", "modules/setters/update_wifi_info.php", device_info, HTTP_CLIENT_POST_USE_STRLEN);
-            ^
-projects/plantsitter/src/main.c:119:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
-    err_c_t err = 0;
-                ^
+projects/plantsitter/src/main.c:168:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = http_client_post(SERVER_ADDRESS, SERVER_WIFI_INFO_INPUT_ACTION,
+        ^
+projects/plantsitter/src/main.c:164:9: note: err is assigned
+    err = wifi_c_get_status_as_json(wifi_c_info, 300);
+        ^
+projects/plantsitter/src/main.c:168:9: note: err is overwritten
+    err = http_client_post(SERVER_ADDRESS, SERVER_WIFI_INFO_INPUT_ACTION,
+        ^
+projects/plantsitter/src/main.c:155:15: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+  err_c_t err = 0;
+              ^
 projects/plantsitter/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
   wifi_c_status_t wifi_c_test_status;
                   ^
