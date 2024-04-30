@@ -194,7 +194,7 @@ void inspect_heap_task(void *args) {
       LOG_ERROR("Currently free heap very low, restarting...");
       esp_restart();
     }
-    sysutil_get_system_event_free_stack_size();
+    // sysutil_get_system_event_free_stack_size();
     vTaskDelay(pdMS_TO_TICKS(60000));
   }
 }
