@@ -134,6 +134,8 @@ def builder_print_help():
             -e           -       specify platformio enviornment to build
             -p           -       specify platformio project to build
             -i           -       ignore specified projects (separated by commas: np. project1,project2,project3)
+    --update             -       update libraries from lib_tests in all other projects
+
     """
     print(help_text)
 

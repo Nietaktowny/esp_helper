@@ -32,3 +32,7 @@ void sysutil_get_chip_base_mac(uint8_t mac[6]);
  * @retval ERR_C_MEMORY_ERR on too small buffer.
  */
 int sysutil_get_chip_base_mac_as_str(char* buffer, size_t buflen);
+
+
+
+int sysutil_get_system_event_free_stack_size(void);
