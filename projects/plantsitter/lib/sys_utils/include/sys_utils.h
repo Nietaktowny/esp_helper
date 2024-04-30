@@ -54,3 +54,7 @@ int sysutil_get_chip_base_mac_as_str(char* buffer, size_t buflen);
  */
 /* ---------------------------------*/
 int sysutil_setup_ntp_server(const char* ntp_server, bool block);
+
+
+
+int sysutil_get_system_event_free_stack_size(void);
