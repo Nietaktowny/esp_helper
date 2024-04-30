@@ -35,7 +35,7 @@
 #define BMP_NUMBER_OF_VALUES_TO_READ                                           \
   20 ///< Numebr of values to read, before calculating average value.
 #define BMP_DELAY_BETWEEN_READ                                                 \
-  3000 ///< Delay to wait before single read iteration.
+  6000 ///< Delay to wait before single read iteration.
 ///< Server address
 #define SERVER_ADDRESS "wmytych.usermd.net"
 ///< Path to script in server that will process READINGS INPUT request
