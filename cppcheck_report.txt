@@ -121,16 +121,16 @@ projects/plantsitter/lib/spiffs_controller/src/spiffs_controller.c:50:24: error:
 projects/plantsitter/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
             LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
                                                                                                                                         ^
-projects/plantsitter/src/main.c:168:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+projects/plantsitter/src/main.c:171:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
     err = http_client_post(SERVER_ADDRESS, SERVER_WIFI_INFO_INPUT_ACTION,
         ^
-projects/plantsitter/src/main.c:164:9: note: err is assigned
+projects/plantsitter/src/main.c:167:9: note: err is assigned
     err = wifi_c_get_status_as_json(wifi_c_info, 300);
         ^
-projects/plantsitter/src/main.c:168:9: note: err is overwritten
+projects/plantsitter/src/main.c:171:9: note: err is overwritten
     err = http_client_post(SERVER_ADDRESS, SERVER_WIFI_INFO_INPUT_ACTION,
         ^
-projects/plantsitter/src/main.c:155:15: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+projects/plantsitter/src/main.c:158:15: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
   err_c_t err = 0;
               ^
 projects/plantsitter/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
@@ -175,7 +175,7 @@ projects/relays/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: 
 projects/relays/test/embedded/test_wifi_controller/test_wifi_controller.c:20:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
         err = nvs_flash_init();
             ^
-projects/bmp280/lib/adc_controller/src/adc_controller.c:167:0: style: The function 'adc_c_oneshot_read_channel' is never used. [unusedFunction]
+projects/bmp280/lib/adc_controller/src/adc_controller.c:187:0: style: The function 'adc_c_oneshot_read_channel' is never used. [unusedFunction]
 
 ^
 libraries/logger/examples/add_log_file.c:4:0: style: The function 'app_main' is never used. [unusedFunction]
