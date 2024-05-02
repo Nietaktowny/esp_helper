@@ -70,13 +70,3 @@ int sysutil_setup_ntp_server(const char *ntp_server, bool block) {
 
   return err;
 }
-
-int sysutil_get_system_event_free_stack_size(void) {
-  err_c_t err = ERR_C_OK;
-  char buffer[1024] = {0};
-
-  vTaskList(buffer);
-  LOG_VERBOSE("Tasks state:\n%s", buffer);
-
-  return err;
-}
