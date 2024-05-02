@@ -38,7 +38,7 @@
 #define SOIL_MOISTURE_DELAY_TIME 60000
 ///< Number of times soil moisture will be read, before calculating average
 ///< value and sending it to database.
-#define SOIL_MOISTURE_READINGS_NUMBER 5
+#define SOIL_MOISTURE_READINGS_NUMBER 10
 ///< Server address
 #define SERVER_ADDRESS "wmytych.usermd.net"
 ///< Path to script in server that will process SOIL INPUT request
@@ -95,7 +95,7 @@ void read_soil_moisture_task(void *args) {
         map(voltage, SOIL_MOISTURE_DRY, SOIL_MOISTURE_WET, 0, 100);
     LOG_INFO("calculated soil moisture: %ld%%", moisture[iteration]);
 
-    if (iteration < SOIL_MOISTURE_READINGS_NUMBER) {
+    if (iteration < SOIL_MOISTURE_READINGS_NUMBER - 1) {
       iteration++;
       LOG_VERBOSE("number of collected soil moisture values: %d",
                   iteration + 1);
@@ -104,13 +104,14 @@ void read_soil_moisture_task(void *args) {
     }
     // sum all values - use for loop, because it needs to be able to cope with
     // changing number of readings to do
-    for (uint8_t i = 0; i < SOIL_MOISTURE_READINGS_NUMBER; i++) {
+    for (uint8_t i = 0; i <= iteration; i++) {
       moisture_avg += moisture[i];
       LOG_VERBOSE("read value number %u is: %ld", i, moisture[i]);
     }
-    moisture_avg = moisture_avg / SOIL_MOISTURE_READINGS_NUMBER;
-    LOG_DEBUG("average soil moisture from %d read values is: %ld", iteration,
-              moisture_avg);
+    LOG_VERBOSE("sum of all colected values is: %ld", moisture_avg);
+    moisture_avg = moisture_avg / (SOIL_MOISTURE_READINGS_NUMBER);
+    LOG_DEBUG("average soil moisture from %d read values is: %ld",
+              iteration + 1, moisture_avg);
 
     // reset collected moisture values counter
     iteration = 0;
@@ -142,6 +143,8 @@ void read_soil_moisture_task(void *args) {
       }
     }
     LOG_VERBOSE("Client POST request returned: %d", err);
+    memutil_zero_memory(moisture, sizeof(moisture));
+    moisture_avg = 0;
     vTaskDelay(pdMS_TO_TICKS(SOIL_MOISTURE_DELAY_TIME));
   }
   // if ever task got here, delete it
