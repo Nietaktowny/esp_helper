@@ -175,6 +175,45 @@ projects/relays/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: 
 projects/relays/test/embedded/test_wifi_controller/test_wifi_controller.c:20:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
         err = nvs_flash_init();
             ^
+projects/rfider/lib/CException/test/TestException.c:63:10: style: Variable 'Throw' is assigned a value that is never used. [unreadVariable]
+    Throw(0xEF);
+         ^
+projects/rfider/lib/cli_manager/src/cli_manager.c:28:17: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+    err_c_t err = 0;
+                ^
+projects/rfider/lib/logger/test/test_logger.c:888:3: style: Statements following return, break, continue, goto or throw will never be executed. [unreachableCode]
+  LOG_FATAL("FINISHED LOGGER TESTS!");
+  ^
+projects/rfider/lib/nvs_controller/src/nvs_controller.c:260:110: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+                                                             err, key, handle->namespace, error_to_name(err)););
+                                                                                                             ^
+projects/rfider/lib/spiffs_controller/src/spiffs_controller.c:50:24: error: Uninitialized variable: ret_path [uninitvar]
+    path_len = strlen(&ret_path[0]);
+                       ^
+projects/rfider/lib/wifi_manager/src/wifi_manager.c:154:137: error: There is an unknown macro here somewhere. Configuration is required. If ; is a macro then please configure it. [unknownMacro]
+            LOG_ERROR("error %d, wifi manager could not open %s NVS namespace: %s", err, WIFI_MANAGER_NVS_NAMESPACE, error_to_name(err)););
+                                                                                                                                        ^
+projects/rfider/src/main.c:44:9: style: Variable 'err' is reassigned a value before the old one has been used. [redundantAssignment]
+    err = http_client_post("wmytych.usermd.net",
+        ^
+projects/rfider/src/main.c:40:9: note: err is assigned
+    err = wifi_c_get_status_as_json(wifi_c_info, 300);
+        ^
+projects/rfider/src/main.c:44:9: note: err is overwritten
+    err = http_client_post("wmytych.usermd.net",
+        ^
+projects/rfider/src/main.c:28:47: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+void read_rfid_task(void *args) { err_c_t err = ERR_C_OK; }
+                                              ^
+projects/rfider/src/main.c:31:15: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+  err_c_t err = ERR_C_OK;
+              ^
+projects/rfider/test/desktop/test_wifi_controller/test_wifi_controller.c:80:19: style: Unused variable: wifi_c_test_status [unusedVariable]
+  wifi_c_status_t wifi_c_test_status;
+                  ^
+projects/rfider/test/embedded/test_wifi_controller/test_wifi_controller.c:20:13: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+        err = nvs_flash_init();
+            ^
 projects/bmp280/lib/adc_controller/src/adc_controller.c:187:0: style: The function 'adc_c_oneshot_read_channel' is never used. [unusedFunction]
 
 ^
@@ -278,6 +317,12 @@ libraries/ota_controller/src/ota_controller.c:105:0: style: The function 'ota_c_
 
 ^
 projects/bmp280/lib/CException/test/TestException.c:7:0: style: The function 'setUp' is never used. [unusedFunction]
+
+^
+libraries/spi_controller/src/spi_controller.c:29:0: style: The function 'spi_c_read_reg' is never used. [unusedFunction]
+
+^
+libraries/spi_controller/src/spi_controller.c:22:0: style: The function 'spi_c_write_reg' is never used. [unusedFunction]
 
 ^
 libraries/spiffs_controller/src/spiffs_controller.c:117:0: style: The function 'spiffs_c_get_info' is never used. [unusedFunction]
