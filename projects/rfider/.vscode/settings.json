@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "cexception.h": "c",
+        "esp_netif_sntp.h": "c",
+        "gpio.h": "c"
+    }
+}

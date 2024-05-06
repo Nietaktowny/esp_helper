@@ -1,0 +1,4 @@
+dependencies:
+  idf: '>=5.0' 
+description: Helper library to use SPI protocol..
+version: 1.0.0

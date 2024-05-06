@@ -1,0 +1,8 @@
+{
+	"name": "rc522",
+	"version": "1.0.0",
+	"keywords": "keyword",
+	"description": "Library used to control and interact with RFID RC-522 reader.",
+	"frameworks": ["espidf"],
+	"platforms": ["espressif32"]
+}

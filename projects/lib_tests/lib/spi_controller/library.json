@@ -1,0 +1,8 @@
+{
+	"name": "spi_controller",
+	"version": "1.0.0",
+	"keywords": "keyword",
+	"description": "Helper library to use SPI protocol.",
+	"frameworks": ["espidf"],
+	"platforms": ["espressif32"]
+}
