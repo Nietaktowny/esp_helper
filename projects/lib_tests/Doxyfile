@@ -51,7 +51,7 @@ PROJECT_BRIEF          = "Internet of Things collection of projects build with E
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = /home/wmytych/Projects/esp_helper/media/android-chrome-512x512.png
+PROJECT_LOGO           = /home/wmytych/Projects/esp_helper/media/favicon-32x32.png
 
 # The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
 # into which the generated documentation will be written. If a relative path is
@@ -959,7 +959,8 @@ EXCLUDE                = lib/CException \
                          lib/CException/README.md \
                          lib/CException/docs \
                          lib/CException/docs/CException.md \
-                         lib/CException/docs/ThrowTheSwitchCodingStandard.md
+                         lib/CException/docs/ThrowTheSwitchCodingStandard.md \
+                         */CException
 
 # The EXCLUDE_SYMLINKS tag can be used to select whether or not files or
 # directories that are symbolic links (a Unix file system feature) are excluded
