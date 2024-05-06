@@ -1,0 +1,4 @@
+dependencies:
+  idf: '>=5.0' 
+description: Library used to control and interact with RFID RC-522 reader..
+version: 1.0.0

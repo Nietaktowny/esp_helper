@@ -1,0 +1,8 @@
+{
+    "name": "err_controller",
+    "version": "1.0.4",
+    "keywords": "error, error managing, controller, cexception",
+    "description": "Controller library used to control errors.",
+    "frameworks": ["*"],
+    "platforms": ["*"]
+}

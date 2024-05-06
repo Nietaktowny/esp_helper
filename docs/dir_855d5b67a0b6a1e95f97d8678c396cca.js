@@ -16,6 +16,8 @@ var dir_855d5b67a0b6a1e95f97d8678c396cca =
     [ "mysql_client", "dir_7fb7a367506971a2d6586093a53686b6.html", "dir_7fb7a367506971a2d6586093a53686b6" ],
     [ "nvs_controller", "dir_0e0ef57ad9a757c6f78dd1ec6f92b083.html", "dir_0e0ef57ad9a757c6f78dd1ec6f92b083" ],
     [ "ota_controller", "dir_bb5474980ddec53f2dcbd80788562a1e.html", "dir_bb5474980ddec53f2dcbd80788562a1e" ],
+    [ "rc522", "dir_f296ead9ca7fefddb02164523dad55e8.html", "dir_f296ead9ca7fefddb02164523dad55e8" ],
+    [ "spi_controller", "dir_327716be92f1d0cc7f27991c6c996a56.html", "dir_327716be92f1d0cc7f27991c6c996a56" ],
     [ "spiffs_controller", "dir_903a0654406e4d687b4733bd516e3df9.html", "dir_903a0654406e4d687b4733bd516e3df9" ],
     [ "sys_utils", "dir_02319429b492ce211ece47cd15cf1f4d.html", "dir_02319429b492ce211ece47cd15cf1f4d" ],
     [ "tcp_controller", "dir_78ac67dc0aba7b8cbb62cfdee47ae8ea.html", "dir_78ac67dc0aba7b8cbb62cfdee47ae8ea" ],

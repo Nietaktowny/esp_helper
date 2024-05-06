@@ -63,6 +63,8 @@ var NAVTREE =
     ] ],
     [ "cli_manager", "md_projects_2lib__tests_2lib_2cli__manager_2README.html", null ],
     [ "esp_helper_utils", "md_projects_2lib__tests_2lib_2esp__helper__utils_2README.html", null ],
+    [ "rc522", "md_projects_2lib__tests_2lib_2rc522_2README.html", null ],
+    [ "spi_controller", "md_projects_2lib__tests_2lib_2spi__controller_2README.html", null ],
     [ "sys_utils", "md_projects_2lib__tests_2lib_2sys__utils_2README.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -100,13 +102,13 @@ var NAVTREEINDEX =
 [
 "CExceptionConfig_8h.html",
 "bmp280_8h.html#a76f74528570223059dea2107d49e8441",
-"dir_eebba67b32dd103cfef0701dd50e2080.html",
-"lib_2logger_2test_2test__logger_8c.html#a573cdab9b5916132c45bbf84ae3ab314",
-"linked__list__internal_8h.html",
-"pytest__cli__manager_8py.html",
-"test_2desktop_2test__logger_2test__logger_8c.html#a6a0e758fe439008cc4022d72e79fba49",
-"test_2embedded_2test__nvs__controller_2test__nvs__controller_8c.html#ab328ffc028ee617b8f4a0219a84060d9",
-"test__wifi__controller_8c.html#a6154134ff981b51e814e37486c7a0af5"
+"dir_dda0ad3dcf07a7c6b503349fa33625d5.html",
+"lib_2logger_2test_2test__logger_8c.html#a23098fea90b30ec86e70f1b28254cfdc",
+"linked__list_8h.html#ae9d538ed09dba37b4bdddf398663838d",
+"ota__controller_8h.html#a3a2928d5273d05d41089bd2ca186274f",
+"test_2desktop_2test__logger_2test__logger_8c.html#a1d0f483df356ff98aae1e258b7b79207",
+"test_2embedded_2test__nvs__controller_2test__nvs__controller_8c.html#a9ac814a93fbaac94b93205b40f880810",
+"test__wifi__controller_8c.html#a2b40e2d631360082e75703f95a08d0eb"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
