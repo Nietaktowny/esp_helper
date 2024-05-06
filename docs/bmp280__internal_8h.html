@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -129,98 +129,75 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4d3546d67f7ac457433d1601763c76a8" id="r_a4d3546d67f7ac457433d1601763c76a8"><td class="memItemLeft" align="right" valign="top"><a id="a4d3546d67f7ac457433d1601763c76a8" name="a4d3546d67f7ac457433d1601763c76a8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_CHIP_ID</b>&#160;&#160;&#160;UINT8_C(0xD0)</td></tr>
-<tr class="memdesc:a4d3546d67f7ac457433d1601763c76a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address for chip identification number. <br /></td></tr>
+<tr class="memitem:a4d3546d67f7ac457433d1601763c76a8" id="r_a4d3546d67f7ac457433d1601763c76a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a4d3546d67f7ac457433d1601763c76a8">BMP_REG_CHIP_ID</a>&#160;&#160;&#160;UINT8_C(0xD0)</td></tr>
+<tr class="memdesc:a4d3546d67f7ac457433d1601763c76a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address for chip identification number.  <br /></td></tr>
 <tr class="separator:a4d3546d67f7ac457433d1601763c76a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29dc0576d58e8668c39899cf6581e024" id="r_a29dc0576d58e8668c39899cf6581e024"><td class="memItemLeft" align="right" valign="top"><a id="a29dc0576d58e8668c39899cf6581e024" name="a29dc0576d58e8668c39899cf6581e024"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_RESET</b>&#160;&#160;&#160;UINT8_C(0xE0)</td></tr>
-<tr class="memdesc:a29dc0576d58e8668c39899cf6581e024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address for sensor reset. <br /></td></tr>
+<tr class="memitem:a29dc0576d58e8668c39899cf6581e024" id="r_a29dc0576d58e8668c39899cf6581e024"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a29dc0576d58e8668c39899cf6581e024">BMP_REG_RESET</a>&#160;&#160;&#160;UINT8_C(0xE0)</td></tr>
+<tr class="memdesc:a29dc0576d58e8668c39899cf6581e024"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address for sensor reset.  <br /></td></tr>
 <tr class="separator:a29dc0576d58e8668c39899cf6581e024"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf3324e8a0d3444cf41ad21998cb183c" id="r_adf3324e8a0d3444cf41ad21998cb183c"><td class="memItemLeft" align="right" valign="top"><a id="adf3324e8a0d3444cf41ad21998cb183c" name="adf3324e8a0d3444cf41ad21998cb183c"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_STATUS</b>&#160;&#160;&#160;UINT8_C(0xF3)</td></tr>
-<tr class="memdesc:adf3324e8a0d3444cf41ad21998cb183c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of sensor status. <br /></td></tr>
+<tr class="memitem:adf3324e8a0d3444cf41ad21998cb183c" id="r_adf3324e8a0d3444cf41ad21998cb183c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#adf3324e8a0d3444cf41ad21998cb183c">BMP_REG_STATUS</a>&#160;&#160;&#160;UINT8_C(0xF3)</td></tr>
+<tr class="memdesc:adf3324e8a0d3444cf41ad21998cb183c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of sensor status.  <br /></td></tr>
 <tr class="separator:adf3324e8a0d3444cf41ad21998cb183c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3b42f7c2b2fb8d87544538c15435374" id="r_ac3b42f7c2b2fb8d87544538c15435374"><td class="memItemLeft" align="right" valign="top"><a id="ac3b42f7c2b2fb8d87544538c15435374" name="ac3b42f7c2b2fb8d87544538c15435374"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_CTRL_MEAS</b>&#160;&#160;&#160;UINT8_C(0xF4)</td></tr>
-<tr class="memdesc:ac3b42f7c2b2fb8d87544538c15435374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of sensor measurement control. <br /></td></tr>
+<tr class="memitem:ac3b42f7c2b2fb8d87544538c15435374" id="r_ac3b42f7c2b2fb8d87544538c15435374"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#ac3b42f7c2b2fb8d87544538c15435374">BMP_REG_CTRL_MEAS</a>&#160;&#160;&#160;UINT8_C(0xF4)</td></tr>
+<tr class="memdesc:ac3b42f7c2b2fb8d87544538c15435374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of sensor measurement control.  <br /></td></tr>
 <tr class="separator:ac3b42f7c2b2fb8d87544538c15435374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e2c691d268a94ffcf35de0c758beb98" id="r_a1e2c691d268a94ffcf35de0c758beb98"><td class="memItemLeft" align="right" valign="top"><a id="a1e2c691d268a94ffcf35de0c758beb98" name="a1e2c691d268a94ffcf35de0c758beb98"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_CONFIG</b>&#160;&#160;&#160;UINT8_C(0xF5)</td></tr>
-<tr class="memdesc:a1e2c691d268a94ffcf35de0c758beb98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of sensor configuration. <br /></td></tr>
+<tr class="memitem:a1e2c691d268a94ffcf35de0c758beb98" id="r_a1e2c691d268a94ffcf35de0c758beb98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a1e2c691d268a94ffcf35de0c758beb98">BMP_REG_CONFIG</a>&#160;&#160;&#160;UINT8_C(0xF5)</td></tr>
+<tr class="memdesc:a1e2c691d268a94ffcf35de0c758beb98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of sensor configuration.  <br /></td></tr>
 <tr class="separator:a1e2c691d268a94ffcf35de0c758beb98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2721d0fe182144b226a2c49ff694962" id="r_af2721d0fe182144b226a2c49ff694962"><td class="memItemLeft" align="right" valign="top"><a id="af2721d0fe182144b226a2c49ff694962" name="af2721d0fe182144b226a2c49ff694962"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_PRESS_MSB</b>&#160;&#160;&#160;UINT8_C(0xF7)</td></tr>
-<tr class="memdesc:af2721d0fe182144b226a2c49ff694962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of pressure most significant byte. <br /></td></tr>
+<tr class="memitem:af2721d0fe182144b226a2c49ff694962" id="r_af2721d0fe182144b226a2c49ff694962"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#af2721d0fe182144b226a2c49ff694962">BMP_REG_PRESS_MSB</a>&#160;&#160;&#160;UINT8_C(0xF7)</td></tr>
+<tr class="memdesc:af2721d0fe182144b226a2c49ff694962"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of pressure most significant byte.  <br /></td></tr>
 <tr class="separator:af2721d0fe182144b226a2c49ff694962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6f35c412abd52a199100e0af0bb3f96" id="r_ab6f35c412abd52a199100e0af0bb3f96"><td class="memItemLeft" align="right" valign="top"><a id="ab6f35c412abd52a199100e0af0bb3f96" name="ab6f35c412abd52a199100e0af0bb3f96"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_PRESS_LSB</b>&#160;&#160;&#160;UINT8_C(0xF8)</td></tr>
-<tr class="memdesc:ab6f35c412abd52a199100e0af0bb3f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of pressure least significant byte. <br /></td></tr>
+<tr class="memitem:ab6f35c412abd52a199100e0af0bb3f96" id="r_ab6f35c412abd52a199100e0af0bb3f96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#ab6f35c412abd52a199100e0af0bb3f96">BMP_REG_PRESS_LSB</a>&#160;&#160;&#160;UINT8_C(0xF8)</td></tr>
+<tr class="memdesc:ab6f35c412abd52a199100e0af0bb3f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of pressure least significant byte.  <br /></td></tr>
 <tr class="separator:ab6f35c412abd52a199100e0af0bb3f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb73a657686acb0fd9a3c17238c19d46" id="r_afb73a657686acb0fd9a3c17238c19d46"><td class="memItemLeft" align="right" valign="top"><a id="afb73a657686acb0fd9a3c17238c19d46" name="afb73a657686acb0fd9a3c17238c19d46"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_PRESS_XLSB</b>&#160;&#160;&#160;UINT8_C(0xF9)</td></tr>
-<tr class="memdesc:afb73a657686acb0fd9a3c17238c19d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of pressure fraction significant byte. <br /></td></tr>
+<tr class="memitem:afb73a657686acb0fd9a3c17238c19d46" id="r_afb73a657686acb0fd9a3c17238c19d46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#afb73a657686acb0fd9a3c17238c19d46">BMP_REG_PRESS_XLSB</a>&#160;&#160;&#160;UINT8_C(0xF9)</td></tr>
+<tr class="memdesc:afb73a657686acb0fd9a3c17238c19d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of pressure fraction significant byte.  <br /></td></tr>
 <tr class="separator:afb73a657686acb0fd9a3c17238c19d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c96aa617b3e41422ddecfac13d21d56" id="r_a9c96aa617b3e41422ddecfac13d21d56"><td class="memItemLeft" align="right" valign="top"><a id="a9c96aa617b3e41422ddecfac13d21d56" name="a9c96aa617b3e41422ddecfac13d21d56"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_TEMP_MSB</b>&#160;&#160;&#160;UINT8_C(0xFA)</td></tr>
-<tr class="memdesc:a9c96aa617b3e41422ddecfac13d21d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of temperature most significant byte. <br /></td></tr>
+<tr class="memitem:a9c96aa617b3e41422ddecfac13d21d56" id="r_a9c96aa617b3e41422ddecfac13d21d56"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a9c96aa617b3e41422ddecfac13d21d56">BMP_REG_TEMP_MSB</a>&#160;&#160;&#160;UINT8_C(0xFA)</td></tr>
+<tr class="memdesc:a9c96aa617b3e41422ddecfac13d21d56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of temperature most significant byte.  <br /></td></tr>
 <tr class="separator:a9c96aa617b3e41422ddecfac13d21d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad98eb2fdfdc30c40f5c378ad6fccb5b3" id="r_ad98eb2fdfdc30c40f5c378ad6fccb5b3"><td class="memItemLeft" align="right" valign="top"><a id="ad98eb2fdfdc30c40f5c378ad6fccb5b3" name="ad98eb2fdfdc30c40f5c378ad6fccb5b3"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_TEMP_LSB</b>&#160;&#160;&#160;UINT8_C(0xFB)</td></tr>
-<tr class="memdesc:ad98eb2fdfdc30c40f5c378ad6fccb5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of temperature least significant byte. <br /></td></tr>
+<tr class="memitem:ad98eb2fdfdc30c40f5c378ad6fccb5b3" id="r_ad98eb2fdfdc30c40f5c378ad6fccb5b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#ad98eb2fdfdc30c40f5c378ad6fccb5b3">BMP_REG_TEMP_LSB</a>&#160;&#160;&#160;UINT8_C(0xFB)</td></tr>
+<tr class="memdesc:ad98eb2fdfdc30c40f5c378ad6fccb5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of temperature least significant byte.  <br /></td></tr>
 <tr class="separator:ad98eb2fdfdc30c40f5c378ad6fccb5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17a07198ea16ae7aaa87133fe760fe98" id="r_a17a07198ea16ae7aaa87133fe760fe98"><td class="memItemLeft" align="right" valign="top"><a id="a17a07198ea16ae7aaa87133fe760fe98" name="a17a07198ea16ae7aaa87133fe760fe98"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_TEMP_XLSB</b>&#160;&#160;&#160;UINT8_C(0xFC)</td></tr>
-<tr class="memdesc:a17a07198ea16ae7aaa87133fe760fe98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of temperature fraction significant byte. <br /></td></tr>
+<tr class="memitem:a17a07198ea16ae7aaa87133fe760fe98" id="r_a17a07198ea16ae7aaa87133fe760fe98"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a17a07198ea16ae7aaa87133fe760fe98">BMP_REG_TEMP_XLSB</a>&#160;&#160;&#160;UINT8_C(0xFC)</td></tr>
+<tr class="memdesc:a17a07198ea16ae7aaa87133fe760fe98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of temperature fraction significant byte.  <br /></td></tr>
 <tr class="separator:a17a07198ea16ae7aaa87133fe760fe98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1028118f2f00d202b2b251afda6413a5" id="r_a1028118f2f00d202b2b251afda6413a5"><td class="memItemLeft" align="right" valign="top"><a id="a1028118f2f00d202b2b251afda6413a5" name="a1028118f2f00d202b2b251afda6413a5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_CAL_HI</b>&#160;&#160;&#160;UINT8_C(0xA1)</td></tr>
-<tr class="memdesc:a1028118f2f00d202b2b251afda6413a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of calibration constants. (high bank) <br /></td></tr>
+<tr class="memitem:a1028118f2f00d202b2b251afda6413a5" id="r_a1028118f2f00d202b2b251afda6413a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a1028118f2f00d202b2b251afda6413a5">BMP_REG_CAL_HI</a>&#160;&#160;&#160;UINT8_C(0xA1)</td></tr>
+<tr class="memdesc:a1028118f2f00d202b2b251afda6413a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of calibration constants. (high bank)  <br /></td></tr>
 <tr class="separator:a1028118f2f00d202b2b251afda6413a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05e57a87f2ca892ae8e4f004e2f858d0" id="r_a05e57a87f2ca892ae8e4f004e2f858d0"><td class="memItemLeft" align="right" valign="top"><a id="a05e57a87f2ca892ae8e4f004e2f858d0" name="a05e57a87f2ca892ae8e4f004e2f858d0"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_REG_CAL_LOW</b>&#160;&#160;&#160;UINT8_C(0x88)</td></tr>
-<tr class="memdesc:a05e57a87f2ca892ae8e4f004e2f858d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of calibration constants. (low bank) <br /></td></tr>
+<tr class="memitem:a05e57a87f2ca892ae8e4f004e2f858d0" id="r_a05e57a87f2ca892ae8e4f004e2f858d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a05e57a87f2ca892ae8e4f004e2f858d0">BMP_REG_CAL_LOW</a>&#160;&#160;&#160;UINT8_C(0x88)</td></tr>
+<tr class="memdesc:a05e57a87f2ca892ae8e4f004e2f858d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register address of calibration constants. (low bank)  <br /></td></tr>
 <tr class="separator:a05e57a87f2ca892ae8e4f004e2f858d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08f52651ae54f6102d1e7b16943a1126" id="r_a08f52651ae54f6102d1e7b16943a1126"><td class="memItemLeft" align="right" valign="top"><a id="a08f52651ae54f6102d1e7b16943a1126" name="a08f52651ae54f6102d1e7b16943a1126"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_CHIP_ID_FIRST</b>&#160;&#160;&#160;UINT8_C(0x56)</td></tr>
-<tr class="memdesc:a08f52651ae54f6102d1e7b16943a1126"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 chip ID (first type) <br /></td></tr>
+<tr class="memitem:a08f52651ae54f6102d1e7b16943a1126" id="r_a08f52651ae54f6102d1e7b16943a1126"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a08f52651ae54f6102d1e7b16943a1126">BMP_CHIP_ID_FIRST</a>&#160;&#160;&#160;UINT8_C(0x56)</td></tr>
+<tr class="memdesc:a08f52651ae54f6102d1e7b16943a1126"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 chip ID (first type)  <br /></td></tr>
 <tr class="separator:a08f52651ae54f6102d1e7b16943a1126"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4de15e43b624bbfe02a8ea930bb1cdba" id="r_a4de15e43b624bbfe02a8ea930bb1cdba"><td class="memItemLeft" align="right" valign="top"><a id="a4de15e43b624bbfe02a8ea930bb1cdba" name="a4de15e43b624bbfe02a8ea930bb1cdba"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_CHIP_ID_SECOND</b>&#160;&#160;&#160;UINT8_C(0x57)</td></tr>
-<tr class="memdesc:a4de15e43b624bbfe02a8ea930bb1cdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 chip ID (second type) <br /></td></tr>
+<tr class="memitem:a4de15e43b624bbfe02a8ea930bb1cdba" id="r_a4de15e43b624bbfe02a8ea930bb1cdba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a4de15e43b624bbfe02a8ea930bb1cdba">BMP_CHIP_ID_SECOND</a>&#160;&#160;&#160;UINT8_C(0x57)</td></tr>
+<tr class="memdesc:a4de15e43b624bbfe02a8ea930bb1cdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 chip ID (second type)  <br /></td></tr>
 <tr class="separator:a4de15e43b624bbfe02a8ea930bb1cdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a397bdad71ede09bfc08b2cb36a45af7a" id="r_a397bdad71ede09bfc08b2cb36a45af7a"><td class="memItemLeft" align="right" valign="top"><a id="a397bdad71ede09bfc08b2cb36a45af7a" name="a397bdad71ede09bfc08b2cb36a45af7a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_CHIP_ID_THIRD</b>&#160;&#160;&#160;UINT8_C(0x58)</td></tr>
-<tr class="memdesc:a397bdad71ede09bfc08b2cb36a45af7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 chip ID (third type) <br /></td></tr>
+<tr class="memitem:a397bdad71ede09bfc08b2cb36a45af7a" id="r_a397bdad71ede09bfc08b2cb36a45af7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a397bdad71ede09bfc08b2cb36a45af7a">BMP_CHIP_ID_THIRD</a>&#160;&#160;&#160;UINT8_C(0x58)</td></tr>
+<tr class="memdesc:a397bdad71ede09bfc08b2cb36a45af7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 chip ID (third type)  <br /></td></tr>
 <tr class="separator:a397bdad71ede09bfc08b2cb36a45af7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab6a59335fde2d20c7d422497fb5a145" id="r_aab6a59335fde2d20c7d422497fb5a145"><td class="memItemLeft" align="right" valign="top"><a id="aab6a59335fde2d20c7d422497fb5a145" name="aab6a59335fde2d20c7d422497fb5a145"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BME_CHIP_ID</b>&#160;&#160;&#160;UINT8_C(0x60)</td></tr>
-<tr class="memdesc:aab6a59335fde2d20c7d422497fb5a145"><td class="mdescLeft">&#160;</td><td class="mdescRight">BME280 chip ID. <br /></td></tr>
+<tr class="memitem:aab6a59335fde2d20c7d422497fb5a145" id="r_aab6a59335fde2d20c7d422497fb5a145"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#aab6a59335fde2d20c7d422497fb5a145">BME_CHIP_ID</a>&#160;&#160;&#160;UINT8_C(0x60)</td></tr>
+<tr class="memdesc:aab6a59335fde2d20c7d422497fb5a145"><td class="mdescLeft">&#160;</td><td class="mdescRight">BME280 chip ID.  <br /></td></tr>
 <tr class="separator:aab6a59335fde2d20c7d422497fb5a145"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2107cf7ee20764136a21f2467d88686" id="r_ac2107cf7ee20764136a21f2467d88686"><td class="memItemLeft" align="right" valign="top"><a id="ac2107cf7ee20764136a21f2467d88686" name="ac2107cf7ee20764136a21f2467d88686"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_RESET_VECTOR</b>&#160;&#160;&#160;UINT8_C(0xB6)</td></tr>
-<tr class="memdesc:ac2107cf7ee20764136a21f2467d88686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip reset vector. <br /></td></tr>
+<tr class="memitem:ac2107cf7ee20764136a21f2467d88686" id="r_ac2107cf7ee20764136a21f2467d88686"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#ac2107cf7ee20764136a21f2467d88686">BMP_RESET_VECTOR</a>&#160;&#160;&#160;UINT8_C(0xB6)</td></tr>
+<tr class="memdesc:ac2107cf7ee20764136a21f2467d88686"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip reset vector.  <br /></td></tr>
 <tr class="separator:ac2107cf7ee20764136a21f2467d88686"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a790cbfdb6af7953eef7c7f6a346c61ab" id="r_a790cbfdb6af7953eef7c7f6a346c61ab"><td class="memItemLeft" align="right" valign="top"><a id="a790cbfdb6af7953eef7c7f6a346c61ab" name="a790cbfdb6af7953eef7c7f6a346c61ab"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_STARTUP_TIME</b>&#160;&#160;&#160;UINT8_C(2)</td></tr>
-<tr class="memdesc:a790cbfdb6af7953eef7c7f6a346c61ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip startup time after reset. <br /></td></tr>
+<tr class="memitem:a790cbfdb6af7953eef7c7f6a346c61ab" id="r_a790cbfdb6af7953eef7c7f6a346c61ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a790cbfdb6af7953eef7c7f6a346c61ab">BMP_STARTUP_TIME</a>&#160;&#160;&#160;UINT8_C(2)</td></tr>
+<tr class="memdesc:a790cbfdb6af7953eef7c7f6a346c61ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Chip startup time after reset.  <br /></td></tr>
 <tr class="separator:a790cbfdb6af7953eef7c7f6a346c61ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ef73c54ae733de5c411784ef86fe1a0" id="r_a7ef73c54ae733de5c411784ef86fe1a0"><td class="memItemLeft" align="right" valign="top"><a id="a7ef73c54ae733de5c411784ef86fe1a0" name="a7ef73c54ae733de5c411784ef86fe1a0"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_I2C_ADDR_HI</b>&#160;&#160;&#160;UINT8_C(0xEE)</td></tr>
-<tr class="memdesc:a7ef73c54ae733de5c411784ef86fe1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C chip address when SDO pin is high. <br /></td></tr>
+<tr class="memitem:a7ef73c54ae733de5c411784ef86fe1a0" id="r_a7ef73c54ae733de5c411784ef86fe1a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a7ef73c54ae733de5c411784ef86fe1a0">BMP_I2C_ADDR_HI</a>&#160;&#160;&#160;UINT8_C(0xEE)</td></tr>
+<tr class="memdesc:a7ef73c54ae733de5c411784ef86fe1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C chip address when SDO pin is high.  <br /></td></tr>
 <tr class="separator:a7ef73c54ae733de5c411784ef86fe1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25196f92ec893c8e6724993aac9e26a5" id="r_a25196f92ec893c8e6724993aac9e26a5"><td class="memItemLeft" align="right" valign="top"><a id="a25196f92ec893c8e6724993aac9e26a5" name="a25196f92ec893c8e6724993aac9e26a5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_I2C_ADDR_LO</b>&#160;&#160;&#160;UINT8_C(0xEC)</td></tr>
-<tr class="memdesc:a25196f92ec893c8e6724993aac9e26a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C chip address when SDO pin is low. <br /></td></tr>
+<tr class="memitem:a25196f92ec893c8e6724993aac9e26a5" id="r_a25196f92ec893c8e6724993aac9e26a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a25196f92ec893c8e6724993aac9e26a5">BMP_I2C_ADDR_LO</a>&#160;&#160;&#160;UINT8_C(0xEC)</td></tr>
+<tr class="memdesc:a25196f92ec893c8e6724993aac9e26a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C chip address when SDO pin is low.  <br /></td></tr>
 <tr class="separator:a25196f92ec893c8e6724993aac9e26a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a4c2312589f67afdff1c0ba5912adaf6f" id="r_a4c2312589f67afdff1c0ba5912adaf6f"><td class="memItemLeft" align="right" valign="top"><a id="a4c2312589f67afdff1c0ba5912adaf6f" name="a4c2312589f67afdff1c0ba5912adaf6f"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_T_int32</b> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, int32_t adc_T)</td></tr>
+<tr class="memitem:a4c2312589f67afdff1c0ba5912adaf6f" id="r_a4c2312589f67afdff1c0ba5912adaf6f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a4c2312589f67afdff1c0ba5912adaf6f">bmp_compensate_T_int32</a> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, int32_t adc_T)</td></tr>
 <tr class="separator:a4c2312589f67afdff1c0ba5912adaf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62e2529d9443dfe65f6d4b755db00e8d" id="r_a62e2529d9443dfe65f6d4b755db00e8d"><td class="memItemLeft" align="right" valign="top"><a id="a62e2529d9443dfe65f6d4b755db00e8d" name="a62e2529d9443dfe65f6d4b755db00e8d"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_int64</b> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, int32_t adc_P)</td></tr>
+<tr class="memitem:a62e2529d9443dfe65f6d4b755db00e8d" id="r_a62e2529d9443dfe65f6d4b755db00e8d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__internal_8h.html#a62e2529d9443dfe65f6d4b755db00e8d">bmp_compensate_P_int64</a> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, int32_t adc_P)</td></tr>
 <tr class="separator:a62e2529d9443dfe65f6d4b755db00e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -229,7 +206,421 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
 <dl class="section version"><dt>Version</dt><dd>1.0.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aab6a59335fde2d20c7d422497fb5a145" name="aab6a59335fde2d20c7d422497fb5a145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab6a59335fde2d20c7d422497fb5a145">&#9670;&#160;</a></span>BME_CHIP_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BME_CHIP_ID&#160;&#160;&#160;UINT8_C(0x60)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BME280 chip ID. </p>
+
+</div>
+</div>
+<a id="a08f52651ae54f6102d1e7b16943a1126" name="a08f52651ae54f6102d1e7b16943a1126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08f52651ae54f6102d1e7b16943a1126">&#9670;&#160;</a></span>BMP_CHIP_ID_FIRST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_CHIP_ID_FIRST&#160;&#160;&#160;UINT8_C(0x56)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BMP280 chip ID (first type) </p>
+
+</div>
+</div>
+<a id="a4de15e43b624bbfe02a8ea930bb1cdba" name="a4de15e43b624bbfe02a8ea930bb1cdba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4de15e43b624bbfe02a8ea930bb1cdba">&#9670;&#160;</a></span>BMP_CHIP_ID_SECOND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_CHIP_ID_SECOND&#160;&#160;&#160;UINT8_C(0x57)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BMP280 chip ID (second type) </p>
+
+</div>
+</div>
+<a id="a397bdad71ede09bfc08b2cb36a45af7a" name="a397bdad71ede09bfc08b2cb36a45af7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a397bdad71ede09bfc08b2cb36a45af7a">&#9670;&#160;</a></span>BMP_CHIP_ID_THIRD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_CHIP_ID_THIRD&#160;&#160;&#160;UINT8_C(0x58)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BMP280 chip ID (third type) </p>
+
+</div>
+</div>
+<a id="a7ef73c54ae733de5c411784ef86fe1a0" name="a7ef73c54ae733de5c411784ef86fe1a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef73c54ae733de5c411784ef86fe1a0">&#9670;&#160;</a></span>BMP_I2C_ADDR_HI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_I2C_ADDR_HI&#160;&#160;&#160;UINT8_C(0xEE)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C chip address when SDO pin is high. </p>
+
+</div>
+</div>
+<a id="a25196f92ec893c8e6724993aac9e26a5" name="a25196f92ec893c8e6724993aac9e26a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25196f92ec893c8e6724993aac9e26a5">&#9670;&#160;</a></span>BMP_I2C_ADDR_LO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_I2C_ADDR_LO&#160;&#160;&#160;UINT8_C(0xEC)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C chip address when SDO pin is low. </p>
+
+</div>
+</div>
+<a id="a1028118f2f00d202b2b251afda6413a5" name="a1028118f2f00d202b2b251afda6413a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1028118f2f00d202b2b251afda6413a5">&#9670;&#160;</a></span>BMP_REG_CAL_HI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_CAL_HI&#160;&#160;&#160;UINT8_C(0xA1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of calibration constants. (high bank) </p>
+
+</div>
+</div>
+<a id="a05e57a87f2ca892ae8e4f004e2f858d0" name="a05e57a87f2ca892ae8e4f004e2f858d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05e57a87f2ca892ae8e4f004e2f858d0">&#9670;&#160;</a></span>BMP_REG_CAL_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_CAL_LOW&#160;&#160;&#160;UINT8_C(0x88)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of calibration constants. (low bank) </p>
+
+</div>
+</div>
+<a id="a4d3546d67f7ac457433d1601763c76a8" name="a4d3546d67f7ac457433d1601763c76a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d3546d67f7ac457433d1601763c76a8">&#9670;&#160;</a></span>BMP_REG_CHIP_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_CHIP_ID&#160;&#160;&#160;UINT8_C(0xD0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address for chip identification number. </p>
+
+</div>
+</div>
+<a id="a1e2c691d268a94ffcf35de0c758beb98" name="a1e2c691d268a94ffcf35de0c758beb98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e2c691d268a94ffcf35de0c758beb98">&#9670;&#160;</a></span>BMP_REG_CONFIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_CONFIG&#160;&#160;&#160;UINT8_C(0xF5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of sensor configuration. </p>
+
+</div>
+</div>
+<a id="ac3b42f7c2b2fb8d87544538c15435374" name="ac3b42f7c2b2fb8d87544538c15435374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b42f7c2b2fb8d87544538c15435374">&#9670;&#160;</a></span>BMP_REG_CTRL_MEAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_CTRL_MEAS&#160;&#160;&#160;UINT8_C(0xF4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of sensor measurement control. </p>
+
+</div>
+</div>
+<a id="ab6f35c412abd52a199100e0af0bb3f96" name="ab6f35c412abd52a199100e0af0bb3f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f35c412abd52a199100e0af0bb3f96">&#9670;&#160;</a></span>BMP_REG_PRESS_LSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_PRESS_LSB&#160;&#160;&#160;UINT8_C(0xF8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of pressure least significant byte. </p>
+
+</div>
+</div>
+<a id="af2721d0fe182144b226a2c49ff694962" name="af2721d0fe182144b226a2c49ff694962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2721d0fe182144b226a2c49ff694962">&#9670;&#160;</a></span>BMP_REG_PRESS_MSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_PRESS_MSB&#160;&#160;&#160;UINT8_C(0xF7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of pressure most significant byte. </p>
+
+</div>
+</div>
+<a id="afb73a657686acb0fd9a3c17238c19d46" name="afb73a657686acb0fd9a3c17238c19d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb73a657686acb0fd9a3c17238c19d46">&#9670;&#160;</a></span>BMP_REG_PRESS_XLSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_PRESS_XLSB&#160;&#160;&#160;UINT8_C(0xF9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of pressure fraction significant byte. </p>
+
+</div>
+</div>
+<a id="a29dc0576d58e8668c39899cf6581e024" name="a29dc0576d58e8668c39899cf6581e024"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29dc0576d58e8668c39899cf6581e024">&#9670;&#160;</a></span>BMP_REG_RESET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_RESET&#160;&#160;&#160;UINT8_C(0xE0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address for sensor reset. </p>
+
+</div>
+</div>
+<a id="adf3324e8a0d3444cf41ad21998cb183c" name="adf3324e8a0d3444cf41ad21998cb183c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3324e8a0d3444cf41ad21998cb183c">&#9670;&#160;</a></span>BMP_REG_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_STATUS&#160;&#160;&#160;UINT8_C(0xF3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of sensor status. </p>
+
+</div>
+</div>
+<a id="ad98eb2fdfdc30c40f5c378ad6fccb5b3" name="ad98eb2fdfdc30c40f5c378ad6fccb5b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad98eb2fdfdc30c40f5c378ad6fccb5b3">&#9670;&#160;</a></span>BMP_REG_TEMP_LSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_TEMP_LSB&#160;&#160;&#160;UINT8_C(0xFB)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of temperature least significant byte. </p>
+
+</div>
+</div>
+<a id="a9c96aa617b3e41422ddecfac13d21d56" name="a9c96aa617b3e41422ddecfac13d21d56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c96aa617b3e41422ddecfac13d21d56">&#9670;&#160;</a></span>BMP_REG_TEMP_MSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_TEMP_MSB&#160;&#160;&#160;UINT8_C(0xFA)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of temperature most significant byte. </p>
+
+</div>
+</div>
+<a id="a17a07198ea16ae7aaa87133fe760fe98" name="a17a07198ea16ae7aaa87133fe760fe98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a07198ea16ae7aaa87133fe760fe98">&#9670;&#160;</a></span>BMP_REG_TEMP_XLSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_REG_TEMP_XLSB&#160;&#160;&#160;UINT8_C(0xFC)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register address of temperature fraction significant byte. </p>
+
+</div>
+</div>
+<a id="ac2107cf7ee20764136a21f2467d88686" name="ac2107cf7ee20764136a21f2467d88686"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2107cf7ee20764136a21f2467d88686">&#9670;&#160;</a></span>BMP_RESET_VECTOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_RESET_VECTOR&#160;&#160;&#160;UINT8_C(0xB6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Chip reset vector. </p>
+
+</div>
+</div>
+<a id="a790cbfdb6af7953eef7c7f6a346c61ab" name="a790cbfdb6af7953eef7c7f6a346c61ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a790cbfdb6af7953eef7c7f6a346c61ab">&#9670;&#160;</a></span>BMP_STARTUP_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_STARTUP_TIME&#160;&#160;&#160;UINT8_C(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Chip startup time after reset. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a62e2529d9443dfe65f6d4b755db00e8d" name="a62e2529d9443dfe65f6d4b755db00e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62e2529d9443dfe65f6d4b755db00e8d">&#9670;&#160;</a></span>bmp_compensate_P_int64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t bmp_compensate_P_int64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a>&#160;</td>
+          <td class="paramname"><em>bmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>adc_P</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280__internal_8h_a62e2529d9443dfe65f6d4b755db00e8d_icgraph.png" border="0" usemap="#abmp280__internal_8h_a62e2529d9443dfe65f6d4b755db00e8d_icgraph" alt=""/></div>
+<map name="abmp280__internal_8h_a62e2529d9443dfe65f6d4b755db00e8d_icgraph" id="abmp280__internal_8h_a62e2529d9443dfe65f6d4b755db00e8d_icgraph">
+<area shape="rect" title=" " alt="" coords="174,5,349,31"/>
+<area shape="rect" href="bmp280_8c.html#ae07beee2673305da99e82aeb4f4dda40" title="Read BMP device pressure and temperature readings." alt="" coords="5,5,126,31"/>
+<area shape="poly" title=" " alt="" coords="158,21,126,21,126,16,158,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c2312589f67afdff1c0ba5912adaf6f" name="a4c2312589f67afdff1c0ba5912adaf6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2312589f67afdff1c0ba5912adaf6f">&#9670;&#160;</a></span>bmp_compensate_T_int32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t bmp_compensate_T_int32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a>&#160;</td>
+          <td class="paramname"><em>bmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>adc_T</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280__internal_8h_a4c2312589f67afdff1c0ba5912adaf6f_icgraph.png" border="0" usemap="#abmp280__internal_8h_a4c2312589f67afdff1c0ba5912adaf6f_icgraph" alt=""/></div>
+<map name="abmp280__internal_8h_a4c2312589f67afdff1c0ba5912adaf6f_icgraph" id="abmp280__internal_8h_a4c2312589f67afdff1c0ba5912adaf6f_icgraph">
+<area shape="rect" title=" " alt="" coords="174,5,348,31"/>
+<area shape="rect" href="bmp280_8c.html#ae07beee2673305da99e82aeb4f4dda40" title="Read BMP device pressure and temperature readings." alt="" coords="5,5,126,31"/>
+<area shape="poly" title=" " alt="" coords="158,21,126,21,126,16,158,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

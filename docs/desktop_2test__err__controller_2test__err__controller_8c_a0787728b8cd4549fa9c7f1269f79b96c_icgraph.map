@@ -1,0 +1,14 @@
+<map id="null_ptr_test_helper" name="null_ptr_test_helper">
+<area shape="rect" id="Node000001" title=" " alt="" coords="471,60,606,86"/>
+<area shape="rect" id="Node000002" href="$desktop_2test__err__controller_2test__err__controller_8c.html#a85d684572a06a8f95bd6fb61a5b2cd3f" title=" " alt="" coords="281,5,423,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="460,59,423,51,424,46,461,54"/>
+<area shape="rect" id="Node000006" href="$desktop_2test__err__controller_2test__err__controller_8c.html#ad107a42e4b14abd2bc614ff7341b7bfb" title=" " alt="" coords="283,85,422,141"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="461,92,423,101,422,96,460,87"/>
+<area shape="rect" id="Node000003" href="$desktop_2test__err__controller_2test__err__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,60,233,86"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="266,56,234,64,233,59,265,51"/>
+<area shape="rect" id="Node000004" href="$embedded_2test__err__controller_2test__err__controller_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,35,83,61"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,64,83,58,84,52,116,58"/>
+<area shape="rect" id="Node000005" href="$desktop_2test__err__controller_2test__err__controller_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="19,84,69,110"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="116,87,70,96,69,90,115,82"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="267,96,233,88,234,83,268,91"/>
+</map>

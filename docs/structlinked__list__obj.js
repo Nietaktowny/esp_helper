@@ -1,7 +1,7 @@
 var structlinked__list__obj =
 [
-    [ "head", "structlinked__list__obj.html#aa09d0cb908ef7873f3cbccfcf51d83ec", null ],
-    [ "items_num", "structlinked__list__obj.html#a48597054c2bc12bee16a088b28b8f958", null ],
-    [ "name", "structlinked__list__obj.html#af04f2a4f685d273c13ae0ffead4efe29", null ],
-    [ "size", "structlinked__list__obj.html#a2737402a9d34b88a511c2d4493c87565", null ]
+    [ "head", "structlinked__list__obj.html#a132f666bbb2453151ba83f24cbe10737", null ],
+    [ "items_num", "structlinked__list__obj.html#ad3792340f91445489966b64cc3e5358e", null ],
+    [ "name", "structlinked__list__obj.html#a5ac083a645d964373f022d03df4849c8", null ],
+    [ "size", "structlinked__list__obj.html#aaba88b24a21a6c70c895c0d55f4a69a0", null ]
 ];

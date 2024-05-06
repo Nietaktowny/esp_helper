@@ -1,0 +1,9 @@
+<map id="linkedl_add_last" name="linkedl_add_last">
+<area shape="rect" id="Node000001" title="Insert new item at end of the list." alt="" coords="5,31,120,56"/>
+<area shape="rect" id="Node000002" href="$linked__list_8c.html#a02623f6a66c191443c1e850496bc047c" title="Creates and initializes new node." alt="" coords="173,5,309,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,33,157,27,158,33,120,38"/>
+<area shape="rect" id="Node000004" href="$linked__list_8c.html#a5bebee5a43cb16820f41d692a3ddeb5a" title="Find last node in list." alt="" coords="168,55,314,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="120,49,153,53,152,58,120,54"/>
+<area shape="rect" id="Node000003" href="$linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a" title="Hash string." alt="" coords="362,5,494,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="309,16,347,16,347,21,309,21"/>
+</map>

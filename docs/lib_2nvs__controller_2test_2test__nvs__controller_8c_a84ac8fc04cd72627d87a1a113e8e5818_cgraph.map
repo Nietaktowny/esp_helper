@@ -1,0 +1,5 @@
+<map id="test_if_nvs_c_erase_partition_returns_err_on_not_known_partition" name="test_if_nvs_c_erase_partition_returns_err_on_not_known_partition">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,171,61"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a01316cec69a2344e13d6efd4ce9bb93e" title="Erase all data in specified NVS partition." alt="" coords="219,20,367,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,31,203,31,203,36,171,36"/>
+</map>

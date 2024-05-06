@@ -1,7 +1,13 @@
 <map id="projects/lib_tests/lib/ota_controller/include/ota_c_errors.h" name="projects/lib_tests/lib/ota_controller/include/ota_c_errors.h">
-<area shape="rect" id="Node000001" title="OTA Controller errors list." alt="" coords="8,5,161,61"/>
-<area shape="rect" id="Node000002" href="$ota__controller_8h_source.html" title=" " alt="" coords="5,109,164,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,77,87,108,82,108,82,77"/>
-<area shape="rect" id="Node000003" href="$esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="9,213,160,268"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,180,87,212,82,212,82,180"/>
+<area shape="rect" id="Node000001" title="OTA Controller errors list." alt="" coords="252,5,404,61"/>
+<area shape="rect" id="Node000002" href="$ota__controller_8h.html" title=" " alt="" coords="249,109,407,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="330,77,330,108,325,108,325,77"/>
+<area shape="rect" id="Node000003" href="$esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="5,213,157,268"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="249,173,148,214,146,210,246,169"/>
+<area shape="rect" id="Node000004" href="$ota__controller_8c.html" title=" " alt="" coords="181,213,317,268"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="300,179,272,214,268,210,295,175"/>
+<area shape="rect" id="Node000005" href="$test__ota__controller_2main_2main_8c.html" title=" " alt="" coords="340,213,473,268"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="360,175,387,210,383,214,356,179"/>
+<area shape="rect" id="Node000006" href="$test__wifi__controller_2main_2main_8c.html" title=" " alt="" coords="497,213,630,268"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="406,169,501,210,499,214,404,174"/>
 </map>

@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -104,11 +104,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="cli__manager__errors_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2cli__manager_2include_2cli__manager__errors_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2cli__manager_2include_2cli__manager__errors_8hdep" id="aprojects_2lib__tests_2lib_2cli__manager_2include_2cli__manager__errors_8hdep">
-<area shape="rect" title="CLI Manager library errors list." alt="" coords="5,5,163,61"/>
-<area shape="rect" href="cli__manager_8h.html" title="Cli Manager library header file." alt="" coords="5,109,163,165"/>
-<area shape="poly" title=" " alt="" coords="87,77,87,108,81,108,81,77"/>
-<area shape="rect" href="cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="17,213,151,268"/>
-<area shape="poly" title=" " alt="" coords="87,180,87,212,81,212,81,180"/>
+<area shape="rect" title="CLI Manager library errors list." alt="" coords="245,5,402,61"/>
+<area shape="rect" href="cli__manager_8h.html" title="Cli Manager library header file." alt="" coords="245,109,402,165"/>
+<area shape="poly" title=" " alt="" coords="326,77,326,108,321,108,321,77"/>
+<area shape="rect" href="cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="5,220,140,276"/>
+<area shape="poly" title=" " alt="" coords="248,174,136,222,134,217,246,169"/>
+<area shape="rect" href="test__cli__manager_8c.html" title=" " alt="" coords="164,213,309,283"/>
+<area shape="poly" title=" " alt="" coords="295,178,266,214,262,211,290,175"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="333,220,490,276"/>
+<area shape="poly" title=" " alt="" coords="356,175,391,218,387,221,352,178"/>
+<area shape="rect" href="test__cli__manager_2main_2main_8c.html" title=" " alt="" coords="514,220,671,276"/>
+<area shape="poly" title=" " alt="" coords="405,168,526,217,524,222,403,173"/>
 </map>
 </div>
 </div>
@@ -116,17 +122,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a9b5412807d020ae4da23f28eb4786f47" id="r_a9b5412807d020ae4da23f28eb4786f47"><td class="memItemLeft" align="right" valign="top"><a id="a9b5412807d020ae4da23f28eb4786f47" name="a9b5412807d020ae4da23f28eb4786f47"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_ERR_BASE</b>&#160;&#160;&#160;0x03E8</td></tr>
-<tr class="memdesc:a9b5412807d020ae4da23f28eb4786f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLI Manager error base. <br /></td></tr>
+<tr class="memitem:a9b5412807d020ae4da23f28eb4786f47" id="r_a9b5412807d020ae4da23f28eb4786f47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__manager__errors_8h.html#a9b5412807d020ae4da23f28eb4786f47">CLI_ERR_BASE</a>&#160;&#160;&#160;0x03E8</td></tr>
+<tr class="memdesc:a9b5412807d020ae4da23f28eb4786f47"><td class="mdescLeft">&#160;</td><td class="mdescRight">CLI Manager error base.  <br /></td></tr>
 <tr class="separator:a9b5412807d020ae4da23f28eb4786f47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f79a351a63547a81124cf8440b641ab" id="r_a6f79a351a63547a81124cf8440b641ab"><td class="memItemLeft" align="right" valign="top"><a id="a6f79a351a63547a81124cf8440b641ab" name="a6f79a351a63547a81124cf8440b641ab"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_ERR_CONNECT_FAIL</b>&#160;&#160;&#160;0x0001 + <a class="el" href="cli__manager__errors_8h.html#a9b5412807d020ae4da23f28eb4786f47">CLI_ERR_BASE</a></td></tr>
-<tr class="memdesc:a6f79a351a63547a81124cf8440b641ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error when trying to connect to remote host. <br /></td></tr>
+<tr class="memitem:a6f79a351a63547a81124cf8440b641ab" id="r_a6f79a351a63547a81124cf8440b641ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__manager__errors_8h.html#a6f79a351a63547a81124cf8440b641ab">CLI_ERR_CONNECT_FAIL</a>&#160;&#160;&#160;0x0001 + <a class="el" href="cli__manager__errors_8h.html#a9b5412807d020ae4da23f28eb4786f47">CLI_ERR_BASE</a></td></tr>
+<tr class="memdesc:a6f79a351a63547a81124cf8440b641ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error when trying to connect to remote host.  <br /></td></tr>
 <tr class="separator:a6f79a351a63547a81124cf8440b641ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a166aacfbc5ee0198221e95f439af5980" id="r_a166aacfbc5ee0198221e95f439af5980"><td class="memItemLeft" align="right" valign="top"><a id="a166aacfbc5ee0198221e95f439af5980" name="a166aacfbc5ee0198221e95f439af5980"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLI_ERR_NO_INTERNET</b>&#160;&#160;&#160;0x0002 + <a class="el" href="cli__manager__errors_8h.html#a9b5412807d020ae4da23f28eb4786f47">CLI_ERR_BASE</a></td></tr>
-<tr class="memdesc:a166aacfbc5ee0198221e95f439af5980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device has no internet connection. <br /></td></tr>
+<tr class="memitem:a166aacfbc5ee0198221e95f439af5980" id="r_a166aacfbc5ee0198221e95f439af5980"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cli__manager__errors_8h.html#a166aacfbc5ee0198221e95f439af5980">CLI_ERR_NO_INTERNET</a>&#160;&#160;&#160;0x0002 + <a class="el" href="cli__manager__errors_8h.html#a9b5412807d020ae4da23f28eb4786f47">CLI_ERR_BASE</a></td></tr>
+<tr class="memdesc:a166aacfbc5ee0198221e95f439af5980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device has no internet connection.  <br /></td></tr>
 <tr class="separator:a166aacfbc5ee0198221e95f439af5980"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -135,7 +138,56 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0.9 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a9b5412807d020ae4da23f28eb4786f47" name="a9b5412807d020ae4da23f28eb4786f47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b5412807d020ae4da23f28eb4786f47">&#9670;&#160;</a></span>CLI_ERR_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLI_ERR_BASE&#160;&#160;&#160;0x03E8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CLI Manager error base. </p>
+
+</div>
+</div>
+<a id="a6f79a351a63547a81124cf8440b641ab" name="a6f79a351a63547a81124cf8440b641ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f79a351a63547a81124cf8440b641ab">&#9670;&#160;</a></span>CLI_ERR_CONNECT_FAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLI_ERR_CONNECT_FAIL&#160;&#160;&#160;0x0001 + <a class="el" href="cli__manager__errors_8h.html#a9b5412807d020ae4da23f28eb4786f47">CLI_ERR_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error when trying to connect to remote host. </p>
+
+</div>
+</div>
+<a id="a166aacfbc5ee0198221e95f439af5980" name="a166aacfbc5ee0198221e95f439af5980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a166aacfbc5ee0198221e95f439af5980">&#9670;&#160;</a></span>CLI_ERR_NO_INTERNET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLI_ERR_NO_INTERNET&#160;&#160;&#160;0x0002 + <a class="el" href="cli__manager__errors_8h.html#a9b5412807d020ae4da23f28eb4786f47">CLI_ERR_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Device has no internet connection. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

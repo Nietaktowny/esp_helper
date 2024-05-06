@@ -1,0 +1,7 @@
+<map id="linkedl_add_first" name="linkedl_add_first">
+<area shape="rect" id="Node000001" title="Insert new item at beginning of the list." alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000002" href="$linked__list_8c.html#a02623f6a66c191443c1e850496bc047c" title="Creates and initializes new node." alt="" coords="168,5,304,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,16,152,16,152,21,120,21"/>
+<area shape="rect" id="Node000003" href="$linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a" title="Hash string." alt="" coords="352,5,484,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="305,16,336,16,336,21,305,21"/>
+</map>

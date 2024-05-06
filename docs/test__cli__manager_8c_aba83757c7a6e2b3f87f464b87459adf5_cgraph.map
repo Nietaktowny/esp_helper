@@ -1,0 +1,25 @@
+<map id="test_prepare_listen_socket" name="test_prepare_listen_socket">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,125,137,166"/>
+<area shape="rect" id="Node000002" href="$tcp__controller_8c.html#aa19f22c703b27c1834b997235fa198a6" title="Bind socket to prepared address." alt="" coords="198,33,314,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,122,137,94,183,67,195,62,197,67,186,72,140,99,100,127"/>
+<area shape="rect" id="Node000006" href="$tcp__controller_8c.html#a274866f382f711a467053cf394d3792e" title="Create socket." alt="" coords="402,183,530,209"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="137,148,327,168,386,178,385,183,327,173,137,153"/>
+<area shape="rect" id="Node000007" href="$tcp__controller_8c.html#ab93c55c49481e20286541651c674561b" title="Prepare address for binding socket." alt="" coords="185,183,327,209"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="138,161,192,176,191,181,136,166"/>
+<area shape="rect" id="Node000008" href="$tcp__controller_8c.html#abcee5d45743bfa00a044a753f3ffa501" title="Listen on socket for incoming connections." alt="" coords="194,82,318,108"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="136,125,191,110,192,115,138,130"/>
+<area shape="rect" id="Node000009" href="$wifi__controller_8h.html#a5ffe20bdd9ee714423ca066be11ced00" title="Get current IPv4 address of STA interface." alt="" coords="188,233,324,258"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="100,164,140,192,186,219,197,224,195,229,183,224,137,196,97,168"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="604,82,709,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="297,29,350,16,415,6,487,4,523,9,557,18,600,40,634,69,631,73,597,45,555,23,522,14,487,10,416,11,351,21,298,35"/>
+<area shape="rect" id="Node000004" href="$tcp__controller_8c.html#a46d32663b476a9417c5056b4d604438d" title="Read IPv4 address to which socket is bound." alt="" coords="381,82,550,108"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="314,56,394,75,392,80,313,61"/>
+<area shape="rect" id="Node000005" href="$tcp__controller_8c.html#ae0b781bbcb6353cf585fcb0003c42465" title="Read port to which socket is bound." alt="" coords="375,33,556,58"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="314,43,360,43,360,48,314,48"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="551,92,589,92,589,97,551,97"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="519,56,590,75,588,80,518,61"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="511,180,555,162,592,139,625,115,628,120,595,144,558,166,513,185"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="309,106,375,117,466,124,556,117,597,109,598,115,557,123,466,130,375,123,308,111"/>
+<area shape="poly" id="edge12_Node000008_Node000004" title=" " alt="" coords="318,92,366,92,366,97,318,97"/>
+<area shape="poly" id="edge13_Node000008_Node000005" title=" " alt="" coords="313,79,392,60,394,65,314,84"/>
+</map>

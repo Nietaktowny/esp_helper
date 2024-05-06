@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -104,16 +104,23 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="i2c__c__errors_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2i2c__controller_2include_2i2c__c__errors_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2i2c__controller_2include_2i2c__c__errors_8hdep" id="aprojects_2lib__tests_2lib_2i2c__controller_2include_2i2c__c__errors_8hdep">
-<area shape="rect" title="I2C Controller errors list." alt="" coords="100,5,252,61"/>
-<area shape="rect" href="i2c__controller_8h_source.html" title=" " alt="" coords="97,109,255,165"/>
-<area shape="poly" title=" " alt="" coords="179,77,179,108,173,108,173,77"/>
-<area shape="rect" href="bmp280_8h.html" title="BMP280 library header file." alt="" coords="5,220,139,276"/>
-<area shape="poly" title=" " alt="" coords="142,178,100,222,96,218,138,174"/>
-<area shape="rect" href="bmp280_8c.html" title="BMP280 library source file." alt="" coords="39,331,209,372"/>
-<area shape="poly" title=" " alt="" coords="174,181,166,231,153,284,136,332,131,330,148,283,160,230,168,180"/>
-<area shape="rect" href="i2c__controller__internal_8h_source.html" title=" " alt="" coords="213,213,360,283"/>
-<area shape="poly" title=" " alt="" coords="216,174,254,210,250,214,212,177"/>
-<area shape="poly" title=" " alt="" coords="95,288,117,330,112,332,90,291"/>
+<area shape="rect" title="I2C Controller errors list." alt="" coords="232,5,384,61"/>
+<area shape="rect" href="i2c__controller_8h.html" title=" " alt="" coords="229,109,387,165"/>
+<area shape="poly" title=" " alt="" coords="311,77,311,108,305,108,305,77"/>
+<area shape="rect" href="bmp280_8h.html" title="BMP280 library header file." alt="" coords="189,220,323,276"/>
+<area shape="poly" title=" " alt="" coords="291,180,271,221,266,219,286,178"/>
+<area shape="rect" href="bmp280_8c.html" title="BMP280 library source file." alt="" coords="5,346,176,387"/>
+<area shape="poly" title=" " alt="" coords="233,175,205,193,179,215,152,247,129,284,100,347,95,345,125,281,147,244,175,211,202,189,231,170"/>
+<area shape="rect" href="i2c__controller__internal_8h.html" title=" " alt="" coords="397,213,544,283"/>
+<area shape="poly" title=" " alt="" coords="362,171,420,210,417,214,359,176"/>
+<area shape="rect" href="i2c__controller_8c.html" title=" " alt="" coords="381,339,515,395"/>
+<area shape="poly" title=" " alt="" coords="330,177,387,282,428,337,423,340,383,285,325,180"/>
+<area shape="poly" title=" " alt="" coords="207,287,120,348,117,344,204,283"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="200,339,357,395"/>
+<area shape="poly" title=" " alt="" coords="267,291,276,338,271,339,261,292"/>
+<area shape="poly" title=" " alt="" coords="464,299,456,339,450,338,458,298"/>
+<area shape="rect" href="test__i2c__controller_8c.html" title=" " alt="" coords="539,331,677,402"/>
+<area shape="poly" title=" " alt="" coords="524,291,569,329,565,333,521,296"/>
 </map>
 </div>
 </div>
@@ -121,13 +128,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:afcc7baed2d70777d622a86e043166746" id="r_afcc7baed2d70777d622a86e043166746"><td class="memItemLeft" align="right" valign="top"><a id="afcc7baed2d70777d622a86e043166746" name="afcc7baed2d70777d622a86e043166746"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_C_ERR_BASE</b>&#160;&#160;&#160;0x0320</td></tr>
-<tr class="memdesc:afcc7baed2d70777d622a86e043166746"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Controller error base. <br /></td></tr>
+<tr class="memitem:afcc7baed2d70777d622a86e043166746" id="r_afcc7baed2d70777d622a86e043166746"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__c__errors_8h.html#afcc7baed2d70777d622a86e043166746">I2C_C_ERR_BASE</a>&#160;&#160;&#160;0x0320</td></tr>
+<tr class="memdesc:afcc7baed2d70777d622a86e043166746"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Controller error base.  <br /></td></tr>
 <tr class="separator:afcc7baed2d70777d622a86e043166746"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c0d2969719a0498b2a360307b50fd13" id="r_a3c0d2969719a0498b2a360307b50fd13"><td class="memItemLeft" align="right" valign="top"><a id="a3c0d2969719a0498b2a360307b50fd13" name="a3c0d2969719a0498b2a360307b50fd13"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>I2C_C_ERR_LOCK_ERR</b>&#160;&#160;&#160;0x0001 + <a class="el" href="i2c__c__errors_8h.html#afcc7baed2d70777d622a86e043166746">I2C_C_ERR_BASE</a></td></tr>
-<tr class="memdesc:a3c0d2969719a0498b2a360307b50fd13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cannot obtain device lock. <br /></td></tr>
+<tr class="memitem:a3c0d2969719a0498b2a360307b50fd13" id="r_a3c0d2969719a0498b2a360307b50fd13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="i2c__c__errors_8h.html#a3c0d2969719a0498b2a360307b50fd13">I2C_C_ERR_LOCK_ERR</a>&#160;&#160;&#160;0x0001 + <a class="el" href="i2c__c__errors_8h.html#afcc7baed2d70777d622a86e043166746">I2C_C_ERR_BASE</a></td></tr>
+<tr class="memdesc:a3c0d2969719a0498b2a360307b50fd13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cannot obtain device lock.  <br /></td></tr>
 <tr class="separator:a3c0d2969719a0498b2a360307b50fd13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -136,7 +141,40 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="afcc7baed2d70777d622a86e043166746" name="afcc7baed2d70777d622a86e043166746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcc7baed2d70777d622a86e043166746">&#9670;&#160;</a></span>I2C_C_ERR_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_C_ERR_BASE&#160;&#160;&#160;0x0320</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C Controller error base. </p>
+
+</div>
+</div>
+<a id="a3c0d2969719a0498b2a360307b50fd13" name="a3c0d2969719a0498b2a360307b50fd13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c0d2969719a0498b2a360307b50fd13">&#9670;&#160;</a></span>I2C_C_ERR_LOCK_ERR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_C_ERR_LOCK_ERR&#160;&#160;&#160;0x0001 + <a class="el" href="i2c__c__errors_8h.html#afcc7baed2d70777d622a86e043166746">I2C_C_ERR_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cannot obtain device lock. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,7 +1,9 @@
 <map id="projects/lib_tests/lib/wifi_manager/include/wifi_manager_internal.h" name="projects/lib_tests/lib/wifi_manager/include/wifi_manager_internal.h">
-<area shape="rect" id="Node000001" title="Wifi manager library internal header file." alt="" coords="75,5,239,61"/>
-<area shape="rect" id="Node000002" href="$wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="5,109,146,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,75,99,110,95,107,123,72"/>
-<area shape="rect" id="Node000003" href="$wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="169,109,310,165"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,72,219,107,215,110,187,75"/>
+<area shape="rect" id="Node000001" title="Wifi manager library internal header file." alt="" coords="158,5,321,61"/>
+<area shape="rect" id="Node000002" href="$wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="5,117,146,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,72,118,118,115,114,185,67"/>
+<area shape="rect" id="Node000003" href="$wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="169,117,310,172"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,76,242,116,237,116,237,76"/>
+<area shape="rect" id="Node000004" href="$test__wifi__manager_8c.html" title=" " alt="" coords="333,109,490,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="296,67,358,106,355,111,294,72"/>
 </map>

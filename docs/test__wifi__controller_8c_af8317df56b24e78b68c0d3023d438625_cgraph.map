@@ -1,0 +1,5 @@
+<map id="test_if_get_status_as_json_returns_err_on_null_buffer" name="test_if_get_status_as_json_returns_err_on_null_buffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,148,61"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html#acc993cc2a0481bf076e5361048057a90" title="Get current wifi_controller status as JSON string." alt="" coords="196,20,370,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,31,180,31,180,36,148,36"/>
+</map>

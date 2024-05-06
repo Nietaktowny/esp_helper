@@ -1,0 +1,9 @@
+<map id="test_if_wifi_init_throws_err_on_wrong_mode_value" name="test_if_wifi_init_throws_err_on_wrong_mode_value">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,189,64"/>
+<area shape="rect" id="Node000002" href="$test__wifi__controller_8c.html#a6836f1a8df8a60455b709f8e24aeea20" title=" " alt="" coords="251,5,327,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,29,235,23,236,28,189,34"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="237,55,341,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="189,52,222,56,221,62,189,58"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="389,5,481,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,16,373,16,373,21,328,21"/>
+</map>

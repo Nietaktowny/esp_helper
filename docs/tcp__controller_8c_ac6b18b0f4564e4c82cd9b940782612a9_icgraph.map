@@ -1,0 +1,9 @@
+<map id="tcp_get_option_name" name="tcp_get_option_name">
+<area shape="rect" id="Node000001" title="Translate socket option integer value to string name." alt="" coords="389,31,534,56"/>
+<area shape="rect" id="Node000002" href="$tcp__controller_8c.html#a7aaad09872f2d9da8e2cad2ac4fdf0dd" title="Get socket option." alt="" coords="189,5,341,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="373,35,341,31,342,25,374,30"/>
+<area shape="rect" id="Node000003" href="$tcp__controller_8c.html#acdf36e9d70cc6aa06f6cf26b88ae0d6e" title="Set socket option." alt="" coords="189,55,341,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="374,57,342,61,341,56,373,52"/>
+<area shape="rect" id="Node000004" href="$tcp__controller_8c.html#a38132dacc4b2d6e677deda18a792047b" title="Set SO_REUSEADDR option on socket." alt="" coords="5,55,141,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="173,70,141,70,141,65,173,65"/>
+</map>

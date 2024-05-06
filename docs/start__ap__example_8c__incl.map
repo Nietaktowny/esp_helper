@@ -1,0 +1,17 @@
+<map id="projects/lib_tests/lib/wifi_controller/examples/start_ap_example.c" name="projects/lib_tests/lib/wifi_controller/examples/start_ap_example.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="54,5,251,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,109,92,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,63,76,101,73,97,118,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="115,109,190,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,61,155,93,150,93,150,61"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html" title="Wifi controller header file." alt="" coords="213,109,324,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="190,59,242,97,239,102,187,63"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="85,183,159,208"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="245,138,162,178,159,173,242,133"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="182,183,259,208"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="263,136,239,171,235,168,258,133"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="283,183,350,208"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="279,133,302,168,298,171,274,136"/>
+<area shape="rect" id="Node000008" href="$wifi__c__errors_8h.html" title="Wifi controller library errors list." alt="" coords="374,183,478,208"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="296,133,386,173,384,178,294,138"/>
+</map>

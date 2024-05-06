@@ -1,0 +1,9 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,55,56"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="103,5,207,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,36,87,29,88,34,55,41"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="115,55,195,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="55,46,100,54,99,60,54,51"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="255,55,404,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="196,65,239,65,239,70,196,70"/>
+</map>

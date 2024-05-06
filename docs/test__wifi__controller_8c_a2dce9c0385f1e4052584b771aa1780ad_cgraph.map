@@ -1,0 +1,7 @@
+<map id="test_if_ap_connect_handler_register_returns_err_on_null" name="test_if_ap_connect_handler_register_returns_err_on_null">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,27,173,83"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html#a5ab89410d5bf8d703907b59935825401" title="Register function to be called each time new STA connects to AP." alt="" coords="221,5,346,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,40,205,35,206,40,174,45"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="237,70,330,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,64,222,72,222,77,173,70"/>
+</map>

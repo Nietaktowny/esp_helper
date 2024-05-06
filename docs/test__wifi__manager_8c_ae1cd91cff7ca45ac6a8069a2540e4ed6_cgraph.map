@@ -1,0 +1,115 @@
+<map id="runUnityTests" name="runUnityTests">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,670,108,695"/>
+<area shape="rect" id="Node000002" href="$test__wifi__manager_8c.html#ac7372248530e87eecab65fce9520cf80" title=" " alt="" coords="186,806,334,847"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,694,103,742,128,769,157,792,173,801,170,806,154,797,125,773,99,746,64,697"/>
+<area shape="rect" id="Node000013" href="$test__wifi__manager_8c.html#a572428b931123b5c3bd88d5f594da935" title=" " alt="" coords="180,872,340,912"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="64,695,75,728,94,771,121,817,157,857,168,864,165,868,154,861,117,820,89,774,70,730,59,697"/>
+<area shape="rect" id="Node000014" href="$test__wifi__manager_8c.html#af5571ea7379fa8afbaaf1b3879134e1b" title=" " alt="" coords="187,373,333,429"/>
+<area shape="poly" id="edge20_Node000001_Node000014" title=" " alt="" coords="57,669,65,626,82,565,110,498,130,467,154,439,172,425,175,429,158,443,134,470,115,501,87,567,70,627,62,670"/>
+<area shape="rect" id="Node000016" href="$test__wifi__manager_8c.html#ac5221e01be8b8fc121e7195e8de03b0a" title=" " alt="" coords="187,1096,333,1152"/>
+<area shape="poly" id="edge25_Node000001_Node000016" title=" " alt="" coords="62,695,73,774,93,890,122,1006,139,1051,158,1082,175,1097,172,1101,154,1086,134,1053,117,1007,88,891,68,775,57,696"/>
+<area shape="rect" id="Node000018" href="$test__wifi__manager_8c.html#a9f2f5ad85fe4f548a7bf2b77049416ba" title=" " alt="" coords="187,149,333,205"/>
+<area shape="poly" id="edge31_Node000001_Node000018" title=" " alt="" coords="56,669,65,579,84,444,97,373,113,308,132,253,154,216,172,200,175,204,158,219,137,256,118,309,103,374,89,445,71,580,62,669"/>
+<area shape="rect" id="Node000019" href="$test__wifi__manager_8c.html#a3e029a64c8f932f884a3a152e78361c2" title=" " alt="" coords="177,229,343,285"/>
+<area shape="poly" id="edge33_Node000001_Node000019" title=" " alt="" coords="54,669,55,604,65,506,77,450,95,395,120,342,154,296,162,287,166,291,158,299,125,345,100,397,82,452,70,506,60,605,60,669"/>
+<area shape="rect" id="Node000020" href="$test__wifi__manager_8c.html#aa579ddb6d8f292349854ad131a3a2ca4" title=" " alt="" coords="172,309,348,350"/>
+<area shape="poly" id="edge36_Node000001_Node000020" title=" " alt="" coords="55,669,58,613,71,530,83,485,100,440,124,397,154,359,157,356,161,360,158,363,128,400,105,442,88,486,76,532,63,614,60,670"/>
+<area shape="rect" id="Node000021" href="$test__wifi__manager_8c.html#afb02c32fd7e10257c825b300790744c4" title=" " alt="" coords="171,1320,349,1376"/>
+<area shape="poly" id="edge39_Node000001_Node000021" title=" " alt="" coords="61,696,66,812,81,995,93,1092,110,1181,131,1256,144,1284,158,1306,162,1311,157,1314,154,1310,139,1287,126,1257,105,1183,88,1093,75,996,60,812,55,696"/>
+<area shape="rect" id="Node000025" href="$test__wifi__manager_8c.html#ae99f55718b798437ef096bd2ee7fa9ce" title=" " alt="" coords="171,1400,349,1456"/>
+<area shape="poly" id="edge44_Node000001_Node000025" title=" " alt="" coords="61,696,64,825,76,1032,88,1142,105,1244,128,1328,142,1361,158,1386,161,1391,157,1394,154,1389,137,1364,123,1330,100,1245,83,1143,71,1033,58,825,55,696"/>
+<area shape="rect" id="Node000026" href="$test__wifi__manager_8c.html#a5ab968556fea9ffa996dbd92c5b16cbc" title=" " alt="" coords="171,1176,349,1232"/>
+<area shape="poly" id="edge46_Node000001_Node000026" title=" " alt="" coords="61,696,70,788,88,928,102,1001,117,1069,136,1124,158,1162,161,1166,157,1169,154,1165,131,1126,112,1070,96,1002,83,929,65,788,56,696"/>
+<area shape="rect" id="Node000027" href="$test__wifi__manager_8c.html#ae26483dc691ffc91ac07b87fd493d9ee" title=" " alt="" coords="156,1256,364,1296"/>
+<area shape="poly" id="edge48_Node000001_Node000027" title=" " alt="" coords="61,695,67,801,83,966,95,1052,112,1132,132,1198,145,1223,158,1242,159,1243,155,1247,154,1246,140,1226,128,1200,107,1133,90,1053,77,967,62,802,56,696"/>
+<area shape="rect" id="Node000028" href="$test__wifi__manager_8c.html#a6dd0c33d40520788feffadcade62524f" title=" " alt="" coords="424,97,606,153"/>
+<area shape="poly" id="edge50_Node000001_Node000028" title=" " alt="" coords="55,669,58,558,71,384,83,294,100,211,123,144,138,119,154,101,185,80,220,67,256,61,294,60,368,70,435,89,434,94,367,75,294,65,257,66,221,72,188,85,157,105,142,122,128,147,105,213,88,295,76,385,63,558,61,669"/>
+<area shape="rect" id="Node000029" href="$test__wifi__manager_8c.html#a36194ae806d03ead8ac17d4ed7aba0ad" title=" " alt="" coords="163,1016,357,1072"/>
+<area shape="poly" id="edge52_Node000001_Node000029" title=" " alt="" coords="61,695,64,750,77,832,90,877,107,922,129,964,158,1002,160,1004,156,1008,154,1006,124,967,102,924,85,879,72,833,59,751,55,696"/>
+<area shape="rect" id="Node000031" href="$test__wifi__manager_8c.html#a15f7fe4aa0deb562eaa211f0d7c773cc" title=" " alt="" coords="437,219,594,274"/>
+<area shape="poly" id="edge56_Node000001_Node000031" title=" " alt="" coords="55,669,59,564,73,401,85,316,102,239,125,176,138,153,154,135,180,117,205,106,229,101,254,102,305,114,365,135,413,163,471,207,468,211,410,168,363,140,304,119,253,107,230,106,207,111,183,121,157,139,143,156,130,179,107,240,90,317,78,402,65,564,61,670"/>
+<area shape="rect" id="Node000032" href="$test__wifi__manager_8c.html#a7701c577d3e0f7d209f81eeda38343ac" title=" " alt="" coords="421,12,609,52"/>
+<area shape="poly" id="edge58_Node000001_Node000032" title=" " alt="" coords="55,670,58,553,70,368,82,272,99,183,123,110,137,83,154,62,181,41,210,26,242,15,275,8,342,3,406,7,405,12,342,8,276,13,243,20,212,31,183,46,158,66,142,85,127,112,104,184,87,272,75,369,63,553,60,670"/>
+<area shape="rect" id="Node000033" href="$test__wifi__manager_8c.html#a0911dec679035f09125e44535c4792ef" title=" " alt="" coords="184,453,336,494"/>
+<area shape="poly" id="edge60_Node000001_Node000033" title=" " alt="" coords="59,669,70,636,89,592,117,545,154,505,168,495,171,499,157,509,121,548,94,594,75,638,64,670"/>
+<area shape="rect" id="Node000034" href="$test__wifi__manager_8c.html#a605360a36eab5304a4d1d62680df2173" title=" " alt="" coords="186,518,334,559"/>
+<area shape="poly" id="edge63_Node000001_Node000034" title=" " alt="" coords="64,668,99,620,125,592,154,568,170,559,173,564,157,573,128,596,103,623,68,671"/>
+<area shape="rect" id="Node000035" href="$test__wifi__manager_8c.html#abb649ab933f6b6f986af1f837ebb2062" title=" " alt="" coords="174,936,346,992"/>
+<area shape="poly" id="edge66_Node000001_Node000035" title=" " alt="" coords="62,695,70,738,87,799,115,864,134,895,158,922,163,927,159,930,154,926,130,898,110,867,82,800,65,739,57,696"/>
+<area shape="rect" id="Node000036" href="$test__wifi__manager_8c.html#add2c722ce7b22a80dbfa6ce4e57f1759" title=" " alt="" coords="186,727,334,782"/>
+<area shape="poly" id="edge70_Node000001_Node000036" title=" " alt="" coords="96,693,172,721,171,726,94,698"/>
+<area shape="rect" id="Node000037" href="$test__wifi__manager_8c.html#a529a516738a6df35c0224ea1217fdce6" title=" " alt="" coords="186,583,334,638"/>
+<area shape="poly" id="edge72_Node000001_Node000037" title=" " alt="" coords="94,667,171,639,172,644,96,672"/>
+<area shape="rect" id="Node000038" href="$test__wifi__manager_8c.html#a51dbf57d9584412e7409b07095731dd2" title=" " alt="" coords="182,662,338,703"/>
+<area shape="poly" id="edge74_Node000001_Node000038" title=" " alt="" coords="108,680,166,680,166,685,108,685"/>
+<area shape="rect" id="Node000003" href="$wifi__manager_8c.html#ae40d3fa65c5e68e8fa280cc45a81e8b0" title="Erase all data stored in wifi manager NVS namespace." alt="" coords="437,814,594,839"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,824,421,824,421,829,335,829"/>
+<area shape="rect" id="Node000009" href="$wifi__manager_8c.html#a92b6a91a3d31bfa35ff0409d0e7befdc" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="666,470,853,495"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="334,804,363,792,440,754,499,720,553,680,616,622,631,605,641,590,664,557,726,503,729,507,668,560,645,593,635,608,620,626,556,684,502,725,443,759,365,797,336,809"/>
+<area shape="rect" id="Node000011" href="$wifi__manager_8c.html#a7bb30c48143ab3688c2a2573683eac62" title="Store access point credentials in Wifi Manager NVS namespace." alt="" coords="438,586,592,611"/>
+<area shape="poly" id="edge13_Node000002_Node000011" title=" " alt="" coords="333,810,362,793,381,768,388,743,394,716,410,686,444,649,480,619,484,623,448,653,414,689,399,718,394,745,386,770,366,797,336,815"/>
+<area shape="rect" id="Node000004" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="912,520,1017,546"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="536,811,851,607,930,553,933,558,854,611,539,816"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="917,723,1012,749"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="582,810,901,746,902,751,583,816"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#a5966e157cae5d3998dfa1c2157dcead2" title="Erase all key&#45;value pairs in specified NVS namespace." alt="" coords="675,824,844,850"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="594,827,660,830,659,836,594,833"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="696,937,823,978"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="577,837,620,856,635,868,645,880,668,905,703,927,700,931,665,909,641,883,631,872,617,861,575,842"/>
+<area shape="rect" id="Node000008" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="919,798,1010,823"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="560,837,618,852,692,864,772,869,813,866,852,860,892,847,928,829,930,834,894,852,853,865,813,872,772,874,691,869,617,857,559,843"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="815,493,897,514,896,519,814,499"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="782,494,817,521,855,557,885,596,912,637,952,707,947,710,908,639,881,599,851,560,814,525,779,498"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="786,494,822,520,840,537,855,557,869,586,876,612,879,660,882,707,889,732,903,760,929,787,925,790,898,763,884,734,876,708,874,660,871,613,864,588,850,560,836,541,818,524,783,498"/>
+<area shape="rect" id="Node000010" href="$nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="901,470,1028,495"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="853,480,885,480,885,485,853,485"/>
+<area shape="poly" id="edge14_Node000011_Node000004" title=" " alt="" coords="558,583,666,556,788,540,897,533,897,538,789,546,667,561,559,588"/>
+<area shape="poly" id="edge15_Node000011_Node000005" title=" " alt="" coords="561,609,906,715,904,721,559,615"/>
+<area shape="poly" id="edge16_Node000011_Node000008" title=" " alt="" coords="534,610,591,654,668,703,729,732,792,756,905,792,903,797,791,761,727,736,665,708,588,659,531,614"/>
+<area shape="rect" id="Node000012" href="$nvs__controller_8h.html#a26d3a2f94cdeb9d143dd8ee23ac8a939" title="Write key&#45;value pair string into nvs namespace." alt="" coords="694,571,825,597"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="593,591,679,586,679,591,593,597"/>
+<area shape="poly" id="edge19_Node000013_Node000003" title=" " alt="" coords="339,869,447,841,448,846,341,874"/>
+<area shape="poly" id="edge24_Node000014_Node000011" title=" " alt="" coords="334,422,365,439,406,471,443,507,498,572,493,575,439,510,402,475,363,443,332,427"/>
+<area shape="rect" id="Node000015" href="$wifi__manager_8c.html#a68a4e289fd42141b8f67bfebc690ef2d" title="Scan and get for Access points that wifi manager can connect to and store them in JSON format." alt="" coords="433,381,598,422"/>
+<area shape="poly" id="edge21_Node000014_Node000015" title=" " alt="" coords="333,399,417,399,417,404,333,404"/>
+<area shape="poly" id="edge22_Node000015_Node000004" title=" " alt="" coords="598,398,657,402,723,411,790,428,854,455,870,467,880,480,888,493,902,506,911,511,908,516,899,510,884,496,875,483,866,471,851,460,789,433,722,417,656,407,598,403"/>
+<area shape="poly" id="edge23_Node000015_Node000009" title=" " alt="" coords="580,420,705,462,703,467,578,425"/>
+<area shape="poly" id="edge26_Node000016_Node000005" title=" " alt="" coords="333,1114,463,1098,618,1072,693,1055,760,1035,814,1013,851,987,869,963,878,940,881,916,880,892,879,841,884,813,898,784,925,756,929,760,903,787,889,815,884,841,885,892,886,917,883,941,874,966,855,991,817,1017,762,1040,694,1060,619,1077,464,1104,333,1120"/>
+<area shape="poly" id="edge28_Node000016_Node000007" title=" " alt="" coords="334,1149,413,1180,473,1195,522,1207,544,1209,567,1206,591,1197,617,1180,634,1164,643,1146,646,1127,646,1107,646,1064,652,1042,664,1018,681,1000,701,984,704,988,685,1004,669,1021,656,1044,651,1065,651,1107,651,1128,648,1148,638,1167,620,1185,593,1201,568,1211,545,1214,521,1212,471,1200,411,1185,332,1154"/>
+<area shape="poly" id="edge29_Node000016_Node000008" title=" " alt="" coords="334,1145,366,1162,381,1176,389,1191,398,1204,413,1215,479,1240,540,1253,596,1256,649,1248,700,1229,750,1200,800,1160,851,1110,876,1078,897,1042,929,966,948,894,957,838,963,839,953,895,934,968,902,1045,881,1081,855,1114,804,1164,753,1204,703,1234,651,1253,596,1261,539,1259,477,1245,411,1220,394,1208,385,1194,376,1180,362,1166,332,1149"/>
+<area shape="poly" id="edge30_Node000016_Node000015" title=" " alt="" coords="331,1106,348,1096,362,1082,373,1063,382,1040,393,981,397,911,398,835,397,686,400,622,409,573,425,533,445,495,486,433,491,436,450,498,430,535,415,574,405,623,402,686,403,835,403,911,398,981,387,1041,378,1066,366,1086,352,1100,334,1110"/>
+<area shape="rect" id="Node000017" href="$nvs__controller_8h.html#a9eeeb82f5b26f763b25ea820b1b9f332" title="Erse all data in default NVS partition." alt="" coords="445,1130,586,1171"/>
+<area shape="poly" id="edge27_Node000016_Node000017" title=" " alt="" coords="333,1129,429,1139,429,1144,333,1134"/>
+<area shape="poly" id="edge32_Node000018_Node000015" title=" " alt="" coords="334,196,366,215,383,232,393,248,414,285,486,368,482,371,410,288,388,251,379,235,362,219,331,201"/>
+<area shape="poly" id="edge35_Node000019_Node000011" title=" " alt="" coords="345,279,366,295,389,329,397,360,402,393,414,432,457,509,498,572,493,575,453,512,410,434,397,395,392,361,384,331,362,299,342,283"/>
+<area shape="poly" id="edge34_Node000019_Node000015" title=" " alt="" coords="341,283,365,295,425,332,477,369,474,373,423,336,363,300,339,288"/>
+<area shape="poly" id="edge38_Node000020_Node000011" title=" " alt="" coords="348,348,366,359,500,571,495,574,362,363,345,352"/>
+<area shape="poly" id="edge37_Node000020_Node000015" title=" " alt="" coords="335,348,426,374,425,379,334,353"/>
+<area shape="rect" id="Node000022" href="$wifi__manager_8c.html#a2ea15285d2156d5392749310ceb92843" title="Scan and get for Access points that wifi manager can connect to." alt="" coords="412,1303,618,1329"/>
+<area shape="poly" id="edge40_Node000021_Node000022" title=" " alt="" coords="348,1334,396,1328,397,1333,349,1339"/>
+<area shape="poly" id="edge41_Node000022_Node000004" title=" " alt="" coords="536,1300,600,1256,687,1186,732,1142,776,1095,817,1043,850,988,868,949,878,915,884,854,885,790,889,753,898,710,924,627,949,560,954,562,929,629,903,711,895,753,891,790,889,854,883,916,873,951,855,991,821,1046,781,1098,736,1146,690,1190,603,1260,539,1305"/>
+<area shape="rect" id="Node000023" href="$wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels." alt="" coords="694,1360,825,1386"/>
+<area shape="poly" id="edge42_Node000022_Node000023" title=" " alt="" coords="574,1327,688,1354,686,1359,573,1332"/>
+<area shape="rect" id="Node000024" href="$wifi__controller_8h.html#a65a29cdfc998ed4e91bb9088d2eebc37" title="Store results of scanning in buffer as json string;." alt="" coords="677,1296,842,1336"/>
+<area shape="poly" id="edge43_Node000022_Node000024" title=" " alt="" coords="619,1313,662,1313,662,1319,619,1319"/>
+<area shape="poly" id="edge45_Node000025_Node000022" title=" " alt="" coords="335,1397,363,1385,473,1334,475,1339,365,1390,337,1402"/>
+<area shape="poly" id="edge47_Node000026_Node000022" title=" " alt="" coords="341,1230,365,1242,390,1258,413,1275,459,1295,457,1300,411,1280,386,1263,363,1246,339,1235"/>
+<area shape="poly" id="edge49_Node000027_Node000022" title=" " alt="" coords="365,1290,414,1297,414,1303,364,1295"/>
+<area shape="poly" id="edge51_Node000028_Node000009" title=" " alt="" coords="562,152,592,176,620,205,666,270,703,340,732,404,751,454,746,456,727,406,699,342,661,273,616,208,589,180,559,156"/>
+<area shape="poly" id="edge54_Node000029_Node000007" title=" " alt="" coords="357,1039,482,1030,551,1021,618,1008,698,981,700,986,619,1013,552,1026,483,1035,358,1045"/>
+<area shape="poly" id="edge55_Node000029_Node000009" title=" " alt="" coords="357,1020,412,1008,444,1003,474,1002,526,1004,549,1003,571,997,594,985,616,965,626,950,634,932,643,885,646,829,646,767,646,647,652,596,664,557,689,526,719,502,722,506,693,530,669,560,657,597,652,647,652,767,652,829,648,886,639,934,631,953,620,968,597,990,573,1002,550,1008,526,1010,474,1008,445,1008,412,1013,358,1025"/>
+<area shape="rect" id="Node000030" href="$nvs__controller_8h.html#a92ba0066a43bc3f296e16c4976b17fcc" title="Deinit default NVS partition." alt="" coords="445,914,585,955"/>
+<area shape="poly" id="edge53_Node000029_Node000030" title=" " alt="" coords="338,1013,363,1002,411,971,437,959,440,964,413,976,365,1006,340,1018"/>
+<area shape="poly" id="edge57_Node000031_Node000009" title=" " alt="" coords="548,273,736,457,732,461,544,277"/>
+<area shape="poly" id="edge59_Node000032_Node000009" title=" " alt="" coords="575,50,599,65,620,83,654,129,682,179,705,232,723,285,747,382,758,454,753,455,741,383,718,286,700,234,677,182,650,132,616,87,596,69,573,55"/>
+<area shape="poly" id="edge61_Node000033_Node000009" title=" " alt="" coords="337,472,651,478,651,483,337,477"/>
+<area shape="poly" id="edge62_Node000033_Node000011" title=" " alt="" coords="334,492,365,504,430,539,484,574,482,579,427,544,363,509,332,497"/>
+<area shape="poly" id="edge64_Node000034_Node000009" title=" " alt="" coords="334,528,651,492,651,497,335,533"/>
+<area shape="poly" id="edge65_Node000034_Node000011" title=" " alt="" coords="335,553,443,579,442,584,334,559"/>
+<area shape="poly" id="edge68_Node000035_Node000007" title=" " alt="" coords="334,933,363,921,386,909,411,900,469,890,515,886,561,890,619,900,663,912,704,928,702,933,661,917,618,905,560,895,515,892,470,895,413,905,389,914,365,926,336,938"/>
+<area shape="poly" id="edge69_Node000035_Node000011" title=" " alt="" coords="345,935,362,922,383,894,392,866,398,836,410,800,457,702,497,624,502,626,461,704,414,802,403,838,397,868,388,896,366,926,348,940"/>
+<area shape="poly" id="edge67_Node000035_Node000030" title=" " alt="" coords="346,951,429,942,430,947,347,957"/>
+<area shape="poly" id="edge71_Node000036_Node000011" title=" " alt="" coords="333,727,363,712,431,666,487,620,490,624,435,670,365,717,335,732"/>
+<area shape="poly" id="edge73_Node000037_Node000011" title=" " alt="" coords="334,604,423,600,423,606,334,610"/>
+<area shape="poly" id="edge75_Node000038_Node000011" title=" " alt="" coords="328,659,363,648,461,614,463,620,365,653,330,664"/>
+</map>

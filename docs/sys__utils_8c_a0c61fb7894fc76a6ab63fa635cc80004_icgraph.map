@@ -1,0 +1,14 @@
+<map id="sysutil_setup_ntp_server" name="sysutil_setup_ntp_server">
+<area shape="rect" id="Node000001" title="Setup SNTP server for adjusting system time." alt="" coords="535,63,701,88"/>
+<area shape="rect" id="Node000002" href="$test__cli__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="346,5,423,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="547,61,423,30,424,25,549,56"/>
+<area shape="rect" id="Node000003" href="$test__sys__utils_8c.html#a1a5e127a8b7fc46a464a6d1dc8eb313e" title=" " alt="" coords="281,55,487,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="520,78,488,78,488,73,520,73"/>
+<area shape="rect" id="Node000006" href="$test__sys__utils_8c.html#a5447b989a09eed9c2a4b8cb028d63982" title=" " alt="" coords="302,121,466,161"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="555,96,460,122,459,117,554,90"/>
+<area shape="rect" id="Node000004" href="$test__sys__utils_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,96,233,122"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="266,98,234,103,233,98,265,92"/>
+<area shape="rect" id="Node000005" href="$test__sys__utils_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,96,83,122"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="115,112,83,112,83,106,115,106"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="286,128,233,120,234,114,287,123"/>
+</map>

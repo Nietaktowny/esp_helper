@@ -1,0 +1,13 @@
+<map id="wifi_manager_erase_ap" name="wifi_manager_erase_ap">
+<area shape="rect" id="Node000001" title="Erase all data stored in wifi manager NVS namespace." alt="" coords="5,104,163,130"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="243,5,348,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,101,150,71,210,40,227,33,229,38,212,45,153,76,105,106"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="248,55,343,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,101,232,79,233,85,143,106"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#a5966e157cae5d3998dfa1c2157dcead2" title="Erase all key&#45;value pairs in specified NVS namespace." alt="" coords="211,104,380,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,114,195,114,195,120,163,120"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="232,154,359,195"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="135,128,218,150,216,156,134,133"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="250,219,341,244"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="102,128,149,165,212,204,236,214,234,219,209,209,146,170,99,132"/>
+</map>

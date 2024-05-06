@@ -1,0 +1,11 @@
+<map id="inspect_task" name="inspect_task">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,101,88"/>
+<area shape="rect" id="Node000002" href="$http__client_8c.html#a55c042080b84c0ac0c2644a0b37f8388" title="Make a HTTP POST request." alt="" coords="179,5,293,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,60,148,41,172,33,174,39,149,46,94,65"/>
+<area shape="rect" id="Node000003" href="$sys__utils_8c.html#a83d18d05750f1c594860687ff0ec3882" title="Get base chip MAC address as C string." alt="" coords="161,55,311,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,73,145,73,145,78,101,78"/>
+<area shape="rect" id="Node000005" href="$wifi__controller_8h.html#acc993cc2a0481bf076e5361048057a90" title="Get current wifi_controller status as JSON string." alt="" coords="149,120,323,146"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="94,86,149,105,174,112,172,118,148,110,92,91"/>
+<area shape="rect" id="Node000004" href="$sys__utils_8c.html#ab39f400f14d827d848f3f907b2d5a7d8" title="Get base chip MAC address." alt="" coords="371,63,552,88"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="311,73,355,73,355,78,311,78"/>
+</map>

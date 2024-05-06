@@ -6,6 +6,8 @@ var tcp__controller_8c =
     [ "tcp_create_socket", "tcp__controller_8c.html#a274866f382f711a467053cf394d3792e", null ],
     [ "tcp_get_bound_socket_ip", "tcp__controller_8c.html#a46d32663b476a9417c5056b4d604438d", null ],
     [ "tcp_get_bound_socket_port", "tcp__controller_8c.html#ae0b781bbcb6353cf585fcb0003c42465", null ],
+    [ "tcp_get_client_socket_ip", "tcp__controller_8c.html#a9c6ddc5f8668c1f0d4103c5e77fdb6a0", null ],
+    [ "tcp_get_client_socket_port", "tcp__controller_8c.html#a6d319999fce3fd6217af678d8c6d8e76", null ],
     [ "tcp_get_option_name", "tcp__controller_8c.html#ac6b18b0f4564e4c82cd9b940782612a9", null ],
     [ "tcp_get_socket_option", "tcp__controller_8c.html#a7aaad09872f2d9da8e2cad2ac4fdf0dd", null ],
     [ "tcp_prepare_address", "tcp__controller_8c.html#ab93c55c49481e20286541651c674561b", null ],

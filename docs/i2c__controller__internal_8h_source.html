@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -99,21 +99,24 @@ $(document).ready(function(){initNavTree('i2c__controller__internal_8h_source.ht
   <div class="headertitle"><div class="title">i2c_controller_internal.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="i2c__controller__internal_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;i2c_controller.h&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="i2c__controller_8h.html">i2c_controller.h</a>&quot;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">int</span> i2c_c_device_lock(<a class="code hl_struct" href="structi2c__c__device__handle__obj.html">i2c_c_device_handle_t</a> <span class="keyword">const</span> device, <span class="keyword">const</span> uint32_t timeout);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">int</span> <a class="code hl_function" href="i2c__controller__internal_8h.html#abab70a1e4c437ce46d32271437611ec5">i2c_c_device_lock</a>(<a class="code hl_struct" href="structi2c__c__device__handle__obj.html">i2c_c_device_handle_t</a> <span class="keyword">const</span> device, <span class="keyword">const</span> uint32_t timeout);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">int</span> i2c_c_device_unlock(<a class="code hl_struct" href="structi2c__c__device__handle__obj.html">i2c_c_device_handle_t</a> <span class="keyword">const</span> device);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">int</span> <a class="code hl_function" href="i2c__controller__internal_8h.html#a9d059bf9a090c2f1ffe009a49b6682a1">i2c_c_device_unlock</a>(<a class="code hl_struct" href="structi2c__c__device__handle__obj.html">i2c_c_device_handle_t</a> <span class="keyword">const</span> device);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="ttc" id="ai2c__controller_8h_html"><div class="ttname"><a href="i2c__controller_8h.html">i2c_controller.h</a></div></div>
+<div class="ttc" id="ai2c__controller__internal_8h_html_a9d059bf9a090c2f1ffe009a49b6682a1"><div class="ttname"><a href="i2c__controller__internal_8h.html#a9d059bf9a090c2f1ffe009a49b6682a1">i2c_c_device_unlock</a></div><div class="ttdeci">int i2c_c_device_unlock(i2c_c_device_handle_t const device)</div><div class="ttdoc">Return I2C device lock. Used for thread safety.</div><div class="ttdef"><b>Definition</b> i2c_controller.c:205</div></div>
+<div class="ttc" id="ai2c__controller__internal_8h_html_abab70a1e4c437ce46d32271437611ec5"><div class="ttname"><a href="i2c__controller__internal_8h.html#abab70a1e4c437ce46d32271437611ec5">i2c_c_device_lock</a></div><div class="ttdeci">int i2c_c_device_lock(i2c_c_device_handle_t const device, const uint32_t timeout)</div><div class="ttdoc">Get I2C device lock. Used for thread safety.</div><div class="ttdef"><b>Definition</b> i2c_controller.c:191</div></div>
 <div class="ttc" id="astructi2c__c__device__handle__obj_html"><div class="ttname"><a href="structi2c__c__device__handle__obj.html">i2c_c_device_handle_obj</a></div><div class="ttdoc">I2C device object.</div><div class="ttdef"><b>Definition</b> i2c_controller.c:28</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_8d8b1f1b72ed7295d85ce810b55b3662.html">i2c_controller</a></li><li class="navelem"><a class="el" href="dir_b197c1de700c939ea0be6d9861cc5592.html">include</a></li><li class="navelem"><b>i2c_controller_internal.h</b></li>
+    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_8d8b1f1b72ed7295d85ce810b55b3662.html">i2c_controller</a></li><li class="navelem"><a class="el" href="dir_b197c1de700c939ea0be6d9861cc5592.html">include</a></li><li class="navelem"><a class="el" href="i2c__controller__internal_8h.html">i2c_controller_internal.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

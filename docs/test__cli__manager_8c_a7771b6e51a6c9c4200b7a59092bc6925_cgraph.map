@@ -1,0 +1,20 @@
+<map id="test_if_cli_accept_task_deletes_itself_on_invalid_socket" name="test_if_cli_accept_task_deletes_itself_on_invalid_socket">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,44,143,99"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8c.html#a6cf547424c3b4d26fa301c9f2bc79688" title="Task responsible for accepting new hosts in TCP log server." alt="" coords="191,59,303,84"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,69,175,69,175,74,143,74"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="764,93,868,119"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,56,303,33,350,14,410,5,471,4,532,10,591,21,696,52,775,84,773,89,694,57,589,26,531,15,471,9,410,10,352,19,306,38,268,60"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#ac318f2fb9f51699954c24804dd8b095d" title="Add new log file to be used as log output." alt="" coords="353,29,484,55"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="303,59,337,53,338,59,304,64"/>
+<area shape="rect" id="Node000005" href="$logger_8c.html#a4cae04593f6a3be65ac345115c8a959d" title="Clear all files used as log output." alt="" coords="351,79,486,120"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="304,78,336,83,335,89,303,83"/>
+<area shape="rect" id="Node000006" href="$tcp__controller_8c.html#acb904407f0f4032b3936206e8db2e0aa" title="Accept connection on listen socket, and return client socket." alt="" coords="357,144,480,170"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="270,83,352,129,366,135,364,140,350,134,268,87"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="456,141,485,129,509,115,534,104,590,94,647,90,749,95,748,100,647,96,590,99,535,109,511,120,488,134,459,146"/>
+<area shape="rect" id="Node000007" href="$tcp__controller_8c.html#ae0b781bbcb6353cf585fcb0003c42465" title="Read port to which socket is bound." alt="" coords="534,119,716,144"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="480,147,519,142,519,147,481,152"/>
+<area shape="rect" id="Node000008" href="$tcp__controller_8c.html#a9c6ddc5f8668c1f0d4103c5e77fdb6a0" title=" " alt="" coords="542,168,708,194"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="481,161,527,167,527,172,480,167"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="716,117,748,112,749,118,716,122"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="683,165,715,154,778,124,780,129,717,159,684,170"/>
+</map>

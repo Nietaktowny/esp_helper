@@ -8,6 +8,7 @@ var wifi__controller_8h =
     [ "WIFI_C_BUFFER_SCAN_SIZE", "wifi__controller_8h.html#a6173efa45812a23f07ccb2449e4dbaee", null ],
     [ "WIFI_C_CONNECT_FAIL_BIT", "wifi__controller_8h.html#a17cac29759990e93abff6ea21e1eb60c", null ],
     [ "WIFI_C_CONNECTED_BIT", "wifi__controller_8h.html#a119ecf55dd62303d4dcbe76973027acd", null ],
+    [ "WIFI_C_ERR_STA_TIMEOUT_EXPIRE", "wifi__controller_8h.html#a3387e3b950b9640165edd98e7629cf86", null ],
     [ "WIFI_C_SCAN_BLOCK", "wifi__controller_8h.html#ad76758d4f7f8e9f0ca1967dc47285fc5", null ],
     [ "WIFI_C_SCAN_DONE_BIT", "wifi__controller_8h.html#a4364d346ec646180ba3f914c2c642658", null ],
     [ "WIFI_C_STA_RETRY_COUNT", "wifi__controller_8h.html#afb4dc90ee0c7aa67531693b62692f558", null ],

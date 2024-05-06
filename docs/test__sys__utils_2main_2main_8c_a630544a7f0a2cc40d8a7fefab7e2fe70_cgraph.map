@@ -1,0 +1,9 @@
+<map id="app_main" name="app_main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,83,56"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="181,5,262,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,35,165,23,166,29,84,41"/>
+<area shape="rect" id="Node000004" href="$sys__utils_8c.html#ab39f400f14d827d848f3f907b2d5a7d8" title="Get base chip MAC address." alt="" coords="131,55,312,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="84,46,116,50,115,56,83,51"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="360,5,509,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="262,16,344,16,344,21,262,21"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="test_if_setup_ntp_server_returns_zero" name="test_if_setup_ntp_server_returns_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,170,46"/>
+<area shape="rect" id="Node000002" href="$sys__utils_8c.html#a0c61fb7894fc76a6ab63fa635cc80004" title="Setup SNTP server for adjusting system time." alt="" coords="218,13,383,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,23,202,23,202,28,170,28"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="431,13,535,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="383,23,415,23,415,28,383,28"/>
+</map>

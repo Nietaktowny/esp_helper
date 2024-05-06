@@ -1,0 +1,15 @@
+<map id="test_if_nvs_c_read_blob_returns_err_on_too_small_buffer" name="test_if_nvs_c_read_blob_returns_err_on_too_small_buffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,142,148,198"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="219,5,314,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,140,138,90,165,64,194,41,204,36,206,40,197,46,168,68,142,94,100,144"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a9eeeb82f5b26f763b25ea820b1b9f332" title="Erse all data in default NVS partition." alt="" coords="196,55,337,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,139,194,106,206,101,209,105,197,111,133,144"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="203,121,330,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,157,188,150,189,155,148,162"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="221,185,312,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="148,178,206,187,205,192,148,183"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#a2a5313ac9a27d3bb211b639385ddce59" title="Read blob data from NVS namespace." alt="" coords="207,235,326,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="139,196,197,221,211,226,209,231,195,226,137,201"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#a28af7eebe042a8beac9bbf003560e38d" title="Write blob data to NVS namespace." alt="" coords="205,284,328,310"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="106,196,147,234,197,271,205,275,203,280,194,275,143,239,102,200"/>
+</map>

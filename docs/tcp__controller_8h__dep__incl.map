@@ -1,7 +1,9 @@
 <map id="projects/lib_tests/lib/tcp_controller/include/tcp_controller.h" name="projects/lib_tests/lib/tcp_controller/include/tcp_controller.h">
-<area shape="rect" id="Node000001" title="TCP Controller header file." alt="" coords="72,5,230,61"/>
-<area shape="rect" id="Node000002" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="5,109,140,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,75,96,110,92,107,119,72"/>
-<area shape="rect" id="Node000003" href="$tcp__controller_8c.html" title="TCP Controller source file." alt="" coords="164,109,299,165"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,72,212,107,208,110,180,75"/>
+<area shape="rect" id="Node000001" title="TCP Controller header file." alt="" coords="152,5,310,61"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="5,117,140,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,72,114,118,111,114,178,68"/>
+<area shape="rect" id="Node000003" href="$tcp__controller_8c.html" title="TCP Controller source file." alt="" coords="164,117,299,172"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,76,234,116,229,116,229,76"/>
+<area shape="rect" id="Node000004" href="$test__cli__manager_8c.html" title=" " alt="" coords="323,109,467,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="286,68,344,106,341,111,283,72"/>
 </map>

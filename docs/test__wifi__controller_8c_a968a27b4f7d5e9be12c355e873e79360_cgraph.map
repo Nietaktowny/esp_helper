@@ -1,0 +1,12 @@
+<map id="test_if_ap_connect_handler_is_set" name="test_if_ap_connect_handler_is_set">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,78,137,119"/>
+<area shape="rect" id="Node000002" href="$test__wifi__controller_8c.html#a6836f1a8df8a60455b709f8e24aeea20" title=" " alt="" coords="209,5,286,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,75,202,35,204,40,119,80"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="358,31,450,56"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="137,85,342,51,343,56,138,90"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#a5ab89410d5bf8d703907b59935825401" title="Register function to be called each time new STA connects to AP." alt="" coords="185,106,310,147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,106,170,111,169,116,137,111"/>
+<area shape="rect" id="Node000005" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="186,171,309,196"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="111,117,186,156,199,162,197,167,184,161,108,121"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="286,22,343,31,342,36,286,27"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="helper_perform_ota" name="helper_perform_ota">
+<area shape="rect" id="Node000001" title="Perform simple OTA firmware update with standard ESP Helper server." alt="" coords="490,39,623,64"/>
+<area shape="rect" id="Node000002" href="$test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="293,5,430,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="475,40,430,33,431,27,476,35"/>
+<area shape="rect" id="Node000004" href="$test__esp__helper__utils_8c.html#a3b350866aaaa69fc34d46f288a47d8ae" title=" " alt="" coords="281,56,442,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="476,67,443,73,443,68,475,62"/>
+<area shape="rect" id="Node000003" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="143,5,221,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="277,21,221,21,221,16,277,16"/>
+<area shape="rect" id="Node000005" href="$test__esp__helper__utils_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,71,233,96"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="266,86,234,86,234,81,266,81"/>
+<area shape="rect" id="Node000006" href="$test__esp__helper__utils_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,71,83,96"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="115,86,83,86,83,81,115,81"/>
+</map>

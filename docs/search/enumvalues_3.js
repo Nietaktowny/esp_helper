@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['wifi_5fc_5fmode_5fap_0',['WIFI_C_MODE_AP',['../wifi__controller_8h.html#a062956c3402e036ec000008d21cdec8da69bd8befb26fcf09c71cae7f37882ec6',1,'wifi_controller.h']]],
-  ['wifi_5fc_5fmode_5fapsta_1',['WIFI_C_MODE_APSTA',['../wifi__controller_8h.html#a062956c3402e036ec000008d21cdec8da7ffd45341bf467e0eb4d7ec74311b49e',1,'wifi_controller.h']]],
-  ['wifi_5fc_5fmode_5fsta_2',['WIFI_C_MODE_STA',['../wifi__controller_8h.html#a062956c3402e036ec000008d21cdec8da1b81b9c1a7ba28acc9f2f33f79021d3b',1,'wifi_controller.h']]],
-  ['wifi_5fc_5fno_5fmode_3',['WIFI_C_NO_MODE',['../wifi__controller_8h.html#a062956c3402e036ec000008d21cdec8da6ab9db20fd77f523bbabd15aacfdfb1e',1,'wifi_controller.h']]]
+  ['i2c_5fc_5fnum_5f0_0',['I2C_C_NUM_0',['../i2c__controller_8h.html#a22ef762d962ff5160d19191d87459a8aa79af49cac94ba7ba6421c77ad3ddfd27',1,'i2c_controller.h']]],
+  ['i2c_5fc_5fnum_5f1_1',['I2C_C_NUM_1',['../i2c__controller_8h.html#a22ef762d962ff5160d19191d87459a8aa5a574b65cbb4ee1c3199000a823670e2',1,'i2c_controller.h']]]
 ];

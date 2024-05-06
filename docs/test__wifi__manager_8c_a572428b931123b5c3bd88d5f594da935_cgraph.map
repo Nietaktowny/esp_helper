@@ -1,0 +1,15 @@
+<map id="test_if_wifi_manager_erase_ap_returns_zero" name="test_if_wifi_manager_erase_ap_returns_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,97,165,137"/>
+<area shape="rect" id="Node000002" href="$wifi__manager_8c.html#ae40d3fa65c5e68e8fa280cc45a81e8b0" title="Erase all data stored in wifi manager NVS namespace." alt="" coords="213,104,370,130"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,114,197,114,197,120,165,120"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="451,5,555,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,101,357,71,417,40,435,33,437,38,419,45,360,76,313,106"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="456,55,550,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="349,101,439,79,441,85,350,106"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#a5966e157cae5d3998dfa1c2157dcead2" title="Erase all key&#45;value pairs in specified NVS namespace." alt="" coords="418,104,587,130"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="370,114,402,114,402,120,370,120"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="440,154,566,195"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="342,128,425,150,424,156,341,133"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="457,219,548,244"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="309,128,357,165,419,204,444,214,442,219,417,209,354,170,306,132"/>
+</map>

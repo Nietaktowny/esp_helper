@@ -1,0 +1,19 @@
+<map id="bmp_i2c_readout" name="bmp_i2c_readout">
+<area shape="rect" id="Node000001" title="Read BMP device pressure and temperature readings." alt="" coords="5,80,126,106"/>
+<area shape="rect" id="Node000002" href="$bmp280_8c.html#a62e2529d9443dfe65f6d4b755db00e8d" title=" " alt="" coords="174,5,349,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,77,173,40,191,33,193,38,175,45,93,82"/>
+<area shape="rect" id="Node000003" href="$bmp280_8c.html#a4c2312589f67afdff1c0ba5912adaf6f" title=" " alt="" coords="174,55,349,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,82,158,78,159,83,126,88"/>
+<area shape="rect" id="Node000004" href="$bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="210,104,313,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="126,98,195,106,195,111,126,103"/>
+<area shape="rect" id="Node000008" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="186,153,337,179"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="94,104,175,140,193,146,191,151,173,145,92,109"/>
+<area shape="rect" id="Node000005" href="$i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="439,104,523,130"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="313,114,423,114,423,120,313,120"/>
+<area shape="rect" id="Node000006" href="$i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="619,80,748,106"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="523,109,604,100,604,105,524,115"/>
+<area shape="rect" id="Node000007" href="$i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="612,129,755,155"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="524,119,597,129,596,134,523,125"/>
+<area shape="rect" id="Node000009" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="397,153,564,179"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="337,164,381,164,381,169,337,169"/>
+</map>

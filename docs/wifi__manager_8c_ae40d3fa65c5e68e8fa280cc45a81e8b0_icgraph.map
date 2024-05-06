@@ -1,0 +1,12 @@
+<map id="wifi_manager_erase_ap" name="wifi_manager_erase_ap">
+<area shape="rect" id="Node000001" title="Erase all data stored in wifi manager NVS namespace." alt="" coords="488,46,646,72"/>
+<area shape="rect" id="Node000002" href="$test__wifi__manager_8c.html#ac7372248530e87eecab65fce9520cf80" title=" " alt="" coords="287,5,435,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="473,47,435,40,436,35,474,41"/>
+<area shape="rect" id="Node000005" href="$test__wifi__manager_8c.html#a572428b931123b5c3bd88d5f594da935" title=" " alt="" coords="281,71,440,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="473,76,441,81,440,76,473,71"/>
+<area shape="rect" id="Node000003" href="$test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,46,233,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="272,45,234,52,233,47,271,40"/>
+<area shape="rect" id="Node000004" href="$test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,46,83,72"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,62,83,62,83,56,115,56"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="265,77,233,71,234,66,266,71"/>
+</map>

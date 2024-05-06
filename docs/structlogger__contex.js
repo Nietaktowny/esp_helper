@@ -1,8 +1,8 @@
 var structlogger__contex =
 [
-    [ "level", "structlogger__contex.html#a1ea4101a8ff3352c65cc9a003ba400eb", null ],
-    [ "logfiles", "structlogger__contex.html#a7536e0fccd9dea28ecccd70c01b55631", null ],
-    [ "logfiles_num", "structlogger__contex.html#a8ea3ac108f011fd3fb97960282504545", null ],
-    [ "mutex", "structlogger__contex.html#a8368c37cfb59cb636cf44e105e809e45", null ],
-    [ "silent_mode", "structlogger__contex.html#a6eff41da96e137420b30d21ec89bc388", null ]
+    [ "level", "structlogger__contex.html#abbb6c7c49508c1ac374683f2d1159e08", null ],
+    [ "logfiles", "structlogger__contex.html#aef84891e256c1ec54417189c96c7e1ec", null ],
+    [ "logfiles_num", "structlogger__contex.html#a7507e027274122f8c40e4e9d8768ba54", null ],
+    [ "mutex", "structlogger__contex.html#a4acff8232e4aec9cd5c6dc200ac55ef3", null ],
+    [ "silent_mode", "structlogger__contex.html#a0b62e5509d30a249f9dda5f4b073b5fe", null ]
 ];

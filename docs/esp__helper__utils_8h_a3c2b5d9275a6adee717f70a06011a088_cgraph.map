@@ -1,0 +1,20 @@
+<map id="helper_perform_ota" name="helper_perform_ota">
+<area shape="rect" id="Node000001" title="Perform simple OTA firmware update with standard ESP Helper server." alt="" coords="5,99,138,124"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="422,17,526,43"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,97,123,56,152,35,185,20,242,6,301,3,357,6,406,13,406,18,357,11,301,8,243,12,187,25,155,40,127,60,86,100"/>
+<area shape="rect" id="Node000003" href="$esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a" title="Prepare URL for OTA with device ID as parameter." alt="" coords="197,34,324,74"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="116,95,181,75,183,80,117,101"/>
+<area shape="rect" id="Node000004" href="$ota__controller_8c.html#a9bdb2553ca10cdaf2b8d49f84fce5ba5" title=" " alt="" coords="217,99,304,124"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="138,109,202,109,202,114,138,114"/>
+<area shape="rect" id="Node000007" href="$sys__utils_8c.html#a83d18d05750f1c594860687ff0ec3882" title="Get base chip MAC address as C string." alt="" coords="186,148,335,189"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="117,122,177,141,176,146,116,127"/>
+<area shape="rect" id="Node000009" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="199,213,322,239"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="88,123,130,160,187,199,200,205,197,209,184,203,127,164,85,127"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="301,96,334,84,426,47,428,52,336,89,303,101"/>
+<area shape="rect" id="Node000005" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="398,99,549,124"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="304,109,382,109,382,114,304,114"/>
+<area shape="rect" id="Node000006" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="612,99,780,124"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="550,109,597,109,597,114,550,114"/>
+<area shape="rect" id="Node000008" href="$sys__utils_8c.html#ab39f400f14d827d848f3f907b2d5a7d8" title="Get base chip MAC address." alt="" coords="383,156,564,182"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="335,166,367,166,367,171,335,171"/>
+</map>

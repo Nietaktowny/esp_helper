@@ -1,0 +1,5 @@
+<map id="tcp_receive" name="tcp_receive">
+<area shape="rect" id="Node000001" title="Receive data from socket." alt="" coords="5,5,94,31"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="142,5,246,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,16,126,16,126,21,94,21"/>
+</map>

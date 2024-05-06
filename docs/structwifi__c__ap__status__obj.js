@@ -1,7 +1,7 @@
 var structwifi__c__ap__status__obj =
 [
-    [ "connect_handler", "structwifi__c__ap__status__obj.html#afe40080eb0740d4b37d6fe57772199b6", null ],
-    [ "disconnect_handler", "structwifi__c__ap__status__obj.html#ada046a12488e0863fde8ac7c84def3b6", null ],
-    [ "ip", "structwifi__c__ap__status__obj.html#ad6a0ec46fe1052b74d61f68c2b5ee40f", null ],
-    [ "ssid", "structwifi__c__ap__status__obj.html#acde9b5ac7df6b72394a8e20cd2c9604d", null ]
+    [ "connect_handler", "structwifi__c__ap__status__obj.html#ae7b4fd9865e8fbc8166078758513805b", null ],
+    [ "disconnect_handler", "structwifi__c__ap__status__obj.html#a4a4e2ef200fc7ce13ebbb55c2649cad3", null ],
+    [ "ip", "structwifi__c__ap__status__obj.html#a4eb05c1c1fac4cca831d6f21ad85f069", null ],
+    [ "ssid", "structwifi__c__ap__status__obj.html#a5268b07a2715992416b0af11a06f1bf7", null ]
 ];

@@ -1,0 +1,30 @@
+<map id="app_main" name="app_main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,83,148"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="159,8,239,34"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,121,84,83,129,44,143,36,146,41,132,48,88,87,57,124"/>
+<area shape="rect" id="Node000004" href="$test__esp__helper__utils_2main_2main_8c.html#aee86106cd4b46eeccb08bc2e17942225" title=" " alt="" coords="131,58,267,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="80,120,127,102,129,107,82,125"/>
+<area shape="rect" id="Node000012" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="147,123,251,148"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="83,133,132,133,132,138,83,138"/>
+<area shape="rect" id="Node000013" href="$wifi__controller_8h.html#a12695f7f8390b032f86d7317f8480dde" title="Register function to be called when STA connects to AP." alt="" coords="134,173,264,213"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="82,147,129,164,127,169,80,152"/>
+<area shape="rect" id="Node000014" href="$wifi__controller_8h.html#a222008978f46f659f29a0f44e4985780" title="Starts WiFi in STA mode." alt="" coords="143,237,255,263"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="57,147,88,184,132,223,141,228,139,233,129,227,84,188,53,151"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="315,8,464,34"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="240,18,299,18,299,24,240,24"/>
+<area shape="rect" id="Node000005" href="$esp__helper__utils_8c.html#a58b860ee0ffd4f239cd6a016587c7b13" title="Perform simple OTA firmware update with standard ESP Helper server and provided device ID." alt="" coords="324,58,456,99"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="268,76,308,76,308,81,268,81"/>
+<area shape="rect" id="Node000006" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="711,12,816,38"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="440,55,463,44,486,28,511,14,559,5,607,3,696,9,695,15,607,8,560,11,513,19,489,32,466,49,443,60"/>
+<area shape="rect" id="Node000007" href="$esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a" title="Prepare URL for OTA with device ID as parameter." alt="" coords="512,29,640,69"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="456,65,497,59,497,64,457,70"/>
+<area shape="rect" id="Node000008" href="$ota__controller_8c.html#a9bdb2553ca10cdaf2b8d49f84fce5ba5" title=" " alt="" coords="533,93,619,119"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="457,86,518,95,517,100,456,91"/>
+<area shape="rect" id="Node000011" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="515,143,637,168"/>
+<area shape="poly" id="edge11_Node000005_Node000011" title=" " alt="" coords="438,97,513,129,526,134,524,139,511,134,436,101"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="610,90,639,78,719,42,721,47,641,83,612,95"/>
+<area shape="rect" id="Node000009" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="688,93,839,119"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="620,104,672,104,672,109,620,109"/>
+<area shape="rect" id="Node000010" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="887,93,1054,119"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="839,104,871,104,871,109,839,109"/>
+</map>

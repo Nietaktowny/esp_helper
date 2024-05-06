@@ -1,0 +1,15 @@
+<map id="app_main" name="app_main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,133,83,159"/>
+<area shape="rect" id="Node000002" href="$start__sta__example_8c.html#a74d87c01adafb70a9bf42a4d7868633f" title=" " alt="" coords="143,5,259,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,131,81,87,103,62,129,40,135,36,138,41,132,44,107,66,86,90,55,134"/>
+<area shape="rect" id="Node000003" href="$start__sta__example_8c.html#a0e283c6fc89aa295bd58c2c2637cdaa9" title=" " alt="" coords="134,55,268,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="62,130,129,89,141,84,143,89,132,94,65,135"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="149,104,253,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="83,136,133,127,134,132,84,142"/>
+<area shape="rect" id="Node000005" href="$wifi__controller_8h.html#a12695f7f8390b032f86d7317f8480dde" title="Register function to be called when STA connects to AP." alt="" coords="136,154,266,195"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="84,150,121,157,120,163,83,156"/>
+<area shape="rect" id="Node000006" href="$wifi__controller_8h.html#ab6a4458cd9749bfedf7f065962157f87" title="Register function to be called when STA loses connection with AP and all attempts to connect again fa..." alt="" coords="131,219,271,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="64,157,132,204,142,209,139,214,129,208,61,162"/>
+<area shape="rect" id="Node000007" href="$wifi__controller_8h.html#a222008978f46f659f29a0f44e4985780" title="Starts WiFi in STA mode." alt="" coords="145,284,257,310"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="53,158,82,212,105,243,132,269,139,274,136,279,129,274,101,246,78,215,49,161"/>
+</map>

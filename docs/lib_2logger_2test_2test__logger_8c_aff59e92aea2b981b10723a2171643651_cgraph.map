@@ -1,0 +1,7 @@
+<map id="test_if_logger_create_semphr_creates_mutex" name="test_if_logger_create_semphr_creates_mutex">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,169,64"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="217,5,366,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,31,201,27,202,32,170,36"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#af239c0d21f49e816ff534b09ad7bc3bf" title="Get logger mutex." alt="" coords="218,55,365,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,50,203,54,202,60,169,56"/>
+</map>

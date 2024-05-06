@@ -1,0 +1,9 @@
+<map id="linkedl_find_node_with_id" name="linkedl_find_node_with_id">
+<area shape="rect" id="Node000001" title="Find node using it&#39;s ID." alt="" coords="187,55,355,80"/>
+<area shape="rect" id="Node000002" href="$linked__list_8c.html#a7b38123ff3810da27f91e23466a6573b" title="Delete item from list." alt="" coords="22,5,122,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,53,122,33,123,28,202,48"/>
+<area shape="rect" id="Node000003" href="$linked__list_8c.html#a2d2c0cb350f417c0e26d9dd9f354c955" title="Find item in list using it&#39;s name." alt="" coords="29,55,115,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,70,115,70,115,65,171,65"/>
+<area shape="rect" id="Node000004" href="$linked__list_8c.html#a44c3985ffc432e5077c412a225bae540" title="Find item in list using it&#39;s ID." alt="" coords="5,104,139,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="202,87,128,106,126,101,201,82"/>
+</map>

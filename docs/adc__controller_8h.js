@@ -1,5 +1,6 @@
 var adc__controller_8h =
 [
+    [ "adc_c_oneshot_handle_t", "adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb", null ],
     [ "adc_c_channel_t", "adc__controller_8h.html#a01506b4a486e08265871579367260019", [
       [ "ADC_C_CHANNEL_0", "adc__controller_8h.html#a01506b4a486e08265871579367260019a2f90bed37d2883c84d40bdcd97426c87", null ],
       [ "ADC_C_CHANNEL_1", "adc__controller_8h.html#a01506b4a486e08265871579367260019a2e06ef56ad938bcadf7926f719443fe8", null ],

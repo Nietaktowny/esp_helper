@@ -1,0 +1,18 @@
+<map id="http_client_get_reuse" name="http_client_get_reuse">
+<area shape="rect" id="Node000001" title="Make a HTTP GET request reusing the already made connection." alt="" coords="512,114,658,140"/>
+<area shape="rect" id="Node000002" href="$test__http__client_8c.html#af251efb61e73f3ad7d5519566c7edb84" title=" " alt="" coords="284,5,461,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="549,108,463,61,434,49,436,44,465,57,551,103"/>
+<area shape="rect" id="Node000005" href="$test__http__client_8c.html#a66724eaea436507861aa45c8c18d58a0" title=" " alt="" coords="281,71,464,111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="497,115,464,109,465,104,498,110"/>
+<area shape="rect" id="Node000006" href="$test__http__client_8c.html#ac39cfd3708559e5fab4a203c7141a0e5" title=" " alt="" coords="288,135,458,191"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="498,144,459,151,458,146,497,139"/>
+<area shape="rect" id="Node000007" href="$test__http__client_8c.html#aebd0663c566b094df8107566433162e0" title=" " alt="" coords="285,215,461,255"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="555,151,513,179,466,205,440,216,438,212,463,201,511,174,552,147"/>
+<area shape="rect" id="Node000003" href="$test__http__client_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,114,233,140"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="296,55,282,61,237,89,201,116,198,111,234,84,280,57,293,50"/>
+<area shape="rect" id="Node000004" href="$test__http__client_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,114,83,140"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,130,83,130,83,124,115,124"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="266,114,234,120,233,115,265,109"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="272,147,233,139,234,134,273,141"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="289,210,280,205,232,173,196,142,199,138,235,169,282,201,292,206"/>
+</map>

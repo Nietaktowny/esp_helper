@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -137,22 +137,22 @@ $(document).ready(function(){initNavTree('logger_8h_source.html',''); initResiza
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#ifndef VERBOSE_COLOR</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">  #define VERBOSE_COLOR WHITE</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="logger_8h.html#a18b6481d3a50935335935ba280fbdbe2">   48</a></span><span class="preprocessor">  #define VERBOSE_COLOR WHITE</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#ifndef DEBUG_COLOR</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">  #define DEBUG_COLOR BLUE</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="logger_8h.html#a792f9eb6a62648607f47b22644ad9707">   51</a></span><span class="preprocessor">  #define DEBUG_COLOR BLUE</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#ifndef INFO_COLOR</span></div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">  #define INFO_COLOR GREEN</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="logger_8h.html#a5d724ff30124b3ce91f377afb4598ed7">   54</a></span><span class="preprocessor">  #define INFO_COLOR GREEN</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#ifndef WARN_COLOR</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">  #define WARN_COLOR YELLOW</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="logger_8h.html#ade48c7e2e47b62c4ba5b651a8fce44d7">   57</a></span><span class="preprocessor">  #define WARN_COLOR YELLOW</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#ifndef ERROR_COLOR</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">  #define ERROR_COLOR RED</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="logger_8h.html#a79b638f694ebb66a5eb8b994f4139906">   60</a></span><span class="preprocessor">  #define ERROR_COLOR RED</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#ifndef FATAL_COLOR</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">  #define FATAL_COLOR RED_BOLD_UNDERLINE</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="logger_8h.html#af28559d37017eab92792d364a8f82e21">   63</a></span><span class="preprocessor">  #define FATAL_COLOR RED_BOLD_UNDERLINE</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('logger_8h_source.html',''); initResiza
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keywordtype">int</span> <a class="code hl_function" href="logger_8h.html#a85a9cd1726e8e443452f79bd83253a07">logger_return_lock</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keywordtype">int</span> logger_esp_log(<span class="keyword">const</span> <span class="keywordtype">char</span>* format, ...);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keywordtype">int</span> <a class="code hl_function" href="logger_8h.html#a0bac4c094342cccf8118b72078e8ce02">logger_esp_log</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* format, ...);</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">char</span> *timenow() {</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keyword">static</span> <span class="keywordtype">char</span> buffer[64];</div>
@@ -318,6 +318,7 @@ $(document).ready(function(){initNavTree('logger_8h_source.html',''); initResiza
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span><span class="preprocessor">#define LOG_VERBOSE(...)</span></div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aansi__colors_8h_html"><div class="ttname"><a href="ansi__colors_8h.html">ansi_colors.h</a></div><div class="ttdoc">ANSI color codes for logger library.</div></div>
+<div class="ttc" id="alogger_8h_html_a0bac4c094342cccf8118b72078e8ce02"><div class="ttname"><a href="logger_8h.html#a0bac4c094342cccf8118b72078e8ce02">logger_esp_log</a></div><div class="ttdeci">int logger_esp_log(const char *format,...)</div><div class="ttdef"><b>Definition</b> logger.c:167</div></div>
 <div class="ttc" id="alogger_8h_html_a0e28a4a110b406efa49fc63f9933fdc9"><div class="ttname"><a href="logger_8h.html#a0e28a4a110b406efa49fc63f9933fdc9">logger_flush_logs</a></div><div class="ttdeci">void logger_flush_logs(void)</div><div class="ttdoc">Flush messages in all log files.</div><div class="ttdef"><b>Definition</b> logger.c:219</div></div>
 <div class="ttc" id="alogger_8h_html_a1273f9f835f4a7ad5304c7e633e20b68"><div class="ttname"><a href="logger_8h.html#a1273f9f835f4a7ad5304c7e633e20b68">LOG_TIME_FORMAT</a></div><div class="ttdeci">#define LOG_TIME_FORMAT</div><div class="ttdoc">Time format used by all logs.</div><div class="ttdef"><b>Definition</b> logger.h:74</div></div>
 <div class="ttc" id="alogger_8h_html_a382738e933b8f30c6f9506f99ca32518"><div class="ttname"><a href="logger_8h.html#a382738e933b8f30c6f9506f99ca32518">logger_write</a></div><div class="ttdeci">int logger_write(uint8_t level, const char *format,...)</div><div class="ttdoc">Write to logger log files and stderr.</div><div class="ttdef"><b>Definition</b> logger.c:192</div></div>

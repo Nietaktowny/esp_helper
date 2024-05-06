@@ -1,0 +1,23 @@
+<map id="app_main" name="app_main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,203,83,228"/>
+<area shape="rect" id="Node000002" href="$test__wifi__controller_2main_2main_8c.html#a74d87c01adafb70a9bf42a4d7868633f" title=" " alt="" coords="143,5,259,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="46,201,55,169,71,126,95,80,129,40,132,37,136,42,133,44,100,83,76,128,60,171,51,203"/>
+<area shape="rect" id="Node000003" href="$test__wifi__controller_2main_2main_8c.html#a0e283c6fc89aa295bd58c2c2637cdaa9" title=" " alt="" coords="134,55,268,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="49,201,78,147,101,116,129,89,135,86,138,90,132,94,105,120,82,150,53,204"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="161,104,241,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="56,200,87,170,129,139,145,131,147,136,132,143,91,174,59,204"/>
+<area shape="rect" id="Node000006" href="$logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927" title="Set logger log level." alt="" coords="131,153,271,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="82,201,143,182,144,187,84,206"/>
+<area shape="rect" id="Node000007" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="149,203,253,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="83,213,133,213,133,218,83,218"/>
+<area shape="rect" id="Node000008" href="$wifi__controller_8h.html#a12695f7f8390b032f86d7317f8480dde" title="Register function to be called when STA connects to AP." alt="" coords="136,253,266,293"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="82,226,130,244,128,249,81,231"/>
+<area shape="rect" id="Node000009" href="$wifi__controller_8h.html#ab6a4458cd9749bfedf7f065962157f87" title="Register function to be called when STA loses connection with AP and all attempts to connect again fa..." alt="" coords="131,318,271,359"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="57,227,89,263,132,303,139,308,136,312,129,307,85,267,53,230"/>
+<area shape="rect" id="Node000010" href="$wifi__controller_8h.html#a30a6f81293cb4d466933926997d2d884" title="Starts WiFi in softAP mode." alt="" coords="147,383,255,408"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="52,228,78,294,102,334,132,368,138,373,135,377,129,372,97,337,73,297,47,230"/>
+<area shape="rect" id="Node000011" href="$wifi__controller_8h.html#a222008978f46f659f29a0f44e4985780" title="Starts WiFi in STA mode." alt="" coords="145,432,257,458"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="50,228,57,265,71,317,96,371,113,397,133,419,135,421,132,425,129,423,108,400,91,374,66,318,52,267,44,229"/>
+<area shape="rect" id="Node000005" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="319,104,468,130"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="242,114,303,114,303,120,242,120"/>
+</map>

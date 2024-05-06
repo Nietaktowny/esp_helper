@@ -1,0 +1,7 @@
+<map id="test_if_nvs_init_partition_returns_zero" name="test_if_nvs_init_partition_returns_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,35,168,75"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a92ba0066a43bc3f296e16c4976b17fcc" title="Deinit default NVS partition." alt="" coords="216,5,356,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,40,200,36,201,41,168,46"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#ae1a4d1487545e1a6c7776a950ce744cf" title="Init NVS partition with specified label." alt="" coords="219,70,353,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,64,204,69,204,74,167,69"/>
+</map>

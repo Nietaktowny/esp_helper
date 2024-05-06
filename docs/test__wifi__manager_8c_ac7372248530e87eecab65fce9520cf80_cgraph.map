@@ -1,0 +1,29 @@
+<map id="test_if_wifi_manager_erase_ap_erases_ap" name="test_if_wifi_manager_erase_ap_erases_ap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,97,154,137"/>
+<area shape="rect" id="Node000002" href="$wifi__manager_8c.html#ae40d3fa65c5e68e8fa280cc45a81e8b0" title="Erase all data stored in wifi manager NVS namespace." alt="" coords="216,153,374,179"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,131,222,147,220,152,153,136"/>
+<area shape="rect" id="Node000008" href="$wifi__manager_8c.html#a92b6a91a3d31bfa35ff0409d0e7befdc" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="202,104,388,130"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="154,114,186,114,186,120,154,120"/>
+<area shape="rect" id="Node000010" href="$wifi__manager_8c.html#a7bb30c48143ab3688c2a2573683eac62" title="Store access point credentials in Wifi Manager NVS namespace." alt="" coords="218,55,372,80"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="153,97,220,82,222,87,155,102"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="469,55,573,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="364,150,387,140,401,128,410,115,419,102,435,89,453,80,455,85,437,94,423,106,414,118,405,132,389,144,366,155"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="474,104,568,130"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="357,150,458,128,459,133,358,155"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#a5966e157cae5d3998dfa1c2157dcead2" title="Erase all key&#45;value pairs in specified NVS namespace." alt="" coords="436,317,605,343"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="308,178,359,238,396,272,437,303,449,309,446,313,435,307,392,277,355,241,304,181"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="458,253,584,293"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="320,177,437,238,449,244,447,249,435,243,318,182"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="475,153,566,179"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="374,164,459,164,459,169,374,169"/>
+<area shape="poly" id="edge8_Node000008_Node000003" title=" " alt="" coords="357,101,452,80,454,85,358,106"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="388,114,458,114,458,120,388,120"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="358,128,460,150,459,156,357,133"/>
+<area shape="rect" id="Node000009" href="$nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="457,203,584,228"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="366,128,389,139,405,151,414,165,423,177,438,189,446,194,443,198,434,194,419,181,410,168,401,155,387,143,364,133"/>
+<area shape="poly" id="edge13_Node000010_Node000003" title=" " alt="" coords="372,65,453,65,453,70,372,70"/>
+<area shape="poly" id="edge14_Node000010_Node000004" title=" " alt="" coords="358,78,459,101,458,106,357,84"/>
+<area shape="poly" id="edge15_Node000010_Node000007" title=" " alt="" coords="366,79,389,89,405,102,414,115,423,128,437,140,462,151,459,156,435,144,419,131,410,118,401,106,387,94,364,83"/>
+<area shape="rect" id="Node000011" href="$nvs__controller_8h.html#a26d3a2f94cdeb9d143dd8ee23ac8a939" title="Write key&#45;value pair string into nvs namespace." alt="" coords="456,5,586,31"/>
+<area shape="poly" id="edge16_Node000010_Node000011" title=" " alt="" coords="357,51,443,32,444,38,358,57"/>
+</map>

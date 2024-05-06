@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('err__controller_8h_source.html',''); i
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;CException.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="CException_8h.html">CException.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="err__c__errors_8h.html">err_c_errors.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">   21</a></span><span class="keyword">typedef</span> int32_t <a class="code hl_typedef" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a>;</div>
@@ -183,6 +183,7 @@ $(document).ready(function(){initNavTree('err__controller_8h_source.html',''); i
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="err__controller_8h.html#ad8f4caa10a5c3bbc6b73762ed9f87840">error_to_name</a>(<a class="code hl_typedef" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> err);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><a class="code hl_typedef" href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a> <a class="code hl_function" href="err__controller_8h.html#a513df0b15ad91ccf741456a5a2bea37a">err_check_bitmask</a>(uint32_t mask, uint32_t value);</div>
+<div class="ttc" id="aCException_8h_html"><div class="ttname"><a href="CException_8h.html">CException.h</a></div></div>
 <div class="ttc" id="aerr__c__errors_8h_html"><div class="ttname"><a href="err__c__errors_8h.html">err_c_errors.h</a></div><div class="ttdoc">Error helper library errors list.</div></div>
 <div class="ttc" id="aerr__controller_8h_html_a513df0b15ad91ccf741456a5a2bea37a"><div class="ttname"><a href="err__controller_8h.html#a513df0b15ad91ccf741456a5a2bea37a">err_check_bitmask</a></div><div class="ttdeci">err_c_t err_check_bitmask(uint32_t mask, uint32_t value)</div><div class="ttdoc">Check if bitmask matches value.</div><div class="ttdef"><b>Definition</b> err_controller.c:24</div></div>
 <div class="ttc" id="aerr__controller_8h_html_ac80c0e1856884650a683ec9ce2925f65"><div class="ttname"><a href="err__controller_8h.html#ac80c0e1856884650a683ec9ce2925f65">err_c_t</a></div><div class="ttdeci">int32_t err_c_t</div><div class="ttdoc">Standard error type typedef.</div><div class="ttdef"><b>Definition</b> err_controller.h:21</div></div>

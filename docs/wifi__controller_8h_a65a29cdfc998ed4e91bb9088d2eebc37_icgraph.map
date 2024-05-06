@@ -1,0 +1,20 @@
+<map id="wifi_c_store_scan_result_as_json" name="wifi_c_store_scan_result_as_json">
+<area shape="rect" id="Node000001" title="Store results of scanning in buffer as json string;." alt="" coords="792,133,956,174"/>
+<area shape="rect" id="Node000002" href="$wifi__manager_8c.html#a2ea15285d2156d5392749310ceb92843" title="Scan and get for Access points that wifi manager can connect to." alt="" coords="537,140,744,166"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="776,156,744,156,744,151,776,151"/>
+<area shape="rect" id="Node000003" href="$test__wifi__manager_8c.html#afb02c32fd7e10257c825b300790744c4" title=" " alt="" coords="297,5,474,61"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="602,135,488,76,462,64,464,59,490,71,604,130"/>
+<area shape="rect" id="Node000006" href="$test__wifi__manager_8c.html#ae99f55718b798437ef096bd2ee7fa9ce" title=" " alt="" coords="297,85,474,141"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="539,140,474,130,475,124,540,135"/>
+<area shape="rect" id="Node000007" href="$test__wifi__manager_8c.html#a5ab968556fea9ffa996dbd92c5b16cbc" title=" " alt="" coords="297,165,474,221"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="540,172,475,182,474,177,539,166"/>
+<area shape="rect" id="Node000008" href="$test__wifi__manager_8c.html#ae26483dc691ffc91ac07b87fd493d9ee" title=" " alt="" coords="281,245,489,286"/>
+<area shape="poly" id="edge9_Node000002_Node000008" title=" " alt="" coords="606,176,552,206,490,236,461,247,459,242,488,231,550,201,603,172"/>
+<area shape="rect" id="Node000004" href="$test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,140,233,166"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="291,71,282,75,235,109,198,142,195,138,232,105,280,71,289,66"/>
+<area shape="rect" id="Node000005" href="$test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,140,83,166"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="115,156,83,156,83,151,115,151"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="282,136,234,146,233,141,281,131"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="281,175,233,166,234,161,282,170"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="290,241,280,235,231,202,194,168,198,164,234,197,282,231,293,236"/>
+</map>

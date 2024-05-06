@@ -1,0 +1,16 @@
+<map id="projects/lib_tests/test_logger/main/main.c" name="projects/lib_tests/test_logger/main/main.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="63,5,226,46"/>
+<area shape="rect" id="Node000002" href="$ansi__colors_8h.html" title="ANSI color codes for logger library." alt="" coords="5,168,103,193"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,48,71,155,67,153,131,45"/>
+<area shape="rect" id="Node000003" href="$logger_8h.html" title="Logger library header file." alt="" coords="164,94,230,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,45,182,79,178,82,155,48"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="174,123,93,163,91,158,171,118"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="127,168,186,193"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="192,121,173,155,168,153,188,119"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="210,168,266,193"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="206,119,226,153,221,156,201,121"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="291,168,367,193"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="220,118,294,158,292,162,218,123"/>
+<area shape="rect" id="Node000007" href="$logger__errors_8h.html" title="Logger library errors list." alt="" coords="392,168,498,193"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="231,115,389,160,387,165,229,120"/>
+</map>

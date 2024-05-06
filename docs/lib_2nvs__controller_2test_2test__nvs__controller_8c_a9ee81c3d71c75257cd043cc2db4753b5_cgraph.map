@@ -1,0 +1,9 @@
+<map id="test_if_nvs_c_erase_default_partition_returns_zero" name="test_if_nvs_c_erase_default_partition_returns_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,71,204,111"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a92ba0066a43bc3f296e16c4976b17fcc" title="Deinit default NVS partition." alt="" coords="252,5,393,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,68,237,48,238,54,175,73"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a9eeeb82f5b26f763b25ea820b1b9f332" title="Erse all data in default NVS partition." alt="" coords="252,71,393,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="204,88,236,88,236,94,204,94"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="259,136,386,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,109,245,130,243,136,174,114"/>
+</map>

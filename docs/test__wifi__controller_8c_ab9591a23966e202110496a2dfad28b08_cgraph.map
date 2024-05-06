@@ -1,0 +1,12 @@
+<map id="test_if_ap_disconnect_handler_is_set" name="test_if_ap_disconnect_handler_is_set">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,78,154,119"/>
+<area shape="rect" id="Node000002" href="$test__wifi__controller_8c.html#a6836f1a8df8a60455b709f8e24aeea20" title=" " alt="" coords="234,5,310,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,75,224,35,226,40,131,80"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="390,31,482,56"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="154,84,374,50,375,55,155,89"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#a9897aff5eb6a80a264379be4c29e4101" title="Register function to be called each time STA disconnects from our AP." alt="" coords="202,106,342,147"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="155,106,187,111,186,116,154,112"/>
+<area shape="rect" id="Node000005" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="211,171,333,196"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="121,117,203,156,219,162,216,167,201,161,119,121"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="311,21,375,31,374,37,310,27"/>
+</map>

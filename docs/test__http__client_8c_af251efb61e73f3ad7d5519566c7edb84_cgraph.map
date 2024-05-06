@@ -1,0 +1,16 @@
+<map id="test_if_http_get_reuse_returns_err_on_null_buffer" name="test_if_http_get_reuse_returns_err_on_null_buffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,183,103"/>
+<area shape="rect" id="Node000002" href="$http__client_8c.html#a4b2ab87e18213803c735bcf8c6a9cdae" title="This function frees resources allocated with http_client_post_reuse() and closes connection." alt="" coords="244,5,363,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,60,228,43,229,49,171,65"/>
+<area shape="rect" id="Node000005" href="$http__client_8c.html#a7a524624e480ef689e54e6ca644b903c" title="Make a HTTP GET request reusing the already made connection." alt="" coords="231,70,376,96"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="183,80,215,80,215,86,183,86"/>
+<area shape="rect" id="Node000007" href="$http__client_8c.html#ae0beeb232473e1e9bf8198957edd455b" title="Init http_client_t handle for reusing with multiple connections." alt="" coords="231,120,376,145"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="184,101,232,113,231,118,182,107"/>
+<area shape="rect" id="Node000003" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="424,17,575,43"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,24,408,25,408,30,363,30"/>
+<area shape="rect" id="Node000004" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="623,17,791,43"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="575,27,608,27,608,32,575,32"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="353,67,434,45,436,50,354,72"/>
+<area shape="rect" id="Node000006" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="448,70,552,96"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="376,80,432,80,432,86,376,86"/>
+</map>

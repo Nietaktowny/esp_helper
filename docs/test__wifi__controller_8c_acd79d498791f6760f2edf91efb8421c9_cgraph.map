@@ -1,0 +1,11 @@
+<map id="test_if_wifi_status_is_initalized_when_init_as_sta" name="test_if_wifi_status_is_initalized_when_init_as_sta">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,40,139,95"/>
+<area shape="rect" id="Node000002" href="$test__wifi__controller_8c.html#a6836f1a8df8a60455b709f8e24aeea20" title=" " alt="" coords="210,5,286,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,46,194,30,195,35,140,51"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="187,55,309,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="139,65,171,65,171,70,139,70"/>
+<area shape="rect" id="Node000005" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="196,104,300,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="140,84,186,97,184,102,139,89"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="357,5,449,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="287,16,342,16,342,21,287,21"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="cli_accept_task" name="cli_accept_task">
+<area shape="rect" id="Node000001" title="Task responsible for accepting new hosts in TCP log server." alt="" coords="5,59,118,84"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="578,93,683,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,56,118,33,165,14,225,5,286,4,346,10,405,21,511,52,589,84,587,89,509,57,404,26,346,15,285,9,225,10,166,19,120,38,83,60"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#ac318f2fb9f51699954c24804dd8b095d" title="Add new log file to be used as log output." alt="" coords="168,29,299,55"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,59,152,53,153,59,119,64"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#a4cae04593f6a3be65ac345115c8a959d" title="Clear all files used as log output." alt="" coords="166,79,301,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="119,78,151,83,150,89,118,83"/>
+<area shape="rect" id="Node000005" href="$tcp__controller_8c.html#acb904407f0f4032b3936206e8db2e0aa" title="Accept connection on listen socket, and return client socket." alt="" coords="172,144,295,170"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="85,83,167,129,181,135,178,140,164,134,82,87"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="271,141,300,129,323,115,348,104,404,94,461,90,563,95,563,100,461,96,405,99,350,109,326,120,302,134,273,146"/>
+<area shape="rect" id="Node000006" href="$tcp__controller_8c.html#ae0b781bbcb6353cf585fcb0003c42465" title="Read port to which socket is bound." alt="" coords="349,119,530,144"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="295,147,333,142,334,147,296,152"/>
+<area shape="rect" id="Node000007" href="$tcp__controller_8c.html#a9c6ddc5f8668c1f0d4103c5e77fdb6a0" title=" " alt="" coords="357,168,522,194"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="296,161,342,167,341,172,295,167"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="530,117,563,112,563,118,531,122"/>
+<area shape="poly" id="edge9_Node000007_Node000002" title=" " alt="" coords="497,165,529,154,592,124,595,129,531,159,499,170"/>
+</map>

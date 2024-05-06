@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -99,52 +99,66 @@ $(document).ready(function(){initNavTree('spiffs__controller_8h_source.html','')
   <div class="headertitle"><div class="title">spiffs_controller.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<a href="spiffs__controller_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;inttypes.h&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;spiffs_c_errors.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="spiffs__c__errors_8h.html">spiffs_c_errors.h</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structspiffs__c__handle__obj.html">    9</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_obj</a> {</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">char</span>* base_name;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordtype">char</span>* partition_label;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    uint8_t max_files;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">bool</span> format_on_err;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="structspiffs__c__handle__obj.html#a8ed9f1a7651a066666ba8f3d40c9fd94">   10</a></span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="structspiffs__c__handle__obj.html#a8ed9f1a7651a066666ba8f3d40c9fd94">base_name</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structspiffs__c__handle__obj.html#a536d49bd4ca33576bdb376b54d1a8746">   11</a></span>    <span class="keywordtype">char</span>* <a class="code hl_variable" href="structspiffs__c__handle__obj.html#a536d49bd4ca33576bdb376b54d1a8746">partition_label</a>;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structspiffs__c__handle__obj.html#abda6e3f5e185cead21036fc7b6d76b88">   12</a></span>    uint8_t <a class="code hl_variable" href="structspiffs__c__handle__obj.html#abda6e3f5e185cead21036fc7b6d76b88">max_files</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structspiffs__c__handle__obj.html#ade061e36be31979c32d3f13e7a222f07">   13</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="structspiffs__c__handle__obj.html#ade061e36be31979c32d3f13e7a222f07">format_on_err</a>;</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>};</div>
 </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_obj</a> <a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_t</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#a70f172cccfa2f6a8b218e5cfd5848d2f">   15</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_obj</a> <a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_t</a>;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define SPIFFS_C_DEFAULT_CONFIG()       \</span></div>
+<div class="foldopen" id="foldopen00017" data-start="" data-end="">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#a78a10a49e531c21d69e3ce19ae0e42d0">   17</a></span><span class="preprocessor">#define SPIFFS_C_DEFAULT_CONFIG()       \</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">        {                               \</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">            .base_name = &quot;/spiffs&quot;,     \</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">            .partition_label = NULL,    \</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">            .max_files = 5,             \</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">            .format_on_err = true,      \</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">        };</span></div>
+</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">int</span> spiffs_c_init(<span class="keyword">const</span> <a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_t</a>* handle);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#a0b8f04a2c366b3ef402c85726cee35c0">   25</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="spiffs__controller_8h.html#a0b8f04a2c366b3ef402c85726cee35c0">spiffs_c_init</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_t</a>* handle);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">int</span> spiffs_c_check(<span class="keyword">const</span> <span class="keywordtype">char</span>* partition_label);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#a41805eecafac82b53f6eb0c07fcbdd64">   27</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="spiffs__controller_8h.html#a41805eecafac82b53f6eb0c07fcbdd64">spiffs_c_check</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="structspiffs__c__handle__obj.html#a536d49bd4ca33576bdb376b54d1a8746">partition_label</a>);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">int</span> spiffs_c_format(<span class="keyword">const</span> <span class="keywordtype">char</span>* partition);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#a33eb98052887171b457adafc65002605">   29</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="spiffs__controller_8h.html#a33eb98052887171b457adafc65002605">spiffs_c_format</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* partition);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">int</span> spiffs_c_get_info(<span class="keyword">const</span> <span class="keywordtype">char</span>* partition_label, <span class="keywordtype">size_t</span>* out_total, <span class="keywordtype">size_t</span>* out_used);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#a4bd18544af557b9b4f38b5ef0f954783">   31</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="spiffs__controller_8h.html#a4bd18544af557b9b4f38b5ef0f954783">spiffs_c_get_info</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="structspiffs__c__handle__obj.html#a536d49bd4ca33576bdb376b54d1a8746">partition_label</a>, <span class="keywordtype">size_t</span>* out_total, <span class="keywordtype">size_t</span>* out_used);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">int</span> spiffs_c_open_file(<a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_t</a>* handle, <span class="keywordtype">char</span>* filename, <span class="keyword">const</span> <span class="keywordtype">char</span>* mode, FILE** out_file);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#ac7ed0a4cedeafb34802bd729eb3c4904">   33</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="spiffs__controller_8h.html#ac7ed0a4cedeafb34802bd729eb3c4904">spiffs_c_open_file</a>(<a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_t</a>* handle, <span class="keywordtype">char</span>* filename, <span class="keyword">const</span> <span class="keywordtype">char</span>* mode, FILE** out_file);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> spiffs_c_close_file(FILE* file, <span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#a6625fffadf84b4f3a939c89f275d4acf">   35</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="spiffs__controller_8h.html#a6625fffadf84b4f3a939c89f275d4acf">spiffs_c_close_file</a>(FILE* file, <span class="keyword">const</span> <span class="keywordtype">char</span>* filename);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">int</span> spiffs_c_read_file(<a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_t</a>* handle, <span class="keywordtype">char</span>* filename, <span class="keywordtype">char</span>* out_data, <span class="keywordtype">size_t</span> buflen);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="spiffs__controller_8h.html#ab77c21e04b8945a78241115b765255e3">   37</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="spiffs__controller_8h.html#ab77c21e04b8945a78241115b765255e3">spiffs_c_read_file</a>(<a class="code hl_struct" href="structspiffs__c__handle__obj.html">spiffs_c_handle_t</a>* handle, <span class="keywordtype">char</span>* filename, <span class="keywordtype">char</span>* out_data, <span class="keywordtype">size_t</span> buflen);</div>
+<div class="ttc" id="aspiffs__c__errors_8h_html"><div class="ttname"><a href="spiffs__c__errors_8h.html">spiffs_c_errors.h</a></div></div>
+<div class="ttc" id="aspiffs__controller_8h_html_a0b8f04a2c366b3ef402c85726cee35c0"><div class="ttname"><a href="spiffs__controller_8h.html#a0b8f04a2c366b3ef402c85726cee35c0">spiffs_c_init</a></div><div class="ttdeci">int spiffs_c_init(const spiffs_c_handle_t *handle)</div></div>
+<div class="ttc" id="aspiffs__controller_8h_html_a33eb98052887171b457adafc65002605"><div class="ttname"><a href="spiffs__controller_8h.html#a33eb98052887171b457adafc65002605">spiffs_c_format</a></div><div class="ttdeci">int spiffs_c_format(const char *partition)</div></div>
+<div class="ttc" id="aspiffs__controller_8h_html_a41805eecafac82b53f6eb0c07fcbdd64"><div class="ttname"><a href="spiffs__controller_8h.html#a41805eecafac82b53f6eb0c07fcbdd64">spiffs_c_check</a></div><div class="ttdeci">int spiffs_c_check(const char *partition_label)</div></div>
+<div class="ttc" id="aspiffs__controller_8h_html_a4bd18544af557b9b4f38b5ef0f954783"><div class="ttname"><a href="spiffs__controller_8h.html#a4bd18544af557b9b4f38b5ef0f954783">spiffs_c_get_info</a></div><div class="ttdeci">int spiffs_c_get_info(const char *partition_label, size_t *out_total, size_t *out_used)</div></div>
+<div class="ttc" id="aspiffs__controller_8h_html_a6625fffadf84b4f3a939c89f275d4acf"><div class="ttname"><a href="spiffs__controller_8h.html#a6625fffadf84b4f3a939c89f275d4acf">spiffs_c_close_file</a></div><div class="ttdeci">void spiffs_c_close_file(FILE *file, const char *filename)</div></div>
+<div class="ttc" id="aspiffs__controller_8h_html_ab77c21e04b8945a78241115b765255e3"><div class="ttname"><a href="spiffs__controller_8h.html#ab77c21e04b8945a78241115b765255e3">spiffs_c_read_file</a></div><div class="ttdeci">int spiffs_c_read_file(spiffs_c_handle_t *handle, char *filename, char *out_data, size_t buflen)</div></div>
+<div class="ttc" id="aspiffs__controller_8h_html_ac7ed0a4cedeafb34802bd729eb3c4904"><div class="ttname"><a href="spiffs__controller_8h.html#ac7ed0a4cedeafb34802bd729eb3c4904">spiffs_c_open_file</a></div><div class="ttdeci">int spiffs_c_open_file(spiffs_c_handle_t *handle, char *filename, const char *mode, FILE **out_file)</div></div>
 <div class="ttc" id="astructspiffs__c__handle__obj_html"><div class="ttname"><a href="structspiffs__c__handle__obj.html">spiffs_c_handle_obj</a></div><div class="ttdef"><b>Definition</b> spiffs_controller.h:9</div></div>
+<div class="ttc" id="astructspiffs__c__handle__obj_html_a536d49bd4ca33576bdb376b54d1a8746"><div class="ttname"><a href="structspiffs__c__handle__obj.html#a536d49bd4ca33576bdb376b54d1a8746">spiffs_c_handle_obj::partition_label</a></div><div class="ttdeci">char * partition_label</div><div class="ttdef"><b>Definition</b> spiffs_controller.h:11</div></div>
+<div class="ttc" id="astructspiffs__c__handle__obj_html_a8ed9f1a7651a066666ba8f3d40c9fd94"><div class="ttname"><a href="structspiffs__c__handle__obj.html#a8ed9f1a7651a066666ba8f3d40c9fd94">spiffs_c_handle_obj::base_name</a></div><div class="ttdeci">char * base_name</div><div class="ttdef"><b>Definition</b> spiffs_controller.h:10</div></div>
+<div class="ttc" id="astructspiffs__c__handle__obj_html_abda6e3f5e185cead21036fc7b6d76b88"><div class="ttname"><a href="structspiffs__c__handle__obj.html#abda6e3f5e185cead21036fc7b6d76b88">spiffs_c_handle_obj::max_files</a></div><div class="ttdeci">uint8_t max_files</div><div class="ttdef"><b>Definition</b> spiffs_controller.h:12</div></div>
+<div class="ttc" id="astructspiffs__c__handle__obj_html_ade061e36be31979c32d3f13e7a222f07"><div class="ttname"><a href="structspiffs__c__handle__obj.html#ade061e36be31979c32d3f13e7a222f07">spiffs_c_handle_obj::format_on_err</a></div><div class="ttdeci">bool format_on_err</div><div class="ttdef"><b>Definition</b> spiffs_controller.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_903a0654406e4d687b4733bd516e3df9.html">spiffs_controller</a></li><li class="navelem"><a class="el" href="dir_3f4e5de1578ede063b15640daa6b99c8.html">include</a></li><li class="navelem"><b>spiffs_controller.h</b></li>
+    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_903a0654406e4d687b4733bd516e3df9.html">spiffs_controller</a></li><li class="navelem"><a class="el" href="dir_3f4e5de1578ede063b15640daa6b99c8.html">include</a></li><li class="navelem"><a class="el" href="spiffs__controller_8h.html">spiffs_controller.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

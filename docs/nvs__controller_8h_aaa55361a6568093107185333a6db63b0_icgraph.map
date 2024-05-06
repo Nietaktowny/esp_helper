@@ -1,0 +1,19 @@
+<map id="nvs_c_read_int32" name="nvs_c_read_int32">
+<area shape="rect" id="Node000001" title="Read int32_t value from NVS namespace." alt="" coords="345,164,468,190"/>
+<area shape="rect" id="Node000002" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a48f0aff153e72e7353a1992a2c4aa8c2" title=" " alt="" coords="157,5,296,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="381,155,343,116,295,75,279,64,282,59,299,71,346,112,385,151"/>
+<area shape="rect" id="Node000004" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a67a0129826605016c10d4aa4f58905d5" title=" " alt="" coords="159,85,294,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="357,161,278,129,280,124,359,156"/>
+<area shape="rect" id="Node000005" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a1ed689708860e3f0de06ac16c4fc3b26" title=" " alt="" coords="156,149,297,205"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="330,180,297,180,297,175,330,175"/>
+<area shape="rect" id="Node000006" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a45f790f1f5374c33f7ea6973db5e5d02" title=" " alt="" coords="156,229,297,285"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="363,199,292,231,290,226,361,194"/>
+<area shape="rect" id="Node000007" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#abc5b4bb7644261f13f69051d7d2b0566" title=" " alt="" coords="159,309,294,350"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="389,204,350,251,299,299,281,310,278,306,295,295,347,248,385,201"/>
+<area shape="rect" id="Node000003" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="5,164,108,190"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="161,72,157,75,107,123,70,166,66,162,103,119,154,71,158,68"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="164,134,90,166,88,161,162,130"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="140,180,108,180,108,175,140,175"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="151,225,85,193,87,188,153,220"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="159,303,154,299,125,272,99,243,64,192,68,189,103,239,129,269,157,295,162,298"/>
+</map>

@@ -1,0 +1,28 @@
+<map id="nvs_c_init_partition" name="nvs_c_init_partition">
+<area shape="rect" id="Node000001" title="Init NVS partition with specified label." alt="" coords="401,242,534,268"/>
+<area shape="rect" id="Node000002" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a2cc876168e4086285271a2871df39e73" title=" " alt="" coords="159,5,350,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="455,229,440,191,418,146,389,100,351,61,332,49,335,44,355,57,393,97,423,143,445,189,460,227"/>
+<area shape="rect" id="Node000004" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ab494dd910796ddae2ca54aa797e29edb" title=" " alt="" coords="179,71,330,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="448,231,408,178,381,150,352,127,329,114,331,109,354,122,385,146,412,175,452,227"/>
+<area shape="rect" id="Node000005" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#aa22edead1eb33e35aa097a1c1398b478" title=" " alt="" coords="156,136,353,177"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="432,236,352,192,321,180,323,175,354,187,435,231"/>
+<area shape="rect" id="Node000006" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#aabe648a63e2a6d545dc172a749facee3" title=" " alt="" coords="178,201,331,242"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="386,245,331,236,331,231,386,240"/>
+<area shape="rect" id="Node000007" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a8fb3ffdb2e21d5c40cf5ce637c8c6395" title=" " alt="" coords="168,267,341,307"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="386,270,341,277,341,271,385,265"/>
+<area shape="rect" id="Node000008" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ae07049b4243f75662987c6dcd11a9f5c" title=" " alt="" coords="164,331,345,387"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="433,278,354,321,329,333,327,328,352,317,431,274"/>
+<area shape="rect" id="Node000009" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a8b6bceaa7bf9c8790bfe2f3365e78a0e" title=" " alt="" coords="159,411,350,467"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="454,283,413,341,386,373,355,401,336,413,333,409,351,397,382,369,409,338,449,280"/>
+<area shape="rect" id="Node000010" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ab328ffc028ee617b8f4a0219a84060d9" title=" " alt="" coords="173,491,336,531"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="462,284,449,327,427,380,396,434,377,459,355,481,338,493,335,488,351,477,373,455,392,431,423,377,444,325,457,282"/>
+<area shape="rect" id="Node000003" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="5,242,108,268"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="163,57,157,61,137,82,119,106,92,158,73,207,63,243,58,241,68,205,87,156,115,103,133,79,154,57,159,53"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="167,120,157,126,126,155,100,187,67,243,62,240,96,184,122,151,154,122,164,116"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="172,185,157,192,113,218,77,244,73,239,110,214,154,187,170,180"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="163,240,108,249,107,244,162,234"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="153,273,107,266,108,261,153,268"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="165,327,154,321,111,295,74,271,77,266,114,291,157,317,167,322"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="159,405,154,401,122,368,95,332,61,270,66,267,99,329,126,365,157,397,162,400"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="158,485,154,481,131,456,111,427,83,367,66,310,57,269,62,268,71,308,88,365,116,425,135,453,158,477,162,481"/>
+</map>

@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -122,9 +122,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="esp__helper__utils_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2esp__helper__utils_2include_2esp__helper__utils_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2esp__helper__utils_2include_2esp__helper__utils_8hdep" id="aprojects_2lib__tests_2lib_2esp__helper__utils_2include_2esp__helper__utils_8hdep">
-<area shape="rect" title="ESP Helper library header file." alt="" coords="5,5,180,61"/>
-<area shape="rect" href="esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="17,109,168,165"/>
-<area shape="poly" title=" " alt="" coords="95,77,95,108,90,108,90,77"/>
+<area shape="rect" title="ESP Helper library header file." alt="" coords="345,5,519,61"/>
+<area shape="rect" href="esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="5,117,157,172"/>
+<area shape="poly" title=" " alt="" coords="331,63,168,112,149,118,147,113,167,106,329,58"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html" title=" " alt="" coords="180,109,329,180"/>
+<area shape="poly" title=" " alt="" coords="376,72,312,111,309,106,373,67"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="353,117,510,172"/>
+<area shape="poly" title=" " alt="" coords="434,76,434,116,429,116,429,76"/>
+<area shape="rect" href="test__cli__manager_2main_2main_8c.html" title=" " alt="" coords="535,117,691,172"/>
+<area shape="poly" title=" " alt="" coords="491,67,569,114,566,118,489,72"/>
+<area shape="rect" href="test__esp__helper__utils_2main_2main_8c.html" title=" " alt="" coords="715,117,863,172"/>
+<area shape="poly" title=" " alt="" coords="535,57,704,106,724,113,722,118,703,112,533,62"/>
 </map>
 </div>
 </div>
@@ -132,8 +140,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a9e512d8db4ab94b2c5f8700ad8ed9101" id="r_a9e512d8db4ab94b2c5f8700ad8ed9101"><td class="memItemLeft" align="right" valign="top"><a id="a9e512d8db4ab94b2c5f8700ad8ed9101" name="a9e512d8db4ab94b2c5f8700ad8ed9101"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ESP_HELPER_CHIP_ID_SIZE</b>&#160;&#160;&#160;6</td></tr>
+<tr class="memitem:a9e512d8db4ab94b2c5f8700ad8ed9101" id="r_a9e512d8db4ab94b2c5f8700ad8ed9101"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp__helper__utils_8h.html#a9e512d8db4ab94b2c5f8700ad8ed9101">ESP_HELPER_CHIP_ID_SIZE</a>&#160;&#160;&#160;6</td></tr>
 <tr class="separator:a9e512d8db4ab94b2c5f8700ad8ed9101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -157,7 +164,22 @@ Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-17</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a9e512d8db4ab94b2c5f8700ad8ed9101" name="a9e512d8db4ab94b2c5f8700ad8ed9101"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e512d8db4ab94b2c5f8700ad8ed9101">&#9670;&#160;</a></span>ESP_HELPER_CHIP_ID_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESP_HELPER_CHIP_ID_SIZE&#160;&#160;&#160;6</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="ad318edd1e39faf8a96eb8f948e62dfc6" name="ad318edd1e39faf8a96eb8f948e62dfc6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad318edd1e39faf8a96eb8f948e62dfc6">&#9670;&#160;</a></span>helper_get_chip_id()</h2>
 
@@ -186,6 +208,16 @@ Functions</h2></td></tr>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd><p class="startdd">Do some bit-magic with mac address so it's not obvious. </p>
 <p class="enddd">tests after bit-magic is implemented </p>
 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="esp__helper__utils_8h_ad318edd1e39faf8a96eb8f948e62dfc6_cgraph.png" border="0" usemap="#aesp__helper__utils_8h_ad318edd1e39faf8a96eb8f948e62dfc6_cgraph" alt=""/></div>
+<map name="aesp__helper__utils_8h_ad318edd1e39faf8a96eb8f948e62dfc6_cgraph" id="aesp__helper__utils_8h_ad318edd1e39faf8a96eb8f948e62dfc6_cgraph">
+<area shape="rect" title="Get ESP Helper device ID." alt="" coords="5,5,135,31"/>
+<area shape="rect" href="sys__utils_8c.html#ab39f400f14d827d848f3f907b2d5a7d8" title="Get base chip MAC address." alt="" coords="183,5,364,31"/>
+<area shape="poly" title=" " alt="" coords="135,16,167,16,167,21,135,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -216,6 +248,49 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="esp__helper__utils_8h_a3c2b5d9275a6adee717f70a06011a088_cgraph.png" border="0" usemap="#aesp__helper__utils_8h_a3c2b5d9275a6adee717f70a06011a088_cgraph" alt=""/></div>
+<map name="aesp__helper__utils_8h_a3c2b5d9275a6adee717f70a06011a088_cgraph" id="aesp__helper__utils_8h_a3c2b5d9275a6adee717f70a06011a088_cgraph">
+<area shape="rect" title="Perform simple OTA firmware update with standard ESP Helper server." alt="" coords="5,99,138,124"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="422,17,526,43"/>
+<area shape="poly" title=" " alt="" coords="82,97,123,56,152,35,185,20,242,6,301,3,357,6,406,13,406,18,357,11,301,8,243,12,187,25,155,40,127,60,86,100"/>
+<area shape="rect" href="esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a" title="Prepare URL for OTA with device ID as parameter." alt="" coords="197,34,324,74"/>
+<area shape="poly" title=" " alt="" coords="116,95,181,75,183,80,117,101"/>
+<area shape="rect" href="ota__controller_8c.html#a9bdb2553ca10cdaf2b8d49f84fce5ba5" title=" " alt="" coords="217,99,304,124"/>
+<area shape="poly" title=" " alt="" coords="138,109,202,109,202,114,138,114"/>
+<area shape="rect" href="sys__utils_8c.html#a83d18d05750f1c594860687ff0ec3882" title="Get base chip MAC address as C string." alt="" coords="186,148,335,189"/>
+<area shape="poly" title=" " alt="" coords="117,122,177,141,176,146,116,127"/>
+<area shape="rect" href="wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="199,213,322,239"/>
+<area shape="poly" title=" " alt="" coords="88,123,130,160,187,199,200,205,197,209,184,203,127,164,85,127"/>
+<area shape="poly" title=" " alt="" coords="301,96,334,84,426,47,428,52,336,89,303,101"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="398,99,549,124"/>
+<area shape="poly" title=" " alt="" coords="304,109,382,109,382,114,304,114"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="612,99,780,124"/>
+<area shape="poly" title=" " alt="" coords="550,109,597,109,597,114,550,114"/>
+<area shape="rect" href="sys__utils_8c.html#ab39f400f14d827d848f3f907b2d5a7d8" title="Get base chip MAC address." alt="" coords="383,156,564,182"/>
+<area shape="poly" title=" " alt="" coords="335,166,367,166,367,171,335,171"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="esp__helper__utils_8h_a3c2b5d9275a6adee717f70a06011a088_icgraph.png" border="0" usemap="#aesp__helper__utils_8h_a3c2b5d9275a6adee717f70a06011a088_icgraph" alt=""/></div>
+<map name="aesp__helper__utils_8h_a3c2b5d9275a6adee717f70a06011a088_icgraph" id="aesp__helper__utils_8h_a3c2b5d9275a6adee717f70a06011a088_icgraph">
+<area shape="rect" title="Perform simple OTA firmware update with standard ESP Helper server." alt="" coords="490,39,623,64"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="293,5,430,31"/>
+<area shape="poly" title=" " alt="" coords="475,40,430,33,431,27,476,35"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#a3b350866aaaa69fc34d46f288a47d8ae" title=" " alt="" coords="281,56,442,111"/>
+<area shape="poly" title=" " alt="" coords="476,67,443,73,443,68,475,62"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="143,5,221,31"/>
+<area shape="poly" title=" " alt="" coords="277,21,221,21,221,16,277,16"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,71,233,96"/>
+<area shape="poly" title=" " alt="" coords="266,86,234,86,234,81,266,81"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,71,83,96"/>
+<area shape="poly" title=" " alt="" coords="115,86,83,86,83,81,115,81"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -252,6 +327,39 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="esp__helper__utils_8h_a58b860ee0ffd4f239cd6a016587c7b13_cgraph.png" border="0" usemap="#aesp__helper__utils_8h_a58b860ee0ffd4f239cd6a016587c7b13_cgraph" alt=""/></div>
+<map name="aesp__helper__utils_8h_a58b860ee0ffd4f239cd6a016587c7b13_cgraph" id="aesp__helper__utils_8h_a58b860ee0ffd4f239cd6a016587c7b13_cgraph">
+<area shape="rect" title="Perform simple OTA firmware update with standard ESP Helper server and provided device ID." alt="" coords="5,57,138,97"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="385,11,489,37"/>
+<area shape="poly" title=" " alt="" coords="100,54,139,31,185,13,233,5,281,3,369,9,369,14,281,8,233,10,186,18,141,36,103,59"/>
+<area shape="rect" href="esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a" title="Prepare URL for OTA with device ID as parameter." alt="" coords="186,27,313,68"/>
+<area shape="poly" title=" " alt="" coords="138,64,170,58,171,63,138,69"/>
+<area shape="rect" href="ota__controller_8c.html#a9bdb2553ca10cdaf2b8d49f84fce5ba5" title=" " alt="" coords="206,92,293,118"/>
+<area shape="poly" title=" " alt="" coords="138,85,191,93,190,99,138,90"/>
+<area shape="rect" href="wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="188,142,311,167"/>
+<area shape="poly" title=" " alt="" coords="116,95,187,128,199,133,197,138,185,133,114,100"/>
+<area shape="poly" title=" " alt="" coords="283,89,312,77,392,41,394,46,314,82,285,94"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="361,92,512,118"/>
+<area shape="poly" title=" " alt="" coords="293,102,345,102,345,108,293,108"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="560,92,728,118"/>
+<area shape="poly" title=" " alt="" coords="512,102,545,102,545,108,512,108"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="esp__helper__utils_8h_a58b860ee0ffd4f239cd6a016587c7b13_icgraph.png" border="0" usemap="#aesp__helper__utils_8h_a58b860ee0ffd4f239cd6a016587c7b13_icgraph" alt=""/></div>
+<map name="aesp__helper__utils_8h_a58b860ee0ffd4f239cd6a016587c7b13_icgraph" id="aesp__helper__utils_8h_a58b860ee0ffd4f239cd6a016587c7b13_icgraph">
+<area shape="rect" title="Perform simple OTA firmware update with standard ESP Helper server and provided device ID." alt="" coords="315,5,447,46"/>
+<area shape="rect" href="test__esp__helper__utils_2main_2main_8c.html#aee86106cd4b46eeccb08bc2e17942225" title=" " alt="" coords="131,5,267,46"/>
+<area shape="poly" title=" " alt="" coords="299,28,268,28,268,23,299,23"/>
+<area shape="rect" href="test__esp__helper__utils_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,13,83,39"/>
+<area shape="poly" title=" " alt="" coords="115,28,83,28,83,23,115,23"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -310,6 +418,50 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="esp__helper__utils_8h_a1809da36848c291864649a3cc56f289a_icgraph.png" border="0" usemap="#aesp__helper__utils_8h_a1809da36848c291864649a3cc56f289a_icgraph" alt=""/></div>
+<map name="aesp__helper__utils_8h_a1809da36848c291864649a3cc56f289a_icgraph" id="aesp__helper__utils_8h_a1809da36848c291864649a3cc56f289a_icgraph">
+<area shape="rect" title="Prepare URL for OTA with device ID as parameter." alt="" coords="698,288,825,329"/>
+<area shape="rect" href="esp__helper__utils_8c.html#a3c2b5d9275a6adee717f70a06011a088" title="Perform simple OTA firmware update with standard ESP Helper server." alt="" coords="504,136,636,161"/>
+<area shape="poly" title=" " alt="" coords="725,279,648,212,587,164,591,160,651,208,728,275"/>
+<area shape="rect" href="esp__helper__utils_8c.html#a58b860ee0ffd4f239cd6a016587c7b13" title="Perform simple OTA firmware update with standard ESP Helper server and provided device ID." alt="" coords="504,39,636,79"/>
+<area shape="poly" title=" " alt="" coords="742,275,703,203,677,163,648,125,624,102,600,82,603,78,628,98,652,121,681,159,707,200,746,272"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#a7776652712168c87e5a7c40ef08f2976" title=" " alt="" coords="492,316,648,357"/>
+<area shape="poly" title=" " alt="" coords="683,323,649,328,648,322,682,317"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#aeb6ac37d19139670c7626b12f022402f" title=" " alt="" coords="490,381,650,436"/>
+<area shape="poly" title=" " alt="" coords="711,339,651,371,629,382,626,378,648,366,708,334"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#aa201d89025964e2fcd4074ab645d6f5b" title=" " alt="" coords="282,446,441,502"/>
+<area shape="poly" title=" " alt="" coords="746,344,708,401,682,429,651,451,599,471,545,483,491,486,441,486,441,480,490,481,544,477,598,466,648,446,678,425,704,397,741,341"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#a91c49ebfa6cf39aa32d7e6a4dbd97213" title=" " alt="" coords="490,511,650,567"/>
+<area shape="poly" title=" " alt="" coords="748,344,710,418,683,458,652,494,629,513,625,509,648,490,679,454,705,415,743,342"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#ae81574f881ff29d0a8db6ebb8f5c1aa5" title=" " alt="" coords="283,201,440,256"/>
+<area shape="poly" title=" " alt="" coords="682,293,649,286,440,245,441,240,650,280,683,288"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#a20372b42a376ee71f90bbe83b7688edb" title=" " alt="" coords="287,280,436,321"/>
+<area shape="poly" title=" " alt="" coords="682,308,650,307,437,304,437,298,650,302,682,303"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="293,70,430,96"/>
+<area shape="poly" title=" " alt="" coords="511,133,405,99,406,94,513,128"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#a3b350866aaaa69fc34d46f288a47d8ae" title=" " alt="" coords="281,121,442,176"/>
+<area shape="poly" title=" " alt="" coords="488,151,443,151,443,146,488,146"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="143,70,221,96"/>
+<area shape="poly" title=" " alt="" coords="277,86,221,86,221,80,277,80"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,345,233,371"/>
+<area shape="poly" title=" " alt="" coords="286,188,283,190,249,230,222,274,190,346,185,343,218,271,245,227,279,186,282,184"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,345,83,371"/>
+<area shape="poly" title=" " alt="" coords="115,360,83,360,83,355,115,355"/>
+<area shape="rect" href="test__esp__helper__utils_2main_2main_8c.html#aee86106cd4b46eeccb08bc2e17942225" title=" " alt="" coords="294,5,430,46"/>
+<area shape="poly" title=" " alt="" coords="488,49,430,39,431,34,489,43"/>
+<area shape="rect" href="test__esp__helper__utils_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="143,13,221,39"/>
+<area shape="poly" title=" " alt="" coords="278,28,221,28,221,23,278,23"/>
+<area shape="poly" title=" " alt="" coords="477,344,233,358,233,352,477,339"/>
+<area shape="poly" title=" " alt="" coords="475,399,233,367,234,362,475,393"/>
+<area shape="poly" title=" " alt="" coords="296,440,280,429,199,373,202,369,282,425,299,435"/>
+<area shape="poly" title=" " alt="" coords="475,554,427,554,377,549,326,537,280,516,260,501,242,483,215,443,196,403,185,372,190,370,201,401,219,440,247,480,263,497,282,511,328,532,378,544,428,549,475,548"/>
+<area shape="poly" title=" " alt="" coords="288,267,283,270,234,310,197,346,194,342,230,306,279,266,285,262"/>
+<area shape="poly" title=" " alt="" coords="283,328,226,347,224,342,281,323"/>
+</map>
+</div>
 
 </div>
 </div>

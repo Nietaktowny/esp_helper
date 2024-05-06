@@ -1,0 +1,11 @@
+<map id="test_if_wifi_c_start_ap_returns_err_when_wifi_mode_is_not_ap" name="test_if_wifi_c_start_ap_returns_err_when_wifi_mode_is_not_ap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,40,155,95"/>
+<area shape="rect" id="Node000002" href="$test__wifi__controller_8c.html#a6836f1a8df8a60455b709f8e24aeea20" title=" " alt="" coords="219,5,295,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,44,203,30,204,35,156,49"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="205,55,309,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="155,65,189,65,189,70,155,70"/>
+<area shape="rect" id="Node000005" href="$wifi__controller_8h.html#a30a6f81293cb4d466933926997d2d884" title="Starts WiFi in softAP mode." alt="" coords="203,104,311,130"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="156,86,194,97,193,102,154,91"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="359,5,451,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="295,16,343,16,343,21,295,21"/>
+</map>

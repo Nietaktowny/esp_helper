@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -92,11 +92,12 @@ $(document).ready(function(){initNavTree('structlinked__list__obj.html',''); ini
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structlinked__list__obj-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle"><div class="title">linked_list_obj Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="linked__list__internal_8h_source.html">linked_list_internal.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for linked_list_obj:</div>
 <div class="dyncontent">
@@ -110,24 +111,85 @@ Collaboration diagram for linked_list_obj:</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aa09d0cb908ef7873f3cbccfcf51d83ec" id="r_aa09d0cb908ef7873f3cbccfcf51d83ec"><td class="memItemLeft" align="right" valign="top"><a id="aa09d0cb908ef7873f3cbccfcf51d83ec" name="aa09d0cb908ef7873f3cbccfcf51d83ec"></a>
-struct <a class="el" href="structnode__obj.html">node_obj</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>head</b></td></tr>
-<tr class="memdesc:aa09d0cb908ef7873f3cbccfcf51d83ec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structLinked.html">Linked</a> list first node. <br /></td></tr>
-<tr class="separator:aa09d0cb908ef7873f3cbccfcf51d83ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48597054c2bc12bee16a088b28b8f958" id="r_a48597054c2bc12bee16a088b28b8f958"><td class="memItemLeft" align="right" valign="top"><a id="a48597054c2bc12bee16a088b28b8f958" name="a48597054c2bc12bee16a088b28b8f958"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>items_num</b></td></tr>
-<tr class="memdesc:a48597054c2bc12bee16a088b28b8f958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of items stored. <br /></td></tr>
-<tr class="separator:a48597054c2bc12bee16a088b28b8f958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2737402a9d34b88a511c2d4493c87565" id="r_a2737402a9d34b88a511c2d4493c87565"><td class="memItemLeft" align="right" valign="top"><a id="a2737402a9d34b88a511c2d4493c87565" name="a2737402a9d34b88a511c2d4493c87565"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
-<tr class="memdesc:a2737402a9d34b88a511c2d4493c87565"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of single item. <br /></td></tr>
-<tr class="separator:a2737402a9d34b88a511c2d4493c87565"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af04f2a4f685d273c13ae0ffead4efe29" id="r_af04f2a4f685d273c13ae0ffead4efe29"><td class="memItemLeft" align="right" valign="top"><a id="af04f2a4f685d273c13ae0ffead4efe29" name="af04f2a4f685d273c13ae0ffead4efe29"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
-<tr class="memdesc:af04f2a4f685d273c13ae0ffead4efe29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of list. <br /></td></tr>
-<tr class="separator:af04f2a4f685d273c13ae0ffead4efe29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+Data Fields</h2></td></tr>
+<tr class="memitem:a132f666bbb2453151ba83f24cbe10737" id="r_a132f666bbb2453151ba83f24cbe10737"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structnode__obj.html">node_obj</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlinked__list__obj.html#a132f666bbb2453151ba83f24cbe10737">head</a></td></tr>
+<tr class="memdesc:a132f666bbb2453151ba83f24cbe10737"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structLinked.html">Linked</a> list first node.  <br /></td></tr>
+<tr class="separator:a132f666bbb2453151ba83f24cbe10737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3792340f91445489966b64cc3e5358e" id="r_ad3792340f91445489966b64cc3e5358e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlinked__list__obj.html#ad3792340f91445489966b64cc3e5358e">items_num</a></td></tr>
+<tr class="memdesc:ad3792340f91445489966b64cc3e5358e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of items stored.  <br /></td></tr>
+<tr class="separator:ad3792340f91445489966b64cc3e5358e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba88b24a21a6c70c895c0d55f4a69a0" id="r_aaba88b24a21a6c70c895c0d55f4a69a0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlinked__list__obj.html#aaba88b24a21a6c70c895c0d55f4a69a0">size</a></td></tr>
+<tr class="memdesc:aaba88b24a21a6c70c895c0d55f4a69a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of single item.  <br /></td></tr>
+<tr class="separator:aaba88b24a21a6c70c895c0d55f4a69a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac083a645d964373f022d03df4849c8" id="r_a5ac083a645d964373f022d03df4849c8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlinked__list__obj.html#a5ac083a645d964373f022d03df4849c8">name</a></td></tr>
+<tr class="memdesc:a5ac083a645d964373f022d03df4849c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of list.  <br /></td></tr>
+<tr class="separator:a5ac083a645d964373f022d03df4849c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a132f666bbb2453151ba83f24cbe10737" name="a132f666bbb2453151ba83f24cbe10737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a132f666bbb2453151ba83f24cbe10737">&#9670;&#160;</a></span>head</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structnode__obj.html">node_obj</a>* head</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structLinked.html">Linked</a> list first node. </p>
+
+</div>
+</div>
+<a id="ad3792340f91445489966b64cc3e5358e" name="ad3792340f91445489966b64cc3e5358e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3792340f91445489966b64cc3e5358e">&#9670;&#160;</a></span>items_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t items_num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of items stored. </p>
+
+</div>
+</div>
+<a id="a5ac083a645d964373f022d03df4849c8" name="a5ac083a645d964373f022d03df4849c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac083a645d964373f022d03df4849c8">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Name of list. </p>
+
+</div>
+</div>
+<a id="aaba88b24a21a6c70c895c0d55f4a69a0" name="aaba88b24a21a6c70c895c0d55f4a69a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba88b24a21a6c70c895c0d55f4a69a0">&#9670;&#160;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Size of single item. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>projects/lib_tests/lib/linked_list/include/<a class="el" href="linked__list__internal_8h_source.html">linked_list_internal.h</a></li>
 </ul>

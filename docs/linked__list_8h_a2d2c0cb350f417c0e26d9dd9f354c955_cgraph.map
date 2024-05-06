@@ -1,0 +1,7 @@
+<map id="linkedl_find" name="linkedl_find">
+<area shape="rect" id="Node000001" title="Find item in list using it&#39;s name." alt="" coords="5,31,91,56"/>
+<area shape="rect" id="Node000002" href="$linked__list_8c.html#a90f3da568d45e95568b38026efe09e27" title="Find node using it&#39;s ID." alt="" coords="139,5,307,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,35,123,30,124,35,91,40"/>
+<area shape="rect" id="Node000003" href="$linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a" title="Hash string." alt="" coords="157,55,289,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,47,141,54,141,59,91,52"/>
+</map>

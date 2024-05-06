@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -181,7 +181,7 @@ Configuration</h1>
 <p>CException is a mostly portable library. It has one universal dependency, plus some macros which are required if working in a multi-tasking environment.</p>
 <p>The standard C library setjmp must be available. Since this is part of the standard library, it's all good.</p>
 <p>If working in a multitasking environment, you need a stack frame for each task. Therefore, you must define methods for obtaining an index into an array of frames and to get the overall number of id's are required. If the OS supports a method to retrieve task ID's, and those tasks are number 0, 1, 2... you are in an ideal situation. Otherwise, a more creative mapping function may be required. Note that this function is likely to be called twice for each protected block and once during a throw. This is the only added overhead in the system.</p>
-<p>You have options for configuring the library, if the defaults aren't good enough for you. You can add defines at the command prompt directly. You can always include a configuration file before including <code><a class="el" href="CException_8h_source.html">CException.h</a></code>. You can make sure <code>CEXCEPTION_USE_CONFIG_FILE</code> is defined, which will force make CException look for <code><a class="el" href="CExceptionConfig_8h_source.html">CExceptionConfig.h</a></code>, where you can define whatever you like. However you do it, you can override any or all of the following:</p>
+<p>You have options for configuring the library, if the defaults aren't good enough for you. You can add defines at the command prompt directly. You can always include a configuration file before including <code><a class="el" href="CException_8h.html">CException.h</a></code>. You can make sure <code>CEXCEPTION_USE_CONFIG_FILE</code> is defined, which will force make CException look for <code><a class="el" href="CExceptionConfig_8h.html">CExceptionConfig.h</a></code>, where you can define whatever you like. However you do it, you can override any or all of the following:</p>
 <h3><a class="anchor" id="autotoc_md49"></a>
 &lt;tt&gt;CEXCEPTION_T&lt;/tt&gt;</h3>
 <p>Set this to the type you want your exception id's to be. Defaults to an 'unsigned int'.</p>

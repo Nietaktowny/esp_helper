@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('bmp280_8c.html',''); initResizable(); 
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">bmp280.c File Reference</div></div>
@@ -105,8 +105,8 @@ $(document).ready(function(){initNavTree('bmp280_8c.html',''); initResizable(); 
 <code>#include &quot;<a class="el" href="bmp280__internal_8h_source.html">bmp280_internal.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="err__controller_8h_source.html">err_controller.h</a>&quot;</code><br />
-<code>#include &quot;memory_utils.h&quot;</code><br />
-<code>#include &quot;i2c_controller.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="memory__utils_8h_source.html">memory_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="i2c__controller_8h_source.html">i2c_controller.h</a>&quot;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &quot;freertos/FreeRTOS.h&quot;</code><br />
 <code>#include &quot;freertos/task.h&quot;</code><br />
@@ -118,7 +118,7 @@ Include dependency graph for bmp280.c:</div>
 <area shape="rect" title="BMP280 library source file." alt="" coords="613,5,783,46"/>
 <area shape="rect" href="bmp280_8h.html" title="BMP280 library header file." alt="" coords="214,94,291,120"/>
 <area shape="poly" title=" " alt="" coords="613,45,307,99,306,93,612,39"/>
-<area shape="rect" href="i2c__controller_8h_source.html" title=" " alt="" coords="10,168,119,193"/>
+<area shape="rect" href="i2c__controller_8h.html" title=" " alt="" coords="10,168,119,193"/>
 <area shape="poly" title=" " alt="" coords="613,30,525,35,421,46,311,66,203,96,142,126,92,160,89,156,139,122,201,92,309,61,421,41,525,30,612,25"/>
 <area shape="rect" href="bmp280__internal_8h.html" title="BMP280 library internal header file." alt="" coords="401,94,528,120"/>
 <area shape="poly" title=" " alt="" coords="640,49,516,91,514,86,639,44"/>
@@ -126,7 +126,7 @@ Include dependency graph for bmp280.c:</div>
 <area shape="poly" title=" " alt="" coords="705,46,726,119,737,152,732,154,721,120,700,47"/>
 <area shape="rect" href="err__controller_8h.html" title="Error helper library header." alt="" coords="735,94,842,120"/>
 <area shape="poly" title=" " alt="" coords="722,44,765,82,761,86,718,48"/>
-<area shape="rect" href="memory__utils_8h_source.html" title=" " alt="" coords="552,94,660,120"/>
+<area shape="rect" href="memory__utils_8h.html" title=" " alt="" coords="552,94,660,120"/>
 <area shape="poly" title=" " alt="" coords="677,48,633,86,630,82,673,44"/>
 <area shape="rect" title=" " alt="" coords="866,94,927,120"/>
 <area shape="poly" title=" " alt="" coords="748,44,853,85,851,90,746,49"/>
@@ -158,7 +158,7 @@ Include dependency graph for bmp280.c:</div>
 <area shape="rect" href="logger__errors_8h.html" title="Logger library errors list." alt="" coords="623,241,730,267"/>
 <area shape="poly" title=" " alt="" coords="735,195,700,232,696,228,731,192"/>
 <area shape="poly" title=" " alt="" coords="773,122,719,157,650,196,590,220,534,240,532,235,589,215,647,191,716,153,770,118"/>
-<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="802,168,898,193"/>
+<area shape="rect" href="CException_8h.html" title=" " alt="" coords="802,168,898,193"/>
 <area shape="poly" title=" " alt="" coords="801,118,832,154,828,157,797,122"/>
 <area shape="rect" href="err__c__errors_8h.html" title="Error helper library errors list." alt="" coords="922,168,1023,193"/>
 <area shape="poly" title=" " alt="" coords="821,118,928,159,926,164,819,123"/>
@@ -172,17 +172,17 @@ Include dependency graph for bmp280.c:</div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
+Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp__handle__obj.html">bmp_handle_obj</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 device object.  <a href="structbmp__handle__obj.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ad72c95d8f4fac16652903d482bf078db" id="r_ad72c95d8f4fac16652903d482bf078db"><td class="memItemLeft" align="right" valign="top"><a id="ad72c95d8f4fac16652903d482bf078db" name="ad72c95d8f4fac16652903d482bf078db"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280_8c.html#ad72c95d8f4fac16652903d482bf078db">bmp_device_type_t</a> { <b>BMP_BMP280</b> = 1
-, <b>BMP_BME280</b>
+<tr class="memitem:ad72c95d8f4fac16652903d482bf078db" id="r_ad72c95d8f4fac16652903d482bf078db"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280_8c.html#ad72c95d8f4fac16652903d482bf078db">bmp_device_type_t</a> { <a class="el" href="bmp280_8c.html#ad72c95d8f4fac16652903d482bf078dbabf2226cb9b592fa409eb69c3d9ce4004">BMP_BMP280</a> = 1
+, <a class="el" href="bmp280_8c.html#ad72c95d8f4fac16652903d482bf078dbafb35f03a3a3789bbae265549792d7f82">BMP_BME280</a>
  }</td></tr>
-<tr class="memdesc:ad72c95d8f4fac16652903d482bf078db"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 device type. <br /></td></tr>
+<tr class="memdesc:ad72c95d8f4fac16652903d482bf078db"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 device type.  <a href="bmp280_8c.html#ad72c95d8f4fac16652903d482bf078db">More...</a><br /></td></tr>
 <tr class="separator:ad72c95d8f4fac16652903d482bf078db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -247,16 +247,14 @@ Functions</h2></td></tr>
 <tr class="memitem:a712e1325090f1da050399876d9658e36" id="r_a712e1325090f1da050399876d9658e36"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36">bmp_i2c_write</a> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, uint8_t addr, uint8_t *in_buffer, size_t buflen)</td></tr>
 <tr class="memdesc:a712e1325090f1da050399876d9658e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to register of BMP280 device.  <br /></td></tr>
 <tr class="separator:a712e1325090f1da050399876d9658e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c2312589f67afdff1c0ba5912adaf6f" id="r_a4c2312589f67afdff1c0ba5912adaf6f"><td class="memItemLeft" align="right" valign="top"><a id="a4c2312589f67afdff1c0ba5912adaf6f" name="a4c2312589f67afdff1c0ba5912adaf6f"></a>
-int32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_T_int32</b> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, int32_t adc_T)</td></tr>
+<tr class="memitem:a4c2312589f67afdff1c0ba5912adaf6f" id="r_a4c2312589f67afdff1c0ba5912adaf6f"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280_8c.html#a4c2312589f67afdff1c0ba5912adaf6f">bmp_compensate_T_int32</a> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, int32_t adc_T)</td></tr>
 <tr class="separator:a4c2312589f67afdff1c0ba5912adaf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62e2529d9443dfe65f6d4b755db00e8d" id="r_a62e2529d9443dfe65f6d4b755db00e8d"><td class="memItemLeft" align="right" valign="top"><a id="a62e2529d9443dfe65f6d4b755db00e8d" name="a62e2529d9443dfe65f6d4b755db00e8d"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_int64</b> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, int32_t adc_P)</td></tr>
+<tr class="memitem:a62e2529d9443dfe65f6d4b755db00e8d" id="r_a62e2529d9443dfe65f6d4b755db00e8d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280_8c.html#a62e2529d9443dfe65f6d4b755db00e8d">bmp_compensate_P_int64</a> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, int32_t adc_P)</td></tr>
 <tr class="separator:a62e2529d9443dfe65f6d4b755db00e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d2c0726c6a64714da12904fd44664ee" id="r_a2d2c0726c6a64714da12904fd44664ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee">bmp_configure</a> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> bmp, <a class="el" href="bmp280_8h.html#afa02a3140775658979c4d4c5894e520a">bmp_config_t</a> *config)</td></tr>
 <tr class="memdesc:a2d2c0726c6a64714da12904fd44664ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure BMP280 device.  <br /></td></tr>
 <tr class="separator:a2d2c0726c6a64714da12904fd44664ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a153ceda67f3ecc98d9147fe4b7754717" id="r_a153ceda67f3ecc98d9147fe4b7754717"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717">bmp_init</a> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> *out_handle, <a class="el" href="structi2c__c__bus__handle__obj.html">i2c_c_bus_handle_t</a> bus)</td></tr>
+<tr class="memitem:a153ceda67f3ecc98d9147fe4b7754717" id="r_a153ceda67f3ecc98d9147fe4b7754717"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717">bmp_init</a> (<a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a> *out_handle, <a class="el" href="i2c__controller_8h.html#a98515ed1dcebf40e1389384d400ded3f">i2c_c_bus_handle_t</a> bus)</td></tr>
 <tr class="memdesc:a153ceda67f3ecc98d9147fe4b7754717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="structBMP.html" title="BMP device config object.">BMP</a> device, and return it's handle.  <br /></td></tr>
 <tr class="separator:a153ceda67f3ecc98d9147fe4b7754717"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -266,7 +264,104 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
 <dl class="section version"><dt>Version</dt><dd>1.0.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad72c95d8f4fac16652903d482bf078db" name="ad72c95d8f4fac16652903d482bf078db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72c95d8f4fac16652903d482bf078db">&#9670;&#160;</a></span>bmp_device_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="bmp280_8c.html#ad72c95d8f4fac16652903d482bf078db">bmp_device_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BMP280 device type. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad72c95d8f4fac16652903d482bf078dbabf2226cb9b592fa409eb69c3d9ce4004" name="ad72c95d8f4fac16652903d482bf078dbabf2226cb9b592fa409eb69c3d9ce4004"></a>BMP_BMP280&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad72c95d8f4fac16652903d482bf078dbafb35f03a3a3789bbae265549792d7f82" name="ad72c95d8f4fac16652903d482bf078dbafb35f03a3a3789bbae265549792d7f82"></a>BMP_BME280&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a62e2529d9443dfe65f6d4b755db00e8d" name="a62e2529d9443dfe65f6d4b755db00e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62e2529d9443dfe65f6d4b755db00e8d">&#9670;&#160;</a></span>bmp_compensate_P_int64()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t bmp_compensate_P_int64 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a>&#160;</td>
+          <td class="paramname"><em>bmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>adc_P</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a62e2529d9443dfe65f6d4b755db00e8d_icgraph.png" border="0" usemap="#abmp280_8c_a62e2529d9443dfe65f6d4b755db00e8d_icgraph" alt=""/></div>
+<map name="abmp280_8c_a62e2529d9443dfe65f6d4b755db00e8d_icgraph" id="abmp280_8c_a62e2529d9443dfe65f6d4b755db00e8d_icgraph">
+<area shape="rect" title=" " alt="" coords="174,5,349,31"/>
+<area shape="rect" href="bmp280_8c.html#ae07beee2673305da99e82aeb4f4dda40" title="Read BMP device pressure and temperature readings." alt="" coords="5,5,126,31"/>
+<area shape="poly" title=" " alt="" coords="158,21,126,21,126,16,158,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c2312589f67afdff1c0ba5912adaf6f" name="a4c2312589f67afdff1c0ba5912adaf6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c2312589f67afdff1c0ba5912adaf6f">&#9670;&#160;</a></span>bmp_compensate_T_int32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t bmp_compensate_T_int32 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1">bmp_handle_t</a>&#160;</td>
+          <td class="paramname"><em>bmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>adc_T</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a4c2312589f67afdff1c0ba5912adaf6f_icgraph.png" border="0" usemap="#abmp280_8c_a4c2312589f67afdff1c0ba5912adaf6f_icgraph" alt=""/></div>
+<map name="abmp280_8c_a4c2312589f67afdff1c0ba5912adaf6f_icgraph" id="abmp280_8c_a4c2312589f67afdff1c0ba5912adaf6f_icgraph">
+<area shape="rect" title=" " alt="" coords="174,5,348,31"/>
+<area shape="rect" href="bmp280_8c.html#ae07beee2673305da99e82aeb4f4dda40" title="Read BMP device pressure and temperature readings." alt="" coords="5,5,126,31"/>
+<area shape="poly" title=" " alt="" coords="158,21,126,21,126,16,158,16"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a2d2c0726c6a64714da12904fd44664ee" name="a2d2c0726c6a64714da12904fd44664ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d2c0726c6a64714da12904fd44664ee">&#9670;&#160;</a></span>bmp_configure()</h2>
 
@@ -309,6 +404,64 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a2d2c0726c6a64714da12904fd44664ee_cgraph.png" border="0" usemap="#abmp280_8c_a2d2c0726c6a64714da12904fd44664ee_cgraph" alt=""/></div>
+<map name="abmp280_8c_a2d2c0726c6a64714da12904fd44664ee_cgraph" id="abmp280_8c_a2d2c0726c6a64714da12904fd44664ee_cgraph">
+<area shape="rect" title="Configure BMP280 device." alt="" coords="5,104,111,130"/>
+<area shape="rect" href="bmp280_8c.html#a4265be98ad7d32842ae40e855692f18e" title="Set IIR filter value." alt="" coords="196,153,340,179"/>
+<area shape="poly" title=" " alt="" coords="111,128,159,140,191,147,189,152,158,145,110,133"/>
+<area shape="rect" href="bmp280_8c.html#a73b7bf20c2a74ff716d22181b36f753a" title="Change BMP device operating mode." alt="" coords="201,55,335,80"/>
+<area shape="poly" title=" " alt="" coords="110,101,158,89,189,82,191,87,159,94,111,106"/>
+<area shape="rect" href="bmp280_8c.html#aaf822501cab64075a6964114a3432783" title="Set pressure oversampling." alt="" coords="159,104,377,130"/>
+<area shape="poly" title=" " alt="" coords="111,114,143,114,143,120,111,120"/>
+<area shape="rect" href="bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f" title="Set standby time of BMP280 device in normal mode." alt="" coords="178,203,358,228"/>
+<area shape="poly" title=" " alt="" coords="75,128,111,159,160,189,174,195,172,200,157,194,108,163,71,132"/>
+<area shape="rect" href="bmp280_8c.html#a573d2f5665e8d34814a0da21248b7eab" title="Set temperature oversampling." alt="" coords="160,5,376,31"/>
+<area shape="poly" title=" " alt="" coords="71,102,108,70,157,40,172,34,174,39,160,45,111,75,75,106"/>
+<area shape="rect" href="bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="437,153,573,179"/>
+<area shape="poly" title=" " alt="" coords="340,164,421,164,421,169,340,169"/>
+<area shape="rect" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="452,104,557,130"/>
+<area shape="poly" title=" " alt="" coords="333,150,436,128,437,133,334,155"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="632,55,735,80"/>
+<area shape="poly" title=" " alt="" coords="558,150,583,140,622,115,655,89,659,93,625,120,586,145,560,155"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="784,56,869,82"/>
+<area shape="poly" title=" " alt="" coords="735,65,769,66,769,71,735,71"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="925,105,1053,131"/>
+<area shape="poly" title=" " alt="" coords="870,79,931,98,929,103,868,84"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="918,56,1060,82"/>
+<area shape="poly" title=" " alt="" coords="869,66,902,66,902,72,869,72"/>
+<area shape="rect" href="i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="783,105,870,131"/>
+<area shape="poly" title=" " alt="" coords="558,114,767,115,767,121,558,120"/>
+<area shape="poly" title=" " alt="" coords="871,116,910,116,910,121,871,121"/>
+<area shape="poly" title=" " alt="" coords="870,102,929,84,931,89,871,107"/>
+<area shape="poly" title=" " alt="" coords="334,78,437,100,436,105,333,84"/>
+<area shape="rect" href="bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="425,55,584,80"/>
+<area shape="poly" title=" " alt="" coords="336,65,409,65,409,70,336,70"/>
+<area shape="poly" title=" " alt="" coords="585,65,616,65,616,70,585,70"/>
+<area shape="poly" title=" " alt="" coords="377,114,437,114,437,120,377,120"/>
+<area shape="poly" title=" " alt="" coords="333,101,424,81,425,87,334,106"/>
+<area shape="poly" title=" " alt="" coords="333,199,424,180,425,185,334,205"/>
+<area shape="poly" title=" " alt="" coords="352,200,376,189,390,178,399,165,408,152,423,139,436,132,439,137,427,143,412,155,403,168,394,181,378,194,354,205"/>
+<area shape="poly" title=" " alt="" coords="354,29,378,40,394,52,403,66,412,78,427,91,439,97,436,102,423,95,408,82,399,69,390,56,376,44,352,34"/>
+<area shape="poly" title=" " alt="" coords="334,29,425,48,424,54,333,34"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a2d2c0726c6a64714da12904fd44664ee_icgraph.png" border="0" usemap="#abmp280_8c_a2d2c0726c6a64714da12904fd44664ee_icgraph" alt=""/></div>
+<map name="abmp280_8c_a2d2c0726c6a64714da12904fd44664ee_icgraph" id="abmp280_8c_a2d2c0726c6a64714da12904fd44664ee_icgraph">
+<area shape="rect" title="Configure BMP280 device." alt="" coords="518,5,624,31"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,470,21,470,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -336,6 +489,20 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structBMP.html" title="BMP device config object.">BMP</a> device chip ID. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a9487ef46257acb04e1caeff62d2b1da3_icgraph.png" border="0" usemap="#abmp280_8c_a9487ef46257acb04e1caeff62d2b1da3_icgraph" alt=""/></div>
+<map name="abmp280_8c_a9487ef46257acb04e1caeff62d2b1da3_icgraph" id="abmp280_8c_a9487ef46257acb04e1caeff62d2b1da3_icgraph">
+<area shape="rect" title="Get BMP device chip ID." alt="" coords="518,5,638,31"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,471,21,471,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -363,6 +530,20 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="structBMP.html" title="BMP device config object.">BMP</a> device I2C address. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_ad4b0984dcbeb48e41089d7ba94bf6a8f_icgraph.png" border="0" usemap="#abmp280_8c_ad4b0984dcbeb48e41089d7ba94bf6a8f_icgraph" alt=""/></div>
+<map name="abmp280_8c_ad4b0984dcbeb48e41089d7ba94bf6a8f_icgraph" id="abmp280_8c_ad4b0984dcbeb48e41089d7ba94bf6a8f_icgraph">
+<area shape="rect" title="Get BMP device I2C address." alt="" coords="518,5,646,31"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,471,21,471,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -397,6 +578,20 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a1fe612550d5ab7dd6fbd935ffb51c5db_icgraph.png" border="0" usemap="#abmp280_8c_a1fe612550d5ab7dd6fbd935ffb51c5db_icgraph" alt=""/></div>
+<map name="abmp280_8c_a1fe612550d5ab7dd6fbd935ffb51c5db_icgraph" id="abmp280_8c_a1fe612550d5ab7dd6fbd935ffb51c5db_icgraph">
+<area shape="rect" title="Get current mode of BMP device." alt="" coords="518,5,629,31"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,471,21,471,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -435,6 +630,20 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Altitude in metres </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_af356cdcaca2bcc22564d38b080505c40_icgraph.png" border="0" usemap="#abmp280_8c_af356cdcaca2bcc22564d38b080505c40_icgraph" alt=""/></div>
+<map name="abmp280_8c_af356cdcaca2bcc22564d38b080505c40_icgraph" id="abmp280_8c_af356cdcaca2bcc22564d38b080505c40_icgraph">
+<area shape="rect" title="Get calculated altitude based on pressure and pressure on sea level." alt="" coords="518,5,697,31"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,470,21,470,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -469,6 +678,42 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_af12043f643ffea6caf5be93fe8ec0435_cgraph.png" border="0" usemap="#abmp280_8c_af12043f643ffea6caf5be93fe8ec0435_cgraph" alt=""/></div>
+<map name="abmp280_8c_af12043f643ffea6caf5be93fe8ec0435_cgraph" id="abmp280_8c_af12043f643ffea6caf5be93fe8ec0435_cgraph">
+<area shape="rect" title="Read BMP calibration data." alt="" coords="5,55,132,80"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="204,29,307,55"/>
+<area shape="poly" title=" " alt="" coords="132,56,189,48,189,54,133,62"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="180,79,331,104"/>
+<area shape="poly" title=" " alt="" coords="133,73,165,77,164,83,132,78"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="421,29,505,55"/>
+<area shape="poly" title=" " alt="" coords="307,40,405,40,405,45,307,45"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="601,5,730,31"/>
+<area shape="poly" title=" " alt="" coords="505,35,586,25,586,30,506,40"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="594,55,737,80"/>
+<area shape="poly" title=" " alt="" coords="506,45,579,54,578,59,505,50"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="379,79,546,104"/>
+<area shape="poly" title=" " alt="" coords="331,89,363,89,363,94,331,94"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_af12043f643ffea6caf5be93fe8ec0435_icgraph.png" border="0" usemap="#abmp280_8c_af12043f643ffea6caf5be93fe8ec0435_icgraph" alt=""/></div>
+<map name="abmp280_8c_af12043f643ffea6caf5be93fe8ec0435_icgraph" id="abmp280_8c_af12043f643ffea6caf5be93fe8ec0435_icgraph">
+<area shape="rect" title="Read BMP calibration data." alt="" coords="637,5,763,31"/>
+<area shape="rect" href="bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="518,5,589,31"/>
+<area shape="poly" title=" " alt="" coords="621,21,589,21,589,16,621,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,471,21,471,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -514,6 +759,43 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_afab376c79aa0600e731ea1dc8691e1af_cgraph.png" border="0" usemap="#abmp280_8c_afab376c79aa0600e731ea1dc8691e1af_cgraph" alt=""/></div>
+<map name="abmp280_8c_afab376c79aa0600e731ea1dc8691e1af_cgraph" id="abmp280_8c_afab376c79aa0600e731ea1dc8691e1af_cgraph">
+<area shape="rect" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="5,31,142,56"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="190,31,292,56"/>
+<area shape="poly" title=" " alt="" coords="142,41,174,41,174,46,142,46"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="340,31,424,56"/>
+<area shape="poly" title=" " alt="" coords="293,41,325,41,325,46,293,46"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="479,5,608,31"/>
+<area shape="poly" title=" " alt="" coords="424,34,463,28,464,33,425,40"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="472,55,615,80"/>
+<area shape="poly" title=" " alt="" coords="425,47,458,52,457,57,424,52"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_afab376c79aa0600e731ea1dc8691e1af_icgraph.png" border="0" usemap="#abmp280_8c_afab376c79aa0600e731ea1dc8691e1af_icgraph" alt=""/></div>
+<map name="abmp280_8c_afab376c79aa0600e731ea1dc8691e1af_icgraph" id="abmp280_8c_afab376c79aa0600e731ea1dc8691e1af_icgraph">
+<area shape="rect" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="899,31,1035,56"/>
+<area shape="rect" href="bmp280_8c.html#a4265be98ad7d32842ae40e855692f18e" title="Set IIR filter value." alt="" coords="690,5,833,31"/>
+<area shape="poly" title=" " alt="" coords="883,36,833,30,834,24,884,31"/>
+<area shape="rect" href="bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f" title="Set standby time of BMP280 device in normal mode." alt="" coords="672,55,851,80"/>
+<area shape="poly" title=" " alt="" coords="884,56,852,60,851,54,883,51"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,31,624,56"/>
+<area shape="poly" title=" " alt="" coords="675,32,624,39,624,34,674,27"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,31,470,56"/>
+<area shape="poly" title=" " alt="" coords="503,46,470,46,470,41,503,41"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,31,268,56"/>
+<area shape="poly" title=" " alt="" coords="301,46,268,46,268,41,301,41"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,31,83,56"/>
+<area shape="poly" title=" " alt="" coords="115,46,83,46,83,41,115,41"/>
+<area shape="poly" title=" " alt="" coords="656,57,624,53,624,47,656,52"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -559,6 +841,49 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a85ba0d6d084be1005f3afd5b83e231c5_cgraph.png" border="0" usemap="#abmp280_8c_a85ba0d6d084be1005f3afd5b83e231c5_cgraph" alt=""/></div>
+<map name="abmp280_8c_a85ba0d6d084be1005f3afd5b83e231c5_cgraph" id="abmp280_8c_a85ba0d6d084be1005f3afd5b83e231c5_cgraph">
+<area shape="rect" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="5,31,165,56"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="213,31,315,56"/>
+<area shape="poly" title=" " alt="" coords="165,41,197,41,197,46,165,46"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="363,31,447,56"/>
+<area shape="poly" title=" " alt="" coords="316,41,348,41,348,46,316,46"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="502,5,631,31"/>
+<area shape="poly" title=" " alt="" coords="447,34,486,28,487,33,448,40"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="495,55,638,80"/>
+<area shape="poly" title=" " alt="" coords="448,47,481,52,480,57,447,52"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a85ba0d6d084be1005f3afd5b83e231c5_icgraph.png" border="0" usemap="#abmp280_8c_a85ba0d6d084be1005f3afd5b83e231c5_icgraph" alt=""/></div>
+<map name="abmp280_8c_a85ba0d6d084be1005f3afd5b83e231c5_icgraph" id="abmp280_8c_a85ba0d6d084be1005f3afd5b83e231c5_icgraph">
+<area shape="rect" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="938,80,1097,106"/>
+<area shape="rect" href="bmp280_8c.html#a73b7bf20c2a74ff716d22181b36f753a" title="Change BMP device operating mode." alt="" coords="714,5,848,31"/>
+<area shape="poly" title=" " alt="" coords="972,76,889,45,848,34,849,29,891,40,974,71"/>
+<area shape="rect" href="bmp280_8c.html#aaf822501cab64075a6964114a3432783" title="Set pressure oversampling." alt="" coords="672,55,890,80"/>
+<area shape="poly" title=" " alt="" coords="922,85,890,82,891,77,923,80"/>
+<area shape="rect" href="bmp280_8c.html#a573d2f5665e8d34814a0da21248b7eab" title="Set temperature oversampling." alt="" coords="673,104,889,130"/>
+<area shape="poly" title=" " alt="" coords="923,105,889,109,889,103,922,100"/>
+<area shape="rect" href="bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="536,129,606,155"/>
+<area shape="poly" title=" " alt="" coords="978,115,936,132,891,145,811,154,732,156,606,149,607,144,732,151,811,149,889,140,935,127,976,110"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,80,624,106"/>
+<area shape="poly" title=" " alt="" coords="700,36,673,45,631,63,596,82,593,77,629,58,671,40,698,31"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,105,470,131"/>
+<area shape="poly" title=" " alt="" coords="503,105,471,110,470,105,503,100"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,105,268,131"/>
+<area shape="poly" title=" " alt="" coords="301,121,268,121,268,116,301,116"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,105,83,131"/>
+<area shape="poly" title=" " alt="" coords="115,121,83,121,83,116,115,116"/>
+<area shape="poly" title=" " alt="" coords="656,85,624,89,624,84,656,80"/>
+<area shape="poly" title=" " alt="" coords="657,105,624,101,624,96,658,100"/>
+<area shape="poly" title=" " alt="" coords="520,138,470,131,471,126,521,133"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -604,6 +929,22 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a0d6e9ea66309c781305ad9e25fc4c4cb_cgraph.png" border="0" usemap="#abmp280_8c_a0d6e9ea66309c781305ad9e25fc4c4cb_cgraph" alt=""/></div>
+<map name="abmp280_8c_a0d6e9ea66309c781305ad9e25fc4c4cb_cgraph" id="abmp280_8c_a0d6e9ea66309c781305ad9e25fc4c4cb_cgraph">
+<area shape="rect" title="Get value of BMP_REG_STATUS register using I2C." alt="" coords="5,31,144,56"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="192,31,294,56"/>
+<area shape="poly" title=" " alt="" coords="144,41,176,41,176,46,144,46"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="342,31,426,56"/>
+<area shape="poly" title=" " alt="" coords="295,41,327,41,327,46,295,46"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="481,5,610,31"/>
+<area shape="poly" title=" " alt="" coords="426,34,465,28,466,33,427,40"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="474,55,617,80"/>
+<area shape="poly" title=" " alt="" coords="427,47,460,52,459,57,426,52"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -639,6 +980,40 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a76f74528570223059dea2107d49e8441_cgraph.png" border="0" usemap="#abmp280_8c_a76f74528570223059dea2107d49e8441_cgraph" alt=""/></div>
+<map name="abmp280_8c_a76f74528570223059dea2107d49e8441_cgraph" id="abmp280_8c_a76f74528570223059dea2107d49e8441_cgraph">
+<area shape="rect" title="Search for BMP280 device on possible addresses." alt="" coords="5,56,155,82"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="229,31,331,56"/>
+<area shape="poly" title=" " alt="" coords="155,57,213,49,213,55,156,62"/>
+<area shape="rect" href="i2c__controller_8c.html#ac217eb666f2eed503785d965289c0e39" title="Change I2C device address." alt="" coords="203,80,357,106"/>
+<area shape="poly" title=" " alt="" coords="156,75,187,79,187,84,155,80"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="405,31,489,56"/>
+<area shape="poly" title=" " alt="" coords="331,41,389,41,389,46,331,46"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="544,5,673,31"/>
+<area shape="poly" title=" " alt="" coords="489,34,528,28,529,33,490,40"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="537,55,680,80"/>
+<area shape="poly" title=" " alt="" coords="490,47,523,52,522,57,489,52"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a76f74528570223059dea2107d49e8441_icgraph.png" border="0" usemap="#abmp280_8c_a76f74528570223059dea2107d49e8441_icgraph" alt=""/></div>
+<map name="abmp280_8c_a76f74528570223059dea2107d49e8441_icgraph" id="abmp280_8c_a76f74528570223059dea2107d49e8441_icgraph">
+<area shape="rect" title="Search for BMP280 device on possible addresses." alt="" coords="637,5,786,31"/>
+<area shape="rect" href="bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="518,5,589,31"/>
+<area shape="poly" title=" " alt="" coords="621,21,589,21,589,16,621,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,471,21,471,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -698,6 +1073,67 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a3dcf4fd49a722611da21b9ad512d94e0_cgraph.png" border="0" usemap="#abmp280_8c_a3dcf4fd49a722611da21b9ad512d94e0_cgraph" alt=""/></div>
+<map name="abmp280_8c_a3dcf4fd49a722611da21b9ad512d94e0_cgraph" id="abmp280_8c_a3dcf4fd49a722611da21b9ad512d94e0_cgraph">
+<area shape="rect" title="Read register value of BMP280 device." alt="" coords="5,31,108,56"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="156,31,240,56"/>
+<area shape="poly" title=" " alt="" coords="108,41,140,41,140,46,108,46"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="295,5,423,31"/>
+<area shape="poly" title=" " alt="" coords="240,34,279,28,280,33,241,40"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="288,55,430,80"/>
+<area shape="poly" title=" " alt="" coords="241,47,273,52,273,57,240,52"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a3dcf4fd49a722611da21b9ad512d94e0_icgraph.png" border="0" usemap="#abmp280_8c_a3dcf4fd49a722611da21b9ad512d94e0_icgraph" alt=""/></div>
+<map name="abmp280_8c_a3dcf4fd49a722611da21b9ad512d94e0_icgraph" id="abmp280_8c_a3dcf4fd49a722611da21b9ad512d94e0_icgraph">
+<area shape="rect" title="Read register value of BMP280 device." alt="" coords="1145,129,1248,155"/>
+<area shape="rect" href="bmp280_8c.html#af12043f643ffea6caf5be93fe8ec0435" title="Read BMP calibration data." alt="" coords="955,5,1081,31"/>
+<area shape="poly" title=" " alt="" coords="1174,119,1140,80,1096,44,1074,34,1076,29,1099,40,1144,76,1178,115"/>
+<area shape="rect" href="bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="950,153,1086,179"/>
+<area shape="poly" title=" " alt="" coords="1130,154,1086,160,1086,154,1129,148"/>
+<area shape="rect" href="bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="938,104,1097,130"/>
+<area shape="poly" title=" " alt="" coords="1129,135,1097,131,1098,126,1130,130"/>
+<area shape="rect" href="bmp280_8c.html#a0d6e9ea66309c781305ad9e25fc4c4cb" title="Get value of BMP_REG_STATUS register using I2C." alt="" coords="949,203,1087,228"/>
+<area shape="poly" title=" " alt="" coords="1159,165,1098,194,1068,205,1067,200,1096,189,1157,160"/>
+<area shape="rect" href="bmp280_8c.html#a76f74528570223059dea2107d49e8441" title="Search for BMP280 device on possible addresses." alt="" coords="943,55,1092,80"/>
+<area shape="poly" title=" " alt="" coords="1158,124,1096,94,1067,83,1068,78,1098,89,1161,119"/>
+<area shape="rect" href="bmp280_8c.html#ae07beee2673305da99e82aeb4f4dda40" title="Read BMP device pressure and temperature readings." alt="" coords="958,252,1078,278"/>
+<area shape="poly" title=" " alt="" coords="1178,169,1144,207,1099,243,1076,254,1074,249,1096,239,1140,203,1174,165"/>
+<area shape="rect" href="bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="746,5,816,31"/>
+<area shape="poly" title=" " alt="" coords="939,21,816,21,816,16,939,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,104,470,130"/>
+<area shape="poly" title=" " alt="" coords="731,31,672,45,443,106,441,101,671,40,730,26"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,104,268,130"/>
+<area shape="poly" title=" " alt="" coords="301,120,268,120,268,114,301,114"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,104,83,130"/>
+<area shape="poly" title=" " alt="" coords="115,120,83,120,83,114,115,114"/>
+<area shape="rect" href="bmp280_8c.html#a4265be98ad7d32842ae40e855692f18e" title="Set IIR filter value." alt="" coords="709,203,853,228"/>
+<area shape="poly" title=" " alt="" coords="938,185,847,205,846,199,937,180"/>
+<area shape="rect" href="bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f" title="Set standby time of BMP280 device in normal mode." alt="" coords="691,252,871,278"/>
+<area shape="poly" title=" " alt="" coords="948,188,940,192,925,205,916,217,907,231,891,243,867,254,865,249,889,239,903,227,912,214,921,201,936,188,945,183"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,129,624,155"/>
+<area shape="poly" title=" " alt="" coords="693,201,671,194,630,176,594,158,597,153,632,172,673,189,695,196"/>
+<area shape="poly" title=" " alt="" coords="503,135,470,130,471,125,503,130"/>
+<area shape="poly" title=" " alt="" coords="681,248,670,243,641,223,616,200,580,157,584,154,620,196,645,219,673,239,683,244"/>
+<area shape="poly" title=" " alt="" coords="945,100,936,95,921,82,912,69,903,56,889,44,852,30,816,23,817,18,854,25,891,40,907,52,916,66,925,78,940,91,948,95"/>
+<area shape="rect" href="bmp280_8c.html#a73b7bf20c2a74ff716d22181b36f753a" title="Change BMP device operating mode." alt="" coords="714,55,848,80"/>
+<area shape="poly" title=" " alt="" coords="937,103,846,84,847,78,938,98"/>
+<area shape="rect" href="bmp280_8c.html#aaf822501cab64075a6964114a3432783" title="Set pressure oversampling." alt="" coords="672,104,890,130"/>
+<area shape="poly" title=" " alt="" coords="923,120,891,120,891,114,923,114"/>
+<area shape="rect" href="bmp280_8c.html#a573d2f5665e8d34814a0da21248b7eab" title="Set temperature oversampling." alt="" coords="673,153,889,179"/>
+<area shape="poly" title=" " alt="" coords="938,136,847,155,846,150,937,131"/>
+<area shape="poly" title=" " alt="" coords="700,86,673,94,631,112,596,131,593,126,629,107,671,89,698,81"/>
+<area shape="poly" title=" " alt="" coords="656,135,624,139,624,133,656,129"/>
+<area shape="poly" title=" " alt="" coords="657,155,624,151,624,145,658,149"/>
+<area shape="poly" title=" " alt="" coords="937,54,816,28,817,23,938,48"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -750,6 +1186,30 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_ae07beee2673305da99e82aeb4f4dda40_cgraph.png" border="0" usemap="#abmp280_8c_ae07beee2673305da99e82aeb4f4dda40_cgraph" alt=""/></div>
+<map name="abmp280_8c_ae07beee2673305da99e82aeb4f4dda40_cgraph" id="abmp280_8c_ae07beee2673305da99e82aeb4f4dda40_cgraph">
+<area shape="rect" title="Read BMP device pressure and temperature readings." alt="" coords="5,80,126,106"/>
+<area shape="rect" href="bmp280_8c.html#a62e2529d9443dfe65f6d4b755db00e8d" title=" " alt="" coords="174,5,349,31"/>
+<area shape="poly" title=" " alt="" coords="91,77,173,40,191,33,193,38,175,45,93,82"/>
+<area shape="rect" href="bmp280_8c.html#a4c2312589f67afdff1c0ba5912adaf6f" title=" " alt="" coords="174,55,349,80"/>
+<area shape="poly" title=" " alt="" coords="125,82,158,78,159,83,126,88"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="210,104,313,130"/>
+<area shape="poly" title=" " alt="" coords="126,98,195,106,195,111,126,103"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="186,153,337,179"/>
+<area shape="poly" title=" " alt="" coords="94,104,175,140,193,146,191,151,173,145,92,109"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="439,104,523,130"/>
+<area shape="poly" title=" " alt="" coords="313,114,423,114,423,120,313,120"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="619,80,748,106"/>
+<area shape="poly" title=" " alt="" coords="523,109,604,100,604,105,524,115"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="612,129,755,155"/>
+<area shape="poly" title=" " alt="" coords="524,119,597,129,596,134,523,125"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="397,153,564,179"/>
+<area shape="poly" title=" " alt="" coords="337,164,381,164,381,169,337,169"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -784,6 +1244,22 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a02ac37c17668cf6fdee67b10b036ef56_cgraph.png" border="0" usemap="#abmp280_8c_a02ac37c17668cf6fdee67b10b036ef56_cgraph" alt=""/></div>
+<map name="abmp280_8c_a02ac37c17668cf6fdee67b10b036ef56_cgraph" id="abmp280_8c_a02ac37c17668cf6fdee67b10b036ef56_cgraph">
+<area shape="rect" title="Reset BMP chip." alt="" coords="5,31,143,56"/>
+<area shape="rect" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="191,31,296,56"/>
+<area shape="poly" title=" " alt="" coords="143,41,175,41,175,46,143,46"/>
+<area shape="rect" href="i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="344,31,431,56"/>
+<area shape="poly" title=" " alt="" coords="297,41,329,41,329,46,297,46"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="486,5,615,31"/>
+<area shape="poly" title=" " alt="" coords="432,34,471,28,472,33,432,39"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="479,55,622,80"/>
+<area shape="poly" title=" " alt="" coords="432,47,464,52,463,57,432,53"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -829,6 +1305,46 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a4265be98ad7d32842ae40e855692f18e_cgraph.png" border="0" usemap="#abmp280_8c_a4265be98ad7d32842ae40e855692f18e_cgraph" alt=""/></div>
+<map name="abmp280_8c_a4265be98ad7d32842ae40e855692f18e_cgraph" id="abmp280_8c_a4265be98ad7d32842ae40e855692f18e_cgraph">
+<area shape="rect" title="Set IIR filter value." alt="" coords="5,32,149,58"/>
+<area shape="rect" href="bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="197,7,333,32"/>
+<area shape="poly" title=" " alt="" coords="149,33,181,28,182,33,149,38"/>
+<area shape="rect" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="212,56,318,82"/>
+<area shape="poly" title=" " alt="" coords="149,51,197,58,196,63,149,57"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="381,5,483,31"/>
+<area shape="poly" title=" " alt="" coords="334,16,365,16,365,21,334,22"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="533,7,617,32"/>
+<area shape="poly" title=" " alt="" coords="484,16,517,16,517,22,484,21"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="674,7,802,32"/>
+<area shape="poly" title=" " alt="" coords="618,17,658,17,658,22,618,22"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="667,56,809,82"/>
+<area shape="poly" title=" " alt="" coords="618,30,680,49,678,54,617,35"/>
+<area shape="rect" href="i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="531,56,619,82"/>
+<area shape="poly" title=" " alt="" coords="318,66,516,66,516,72,318,72"/>
+<area shape="poly" title=" " alt="" coords="618,53,678,35,679,40,620,58"/>
+<area shape="poly" title=" " alt="" coords="619,66,651,66,651,72,619,72"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a4265be98ad7d32842ae40e855692f18e_icgraph.png" border="0" usemap="#abmp280_8c_a4265be98ad7d32842ae40e855692f18e_icgraph" alt=""/></div>
+<map name="abmp280_8c_a4265be98ad7d32842ae40e855692f18e_icgraph" id="abmp280_8c_a4265be98ad7d32842ae40e855692f18e_icgraph">
+<area shape="rect" title="Set IIR filter value." alt="" coords="672,5,815,31"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,5,624,31"/>
+<area shape="poly" title=" " alt="" coords="656,21,624,21,624,16,656,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,470,21,470,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -874,6 +1390,46 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a73b7bf20c2a74ff716d22181b36f753a_cgraph.png" border="0" usemap="#abmp280_8c_a73b7bf20c2a74ff716d22181b36f753a_cgraph" alt=""/></div>
+<map name="abmp280_8c_a73b7bf20c2a74ff716d22181b36f753a_cgraph" id="abmp280_8c_a73b7bf20c2a74ff716d22181b36f753a_cgraph">
+<area shape="rect" title="Change BMP device operating mode." alt="" coords="5,32,140,58"/>
+<area shape="rect" href="bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="188,7,347,32"/>
+<area shape="poly" title=" " alt="" coords="140,33,172,29,172,35,140,39"/>
+<area shape="rect" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="215,56,320,82"/>
+<area shape="poly" title=" " alt="" coords="140,50,200,58,199,63,140,56"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="395,5,497,31"/>
+<area shape="poly" title=" " alt="" coords="347,16,379,16,379,21,347,22"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="547,7,631,32"/>
+<area shape="poly" title=" " alt="" coords="498,16,531,16,531,22,498,21"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="688,7,816,32"/>
+<area shape="poly" title=" " alt="" coords="632,17,672,17,672,22,632,22"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="681,56,823,82"/>
+<area shape="poly" title=" " alt="" coords="632,30,694,49,692,54,631,35"/>
+<area shape="rect" href="i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="545,56,633,82"/>
+<area shape="poly" title=" " alt="" coords="321,66,530,66,530,72,321,72"/>
+<area shape="poly" title=" " alt="" coords="632,53,692,35,693,40,634,58"/>
+<area shape="poly" title=" " alt="" coords="633,66,665,66,665,72,633,72"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a73b7bf20c2a74ff716d22181b36f753a_icgraph.png" border="0" usemap="#abmp280_8c_a73b7bf20c2a74ff716d22181b36f753a_icgraph" alt=""/></div>
+<map name="abmp280_8c_a73b7bf20c2a74ff716d22181b36f753a_icgraph" id="abmp280_8c_a73b7bf20c2a74ff716d22181b36f753a_icgraph">
+<area shape="rect" title="Change BMP device operating mode." alt="" coords="672,5,806,31"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,5,624,31"/>
+<area shape="poly" title=" " alt="" coords="656,21,624,21,624,16,656,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,470,21,470,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -919,6 +1475,46 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_aaf822501cab64075a6964114a3432783_cgraph.png" border="0" usemap="#abmp280_8c_aaf822501cab64075a6964114a3432783_cgraph" alt=""/></div>
+<map name="abmp280_8c_aaf822501cab64075a6964114a3432783_cgraph" id="abmp280_8c_aaf822501cab64075a6964114a3432783_cgraph">
+<area shape="rect" title="Set pressure oversampling." alt="" coords="5,32,224,58"/>
+<area shape="rect" href="bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="272,7,431,32"/>
+<area shape="poly" title=" " alt="" coords="224,30,256,27,256,32,224,36"/>
+<area shape="rect" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="299,56,404,82"/>
+<area shape="poly" title=" " alt="" coords="224,53,284,59,283,65,224,59"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="479,5,581,31"/>
+<area shape="poly" title=" " alt="" coords="431,16,463,16,463,21,431,22"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="631,7,715,32"/>
+<area shape="poly" title=" " alt="" coords="582,16,615,16,615,22,582,21"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="772,7,900,32"/>
+<area shape="poly" title=" " alt="" coords="716,17,756,17,756,22,716,22"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="765,56,907,82"/>
+<area shape="poly" title=" " alt="" coords="716,30,778,49,776,54,715,35"/>
+<area shape="rect" href="i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="629,56,717,82"/>
+<area shape="poly" title=" " alt="" coords="405,66,614,66,614,72,405,72"/>
+<area shape="poly" title=" " alt="" coords="716,53,776,35,777,40,718,58"/>
+<area shape="poly" title=" " alt="" coords="717,66,749,66,749,72,717,72"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_aaf822501cab64075a6964114a3432783_icgraph.png" border="0" usemap="#abmp280_8c_aaf822501cab64075a6964114a3432783_icgraph" alt=""/></div>
+<map name="abmp280_8c_aaf822501cab64075a6964114a3432783_icgraph" id="abmp280_8c_aaf822501cab64075a6964114a3432783_icgraph">
+<area shape="rect" title="Set pressure oversampling." alt="" coords="672,5,890,31"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,5,624,31"/>
+<area shape="poly" title=" " alt="" coords="656,21,624,21,624,16,656,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,470,21,470,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -964,6 +1560,46 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a486db22a0f87aea52afd72d32bdfb64f_cgraph.png" border="0" usemap="#abmp280_8c_a486db22a0f87aea52afd72d32bdfb64f_cgraph" alt=""/></div>
+<map name="abmp280_8c_a486db22a0f87aea52afd72d32bdfb64f_cgraph" id="abmp280_8c_a486db22a0f87aea52afd72d32bdfb64f_cgraph">
+<area shape="rect" title="Set standby time of BMP280 device in normal mode." alt="" coords="5,32,185,58"/>
+<area shape="rect" href="bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="233,7,369,32"/>
+<area shape="poly" title=" " alt="" coords="185,31,217,27,217,32,185,36"/>
+<area shape="rect" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="248,56,354,82"/>
+<area shape="poly" title=" " alt="" coords="185,53,233,58,233,64,185,58"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="417,5,519,31"/>
+<area shape="poly" title=" " alt="" coords="370,16,401,16,401,21,370,22"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="569,7,653,32"/>
+<area shape="poly" title=" " alt="" coords="520,16,553,16,553,22,520,21"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="710,7,838,32"/>
+<area shape="poly" title=" " alt="" coords="654,17,694,17,694,22,654,22"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="703,56,845,82"/>
+<area shape="poly" title=" " alt="" coords="654,30,716,49,714,54,653,35"/>
+<area shape="rect" href="i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="567,56,655,82"/>
+<area shape="poly" title=" " alt="" coords="354,66,552,66,552,72,354,72"/>
+<area shape="poly" title=" " alt="" coords="654,53,714,35,715,40,656,58"/>
+<area shape="poly" title=" " alt="" coords="655,66,687,66,687,72,655,72"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a486db22a0f87aea52afd72d32bdfb64f_icgraph.png" border="0" usemap="#abmp280_8c_a486db22a0f87aea52afd72d32bdfb64f_icgraph" alt=""/></div>
+<map name="abmp280_8c_a486db22a0f87aea52afd72d32bdfb64f_icgraph" id="abmp280_8c_a486db22a0f87aea52afd72d32bdfb64f_icgraph">
+<area shape="rect" title="Set standby time of BMP280 device in normal mode." alt="" coords="672,5,851,31"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,5,624,31"/>
+<area shape="poly" title=" " alt="" coords="656,21,624,21,624,16,656,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,470,21,470,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1009,6 +1645,46 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a573d2f5665e8d34814a0da21248b7eab_cgraph.png" border="0" usemap="#abmp280_8c_a573d2f5665e8d34814a0da21248b7eab_cgraph" alt=""/></div>
+<map name="abmp280_8c_a573d2f5665e8d34814a0da21248b7eab_cgraph" id="abmp280_8c_a573d2f5665e8d34814a0da21248b7eab_cgraph">
+<area shape="rect" title="Set temperature oversampling." alt="" coords="5,32,221,58"/>
+<area shape="rect" href="bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="269,7,428,32"/>
+<area shape="poly" title=" " alt="" coords="221,31,253,27,253,32,221,36"/>
+<area shape="rect" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="296,56,401,82"/>
+<area shape="poly" title=" " alt="" coords="221,53,281,59,280,65,221,59"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="476,5,578,31"/>
+<area shape="poly" title=" " alt="" coords="428,16,460,16,460,21,428,22"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="628,7,712,32"/>
+<area shape="poly" title=" " alt="" coords="579,16,612,16,612,22,579,21"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="769,7,897,32"/>
+<area shape="poly" title=" " alt="" coords="713,17,753,17,753,22,713,22"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="762,56,904,82"/>
+<area shape="poly" title=" " alt="" coords="713,30,775,49,773,54,712,35"/>
+<area shape="rect" href="i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="626,56,714,82"/>
+<area shape="poly" title=" " alt="" coords="402,66,611,66,611,72,402,72"/>
+<area shape="poly" title=" " alt="" coords="713,53,773,35,774,40,715,58"/>
+<area shape="poly" title=" " alt="" coords="714,66,746,66,746,72,714,72"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a573d2f5665e8d34814a0da21248b7eab_icgraph.png" border="0" usemap="#abmp280_8c_a573d2f5665e8d34814a0da21248b7eab_icgraph" alt=""/></div>
+<map name="abmp280_8c_a573d2f5665e8d34814a0da21248b7eab_icgraph" id="abmp280_8c_a573d2f5665e8d34814a0da21248b7eab_icgraph">
+<area shape="rect" title="Set temperature oversampling." alt="" coords="672,5,887,31"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,5,624,31"/>
+<area shape="poly" title=" " alt="" coords="656,21,624,21,624,16,656,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,470,21,470,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1068,6 +1744,52 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a712e1325090f1da050399876d9658e36_cgraph.png" border="0" usemap="#abmp280_8c_a712e1325090f1da050399876d9658e36_cgraph" alt=""/></div>
+<map name="abmp280_8c_a712e1325090f1da050399876d9658e36_cgraph" id="abmp280_8c_a712e1325090f1da050399876d9658e36_cgraph">
+<area shape="rect" title="Write to register of BMP280 device." alt="" coords="5,31,111,56"/>
+<area shape="rect" href="i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="159,31,246,56"/>
+<area shape="poly" title=" " alt="" coords="111,41,143,41,143,46,111,46"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="301,5,429,31"/>
+<area shape="poly" title=" " alt="" coords="246,34,285,28,286,33,247,39"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="294,55,436,80"/>
+<area shape="poly" title=" " alt="" coords="247,47,279,52,278,57,246,53"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a712e1325090f1da050399876d9658e36_icgraph.png" border="0" usemap="#abmp280_8c_a712e1325090f1da050399876d9658e36_icgraph" alt=""/></div>
+<map name="abmp280_8c_a712e1325090f1da050399876d9658e36_icgraph" id="abmp280_8c_a712e1325090f1da050399876d9658e36_icgraph">
+<area shape="rect" title="Write to register of BMP280 device." alt="" coords="938,129,1043,155"/>
+<area shape="rect" href="bmp280_8c.html#a02ac37c17668cf6fdee67b10b036ef56" title="Reset BMP chip." alt="" coords="712,5,850,31"/>
+<area shape="poly" title=" " alt="" coords="969,118,934,79,913,60,889,45,849,30,851,25,891,40,916,56,938,76,973,115"/>
+<area shape="rect" href="bmp280_8c.html#a4265be98ad7d32842ae40e855692f18e" title="Set IIR filter value." alt="" coords="709,55,853,80"/>
+<area shape="poly" title=" " alt="" coords="953,124,889,94,852,83,854,78,891,89,955,119"/>
+<area shape="rect" href="bmp280_8c.html#a73b7bf20c2a74ff716d22181b36f753a" title="Change BMP device operating mode." alt="" coords="714,104,848,130"/>
+<area shape="poly" title=" " alt="" coords="922,137,848,128,849,122,923,131"/>
+<area shape="rect" href="bmp280_8c.html#aaf822501cab64075a6964114a3432783" title="Set pressure oversampling." alt="" coords="672,153,890,179"/>
+<area shape="poly" title=" " alt="" coords="923,153,891,156,890,151,922,147"/>
+<area shape="rect" href="bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f" title="Set standby time of BMP280 device in normal mode." alt="" coords="691,203,871,228"/>
+<area shape="poly" title=" " alt="" coords="954,165,891,194,855,205,853,199,889,189,952,160"/>
+<area shape="rect" href="bmp280_8c.html#a573d2f5665e8d34814a0da21248b7eab" title="Set temperature oversampling." alt="" coords="673,252,889,278"/>
+<area shape="poly" title=" " alt="" coords="973,169,938,208,916,227,891,243,866,254,864,249,889,238,912,223,934,204,969,166"/>
+<area shape="rect" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,153,624,179"/>
+<area shape="poly" title=" " alt="" coords="696,85,673,94,624,124,588,155,584,151,621,120,670,89,694,80"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,153,470,179"/>
+<area shape="poly" title=" " alt="" coords="503,169,470,169,470,164,503,164"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,153,268,179"/>
+<area shape="poly" title=" " alt="" coords="301,169,268,169,268,164,301,164"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,153,83,179"/>
+<area shape="poly" title=" " alt="" coords="115,169,83,169,83,164,115,164"/>
+<area shape="poly" title=" " alt="" coords="704,136,672,143,624,155,623,150,671,138,702,131"/>
+<area shape="poly" title=" " alt="" coords="656,169,624,169,624,164,656,164"/>
+<area shape="poly" title=" " alt="" coords="702,201,671,194,623,182,624,177,672,189,704,196"/>
+<area shape="poly" title=" " alt="" coords="685,249,670,243,621,213,584,181,588,177,624,208,673,238,687,244"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -1086,7 +1808,7 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structi2c__c__bus__handle__obj.html">i2c_c_bus_handle_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="i2c__controller_8h.html#a98515ed1dcebf40e1389384d400ded3f">i2c_c_bus_handle_t</a>&#160;</td>
           <td class="paramname"><em>bus</em>&#160;</td>
         </tr>
         <tr>
@@ -1116,6 +1838,52 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>bmp_compensate_P_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a153ceda67f3ecc98d9147fe4b7754717_cgraph.png" border="0" usemap="#abmp280_8c_a153ceda67f3ecc98d9147fe4b7754717_cgraph" alt=""/></div>
+<map name="abmp280_8c_a153ceda67f3ecc98d9147fe4b7754717_cgraph" id="abmp280_8c_a153ceda67f3ecc98d9147fe4b7754717_cgraph">
+<area shape="rect" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="5,80,76,106"/>
+<area shape="rect" href="bmp280_8c.html#af12043f643ffea6caf5be93fe8ec0435" title="Read BMP calibration data." alt="" coords="140,5,267,31"/>
+<area shape="poly" title=" " alt="" coords="58,78,88,58,123,40,136,34,138,39,125,45,91,63,61,82"/>
+<area shape="rect" href="bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="124,55,283,80"/>
+<area shape="poly" title=" " alt="" coords="76,85,108,80,109,85,77,90"/>
+<area shape="rect" href="bmp280_8c.html#a76f74528570223059dea2107d49e8441" title="Search for BMP280 device on possible addresses." alt="" coords="129,104,278,130"/>
+<area shape="poly" title=" " alt="" coords="77,95,114,101,113,106,76,101"/>
+<area shape="rect" href="i2c__controller_8c.html#a70a67c9218d9f13c8ff8ea546ed54791" title="Add I2C device and allocate memory for it." alt="" coords="141,153,266,179"/>
+<area shape="poly" title=" " alt="" coords="62,104,125,140,138,145,136,150,122,145,59,108"/>
+<area shape="rect" href="bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="357,55,459,80"/>
+<area shape="poly" title=" " alt="" coords="261,29,342,49,341,54,259,34"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="333,5,484,31"/>
+<area shape="poly" title=" " alt="" coords="267,16,317,16,317,21,267,21"/>
+<area shape="rect" href="i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="575,55,659,80"/>
+<area shape="poly" title=" " alt="" coords="460,65,559,65,559,70,460,70"/>
+<area shape="rect" href="i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="756,29,884,55"/>
+<area shape="poly" title=" " alt="" coords="659,60,740,49,741,55,660,65"/>
+<area shape="rect" href="i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="749,79,891,104"/>
+<area shape="poly" title=" " alt="" coords="660,70,733,79,733,84,659,75"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="533,5,701,31"/>
+<area shape="poly" title=" " alt="" coords="484,16,518,16,518,21,484,21"/>
+<area shape="poly" title=" " alt="" coords="283,65,342,65,342,70,283,70"/>
+<area shape="poly" title=" " alt="" coords="259,101,341,81,342,86,261,106"/>
+<area shape="rect" href="i2c__controller_8c.html#ac217eb666f2eed503785d965289c0e39" title="Change I2C device address." alt="" coords="331,104,485,130"/>
+<area shape="poly" title=" " alt="" coords="278,114,316,114,316,120,278,120"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="bmp280_8c_a153ceda67f3ecc98d9147fe4b7754717_icgraph.png" border="0" usemap="#abmp280_8c_a153ceda67f3ecc98d9147fe4b7754717_icgraph" alt=""/></div>
+<map name="abmp280_8c_a153ceda67f3ecc98d9147fe4b7754717_icgraph" id="abmp280_8c_a153ceda67f3ecc98d9147fe4b7754717_icgraph">
+<area shape="rect" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="518,5,589,31"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" title=" " alt="" coords="503,21,471,21,471,16,503,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>
+</div>
 
 </div>
 </div>

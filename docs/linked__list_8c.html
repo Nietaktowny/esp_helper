@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -104,7 +104,7 @@ $(document).ready(function(){initNavTree('linked__list_8c.html',''); initResizab
 <code>#include &lt;inttypes.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="err__controller_8h_source.html">err_controller.h</a>&quot;</code><br />
-<code>#include &quot;memory_utils.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="memory__utils_8h_source.html">memory_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="err__c__errors_8h_source.html">err_c_errors.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
@@ -126,7 +126,7 @@ Include dependency graph for linked_list.c:</div>
 <area shape="poly" title=" " alt="" coords="604,59,690,100,687,104,601,64"/>
 <area shape="rect" href="err__c__errors_8h.html" title="Error helper library errors list." alt="" coords="830,183,930,208"/>
 <area shape="poly" title=" " alt="" coords="607,42,698,65,748,83,795,107,833,137,863,169,859,172,830,141,792,111,746,88,697,70,606,47"/>
-<area shape="rect" href="memory__utils_8h_source.html" title=" " alt="" coords="491,109,599,135"/>
+<area shape="rect" href="memory__utils_8h.html" title=" " alt="" coords="491,109,599,135"/>
 <area shape="poly" title=" " alt="" coords="548,61,548,93,543,93,543,61"/>
 <area shape="rect" title=" " alt="" coords="431,183,494,208"/>
 <area shape="poly" title=" " alt="" coords="516,63,497,85,481,110,471,139,466,168,461,167,466,138,476,108,493,82,512,60"/>
@@ -148,7 +148,7 @@ Include dependency graph for linked_list.c:</div>
 <area shape="rect" href="logger__errors_8h.html" title="Logger library errors list." alt="" coords="537,256,644,282"/>
 <area shape="poly" title=" " alt="" coords="644,210,613,246,609,243,640,207"/>
 <area shape="poly" title=" " alt="" coords="702,138,534,211,438,252,435,247,532,206,700,133"/>
-<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="709,183,805,208"/>
+<area shape="rect" href="CException_8h.html" title=" " alt="" coords="709,183,805,208"/>
 <area shape="poly" title=" " alt="" coords="735,134,749,167,744,169,730,136"/>
 <area shape="poly" title=" " alt="" coords="755,133,841,173,839,178,752,138"/>
 <area shape="rect" title=" " alt="" coords="873,256,943,282"/>
@@ -256,6 +256,18 @@ Functions</h2></td></tr>
 <li>err code on failure. </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_ae9d538ed09dba37b4bdddf398663838d_cgraph.png" border="0" usemap="#alinked__list_8c_ae9d538ed09dba37b4bdddf398663838d_cgraph" alt=""/></div>
+<map name="alinked__list_8c_ae9d538ed09dba37b4bdddf398663838d_cgraph" id="alinked__list_8c_ae9d538ed09dba37b4bdddf398663838d_cgraph">
+<area shape="rect" title="Insert new item at beginning of the list." alt="" coords="5,5,120,31"/>
+<area shape="rect" href="linked__list_8c.html#a02623f6a66c191443c1e850496bc047c" title="Creates and initializes new node." alt="" coords="168,5,304,31"/>
+<area shape="poly" title=" " alt="" coords="120,16,152,16,152,21,120,21"/>
+<area shape="rect" href="linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a" title="Hash string." alt="" coords="352,5,484,31"/>
+<area shape="poly" title=" " alt="" coords="305,16,336,16,336,21,305,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -307,6 +319,20 @@ Functions</h2></td></tr>
 <li>err code on failure. </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a01399973dfda03dc0992b73d7ca71035_cgraph.png" border="0" usemap="#alinked__list_8c_a01399973dfda03dc0992b73d7ca71035_cgraph" alt=""/></div>
+<map name="alinked__list_8c_a01399973dfda03dc0992b73d7ca71035_cgraph" id="alinked__list_8c_a01399973dfda03dc0992b73d7ca71035_cgraph">
+<area shape="rect" title="Insert new item at end of the list." alt="" coords="5,31,120,56"/>
+<area shape="rect" href="linked__list_8c.html#a02623f6a66c191443c1e850496bc047c" title="Creates and initializes new node." alt="" coords="173,5,309,31"/>
+<area shape="poly" title=" " alt="" coords="120,33,157,27,158,33,120,38"/>
+<area shape="rect" href="linked__list_8c.html#a5bebee5a43cb16820f41d692a3ddeb5a" title="Find last node in list." alt="" coords="168,55,314,80"/>
+<area shape="poly" title=" " alt="" coords="120,49,153,53,152,58,120,54"/>
+<area shape="rect" href="linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a" title="Hash string." alt="" coords="362,5,494,31"/>
+<area shape="poly" title=" " alt="" coords="309,16,347,16,347,21,309,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -338,6 +364,28 @@ Functions</h2></td></tr>
 <li>err on failure </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_ac1ed4e895cabf875bd111253fb143c2f_cgraph.png" border="0" usemap="#alinked__list_8c_ac1ed4e895cabf875bd111253fb143c2f_cgraph" alt=""/></div>
+<map name="alinked__list_8c_ac1ed4e895cabf875bd111253fb143c2f_cgraph" id="alinked__list_8c_ac1ed4e895cabf875bd111253fb143c2f_cgraph">
+<area shape="rect" title="Deletes all items from the list, and returns it to initial state." alt="" coords="5,5,99,31"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="147,5,298,31"/>
+<area shape="poly" title=" " alt="" coords="99,16,131,16,131,21,99,21"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="346,5,513,31"/>
+<area shape="poly" title=" " alt="" coords="298,16,330,16,330,21,298,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_ac1ed4e895cabf875bd111253fb143c2f_icgraph.png" border="0" usemap="#alinked__list_8c_ac1ed4e895cabf875bd111253fb143c2f_icgraph" alt=""/></div>
+<map name="alinked__list_8c_ac1ed4e895cabf875bd111253fb143c2f_icgraph" id="alinked__list_8c_ac1ed4e895cabf875bd111253fb143c2f_icgraph">
+<area shape="rect" title="Deletes all items from the list, and returns it to initial state." alt="" coords="161,5,254,31"/>
+<area shape="rect" href="linked__list_8c.html#a8155fa17cde17cdc54dc3fcc5d0bab1a" title="Destroys linked list." alt="" coords="5,5,113,31"/>
+<area shape="poly" title=" " alt="" coords="145,21,113,21,113,16,145,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -409,6 +457,28 @@ Functions</h2></td></tr>
 
 <p>Creates and initializes new node. </p>
 <dl class="section note"><dt>Note</dt><dd>This function will exit when the allocation for memory fails. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a02623f6a66c191443c1e850496bc047c_cgraph.png" border="0" usemap="#alinked__list_8c_a02623f6a66c191443c1e850496bc047c_cgraph" alt=""/></div>
+<map name="alinked__list_8c_a02623f6a66c191443c1e850496bc047c_cgraph" id="alinked__list_8c_a02623f6a66c191443c1e850496bc047c_cgraph">
+<area shape="rect" title="Creates and initializes new node." alt="" coords="5,5,142,31"/>
+<area shape="rect" href="linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a" title="Hash string." alt="" coords="190,5,322,31"/>
+<area shape="poly" title=" " alt="" coords="142,16,174,16,174,21,142,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a02623f6a66c191443c1e850496bc047c_icgraph.png" border="0" usemap="#alinked__list_8c_a02623f6a66c191443c1e850496bc047c_icgraph" alt=""/></div>
+<map name="alinked__list_8c_a02623f6a66c191443c1e850496bc047c_icgraph" id="alinked__list_8c_a02623f6a66c191443c1e850496bc047c_icgraph">
+<area shape="rect" title="Creates and initializes new node." alt="" coords="168,31,304,56"/>
+<area shape="rect" href="linked__list_8c.html#ae9d538ed09dba37b4bdddf398663838d" title="Insert new item at beginning of the list." alt="" coords="5,5,120,31"/>
+<area shape="poly" title=" " alt="" coords="152,34,119,29,120,24,153,29"/>
+<area shape="rect" href="linked__list_8c.html#a01399973dfda03dc0992b73d7ca71035" title="Insert new item at end of the list." alt="" coords="5,55,120,80"/>
+<area shape="poly" title=" " alt="" coords="153,58,120,62,119,57,152,52"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -452,6 +522,24 @@ Functions</h2></td></tr>
 <li>err on failure. </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a7b38123ff3810da27f91e23466a6573b_cgraph.png" border="0" usemap="#alinked__list_8c_a7b38123ff3810da27f91e23466a6573b_cgraph" alt=""/></div>
+<map name="alinked__list_8c_a7b38123ff3810da27f91e23466a6573b_cgraph" id="alinked__list_8c_a7b38123ff3810da27f91e23466a6573b_cgraph">
+<area shape="rect" title="Delete item from list." alt="" coords="5,80,106,106"/>
+<area shape="rect" href="linked__list_8c.html#a90f3da568d45e95568b38026efe09e27" title="Find node using it&#39;s ID." alt="" coords="158,5,326,31"/>
+<area shape="poly" title=" " alt="" coords="78,77,153,40,170,34,172,39,155,45,80,82"/>
+<area shape="rect" href="linked__list_8c.html#a466e8557cd000057fe4488852d8aa417" title="Find previous relative to passed node." alt="" coords="154,55,330,80"/>
+<area shape="poly" title=" " alt="" coords="106,83,138,79,138,84,106,89"/>
+<area shape="rect" href="linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a" title="Hash string." alt="" coords="176,104,308,130"/>
+<area shape="poly" title=" " alt="" coords="106,97,161,104,160,109,106,102"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="166,153,318,179"/>
+<area shape="poly" title=" " alt="" coords="81,104,155,140,172,146,170,151,153,145,79,109"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="378,153,545,179"/>
+<area shape="poly" title=" " alt="" coords="318,164,363,164,363,169,318,169"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -483,6 +571,20 @@ Functions</h2></td></tr>
 <li>err code on failure. </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a8155fa17cde17cdc54dc3fcc5d0bab1a_cgraph.png" border="0" usemap="#alinked__list_8c_a8155fa17cde17cdc54dc3fcc5d0bab1a_cgraph" alt=""/></div>
+<map name="alinked__list_8c_a8155fa17cde17cdc54dc3fcc5d0bab1a_cgraph" id="alinked__list_8c_a8155fa17cde17cdc54dc3fcc5d0bab1a_cgraph">
+<area shape="rect" title="Destroys linked list." alt="" coords="5,5,113,31"/>
+<area shape="rect" href="linked__list_8c.html#ac1ed4e895cabf875bd111253fb143c2f" title="Deletes all items from the list, and returns it to initial state." alt="" coords="161,5,254,31"/>
+<area shape="poly" title=" " alt="" coords="113,16,145,16,145,21,113,21"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="302,5,453,31"/>
+<area shape="poly" title=" " alt="" coords="254,16,286,16,286,21,254,21"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="501,5,669,31"/>
+<area shape="poly" title=" " alt="" coords="453,16,486,16,486,21,453,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -526,6 +628,18 @@ Functions</h2></td></tr>
 <li>NULL on failure. </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a2d2c0cb350f417c0e26d9dd9f354c955_cgraph.png" border="0" usemap="#alinked__list_8c_a2d2c0cb350f417c0e26d9dd9f354c955_cgraph" alt=""/></div>
+<map name="alinked__list_8c_a2d2c0cb350f417c0e26d9dd9f354c955_cgraph" id="alinked__list_8c_a2d2c0cb350f417c0e26d9dd9f354c955_cgraph">
+<area shape="rect" title="Find item in list using it&#39;s name." alt="" coords="5,31,91,56"/>
+<area shape="rect" href="linked__list_8c.html#a90f3da568d45e95568b38026efe09e27" title="Find node using it&#39;s ID." alt="" coords="139,5,307,31"/>
+<area shape="poly" title=" " alt="" coords="91,35,123,30,124,35,91,40"/>
+<area shape="rect" href="linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a" title="Hash string." alt="" coords="157,55,289,80"/>
+<area shape="poly" title=" " alt="" coords="91,47,141,54,141,59,91,52"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -568,6 +682,20 @@ Functions</h2></td></tr>
 <li>NULL on error or if no node was found </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a90f3da568d45e95568b38026efe09e27_icgraph.png" border="0" usemap="#alinked__list_8c_a90f3da568d45e95568b38026efe09e27_icgraph" alt=""/></div>
+<map name="alinked__list_8c_a90f3da568d45e95568b38026efe09e27_icgraph" id="alinked__list_8c_a90f3da568d45e95568b38026efe09e27_icgraph">
+<area shape="rect" title="Find node using it&#39;s ID." alt="" coords="187,55,355,80"/>
+<area shape="rect" href="linked__list_8c.html#a7b38123ff3810da27f91e23466a6573b" title="Delete item from list." alt="" coords="22,5,122,31"/>
+<area shape="poly" title=" " alt="" coords="200,53,122,33,123,28,202,48"/>
+<area shape="rect" href="linked__list_8c.html#a2d2c0cb350f417c0e26d9dd9f354c955" title="Find item in list using it&#39;s name." alt="" coords="29,55,115,80"/>
+<area shape="poly" title=" " alt="" coords="171,70,115,70,115,65,171,65"/>
+<area shape="rect" href="linked__list_8c.html#a44c3985ffc432e5077c412a225bae540" title="Find item in list using it&#39;s ID." alt="" coords="5,104,139,130"/>
+<area shape="poly" title=" " alt="" coords="202,87,128,106,126,101,201,82"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -611,6 +739,16 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>NULL is returned also when there was no error, but node is equal to head in list. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a466e8557cd000057fe4488852d8aa417_icgraph.png" border="0" usemap="#alinked__list_8c_a466e8557cd000057fe4488852d8aa417_icgraph" alt=""/></div>
+<map name="alinked__list_8c_a466e8557cd000057fe4488852d8aa417_icgraph" id="alinked__list_8c_a466e8557cd000057fe4488852d8aa417_icgraph">
+<area shape="rect" title="Find previous relative to passed node." alt="" coords="154,5,330,31"/>
+<area shape="rect" href="linked__list_8c.html#a7b38123ff3810da27f91e23466a6573b" title="Delete item from list." alt="" coords="5,5,106,31"/>
+<area shape="poly" title=" " alt="" coords="138,21,106,21,106,16,138,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -654,6 +792,16 @@ Functions</h2></td></tr>
 <li>NULL on failure. </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a44c3985ffc432e5077c412a225bae540_cgraph.png" border="0" usemap="#alinked__list_8c_a44c3985ffc432e5077c412a225bae540_cgraph" alt=""/></div>
+<map name="alinked__list_8c_a44c3985ffc432e5077c412a225bae540_cgraph" id="alinked__list_8c_a44c3985ffc432e5077c412a225bae540_cgraph">
+<area shape="rect" title="Find item in list using it&#39;s ID." alt="" coords="5,5,139,31"/>
+<area shape="rect" href="linked__list_8c.html#a90f3da568d45e95568b38026efe09e27" title="Find node using it&#39;s ID." alt="" coords="187,5,355,31"/>
+<area shape="poly" title=" " alt="" coords="139,16,171,16,171,21,139,21"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -685,6 +833,16 @@ Functions</h2></td></tr>
 <li>NULL if no last node was found </li>
 </ul>
 </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_a5bebee5a43cb16820f41d692a3ddeb5a_icgraph.png" border="0" usemap="#alinked__list_8c_a5bebee5a43cb16820f41d692a3ddeb5a_icgraph" alt=""/></div>
+<map name="alinked__list_8c_a5bebee5a43cb16820f41d692a3ddeb5a_icgraph" id="alinked__list_8c_a5bebee5a43cb16820f41d692a3ddeb5a_icgraph">
+<area shape="rect" title="Find last node in list." alt="" coords="168,5,314,31"/>
+<area shape="rect" href="linked__list_8c.html#a01399973dfda03dc0992b73d7ca71035" title="Insert new item at end of the list." alt="" coords="5,5,120,31"/>
+<area shape="poly" title=" " alt="" coords="152,21,120,21,120,16,152,16"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -712,6 +870,24 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>uin64_t hashed value. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="linked__list_8c_ac84fd780c8b8fe8376d6e659d4f2703a_icgraph.png" border="0" usemap="#alinked__list_8c_ac84fd780c8b8fe8376d6e659d4f2703a_icgraph" alt=""/></div>
+<map name="alinked__list_8c_ac84fd780c8b8fe8376d6e659d4f2703a_icgraph" id="alinked__list_8c_ac84fd780c8b8fe8376d6e659d4f2703a_icgraph">
+<area shape="rect" title="Hash string." alt="" coords="352,79,484,104"/>
+<area shape="rect" href="linked__list_8c.html#a02623f6a66c191443c1e850496bc047c" title="Creates and initializes new node." alt="" coords="168,29,304,55"/>
+<area shape="poly" title=" " alt="" coords="352,77,285,58,287,53,354,71"/>
+<area shape="rect" href="linked__list_8c.html#a7b38123ff3810da27f91e23466a6573b" title="Delete item from list." alt="" coords="186,79,286,104"/>
+<area shape="poly" title=" " alt="" coords="337,94,286,94,286,89,337,89"/>
+<area shape="rect" href="linked__list_8c.html#a2d2c0cb350f417c0e26d9dd9f354c955" title="Find item in list using it&#39;s name." alt="" coords="193,128,279,154"/>
+<area shape="poly" title=" " alt="" coords="354,112,280,132,278,127,353,106"/>
+<area shape="rect" href="linked__list_8c.html#ae9d538ed09dba37b4bdddf398663838d" title="Insert new item at beginning of the list." alt="" coords="5,5,120,31"/>
+<area shape="poly" title=" " alt="" coords="152,33,119,29,120,23,153,28"/>
+<area shape="rect" href="linked__list_8c.html#a01399973dfda03dc0992b73d7ca71035" title="Insert new item at end of the list." alt="" coords="5,55,120,80"/>
+<area shape="poly" title=" " alt="" coords="153,57,120,62,119,57,152,52"/>
+</map>
+</div>
 
 </div>
 </div>

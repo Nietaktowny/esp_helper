@@ -1,0 +1,7 @@
+<map id="test_if_get_base_mac_as_str_has_non_zero_length" name="test_if_get_base_mac_as_str_has_non_zero_length">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,157,61"/>
+<area shape="rect" id="Node000002" href="$sys__utils_8c.html#a83d18d05750f1c594860687ff0ec3882" title="Get base chip MAC address as C string." alt="" coords="205,13,354,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,31,189,31,189,36,157,36"/>
+<area shape="rect" id="Node000003" href="$sys__utils_8c.html#ab39f400f14d827d848f3f907b2d5a7d8" title="Get base chip MAC address." alt="" coords="402,20,583,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="354,31,386,31,386,36,354,36"/>
+</map>

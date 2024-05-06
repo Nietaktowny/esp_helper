@@ -1,0 +1,7 @@
+<map id="test_if_logger_write_returns_non_zero_on_the_same_log_level_error" name="test_if_logger_write_returns_non_zero_on_the_same_log_level_error">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,182,71"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927" title="Set logger log level." alt="" coords="230,5,369,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,30,214,26,214,31,183,35"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#a382738e933b8f30c6f9506f99ca32518" title="Write to logger log files and stderr." alt="" coords="254,55,345,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,51,239,58,238,63,182,56"/>
+</map>

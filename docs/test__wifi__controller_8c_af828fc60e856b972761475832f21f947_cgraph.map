@@ -1,0 +1,9 @@
+<map id="test_if_ap_ip_is_cleared_after_deinit" name="test_if_ap_ip_is_cleared_after_deinit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,167,88"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="230,5,322,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,44,214,31,215,37,167,49"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="215,55,337,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="167,65,199,65,199,70,167,70"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="224,104,328,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="167,86,210,97,209,102,166,91"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="test_if_scan_all_ap_returns_err_on_not_init_wifi" name="test_if_scan_all_ap_returns_err_on_not_init_wifi">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,142,71"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="209,5,301,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,31,193,24,194,29,142,37"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels." alt="" coords="190,55,320,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,50,174,54,174,59,142,55"/>
+</map>

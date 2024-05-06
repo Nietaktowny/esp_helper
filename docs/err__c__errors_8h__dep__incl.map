@@ -1,32 +1,69 @@
 <map id="projects/lib_tests/lib/err_controller/include/err_c_errors.h" name="projects/lib_tests/lib/err_controller/include/err_c_errors.h">
-<area shape="rect" id="Node000001" title="Error helper library errors list." alt="" coords="1053,5,1202,61"/>
-<area shape="rect" id="Node000002" href="$err__controller_8h.html" title="Error helper library header." alt="" coords="993,109,1148,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1107,76,1088,110,1083,107,1102,73"/>
-<area shape="rect" id="Node000007" href="$err__controller_8c.html" title="Error helper library source file." alt="" coords="5,213,138,268"/>
-<area shape="poly" id="edge14_Node000001_Node000007" title=" " alt="" coords="1038,49,871,74,650,110,401,158,151,215,139,219,138,213,150,210,400,152,649,105,871,68,1037,44"/>
-<area shape="rect" id="Node000010" href="$linked__list_8c.html" title="Linked list library source file." alt="" coords="1649,213,1771,268"/>
-<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="1217,63,1638,210,1649,214,1648,219,1636,215,1216,68"/>
-<area shape="rect" id="Node000012" href="$tcp__controller_8c.html" title="TCP Controller source file." alt="" coords="1796,213,1931,268"/>
-<area shape="poly" id="edge16_Node000001_Node000012" title=" " alt="" coords="1218,52,1442,106,1614,156,1784,210,1796,214,1795,219,1783,215,1612,161,1440,112,1217,57"/>
-<area shape="rect" id="Node000003" href="$adc__controller_8c.html" title="ADC Controller source file." alt="" coords="162,213,301,268"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="977,144,846,150,679,163,496,184,313,215,301,218,300,213,312,210,495,179,679,158,845,145,977,138"/>
-<area shape="rect" id="Node000004" href="$bmp280_8c.html" title="BMP280 library source file." alt="" coords="325,220,495,261"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="977,149,762,174,635,193,508,215,478,222,477,217,507,210,634,187,761,169,977,144"/>
-<area shape="rect" id="Node000005" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="519,213,653,268"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="978,154,830,179,665,215,654,218,653,213,664,210,829,174,977,149"/>
-<area shape="rect" id="Node000006" href="$err__c__names_8c.html" title="Auto generated file with ESP Helper libraries error names." alt="" coords="677,213,810,268"/>
-<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="978,167,822,215,811,219,809,214,820,210,977,162"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="977,145,547,172,317,192,151,215,139,218,138,213,150,210,317,187,546,167,977,140"/>
-<area shape="rect" id="Node000008" href="$esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="833,213,985,268"/>
-<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="1015,176,954,214,951,210,1013,171"/>
-<area shape="rect" id="Node000009" href="$http__client_8c.html" title="Http client source file." alt="" coords="1008,213,1132,268"/>
-<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="1073,180,1073,212,1068,212,1068,180"/>
-<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="1163,142,1381,164,1510,184,1637,210,1649,213,1648,218,1636,215,1509,189,1381,169,1163,147"/>
-<area shape="rect" id="Node000011" href="$sys__utils_8c.html" title="Source file of sys_utils library." alt="" coords="1157,213,1296,268"/>
-<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="1126,171,1186,210,1183,214,1123,176"/>
-<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="1164,139,1288,146,1443,159,1614,180,1784,210,1796,213,1795,218,1783,215,1613,185,1442,164,1287,151,1163,144"/>
-<area shape="rect" id="Node000013" href="$wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="1320,213,1460,268"/>
-<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="1164,165,1308,210,1320,214,1319,219,1307,215,1162,170"/>
-<area shape="rect" id="Node000014" href="$wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="1484,213,1624,268"/>
-<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="1164,149,1310,174,1473,210,1484,213,1483,218,1472,215,1309,180,1163,154"/>
+<area shape="rect" id="Node000001" title="Error helper library errors list." alt="" coords="3684,5,3833,61"/>
+<area shape="rect" id="Node000002" href="$err__controller_8h.html" title="Error helper library header." alt="" coords="2059,117,2215,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="3668,43,2215,140,2215,135,3668,38"/>
+<area shape="rect" id="Node000008" href="$err__controller_8c.html" title="Error helper library source file." alt="" coords="5,235,138,291"/>
+<area shape="poly" id="edge27_Node000001_Node000008" title=" " alt="" coords="3668,37,3106,39,2253,49,1800,58,1372,71,1002,89,724,112,560,132,433,153,309,183,151,230,132,237,130,232,149,225,307,178,432,147,559,126,723,106,1002,84,1372,66,1800,53,2253,44,3106,34,3668,32"/>
+<area shape="rect" id="Node000013" href="$linked__list_8c.html" title="Linked list library source file." alt="" coords="162,235,285,291"/>
+<area shape="poly" id="edge28_Node000001_Node000013" title=" " alt="" coords="3668,40,2972,65,1916,109,1376,137,893,167,517,198,385,214,297,230,277,237,275,232,296,225,384,209,517,193,893,161,1376,132,1916,104,2972,60,3668,35"/>
+<area shape="rect" id="Node000015" href="$ota__controller_8c.html" title=" " alt="" coords="3589,235,3725,291"/>
+<area shape="poly" id="edge29_Node000001_Node000015" title=" " alt="" coords="3742,76,3671,236,3666,234,3737,74"/>
+<area shape="rect" id="Node000017" href="$tcp__controller_8c.html" title="TCP Controller source file." alt="" coords="3749,235,3885,291"/>
+<area shape="poly" id="edge30_Node000001_Node000017" title=" " alt="" coords="3745,76,3735,127,3736,153,3742,179,3760,208,3783,233,3779,236,3755,211,3737,181,3730,154,3730,126,3740,75"/>
+<area shape="rect" id="Node000023" href="$embedded_2test__err__controller_2test__err__controller_8c.html" title=" " alt="" coords="3908,228,4046,298"/>
+<area shape="poly" id="edge32_Node000001_Node000023" title=" " alt="" coords="3760,76,3768,128,3778,155,3792,178,3909,230,3907,235,3788,182,3773,157,3763,130,3755,77"/>
+<area shape="rect" id="Node000024" href="$test__esp__helper__utils_8c.html" title=" " alt="" coords="4069,228,4218,298"/>
+<area shape="poly" id="edge33_Node000001_Node000024" title=" " alt="" coords="3779,74,3812,138,3836,178,3864,196,3890,206,3915,211,3940,213,3994,214,4024,217,4059,225,4070,229,4068,234,4057,230,4023,222,3993,219,3940,218,3915,217,3889,212,3862,201,3832,182,3807,141,3775,76"/>
+<area shape="rect" id="Node000028" href="$test__cli__manager_8c.html" title=" " alt="" coords="3846,109,3990,180"/>
+<area shape="poly" id="edge31_Node000001_Node000028" title=" " alt="" coords="3812,68,3869,106,3866,111,3809,72"/>
+<area shape="rect" id="Node000029" href="$test__http__client_8c.html" title=" " alt="" coords="4015,109,4158,180"/>
+<area shape="poly" id="edge34_Node000001_Node000029" title=" " alt="" coords="3849,57,4003,106,4015,111,4013,116,4001,112,3847,62"/>
+<area shape="rect" id="Node000030" href="$test__sys__utils_8c.html" title=" " alt="" coords="4182,117,4356,172"/>
+<area shape="poly" id="edge35_Node000001_Node000030" title=" " alt="" coords="3849,44,4000,69,4171,106,4195,113,4194,119,4170,112,3999,74,3848,49"/>
+<area shape="rect" id="Node000031" href="$test__wifi__controller_8c.html" title=" " alt="" coords="4380,109,4518,180"/>
+<area shape="poly" id="edge36_Node000001_Node000031" title=" " alt="" coords="3848,35,3955,42,4086,55,4228,76,4368,106,4380,110,4379,115,4367,112,4227,81,4085,60,3955,47,3848,40"/>
+<area shape="rect" id="Node000003" href="$adc__controller_8c.html" title="ADC Controller source file." alt="" coords="490,235,629,291"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2044,154,1589,182,1381,188,1113,193,846,205,732,215,641,230,619,237,617,232,640,225,732,210,846,199,1113,188,1381,183,1589,177,2043,149"/>
+<area shape="rect" id="Node000004" href="$arena_8c.html" title=" " alt="" coords="652,243,795,283"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="2044,154,1589,182,1469,187,1368,188,1194,185,1111,187,1023,193,923,207,807,230,764,245,763,240,805,225,923,201,1023,188,1111,181,1194,180,1368,183,1469,182,1589,177,2043,149"/>
+<area shape="rect" id="Node000005" href="$bmp280_8c.html" title="BMP280 library source file." alt="" coords="818,243,989,283"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="2044,154,1443,195,1149,216,1001,230,952,245,951,240,1000,225,1148,211,1443,190,2044,149"/>
+<area shape="rect" id="Node000006" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="1012,235,1147,291"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="2044,154,1547,190,1300,212,1159,230,1137,237,1136,232,1158,225,1300,206,1547,185,2043,149"/>
+<area shape="rect" id="Node000007" href="$err__c__names_8c.html" title="Auto generated file with ESP Helper libraries error names." alt="" coords="1171,235,1303,291"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="2044,154,1660,183,1460,205,1377,217,1315,230,1294,237,1292,232,1313,225,1376,212,1459,200,1660,178,2043,149"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="2043,150,1618,160,1028,177,473,201,270,215,151,230,128,237,127,232,150,225,269,210,472,196,1028,172,1618,155,2043,145"/>
+<area shape="rect" id="Node000009" href="$esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="1327,235,1478,291"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="2044,153,1931,161,1792,176,1640,198,1489,230,1467,237,1465,232,1488,225,1639,193,1791,171,1931,156,2044,148"/>
+<area shape="rect" id="Node000010" href="$http__client_8c.html" title="Http client source file." alt="" coords="1501,235,1626,291"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="2044,156,1854,181,1745,202,1638,230,1619,237,1617,232,1636,225,1744,197,1853,176,2043,151"/>
+<area shape="rect" id="Node000011" href="$http__server_8c.html" title=" " alt="" coords="1650,235,1779,291"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="2044,166,1923,193,1792,230,1774,237,1772,232,1791,225,1922,188,2043,160"/>
+<area shape="rect" id="Node000012" href="$i2c__controller_8c.html" title=" " alt="" coords="1803,235,1937,291"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="2062,181,1934,237,1931,232,2060,176"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="2044,155,1589,182,1305,186,940,187,753,189,576,197,421,210,297,230,276,237,275,232,296,225,420,204,576,191,753,184,940,181,1305,181,1589,177,2043,149"/>
+<area shape="rect" id="Node000014" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html" title=" " alt="" coords="1962,235,2133,291"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="2109,186,2071,236,2066,233,2105,183"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="2230,144,2521,150,2911,163,3111,174,3298,187,3458,204,3579,225,3601,232,3600,237,3578,230,3457,209,3297,192,3111,179,2911,168,2521,155,2230,149"/>
+<area shape="rect" id="Node000016" href="$sys__utils_8c.html" title="Source file of sys_utils library." alt="" coords="2158,235,2297,291"/>
+<area shape="poly" id="edge15_Node000002_Node000016" title=" " alt="" coords="2169,183,2208,233,2204,236,2165,186"/>
+<area shape="poly" id="edge16_Node000002_Node000017" title=" " alt="" coords="2230,144,2550,148,2987,160,3211,171,3421,184,3602,202,3737,225,3760,232,3759,237,3736,230,3601,208,3421,190,3211,176,2986,165,2550,153,2230,149"/>
+<area shape="rect" id="Node000018" href="$wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="2321,235,2462,291"/>
+<area shape="poly" id="edge17_Node000002_Node000018" title=" " alt="" coords="2211,176,2333,232,2331,237,2209,181"/>
+<area shape="rect" id="Node000019" href="$wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="2485,235,2626,291"/>
+<area shape="poly" id="edge18_Node000002_Node000019" title=" " alt="" coords="2230,161,2348,189,2475,225,2495,232,2493,237,2473,230,2346,194,2229,167"/>
+<area shape="rect" id="Node000020" href="$src_2main_8c.html" title=" " alt="" coords="2650,243,2770,283"/>
+<area shape="poly" id="edge19_Node000002_Node000020" title=" " alt="" coords="2230,150,2421,175,2531,197,2639,225,2675,240,2673,245,2637,230,2530,202,2420,181,2230,156"/>
+<area shape="rect" id="Node000021" href="$desktop_2test__err__controller_2test__err__controller_8c.html" title=" " alt="" coords="2795,235,2994,291"/>
+<area shape="poly" id="edge20_Node000002_Node000021" title=" " alt="" coords="2231,150,2481,176,2632,197,2783,225,2811,232,2810,237,2782,230,2631,203,2480,181,2230,155"/>
+<area shape="rect" id="Node000022" href="$test_2desktop_2test__nvs__controller_2test__nvs__controller_8c.html" title=" " alt="" coords="3018,235,3224,291"/>
+<area shape="poly" id="edge21_Node000002_Node000022" title=" " alt="" coords="2230,146,2379,153,2573,167,2790,191,3007,225,3037,232,3036,237,3006,230,2789,196,2573,173,2379,159,2230,151"/>
+<area shape="poly" id="edge22_Node000002_Node000023" title=" " alt="" coords="2230,143,2579,146,3061,157,3312,167,3545,181,3746,200,3897,225,3908,228,3907,233,3896,230,3745,206,3545,187,3311,172,3061,162,2578,151,2230,148"/>
+<area shape="poly" id="edge23_Node000002_Node000024" title=" " alt="" coords="2230,143,2607,145,3137,155,3412,166,3670,180,3892,200,3983,212,4059,225,4070,228,4068,233,4058,230,3982,217,3891,205,3670,185,3412,171,3137,161,2607,150,2230,148"/>
+<area shape="rect" id="Node000025" href="$test_2embedded_2test__nvs__controller_2test__nvs__controller_8c.html" title=" " alt="" coords="3248,228,3386,298"/>
+<area shape="poly" id="edge24_Node000002_Node000025" title=" " alt="" coords="2230,146,2458,156,2748,172,3031,195,3148,209,3236,225,3248,228,3247,234,3235,230,3147,214,3030,200,2748,177,2457,161,2230,151"/>
+<area shape="rect" id="Node000026" href="$test__wifi__manager_8c.html" title=" " alt="" coords="3409,228,3566,298"/>
+<area shape="poly" id="edge25_Node000002_Node000026" title=" " alt="" coords="2231,146,2488,154,2825,170,3156,193,3294,208,3397,225,3409,228,3408,233,3396,230,3293,213,3156,199,2825,175,2488,160,2230,151"/>
+<area shape="rect" id="Node000027" href="$test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="309,235,466,291"/>
+<area shape="poly" id="edge26_Node000002_Node000027" title=" " alt="" coords="2044,155,1589,182,1345,188,1032,193,719,204,586,215,479,230,453,237,451,232,478,225,585,209,719,199,1032,187,1345,183,1589,177,2043,149"/>
 </map>

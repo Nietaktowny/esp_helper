@@ -1,0 +1,59 @@
+<map id="app_main" name="app_main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,645,83,671"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8c.html#a4b80c5127fd2867a5881d9c1f9d2cfda" title="Log all logger library logs to remote host on TCP port." alt="" coords="131,296,285,322"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,644,192,335,196,337,54,646"/>
+<area shape="rect" id="Node000017" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="168,596,248,622"/>
+<area shape="poly" id="edge27_Node000001_Node000017" title=" " alt="" coords="82,644,152,623,154,628,84,649"/>
+<area shape="rect" id="Node000019" href="$logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927" title="Set logger log level." alt="" coords="138,645,278,671"/>
+<area shape="poly" id="edge29_Node000001_Node000019" title=" " alt="" coords="83,656,123,656,123,661,83,661"/>
+<area shape="rect" id="Node000020" href="$sys__utils_8c.html#a0c61fb7894fc76a6ab63fa635cc80004" title="Setup SNTP server for adjusting system time." alt="" coords="756,571,921,596"/>
+<area shape="poly" id="edge30_Node000001_Node000020" title=" " alt="" coords="53,643,84,610,106,594,130,581,214,556,303,540,392,533,479,532,563,537,640,545,764,564,763,570,639,550,562,542,479,538,392,538,303,545,216,561,132,586,108,598,88,614,57,647"/>
+<area shape="rect" id="Node000021" href="$wifi__controller_8h.html#a5ffe20bdd9ee714423ca066be11ced00" title="Get current IPv4 address of STA interface." alt="" coords="140,695,276,720"/>
+<area shape="poly" id="edge32_Node000001_Node000021" title=" " alt="" coords="84,667,149,687,147,692,82,672"/>
+<area shape="rect" id="Node000022" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="156,744,260,770"/>
+<area shape="poly" id="edge33_Node000001_Node000022" title=" " alt="" coords="59,670,90,700,132,731,142,736,140,740,129,735,87,704,55,674"/>
+<area shape="rect" id="Node000023" href="$wifi__controller_8h.html#a222008978f46f659f29a0f44e4985780" title="Starts WiFi in STA mode." alt="" coords="152,793,264,819"/>
+<area shape="poly" id="edge34_Node000001_Node000023" title=" " alt="" coords="53,670,82,724,105,754,132,780,139,785,137,789,129,784,101,758,78,727,49,673"/>
+<area shape="rect" id="Node000003" href="$cli__manager_8c.html#a6cf547424c3b4d26fa301c9f2bc79688" title="Task responsible for accepting new hosts in TCP log server." alt="" coords="353,271,465,296"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,296,337,290,337,295,286,302"/>
+<area shape="rect" id="Node000004" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="977,344,1081,370"/>
+<area shape="poly" id="edge12_Node000002_Node000004" title=" " alt="" coords="226,293,276,259,349,216,437,173,484,155,532,141,578,132,616,131,700,141,822,152,873,166,931,200,962,229,987,264,1020,328,1015,331,983,266,958,233,927,204,871,171,821,157,699,146,615,136,579,137,533,146,486,160,439,178,352,220,279,264,229,298"/>
+<area shape="rect" id="Node000010" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="333,5,484,31"/>
+<area shape="poly" id="edge13_Node000002_Node000010" title=" " alt="" coords="209,295,220,247,242,179,278,105,303,70,331,40,335,37,338,42,335,44,307,74,283,108,247,181,225,249,214,296"/>
+<area shape="rect" id="Node000012" href="$tcp__controller_8c.html#aa19f22c703b27c1834b997235fa198a6" title="Bind socket to prepared address." alt="" coords="558,369,674,395"/>
+<area shape="poly" id="edge15_Node000002_Node000012" title=" " alt="" coords="284,320,543,367,542,372,283,325"/>
+<area shape="rect" id="Node000014" href="$tcp__controller_8c.html#a274866f382f711a467053cf394d3792e" title="Create socket." alt="" coords="774,521,903,547"/>
+<area shape="poly" id="edge20_Node000002_Node000014" title=" " alt="" coords="223,320,270,363,301,386,334,406,389,431,445,452,561,486,669,509,759,523,758,528,668,514,560,491,444,457,386,436,332,411,298,391,266,367,220,324"/>
+<area shape="rect" id="Node000015" href="$tcp__controller_8c.html#ab93c55c49481e20286541651c674561b" title="Prepare address for binding socket." alt="" coords="338,55,480,80"/>
+<area shape="poly" id="edge22_Node000002_Node000015" title=" " alt="" coords="211,295,226,257,251,204,286,148,331,98,349,85,352,90,335,101,290,151,256,207,231,259,216,297"/>
+<area shape="rect" id="Node000016" href="$tcp__controller_8c.html#abcee5d45743bfa00a044a753f3ffa501" title="Listen on socket for incoming connections." alt="" coords="554,420,678,446"/>
+<area shape="poly" id="edge23_Node000002_Node000016" title=" " alt="" coords="237,320,334,361,441,392,540,415,539,421,440,398,332,366,235,325"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="465,268,575,244,710,222,777,215,839,212,891,216,930,226,960,247,985,274,1018,329,1014,331,981,277,957,251,928,231,890,221,839,218,778,220,711,227,576,250,466,273"/>
+<area shape="rect" id="Node000005" href="$logger_8c.html#ac318f2fb9f51699954c24804dd8b095d" title="Add new log file to be used as log output." alt="" coords="550,320,682,346"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="466,294,545,313,543,318,465,299"/>
+<area shape="rect" id="Node000006" href="$logger_8c.html#a4cae04593f6a3be65ac345115c8a959d" title="Clear all files used as log output." alt="" coords="548,155,684,196"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="431,268,531,212,554,200,556,205,534,217,434,273"/>
+<area shape="rect" id="Node000007" href="$tcp__controller_8c.html#acb904407f0f4032b3936206e8db2e0aa" title="Accept connection on listen socket, and return client socket." alt="" coords="554,271,678,296"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="465,281,539,281,539,286,465,286"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="652,267,708,251,778,239,816,236,855,237,893,243,930,254,956,269,979,288,1013,329,1009,333,975,292,953,273,928,259,892,248,855,242,816,241,779,244,709,257,654,273"/>
+<area shape="rect" id="Node000008" href="$tcp__controller_8c.html#ae0b781bbcb6353cf585fcb0003c42465" title="Read port to which socket is bound." alt="" coords="748,319,929,344"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="679,294,761,312,760,317,677,299"/>
+<area shape="rect" id="Node000009" href="$tcp__controller_8c.html#a9c6ddc5f8668c1f0d4103c5e77fdb6a0" title=" " alt="" coords="756,269,921,295"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="678,280,740,280,740,285,678,286"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="930,341,962,345,961,351,929,346"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="898,293,930,304,993,334,991,339,928,309,896,298"/>
+<area shape="rect" id="Node000011" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="532,5,700,31"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="484,16,517,16,517,21,484,21"/>
+<area shape="poly" id="edge16_Node000012_Node000004" title=" " alt="" coords="674,376,961,358,961,364,675,381"/>
+<area shape="poly" id="edge19_Node000012_Node000008" title=" " alt="" coords="674,366,763,346,764,351,675,372"/>
+<area shape="rect" id="Node000013" href="$tcp__controller_8c.html#a46d32663b476a9417c5056b4d604438d" title="Read IPv4 address to which socket is bound." alt="" coords="754,420,923,446"/>
+<area shape="poly" id="edge17_Node000012_Node000013" title=" " alt="" coords="675,393,764,413,763,419,674,398"/>
+<area shape="poly" id="edge18_Node000013_Node000004" title=" " alt="" coords="878,417,928,398,984,374,986,379,930,403,880,422"/>
+<area shape="poly" id="edge21_Node000014_Node000004" title=" " alt="" coords="893,518,927,500,956,473,980,442,1014,382,1018,385,984,445,960,477,931,504,896,523"/>
+<area shape="poly" id="edge24_Node000016_Node000004" title=" " alt="" coords="654,444,709,459,779,472,817,474,855,473,892,467,928,456,953,441,975,422,1009,381,1013,385,979,426,956,446,930,461,894,472,855,478,817,480,779,477,708,465,653,449"/>
+<area shape="poly" id="edge26_Node000016_Node000008" title=" " alt="" coords="666,417,699,405,754,378,802,350,805,355,756,383,701,410,668,422"/>
+<area shape="poly" id="edge25_Node000016_Node000013" title=" " alt="" coords="678,430,738,430,738,436,678,436"/>
+<area shape="rect" id="Node000018" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="334,596,483,622"/>
+<area shape="poly" id="edge28_Node000017_Node000018" title=" " alt="" coords="248,606,318,606,318,612,248,612"/>
+<area shape="poly" id="edge31_Node000020_Node000004" title=" " alt="" coords="911,568,927,557,963,517,990,470,1008,423,1019,384,1025,385,1013,425,995,472,968,521,931,562,914,572"/>
+</map>

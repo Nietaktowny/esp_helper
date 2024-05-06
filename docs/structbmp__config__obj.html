@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -92,35 +92,112 @@ $(document).ready(function(){initNavTree('structbmp__config__obj.html',''); init
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structbmp__config__obj-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle"><div class="title">bmp_config_obj Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="bmp280_8h_source.html">bmp280.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aa2848532cfc4e087194bd5e91409e64a" id="r_aa2848532cfc4e087194bd5e91409e64a"><td class="memItemLeft" align="right" valign="top"><a id="aa2848532cfc4e087194bd5e91409e64a" name="aa2848532cfc4e087194bd5e91409e64a"></a>
-<a class="el" href="bmp280_8h.html#ab7d637c33129e66fd7daad75e9aa28f0">bmp_mode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b></td></tr>
-<tr class="memdesc:aa2848532cfc4e087194bd5e91409e64a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operating mode of BMP280 device. <br /></td></tr>
-<tr class="separator:aa2848532cfc4e087194bd5e91409e64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3ef38dd7ff485ca67f30b2874e9f3f9" id="r_ac3ef38dd7ff485ca67f30b2874e9f3f9"><td class="memItemLeft" align="right" valign="top"><a id="ac3ef38dd7ff485ca67f30b2874e9f3f9" name="ac3ef38dd7ff485ca67f30b2874e9f3f9"></a>
-<a class="el" href="bmp280_8h.html#a7e16473d0fcc239a4216896127c57a6d">bmp_stdby_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>standby</b></td></tr>
-<tr class="memdesc:ac3ef38dd7ff485ca67f30b2874e9f3f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby of BMP280 device in normal operating mode. <br /></td></tr>
-<tr class="separator:ac3ef38dd7ff485ca67f30b2874e9f3f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a185d0cc701dfd68c250434c54459c9b4" id="r_a185d0cc701dfd68c250434c54459c9b4"><td class="memItemLeft" align="right" valign="top"><a id="a185d0cc701dfd68c250434c54459c9b4" name="a185d0cc701dfd68c250434c54459c9b4"></a>
-<a class="el" href="bmp280_8h.html#a5e2d1789eae2360189e7881d0db1f40f">bmp_oversampling_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>press_over</b></td></tr>
-<tr class="memdesc:a185d0cc701dfd68c250434c54459c9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling of pressure. <br /></td></tr>
-<tr class="separator:a185d0cc701dfd68c250434c54459c9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbec4deda07a9eeec256809d071cb5b4" id="r_abbec4deda07a9eeec256809d071cb5b4"><td class="memItemLeft" align="right" valign="top"><a id="abbec4deda07a9eeec256809d071cb5b4" name="abbec4deda07a9eeec256809d071cb5b4"></a>
-<a class="el" href="bmp280_8h.html#a5e2d1789eae2360189e7881d0db1f40f">bmp_oversampling_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>temp_over</b></td></tr>
-<tr class="memdesc:abbec4deda07a9eeec256809d071cb5b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling of temperature. <br /></td></tr>
-<tr class="separator:abbec4deda07a9eeec256809d071cb5b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0086657f08bef3b4ffe06e00feb7de0" id="r_ad0086657f08bef3b4ffe06e00feb7de0"><td class="memItemLeft" align="right" valign="top"><a id="ad0086657f08bef3b4ffe06e00feb7de0" name="ad0086657f08bef3b4ffe06e00feb7de0"></a>
-<a class="el" href="bmp280_8h.html#a10658ef8374c97bdc03473a07118fa4e">bmp_iir_filter_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>iir_filter</b></td></tr>
-<tr class="memdesc:ad0086657f08bef3b4ffe06e00feb7de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value for IIR filter. <br /></td></tr>
-<tr class="separator:ad0086657f08bef3b4ffe06e00feb7de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+Data Fields</h2></td></tr>
+<tr class="memitem:aeb26607ef2a3dc0854912567b33a9402" id="r_aeb26607ef2a3dc0854912567b33a9402"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bmp280_8h.html#ab7d637c33129e66fd7daad75e9aa28f0">bmp_mode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp__config__obj.html#aeb26607ef2a3dc0854912567b33a9402">mode</a></td></tr>
+<tr class="memdesc:aeb26607ef2a3dc0854912567b33a9402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operating mode of BMP280 device.  <br /></td></tr>
+<tr class="separator:aeb26607ef2a3dc0854912567b33a9402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a8bc3683396f80c1fb3238f014d8d1c" id="r_a3a8bc3683396f80c1fb3238f014d8d1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bmp280_8h.html#a7e16473d0fcc239a4216896127c57a6d">bmp_stdby_time_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp__config__obj.html#a3a8bc3683396f80c1fb3238f014d8d1c">standby</a></td></tr>
+<tr class="memdesc:a3a8bc3683396f80c1fb3238f014d8d1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby of BMP280 device in normal operating mode.  <br /></td></tr>
+<tr class="separator:a3a8bc3683396f80c1fb3238f014d8d1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5e931518dc7680399dcbf05b51e40c" id="r_aad5e931518dc7680399dcbf05b51e40c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bmp280_8h.html#a5e2d1789eae2360189e7881d0db1f40f">bmp_oversampling_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp__config__obj.html#aad5e931518dc7680399dcbf05b51e40c">press_over</a></td></tr>
+<tr class="memdesc:aad5e931518dc7680399dcbf05b51e40c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling of pressure.  <br /></td></tr>
+<tr class="separator:aad5e931518dc7680399dcbf05b51e40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89cffa893ab4248df02eb79bcf4560cb" id="r_a89cffa893ab4248df02eb79bcf4560cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bmp280_8h.html#a5e2d1789eae2360189e7881d0db1f40f">bmp_oversampling_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp__config__obj.html#a89cffa893ab4248df02eb79bcf4560cb">temp_over</a></td></tr>
+<tr class="memdesc:a89cffa893ab4248df02eb79bcf4560cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling of temperature.  <br /></td></tr>
+<tr class="separator:a89cffa893ab4248df02eb79bcf4560cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab583641534431a03cae54f1f598f182d" id="r_ab583641534431a03cae54f1f598f182d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bmp280_8h.html#a10658ef8374c97bdc03473a07118fa4e">bmp_iir_filter_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp__config__obj.html#ab583641534431a03cae54f1f598f182d">iir_filter</a></td></tr>
+<tr class="memdesc:ab583641534431a03cae54f1f598f182d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Value for IIR filter.  <br /></td></tr>
+<tr class="separator:ab583641534431a03cae54f1f598f182d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="ab583641534431a03cae54f1f598f182d" name="ab583641534431a03cae54f1f598f182d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab583641534431a03cae54f1f598f182d">&#9670;&#160;</a></span>iir_filter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bmp280_8h.html#a10658ef8374c97bdc03473a07118fa4e">bmp_iir_filter_t</a> iir_filter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Value for IIR filter. </p>
+
+</div>
+</div>
+<a id="aeb26607ef2a3dc0854912567b33a9402" name="aeb26607ef2a3dc0854912567b33a9402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb26607ef2a3dc0854912567b33a9402">&#9670;&#160;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bmp280_8h.html#ab7d637c33129e66fd7daad75e9aa28f0">bmp_mode_t</a> mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Operating mode of BMP280 device. </p>
+
+</div>
+</div>
+<a id="aad5e931518dc7680399dcbf05b51e40c" name="aad5e931518dc7680399dcbf05b51e40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5e931518dc7680399dcbf05b51e40c">&#9670;&#160;</a></span>press_over</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bmp280_8h.html#a5e2d1789eae2360189e7881d0db1f40f">bmp_oversampling_t</a> press_over</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Oversampling of pressure. </p>
+
+</div>
+</div>
+<a id="a3a8bc3683396f80c1fb3238f014d8d1c" name="a3a8bc3683396f80c1fb3238f014d8d1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8bc3683396f80c1fb3238f014d8d1c">&#9670;&#160;</a></span>standby</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bmp280_8h.html#a7e16473d0fcc239a4216896127c57a6d">bmp_stdby_time_t</a> standby</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Standby of BMP280 device in normal operating mode. </p>
+
+</div>
+</div>
+<a id="a89cffa893ab4248df02eb79bcf4560cb" name="a89cffa893ab4248df02eb79bcf4560cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89cffa893ab4248df02eb79bcf4560cb">&#9670;&#160;</a></span>temp_over</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bmp280_8h.html#a5e2d1789eae2360189e7881d0db1f40f">bmp_oversampling_t</a> temp_over</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Oversampling of temperature. </p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>projects/lib_tests/lib/bmp280/include/<a class="el" href="bmp280_8h_source.html">bmp280.h</a></li>
 </ul>

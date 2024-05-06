@@ -1,0 +1,5 @@
+<map id="test_if_nvs_c_deinit_partition_should_return_err_on_not_init_partition" name="test_if_nvs_c_deinit_partition_should_return_err_on_not_init_partition">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,172,61"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a8757f2e7c15f139f6ae1e5f9e94c4ec5" title="Deinit specified NVS partition." alt="" coords="220,20,367,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,31,205,31,205,36,172,36"/>
+</map>

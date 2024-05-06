@@ -1,0 +1,5 @@
+<map id="test_if_nvs_c_read_string_should_return_err_on_null_buffer" name="test_if_nvs_c_read_string_should_return_err_on_null_buffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,151,61"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="199,20,326,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,31,183,31,183,36,151,36"/>
+</map>

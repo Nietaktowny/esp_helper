@@ -1,0 +1,9 @@
+<map id="projects/lib_tests/lib/i2c_controller/include/i2c_controller.h" name="projects/lib_tests/lib/i2c_controller/include/i2c_controller.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="61,5,218,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,109,82,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,63,70,100,66,96,108,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="106,109,173,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,61,142,93,137,93,137,61"/>
+<area shape="rect" id="Node000004" href="$i2c__c__errors_8h.html" title="I2C Controller errors list." alt="" coords="198,109,300,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="175,59,223,97,220,101,172,63"/>
+</map>

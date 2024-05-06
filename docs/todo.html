@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><dl class="reflist">
-<dt>Member <a class="el" href="esp__helper__utils_8c.html#ad318edd1e39faf8a96eb8f948e62dfc6">helper_get_chip_id</a>  (uint8_t chip_id[6])</dt>
+<dt>Global <a class="el" href="esp__helper__utils_8c.html#ad318edd1e39faf8a96eb8f948e62dfc6">helper_get_chip_id</a>  (uint8_t chip_id[6])</dt>
 <dd><p class="startdd"><a class="anchor" id="_todo000001"></a>error checking </p>
 <p class="interdd"><a class="anchor" id="_todo000002"></a>Do some bit-magic with mac address so it's not obvious. </p>
 <p class="interdd"></p>
@@ -106,12 +106,14 @@ $(document).ready(function(){initNavTree('todo.html',''); initResizable(); });
 <p class="interdd"></p>
 <p class="enddd">Implement ESP8266-RTOS-SDK compliant version </p>
 </dd>
-<dt>Member <a class="el" href="http__client_8c.html#aecf54e1637f052dc08eca4b05a6bd32a">http_client_get</a>  (const char *ipv4_address, const char *path, char *buffer, size_t buflen)</dt>
+<dt>Global <a class="el" href="http__client_8c.html#aecf54e1637f052dc08eca4b05a6bd32a">http_client_get</a>  (const char *ipv4_address, const char *path, char *buffer, size_t buflen)</dt>
 <dd><a class="anchor" id="_todo000004"></a>Do error checking if provided buffer fits into internal url buffer.  </dd>
-<dt>Member <a class="el" href="http__client_8c.html#a7a524624e480ef689e54e6ca644b903c">http_client_get_reuse</a>  (http_client_t handle, char *buffer, size_t buflen)</dt>
+<dt>Global <a class="el" href="http__client_8c.html#a7a524624e480ef689e54e6ca644b903c">http_client_get_reuse</a>  (http_client_t handle, char *buffer, size_t buflen)</dt>
 <dd><a class="anchor" id="_todo000005"></a>Do error checking if provided buffer fits into internal url buffer.  </dd>
-<dt>Member <a class="el" href="http__client_8c.html#abdab8abaaf7b1323aa95a9c97c8872cc">http_client_post_reuse</a>  (http_client_t handle, const char *post_data, size_t datalen)</dt>
+<dt>Global <a class="el" href="http__client_8c.html#abdab8abaaf7b1323aa95a9c97c8872cc">http_client_post_reuse</a>  (http_client_t handle, const char *post_data, size_t datalen)</dt>
 <dd><a class="anchor" id="_todo000006"></a>Do error checking if provided buffer fits into internal url buffer.  </dd>
+<dt>Global <a class="el" href="test__bmp__project_2main_2main_8c.html#a35918ec96795bd96101b8ee1b8b03d61">inspect_task</a>  (void *args)</dt>
+<dd><a class="anchor" id="_todo000008"></a>Make it a constant or configuration variable?  </dd>
 <dt>File <a class="el" href="sys__utils_8c.html">sys_utils.c</a>  </dt>
 <dd><a class="anchor" id="_todo000007"></a>Implement FreeRTOS wrapper functions (delay, create task, delete task itd.) or use pthreads</dd>
 </dl>

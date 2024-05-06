@@ -1,0 +1,9 @@
+<map id="http_client_get_reuse" name="http_client_get_reuse">
+<area shape="rect" id="Node000001" title="Make a HTTP GET request reusing the already made connection." alt="" coords="5,31,151,56"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="222,5,327,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,31,207,24,207,29,151,37"/>
+<area shape="rect" id="Node000003" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="199,55,350,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="151,50,184,54,183,59,151,55"/>
+<area shape="rect" id="Node000004" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="398,55,565,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="350,65,382,65,382,70,350,70"/>
+</map>

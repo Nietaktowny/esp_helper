@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -104,11 +104,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="bmp280__errors_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2bmp280_2include_2bmp280__errors_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2bmp280_2include_2bmp280__errors_8hdep" id="aprojects_2lib__tests_2lib_2bmp280_2include_2bmp280__errors_8hdep">
-<area shape="rect" title="BMP280 library errors list." alt="" coords="24,5,157,61"/>
-<area shape="rect" href="bmp280_8h.html" title="BMP280 library header file." alt="" coords="24,109,157,165"/>
-<area shape="poly" title=" " alt="" coords="93,77,93,108,88,108,88,77"/>
-<area shape="rect" href="bmp280_8c.html" title="BMP280 library source file." alt="" coords="5,213,176,253"/>
-<area shape="poly" title=" " alt="" coords="93,180,93,212,88,212,88,180"/>
+<area shape="rect" title="BMP280 library errors list." alt="" coords="117,5,251,61"/>
+<area shape="rect" href="bmp280_8h.html" title="BMP280 library header file." alt="" coords="117,109,251,165"/>
+<area shape="poly" title=" " alt="" coords="187,77,187,108,181,108,181,77"/>
+<area shape="rect" href="bmp280_8c.html" title="BMP280 library source file." alt="" coords="5,220,176,261"/>
+<area shape="poly" title=" " alt="" coords="151,178,110,222,106,218,147,174"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="200,213,357,268"/>
+<area shape="poly" title=" " alt="" coords="221,174,255,210,251,214,218,178"/>
 </map>
 </div>
 </div>
@@ -116,17 +118,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a3922ab67c204f076d04f58d51092ca9e" id="r_a3922ab67c204f076d04f58d51092ca9e"><td class="memItemLeft" align="right" valign="top"><a id="a3922ab67c204f076d04f58d51092ca9e" name="a3922ab67c204f076d04f58d51092ca9e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_ERR_BASE</b>&#160;&#160;&#160;0x044C</td></tr>
-<tr class="memdesc:a3922ab67c204f076d04f58d51092ca9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 error base. <br /></td></tr>
+<tr class="memitem:a3922ab67c204f076d04f58d51092ca9e" id="r_a3922ab67c204f076d04f58d51092ca9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__errors_8h.html#a3922ab67c204f076d04f58d51092ca9e">BMP_ERR_BASE</a>&#160;&#160;&#160;0x044C</td></tr>
+<tr class="memdesc:a3922ab67c204f076d04f58d51092ca9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">BMP280 error base.  <br /></td></tr>
 <tr class="separator:a3922ab67c204f076d04f58d51092ca9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f501fc3cf9561448d6bdf59880da0de" id="r_a7f501fc3cf9561448d6bdf59880da0de"><td class="memItemLeft" align="right" valign="top"><a id="a7f501fc3cf9561448d6bdf59880da0de" name="a7f501fc3cf9561448d6bdf59880da0de"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_ERR_NO_DEVICE_FOUND</b>&#160;&#160;&#160;0x0001 + <a class="el" href="bmp280__errors_8h.html#a3922ab67c204f076d04f58d51092ca9e">BMP_ERR_BASE</a></td></tr>
-<tr class="memdesc:a7f501fc3cf9561448d6bdf59880da0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">No BMP280 device was found on bus. <br /></td></tr>
+<tr class="memitem:a7f501fc3cf9561448d6bdf59880da0de" id="r_a7f501fc3cf9561448d6bdf59880da0de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__errors_8h.html#a7f501fc3cf9561448d6bdf59880da0de">BMP_ERR_NO_DEVICE_FOUND</a>&#160;&#160;&#160;0x0001 + <a class="el" href="bmp280__errors_8h.html#a3922ab67c204f076d04f58d51092ca9e">BMP_ERR_BASE</a></td></tr>
+<tr class="memdesc:a7f501fc3cf9561448d6bdf59880da0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">No BMP280 device was found on bus.  <br /></td></tr>
 <tr class="separator:a7f501fc3cf9561448d6bdf59880da0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1ec1dc2b5a7f11e5abca070b935fc2d" id="r_ac1ec1dc2b5a7f11e5abca070b935fc2d"><td class="memItemLeft" align="right" valign="top"><a id="ac1ec1dc2b5a7f11e5abca070b935fc2d" name="ac1ec1dc2b5a7f11e5abca070b935fc2d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BMP_ERR_MODE_ERROR</b>&#160;&#160;&#160;0x0002 + <a class="el" href="bmp280__errors_8h.html#a3922ab67c204f076d04f58d51092ca9e">BMP_ERR_BASE</a></td></tr>
-<tr class="memdesc:ac1ec1dc2b5a7f11e5abca070b935fc2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cannot change <a class="el" href="structBMP.html" title="BMP device config object.">BMP</a> device operating mode. <br /></td></tr>
+<tr class="memitem:ac1ec1dc2b5a7f11e5abca070b935fc2d" id="r_ac1ec1dc2b5a7f11e5abca070b935fc2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bmp280__errors_8h.html#ac1ec1dc2b5a7f11e5abca070b935fc2d">BMP_ERR_MODE_ERROR</a>&#160;&#160;&#160;0x0002 + <a class="el" href="bmp280__errors_8h.html#a3922ab67c204f076d04f58d51092ca9e">BMP_ERR_BASE</a></td></tr>
+<tr class="memdesc:ac1ec1dc2b5a7f11e5abca070b935fc2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cannot change <a class="el" href="structBMP.html" title="BMP device config object.">BMP</a> device operating mode.  <br /></td></tr>
 <tr class="separator:ac1ec1dc2b5a7f11e5abca070b935fc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -135,7 +134,56 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a3922ab67c204f076d04f58d51092ca9e" name="a3922ab67c204f076d04f58d51092ca9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3922ab67c204f076d04f58d51092ca9e">&#9670;&#160;</a></span>BMP_ERR_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_ERR_BASE&#160;&#160;&#160;0x044C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BMP280 error base. </p>
+
+</div>
+</div>
+<a id="ac1ec1dc2b5a7f11e5abca070b935fc2d" name="ac1ec1dc2b5a7f11e5abca070b935fc2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1ec1dc2b5a7f11e5abca070b935fc2d">&#9670;&#160;</a></span>BMP_ERR_MODE_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_ERR_MODE_ERROR&#160;&#160;&#160;0x0002 + <a class="el" href="bmp280__errors_8h.html#a3922ab67c204f076d04f58d51092ca9e">BMP_ERR_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cannot change <a class="el" href="structBMP.html" title="BMP device config object.">BMP</a> device operating mode. </p>
+
+</div>
+</div>
+<a id="a7f501fc3cf9561448d6bdf59880da0de" name="a7f501fc3cf9561448d6bdf59880da0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f501fc3cf9561448d6bdf59880da0de">&#9670;&#160;</a></span>BMP_ERR_NO_DEVICE_FOUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BMP_ERR_NO_DEVICE_FOUND&#160;&#160;&#160;0x0001 + <a class="el" href="bmp280__errors_8h.html#a3922ab67c204f076d04f58d51092ca9e">BMP_ERR_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>No BMP280 device was found on bus. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,0 +1,19 @@
+<map id="bmp_i2c_set_iir_filter" name="bmp_i2c_set_iir_filter">
+<area shape="rect" id="Node000001" title="Set IIR filter value." alt="" coords="5,32,149,58"/>
+<area shape="rect" id="Node000002" href="$bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="197,7,333,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,33,181,28,182,33,149,38"/>
+<area shape="rect" id="Node000007" href="$bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="212,56,318,82"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="149,51,197,58,196,63,149,57"/>
+<area shape="rect" id="Node000003" href="$bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="381,5,483,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,16,365,16,365,21,334,22"/>
+<area shape="rect" id="Node000004" href="$i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="533,7,617,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="484,16,517,16,517,22,484,21"/>
+<area shape="rect" id="Node000005" href="$i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="674,7,802,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="618,17,658,17,658,22,618,22"/>
+<area shape="rect" id="Node000006" href="$i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="667,56,809,82"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="618,30,680,49,678,54,617,35"/>
+<area shape="rect" id="Node000008" href="$i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="531,56,619,82"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="318,66,516,66,516,72,318,72"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="618,53,678,35,679,40,620,58"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="619,66,651,66,651,72,619,72"/>
+</map>

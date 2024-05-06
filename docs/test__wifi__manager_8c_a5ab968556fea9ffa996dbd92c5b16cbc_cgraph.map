@@ -1,0 +1,11 @@
+<map id="test_if_wifi_manager_get_scanned_aps_returns_non_zero_len_string" name="test_if_wifi_manager_get_scanned_aps_returns_non_zero_len_string">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,40,183,95"/>
+<area shape="rect" id="Node000002" href="$wifi__manager_8c.html#a2ea15285d2156d5392749310ceb92843" title="Scan and get for Access points that wifi manager can connect to." alt="" coords="231,55,437,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,65,215,65,215,70,183,70"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="515,5,619,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="398,51,499,30,500,35,399,57"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels." alt="" coords="502,55,632,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="437,65,487,65,487,70,437,70"/>
+<area shape="rect" id="Node000005" href="$wifi__controller_8h.html#a65a29cdfc998ed4e91bb9088d2eebc37" title="Store results of scanning in buffer as json string;." alt="" coords="485,105,649,145"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="390,78,471,98,469,104,389,84"/>
+</map>

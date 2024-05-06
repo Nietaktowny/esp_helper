@@ -1,0 +1,17 @@
+<map id="test_if_nvs_c_erase_default_partition_deletes_key" name="test_if_nvs_c_erase_default_partition_deletes_key">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,186,202,227"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="273,5,368,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,184,169,115,206,76,248,41,258,36,260,40,251,46,210,79,173,118,120,187"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a92ba0066a43bc3f296e16c4976b17fcc" title="Deinit default NVS partition." alt="" coords="250,55,391,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,183,185,146,248,107,258,101,261,106,251,111,188,151,134,188"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#a9eeeb82f5b26f763b25ea820b1b9f332" title="Erse all data in default NVS partition." alt="" coords="250,121,391,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="172,183,235,164,237,169,174,188"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="257,186,384,227"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="202,204,241,204,241,209,202,209"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="275,251,366,276"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="183,224,261,245,259,250,182,230"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#a245fa1989a19a57e6ee6322a82a65962" title="Read uint8_t value from NVS namespace." alt="" coords="259,300,382,326"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="139,225,191,255,251,286,263,292,261,296,249,291,188,260,136,229"/>
+<area shape="rect" id="Node000008" href="$nvs__controller_8h.html#af76595e5c93238847914f89ba1439fb6" title="Write uint8_t value to NVS namespace." alt="" coords="257,349,384,375"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="124,225,178,280,213,310,251,336,259,340,257,345,248,340,210,314,174,284,121,229"/>
+</map>

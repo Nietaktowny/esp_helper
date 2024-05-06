@@ -1,8 +1,22 @@
 var searchData=
 [
-  ['readable_0',['Readable',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md17',1,'']]],
-  ['readme_1',['README',['../md_projects_2lib__tests_2README.html',1,'']]],
-  ['return_20goto_2',['Return &amp; Goto',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md40',1,'']]],
-  ['rssi_3',['rssi',['../structwifi__c__ap__record__obj.html#a78730061a4de648e49e796a0357ff108',1,'wifi_c_ap_record_obj']]],
-  ['ruby_20details_4',['Ruby Details',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md26',1,'']]]
+  ['read_5ftemperature_5ftask_0',['read_temperature_task',['../test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021',1,'main.c']]],
+  ['readable_1',['Readable',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md17',1,'']]],
+  ['readme_2emd_2',['readme.md',['../adc__controller_2README_8md.html',1,'(Global Namespace)'],['../sys__utils_2README_8md.html',1,'(Global Namespace)'],['../esp__helper__utils_2README_8md.html',1,'(Global Namespace)'],['../cli__manager_2README_8md.html',1,'(Global Namespace)'],['../CException_2README_8md.html',1,'(Global Namespace)']]],
+  ['red_3',['RED',['../ansi__colors_8h.html#a8d23feea868a983c8c2b661e1e16972f',1,'ansi_colors.h']]],
+  ['red_5fbackground_4',['RED_BACKGROUND',['../ansi__colors_8h.html#a4960ae30acffddb9c54115fa893a4719',1,'ansi_colors.h']]],
+  ['red_5fbold_5',['RED_BOLD',['../ansi__colors_8h.html#af97b3ad73526a0fa8fd97081fa88c14d',1,'ansi_colors.h']]],
+  ['red_5fbold_5fhigh_5fintensity_6',['RED_BOLD_HIGH_INTENSITY',['../ansi__colors_8h.html#a8293ffbfaf5f8f0e2aeffe0934e9a458',1,'ansi_colors.h']]],
+  ['red_5fbold_5funderline_7',['RED_BOLD_UNDERLINE',['../ansi__colors_8h.html#a78fba22be0c58e1216f58b5b5a537d6f',1,'ansi_colors.h']]],
+  ['red_5fhigh_5fintensity_8',['RED_HIGH_INTENSITY',['../ansi__colors_8h.html#ab7a3b9303e58d0601df6dfb5b9c25040',1,'ansi_colors.h']]],
+  ['red_5fitalic_9',['RED_ITALIC',['../ansi__colors_8h.html#a091aff381fc04e9e08cb51a404d8845b',1,'ansi_colors.h']]],
+  ['red_5funderline_10',['RED_UNDERLINE',['../ansi__colors_8h.html#a8b0f30718333b4fa7bf1c23b65a25a0b',1,'ansi_colors.h']]],
+  ['reset_11',['RESET',['../ansi__colors_8h.html#ab702106cf3b3e96750b6845ded4e0299',1,'ansi_colors.h']]],
+  ['return_20goto_12',['Return &amp; Goto',['../md_projects_2lib__tests_2lib_2CException_2README.html#autotoc_md40',1,'']]],
+  ['rssi_13',['rssi',['../structwifi__c__ap__record__obj.html#a3b962e67ba74725bd60ca3c29f785abe',1,'wifi_c_ap_record_obj']]],
+  ['ruby_20details_14',['Ruby Details',['../md_projects_2lib__tests_2lib_2CException_2docs_2ThrowTheSwitchCodingStandard.html#autotoc_md26',1,'']]],
+  ['run_5fflawfinder_15',['run_flawfinder',['../namespacerun__flawfinder.html',1,'']]],
+  ['run_5fflawfinder_2epy_16',['run_flawfinder.py',['../run__flawfinder_8py.html',1,'']]],
+  ['run_5fwifi_5fcontroller_5ftests_17',['run_wifi_controller_tests',['../test__wifi__controller_8c.html#a25fd59993328610671b8a6fcac37a5e1',1,'test_wifi_controller.c']]],
+  ['rununitytests_18',['rununitytests',['../test__i2c__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_i2c_controller.c'],['../lib_2logger_2test_2test__logger_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_logger.c'],['../test__logger_8h.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_logger.c'],['../lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_nvs_controller.c'],['../test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_wifi_manager.c'],['../test__sys__utils_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_sys_utils.c'],['../test__spiffs__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_spiffs_controller.c'],['../test_2embedded_2test__nvs__controller_2test__nvs__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_nvs_controller.c'],['../test_2embedded_2test__logger_2test__logger_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_logger.c'],['../test__nvs__controller_8h.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_logger.c'],['../test__http__client_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_http_client.c'],['../test__esp__helper__utils_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_esp_helper_utils.c'],['../embedded_2test__err__controller_2test__err__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_err_controller.c'],['../test__cli__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_cli_manager.c'],['../test_2desktop_2test__nvs__controller_2test__nvs__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_nvs_controller.c'],['../test_2desktop_2test__logger_2test__logger_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_logger.c'],['../desktop_2test__err__controller_2test__err__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6',1,'runUnityTests(void):&#160;test_err_controller.c']]]
 ];

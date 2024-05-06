@@ -1,0 +1,25 @@
+var TestException_8c =
+[
+    [ "HappyExceptionRethrower", "TestException_8c.html#a9e586145420288c4b36e1ccd96d350ce", null ],
+    [ "HappyExceptionThrower", "TestException_8c.html#ae1827c0fd4a6d4b269d204b2e6a73bcc", null ],
+    [ "setUp", "TestException_8c.html#a95c834d6178047ce9e1bce7cbfea2836", null ],
+    [ "tearDown", "TestException_8c.html#a9909011e5fea0c018842eec4d93d0662", null ],
+    [ "test_AbilityToExitTryWillOnlyExitOneLevel", "TestException_8c.html#a60810c2355660dde07d3f490c8217fee", null ],
+    [ "test_AbilityToExitTryWithoutThrowingAnError", "TestException_8c.html#a3d36809cd5705638dd9586daeda40851", null ],
+    [ "test_AThrowWithoutATryCatchWillUseDefaultHandlerIfSpecified", "TestException_8c.html#ac654b3576fb3e26530c82219c383675c", null ],
+    [ "test_AThrowWithoutOutsideATryCatchWillUseDefaultHandlerEvenAfterTryCatch", "TestException_8c.html#a888734acb594fb6c8d3f0a394b463ea2", null ],
+    [ "test_BasicThrowAndCatch", "TestException_8c.html#ad4d469beac7029591623b7ac746637e2", null ],
+    [ "test_BasicThrowAndCatch_WithMiniSyntax", "TestException_8c.html#a1a5bdfb3565d00a5eddb5491f3f6e0a0", null ],
+    [ "test_BasicTryDoesNothingIfNoThrow", "TestException_8c.html#a7bca32162d8c0beed87b9685b4c8041e", null ],
+    [ "test_CanHaveMultipleTryBlocksInASingleFunction", "TestException_8c.html#a5703666ffd52e39d85b5adfc20b5f097", null ],
+    [ "test_CanHaveNestedTryBlocksInASingleFunction_ThrowInside", "TestException_8c.html#a01f95157909ea3e6afe7a22f8a68b898", null ],
+    [ "test_CanHaveNestedTryBlocksInASingleFunction_ThrowOutside", "TestException_8c.html#ae3ea01d642fb4f3bbe28f338ae53c538", null ],
+    [ "test_ThrowAndCatchFromASubFunctionAndNoRethrowToCatchInRootFunc", "TestException_8c.html#afb430cfc9d9dd7fa6831b058b4838349", null ],
+    [ "test_ThrowAndCatchFromASubFunctionAndRethrowToCatchInRootFunc", "TestException_8c.html#abcbcf20df14cfb0d51e13090b739ccb3", null ],
+    [ "test_ThrowAnErrorThenEnterATryBlockFromWithinCatch_VerifyThatEachExceptionIdIndependent", "TestException_8c.html#a95c20ae30ad9b37c854f5cc2a5696327", null ],
+    [ "test_ThrowAnErrorThenEnterATryBlockFromWithinCatch_VerifyThisDoesntCorruptExceptionId", "TestException_8c.html#a9796050bc09ee6dab09946849982b6ba", null ],
+    [ "test_ThrowFromASubFunctionAndCatchInRootFunc", "TestException_8c.html#ae110df0dd47c844fd63d812ee82a3ec1", null ],
+    [ "test_VerifyVolatilesSurviveThrowAndCatch", "TestException_8c.html#a75ff5020f78fdcdcfe34e4daba589e4f", null ],
+    [ "TestingTheFallback", "TestException_8c.html#a6c3caf8c502ec7fbeea59bc8d4606ebb", null ],
+    [ "TestingTheFallbackId", "TestException_8c.html#a68799a65c03e5a139b81cbe4167d50a3", null ]
+];

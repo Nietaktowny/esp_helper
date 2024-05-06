@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ESP Helper: File Members</title>
+<title>ESP Helper: Globals</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('globals_l.html',''); initResizable(); 
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented file members with links to the documentation:</div>
+<div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
 <li>linkedl_add_first()&#160;:&#160;<a class="el" href="linked__list_8c.html#ae9d538ed09dba37b4bdddf398663838d">linked_list.c</a>, <a class="el" href="linked__list_8h.html#ae9d538ed09dba37b4bdddf398663838d">linked_list.h</a></li>
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('globals_l.html',''); initResizable(); 
 <li>linkedl_find()&#160;:&#160;<a class="el" href="linked__list_8h.html#a2d2c0cb350f417c0e26d9dd9f354c955">linked_list.h</a>, <a class="el" href="linked__list_8c.html#a2d2c0cb350f417c0e26d9dd9f354c955">linked_list.c</a></li>
 <li>linkedl_find_node_with_id()&#160;:&#160;<a class="el" href="linked__list__internal_8h.html#a90f3da568d45e95568b38026efe09e27">linked_list_internal.h</a>, <a class="el" href="linked__list_8c.html#a90f3da568d45e95568b38026efe09e27">linked_list.c</a></li>
 <li>linkedl_find_previous_node()&#160;:&#160;<a class="el" href="linked__list__internal_8h.html#a466e8557cd000057fe4488852d8aa417">linked_list_internal.h</a>, <a class="el" href="linked__list_8c.html#a466e8557cd000057fe4488852d8aa417">linked_list.c</a></li>
-<li>linkedl_find_with_id()&#160;:&#160;<a class="el" href="linked__list_8h.html#a44c3985ffc432e5077c412a225bae540">linked_list.h</a>, <a class="el" href="linked__list_8c.html#a44c3985ffc432e5077c412a225bae540">linked_list.c</a></li>
+<li>linkedl_find_with_id()&#160;:&#160;<a class="el" href="linked__list_8c.html#a44c3985ffc432e5077c412a225bae540">linked_list.c</a>, <a class="el" href="linked__list_8h.html#a44c3985ffc432e5077c412a225bae540">linked_list.h</a></li>
 <li>linkedl_get_last_node()&#160;:&#160;<a class="el" href="linked__list__internal_8h.html#a5bebee5a43cb16820f41d692a3ddeb5a">linked_list_internal.h</a>, <a class="el" href="linked__list_8c.html#a5bebee5a43cb16820f41d692a3ddeb5a">linked_list.c</a></li>
 <li>linkedl_hash_string()&#160;:&#160;<a class="el" href="linked__list__internal_8h.html#ac84fd780c8b8fe8376d6e659d4f2703a">linked_list_internal.h</a>, <a class="el" href="linked__list_8c.html#ac84fd780c8b8fe8376d6e659d4f2703a">linked_list.c</a></li>
 <li>linkedl_t&#160;:&#160;<a class="el" href="linked__list_8h.html#a6da4f4dbb42aa9473bafdac6acc02863">linked_list.h</a></li>
@@ -122,6 +122,7 @@ $(document).ready(function(){initNavTree('globals_l.html',''); initResizable(); 
 <li>LOG_LEVEL_WARN&#160;:&#160;<a class="el" href="logger_8h.html#a14f43a1fab62b98fc88603cdb988de3d">logger.h</a></li>
 <li>LOG_LEVEL_ZERO&#160;:&#160;<a class="el" href="logger_8h.html#ace2852bcd26c4c69c915c3e9824f6b7d">logger.h</a></li>
 <li>LOG_STRICT_FORMAT&#160;:&#160;<a class="el" href="logger_8h.html#ad205d248af62fd2a3f111c66e3fac7b6">logger.h</a></li>
+<li>LOG_TEST_NAME&#160;:&#160;<a class="el" href="test_2embedded_2test__logger_2test__logger_8c.html#ae65d94dc7fba0a0949b44eab92f7c226">test_logger.c</a></li>
 <li>LOG_TIME_FORMAT&#160;:&#160;<a class="el" href="logger_8h.html#a1273f9f835f4a7ad5304c7e633e20b68">logger.h</a></li>
 <li>LOG_VERBOSE&#160;:&#160;<a class="el" href="logger_8h.html#a9e7072460e1de0d89f6c8e5b7fcf1260">logger.h</a></li>
 <li>LOG_VERBOSE_FORMAT&#160;:&#160;<a class="el" href="logger_8h.html#a2d60f981c68f8b98136b414e883b8080">logger.h</a></li>
@@ -135,16 +136,18 @@ $(document).ready(function(){initNavTree('globals_l.html',''); initResizable(); 
 <li>LOGGER_ERR_BASE&#160;:&#160;<a class="el" href="logger__errors_8h.html#a136314d6424caed89d00f2e33aff4d01">logger_errors.h</a></li>
 <li>LOGGER_ERR_MUTEX_ERROR&#160;:&#160;<a class="el" href="logger__errors_8h.html#a3c8c658deaa5a66d11d2de0566db684e">logger_errors.h</a></li>
 <li>LOGGER_ERR_NULL_FILE&#160;:&#160;<a class="el" href="logger__errors_8h.html#a91bfbbc56e00e125655343b7bd9b33b9">logger_errors.h</a></li>
-<li>logger_flush_logs()&#160;:&#160;<a class="el" href="logger_8c.html#a0e28a4a110b406efa49fc63f9933fdc9">logger.c</a>, <a class="el" href="logger_8h.html#a0e28a4a110b406efa49fc63f9933fdc9">logger.h</a></li>
+<li>logger_esp_log()&#160;:&#160;<a class="el" href="logger_8c.html#a0bac4c094342cccf8118b72078e8ce02">logger.c</a>, <a class="el" href="logger_8h.html#a0bac4c094342cccf8118b72078e8ce02">logger.h</a></li>
+<li>logger_flush_logs()&#160;:&#160;<a class="el" href="logger_8h.html#a0e28a4a110b406efa49fc63f9933fdc9">logger.h</a>, <a class="el" href="logger_8c.html#a0e28a4a110b406efa49fc63f9933fdc9">logger.c</a></li>
 <li>logger_get_lock()&#160;:&#160;<a class="el" href="logger_8h.html#aeb5a93649138f0217073e55e0c8fde6b">logger.h</a>, <a class="el" href="logger_8c.html#aeb5a93649138f0217073e55e0c8fde6b">logger.c</a></li>
 <li>logger_get_log_mutex()&#160;:&#160;<a class="el" href="logger_8h.html#af239c0d21f49e816ff534b09ad7bc3bf">logger.h</a>, <a class="el" href="logger_8c.html#af239c0d21f49e816ff534b09ad7bc3bf">logger.c</a></li>
 <li>logger_get_logger_contex()&#160;:&#160;<a class="el" href="logger_8h.html#a5a7a1f5d6d0ee21e13fa10283d2d6a07">logger.h</a>, <a class="el" href="logger_8c.html#a5a7a1f5d6d0ee21e13fa10283d2d6a07">logger.c</a></li>
-<li>logger_init()&#160;:&#160;<a class="el" href="logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d">logger.c</a>, <a class="el" href="logger_8h.html#a5c9881b498d2fe84d5ef9c89cb81d93d">logger.h</a></li>
+<li>logger_init()&#160;:&#160;<a class="el" href="logger_8h.html#a5c9881b498d2fe84d5ef9c89cb81d93d">logger.h</a>, <a class="el" href="logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d">logger.c</a></li>
 <li>LOGGER_MAX_OUTPUT_FILES&#160;:&#160;<a class="el" href="logger_8h.html#aeff50f8f33468440a1e64c59b29c53eb">logger.h</a></li>
 <li>LOGGER_MUTEX_TIMEOUT&#160;:&#160;<a class="el" href="logger__errors_8h.html#ac46e33096c40483eca71a10328bc5493">logger_errors.h</a></li>
-<li>LOGGER_NO_FREE_FILES&#160;:&#160;<a class="el" href="logger__errors_8h.html#a9d1a87af202f21805346c56de2a3b3c0">logger_errors.h</a></li>
+<li>LOGGER_NO_FREE_FILES&#160;:&#160;<a class="el" href="logger_8h.html#a9d1a87af202f21805346c56de2a3b3c0">logger.h</a>, <a class="el" href="logger__errors_8h.html#a9d1a87af202f21805346c56de2a3b3c0">logger_errors.h</a></li>
 <li>logger_return_lock()&#160;:&#160;<a class="el" href="logger_8h.html#a85a9cd1726e8e443452f79bd83253a07">logger.h</a>, <a class="el" href="logger_8c.html#a85a9cd1726e8e443452f79bd83253a07">logger.c</a></li>
 <li>logger_set_log_level()&#160;:&#160;<a class="el" href="logger_8h.html#aff0c2c2b1273462278d67b61ffe2a927">logger.h</a>, <a class="el" href="logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927">logger.c</a></li>
+<li>logger_stop_logging()&#160;:&#160;<a class="el" href="logger_8c.html#a6bc4afa937f2d98d1ff395aca9fd9308">logger.c</a></li>
 <li>logger_write()&#160;:&#160;<a class="el" href="logger_8h.html#a382738e933b8f30c6f9506f99ca32518">logger.h</a>, <a class="el" href="logger_8c.html#a382738e933b8f30c6f9506f99ca32518">logger.c</a></li>
 </ul>
 </div><!-- contents -->

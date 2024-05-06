@@ -1,5 +1,6 @@
 var tcp__controller_8h =
 [
+    [ "socket_t", "tcp__controller_8h.html#a30353f381f5fccbb956eea1f3a110b6c", null ],
     [ "tcp_accept_client", "tcp__controller_8h.html#acb904407f0f4032b3936206e8db2e0aa", null ],
     [ "tcp_bind_socket", "tcp__controller_8h.html#aa19f22c703b27c1834b997235fa198a6", null ],
     [ "tcp_connect_ipv4", "tcp__controller_8h.html#a6da6a165ce023d47cb5ac8be69f28fab", null ],

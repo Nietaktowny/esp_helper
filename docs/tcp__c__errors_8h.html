@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -104,11 +104,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="tcp__c__errors_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2tcp__controller_2include_2tcp__c__errors_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2tcp__controller_2include_2tcp__c__errors_8hdep" id="aprojects_2lib__tests_2lib_2tcp__controller_2include_2tcp__c__errors_8hdep">
-<area shape="rect" title="TCP Controller errors list." alt="" coords="75,5,227,61"/>
-<area shape="rect" href="cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="5,109,140,165"/>
-<area shape="poly" title=" " alt="" coords="123,75,96,110,92,107,119,72"/>
-<area shape="rect" href="tcp__controller_8c.html" title="TCP Controller source file." alt="" coords="164,109,299,165"/>
-<area shape="poly" title=" " alt="" coords="184,72,212,107,208,110,180,75"/>
+<area shape="rect" title="TCP Controller errors list." alt="" coords="155,5,307,61"/>
+<area shape="rect" href="cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="5,117,140,172"/>
+<area shape="poly" title=" " alt="" coords="181,72,114,118,111,114,178,68"/>
+<area shape="rect" href="tcp__controller_8c.html" title="TCP Controller source file." alt="" coords="164,117,299,172"/>
+<area shape="poly" title=" " alt="" coords="234,76,234,116,229,116,229,76"/>
+<area shape="rect" href="test__cli__manager_8c.html" title=" " alt="" coords="323,109,467,180"/>
+<area shape="poly" title=" " alt="" coords="286,68,344,106,341,111,283,72"/>
 </map>
 </div>
 </div>
@@ -116,29 +118,23 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a6e9979d644286341468ec01d9aec7222" id="r_a6e9979d644286341468ec01d9aec7222"><td class="memItemLeft" align="right" valign="top"><a id="a6e9979d644286341468ec01d9aec7222" name="a6e9979d644286341468ec01d9aec7222"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERR_TCP_BASE</b>&#160;&#160;&#160;0x012C</td></tr>
-<tr class="memdesc:a6e9979d644286341468ec01d9aec7222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcp controller error base. <br /></td></tr>
+<tr class="memitem:a6e9979d644286341468ec01d9aec7222" id="r_a6e9979d644286341468ec01d9aec7222"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a>&#160;&#160;&#160;0x012C</td></tr>
+<tr class="memdesc:a6e9979d644286341468ec01d9aec7222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tcp controller error base.  <br /></td></tr>
 <tr class="separator:a6e9979d644286341468ec01d9aec7222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26769957ec1a2beaf223f33b66ee64ab" id="r_a26769957ec1a2beaf223f33b66ee64ab"><td class="memItemLeft" align="right" valign="top"><a id="a26769957ec1a2beaf223f33b66ee64ab" name="a26769957ec1a2beaf223f33b66ee64ab"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>INVALID_SOCKET</b>&#160;&#160;&#160;0x0000-1 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
-<tr class="memdesc:a26769957ec1a2beaf223f33b66ee64ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid socket identifier. <br /></td></tr>
+<tr class="memitem:a26769957ec1a2beaf223f33b66ee64ab" id="r_a26769957ec1a2beaf223f33b66ee64ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tcp__c__errors_8h.html#a26769957ec1a2beaf223f33b66ee64ab">INVALID_SOCKET</a>&#160;&#160;&#160;0x0000-1 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
+<tr class="memdesc:a26769957ec1a2beaf223f33b66ee64ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid socket identifier.  <br /></td></tr>
 <tr class="separator:a26769957ec1a2beaf223f33b66ee64ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0023d05f8842a11462d688ab027d84d9" id="r_a0023d05f8842a11462d688ab027d84d9"><td class="memItemLeft" align="right" valign="top"><a id="a0023d05f8842a11462d688ab027d84d9" name="a0023d05f8842a11462d688ab027d84d9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERR_TCP_ADDR_ERROR</b>&#160;&#160;&#160;0x0023 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
-<tr class="memdesc:a0023d05f8842a11462d688ab027d84d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error when preparing address. <br /></td></tr>
+<tr class="memitem:a0023d05f8842a11462d688ab027d84d9" id="r_a0023d05f8842a11462d688ab027d84d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tcp__c__errors_8h.html#a0023d05f8842a11462d688ab027d84d9">ERR_TCP_ADDR_ERROR</a>&#160;&#160;&#160;0x0023 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
+<tr class="memdesc:a0023d05f8842a11462d688ab027d84d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error when preparing address.  <br /></td></tr>
 <tr class="separator:a0023d05f8842a11462d688ab027d84d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53f479ce86e824df3167c5971cf57d06" id="r_a53f479ce86e824df3167c5971cf57d06"><td class="memItemLeft" align="right" valign="top"><a id="a53f479ce86e824df3167c5971cf57d06" name="a53f479ce86e824df3167c5971cf57d06"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERR_TCP_INVALID_PORT</b>&#160;&#160;&#160;0x0024 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
-<tr class="memdesc:a53f479ce86e824df3167c5971cf57d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid port number. <br /></td></tr>
+<tr class="memitem:a53f479ce86e824df3167c5971cf57d06" id="r_a53f479ce86e824df3167c5971cf57d06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tcp__c__errors_8h.html#a53f479ce86e824df3167c5971cf57d06">ERR_TCP_INVALID_PORT</a>&#160;&#160;&#160;0x0024 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
+<tr class="memdesc:a53f479ce86e824df3167c5971cf57d06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invalid port number.  <br /></td></tr>
 <tr class="separator:a53f479ce86e824df3167c5971cf57d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a47bc86d657d9d2a83bdcd43c2b1c42" id="r_a8a47bc86d657d9d2a83bdcd43c2b1c42"><td class="memItemLeft" align="right" valign="top"><a id="a8a47bc86d657d9d2a83bdcd43c2b1c42" name="a8a47bc86d657d9d2a83bdcd43c2b1c42"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERR_TCP_INVALID_SOCKET</b>&#160;&#160;&#160;0x0025 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
-<tr class="memdesc:a8a47bc86d657d9d2a83bdcd43c2b1c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket is invalid. <br /></td></tr>
+<tr class="memitem:a8a47bc86d657d9d2a83bdcd43c2b1c42" id="r_a8a47bc86d657d9d2a83bdcd43c2b1c42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tcp__c__errors_8h.html#a8a47bc86d657d9d2a83bdcd43c2b1c42">ERR_TCP_INVALID_SOCKET</a>&#160;&#160;&#160;0x0025 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
+<tr class="memdesc:a8a47bc86d657d9d2a83bdcd43c2b1c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket is invalid.  <br /></td></tr>
 <tr class="separator:a8a47bc86d657d9d2a83bdcd43c2b1c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a0c0d0cff40ad8124a91a383f958049" id="r_a7a0c0d0cff40ad8124a91a383f958049"><td class="memItemLeft" align="right" valign="top"><a id="a7a0c0d0cff40ad8124a91a383f958049" name="a7a0c0d0cff40ad8124a91a383f958049"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ERR_TCP_INVALID_ARGS</b>&#160;&#160;&#160;0x0026 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
-<tr class="memdesc:a7a0c0d0cff40ad8124a91a383f958049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrong arguments passed to function. <br /></td></tr>
+<tr class="memitem:a7a0c0d0cff40ad8124a91a383f958049" id="r_a7a0c0d0cff40ad8124a91a383f958049"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="tcp__c__errors_8h.html#a7a0c0d0cff40ad8124a91a383f958049">ERR_TCP_INVALID_ARGS</a>&#160;&#160;&#160;0x0026 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td></tr>
+<tr class="memdesc:a7a0c0d0cff40ad8124a91a383f958049"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrong arguments passed to function.  <br /></td></tr>
 <tr class="separator:a7a0c0d0cff40ad8124a91a383f958049"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -147,7 +143,104 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>"1.2.3" </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-26</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a0023d05f8842a11462d688ab027d84d9" name="a0023d05f8842a11462d688ab027d84d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0023d05f8842a11462d688ab027d84d9">&#9670;&#160;</a></span>ERR_TCP_ADDR_ERROR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERR_TCP_ADDR_ERROR&#160;&#160;&#160;0x0023 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Error when preparing address. </p>
+
+</div>
+</div>
+<a id="a6e9979d644286341468ec01d9aec7222" name="a6e9979d644286341468ec01d9aec7222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e9979d644286341468ec01d9aec7222">&#9670;&#160;</a></span>ERR_TCP_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERR_TCP_BASE&#160;&#160;&#160;0x012C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tcp controller error base. </p>
+
+</div>
+</div>
+<a id="a7a0c0d0cff40ad8124a91a383f958049" name="a7a0c0d0cff40ad8124a91a383f958049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a0c0d0cff40ad8124a91a383f958049">&#9670;&#160;</a></span>ERR_TCP_INVALID_ARGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERR_TCP_INVALID_ARGS&#160;&#160;&#160;0x0026 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wrong arguments passed to function. </p>
+
+</div>
+</div>
+<a id="a53f479ce86e824df3167c5971cf57d06" name="a53f479ce86e824df3167c5971cf57d06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53f479ce86e824df3167c5971cf57d06">&#9670;&#160;</a></span>ERR_TCP_INVALID_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERR_TCP_INVALID_PORT&#160;&#160;&#160;0x0024 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invalid port number. </p>
+
+</div>
+</div>
+<a id="a8a47bc86d657d9d2a83bdcd43c2b1c42" name="a8a47bc86d657d9d2a83bdcd43c2b1c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a47bc86d657d9d2a83bdcd43c2b1c42">&#9670;&#160;</a></span>ERR_TCP_INVALID_SOCKET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERR_TCP_INVALID_SOCKET&#160;&#160;&#160;0x0025 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Socket is invalid. </p>
+
+</div>
+</div>
+<a id="a26769957ec1a2beaf223f33b66ee64ab" name="a26769957ec1a2beaf223f33b66ee64ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26769957ec1a2beaf223f33b66ee64ab">&#9670;&#160;</a></span>INVALID_SOCKET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INVALID_SOCKET&#160;&#160;&#160;0x0000-1 + <a class="el" href="tcp__c__errors_8h.html#a6e9979d644286341468ec01d9aec7222">ERR_TCP_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Invalid socket identifier. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

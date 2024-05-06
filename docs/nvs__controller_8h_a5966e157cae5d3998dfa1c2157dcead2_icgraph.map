@@ -1,0 +1,57 @@
+<map id="nvs_c_erase_namespace" name="nvs_c_erase_namespace">
+<area shape="rect" id="Node000001" title="Erase all key&#45;value pairs in specified NVS namespace." alt="" coords="748,533,917,559"/>
+<area shape="rect" id="Node000002" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ae7fbb03979d17984466e4181c27e8195" title=" " alt="" coords="508,5,680,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="824,518,808,416,780,279,763,209,743,146,721,94,698,60,678,45,682,41,702,56,726,92,748,144,768,208,785,277,813,415,830,517"/>
+<area shape="rect" id="Node000004" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ad29a3d07988dee21ae1ded7d7f533f26" title=" " alt="" coords="512,70,676,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="827,518,820,443,800,342,783,288,761,235,733,184,698,140,675,122,678,118,702,136,737,181,766,232,789,286,805,341,825,442,833,517"/>
+<area shape="rect" id="Node000005" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a76dbb8c13f782ecefe13a1529bbfde0b" title=" " alt="" coords="505,150,683,206"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="825,518,813,457,790,377,773,335,753,293,728,254,698,220,682,207,685,203,702,216,732,251,757,291,778,333,795,376,818,456,830,517"/>
+<area shape="rect" id="Node000006" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a804309efda8b9d0389232dad188f3efb" title=" " alt="" coords="507,229,681,270"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="822,518,808,468,783,405,747,339,724,310,698,284,680,272,682,267,701,280,728,306,751,337,788,402,813,466,827,517"/>
+<area shape="rect" id="Node000007" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a16f5aa09f8c8131a1afda174d6eff6e7" title=" " alt="" coords="505,294,683,350"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="816,521,771,444,737,401,698,364,680,352,683,348,701,360,741,397,775,441,821,518"/>
+<area shape="rect" id="Node000008" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ac984d12d806eb9a11736d0e237686b77" title=" " alt="" coords="504,374,684,430"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="804,524,757,484,698,444,676,432,678,428,701,439,760,480,808,520"/>
+<area shape="rect" id="Node000009" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ae00ba559d54051fccf2865f4014dae79" title=" " alt="" coords="488,453,700,494"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="772,530,663,497,665,492,774,525"/>
+<area shape="rect" id="Node000010" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#aa135cbcf0e7f2c90f3fcc4c75d96155b" title=" " alt="" coords="523,518,665,574"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="732,548,665,548,665,543,732,543"/>
+<area shape="rect" id="Node000011" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#adc571a79f592dd0ddd5e5c32a9159c05" title=" " alt="" coords="508,597,680,638"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="774,566,665,599,663,594,772,561"/>
+<area shape="rect" id="Node000012" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#af8bfa4ec91abee17a627dc2fa646a089" title=" " alt="" coords="528,663,660,703"/>
+<area shape="poly" id="edge19_Node000001_Node000012" title=" " alt="" coords="808,571,761,612,701,652,661,669,659,664,698,647,758,608,805,567"/>
+<area shape="rect" id="Node000013" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a544e846c10b4080144bf2c2a149ad44e" title=" " alt="" coords="519,727,669,783"/>
+<area shape="poly" id="edge21_Node000001_Node000013" title=" " alt="" coords="819,574,772,644,739,683,701,717,671,735,668,730,698,713,736,679,768,641,815,571"/>
+<area shape="rect" id="Node000014" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a6e34116dfca96c0f13ea72955c97aa3d" title=" " alt="" coords="504,807,684,847"/>
+<area shape="poly" id="edge23_Node000001_Node000014" title=" " alt="" coords="827,574,811,622,786,682,750,744,727,772,701,797,684,808,681,804,698,793,723,769,745,741,781,680,806,621,821,573"/>
+<area shape="rect" id="Node000015" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#aeee62d2e8485d6c2e084185981327f4e" title=" " alt="" coords="525,872,663,913"/>
+<area shape="poly" id="edge25_Node000001_Node000015" title=" " alt="" coords="830,574,818,633,795,710,778,751,757,791,732,828,701,861,684,873,664,882,662,878,681,869,698,857,727,825,752,788,773,749,790,709,813,632,825,573"/>
+<area shape="rect" id="Node000016" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a3fbb73d0cbbb938055c062bbe0e992a4" title=" " alt="" coords="523,937,665,978"/>
+<area shape="poly" id="edge27_Node000001_Node000016" title=" " alt="" coords="832,575,824,645,803,739,786,789,764,839,736,885,701,926,685,939,667,948,664,943,682,934,698,922,732,882,760,836,781,788,798,738,819,644,827,574"/>
+<area shape="rect" id="Node000017" href="$wifi__manager_8c.html#ae40d3fa65c5e68e8fa280cc45a81e8b0" title="Erase all data stored in wifi manager NVS namespace." alt="" coords="515,1002,673,1028"/>
+<area shape="poly" id="edge29_Node000001_Node000017" title=" " alt="" coords="834,574,831,656,825,710,814,769,797,829,774,888,742,943,701,992,674,1008,672,1004,698,988,738,940,769,886,792,827,809,768,819,709,825,656,829,574"/>
+<area shape="rect" id="Node000003" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="310,497,412,523"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="497,54,490,59,448,113,417,174,394,239,379,304,370,366,365,421,364,496,359,496,360,421,365,365,374,303,389,237,412,172,444,110,486,56,493,50"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="501,131,490,140,455,184,428,233,406,286,390,339,372,434,365,497,360,496,366,433,385,337,401,284,423,231,451,181,486,136,497,127"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="494,216,490,220,461,253,436,291,416,331,399,372,377,446,367,497,361,496,372,445,394,370,411,329,431,288,456,250,486,216,491,212"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="495,280,490,284,464,308,442,337,406,398,381,456,368,497,363,496,376,454,401,396,437,334,460,305,487,280,492,275"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="496,360,490,364,451,397,418,434,372,498,368,495,413,431,447,393,487,360,493,355"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="502,438,489,444,386,499,384,494,487,439,500,434"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="473,495,412,505,412,499,472,490"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="507,535,412,520,413,515,508,530"/>
+<area shape="poly" id="edge18_Node000011_Node000003" title=" " alt="" coords="501,594,487,588,427,556,379,525,382,521,430,552,489,583,503,589"/>
+<area shape="poly" id="edge20_Node000012_Node000003" title=" " alt="" coords="513,665,487,652,448,621,414,585,368,525,373,521,418,582,451,617,490,647,515,660"/>
+<area shape="poly" id="edge22_Node000013_Node000003" title=" " alt="" coords="504,729,487,717,462,694,441,668,405,613,379,561,364,524,369,522,384,559,410,610,445,665,466,690,490,713,507,725"/>
+<area shape="poly" id="edge24_Node000014_Node000003" title=" " alt="" coords="490,800,486,797,456,765,431,727,410,688,393,647,371,574,361,523,366,522,377,573,398,646,415,685,435,725,460,761,490,793,493,796"/>
+<area shape="poly" id="edge26_Node000015_Node000003" title=" " alt="" coords="509,876,487,861,452,820,424,773,402,724,386,674,367,584,360,523,365,523,372,583,391,673,407,722,429,771,456,817,490,857,512,872"/>
+<area shape="poly" id="edge28_Node000016_Node000003" title=" " alt="" coords="507,941,486,926,447,877,417,820,394,761,378,701,363,593,359,523,365,523,368,593,384,700,399,759,421,818,451,874,490,922,510,937"/>
+<area shape="rect" id="Node000018" href="$test__wifi__manager_8c.html#ac7372248530e87eecab65fce9520cf80" title=" " alt="" coords="287,961,435,1002"/>
+<area shape="poly" id="edge30_Node000017_Node000018" title=" " alt="" coords="500,1004,435,995,436,990,501,999"/>
+<area shape="rect" id="Node000021" href="$test__wifi__manager_8c.html#a572428b931123b5c3bd88d5f594da935" title=" " alt="" coords="281,1027,440,1067"/>
+<area shape="poly" id="edge33_Node000017_Node000021" title=" " alt="" coords="501,1030,441,1039,440,1033,500,1025"/>
+<area shape="rect" id="Node000019" href="$test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,1002,233,1028"/>
+<area shape="poly" id="edge31_Node000018_Node000019" title=" " alt="" coords="272,1001,234,1008,233,1003,271,996"/>
+<area shape="rect" id="Node000020" href="$test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,1002,83,1028"/>
+<area shape="poly" id="edge32_Node000019_Node000020" title=" " alt="" coords="115,1018,83,1018,83,1012,115,1012"/>
+<area shape="poly" id="edge34_Node000021_Node000019" title=" " alt="" coords="265,1033,233,1027,234,1022,266,1027"/>
+</map>

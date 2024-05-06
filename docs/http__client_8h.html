@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -117,9 +117,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="http__client_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2http__client_2include_2http__client_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2http__client_2include_2http__client_8hdep" id="aprojects_2lib__tests_2lib_2http__client_2include_2http__client_8hdep">
-<area shape="rect" title="HTTP Client header file." alt="" coords="5,5,153,61"/>
-<area shape="rect" href="http__client_8c.html" title="Http client source file." alt="" coords="17,109,141,165"/>
-<area shape="poly" title=" " alt="" coords="82,77,82,108,76,108,76,77"/>
+<area shape="rect" title="HTTP Client header file." alt="" coords="311,5,459,61"/>
+<area shape="rect" href="http__client_8c.html" title="Http client source file." alt="" coords="5,117,130,172"/>
+<area shape="poly" title=" " alt="" coords="297,61,221,84,142,111,125,118,123,113,140,107,219,79,295,56"/>
+<area shape="rect" href="ota__controller_8c.html" title=" " alt="" coords="153,117,289,172"/>
+<area shape="poly" title=" " alt="" coords="333,72,263,118,260,114,330,67"/>
+<area shape="rect" href="test__http__client_8c.html" title=" " alt="" coords="313,109,457,180"/>
+<area shape="poly" title=" " alt="" coords="388,76,388,109,382,109,382,76"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="481,117,638,172"/>
+<area shape="poly" title=" " alt="" coords="443,67,517,114,514,118,440,72"/>
+<area shape="rect" href="test__http__client_2main_2main_8c.html" title=" " alt="" coords="662,117,809,172"/>
+<area shape="poly" title=" " alt="" coords="474,54,651,106,671,113,669,118,649,112,473,59"/>
 </map>
 </div>
 </div>
@@ -127,17 +135,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4a26e87eb9df7ff345b4a3e07b97e921" id="r_a4a26e87eb9df7ff345b4a3e07b97e921"><td class="memItemLeft" align="right" valign="top"><a id="a4a26e87eb9df7ff345b4a3e07b97e921" name="a4a26e87eb9df7ff345b4a3e07b97e921"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>HTTP_CLIENT_MAX_OUTPUT_BUFFER_SIZE</b>&#160;&#160;&#160;1024</td></tr>
-<tr class="memdesc:a4a26e87eb9df7ff345b4a3e07b97e921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum size for local response buffer. <br /></td></tr>
+<tr class="memitem:a4a26e87eb9df7ff345b4a3e07b97e921" id="r_a4a26e87eb9df7ff345b4a3e07b97e921"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8h.html#a4a26e87eb9df7ff345b4a3e07b97e921">HTTP_CLIENT_MAX_OUTPUT_BUFFER_SIZE</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="memdesc:a4a26e87eb9df7ff345b4a3e07b97e921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum size for local response buffer.  <br /></td></tr>
 <tr class="separator:a4a26e87eb9df7ff345b4a3e07b97e921"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7268ad5218a6214755a84f0e190558b5" id="r_a7268ad5218a6214755a84f0e190558b5"><td class="memItemLeft" align="right" valign="top"><a id="a7268ad5218a6214755a84f0e190558b5" name="a7268ad5218a6214755a84f0e190558b5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>HTTP_CLIENT_MAX_URL_LENGTH</b>&#160;&#160;&#160;256</td></tr>
-<tr class="memdesc:a7268ad5218a6214755a84f0e190558b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum size for local URL buffer. <br /></td></tr>
+<tr class="memitem:a7268ad5218a6214755a84f0e190558b5" id="r_a7268ad5218a6214755a84f0e190558b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8h.html#a7268ad5218a6214755a84f0e190558b5">HTTP_CLIENT_MAX_URL_LENGTH</a>&#160;&#160;&#160;256</td></tr>
+<tr class="memdesc:a7268ad5218a6214755a84f0e190558b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum size for local URL buffer.  <br /></td></tr>
 <tr class="separator:a7268ad5218a6214755a84f0e190558b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f32fc2c9125fdf8ebc17ded516451df" id="r_a7f32fc2c9125fdf8ebc17ded516451df"><td class="memItemLeft" align="right" valign="top"><a id="a7f32fc2c9125fdf8ebc17ded516451df" name="a7f32fc2c9125fdf8ebc17ded516451df"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>HTTP_CLIENT_POST_USE_STRLEN</b>&#160;&#160;&#160;-1</td></tr>
-<tr class="memdesc:a7f32fc2c9125fdf8ebc17ded516451df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use strlen to get post data len. <br /></td></tr>
+<tr class="memitem:a7f32fc2c9125fdf8ebc17ded516451df" id="r_a7f32fc2c9125fdf8ebc17ded516451df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="http__client_8h.html#a7f32fc2c9125fdf8ebc17ded516451df">HTTP_CLIENT_POST_USE_STRLEN</a>&#160;&#160;&#160;-1</td></tr>
+<tr class="memdesc:a7f32fc2c9125fdf8ebc17ded516451df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use strlen to get post data len.  <br /></td></tr>
 <tr class="separator:a7f32fc2c9125fdf8ebc17ded516451df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -173,7 +178,56 @@ Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0.7 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-03-15</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div><h2 class="groupheader">Typedef Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a4a26e87eb9df7ff345b4a3e07b97e921" name="a4a26e87eb9df7ff345b4a3e07b97e921"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a26e87eb9df7ff345b4a3e07b97e921">&#9670;&#160;</a></span>HTTP_CLIENT_MAX_OUTPUT_BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HTTP_CLIENT_MAX_OUTPUT_BUFFER_SIZE&#160;&#160;&#160;1024</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum size for local response buffer. </p>
+
+</div>
+</div>
+<a id="a7268ad5218a6214755a84f0e190558b5" name="a7268ad5218a6214755a84f0e190558b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7268ad5218a6214755a84f0e190558b5">&#9670;&#160;</a></span>HTTP_CLIENT_MAX_URL_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HTTP_CLIENT_MAX_URL_LENGTH&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Maximum size for local URL buffer. </p>
+
+</div>
+</div>
+<a id="a7f32fc2c9125fdf8ebc17ded516451df" name="a7f32fc2c9125fdf8ebc17ded516451df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f32fc2c9125fdf8ebc17ded516451df">&#9670;&#160;</a></span>HTTP_CLIENT_POST_USE_STRLEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HTTP_CLIENT_POST_USE_STRLEN&#160;&#160;&#160;-1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use strlen to get post data len. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
 <a id="ac50691f194d0e4451f8658de4246ea2d" name="ac50691f194d0e4451f8658de4246ea2d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac50691f194d0e4451f8658de4246ea2d">&#9670;&#160;</a></span>http_client_t</h2>
 
@@ -223,6 +277,56 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_a4b2ab87e18213803c735bcf8c6a9cdae_cgraph.png" border="0" usemap="#ahttp__client_8h_a4b2ab87e18213803c735bcf8c6a9cdae_cgraph" alt=""/></div>
+<map name="ahttp__client_8h_a4b2ab87e18213803c735bcf8c6a9cdae_cgraph" id="ahttp__client_8h_a4b2ab87e18213803c735bcf8c6a9cdae_cgraph">
+<area shape="rect" title="This function frees resources allocated with http_client_post_reuse() and closes connection." alt="" coords="5,5,125,46"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="173,13,324,39"/>
+<area shape="poly" title=" " alt="" coords="125,23,157,23,157,28,125,28"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="372,13,539,39"/>
+<area shape="poly" title=" " alt="" coords="324,23,356,23,356,28,324,28"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_a4b2ab87e18213803c735bcf8c6a9cdae_icgraph.png" border="0" usemap="#ahttp__client_8h_a4b2ab87e18213803c735bcf8c6a9cdae_icgraph" alt=""/></div>
+<map name="ahttp__client_8h_a4b2ab87e18213803c735bcf8c6a9cdae_icgraph" id="ahttp__client_8h_a4b2ab87e18213803c735bcf8c6a9cdae_icgraph">
+<area shape="rect" title="This function frees resources allocated with http_client_post_reuse() and closes connection." alt="" coords="517,302,637,343"/>
+<area shape="rect" href="test__http__client_8c.html#ae5366c4df25163d483221a177e5b0515" title=" " alt="" coords="300,5,450,61"/>
+<area shape="poly" title=" " alt="" coords="567,288,555,240,535,184,507,126,488,99,467,75,449,61,452,57,471,71,493,96,511,123,540,182,560,239,572,286"/>
+<area shape="rect" href="test__http__client_8c.html#ae7bfb594d3a84d5e4cad13907d7cb67c" title=" " alt="" coords="300,85,450,141"/>
+<area shape="poly" title=" " alt="" coords="559,290,523,222,498,187,468,155,449,142,452,138,471,151,502,183,528,219,564,287"/>
+<area shape="rect" href="test__http__client_8c.html#a03b7b4efe9aae12ba1384e61c6b4a29c" title=" " alt="" coords="306,165,444,206"/>
+<area shape="poly" title=" " alt="" coords="548,293,512,255,468,221,443,208,446,203,471,216,516,251,552,289"/>
+<area shape="rect" href="test__http__client_8c.html#af251efb61e73f3ad7d5519566c7edb84" title=" " alt="" coords="287,230,464,271"/>
+<area shape="poly" title=" " alt="" coords="506,299,468,285,437,274,439,269,470,280,508,294"/>
+<area shape="rect" href="test__http__client_8c.html#ac39cfd3708559e5fab4a203c7141a0e5" title=" " alt="" coords="290,295,460,350"/>
+<area shape="poly" title=" " alt="" coords="502,325,461,325,461,320,502,320"/>
+<area shape="rect" href="test__http__client_8c.html#aebd0663c566b094df8107566433162e0" title=" " alt="" coords="287,374,463,415"/>
+<area shape="poly" title=" " alt="" coords="508,351,470,365,439,376,437,371,468,360,506,346"/>
+<area shape="rect" href="test__http__client_8c.html#a1298de2d117f16d614fe916a1f02b9a3" title=" " alt="" coords="301,440,450,480"/>
+<area shape="poly" title=" " alt="" coords="552,356,516,394,471,429,447,441,444,436,468,424,512,390,548,352"/>
+<area shape="rect" href="test__http__client_8c.html#aadb778cd0853a5b035e7870ec5bc6bc0" title=" " alt="" coords="281,505,469,546"/>
+<area shape="poly" title=" " alt="" coords="564,358,529,427,502,463,471,494,451,507,448,502,468,490,498,459,524,424,560,356"/>
+<area shape="rect" href="test__http__client_8c.html#a72d71c171d5f8f1998eeca81e909f349" title=" " alt="" coords="287,570,463,611"/>
+<area shape="poly" title=" " alt="" coords="571,359,559,404,539,457,510,512,492,537,471,559,454,572,450,567,468,555,488,533,506,509,534,455,554,402,566,358"/>
+<area shape="rect" href="test__http__client_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,310,233,335"/>
+<area shape="poly" title=" " alt="" coords="289,69,283,75,260,104,240,135,212,203,195,266,187,310,182,309,190,265,207,202,235,133,255,100,279,71,286,65"/>
+<area shape="rect" href="test__http__client_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,310,83,335"/>
+<area shape="poly" title=" " alt="" coords="115,325,83,325,83,320,115,320"/>
+<area shape="poly" title=" " alt="" coords="289,150,283,155,248,194,222,238,190,310,185,308,217,235,244,191,279,151,285,146"/>
+<area shape="poly" title=" " alt="" coords="294,214,283,221,255,242,230,267,195,311,190,307,226,263,251,238,279,216,291,210"/>
+<area shape="poly" title=" " alt="" coords="299,279,282,285,216,312,214,307,280,280,297,274"/>
+<area shape="poly" title=" " alt="" coords="274,325,234,325,234,320,274,320"/>
+<area shape="poly" title=" " alt="" coords="297,371,280,365,214,338,216,333,282,360,299,366"/>
+<area shape="poly" title=" " alt="" coords="289,434,279,429,251,407,226,382,190,338,195,334,230,378,255,403,283,424,292,430"/>
+<area shape="poly" title=" " alt="" coords="286,499,279,494,243,455,216,410,196,368,185,337,190,335,201,366,221,408,248,452,283,490,289,494"/>
+<area shape="poly" title=" " alt="" coords="284,563,279,559,256,532,236,502,207,438,190,379,182,336,188,335,196,377,212,436,241,500,260,529,283,555,287,559"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -284,6 +388,46 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>Do error checking if provided buffer fits into internal url buffer. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_aecf54e1637f052dc08eca4b05a6bd32a_cgraph.png" border="0" usemap="#ahttp__client_8h_aecf54e1637f052dc08eca4b05a6bd32a_cgraph" alt=""/></div>
+<map name="ahttp__client_8h_aecf54e1637f052dc08eca4b05a6bd32a_cgraph" id="ahttp__client_8h_aecf54e1637f052dc08eca4b05a6bd32a_cgraph">
+<area shape="rect" title="Make a HTTP POST request." alt="" coords="5,5,112,31"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="160,5,311,31"/>
+<area shape="poly" title=" " alt="" coords="112,16,144,16,144,21,112,21"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="359,5,526,31"/>
+<area shape="poly" title=" " alt="" coords="311,16,343,16,343,21,311,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_aecf54e1637f052dc08eca4b05a6bd32a_icgraph.png" border="0" usemap="#ahttp__client_8h_aecf54e1637f052dc08eca4b05a6bd32a_icgraph" alt=""/></div>
+<map name="ahttp__client_8h_aecf54e1637f052dc08eca4b05a6bd32a_icgraph" id="ahttp__client_8h_aecf54e1637f052dc08eca4b05a6bd32a_icgraph">
+<area shape="rect" title="Make a HTTP POST request." alt="" coords="487,161,594,187"/>
+<area shape="rect" href="test__http__client_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="322,5,399,31"/>
+<area shape="poly" title=" " alt="" coords="523,149,489,96,465,69,438,46,419,35,398,28,400,23,421,30,441,41,469,65,493,93,528,146"/>
+<area shape="rect" href="test__http__client_8c.html#a74d1a357751909883d6ce06c63636c53" title=" " alt="" coords="281,55,439,96"/>
+<area shape="poly" title=" " alt="" coords="507,155,438,111,413,99,415,94,441,107,510,150"/>
+<area shape="rect" href="test__http__client_8c.html#a37bf01eacf62242eaa2b8eb4bded027e" title=" " alt="" coords="281,121,439,161"/>
+<area shape="poly" title=" " alt="" coords="471,164,439,158,440,153,472,159"/>
+<area shape="rect" href="test__http__client_8c.html#a9a0ca76e94b67d6bc86722a0da5e3021" title=" " alt="" coords="281,186,439,227"/>
+<area shape="poly" title=" " alt="" coords="472,189,440,195,439,189,471,184"/>
+<area shape="rect" href="test__http__client_8c.html#af6c3d0bc5ad522299227e16c83a900ca" title=" " alt="" coords="281,251,439,292"/>
+<area shape="poly" title=" " alt="" coords="509,198,441,241,415,253,412,248,438,236,507,194"/>
+<area shape="rect" href="test__http__client_8c.html#a6f62d0b06d8fc3a5db38182e3b0c946b" title=" " alt="" coords="281,317,439,357"/>
+<area shape="poly" title=" " alt="" coords="527,202,492,253,468,281,441,306,421,318,418,314,438,301,464,277,487,250,522,199"/>
+<area shape="rect" href="test__http__client_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,193,233,219"/>
+<area shape="poly" title=" " alt="" coords="291,106,283,111,232,154,196,195,192,191,228,151,279,107,288,101"/>
+<area shape="rect" href="test__http__client_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,193,83,219"/>
+<area shape="poly" title=" " alt="" coords="115,209,83,209,83,204,115,204"/>
+<area shape="poly" title=" " alt="" coords="290,169,220,195,218,190,288,164"/>
+<area shape="poly" title=" " alt="" coords="266,209,233,209,233,204,266,204"/>
+<area shape="poly" title=" " alt="" coords="288,248,218,222,220,217,290,243"/>
+<area shape="poly" title=" " alt="" coords="288,311,279,306,228,262,192,221,196,218,232,258,283,301,291,307"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -337,6 +481,43 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>Do error checking if provided buffer fits into internal url buffer. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_a7a524624e480ef689e54e6ca644b903c_cgraph.png" border="0" usemap="#ahttp__client_8h_a7a524624e480ef689e54e6ca644b903c_cgraph" alt=""/></div>
+<map name="ahttp__client_8h_a7a524624e480ef689e54e6ca644b903c_cgraph" id="ahttp__client_8h_a7a524624e480ef689e54e6ca644b903c_cgraph">
+<area shape="rect" title="Make a HTTP GET request reusing the already made connection." alt="" coords="5,31,151,56"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="222,5,327,31"/>
+<area shape="poly" title=" " alt="" coords="151,31,207,24,207,29,151,37"/>
+<area shape="rect" href="memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="199,55,350,80"/>
+<area shape="poly" title=" " alt="" coords="151,50,184,54,183,59,151,55"/>
+<area shape="rect" href="memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="398,55,565,80"/>
+<area shape="poly" title=" " alt="" coords="350,65,382,65,382,70,350,70"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_a7a524624e480ef689e54e6ca644b903c_icgraph.png" border="0" usemap="#ahttp__client_8h_a7a524624e480ef689e54e6ca644b903c_icgraph" alt=""/></div>
+<map name="ahttp__client_8h_a7a524624e480ef689e54e6ca644b903c_icgraph" id="ahttp__client_8h_a7a524624e480ef689e54e6ca644b903c_icgraph">
+<area shape="rect" title="Make a HTTP GET request reusing the already made connection." alt="" coords="512,114,658,140"/>
+<area shape="rect" href="test__http__client_8c.html#af251efb61e73f3ad7d5519566c7edb84" title=" " alt="" coords="284,5,461,46"/>
+<area shape="poly" title=" " alt="" coords="549,108,463,61,434,49,436,44,465,57,551,103"/>
+<area shape="rect" href="test__http__client_8c.html#a66724eaea436507861aa45c8c18d58a0" title=" " alt="" coords="281,71,464,111"/>
+<area shape="poly" title=" " alt="" coords="497,115,464,109,465,104,498,110"/>
+<area shape="rect" href="test__http__client_8c.html#ac39cfd3708559e5fab4a203c7141a0e5" title=" " alt="" coords="288,135,458,191"/>
+<area shape="poly" title=" " alt="" coords="498,144,459,151,458,146,497,139"/>
+<area shape="rect" href="test__http__client_8c.html#aebd0663c566b094df8107566433162e0" title=" " alt="" coords="285,215,461,255"/>
+<area shape="poly" title=" " alt="" coords="555,151,513,179,466,205,440,216,438,212,463,201,511,174,552,147"/>
+<area shape="rect" href="test__http__client_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,114,233,140"/>
+<area shape="poly" title=" " alt="" coords="296,55,282,61,237,89,201,116,198,111,234,84,280,57,293,50"/>
+<area shape="rect" href="test__http__client_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,114,83,140"/>
+<area shape="poly" title=" " alt="" coords="115,130,83,130,83,124,115,124"/>
+<area shape="poly" title=" " alt="" coords="266,114,234,120,233,115,265,109"/>
+<area shape="poly" title=" " alt="" coords="272,147,233,139,234,134,273,141"/>
+<area shape="poly" title=" " alt="" coords="289,210,280,205,232,173,196,142,199,138,235,169,282,201,292,206"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -390,6 +571,47 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_ae0beeb232473e1e9bf8198957edd455b_icgraph.png" border="0" usemap="#ahttp__client_8h_ae0beeb232473e1e9bf8198957edd455b_icgraph" alt=""/></div>
+<map name="ahttp__client_8h_ae0beeb232473e1e9bf8198957edd455b_icgraph" id="ahttp__client_8h_ae0beeb232473e1e9bf8198957edd455b_icgraph">
+<area shape="rect" title="Init http_client_t handle for reusing with multiple connections." alt="" coords="520,321,665,347"/>
+<area shape="rect" href="test__http__client_8c.html#a03b7b4efe9aae12ba1384e61c6b4a29c" title=" " alt="" coords="308,5,446,46"/>
+<area shape="poly" title=" " alt="" coords="584,306,572,254,551,189,518,120,496,89,471,61,445,44,448,40,474,57,500,85,522,118,556,187,577,253,589,305"/>
+<area shape="rect" href="test__http__client_8c.html#af251efb61e73f3ad7d5519566c7edb84" title=" " alt="" coords="288,71,465,111"/>
+<area shape="poly" title=" " alt="" coords="580,307,565,267,542,218,511,168,471,125,454,114,457,110,474,121,515,165,547,215,570,265,585,305"/>
+<area shape="rect" href="test__http__client_8c.html#ac39cfd3708559e5fab4a203c7141a0e5" title=" " alt="" coords="292,135,462,191"/>
+<area shape="poly" title=" " alt="" coords="571,310,529,258,501,230,471,205,452,194,455,189,474,201,505,226,533,254,575,307"/>
+<area shape="rect" href="test__http__client_8c.html#aebd0663c566b094df8107566433162e0" title=" " alt="" coords="289,215,465,255"/>
+<area shape="poly" title=" " alt="" coords="555,315,471,271,440,258,442,253,473,266,558,310"/>
+<area shape="rect" href="test__http__client_8c.html#ae7fb647a5d22ad5d7cd3ceb7a8f813bf" title=" " alt="" coords="281,280,472,321"/>
+<area shape="poly" title=" " alt="" coords="505,323,473,318,473,313,506,318"/>
+<area shape="rect" href="test__http__client_8c.html#a9293a472f511c058ccb65208b82d3444" title=" " alt="" coords="285,345,468,386"/>
+<area shape="poly" title=" " alt="" coords="506,349,469,355,468,349,505,344"/>
+<area shape="rect" href="test__http__client_8c.html#a0d52da6e16715d81140bae92a8a56c65" title=" " alt="" coords="292,411,462,451"/>
+<area shape="poly" title=" " alt="" coords="557,357,473,400,442,413,440,408,471,395,555,352"/>
+<area shape="rect" href="test__http__client_8c.html#a1298de2d117f16d614fe916a1f02b9a3" title=" " alt="" coords="302,476,451,517"/>
+<area shape="poly" title=" " alt="" coords="576,361,533,413,505,441,474,465,451,478,448,473,471,461,501,437,529,410,572,358"/>
+<area shape="rect" href="test__http__client_8c.html#aadb778cd0853a5b035e7870ec5bc6bc0" title=" " alt="" coords="283,541,471,582"/>
+<area shape="poly" title=" " alt="" coords="584,362,568,400,544,445,513,491,474,530,454,543,451,539,471,526,509,487,540,442,563,397,579,360"/>
+<area shape="rect" href="test__http__client_8c.html#a72d71c171d5f8f1998eeca81e909f349" title=" " alt="" coords="289,607,465,647"/>
+<area shape="poly" title=" " alt="" coords="589,362,576,412,554,474,521,539,499,569,474,596,456,608,453,604,471,592,495,566,516,536,549,472,571,410,583,361"/>
+<area shape="rect" href="test__http__client_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,321,233,347"/>
+<area shape="poly" title=" " alt="" coords="296,51,283,61,257,92,236,127,220,165,207,203,192,273,187,321,181,320,187,272,202,202,215,163,231,125,253,89,279,57,292,47"/>
+<area shape="rect" href="test__http__client_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,321,83,347"/>
+<area shape="poly" title=" " alt="" coords="115,336,83,336,83,331,115,331"/>
+<area shape="poly" title=" " alt="" coords="286,122,283,125,261,148,243,174,215,230,197,283,188,321,183,320,192,282,210,228,238,171,257,144,279,121,282,118"/>
+<area shape="poly" title=" " alt="" coords="287,202,283,205,252,234,227,266,192,322,188,319,222,263,249,230,279,201,284,197"/>
+<area shape="poly" title=" " alt="" coords="297,264,282,271,238,297,202,322,199,318,235,292,280,266,294,259"/>
+<area shape="poly" title=" " alt="" coords="266,322,234,328,233,322,265,317"/>
+<area shape="poly" title=" " alt="" coords="269,351,233,345,234,339,270,345"/>
+<area shape="poly" title=" " alt="" coords="294,407,280,400,235,374,199,349,202,345,238,370,282,395,297,402"/>
+<area shape="poly" title=" " alt="" coords="288,471,279,465,248,437,222,404,188,348,192,346,226,401,252,433,283,461,291,466"/>
+<area shape="poly" title=" " alt="" coords="285,535,279,530,258,509,240,485,212,433,194,384,184,348,189,346,199,382,217,430,245,482,263,505,283,526,288,531"/>
+<area shape="poly" title=" " alt="" coords="284,600,279,596,254,566,233,532,204,460,188,394,182,348,187,347,194,393,209,459,238,530,258,563,283,592,287,596"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -451,6 +673,40 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_a55c042080b84c0ac0c2644a0b37f8388_icgraph.png" border="0" usemap="#ahttp__client_8h_a55c042080b84c0ac0c2644a0b37f8388_icgraph" alt=""/></div>
+<map name="ahttp__client_8h_a55c042080b84c0ac0c2644a0b37f8388_icgraph" id="ahttp__client_8h_a55c042080b84c0ac0c2644a0b37f8388_icgraph">
+<area shape="rect" title="Make a HTTP POST request." alt="" coords="540,161,654,187"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a35918ec96795bd96101b8ee1b8b03d61" title=" " alt="" coords="357,5,452,31"/>
+<area shape="poly" title=" " alt="" coords="580,149,544,96,519,68,491,44,472,35,452,28,453,23,474,30,494,40,523,64,548,92,584,146"/>
+<area shape="rect" href="ota__controller_8c.html#aab68b527cd1568e3137fdf8f483800e4" title=" " alt="" coords="316,55,492,80"/>
+<area shape="poly" title=" " alt="" coords="570,153,534,122,491,94,465,83,467,78,494,89,538,118,574,148"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="327,104,481,130"/>
+<area shape="poly" title=" " alt="" coords="538,159,492,145,451,133,453,128,493,140,539,154"/>
+<area shape="rect" href="test__http__client_8c.html#a834539c9bbd85c3fd620cc739eadbdf9" title=" " alt="" coords="322,154,487,195"/>
+<area shape="poly" title=" " alt="" coords="525,177,487,177,487,172,525,172"/>
+<area shape="rect" href="test__http__client_8c.html#a695820c69ba88f4a64c2c37c130889f4" title=" " alt="" coords="322,219,487,260"/>
+<area shape="poly" title=" " alt="" coords="543,195,467,221,466,216,541,190"/>
+<area shape="rect" href="test__http__client_8c.html#a826b32109035b788265c81f902c390d7" title=" " alt="" coords="322,285,487,325"/>
+<area shape="poly" title=" " alt="" coords="576,201,540,238,494,274,470,286,467,282,491,269,536,234,573,197"/>
+<area shape="rect" href="test__http__client_8c.html#a5587845e160818995514bdd214b8c2f9" title=" " alt="" coords="322,350,487,391"/>
+<area shape="poly" title=" " alt="" coords="587,203,552,270,526,307,494,339,475,351,472,347,491,335,522,303,547,267,582,200"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,55,268,80"/>
+<area shape="poly" title=" " alt="" coords="342,36,257,57,255,51,341,31"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,55,83,80"/>
+<area shape="poly" title=" " alt="" coords="115,70,83,70,83,65,115,65"/>
+<area shape="poly" title=" " alt="" coords="332,102,255,84,256,78,333,97"/>
+<area shape="rect" href="test__http__client_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="148,259,251,284"/>
+<area shape="poly" title=" " alt="" coords="332,203,317,210,224,260,221,256,315,205,330,198"/>
+<area shape="rect" href="test__http__client_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,259,83,284"/>
+<area shape="poly" title=" " alt="" coords="132,274,83,274,83,269,132,269"/>
+<area shape="poly" title=" " alt="" coords="307,257,251,266,250,261,306,252"/>
+<area shape="poly" title=" " alt="" coords="306,292,250,282,251,277,307,286"/>
+<area shape="poly" title=" " alt="" coords="330,346,315,339,221,287,223,282,317,334,332,341"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -503,6 +759,36 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>Do error checking if provided buffer fits into internal url buffer. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_abdab8abaaf7b1323aa95a9c97c8872cc_cgraph.png" border="0" usemap="#ahttp__client_8h_abdab8abaaf7b1323aa95a9c97c8872cc_cgraph" alt=""/></div>
+<map name="ahttp__client_8h_abdab8abaaf7b1323aa95a9c97c8872cc_cgraph" id="ahttp__client_8h_abdab8abaaf7b1323aa95a9c97c8872cc_cgraph">
+<area shape="rect" title="Make a HTTP POST request to the already made connection." alt="" coords="5,5,158,31"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="206,5,310,31"/>
+<area shape="poly" title=" " alt="" coords="158,16,190,16,190,21,158,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="http__client_8h_abdab8abaaf7b1323aa95a9c97c8872cc_icgraph.png" border="0" usemap="#ahttp__client_8h_abdab8abaaf7b1323aa95a9c97c8872cc_icgraph" alt=""/></div>
+<map name="ahttp__client_8h_abdab8abaaf7b1323aa95a9c97c8872cc_icgraph" id="ahttp__client_8h_abdab8abaaf7b1323aa95a9c97c8872cc_icgraph">
+<area shape="rect" title="Make a HTTP POST request to the already made connection." alt="" coords="517,78,670,104"/>
+<area shape="rect" href="test__http__client_8c.html#a4352709aebe8591510b1f58d42909784" title=" " alt="" coords="284,5,467,46"/>
+<area shape="poly" title=" " alt="" coords="533,76,445,49,446,44,534,71"/>
+<area shape="rect" href="test__http__client_8c.html#aadb778cd0853a5b035e7870ec5bc6bc0" title=" " alt="" coords="281,71,469,111"/>
+<area shape="poly" title=" " alt="" coords="502,94,470,94,470,88,502,88"/>
+<area shape="rect" href="test__http__client_8c.html#a72d71c171d5f8f1998eeca81e909f349" title=" " alt="" coords="287,136,463,177"/>
+<area shape="poly" title=" " alt="" coords="534,111,446,138,445,133,533,106"/>
+<area shape="rect" href="test__http__client_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,78,233,104"/>
+<area shape="poly" title=" " alt="" coords="300,54,223,80,222,75,298,49"/>
+<area shape="rect" href="test__http__client_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,78,83,104"/>
+<area shape="poly" title=" " alt="" coords="115,94,83,94,83,88,115,88"/>
+<area shape="poly" title=" " alt="" coords="266,94,234,94,234,88,266,88"/>
+<area shape="poly" title=" " alt="" coords="298,133,222,107,223,102,300,128"/>
+</map>
+</div>
 
 </div>
 </div>

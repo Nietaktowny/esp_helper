@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ESP Helper: File Members</title>
+<title>ESP Helper: Globals</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -91,14 +91,16 @@ $(document).ready(function(){initNavTree('globals_func_b.html',''); initResizabl
 </div>
 
 <div class="contents">
-<div class="textblock">Here is a list of all documented functions with links to the documentation:</div>
+<div class="textblock">Here is a list of all functions with links to the files they belong to:</div>
 
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
-<li>bmp_configure()&#160;:&#160;<a class="el" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee">bmp280.c</a>, <a class="el" href="bmp280_8h.html#a2d2c0726c6a64714da12904fd44664ee">bmp280.h</a></li>
-<li>bmp_get_chip_id()&#160;:&#160;<a class="el" href="bmp280_8c.html#a9487ef46257acb04e1caeff62d2b1da3">bmp280.c</a>, <a class="el" href="bmp280_8h.html#a9487ef46257acb04e1caeff62d2b1da3">bmp280.h</a></li>
+<li>bmp_compensate_P_int64()&#160;:&#160;<a class="el" href="bmp280__internal_8h.html#a62e2529d9443dfe65f6d4b755db00e8d">bmp280_internal.h</a>, <a class="el" href="bmp280_8c.html#a62e2529d9443dfe65f6d4b755db00e8d">bmp280.c</a></li>
+<li>bmp_compensate_T_int32()&#160;:&#160;<a class="el" href="bmp280__internal_8h.html#a4c2312589f67afdff1c0ba5912adaf6f">bmp280_internal.h</a>, <a class="el" href="bmp280_8c.html#a4c2312589f67afdff1c0ba5912adaf6f">bmp280.c</a></li>
+<li>bmp_configure()&#160;:&#160;<a class="el" href="bmp280_8h.html#a2d2c0726c6a64714da12904fd44664ee">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee">bmp280.c</a></li>
+<li>bmp_get_chip_id()&#160;:&#160;<a class="el" href="bmp280_8h.html#a9487ef46257acb04e1caeff62d2b1da3">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a9487ef46257acb04e1caeff62d2b1da3">bmp280.c</a></li>
 <li>bmp_get_i2c_addr()&#160;:&#160;<a class="el" href="bmp280_8h.html#ad4b0984dcbeb48e41089d7ba94bf6a8f">bmp280.h</a>, <a class="el" href="bmp280_8c.html#ad4b0984dcbeb48e41089d7ba94bf6a8f">bmp280.c</a></li>
 <li>bmp_get_mode()&#160;:&#160;<a class="el" href="bmp280_8h.html#a1fe612550d5ab7dd6fbd935ffb51c5db">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a1fe612550d5ab7dd6fbd935ffb51c5db">bmp280.c</a></li>
-<li>bmp_i2c_calculate_altitude()&#160;:&#160;<a class="el" href="bmp280_8h.html#af356cdcaca2bcc22564d38b080505c40">bmp280.h</a>, <a class="el" href="bmp280_8c.html#af356cdcaca2bcc22564d38b080505c40">bmp280.c</a></li>
+<li>bmp_i2c_calculate_altitude()&#160;:&#160;<a class="el" href="bmp280_8c.html#af356cdcaca2bcc22564d38b080505c40">bmp280.c</a>, <a class="el" href="bmp280_8h.html#af356cdcaca2bcc22564d38b080505c40">bmp280.h</a></li>
 <li>bmp_i2c_calibrate()&#160;:&#160;<a class="el" href="bmp280_8h.html#af12043f643ffea6caf5be93fe8ec0435">bmp280.h</a>, <a class="el" href="bmp280_8c.html#af12043f643ffea6caf5be93fe8ec0435">bmp280.c</a></li>
 <li>bmp_i2c_get_config()&#160;:&#160;<a class="el" href="bmp280_8h.html#afab376c79aa0600e731ea1dc8691e1af">bmp280.h</a>, <a class="el" href="bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af">bmp280.c</a></li>
 <li>bmp_i2c_get_ctrl_meas()&#160;:&#160;<a class="el" href="bmp280_8h.html#a8ebf401489abed2aceeb7997bb1e5b95">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5">bmp280.c</a></li>
@@ -110,7 +112,7 @@ $(document).ready(function(){initNavTree('globals_func_b.html',''); initResizabl
 <li>bmp_i2c_set_iir_filter()&#160;:&#160;<a class="el" href="bmp280_8h.html#a4265be98ad7d32842ae40e855692f18e">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a4265be98ad7d32842ae40e855692f18e">bmp280.c</a></li>
 <li>bmp_i2c_set_mode()&#160;:&#160;<a class="el" href="bmp280_8h.html#a73b7bf20c2a74ff716d22181b36f753a">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a73b7bf20c2a74ff716d22181b36f753a">bmp280.c</a></li>
 <li>bmp_i2c_set_press_oversampling()&#160;:&#160;<a class="el" href="bmp280_8h.html#aaf822501cab64075a6964114a3432783">bmp280.h</a>, <a class="el" href="bmp280_8c.html#aaf822501cab64075a6964114a3432783">bmp280.c</a></li>
-<li>bmp_i2c_set_standby_time()&#160;:&#160;<a class="el" href="bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f">bmp280.c</a>, <a class="el" href="bmp280_8h.html#a486db22a0f87aea52afd72d32bdfb64f">bmp280.h</a></li>
+<li>bmp_i2c_set_standby_time()&#160;:&#160;<a class="el" href="bmp280_8h.html#a486db22a0f87aea52afd72d32bdfb64f">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f">bmp280.c</a></li>
 <li>bmp_i2c_set_temp_oversampling()&#160;:&#160;<a class="el" href="bmp280_8h.html#a573d2f5665e8d34814a0da21248b7eab">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a573d2f5665e8d34814a0da21248b7eab">bmp280.c</a></li>
 <li>bmp_i2c_write()&#160;:&#160;<a class="el" href="bmp280_8h.html#a712e1325090f1da050399876d9658e36">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a712e1325090f1da050399876d9658e36">bmp280.c</a></li>
 <li>bmp_init()&#160;:&#160;<a class="el" href="bmp280_8h.html#a153ceda67f3ecc98d9147fe4b7754717">bmp280.h</a>, <a class="el" href="bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717">bmp280.c</a></li>

@@ -1,0 +1,11 @@
+<map id="bmp_i2c_identify_chip" name="bmp_i2c_identify_chip">
+<area shape="rect" id="Node000001" title="Search for BMP280 device on possible addresses." alt="" coords="637,5,786,31"/>
+<area shape="rect" id="Node000002" href="$bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="518,5,589,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="621,21,589,21,589,16,621,16"/>
+<area shape="rect" id="Node000003" href="$test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,5,470,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="503,21,471,21,471,16,503,16"/>
+<area shape="rect" id="Node000004" href="$test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,5,268,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="301,21,268,21,268,16,301,16"/>
+<area shape="rect" id="Node000005" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,5,83,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="115,21,83,21,83,16,115,16"/>
+</map>

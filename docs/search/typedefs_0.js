@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bmp_5fconfig_5ft_0',['bmp_config_t',['../bmp280_8h.html#afa02a3140775658979c4d4c5894e520a',1,'bmp280.h']]],
-  ['bmp_5fhandle_5ft_1',['bmp_handle_t',['../bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1',1,'bmp280.h']]]
+  ['adc_5fc_5foneshot_5fhandle_5ft_0',['adc_c_oneshot_handle_t',['../adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb',1,'adc_controller.h']]],
+  ['arena_5ft_1',['arena_t',['../arena_8h.html#a2f1e94033f6997d5bc053ee04badf35d',1,'arena.h']]]
 ];

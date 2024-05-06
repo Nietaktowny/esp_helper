@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -104,11 +104,17 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="ota__c__errors_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2ota__controller_2include_2ota__c__errors_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2ota__controller_2include_2ota__c__errors_8hdep" id="aprojects_2lib__tests_2lib_2ota__controller_2include_2ota__c__errors_8hdep">
-<area shape="rect" title="OTA Controller errors list." alt="" coords="8,5,161,61"/>
-<area shape="rect" href="ota__controller_8h_source.html" title=" " alt="" coords="5,109,164,165"/>
-<area shape="poly" title=" " alt="" coords="87,77,87,108,82,108,82,77"/>
-<area shape="rect" href="esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="9,213,160,268"/>
-<area shape="poly" title=" " alt="" coords="87,180,87,212,82,212,82,180"/>
+<area shape="rect" title="OTA Controller errors list." alt="" coords="252,5,404,61"/>
+<area shape="rect" href="ota__controller_8h.html" title=" " alt="" coords="249,109,407,165"/>
+<area shape="poly" title=" " alt="" coords="330,77,330,108,325,108,325,77"/>
+<area shape="rect" href="esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="5,213,157,268"/>
+<area shape="poly" title=" " alt="" coords="249,173,148,214,146,210,246,169"/>
+<area shape="rect" href="ota__controller_8c.html" title=" " alt="" coords="181,213,317,268"/>
+<area shape="poly" title=" " alt="" coords="300,179,272,214,268,210,295,175"/>
+<area shape="rect" href="test__ota__controller_2main_2main_8c.html" title=" " alt="" coords="340,213,473,268"/>
+<area shape="poly" title=" " alt="" coords="360,175,387,210,383,214,356,179"/>
+<area shape="rect" href="test__wifi__controller_2main_2main_8c.html" title=" " alt="" coords="497,213,630,268"/>
+<area shape="poly" title=" " alt="" coords="406,169,501,210,499,214,404,174"/>
 </map>
 </div>
 </div>
@@ -116,13 +122,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a843a68c72a5c1d7b9c7c5613ecd061f8" id="r_a843a68c72a5c1d7b9c7c5613ecd061f8"><td class="memItemLeft" align="right" valign="top"><a id="a843a68c72a5c1d7b9c7c5613ecd061f8" name="a843a68c72a5c1d7b9c7c5613ecd061f8"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OTA_C_ERR_BASE</b>&#160;&#160;&#160;0x01F4</td></tr>
-<tr class="memdesc:a843a68c72a5c1d7b9c7c5613ecd061f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">OTA Controller error base. <br /></td></tr>
+<tr class="memitem:a843a68c72a5c1d7b9c7c5613ecd061f8" id="r_a843a68c72a5c1d7b9c7c5613ecd061f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ota__c__errors_8h.html#a843a68c72a5c1d7b9c7c5613ecd061f8">OTA_C_ERR_BASE</a>&#160;&#160;&#160;0x01F4</td></tr>
+<tr class="memdesc:a843a68c72a5c1d7b9c7c5613ecd061f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">OTA Controller error base.  <br /></td></tr>
 <tr class="separator:a843a68c72a5c1d7b9c7c5613ecd061f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a99c5bc04728ff98a6cab9bcb1eee0b" id="r_a6a99c5bc04728ff98a6cab9bcb1eee0b"><td class="memItemLeft" align="right" valign="top"><a id="a6a99c5bc04728ff98a6cab9bcb1eee0b" name="a6a99c5bc04728ff98a6cab9bcb1eee0b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>OTA_C_ERR_IMAGES_THE_SAME</b>&#160;&#160;&#160;0x0001 + <a class="el" href="ota__c__errors_8h.html#a843a68c72a5c1d7b9c7c5613ecd061f8">OTA_C_ERR_BASE</a></td></tr>
-<tr class="memdesc:a6a99c5bc04728ff98a6cab9bcb1eee0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">New and old image are the same. <br /></td></tr>
+<tr class="memitem:a6a99c5bc04728ff98a6cab9bcb1eee0b" id="r_a6a99c5bc04728ff98a6cab9bcb1eee0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ota__c__errors_8h.html#a6a99c5bc04728ff98a6cab9bcb1eee0b">OTA_C_ERR_IMAGES_THE_SAME</a>&#160;&#160;&#160;0x0001 + <a class="el" href="ota__c__errors_8h.html#a843a68c72a5c1d7b9c7c5613ecd061f8">OTA_C_ERR_BASE</a></td></tr>
+<tr class="memdesc:a6a99c5bc04728ff98a6cab9bcb1eee0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">New and old image are the same.  <br /></td></tr>
 <tr class="separator:a6a99c5bc04728ff98a6cab9bcb1eee0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -131,7 +135,40 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0.6 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a843a68c72a5c1d7b9c7c5613ecd061f8" name="a843a68c72a5c1d7b9c7c5613ecd061f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843a68c72a5c1d7b9c7c5613ecd061f8">&#9670;&#160;</a></span>OTA_C_ERR_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OTA_C_ERR_BASE&#160;&#160;&#160;0x01F4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OTA Controller error base. </p>
+
+</div>
+</div>
+<a id="a6a99c5bc04728ff98a6cab9bcb1eee0b" name="a6a99c5bc04728ff98a6cab9bcb1eee0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a99c5bc04728ff98a6cab9bcb1eee0b">&#9670;&#160;</a></span>OTA_C_ERR_IMAGES_THE_SAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OTA_C_ERR_IMAGES_THE_SAME&#160;&#160;&#160;0x0001 + <a class="el" href="ota__c__errors_8h.html#a843a68c72a5c1d7b9c7c5613ecd061f8">OTA_C_ERR_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>New and old image are the same. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

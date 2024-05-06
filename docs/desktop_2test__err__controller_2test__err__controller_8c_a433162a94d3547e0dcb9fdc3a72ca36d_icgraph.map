@@ -1,0 +1,14 @@
+<map id="mem_alloc_test_helper" name="mem_alloc_test_helper">
+<area shape="rect" id="Node000001" title=" " alt="" coords="492,60,648,86"/>
+<area shape="rect" id="Node000002" href="$desktop_2test__err__controller_2test__err__controller_8c.html#add91c1dc5aa75275769f9fde13d6826e" title=" " alt="" coords="281,5,444,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="485,59,444,52,445,46,486,54"/>
+<area shape="rect" id="Node000006" href="$desktop_2test__err__controller_2test__err__controller_8c.html#a131cf052d6f8bd82a2aeca594617c179" title=" " alt="" coords="283,85,443,141"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="486,92,444,100,443,95,485,87"/>
+<area shape="rect" id="Node000003" href="$desktop_2test__err__controller_2test__err__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,60,233,86"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="266,57,234,64,233,59,265,52"/>
+<area shape="rect" id="Node000004" href="$embedded_2test__err__controller_2test__err__controller_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,35,83,61"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,64,83,58,84,52,116,58"/>
+<area shape="rect" id="Node000005" href="$desktop_2test__err__controller_2test__err__controller_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="19,84,69,110"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="116,87,70,96,69,90,115,82"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="267,95,233,87,234,82,268,89"/>
+</map>

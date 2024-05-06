@@ -1,0 +1,7 @@
+<map id="linkedl_clear" name="linkedl_clear">
+<area shape="rect" id="Node000001" title="Deletes all items from the list, and returns it to initial state." alt="" coords="5,5,99,31"/>
+<area shape="rect" id="Node000002" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="147,5,298,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,16,131,16,131,21,99,21"/>
+<area shape="rect" id="Node000003" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="346,5,513,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="298,16,330,16,330,21,298,21"/>
+</map>

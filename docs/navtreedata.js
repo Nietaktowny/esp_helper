@@ -64,32 +64,33 @@ var NAVTREE =
     [ "cli_manager", "md_projects_2lib__tests_2lib_2cli__manager_2README.html", null ],
     [ "esp_helper_utils", "md_projects_2lib__tests_2lib_2esp__helper__utils_2README.html", null ],
     [ "sys_utils", "md_projects_2lib__tests_2lib_2sys__utils_2README.html", null ],
-    [ "README", "md_projects_2lib__tests_2README.html", [
-      [ "Hello World Example", "md_projects_2lib__tests_2README.html#autotoc_md60", [
-        [ "How to use example", "md_projects_2lib__tests_2README.html#autotoc_md61", null ],
-        [ "Example folder contents", "md_projects_2lib__tests_2README.html#autotoc_md62", null ],
-        [ "Troubleshooting", "md_projects_2lib__tests_2README.html#autotoc_md63", null ],
-        [ "Technical support and feedback", "md_projects_2lib__tests_2README.html#autotoc_md64", null ]
+    [ "Todo List", "todo.html", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ],
+        [ "Variables", "namespacemembers_vars.html", null ]
       ] ]
     ] ],
-    [ "Todo List", "todo.html", null ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ],
+      [ "Data Fields", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
+      [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", "globals_func" ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
   ] ]
@@ -97,10 +98,15 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"CExceptionConfig_8h_source.html",
-"err__controller_8c.html#a513df0b15ad91ccf741456a5a2bea37a",
-"nvs__controller_8h.html#a2a5313ac9a27d3bb211b639385ddce59",
-"wifi__manager_8c.html#a2ea15285d2156d5392749310ceb92843"
+"CExceptionConfig_8h.html",
+"bmp280_8h.html#a76f74528570223059dea2107d49e8441",
+"dir_eebba67b32dd103cfef0701dd50e2080.html",
+"lib_2logger_2test_2test__logger_8c.html#a573cdab9b5916132c45bbf84ae3ab314",
+"linked__list__internal_8h.html",
+"pytest__cli__manager_8py.html",
+"test_2desktop_2test__logger_2test__logger_8c.html#a6a0e758fe439008cc4022d72e79fba49",
+"test_2embedded_2test__nvs__controller_2test__nvs__controller_8c.html#ab328ffc028ee617b8f4a0219a84060d9",
+"test__wifi__controller_8c.html#a6154134ff981b51e814e37486c7a0af5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

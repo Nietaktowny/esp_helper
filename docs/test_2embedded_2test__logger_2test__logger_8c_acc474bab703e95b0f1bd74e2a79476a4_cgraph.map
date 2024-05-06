@@ -1,0 +1,7 @@
+<map id="test_if_logger_write_returns_expected_num_of_chars" name="test_if_logger_write_returns_expected_num_of_chars">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,165,71"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927" title="Set logger log level." alt="" coords="213,5,352,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,31,197,26,198,32,165,36"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#a382738e933b8f30c6f9506f99ca32518" title="Write to logger log files and stderr." alt="" coords="237,55,328,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,51,222,57,221,63,165,56"/>
+</map>

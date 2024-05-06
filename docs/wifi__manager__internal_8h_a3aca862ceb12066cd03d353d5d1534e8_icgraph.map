@@ -1,0 +1,13 @@
+<map id="wifi_manager_server_init" name="wifi_manager_server_init">
+<area shape="rect" id="Node000001" title="Start wifi manager HTTP server." alt="" coords="412,84,576,110"/>
+<area shape="rect" id="Node000002" href="$wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee" title="Initialize wifi manager library." alt="" coords="238,55,360,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="396,85,360,79,361,74,397,80"/>
+<area shape="rect" id="Node000006" href="$wifi__manager_8c.html#a025b8f724ceaee693f08a1684f2a6b46" title=" " alt="" coords="234,105,364,145"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="397,113,365,118,364,113,396,108"/>
+<area shape="rect" id="Node000003" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="57,5,134,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,53,134,30,135,25,229,48"/>
+<area shape="rect" id="Node000004" href="$test__wifi__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="57,55,134,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="222,70,134,70,134,65,222,65"/>
+<area shape="rect" id="Node000005" href="$test__wifi__manager_8c.html#a85164e31a518f33b699e35c435b60c8b" title=" " alt="" coords="5,105,186,161"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="243,88,185,107,183,102,241,83"/>
+</map>

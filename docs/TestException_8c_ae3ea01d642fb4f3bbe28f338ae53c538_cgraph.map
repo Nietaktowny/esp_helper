@@ -1,0 +1,7 @@
+<map id="test_CanHaveNestedTryBlocksInASingleFunction_ThrowOutside" name="test_CanHaveNestedTryBlocksInASingleFunction_ThrowOutside">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,221,46"/>
+<area shape="rect" id="Node000002" href="$TestException_8c.html#ae1827c0fd4a6d4b269d204b2e6a73bcc" title=" " alt="" coords="269,13,430,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,23,253,23,253,28,221,28"/>
+<area shape="rect" id="Node000003" href="$CException_8c.html#a74995bac14be4f19ea95ed1ec9d510de" title=" " alt="" coords="478,13,535,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="430,23,462,23,462,28,430,28"/>
+</map>

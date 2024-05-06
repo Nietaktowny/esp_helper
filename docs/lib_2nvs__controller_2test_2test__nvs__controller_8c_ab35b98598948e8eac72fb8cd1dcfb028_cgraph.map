@@ -1,0 +1,5 @@
+<map id="test_if_nvs_open_from_partition_stores_correct_namespace_name_in_handle" name="test_if_nvs_open_from_partition_stores_correct_namespace_name_in_handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,202,61"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a53bd305c2d16d718ccdc286bc0847d05" title="Open NVS namespace from specified NVS partition for read and write operations." alt="" coords="250,20,427,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,31,234,31,234,36,202,36"/>
+</map>

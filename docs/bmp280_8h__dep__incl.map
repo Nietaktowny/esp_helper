@@ -1,5 +1,7 @@
 <map id="projects/lib_tests/lib/bmp280/include/bmp280.h" name="projects/lib_tests/lib/bmp280/include/bmp280.h">
-<area shape="rect" id="Node000001" title="BMP280 library header file." alt="" coords="24,5,157,61"/>
-<area shape="rect" id="Node000002" href="$bmp280_8c.html" title="BMP280 library source file." alt="" coords="5,109,176,150"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,77,93,109,88,109,88,77"/>
+<area shape="rect" id="Node000001" title="BMP280 library header file." alt="" coords="117,5,251,61"/>
+<area shape="rect" id="Node000002" href="$bmp280_8c.html" title="BMP280 library source file." alt="" coords="5,117,176,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,74,110,118,106,115,147,71"/>
+<area shape="rect" id="Node000003" href="$test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="200,109,357,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,71,255,107,251,110,218,74"/>
 </map>

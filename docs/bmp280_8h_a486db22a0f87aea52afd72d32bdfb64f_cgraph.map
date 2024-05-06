@@ -1,0 +1,19 @@
+<map id="bmp_i2c_set_standby_time" name="bmp_i2c_set_standby_time">
+<area shape="rect" id="Node000001" title="Set standby time of BMP280 device in normal mode." alt="" coords="5,32,185,58"/>
+<area shape="rect" id="Node000002" href="$bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="233,7,369,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="185,31,217,27,217,32,185,36"/>
+<area shape="rect" id="Node000007" href="$bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="248,56,354,82"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="185,53,233,58,233,64,185,58"/>
+<area shape="rect" id="Node000003" href="$bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="417,5,519,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,16,401,16,401,21,370,22"/>
+<area shape="rect" id="Node000004" href="$i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="569,7,653,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="520,16,553,16,553,22,520,21"/>
+<area shape="rect" id="Node000005" href="$i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="710,7,838,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="654,17,694,17,694,22,654,22"/>
+<area shape="rect" id="Node000006" href="$i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="703,56,845,82"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="654,30,716,49,714,54,653,35"/>
+<area shape="rect" id="Node000008" href="$i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="567,56,655,82"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="354,66,552,66,552,72,354,72"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="654,53,714,35,715,40,656,58"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="655,66,687,66,687,72,655,72"/>
+</map>

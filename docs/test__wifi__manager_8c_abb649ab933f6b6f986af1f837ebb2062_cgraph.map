@@ -1,0 +1,17 @@
+<map id="test_if_wifi_manager_store_ap_returns_err_on_not_init_nvs_partition" name="test_if_wifi_manager_store_ap_returns_err_on_not_init_nvs_partition">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,178,119"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a92ba0066a43bc3f296e16c4976b17fcc" title="Deinit default NVS partition." alt="" coords="233,5,373,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,62,220,48,222,53,179,67"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="240,71,366,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="178,88,224,88,224,94,178,94"/>
+<area shape="rect" id="Node000004" href="$wifi__manager_8c.html#a7bb30c48143ab3688c2a2573683eac62" title="Store access point credentials in Wifi Manager NVS namespace." alt="" coords="226,136,380,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,112,239,128,238,134,178,117"/>
+<area shape="rect" id="Node000005" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="441,61,545,87"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="347,132,379,121,427,95,438,90,441,95,429,100,381,125,349,137"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="446,110,540,136"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="380,135,431,129,431,134,381,141"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="448,160,539,185"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="381,155,433,162,432,167,380,161"/>
+<area shape="rect" id="Node000008" href="$nvs__controller_8h.html#a26d3a2f94cdeb9d143dd8ee23ac8a939" title="Write key&#45;value pair string into nvs namespace." alt="" coords="428,209,558,235"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="338,159,429,195,442,200,440,205,427,200,336,164"/>
+</map>

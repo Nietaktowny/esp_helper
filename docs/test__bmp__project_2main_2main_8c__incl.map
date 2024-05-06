@@ -1,0 +1,92 @@
+<map id="projects/lib_tests/test_bmp_project/main/main.c" name="projects/lib_tests/test_bmp_project/main/main.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1505,5,1662,61"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html" title="Wifi controller header file." alt="" coords="507,183,617,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1504,40,1322,47,1093,61,870,82,779,96,711,112,677,125,645,141,591,176,588,171,642,137,675,120,709,106,778,90,870,77,1092,55,1322,42,1504,34"/>
+<area shape="rect" id="Node000007" href="$memory__utils_8h.html" title=" " alt="" coords="435,109,543,135"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1505,43,632,112,558,118,558,112,631,106,1504,38"/>
+<area shape="rect" id="Node000009" href="$logger_8h.html" title="Logger library header file." alt="" coords="209,183,275,208"/>
+<area shape="poly" id="edge20_Node000001_Node000009" title=" " alt="" coords="1504,38,1268,44,955,57,646,78,519,93,423,112,382,125,342,142,275,177,273,172,339,137,380,120,421,106,518,88,646,73,955,51,1268,39,1504,33"/>
+<area shape="rect" id="Node000014" href="$err__controller_8h.html" title="Error helper library header." alt="" coords="722,109,829,135"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="1504,46,844,116,844,111,1504,40"/>
+<area shape="rect" id="Node000018" href="$bmp280_8h.html" title="BMP280 library header file." alt="" coords="1398,109,1475,135"/>
+<area shape="poly" id="edge21_Node000001_Node000018" title=" " alt="" coords="1539,64,1471,103,1469,99,1536,59"/>
+<area shape="rect" id="Node000022" href="$http__client_8h.html" title="HTTP Client header file." alt="" coords="1579,109,1670,135"/>
+<area shape="poly" id="edge29_Node000001_Node000022" title=" " alt="" coords="1599,60,1615,94,1610,96,1594,62"/>
+<area shape="rect" id="Node000023" href="$wifi__manager_8h.html" title="Wifi manager source file." alt="" coords="1695,109,1802,135"/>
+<area shape="poly" id="edge31_Node000001_Node000023" title=" " alt="" coords="1636,59,1714,99,1711,104,1634,64"/>
+<area shape="rect" id="Node000025" href="$esp__helper__utils_8h.html" title="ESP Helper library header file." alt="" coords="1515,183,1641,208"/>
+<area shape="poly" id="edge34_Node000001_Node000025" title=" " alt="" coords="1578,62,1571,97,1570,135,1575,167,1570,168,1565,135,1566,96,1573,61"/>
+<area shape="rect" id="Node000027" href="$sys__utils_8h.html" title="Source file of sys_utils library." alt="" coords="868,183,950,208"/>
+<area shape="poly" id="edge38_Node000001_Node000027" title=" " alt="" coords="1504,37,1407,40,1288,52,1159,74,1095,91,1034,111,979,141,934,175,931,171,976,137,1032,107,1093,86,1158,69,1287,46,1407,35,1504,31"/>
+<area shape="rect" id="Node000028" href="$nvs__controller_8h.html" title="NVS Controller library header file." alt="" coords="1826,109,1938,135"/>
+<area shape="poly" id="edge42_Node000001_Node000028" title=" " alt="" coords="1663,55,1827,102,1825,107,1662,60"/>
+<area shape="rect" id="Node000031" title=" " alt="" coords="1962,109,2026,135"/>
+<area shape="poly" id="edge46_Node000001_Node000031" title=" " alt="" coords="1663,47,1947,106,1946,111,1662,52"/>
+<area shape="rect" id="Node000032" title=" " alt="" coords="2050,109,2191,135"/>
+<area shape="poly" id="edge47_Node000001_Node000032" title=" " alt="" coords="1663,45,2035,104,2035,109,1662,50"/>
+<area shape="rect" id="Node000033" title=" " alt="" coords="2215,109,2320,135"/>
+<area shape="poly" id="edge48_Node000001_Node000033" title=" " alt="" coords="1663,40,1899,66,2200,106,2199,111,1898,71,1662,45"/>
+<area shape="rect" id="Node000034" href="$cli__manager_8h.html" title="Cli Manager library header file." alt="" coords="1045,109,1146,135"/>
+<area shape="poly" id="edge49_Node000001_Node000034" title=" " alt="" coords="1505,51,1162,112,1161,106,1504,46"/>
+<area shape="rect" id="Node000036" title=" " alt="" coords="2344,109,2460,135"/>
+<area shape="poly" id="edge52_Node000001_Node000036" title=" " alt="" coords="1662,38,1951,64,2329,106,2328,111,1951,69,1662,43"/>
+<area shape="rect" id="Node000037" title=" " alt="" coords="2484,109,2576,135"/>
+<area shape="poly" id="edge53_Node000001_Node000037" title=" " alt="" coords="1662,35,2009,58,2236,78,2469,106,2468,111,2235,83,2008,63,1662,41"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="711,256,784,282"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="594,206,703,248,701,253,592,211"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="871,256,947,282"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="618,206,856,254,855,260,617,211"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="1656,256,1724,282"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="618,198,730,206,985,215,1185,217,1385,225,1503,236,1641,254,1641,259,1502,241,1385,230,1185,222,985,220,730,211,617,204"/>
+<area shape="rect" id="Node000006" href="$wifi__c__errors_8h.html" title="Wifi controller library errors list." alt="" coords="515,256,620,282"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="566,208,568,241,563,241,560,209"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="521,133,720,206,857,249,855,254,718,211,519,138"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="299,183,361,208"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="463,138,372,178,370,174,461,133"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="448,138,291,183,290,178,446,133"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="276,203,288,206,430,226,541,236,652,242,796,254,855,260,854,265,795,259,652,248,540,241,429,232,287,211,275,209"/>
+<area shape="rect" id="Node000010" href="$ansi__colors_8h.html" title="ANSI color codes for logger library." alt="" coords="5,256,103,282"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="211,211,101,253,99,248,209,206"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="127,256,186,282"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="229,211,184,248,181,244,226,207"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="210,256,266,282"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="244,209,242,241,237,241,239,208"/>
+<area shape="rect" id="Node000013" href="$logger__errors_8h.html" title="Logger library errors list." alt="" coords="290,256,397,282"/>
+<area shape="poly" id="edge14_Node000009_Node000013" title=" " alt="" coords="261,207,315,245,312,249,258,211"/>
+<area shape="poly" id="edge16_Node000014_Node000004" title=" " alt="" coords="762,137,747,152,734,170,727,189,732,207,757,231,788,248,822,258,855,263,854,269,821,263,786,253,754,235,728,210,722,189,729,168,743,149,759,133"/>
+<area shape="rect" id="Node000015" href="$CException_8h.html" title=" " alt="" coords="386,183,482,208"/>
+<area shape="poly" id="edge17_Node000014_Node000015" title=" " alt="" coords="722,137,498,184,497,178,721,132"/>
+<area shape="rect" id="Node000017" href="$err__c__errors_8h.html" title="Error helper library errors list." alt="" coords="743,183,843,208"/>
+<area shape="poly" id="edge19_Node000014_Node000017" title=" " alt="" coords="781,134,789,167,784,168,776,136"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="420,256,491,282"/>
+<area shape="poly" id="edge18_Node000015_Node000016" title=" " alt="" coords="440,208,450,241,445,242,435,209"/>
+<area shape="poly" id="edge22_Node000018_Node000004" title=" " alt="" coords="1398,135,1320,155,1230,185,1205,198,1179,211,1064,243,963,263,962,257,1063,238,1177,206,1202,193,1228,180,1318,150,1397,129"/>
+<area shape="poly" id="edge23_Node000018_Node000005" title=" " alt="" coords="1476,121,1517,126,1564,136,1612,153,1654,181,1676,209,1687,240,1682,242,1671,212,1651,185,1609,158,1562,141,1516,131,1475,127"/>
+<area shape="rect" id="Node000019" href="$bmp280__errors_8h.html" title="BMP280 library errors list." alt="" coords="1241,183,1358,208"/>
+<area shape="poly" id="edge24_Node000018_Node000019" title=" " alt="" coords="1415,138,1337,177,1335,173,1412,133"/>
+<area shape="rect" id="Node000020" href="$i2c__controller_8h.html" title=" " alt="" coords="1383,183,1491,208"/>
+<area shape="poly" id="edge25_Node000018_Node000020" title=" " alt="" coords="1439,135,1439,167,1434,167,1434,135"/>
+<area shape="poly" id="edge26_Node000020_Node000004" title=" " alt="" coords="1383,209,1370,211,1143,242,962,264,962,259,1143,237,1370,206,1382,204"/>
+<area shape="poly" id="edge27_Node000020_Node000005" title=" " alt="" coords="1480,206,1642,252,1641,257,1479,211"/>
+<area shape="rect" id="Node000021" href="$i2c__c__errors_8h.html" title="I2C Controller errors list." alt="" coords="1371,256,1473,282"/>
+<area shape="poly" id="edge28_Node000020_Node000021" title=" " alt="" coords="1437,209,1430,241,1425,240,1432,208"/>
+<area shape="poly" id="edge30_Node000022_Node000005" title=" " alt="" coords="1650,133,1677,153,1699,182,1705,212,1701,242,1696,241,1700,212,1694,184,1673,157,1647,137"/>
+<area shape="poly" id="edge32_Node000023_Node000005" title=" " alt="" coords="1754,135,1757,169,1755,190,1750,209,1737,231,1721,248,1717,244,1733,227,1745,207,1750,189,1751,169,1749,136"/>
+<area shape="rect" id="Node000024" href="$wifi__manager__errors_8h.html" title="Wifi manager library errors list." alt="" coords="1816,183,1964,208"/>
+<area shape="poly" id="edge33_Node000023_Node000024" title=" " alt="" coords="1774,133,1854,173,1851,178,1771,138"/>
+<area shape="poly" id="edge35_Node000025_Node000004" title=" " alt="" coords="1515,209,1504,211,1198,245,963,266,962,261,1197,239,1503,206,1515,204"/>
+<area shape="poly" id="edge36_Node000025_Node000005" title=" " alt="" coords="1598,207,1660,245,1657,250,1596,211"/>
+<area shape="rect" id="Node000026" href="$esp__helper__errors_8h.html" title="ESP Helper library errors list." alt="" coords="1498,256,1632,282"/>
+<area shape="poly" id="edge37_Node000025_Node000026" title=" " alt="" coords="1578,209,1572,241,1567,240,1573,208"/>
+<area shape="poly" id="edge41_Node000027_Node000003" title=" " alt="" coords="882,211,790,252,788,247,880,206"/>
+<area shape="poly" id="edge39_Node000027_Node000004" title=" " alt="" coords="911,209,911,241,906,241,906,209"/>
+<area shape="poly" id="edge40_Node000027_Node000005" title=" " alt="" coords="950,199,1013,206,1188,218,1326,223,1464,231,1641,254,1641,259,1464,237,1326,228,1188,223,1012,211,950,204"/>
+<area shape="poly" id="edge43_Node000028_Node000005" title=" " alt="" coords="1914,133,1943,147,1968,165,1983,186,1984,198,1977,210,1961,223,1937,234,1874,251,1803,261,1739,268,1739,262,1803,256,1873,245,1936,229,1958,219,1973,207,1978,197,1978,188,1965,168,1940,151,1912,138"/>
+<area shape="rect" id="Node000029" title=" " alt="" coords="2038,183,2102,208"/>
+<area shape="poly" id="edge44_Node000028_Node000029" title=" " alt="" coords="1915,133,2025,174,2023,179,1913,138"/>
+<area shape="rect" id="Node000030" href="$nvs__c__errors_8h.html" title="NVS Controller library errors list." alt="" coords="2126,183,2233,208"/>
+<area shape="poly" id="edge45_Node000028_Node000030" title=" " alt="" coords="1933,133,2115,176,2113,181,1932,138"/>
+<area shape="poly" id="edge50_Node000034_Node000004" title=" " alt="" coords="1080,137,1014,185,936,248,933,244,1011,181,1076,133"/>
+<area shape="rect" id="Node000035" href="$cli__manager__errors_8h.html" title="CLI Manager library errors list." alt="" coords="1025,183,1166,208"/>
+<area shape="poly" id="edge51_Node000034_Node000035" title=" " alt="" coords="1098,135,1098,167,1093,167,1093,135"/>
+</map>

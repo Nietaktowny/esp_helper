@@ -1,0 +1,5 @@
+<map id="test_if_nvs_c_read_uint8_should_return_err_on_null_handle" name="test_if_nvs_c_read_uint8_should_return_err_on_null_handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,147,61"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a245fa1989a19a57e6ee6322a82a65962" title="Read uint8_t value from NVS namespace." alt="" coords="195,20,318,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,31,179,31,179,36,147,36"/>
+</map>

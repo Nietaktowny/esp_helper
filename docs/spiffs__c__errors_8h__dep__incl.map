@@ -1,0 +1,9 @@
+<map id="projects/lib_tests/lib/spiffs_controller/include/spiffs_c_errors.h" name="projects/lib_tests/lib/spiffs_controller/include/spiffs_c_errors.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="76,5,241,61"/>
+<area shape="rect" id="Node000002" href="$spiffs__controller_8h.html" title=" " alt="" coords="73,109,244,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,77,161,108,156,108,156,77"/>
+<area shape="rect" id="Node000003" href="$wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="5,220,146,276"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="131,179,98,221,94,218,126,175"/>
+<area shape="rect" id="Node000004" href="$test__spiffs__controller_8c.html" title=" " alt="" coords="170,213,315,283"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="190,175,218,211,213,214,186,179"/>
+</map>

@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -116,11 +116,13 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="wifi__manager__internal_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2wifi__manager_2include_2wifi__manager__internal_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2wifi__manager_2include_2wifi__manager__internal_8hdep" id="aprojects_2lib__tests_2lib_2wifi__manager_2include_2wifi__manager__internal_8hdep">
-<area shape="rect" title="Wifi manager library internal header file." alt="" coords="75,5,239,61"/>
-<area shape="rect" href="wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="5,109,146,165"/>
-<area shape="poly" title=" " alt="" coords="128,75,99,110,95,107,123,72"/>
-<area shape="rect" href="wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="169,109,310,165"/>
-<area shape="poly" title=" " alt="" coords="191,72,219,107,215,110,187,75"/>
+<area shape="rect" title="Wifi manager library internal header file." alt="" coords="158,5,321,61"/>
+<area shape="rect" href="wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="5,117,146,172"/>
+<area shape="poly" title=" " alt="" coords="188,72,118,118,115,114,185,67"/>
+<area shape="rect" href="wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="169,117,310,172"/>
+<area shape="poly" title=" " alt="" coords="242,76,242,116,237,116,237,76"/>
+<area shape="rect" href="test__wifi__manager_8c.html" title=" " alt="" coords="333,109,490,180"/>
+<area shape="poly" title=" " alt="" coords="296,67,358,106,355,111,294,72"/>
 </map>
 </div>
 </div>
@@ -128,9 +130,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:aa629ca7532d4fa607743b038462a454d" id="r_aa629ca7532d4fa607743b038462a454d"><td class="memItemLeft" align="right" valign="top"><a id="aa629ca7532d4fa607743b038462a454d" name="aa629ca7532d4fa607743b038462a454d"></a>
-typedef struct <a class="el" href="structwifi__s__handle__obj.html">wifi_s_handle_obj</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_s_handle_t</b></td></tr>
-<tr class="memdesc:aa629ca7532d4fa607743b038462a454d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wifi manager server handle. <br /></td></tr>
+<tr class="memitem:aa629ca7532d4fa607743b038462a454d" id="r_aa629ca7532d4fa607743b038462a454d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structwifi__s__handle__obj.html">wifi_s_handle_obj</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__manager__internal_8h.html#aa629ca7532d4fa607743b038462a454d">wifi_s_handle_t</a></td></tr>
+<tr class="memdesc:aa629ca7532d4fa607743b038462a454d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wifi manager server handle.  <br /></td></tr>
 <tr class="separator:aa629ca7532d4fa607743b038462a454d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -150,7 +151,24 @@ Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Wojciech Mytych </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.1.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-03-05 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="aa629ca7532d4fa607743b038462a454d" name="aa629ca7532d4fa607743b038462a454d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa629ca7532d4fa607743b038462a454d">&#9670;&#160;</a></span>wifi_s_handle_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structwifi__s__handle__obj.html">wifi_s_handle_obj</a>* <a class="el" href="wifi__manager__internal_8h.html#aa629ca7532d4fa607743b038462a454d">wifi_s_handle_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wifi manager server handle. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a2ea15285d2156d5392749310ceb92843" name="a2ea15285d2156d5392749310ceb92843"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2ea15285d2156d5392749310ceb92843">&#9670;&#160;</a></span>wifi_manager_get_scanned_aps()</h2>
 
@@ -194,6 +212,43 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels.">wifi_c_scan_all_ap</a> <br  />
  </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager__internal_8h_a2ea15285d2156d5392749310ceb92843_cgraph.png" border="0" usemap="#awifi__manager__internal_8h_a2ea15285d2156d5392749310ceb92843_cgraph" alt=""/></div>
+<map name="awifi__manager__internal_8h_a2ea15285d2156d5392749310ceb92843_cgraph" id="awifi__manager__internal_8h_a2ea15285d2156d5392749310ceb92843_cgraph">
+<area shape="rect" title="Scan and get for Access points that wifi manager can connect to." alt="" coords="5,55,212,80"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="290,5,394,31"/>
+<area shape="poly" title=" " alt="" coords="172,51,274,30,275,35,173,57"/>
+<area shape="rect" href="wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels." alt="" coords="277,55,407,80"/>
+<area shape="poly" title=" " alt="" coords="212,65,262,65,262,70,212,70"/>
+<area shape="rect" href="wifi__controller_8h.html#a65a29cdfc998ed4e91bb9088d2eebc37" title="Store results of scanning in buffer as json string;." alt="" coords="260,105,424,145"/>
+<area shape="poly" title=" " alt="" coords="165,78,245,98,244,104,163,84"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager__internal_8h_a2ea15285d2156d5392749310ceb92843_icgraph.png" border="0" usemap="#awifi__manager__internal_8h_a2ea15285d2156d5392749310ceb92843_icgraph" alt=""/></div>
+<map name="awifi__manager__internal_8h_a2ea15285d2156d5392749310ceb92843_icgraph" id="awifi__manager__internal_8h_a2ea15285d2156d5392749310ceb92843_icgraph">
+<area shape="rect" title="Scan and get for Access points that wifi manager can connect to." alt="" coords="537,140,744,166"/>
+<area shape="rect" href="test__wifi__manager_8c.html#afb02c32fd7e10257c825b300790744c4" title=" " alt="" coords="297,5,474,61"/>
+<area shape="poly" title=" " alt="" coords="602,135,488,76,462,64,464,59,490,71,604,130"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae99f55718b798437ef096bd2ee7fa9ce" title=" " alt="" coords="297,85,474,141"/>
+<area shape="poly" title=" " alt="" coords="539,140,474,130,475,124,540,135"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a5ab968556fea9ffa996dbd92c5b16cbc" title=" " alt="" coords="297,165,474,221"/>
+<area shape="poly" title=" " alt="" coords="540,172,475,182,474,177,539,166"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae26483dc691ffc91ac07b87fd493d9ee" title=" " alt="" coords="281,245,489,286"/>
+<area shape="poly" title=" " alt="" coords="606,176,552,206,490,236,461,247,459,242,488,231,550,201,603,172"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,140,233,166"/>
+<area shape="poly" title=" " alt="" coords="291,71,282,75,235,109,198,142,195,138,232,105,280,71,289,66"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,140,83,166"/>
+<area shape="poly" title=" " alt="" coords="115,156,83,156,83,151,115,151"/>
+<area shape="poly" title=" " alt="" coords="282,136,234,146,233,141,281,131"/>
+<area shape="poly" title=" " alt="" coords="281,175,233,166,234,161,282,170"/>
+<area shape="poly" title=" " alt="" coords="290,241,280,235,231,202,194,168,198,164,234,197,282,231,293,236"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -240,6 +295,51 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels.">wifi_c_scan_all_ap</a> <br  />
  </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager__internal_8h_a68a4e289fd42141b8f67bfebc690ef2d_cgraph.png" border="0" usemap="#awifi__manager__internal_8h_a68a4e289fd42141b8f67bfebc690ef2d_cgraph" alt=""/></div>
+<map name="awifi__manager__internal_8h_a68a4e289fd42141b8f67bfebc690ef2d_cgraph" id="awifi__manager__internal_8h_a68a4e289fd42141b8f67bfebc690ef2d_cgraph">
+<area shape="rect" title="Scan and get for Access points that wifi manager can connect to and store them in JSON format." alt="" coords="5,23,171,64"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="465,5,569,31"/>
+<area shape="poly" title=" " alt="" coords="171,36,449,19,449,25,171,41"/>
+<area shape="rect" href="wifi__manager_8c.html#a92b6a91a3d31bfa35ff0409d0e7befdc" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="219,56,405,82"/>
+<area shape="poly" title=" " alt="" coords="171,50,203,54,203,59,171,56"/>
+<area shape="poly" title=" " alt="" coords="366,53,448,32,450,37,367,58"/>
+<area shape="rect" href="nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="470,55,564,80"/>
+<area shape="poly" title=" " alt="" coords="405,66,454,65,454,71,405,71"/>
+<area shape="rect" href="nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="471,104,562,130"/>
+<area shape="poly" title=" " alt="" coords="371,80,456,100,455,105,369,85"/>
+<area shape="rect" href="nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="453,153,580,179"/>
+<area shape="poly" title=" " alt="" coords="338,80,454,140,466,145,463,150,452,145,335,85"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager__internal_8h_a68a4e289fd42141b8f67bfebc690ef2d_icgraph.png" border="0" usemap="#awifi__manager__internal_8h_a68a4e289fd42141b8f67bfebc690ef2d_icgraph" alt=""/></div>
+<map name="awifi__manager__internal_8h_a68a4e289fd42141b8f67bfebc690ef2d_icgraph" id="awifi__manager__internal_8h_a68a4e289fd42141b8f67bfebc690ef2d_icgraph">
+<area shape="rect" title="Scan and get for Access points that wifi manager can connect to and store them in JSON format." alt="" coords="505,173,671,214"/>
+<area shape="rect" href="test__wifi__manager_8c.html#af5571ea7379fa8afbaaf1b3879134e1b" title=" " alt="" coords="297,5,442,61"/>
+<area shape="poly" title=" " alt="" coords="556,163,511,119,456,75,436,64,439,59,459,71,514,115,560,159"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ac5221e01be8b8fc121e7195e8de03b0a" title=" " alt="" coords="297,85,442,141"/>
+<area shape="poly" title=" " alt="" coords="515,170,441,142,443,137,517,165"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a9f2f5ad85fe4f548a7bf2b77049416ba" title=" " alt="" coords="297,165,442,221"/>
+<area shape="poly" title=" " alt="" coords="490,196,442,196,442,191,490,191"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a3e029a64c8f932f884a3a152e78361c2" title=" " alt="" coords="286,245,452,301"/>
+<area shape="poly" title=" " alt="" coords="517,222,448,247,446,242,515,217"/>
+<area shape="rect" href="test__wifi__manager_8c.html#aa579ddb6d8f292349854ad131a3a2ca4" title=" " alt="" coords="281,325,457,366"/>
+<area shape="poly" title=" " alt="" coords="561,227,515,272,459,315,437,327,435,322,456,311,512,268,557,224"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,180,233,206"/>
+<area shape="poly" title=" " alt="" coords="287,72,283,75,254,102,228,131,193,181,189,178,224,128,250,98,279,71,284,68"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,180,83,206"/>
+<area shape="poly" title=" " alt="" coords="115,196,83,196,83,191,115,191"/>
+<area shape="poly" title=" " alt="" coords="289,150,215,182,213,177,287,145"/>
+<area shape="poly" title=" " alt="" coords="281,196,233,196,233,191,281,191"/>
+<area shape="poly" title=" " alt="" coords="287,241,213,209,215,204,289,236"/>
+<area shape="poly" title=" " alt="" coords="285,319,279,315,249,289,223,259,188,208,193,205,228,256,253,285,283,311,288,315"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -286,6 +386,34 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager__internal_8h_a3aca862ceb12066cd03d353d5d1534e8_cgraph.png" border="0" usemap="#awifi__manager__internal_8h_a3aca862ceb12066cd03d353d5d1534e8_cgraph" alt=""/></div>
+<map name="awifi__manager__internal_8h_a3aca862ceb12066cd03d353d5d1534e8_cgraph" id="awifi__manager__internal_8h_a3aca862ceb12066cd03d353d5d1534e8_cgraph">
+<area shape="rect" title="Start wifi manager HTTP server." alt="" coords="5,5,170,31"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="218,5,322,31"/>
+<area shape="poly" title=" " alt="" coords="170,16,202,16,202,21,170,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager__internal_8h_a3aca862ceb12066cd03d353d5d1534e8_icgraph.png" border="0" usemap="#awifi__manager__internal_8h_a3aca862ceb12066cd03d353d5d1534e8_icgraph" alt=""/></div>
+<map name="awifi__manager__internal_8h_a3aca862ceb12066cd03d353d5d1534e8_icgraph" id="awifi__manager__internal_8h_a3aca862ceb12066cd03d353d5d1534e8_icgraph">
+<area shape="rect" title="Start wifi manager HTTP server." alt="" coords="412,84,576,110"/>
+<area shape="rect" href="wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee" title="Initialize wifi manager library." alt="" coords="238,55,360,80"/>
+<area shape="poly" title=" " alt="" coords="396,85,360,79,361,74,397,80"/>
+<area shape="rect" href="wifi__manager_8c.html#a025b8f724ceaee693f08a1684f2a6b46" title=" " alt="" coords="234,105,364,145"/>
+<area shape="poly" title=" " alt="" coords="397,113,365,118,364,113,396,108"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="57,5,134,31"/>
+<area shape="poly" title=" " alt="" coords="227,53,134,30,135,25,229,48"/>
+<area shape="rect" href="test__wifi__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="57,55,134,80"/>
+<area shape="poly" title=" " alt="" coords="222,70,134,70,134,65,222,65"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a85164e31a518f33b699e35c435b60c8b" title=" " alt="" coords="5,105,186,161"/>
+<area shape="poly" title=" " alt="" coords="243,88,185,107,183,102,241,83"/>
+</map>
+</div>
 
 </div>
 </div>

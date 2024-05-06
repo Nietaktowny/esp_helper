@@ -1,0 +1,13 @@
+<map id="test_if_nvs_c_read_int8_return_err_on_null_buffer" name="test_if_nvs_c_read_int8_return_err_on_null_buffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,113,138,169"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="209,5,304,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,111,137,75,184,41,195,35,198,40,187,46,140,79,102,114"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a9eeeb82f5b26f763b25ea820b1b9f332" title="Erse all data in default NVS partition." alt="" coords="186,55,327,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="137,115,182,99,183,104,139,120"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="193,121,320,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="138,138,177,138,177,144,138,144"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="211,185,302,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="139,159,199,178,197,183,137,164"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#a51b0520cbcfab1bc37a6e4e1e474b2e5" title="Read int8_t value from NVS namespace." alt="" coords="198,235,315,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="107,167,144,195,187,221,197,226,194,231,184,226,141,199,104,171"/>
+</map>

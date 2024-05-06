@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['err_5fcheck_5fbitmask_0',['err_check_bitmask',['../err__controller_8h.html#a513df0b15ad91ccf741456a5a2bea37a',1,'err_check_bitmask(uint32_t mask, uint32_t value):&#160;err_controller.c'],['../err__controller_8c.html#a513df0b15ad91ccf741456a5a2bea37a',1,'err_check_bitmask(uint32_t mask, uint32_t value):&#160;err_controller.c']]],
-  ['error_5fto_5fname_1',['error_to_name',['../err__controller_8h.html#ad8f4caa10a5c3bbc6b73762ed9f87840',1,'error_to_name(err_c_t err):&#160;err_c_names.c'],['../err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840',1,'error_to_name(err_c_t err):&#160;err_c_names.c']]]
+  ['disconnect_5fhandler_0',['disconnect_handler',['../start__ap__example_8c.html#a0e283c6fc89aa295bd58c2c2637cdaa9',1,'disconnect_handler(void):&#160;start_ap_example.c'],['../start__sta__example_8c.html#a0e283c6fc89aa295bd58c2c2637cdaa9',1,'disconnect_handler(void):&#160;start_sta_example.c'],['../test__wifi__controller_2main_2main_8c.html#a0e283c6fc89aa295bd58c2c2637cdaa9',1,'disconnect_handler(void):&#160;main.c']]]
 ];

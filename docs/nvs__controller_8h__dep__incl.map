@@ -1,5 +1,23 @@
 <map id="projects/lib_tests/lib/nvs_controller/include/nvs_controller.h" name="projects/lib_tests/lib/nvs_controller/include/nvs_controller.h">
-<area shape="rect" id="Node000001" title="NVS Controller library header file." alt="" coords="5,5,167,61"/>
-<area shape="rect" id="Node000002" href="$wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="16,109,156,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,77,89,108,83,108,83,77"/>
+<area shape="rect" id="Node000001" title="NVS Controller library header file." alt="" coords="836,5,997,61"/>
+<area shape="rect" id="Node000002" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html" title=" " alt="" coords="5,117,177,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="820,40,693,46,535,59,362,80,189,112,163,118,162,113,188,106,361,75,535,54,693,41,820,35"/>
+<area shape="rect" id="Node000003" href="$wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="201,117,341,172"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="821,42,722,50,605,64,479,84,354,112,333,118,331,113,353,106,478,79,604,59,722,45,820,37"/>
+<area shape="rect" id="Node000004" href="$test_2desktop_2test__nvs__controller_2test__nvs__controller_8c.html" title=" " alt="" coords="366,117,571,172"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="821,57,584,112,558,118,557,113,582,106,820,52"/>
+<area shape="rect" id="Node000005" href="$test__cli__manager_8c.html" title=" " alt="" coords="595,109,739,180"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="841,70,741,114,738,109,839,65"/>
+<area shape="rect" id="Node000006" href="$test__http__client_8c.html" title=" " alt="" coords="763,109,907,180"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="889,75,863,110,859,107,885,72"/>
+<area shape="rect" id="Node000007" href="$test_2embedded_2test__nvs__controller_2test__nvs__controller_8c.html" title=" " alt="" coords="930,109,1068,180"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="948,72,975,107,971,110,944,75"/>
+<area shape="rect" id="Node000008" href="$test__wifi__manager_8c.html" title=" " alt="" coords="1092,109,1248,180"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="994,65,1092,107,1090,112,992,70"/>
+<area shape="rect" id="Node000009" href="$test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="1272,117,1430,172"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1013,49,1132,73,1261,106,1283,113,1281,119,1260,112,1131,79,1012,54"/>
+<area shape="rect" id="Node000010" href="$test__nvs__controller_2main_2main_8c.html" title=" " alt="" coords="1454,117,1589,172"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1013,38,1212,60,1328,80,1442,106,1464,113,1462,119,1441,112,1327,85,1212,65,1012,43"/>
+<area shape="rect" id="Node000011" href="$test__wifi__manager_2main_2main_8c.html" title=" " alt="" coords="1614,117,1776,172"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="1013,35,1132,42,1280,55,1442,76,1602,106,1627,113,1626,118,1601,112,1441,81,1280,60,1132,47,1012,40"/>
 </map>

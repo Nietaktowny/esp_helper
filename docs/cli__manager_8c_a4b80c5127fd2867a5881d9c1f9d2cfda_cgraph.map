@@ -1,0 +1,42 @@
+<map id="cli_set_remote_logging" name="cli_set_remote_logging">
+<area shape="rect" id="Node000001" title="Log all logger library logs to remote host on TCP port." alt="" coords="5,388,160,414"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8c.html#a6cf547424c3b4d26fa301c9f2bc79688" title="Task responsible for accepting new hosts in TCP log server." alt="" coords="227,150,340,175"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,386,259,186,263,189,97,390"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="852,287,956,313"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="84,387,97,342,121,276,157,203,180,168,206,135,252,89,295,59,343,39,406,20,470,7,526,3,576,8,623,22,667,44,711,74,806,155,832,184,856,215,891,272,887,275,852,218,828,187,802,159,708,78,664,49,621,27,575,13,526,8,470,12,408,25,345,44,298,64,256,93,210,139,184,171,162,205,126,278,103,343,90,389"/>
+<area shape="rect" id="Node000009" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="208,490,359,515"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="108,412,209,468,236,481,234,486,206,473,105,417"/>
+<area shape="rect" id="Node000011" href="$tcp__controller_8c.html#aa19f22c703b27c1834b997235fa198a6" title="Bind socket to prepared address." alt="" coords="433,338,549,363"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="159,387,207,380,417,355,417,361,208,385,160,392"/>
+<area shape="rect" id="Node000013" href="$tcp__controller_8c.html#a274866f382f711a467053cf394d3792e" title="Create socket." alt="" coords="649,490,777,515"/>
+<area shape="poly" id="edge19_Node000001_Node000013" title=" " alt="" coords="160,410,575,475,634,485,633,490,574,480,160,415"/>
+<area shape="rect" id="Node000014" href="$tcp__controller_8c.html#ab93c55c49481e20286541651c674561b" title="Prepare address for binding socket." alt="" coords="212,539,355,565"/>
+<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="95,413,140,467,173,499,209,526,217,530,214,535,206,530,169,503,136,471,91,416"/>
+<area shape="rect" id="Node000015" href="$tcp__controller_8c.html#abcee5d45743bfa00a044a753f3ffa501" title="Listen on socket for incoming connections." alt="" coords="429,388,552,414"/>
+<area shape="poly" id="edge22_Node000001_Node000015" title=" " alt="" coords="160,399,413,399,413,404,160,404"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="340,151,432,143,551,142,615,147,680,157,744,173,805,196,831,212,853,232,888,273,884,276,850,235,827,216,802,201,742,178,679,162,614,152,550,147,432,148,340,157"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#ac318f2fb9f51699954c24804dd8b095d" title="Add new log file to be used as log output." alt="" coords="425,35,556,61"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="298,147,344,110,406,71,421,64,423,69,408,76,347,114,301,151"/>
+<area shape="rect" id="Node000005" href="$logger_8c.html#a4cae04593f6a3be65ac345115c8a959d" title="Clear all files used as log output." alt="" coords="423,85,558,126"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="332,147,407,126,409,131,333,152"/>
+<area shape="rect" id="Node000006" href="$tcp__controller_8c.html#acb904407f0f4032b3936206e8db2e0aa" title="Accept connection on listen socket, and return client socket." alt="" coords="429,226,552,251"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="322,174,440,217,438,222,320,179"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="544,223,599,213,665,206,735,208,771,214,805,223,848,245,882,274,878,278,845,250,803,228,770,219,735,214,665,212,600,218,545,228"/>
+<area shape="rect" id="Node000007" href="$tcp__controller_8c.html#ae0b781bbcb6353cf585fcb0003c42465" title="Read port to which socket is bound." alt="" coords="622,287,804,313"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="539,250,623,273,647,280,646,285,622,279,538,255"/>
+<area shape="rect" id="Node000008" href="$tcp__controller_8c.html#a9c6ddc5f8668c1f0d4103c5e77fdb6a0" title=" " alt="" coords="630,238,796,263"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="553,239,615,243,615,248,552,245"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="804,297,836,297,836,303,804,303"/>
+<area shape="poly" id="edge10_Node000008_Node000003" title=" " alt="" coords="766,262,837,280,836,285,765,267"/>
+<area shape="rect" id="Node000010" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="407,490,574,515"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="359,500,391,500,391,505,359,505"/>
+<area shape="poly" id="edge15_Node000011_Node000003" title=" " alt="" coords="549,346,667,339,803,323,841,315,842,320,804,328,667,344,549,352"/>
+<area shape="poly" id="edge18_Node000011_Node000007" title=" " alt="" coords="549,335,638,314,639,319,550,340"/>
+<area shape="rect" id="Node000012" href="$tcp__controller_8c.html#a46d32663b476a9417c5056b4d604438d" title="Read IPv4 address to which socket is bound." alt="" coords="628,388,798,414"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="550,361,639,382,638,387,549,366"/>
+<area shape="poly" id="edge17_Node000012_Node000003" title=" " alt="" coords="758,385,802,367,840,344,873,321,876,325,843,349,805,372,760,390"/>
+<area shape="poly" id="edge20_Node000013_Node000003" title=" " alt="" coords="769,487,802,469,833,435,859,397,891,326,896,328,863,400,838,439,805,473,772,492"/>
+<area shape="poly" id="edge23_Node000015_Node000003" title=" " alt="" coords="526,412,582,429,653,443,691,446,729,444,767,437,802,424,831,405,855,379,888,326,893,328,859,382,835,409,805,429,768,443,730,449,691,451,652,448,580,435,525,417"/>
+<area shape="poly" id="edge25_Node000015_Node000007" title=" " alt="" coords="540,385,573,373,628,347,677,319,679,324,631,351,575,378,542,390"/>
+<area shape="poly" id="edge24_Node000015_Node000012" title=" " alt="" coords="553,399,613,399,613,404,553,404"/>
+</map>

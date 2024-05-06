@@ -1,0 +1,9 @@
+<map id="test_if_scan_ssid_ap_returns_err_on_null_ssid_to_search" name="test_if_scan_ssid_ap_returns_err_on_null_ssid_to_search">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,40,150,95"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="218,5,310,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,46,202,32,203,37,151,51"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="212,55,316,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,65,196,65,196,70,150,70"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#a1b0e26ab7e6cfed5ba13bc64696e399b" title="Scan for AP with desired SSID." alt="" coords="198,105,330,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="151,87,183,97,182,102,149,92"/>
+</map>

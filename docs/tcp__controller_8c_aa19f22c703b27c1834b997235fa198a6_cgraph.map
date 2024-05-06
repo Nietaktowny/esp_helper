@@ -1,0 +1,11 @@
+<map id="tcp_bind_socket" name="tcp_bind_socket">
+<area shape="rect" id="Node000001" title="Bind socket to prepared address." alt="" coords="5,25,122,51"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="399,25,503,51"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,22,169,10,260,3,351,10,393,18,392,23,351,15,260,8,170,15,111,27"/>
+<area shape="rect" id="Node000003" href="$tcp__controller_8c.html#a46d32663b476a9417c5056b4d604438d" title="Read IPv4 address to which socket is bound." alt="" coords="176,25,345,51"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,35,160,35,160,41,122,41"/>
+<area shape="rect" id="Node000004" href="$tcp__controller_8c.html#ae0b781bbcb6353cf585fcb0003c42465" title="Read port to which socket is bound." alt="" coords="170,75,351,100"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="119,49,192,68,191,73,117,54"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="345,35,384,35,384,41,345,41"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="312,71,383,53,384,58,314,77"/>
+</map>

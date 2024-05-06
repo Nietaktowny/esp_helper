@@ -1,0 +1,13 @@
+<map id="test_if_nvs_c_write_string_should_return_err_read_only_namespace" name="test_if_nvs_c_write_string_should_return_err_read_only_namespace">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,113,185,169"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="256,5,350,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,110,176,75,231,41,244,35,247,40,234,46,179,80,132,115"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a92ba0066a43bc3f296e16c4976b17fcc" title="Deinit default NVS partition." alt="" coords="233,55,373,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="184,110,221,98,223,103,186,115"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="240,121,366,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="185,138,224,138,224,144,185,144"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="257,185,349,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="186,163,243,179,241,184,184,168"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#a26d3a2f94cdeb9d143dd8ee23ac8a939" title="Write key&#45;value pair string into nvs namespace." alt="" coords="238,235,368,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="139,167,184,195,234,221,245,226,243,231,232,226,182,199,137,172"/>
+</map>

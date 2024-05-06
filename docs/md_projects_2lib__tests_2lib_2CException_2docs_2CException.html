@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -182,7 +182,7 @@ CONFIGURATION</h2>
 </ol>
 <h2><a class="anchor" id="autotoc_md10"></a>
 Exception.h</h2>
-<p>By convention, most projects include <code>Exception.h</code> which defines any further requirements, then calls <code><a class="el" href="CException_8h_source.html">CException.h</a></code> to do the gruntwork. All of these are optional. You could directly include <code><a class="el" href="CException_8h_source.html">CException.h</a></code> if you wanted and just use the defaults provided.</p>
+<p>By convention, most projects include <code>Exception.h</code> which defines any further requirements, then calls <code><a class="el" href="CException_8h.html">CException.h</a></code> to do the gruntwork. All of these are optional. You could directly include <code><a class="el" href="CException_8h.html">CException.h</a></code> if you wanted and just use the defaults provided.</p>
 <ul>
 <li><code>CEXCEPTION_T</code><ul>
 <li>Set this to the type you want your exception id's to be. Defaults to 'unsigned int'.</li>
@@ -200,7 +200,7 @@ Exception.h</h2>
 <li>If in a multi-tasking environment, this should be set to the number of ID's required (usually the number of tasks in the system). Defaults to <code>1</code> (for single tasking environments).</li>
 </ul>
 </li>
-<li><code>CEXCEPTION_NO_CATCH_HANDLER(id)</code><ul>
+<li><code><a class="el" href="CException_8h.html#ac8517d98d7874a3e21e35c4e782220c1">CEXCEPTION_NO_CATCH_HANDLER(id)</a></code><ul>
 <li>This macro can be optionally specified. It allows you to specify code to be called when a Throw is made outside of <code>Try</code> ... <code>Catch</code> protection. Consider this the emergency fallback plan for when something has gone terribly wrong.</li>
 </ul>
 </li>

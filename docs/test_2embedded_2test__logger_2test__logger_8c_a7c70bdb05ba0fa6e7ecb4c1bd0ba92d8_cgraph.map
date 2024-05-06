@@ -1,0 +1,11 @@
+<map id="test_if_logger_write_returns_zero_when_no_file_is_set_and_silent_mode_is_enabled" name="test_if_logger_write_returns_zero_when_no_file_is_set_and_silent_mode_is_enabled">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,58,164,128"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a3e7b3623430234c1a334f1a2e2434730" title="Disable silent mode &#45; log all logs to stderr." alt="" coords="212,5,393,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,57,211,40,232,33,233,38,213,45,165,62"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#af2c98b7b8443107e7ff7948f630eff36" title="Enable silent mode &#45; don&#39;t log to stderr." alt="" coords="213,55,392,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,81,197,77,198,82,164,86"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927" title="Set logger log level." alt="" coords="233,104,372,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="164,99,217,105,217,110,164,104"/>
+<area shape="rect" id="Node000005" href="$logger_8c.html#a382738e933b8f30c6f9506f99ca32518" title="Write to logger log files and stderr." alt="" coords="257,153,348,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="165,123,213,140,242,149,241,154,211,145,163,128"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="wifi_manager_get_stored_ap" name="wifi_manager_get_stored_ap">
+<area shape="rect" id="Node000001" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="5,80,192,106"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="251,5,356,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,77,250,34,252,39,137,82"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="256,55,351,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,79,241,73,241,78,192,84"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="258,104,349,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="192,101,243,107,242,112,192,106"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="240,153,367,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="138,104,252,145,250,150,136,109"/>
+</map>

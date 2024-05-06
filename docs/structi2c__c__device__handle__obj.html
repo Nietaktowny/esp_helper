@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -92,8 +92,7 @@ $(document).ready(function(){initNavTree('structi2c__c__device__handle__obj.html
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structi2c__c__device__handle__obj-members.html">List of all members</a>  </div>
+<a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle"><div class="title">i2c_c_device_handle_obj Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -112,21 +111,61 @@ Collaboration diagram for i2c_c_device_handle_obj:</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:a196470f6bf0d42a24626114a13055fdf" id="r_a196470f6bf0d42a24626114a13055fdf"><td class="memItemLeft" align="right" valign="top"><a id="a196470f6bf0d42a24626114a13055fdf" name="a196470f6bf0d42a24626114a13055fdf"></a>
-<a class="el" href="structi2c__c__bus__handle__obj.html">i2c_c_bus_handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>bus</b></td></tr>
-<tr class="separator:a196470f6bf0d42a24626114a13055fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee452da06203bdd3df0c62226fc45efb" id="r_aee452da06203bdd3df0c62226fc45efb"><td class="memItemLeft" align="right" valign="top"><a id="aee452da06203bdd3df0c62226fc45efb" name="aee452da06203bdd3df0c62226fc45efb"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>device_addr</b></td></tr>
-<tr class="separator:aee452da06203bdd3df0c62226fc45efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc6787a5c93b0c5d1dae698cd24297c6" id="r_afc6787a5c93b0c5d1dae698cd24297c6"><td class="memItemLeft" align="right" valign="top"><a id="afc6787a5c93b0c5d1dae698cd24297c6" name="afc6787a5c93b0c5d1dae698cd24297c6"></a>
-SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><b>lock</b></td></tr>
-<tr class="separator:afc6787a5c93b0c5d1dae698cd24297c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+Data Fields</h2></td></tr>
+<tr class="memitem:a7f4dda606e26e54bc5b64a987b19214a" id="r_a7f4dda606e26e54bc5b64a987b19214a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="i2c__controller_8h.html#a98515ed1dcebf40e1389384d400ded3f">i2c_c_bus_handle_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structi2c__c__device__handle__obj.html#a7f4dda606e26e54bc5b64a987b19214a">bus</a></td></tr>
+<tr class="separator:a7f4dda606e26e54bc5b64a987b19214a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6475141c4172a38632d5b692a510307" id="r_ad6475141c4172a38632d5b692a510307"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structi2c__c__device__handle__obj.html#ad6475141c4172a38632d5b692a510307">device_addr</a></td></tr>
+<tr class="separator:ad6475141c4172a38632d5b692a510307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c28314a7672cc54f10e7d78435b3b3f" id="r_a6c28314a7672cc54f10e7d78435b3b3f"><td class="memItemLeft" align="right" valign="top">SemaphoreHandle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structi2c__c__device__handle__obj.html#a6c28314a7672cc54f10e7d78435b3b3f">lock</a></td></tr>
+<tr class="separator:a6c28314a7672cc54f10e7d78435b3b3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>I2C device object. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>projects/lib_tests/lib/i2c_controller/src/<b>i2c_controller.c</b></li>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a7f4dda606e26e54bc5b64a987b19214a" name="a7f4dda606e26e54bc5b64a987b19214a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f4dda606e26e54bc5b64a987b19214a">&#9670;&#160;</a></span>bus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="i2c__controller_8h.html#a98515ed1dcebf40e1389384d400ded3f">i2c_c_bus_handle_t</a> bus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6475141c4172a38632d5b692a510307" name="ad6475141c4172a38632d5b692a510307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6475141c4172a38632d5b692a510307">&#9670;&#160;</a></span>device_addr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t device_addr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c28314a7672cc54f10e7d78435b3b3f" name="a6c28314a7672cc54f10e7d78435b3b3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c28314a7672cc54f10e7d78435b3b3f">&#9670;&#160;</a></span>lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SemaphoreHandle_t lock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>projects/lib_tests/lib/i2c_controller/src/<a class="el" href="i2c__controller_8c.html">i2c_controller.c</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

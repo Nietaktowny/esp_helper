@@ -1,0 +1,9 @@
+<map id="test_if_event_loop_started_is_false_after_deinit" name="test_if_event_loop_started_is_false_after_deinit">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,40,159,95"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="222,5,314,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,45,206,32,207,37,160,50"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="207,55,329,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="159,65,191,65,191,70,159,70"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="216,104,320,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,85,203,97,201,102,158,90"/>
+</map>

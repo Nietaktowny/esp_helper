@@ -1,0 +1,14 @@
+<map id="err_check_bitmask" name="err_check_bitmask">
+<area shape="rect" id="Node000001" title="Check if bitmask matches value." alt="" coords="492,60,624,86"/>
+<area shape="rect" id="Node000002" href="$desktop_2test__err__controller_2test__err__controller_8c.html#a325cde3e9c2266359f2b4ceda2d13c4d" title=" " alt="" coords="281,5,444,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="477,59,444,53,445,47,478,54"/>
+<area shape="rect" id="Node000006" href="$desktop_2test__err__controller_2test__err__controller_8c.html#a6916d45b768fc910772e9c7491f17a3a" title=" " alt="" coords="291,85,434,141"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="478,92,435,101,434,96,476,87"/>
+<area shape="rect" id="Node000003" href="$desktop_2test__err__controller_2test__err__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,60,233,86"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="266,57,234,64,233,59,265,52"/>
+<area shape="rect" id="Node000004" href="$embedded_2test__err__controller_2test__err__controller_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,35,83,61"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,64,83,58,84,52,116,58"/>
+<area shape="rect" id="Node000005" href="$desktop_2test__err__controller_2test__err__controller_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="19,84,69,110"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="116,87,70,96,69,90,115,82"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="275,97,233,87,234,82,276,91"/>
+</map>

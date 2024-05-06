@@ -1,0 +1,7 @@
+<map id="setUp" name="setUp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,62,31"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="110,5,190,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,16,94,16,94,21,62,21"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="238,5,387,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,16,222,16,222,21,190,21"/>
+</map>

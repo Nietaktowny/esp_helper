@@ -1,0 +1,18 @@
+<map id="perform_ota_on_sta_connected" name="perform_ota_on_sta_connected">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,57,142,97"/>
+<area shape="rect" id="Node000002" href="$esp__helper__utils_8c.html#a58b860ee0ffd4f239cd6a016587c7b13" title="Perform simple OTA firmware update with standard ESP Helper server and provided device ID." alt="" coords="190,57,322,97"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,74,174,74,174,80,142,80"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="569,11,673,37"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,54,323,31,369,13,417,5,465,3,554,9,553,14,465,8,417,10,371,18,326,36,287,59"/>
+<area shape="rect" id="Node000004" href="$esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a" title="Prepare URL for OTA with device ID as parameter." alt="" coords="370,27,497,68"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="322,64,354,58,355,63,323,69"/>
+<area shape="rect" id="Node000005" href="$ota__controller_8c.html#a9bdb2553ca10cdaf2b8d49f84fce5ba5" title=" " alt="" coords="391,92,477,118"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="323,85,375,93,375,99,322,90"/>
+<area shape="rect" id="Node000008" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="373,142,495,167"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="300,95,371,128,383,133,381,138,369,133,298,100"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="468,89,496,77,576,41,579,46,498,82,470,94"/>
+<area shape="rect" id="Node000006" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="545,92,697,118"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="477,102,530,102,530,108,477,108"/>
+<area shape="rect" id="Node000007" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="745,92,912,118"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="697,102,729,102,729,108,697,108"/>
+</map>

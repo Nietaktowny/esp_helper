@@ -1,0 +1,23 @@
+<map id="test_if_wifi_manager_get_ap_json_returns_err_on_too_small_buffer" name="test_if_wifi_manager_get_ap_json_returns_err_on_too_small_buffer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,113,172,169"/>
+<area shape="rect" id="Node000002" href="$wifi__manager_8c.html#a68a4e289fd42141b8f67bfebc690ef2d" title="Scan and get for Access points that wifi manager can connect to and store them in JSON format." alt="" coords="220,149,385,189"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,149,205,153,204,159,172,154"/>
+<area shape="rect" id="Node000008" href="$wifi__manager_8c.html#a7bb30c48143ab3688c2a2573683eac62" title="Store access point credentials in Wifi Manager NVS namespace." alt="" coords="449,99,603,124"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="172,133,433,115,434,120,172,138"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="680,203,785,228"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="386,181,433,188,665,209,665,214,433,193,385,186"/>
+<area shape="rect" id="Node000004" href="$wifi__manager_8c.html#a92b6a91a3d31bfa35ff0409d0e7befdc" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="433,152,619,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="385,165,417,164,418,169,385,170"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="582,176,666,196,664,202,581,181"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="685,55,780,80"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="585,149,618,135,632,124,641,113,651,101,666,89,674,85,676,90,669,94,655,105,646,116,636,128,621,139,587,154"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="687,104,778,130"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="584,149,671,128,673,133,585,154"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="669,153,796,179"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="620,163,653,163,653,168,620,168"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="589,122,621,137,636,150,646,164,655,177,669,189,675,193,672,198,666,194,651,180,641,167,632,154,618,142,587,127"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="589,95,669,78,671,83,590,101"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="604,111,672,113,671,118,604,116"/>
+<area shape="rect" id="Node000009" href="$nvs__controller_8h.html#a26d3a2f94cdeb9d143dd8ee23ac8a939" title="Write key&#45;value pair string into nvs namespace." alt="" coords="667,5,798,31"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="551,96,666,40,678,35,680,40,668,45,554,101"/>
+</map>

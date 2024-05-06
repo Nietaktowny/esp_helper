@@ -1,0 +1,11 @@
+<map id="bmp_i2c_get_ctrl_meas" name="bmp_i2c_get_ctrl_meas">
+<area shape="rect" id="Node000001" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="5,31,165,56"/>
+<area shape="rect" id="Node000002" href="$bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="213,31,315,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,41,197,41,197,46,165,46"/>
+<area shape="rect" id="Node000003" href="$i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="363,31,447,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="316,41,348,41,348,46,316,46"/>
+<area shape="rect" id="Node000004" href="$i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="502,5,631,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="447,34,486,28,487,33,448,40"/>
+<area shape="rect" id="Node000005" href="$i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="495,55,638,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="448,47,481,52,480,57,447,52"/>
+</map>

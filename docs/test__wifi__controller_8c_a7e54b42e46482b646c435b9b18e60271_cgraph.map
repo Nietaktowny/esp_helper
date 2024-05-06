@@ -1,0 +1,7 @@
+<map id="test_if_sta_disconnect_handler_register_returns_err_on_null" name="test_if_sta_disconnect_handler_register_returns_err_on_null">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,20,173,75"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="245,5,337,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,33,229,24,230,30,173,38"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#ab6a4458cd9749bfedf7f065962157f87" title="Register function to be called when STA loses connection with AP and all attempts to connect again fa..." alt="" coords="221,55,361,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,56,206,61,205,66,173,62"/>
+</map>

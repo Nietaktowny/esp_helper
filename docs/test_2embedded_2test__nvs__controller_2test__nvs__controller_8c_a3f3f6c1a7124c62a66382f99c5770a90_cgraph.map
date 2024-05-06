@@ -1,0 +1,13 @@
+<map id="test_if_nvs_c_erase_key_returns_err_on_read_only_namespace" name="test_if_nvs_c_erase_key_returns_err_on_read_only_namespace">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,105,163,161"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="234,5,328,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,102,161,71,209,41,222,35,225,40,212,46,164,75,121,107"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a92ba0066a43bc3f296e16c4976b17fcc" title="Deinit default NVS partition." alt="" coords="211,55,351,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,107,195,98,197,103,164,112"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#ab561d95e4f191360c9c78db6b6c81f00" title="Delete single key&#45;value pair from NVS namespace." alt="" coords="220,120,342,146"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,130,205,130,205,136,163,136"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="218,170,344,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="164,153,203,165,202,170,162,158"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="235,235,327,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="121,159,164,190,212,220,225,226,222,231,209,225,161,195,118,163"/>
+</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['node_5ft_0',['node_t',['../linked__list__internal_8h.html#abde4c0336d5763543213901f27358215',1,'linked_list_internal.h']]],
-  ['nvs_5fc_5fhandle_5ft_1',['nvs_c_handle_t',['../nvs__controller_8h.html#a1348556dca9de34e626773cb78531aa8',1,'nvs_controller.h']]]
+  ['i2c_5fc_5fbus_5fhandle_5ft_0',['i2c_c_bus_handle_t',['../i2c__controller_8h.html#a98515ed1dcebf40e1389384d400ded3f',1,'i2c_controller.h']]],
+  ['i2c_5fc_5fdevice_5fhandle_5ft_1',['i2c_c_device_handle_t',['../i2c__controller_8h.html#a4827b6289fd5e2ea3738f410ce4f6647',1,'i2c_controller.h']]]
 ];

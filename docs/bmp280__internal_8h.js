@@ -20,5 +20,7 @@ var bmp280__internal_8h =
     [ "BMP_REG_TEMP_MSB", "bmp280__internal_8h.html#a9c96aa617b3e41422ddecfac13d21d56", null ],
     [ "BMP_REG_TEMP_XLSB", "bmp280__internal_8h.html#a17a07198ea16ae7aaa87133fe760fe98", null ],
     [ "BMP_RESET_VECTOR", "bmp280__internal_8h.html#ac2107cf7ee20764136a21f2467d88686", null ],
-    [ "BMP_STARTUP_TIME", "bmp280__internal_8h.html#a790cbfdb6af7953eef7c7f6a346c61ab", null ]
+    [ "BMP_STARTUP_TIME", "bmp280__internal_8h.html#a790cbfdb6af7953eef7c7f6a346c61ab", null ],
+    [ "bmp_compensate_P_int64", "bmp280__internal_8h.html#a62e2529d9443dfe65f6d4b755db00e8d", null ],
+    [ "bmp_compensate_T_int32", "bmp280__internal_8h.html#a4c2312589f67afdff1c0ba5912adaf6f", null ]
 ];

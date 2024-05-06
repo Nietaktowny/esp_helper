@@ -1,0 +1,10 @@
+<map id="nvs_c_deinit_partition" name="nvs_c_deinit_partition">
+<area shape="rect" id="Node000001" title="Deinit specified NVS partition." alt="" coords="394,56,541,82"/>
+<area shape="rect" id="Node000002" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#aef7f8d3f9769bed7e9d0386863c72897" title=" " alt="" coords="168,5,334,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="378,57,334,50,335,44,379,52"/>
+<area shape="rect" id="Node000004" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#a2cc876168e4086285271a2871df39e73" title=" " alt="" coords="156,85,346,126"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="379,86,347,92,346,87,379,81"/>
+<area shape="rect" id="Node000003" href="$lib_2nvs__controller_2test_2test__nvs__controller_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="5,56,108,82"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="153,54,109,62,108,57,152,49"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="140,87,108,81,109,76,141,82"/>
+</map>

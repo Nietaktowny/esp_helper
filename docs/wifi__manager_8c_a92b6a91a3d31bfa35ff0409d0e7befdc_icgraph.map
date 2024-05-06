@@ -1,0 +1,52 @@
+<map id="wifi_manager_get_stored_ap" name="wifi_manager_get_stored_ap">
+<area shape="rect" id="Node000001" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="752,307,938,333"/>
+<area shape="rect" id="Node000002" href="$test__wifi__manager_8c.html#ac7372248530e87eecab65fce9520cf80" title=" " alt="" coords="297,6,445,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="836,293,822,238,797,171,779,137,758,104,732,75,702,50,672,34,640,22,573,10,506,9,446,15,446,9,505,4,573,5,642,17,675,29,705,46,736,71,762,101,784,134,802,169,827,237,841,291"/>
+<area shape="rect" id="Node000005" href="$test__wifi__manager_8c.html#a6dd0c33d40520788feffadcade62524f" title=" " alt="" coords="515,60,698,116"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="828,295,779,215,744,170,702,130,685,119,688,114,705,126,748,166,784,212,833,293"/>
+<area shape="rect" id="Node000006" href="$test__wifi__manager_8c.html#a36194ae806d03ead8ac17d4ed7aba0ad" title=" " alt="" coords="509,140,704,196"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="817,299,766,255,702,210,680,199,683,194,705,206,769,251,821,295"/>
+<area shape="rect" id="Node000007" href="$test__wifi__manager_8c.html#a15f7fe4aa0deb562eaa211f0d7c773cc" title=" " alt="" coords="528,220,685,276"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="784,305,685,275,686,269,786,300"/>
+<area shape="rect" id="Node000008" href="$test__wifi__manager_8c.html#a7701c577d3e0f7d209f81eeda38343ac" title=" " alt="" coords="512,300,701,340"/>
+<area shape="poly" id="edge10_Node000001_Node000008" title=" " alt="" coords="736,323,701,323,701,317,736,317"/>
+<area shape="rect" id="Node000009" href="$test__wifi__manager_8c.html#a0911dec679035f09125e44535c4792ef" title=" " alt="" coords="530,365,683,406"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="781,340,684,367,682,362,780,335"/>
+<area shape="rect" id="Node000010" href="$test__wifi__manager_8c.html#a605360a36eab5304a4d1d62680df2173" title=" " alt="" coords="532,430,681,471"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="818,345,767,382,705,420,676,432,674,428,702,415,764,378,814,341"/>
+<area shape="rect" id="Node000011" href="$wifi__manager_8c.html#a68a4e289fd42141b8f67bfebc690ef2d" title="Scan and get for Access points that wifi manager can connect to and store them in JSON format." alt="" coords="524,536,689,576"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="826,348,774,412,705,485,640,537,637,533,702,481,770,408,822,344"/>
+<area shape="rect" id="Node000017" href="$wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee" title="Initialize wifi manager library." alt="" coords="546,817,667,842"/>
+<area shape="poly" id="edge27_Node000001_Node000017" title=" " alt="" coords="834,348,616,817,612,815,829,346"/>
+<area shape="rect" id="Node000003" href="$test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,333,233,358"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="315,58,283,86,261,117,242,152,214,224,196,288,188,333,183,332,191,287,209,222,237,150,256,115,279,82,311,54"/>
+<area shape="rect" id="Node000004" href="$test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,333,83,358"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="115,348,83,348,83,343,115,343"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="501,107,447,121,390,140,334,166,283,198,250,231,223,269,191,333,186,331,218,266,246,227,279,194,331,161,388,135,445,116,499,102"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="494,181,443,190,388,204,334,222,282,246,254,266,229,290,194,334,190,331,225,287,251,262,280,242,332,217,387,198,442,185,493,176"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="513,247,400,255,340,265,282,281,235,307,199,335,195,330,232,302,280,276,339,260,400,249,512,242"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="497,302,392,294,336,296,282,304,241,317,207,335,204,330,239,313,280,299,336,291,392,289,497,297"/>
+<area shape="poly" id="edge13_Node000009_Node000003" title=" " alt="" coords="515,364,461,355,339,346,234,346,234,341,339,341,462,350,516,359"/>
+<area shape="poly" id="edge15_Node000010_Node000003" title=" " alt="" coords="527,427,508,420,484,409,460,399,400,383,339,370,233,354,234,348,340,365,401,377,462,394,487,404,510,415,529,422"/>
+<area shape="rect" id="Node000012" href="$test__wifi__manager_8c.html#af5571ea7379fa8afbaaf1b3879134e1b" title=" " alt="" coords="299,408,444,464"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="555,530,460,479,436,467,438,462,463,474,558,525"/>
+<area shape="rect" id="Node000013" href="$test__wifi__manager_8c.html#ac5221e01be8b8fc121e7195e8de03b0a" title=" " alt="" coords="299,488,444,544"/>
+<area shape="poly" id="edge19_Node000011_Node000013" title=" " alt="" coords="509,542,444,531,445,526,509,537"/>
+<area shape="rect" id="Node000014" href="$test__wifi__manager_8c.html#a9f2f5ad85fe4f548a7bf2b77049416ba" title=" " alt="" coords="299,568,444,624"/>
+<area shape="poly" id="edge21_Node000011_Node000014" title=" " alt="" coords="509,575,445,586,444,581,509,570"/>
+<area shape="rect" id="Node000015" href="$test__wifi__manager_8c.html#a3e029a64c8f932f884a3a152e78361c2" title=" " alt="" coords="288,648,454,704"/>
+<area shape="poly" id="edge23_Node000011_Node000015" title=" " alt="" coords="558,587,463,639,438,650,436,645,460,634,555,582"/>
+<area shape="rect" id="Node000016" href="$test__wifi__manager_8c.html#aa579ddb6d8f292349854ad131a3a2ca4" title=" " alt="" coords="283,728,459,768"/>
+<area shape="poly" id="edge25_Node000011_Node000016" title=" " alt="" coords="585,591,534,655,500,689,463,718,443,729,440,725,460,714,497,685,530,651,581,587"/>
+<area shape="poly" id="edge18_Node000012_Node000003" title=" " alt="" coords="296,403,210,361,212,356,299,399"/>
+<area shape="poly" id="edge20_Node000013_Node000003" title=" " alt="" coords="284,482,279,478,249,449,223,416,188,360,192,357,227,413,253,445,283,474,287,478"/>
+<area shape="poly" id="edge22_Node000014_Node000003" title=" " alt="" coords="284,563,279,558,258,534,240,507,212,450,193,397,183,359,188,358,198,396,217,448,244,504,262,531,283,554,288,559"/>
+<area shape="poly" id="edge24_Node000015_Node000003" title=" " alt="" coords="281,640,279,638,253,603,231,565,215,524,202,483,187,410,181,359,187,359,192,409,208,482,220,522,236,562,257,600,283,634,284,636"/>
+<area shape="poly" id="edge26_Node000016_Node000003" title=" " alt="" coords="281,720,279,718,246,673,221,623,203,570,191,517,181,422,180,359,185,359,186,421,197,516,208,569,226,621,251,670,283,714,284,716"/>
+<area shape="rect" id="Node000018" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="333,793,410,818"/>
+<area shape="poly" id="edge28_Node000017_Node000018" title=" " alt="" coords="530,824,410,812,411,807,531,819"/>
+<area shape="rect" id="Node000019" href="$test__wifi__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="333,842,410,868"/>
+<area shape="poly" id="edge29_Node000017_Node000019" title=" " alt="" coords="531,840,411,853,410,848,530,835"/>
+<area shape="rect" id="Node000020" href="$test__wifi__manager_8c.html#a85164e31a518f33b699e35c435b60c8b" title=" " alt="" coords="281,892,461,948"/>
+<area shape="poly" id="edge30_Node000017_Node000020" title=" " alt="" coords="558,851,446,894,444,889,556,846"/>
+</map>

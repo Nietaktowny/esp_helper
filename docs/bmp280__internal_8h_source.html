@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -130,9 +130,11 @@ $(document).ready(function(){initNavTree('bmp280__internal_8h_source.html',''); 
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a7ef73c54ae733de5c411784ef86fe1a0">   39</a></span><span class="preprocessor">#define BMP_I2C_ADDR_HI              UINT8_C(0xEE)      </span></div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="bmp280__internal_8h.html#a25196f92ec893c8e6724993aac9e26a5">   40</a></span><span class="preprocessor">#define BMP_I2C_ADDR_LO              UINT8_C(0xEC)      </span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>int32_t bmp_compensate_T_int32(<a class="code hl_struct" href="structbmp__handle__obj.html">bmp_handle_t</a> bmp, int32_t adc_T);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>int32_t <a class="code hl_function" href="bmp280__internal_8h.html#a4c2312589f67afdff1c0ba5912adaf6f">bmp_compensate_T_int32</a>(<a class="code hl_struct" href="structbmp__handle__obj.html">bmp_handle_t</a> bmp, int32_t adc_T);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>uint32_t bmp_compensate_P_int64(<a class="code hl_struct" href="structbmp__handle__obj.html">bmp_handle_t</a> bmp, int32_t adc_P);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>uint32_t <a class="code hl_function" href="bmp280__internal_8h.html#a62e2529d9443dfe65f6d4b755db00e8d">bmp_compensate_P_int64</a>(<a class="code hl_struct" href="structbmp__handle__obj.html">bmp_handle_t</a> bmp, int32_t adc_P);</div>
+<div class="ttc" id="abmp280__internal_8h_html_a4c2312589f67afdff1c0ba5912adaf6f"><div class="ttname"><a href="bmp280__internal_8h.html#a4c2312589f67afdff1c0ba5912adaf6f">bmp_compensate_T_int32</a></div><div class="ttdeci">int32_t bmp_compensate_T_int32(bmp_handle_t bmp, int32_t adc_T)</div><div class="ttdef"><b>Definition</b> bmp280.c:375</div></div>
+<div class="ttc" id="abmp280__internal_8h_html_a62e2529d9443dfe65f6d4b755db00e8d"><div class="ttname"><a href="bmp280__internal_8h.html#a62e2529d9443dfe65f6d4b755db00e8d">bmp_compensate_P_int64</a></div><div class="ttdeci">uint32_t bmp_compensate_P_int64(bmp_handle_t bmp, int32_t adc_P)</div><div class="ttdef"><b>Definition</b> bmp280.c:387</div></div>
 <div class="ttc" id="astructbmp__handle__obj_html"><div class="ttname"><a href="structbmp__handle__obj.html">bmp_handle_obj</a></div><div class="ttdoc">BMP280 device object.</div><div class="ttdef"><b>Definition</b> bmp280.c:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

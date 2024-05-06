@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['level_0',['level',['../structlogger__contex.html#a1ea4101a8ff3352c65cc9a003ba400eb',1,'logger_contex']]],
-  ['logfiles_1',['logfiles',['../structlogger__contex.html#a7536e0fccd9dea28ecccd70c01b55631',1,'logger_contex']]],
-  ['logfiles_5fnum_2',['logfiles_num',['../structlogger__contex.html#a8ea3ac108f011fd3fb97960282504545',1,'logger_contex']]]
+  ['handlers_0',['handlers',['../structhttp__s__handle__obj.html#a422a0c98a97ec135a797e0af6a773132',1,'http_s_handle_obj']]],
+  ['head_1',['head',['../structlinked__list__obj.html#a132f666bbb2453151ba83f24cbe10737',1,'linked_list_obj']]]
 ];

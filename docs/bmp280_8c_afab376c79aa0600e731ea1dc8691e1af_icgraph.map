@@ -1,0 +1,16 @@
+<map id="bmp_i2c_get_config" name="bmp_i2c_get_config">
+<area shape="rect" id="Node000001" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="899,31,1035,56"/>
+<area shape="rect" id="Node000002" href="$bmp280_8c.html#a4265be98ad7d32842ae40e855692f18e" title="Set IIR filter value." alt="" coords="690,5,833,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="883,36,833,30,834,24,884,31"/>
+<area shape="rect" id="Node000007" href="$bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f" title="Set standby time of BMP280 device in normal mode." alt="" coords="672,55,851,80"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="884,56,852,60,851,54,883,51"/>
+<area shape="rect" id="Node000003" href="$bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,31,624,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="675,32,624,39,624,34,674,27"/>
+<area shape="rect" id="Node000004" href="$test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,31,470,56"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="503,46,470,46,470,41,503,41"/>
+<area shape="rect" id="Node000005" href="$test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,31,268,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="301,46,268,46,268,41,301,41"/>
+<area shape="rect" id="Node000006" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,31,83,56"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="115,46,83,46,83,41,115,41"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="656,57,624,53,624,47,656,52"/>
+</map>

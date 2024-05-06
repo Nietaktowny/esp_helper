@@ -1,0 +1,57 @@
+<map id="i2c_c_device_lock" name="i2c_c_device_lock">
+<area shape="rect" id="Node000001" title="Get I2C device lock. Used for thread safety." alt="" coords="1431,204,1559,230"/>
+<area shape="rect" id="Node000002" href="$i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="1297,179,1382,204"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1415,207,1381,201,1382,196,1416,201"/>
+<area shape="rect" id="Node000020" href="$i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="1296,228,1383,254"/>
+<area shape="poly" id="edge26_Node000001_Node000020" title=" " alt="" coords="1416,232,1384,237,1383,231,1415,226"/>
+<area shape="rect" id="Node000003" href="$bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="1145,153,1248,179"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1281,184,1248,178,1249,173,1282,179"/>
+<area shape="rect" id="Node000004" href="$bmp280_8c.html#af12043f643ffea6caf5be93fe8ec0435" title="Read BMP calibration data." alt="" coords="955,55,1081,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1168,145,1135,118,1096,94,1071,83,1073,78,1099,89,1138,114,1172,141"/>
+<area shape="rect" id="Node000009" href="$bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="950,301,1086,327"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="1183,194,1149,244,1126,270,1099,292,1079,303,1076,298,1096,288,1122,266,1145,241,1179,191"/>
+<area shape="rect" id="Node000013" href="$bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="938,153,1097,179"/>
+<area shape="poly" id="edge14_Node000003_Node000013" title=" " alt="" coords="1129,169,1098,169,1098,164,1129,164"/>
+<area shape="rect" id="Node000017" href="$bmp280_8c.html#a0d6e9ea66309c781305ad9e25fc4c4cb" title="Get value of BMP_REG_STATUS register using I2C." alt="" coords="949,203,1087,228"/>
+<area shape="poly" id="edge22_Node000003_Node000017" title=" " alt="" coords="1133,186,1068,205,1066,199,1132,181"/>
+<area shape="rect" id="Node000018" href="$bmp280_8c.html#a76f74528570223059dea2107d49e8441" title="Search for BMP280 device on possible addresses." alt="" coords="943,5,1092,31"/>
+<area shape="poly" id="edge23_Node000003_Node000018" title=" " alt="" coords="1179,141,1145,92,1122,66,1096,44,1076,34,1079,29,1099,40,1126,62,1149,88,1183,138"/>
+<area shape="rect" id="Node000019" href="$bmp280_8c.html#ae07beee2673305da99e82aeb4f4dda40" title="Read BMP device pressure and temperature readings." alt="" coords="958,104,1078,130"/>
+<area shape="poly" id="edge25_Node000003_Node000019" title=" " alt="" coords="1132,151,1066,133,1068,128,1133,146"/>
+<area shape="rect" id="Node000005" href="$bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="746,55,816,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="939,70,816,70,816,65,939,65"/>
+<area shape="rect" id="Node000006" href="$test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,153,470,179"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="731,81,672,94,443,155,441,150,671,89,730,75"/>
+<area shape="rect" id="Node000007" href="$test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,153,268,179"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="301,169,268,169,268,164,301,164"/>
+<area shape="rect" id="Node000008" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,153,83,179"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="115,169,83,169,83,164,115,164"/>
+<area shape="rect" id="Node000010" href="$bmp280_8c.html#a4265be98ad7d32842ae40e855692f18e" title="Set IIR filter value." alt="" coords="709,351,853,376"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="938,333,847,353,846,347,937,328"/>
+<area shape="rect" id="Node000012" href="$bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f" title="Set standby time of BMP280 device in normal mode." alt="" coords="691,301,871,327"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="934,317,871,317,871,312,934,312"/>
+<area shape="rect" id="Node000011" href="$bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,179,624,204"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="694,354,670,342,635,310,607,271,587,234,575,206,580,204,592,232,612,269,639,306,673,337,696,349"/>
+<area shape="poly" id="edge11_Node000011_Node000006" title=" " alt="" coords="503,184,470,180,471,175,503,179"/>
+<area shape="poly" id="edge13_Node000012_Node000011" title=" " alt="" coords="681,298,670,292,641,273,616,249,580,206,584,203,620,246,645,269,673,288,683,293"/>
+<area shape="poly" id="edge21_Node000013_Node000005" title=" " alt="" coords="945,149,936,144,921,131,912,118,903,105,889,94,852,80,816,73,817,67,854,74,891,89,907,102,916,115,925,128,940,140,948,144"/>
+<area shape="rect" id="Node000014" href="$bmp280_8c.html#a73b7bf20c2a74ff716d22181b36f753a" title="Change BMP device operating mode." alt="" coords="714,203,848,228"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="938,185,847,205,846,199,937,180"/>
+<area shape="rect" id="Node000015" href="$bmp280_8c.html#aaf822501cab64075a6964114a3432783" title="Set pressure oversampling." alt="" coords="672,104,890,130"/>
+<area shape="poly" id="edge17_Node000013_Node000015" title=" " alt="" coords="937,152,846,133,847,128,938,147"/>
+<area shape="rect" id="Node000016" href="$bmp280_8c.html#a573d2f5665e8d34814a0da21248b7eab" title="Set temperature oversampling." alt="" coords="673,153,889,179"/>
+<area shape="poly" id="edge19_Node000013_Node000016" title=" " alt="" coords="922,169,889,169,889,164,922,164"/>
+<area shape="poly" id="edge16_Node000014_Node000011" title=" " alt="" coords="698,209,624,200,624,195,698,203"/>
+<area shape="poly" id="edge18_Node000015_Node000011" title=" " alt="" coords="693,137,673,143,631,161,596,180,593,176,629,157,671,138,692,132"/>
+<area shape="poly" id="edge20_Node000016_Node000011" title=" " alt="" coords="658,184,624,188,624,183,657,178"/>
+<area shape="poly" id="edge24_Node000018_Node000005" title=" " alt="" coords="938,37,817,63,816,58,937,32"/>
+<area shape="rect" id="Node000021" href="$bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="965,252,1070,278"/>
+<area shape="poly" id="edge27_Node000020_Node000021" title=" " alt="" coords="1281,248,1071,264,1070,258,1280,243"/>
+<area shape="poly" id="edge29_Node000021_Node000010" title=" " alt="" coords="952,285,940,291,925,303,916,316,907,329,891,342,854,357,852,352,889,337,903,326,912,313,921,300,936,287,949,280"/>
+<area shape="poly" id="edge32_Node000021_Node000012" title=" " alt="" coords="950,282,847,303,846,298,949,276"/>
+<area shape="poly" id="edge30_Node000021_Node000014" title=" " alt="" coords="949,253,846,232,847,226,950,248"/>
+<area shape="poly" id="edge31_Node000021_Node000015" title=" " alt="" coords="950,252,936,243,925,230,918,217,912,191,906,166,899,154,888,143,871,133,874,128,892,139,904,151,911,164,917,190,923,215,929,227,940,239,953,247"/>
+<area shape="poly" id="edge33_Node000021_Node000016" title=" " alt="" coords="949,250,936,243,921,230,912,217,903,204,889,192,865,182,867,177,891,188,907,200,916,214,925,226,940,239,952,245"/>
+<area shape="rect" id="Node000022" href="$bmp280_8c.html#a02ac37c17668cf6fdee67b10b036ef56" title="Reset BMP chip." alt="" coords="712,252,850,278"/>
+<area shape="poly" id="edge28_Node000021_Node000022" title=" " alt="" coords="949,268,850,268,850,262,949,262"/>
+</map>

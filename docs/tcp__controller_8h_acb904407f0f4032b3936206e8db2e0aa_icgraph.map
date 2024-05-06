@@ -1,0 +1,32 @@
+<map id="tcp_accept_client" name="tcp_accept_client">
+<area shape="rect" id="Node000001" title="Accept connection on listen socket, and return client socket." alt="" coords="913,373,1036,399"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8c.html#a6cf547424c3b4d26fa301c9f2bc79688" title="Task responsible for accepting new hosts in TCP log server." alt="" coords="753,373,865,399"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="898,389,866,389,866,384,898,384"/>
+<area shape="rect" id="Node000003" href="$cli__manager_8c.html#a4b80c5127fd2867a5881d9c1f9d2cfda" title="Log all logger library logs to remote host on TCP port." alt="" coords="550,200,705,226"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="782,365,641,228,644,224,785,361"/>
+<area shape="rect" id="Node000012" href="$test__cli__manager_8c.html#a7771b6e51a6c9c4200b7a59092bc6925" title=" " alt="" coords="559,358,696,414"/>
+<area shape="poly" id="edge14_Node000002_Node000012" title=" " alt="" coords="737,389,697,389,697,384,737,384"/>
+<area shape="rect" id="Node000013" href="$test__cli__manager_8c.html#a7e192697ee2a71a480ff086a46be09f0" title=" " alt="" coords="566,438,689,479"/>
+<area shape="poly" id="edge16_Node000002_Node000013" title=" " alt="" coords="761,408,682,440,680,435,759,403"/>
+<area shape="rect" id="Node000004" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="353,5,430,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="612,187,594,154,570,115,539,76,501,44,466,29,430,22,431,17,468,24,504,40,542,73,574,112,599,151,617,184"/>
+<area shape="rect" id="Node000005" href="$test__cli__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="353,55,430,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="605,190,561,141,533,116,501,95,466,81,430,74,431,69,467,76,504,90,536,112,565,137,609,186"/>
+<area shape="rect" id="Node000006" href="$test__cli__manager_8c.html#a3ffaba09f8a01fb56abbfcb68fa49919" title=" " alt="" coords="314,105,470,161"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="572,197,470,162,471,157,574,192"/>
+<area shape="rect" id="Node000009" href="$test__cli__manager_8c.html#a7466ea899c6e9dd7f5924ec352cc2490" title=" " alt="" coords="311,185,473,241"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="535,216,473,216,473,210,535,210"/>
+<area shape="rect" id="Node000010" href="$test__cli__manager_8c.html#ae4c642a25d7133e81ffe7227de1704f8" title=" " alt="" coords="281,265,502,305"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="572,233,503,255,466,266,465,261,502,250,570,228"/>
+<area shape="rect" id="Node000011" href="$test__cli__manager_8c.html#a55b55c53e3e53e45495bde7948db0f46" title=" " alt="" coords="317,330,466,371"/>
+<area shape="poly" id="edge12_Node000003_Node000011" title=" " alt="" coords="605,239,561,280,504,319,468,335,466,330,501,315,557,275,602,235"/>
+<area shape="rect" id="Node000007" href="$test__cli__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,305,233,331"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="301,163,283,175,250,207,224,244,191,306,186,304,219,241,246,203,279,171,298,159"/>
+<area shape="rect" id="Node000008" href="$test__cli__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,305,83,331"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="115,321,83,321,83,316,115,316"/>
+<area shape="poly" id="edge9_Node000009_Node000007" title=" " alt="" coords="297,248,282,255,238,281,202,307,199,303,235,277,280,250,295,243"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="266,308,234,313,233,307,265,302"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="301,339,233,329,234,323,302,334"/>
+<area shape="poly" id="edge15_Node000012_Node000007" title=" " alt="" coords="543,401,484,405,418,405,348,399,280,385,255,375,232,361,196,334,199,329,235,357,258,370,282,380,349,394,418,400,484,400,543,395"/>
+<area shape="poly" id="edge17_Node000013_Node000007" title=" " alt="" coords="550,463,490,460,420,452,348,437,280,411,252,394,227,373,191,333,195,330,231,369,255,390,282,406,350,431,421,447,490,455,550,457"/>
+</map>

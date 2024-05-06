@@ -5,6 +5,8 @@ var bmp280_8c =
       [ "BMP_BMP280", "bmp280_8c.html#ad72c95d8f4fac16652903d482bf078dbabf2226cb9b592fa409eb69c3d9ce4004", null ],
       [ "BMP_BME280", "bmp280_8c.html#ad72c95d8f4fac16652903d482bf078dbafb35f03a3a3789bbae265549792d7f82", null ]
     ] ],
+    [ "bmp_compensate_P_int64", "bmp280_8c.html#a62e2529d9443dfe65f6d4b755db00e8d", null ],
+    [ "bmp_compensate_T_int32", "bmp280_8c.html#a4c2312589f67afdff1c0ba5912adaf6f", null ],
     [ "bmp_configure", "bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee", null ],
     [ "bmp_get_chip_id", "bmp280_8c.html#a9487ef46257acb04e1caeff62d2b1da3", null ],
     [ "bmp_get_i2c_addr", "bmp280_8c.html#ad4b0984dcbeb48e41089d7ba94bf6a8f", null ],

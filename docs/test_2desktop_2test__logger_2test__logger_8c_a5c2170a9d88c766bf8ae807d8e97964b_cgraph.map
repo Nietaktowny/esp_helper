@@ -1,0 +1,7 @@
+<map id="test_if_logger_init_returns_zero" name="test_if_logger_init_returns_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,129,46"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="177,13,257,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,23,161,23,161,28,129,28"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="305,13,454,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,23,289,23,289,28,257,28"/>
+</map>

@@ -1,0 +1,39 @@
+<map id="projects/lib_tests/test_ota_controller/main/main.c" name="projects/lib_tests/test_ota_controller/main/main.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="678,5,811,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,183,65,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="678,42,483,65,365,85,248,112,153,144,74,178,72,173,151,139,246,106,364,79,482,59,677,37"/>
+<area shape="rect" id="Node000003" href="$logger_8h.html" title="Logger library header file." alt="" coords="259,109,326,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="678,50,341,114,340,109,677,45"/>
+<area shape="rect" id="Node000008" href="$ota__controller_8h.html" title=" " alt="" coords="495,109,604,135"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="684,64,592,105,590,100,682,59"/>
+<area shape="rect" id="Node000011" href="$wifi__controller_8h.html" title="Wifi controller header file." alt="" coords="628,109,738,135"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="727,63,703,98,698,94,723,60"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="763,109,849,135"/>
+<area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="766,60,790,94,786,98,761,63"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="873,109,925,135"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="794,59,866,99,863,104,792,64"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="949,109,1041,135"/>
+<area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="812,55,946,101,945,106,810,60"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1065,109,1139,135"/>
+<area shape="poly" id="edge20_Node000001_Node000017" title=" " alt="" coords="812,48,1050,105,1049,111,811,53"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="259,135,81,184,79,179,258,130"/>
+<area shape="rect" id="Node000004" href="$ansi__colors_8h.html" title="ANSI color codes for logger library." alt="" coords="89,183,186,208"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="267,138,179,178,177,173,265,133"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="211,183,267,208"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="286,136,259,172,255,168,281,133"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="549,183,625,208"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="327,129,534,179,533,184,326,134"/>
+<area shape="rect" id="Node000007" href="$logger__errors_8h.html" title="Logger library errors list." alt="" coords="291,183,398,208"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="303,133,329,168,324,172,299,136"/>
+<area shape="poly" id="edge10_Node000008_Node000006" title=" " alt="" coords="558,134,576,168,571,170,553,136"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="649,183,717,208"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="574,133,648,173,646,177,571,138"/>
+<area shape="rect" id="Node000010" href="$ota__c__errors_8h.html" title="OTA Controller errors list." alt="" coords="422,183,525,208"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="539,137,499,174,496,170,535,133"/>
+<area shape="poly" id="edge14_Node000011_Node000006" title=" " alt="" coords="668,137,617,176,613,171,665,133"/>
+<area shape="poly" id="edge15_Node000011_Node000009" title=" " alt="" coords="686,135,686,167,680,167,680,135"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="869,183,942,208"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="722,133,855,175,853,180,720,138"/>
+<area shape="rect" id="Node000013" href="$wifi__c__errors_8h.html" title="Wifi controller library errors list." alt="" coords="740,183,845,208"/>
+<area shape="poly" id="edge16_Node000011_Node000013" title=" " alt="" coords="703,133,763,172,760,176,700,137"/>
+</map>

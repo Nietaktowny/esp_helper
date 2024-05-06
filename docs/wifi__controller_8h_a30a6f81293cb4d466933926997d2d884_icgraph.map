@@ -1,0 +1,33 @@
+<map id="wifi_c_start_ap" name="wifi_c_start_ap">
+<area shape="rect" id="Node000001" title="Starts WiFi in softAP mode." alt="" coords="610,256,719,282"/>
+<area shape="rect" id="Node000002" href="$lib_2wifi__controller_2examples_2example__project_2src_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="422,5,499,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="656,242,646,198,628,145,600,91,582,67,561,46,531,30,499,22,501,17,533,25,564,41,586,63,605,88,633,143,651,197,661,241"/>
+<area shape="rect" id="Node000003" href="$test__wifi__controller_8c.html#a6d8e2b0e55ba66b30946ba0f9e574744" title=" " alt="" coords="386,56,535,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="648,244,614,185,589,153,561,126,534,109,537,105,564,121,593,150,618,182,653,241"/>
+<area shape="rect" id="Node000006" href="$test__wifi__controller_8c.html#ac3712722ec6432376a4000052408a69d" title=" " alt="" coords="386,136,535,191"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="631,249,561,206,534,193,537,189,564,201,634,244"/>
+<area shape="rect" id="Node000007" href="$test__wifi__controller_8c.html#ad6226e582d825c930b22c4103143c6d3" title=" " alt="" coords="359,215,562,256"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="595,260,562,255,563,250,595,255"/>
+<area shape="rect" id="Node000008" href="$test__wifi__controller_8c.html#a20fe4662e4754c70df347502ad005f45" title=" " alt="" coords="362,281,559,321"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="595,282,560,288,560,283,594,277"/>
+<area shape="rect" id="Node000009" href="$test__wifi__controller_8c.html#af1de296b03bc849984460989e23bbffa" title=" " alt="" coords="375,345,547,401"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="633,293,564,335,539,347,537,342,561,330,631,288"/>
+<area shape="rect" id="Node000010" href="$wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee" title="Initialize wifi manager library." alt="" coords="400,425,521,451"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="654,297,620,357,594,388,564,415,544,426,523,433,521,428,542,421,561,411,590,385,615,354,649,294"/>
+<area shape="rect" id="Node000014" href="$wifi__manager_8c.html#a025b8f724ceaee693f08a1684f2a6b46" title=" " alt="" coords="396,475,526,516"/>
+<area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="659,297,646,335,627,380,600,426,564,466,547,477,527,486,525,481,544,473,561,461,596,423,622,378,641,333,654,296"/>
+<area shape="rect" id="Node000004" href="$test__wifi__controller_8c.html#a25fd59993328610671b8a6fcac37a5e1" title=" " alt="" coords="158,215,284,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="373,119,360,126,296,172,245,217,242,213,292,168,358,121,371,114"/>
+<area shape="rect" id="Node000005" href="$test__wifi__controller_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,223,83,248"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="143,238,83,238,83,233,143,233"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="372,193,285,219,283,214,370,188"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="343,238,284,238,284,233,343,233"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="368,279,283,255,285,250,370,273"/>
+<area shape="poly" id="edge12_Node000009_Node000004" title=" " alt="" coords="367,340,358,335,296,296,246,259,249,254,299,292,360,331,370,335"/>
+<area shape="rect" id="Node000011" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="182,376,260,402"/>
+<area shape="poly" id="edge14_Node000010_Node000011" title=" " alt="" coords="384,425,260,399,261,394,385,420"/>
+<area shape="rect" id="Node000012" href="$test__wifi__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="182,425,260,451"/>
+<area shape="poly" id="edge15_Node000010_Node000012" title=" " alt="" coords="385,441,260,441,260,436,385,436"/>
+<area shape="rect" id="Node000013" href="$test__wifi__manager_8c.html#a85164e31a518f33b699e35c435b60c8b" title=" " alt="" coords="131,476,311,531"/>
+<area shape="poly" id="edge16_Node000010_Node000013" title=" " alt="" coords="391,458,360,466,312,479,311,474,358,461,389,453"/>
+</map>

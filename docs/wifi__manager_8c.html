@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('wifi__manager_8c.html',''); initResiza
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="err__controller_8h_source.html">err_controller.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
-<code>#include &quot;memory_utils.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="memory__utils_8h_source.html">memory_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="nvs__controller_8h_source.html">nvs_controller.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wifi__controller_8h_source.html">wifi_controller.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wifi__manager__internal_8h_source.html">wifi_manager_internal.h</a>&quot;</code><br />
@@ -127,7 +127,7 @@ Include dependency graph for wifi_manager.c:</div>
 <area shape="poly" title=" " alt="" coords="800,59,848,97,845,101,797,63"/>
 <area shape="rect" href="logger_8h.html" title="Logger library header file." alt="" coords="1196,183,1262,208"/>
 <area shape="poly" title=" " alt="" coords="836,32,907,36,989,48,1076,71,1117,87,1157,107,1191,135,1216,168,1212,171,1188,139,1154,111,1115,92,1074,76,988,53,906,42,836,37"/>
-<area shape="rect" href="memory__utils_8h_source.html" title=" " alt="" coords="1035,109,1143,135"/>
+<area shape="rect" href="memory__utils_8h.html" title=" " alt="" coords="1035,109,1143,135"/>
 <area shape="poly" title=" " alt="" coords="836,51,1029,102,1028,107,835,56"/>
 <area shape="rect" href="nvs__controller_8h.html" title="NVS Controller library header file." alt="" coords="90,109,203,135"/>
 <area shape="poly" title=" " alt="" coords="695,46,219,111,218,106,694,41"/>
@@ -141,7 +141,7 @@ Include dependency graph for wifi_manager.c:</div>
 <area shape="poly" title=" " alt="" coords="451,137,414,173,410,170,447,133"/>
 <area shape="rect" title=" " alt="" coords="979,256,1055,282"/>
 <area shape="poly" title=" " alt="" coords="922,133,963,151,983,164,999,181,1014,210,1019,241,1014,242,1009,212,995,184,979,169,960,156,920,138"/>
-<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="764,183,860,208"/>
+<area shape="rect" href="CException_8h.html" title=" " alt="" coords="764,183,860,208"/>
 <area shape="poly" title=" " alt="" coords="865,137,834,172,830,169,861,133"/>
 <area shape="rect" href="err__c__errors_8h.html" title="Error helper library errors list." alt="" coords="884,183,985,208"/>
 <area shape="poly" title=" " alt="" coords="885,133,916,169,912,172,881,137"/>
@@ -190,8 +190,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ae40d3fa65c5e68e8fa280cc45a81e8b0" id="r_ae40d3fa65c5e68e8fa280cc45a81e8b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__manager_8c.html#ae40d3fa65c5e68e8fa280cc45a81e8b0">wifi_manager_erase_ap</a> (void)</td></tr>
 <tr class="memdesc:ae40d3fa65c5e68e8fa280cc45a81e8b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase all data stored in wifi manager NVS namespace.  <br /></td></tr>
 <tr class="separator:ae40d3fa65c5e68e8fa280cc45a81e8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a025b8f724ceaee693f08a1684f2a6b46" id="r_a025b8f724ceaee693f08a1684f2a6b46"><td class="memItemLeft" align="right" valign="top"><a id="a025b8f724ceaee693f08a1684f2a6b46" name="a025b8f724ceaee693f08a1684f2a6b46"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_manager_start_ap_and_server</b> (void)</td></tr>
+<tr class="memitem:a025b8f724ceaee693f08a1684f2a6b46" id="r_a025b8f724ceaee693f08a1684f2a6b46"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__manager_8c.html#a025b8f724ceaee693f08a1684f2a6b46">wifi_manager_start_ap_and_server</a> (void)</td></tr>
 <tr class="separator:a025b8f724ceaee693f08a1684f2a6b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bb2312786a60b8f18002dd6a93e7eee" id="r_a1bb2312786a60b8f18002dd6a93e7eee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee">wifi_manager_init</a> (void)</td></tr>
 <tr class="memdesc:a1bb2312786a60b8f18002dd6a93e7eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize wifi manager library.  <br /></td></tr>
@@ -227,6 +226,41 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_manager_start_ap_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_ae40d3fa65c5e68e8fa280cc45a81e8b0_cgraph.png" border="0" usemap="#awifi__manager_8c_ae40d3fa65c5e68e8fa280cc45a81e8b0_cgraph" alt=""/></div>
+<map name="awifi__manager_8c_ae40d3fa65c5e68e8fa280cc45a81e8b0_cgraph" id="awifi__manager_8c_ae40d3fa65c5e68e8fa280cc45a81e8b0_cgraph">
+<area shape="rect" title="Erase all data stored in wifi manager NVS namespace." alt="" coords="5,104,163,130"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="243,5,348,31"/>
+<area shape="poly" title=" " alt="" coords="103,101,150,71,210,40,227,33,229,38,212,45,153,76,105,106"/>
+<area shape="rect" href="nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="248,55,343,80"/>
+<area shape="poly" title=" " alt="" coords="142,101,232,79,233,85,143,106"/>
+<area shape="rect" href="nvs__controller_8h.html#a5966e157cae5d3998dfa1c2157dcead2" title="Erase all key&#45;value pairs in specified NVS namespace." alt="" coords="211,104,380,130"/>
+<area shape="poly" title=" " alt="" coords="163,114,195,114,195,120,163,120"/>
+<area shape="rect" href="nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="232,154,359,195"/>
+<area shape="poly" title=" " alt="" coords="135,128,218,150,216,156,134,133"/>
+<area shape="rect" href="nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="250,219,341,244"/>
+<area shape="poly" title=" " alt="" coords="102,128,149,165,212,204,236,214,234,219,209,209,146,170,99,132"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_ae40d3fa65c5e68e8fa280cc45a81e8b0_icgraph.png" border="0" usemap="#awifi__manager_8c_ae40d3fa65c5e68e8fa280cc45a81e8b0_icgraph" alt=""/></div>
+<map name="awifi__manager_8c_ae40d3fa65c5e68e8fa280cc45a81e8b0_icgraph" id="awifi__manager_8c_ae40d3fa65c5e68e8fa280cc45a81e8b0_icgraph">
+<area shape="rect" title="Erase all data stored in wifi manager NVS namespace." alt="" coords="488,46,646,72"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ac7372248530e87eecab65fce9520cf80" title=" " alt="" coords="287,5,435,46"/>
+<area shape="poly" title=" " alt="" coords="473,47,435,40,436,35,474,41"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a572428b931123b5c3bd88d5f594da935" title=" " alt="" coords="281,71,440,111"/>
+<area shape="poly" title=" " alt="" coords="473,76,441,81,440,76,473,71"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,46,233,72"/>
+<area shape="poly" title=" " alt="" coords="272,45,234,52,233,47,271,40"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,46,83,72"/>
+<area shape="poly" title=" " alt="" coords="115,62,83,62,83,56,115,56"/>
+<area shape="poly" title=" " alt="" coords="265,77,233,71,234,66,266,71"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -273,6 +307,43 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_manager_start_ap_
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels.">wifi_c_scan_all_ap</a> <br  />
  </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a2ea15285d2156d5392749310ceb92843_cgraph.png" border="0" usemap="#awifi__manager_8c_a2ea15285d2156d5392749310ceb92843_cgraph" alt=""/></div>
+<map name="awifi__manager_8c_a2ea15285d2156d5392749310ceb92843_cgraph" id="awifi__manager_8c_a2ea15285d2156d5392749310ceb92843_cgraph">
+<area shape="rect" title="Scan and get for Access points that wifi manager can connect to." alt="" coords="5,55,212,80"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="290,5,394,31"/>
+<area shape="poly" title=" " alt="" coords="172,51,274,30,275,35,173,57"/>
+<area shape="rect" href="wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels." alt="" coords="277,55,407,80"/>
+<area shape="poly" title=" " alt="" coords="212,65,262,65,262,70,212,70"/>
+<area shape="rect" href="wifi__controller_8h.html#a65a29cdfc998ed4e91bb9088d2eebc37" title="Store results of scanning in buffer as json string;." alt="" coords="260,105,424,145"/>
+<area shape="poly" title=" " alt="" coords="165,78,245,98,244,104,163,84"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a2ea15285d2156d5392749310ceb92843_icgraph.png" border="0" usemap="#awifi__manager_8c_a2ea15285d2156d5392749310ceb92843_icgraph" alt=""/></div>
+<map name="awifi__manager_8c_a2ea15285d2156d5392749310ceb92843_icgraph" id="awifi__manager_8c_a2ea15285d2156d5392749310ceb92843_icgraph">
+<area shape="rect" title="Scan and get for Access points that wifi manager can connect to." alt="" coords="537,140,744,166"/>
+<area shape="rect" href="test__wifi__manager_8c.html#afb02c32fd7e10257c825b300790744c4" title=" " alt="" coords="297,5,474,61"/>
+<area shape="poly" title=" " alt="" coords="602,135,488,76,462,64,464,59,490,71,604,130"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae99f55718b798437ef096bd2ee7fa9ce" title=" " alt="" coords="297,85,474,141"/>
+<area shape="poly" title=" " alt="" coords="539,140,474,130,475,124,540,135"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a5ab968556fea9ffa996dbd92c5b16cbc" title=" " alt="" coords="297,165,474,221"/>
+<area shape="poly" title=" " alt="" coords="540,172,475,182,474,177,539,166"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae26483dc691ffc91ac07b87fd493d9ee" title=" " alt="" coords="281,245,489,286"/>
+<area shape="poly" title=" " alt="" coords="606,176,552,206,490,236,461,247,459,242,488,231,550,201,603,172"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,140,233,166"/>
+<area shape="poly" title=" " alt="" coords="291,71,282,75,235,109,198,142,195,138,232,105,280,71,289,66"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,140,83,166"/>
+<area shape="poly" title=" " alt="" coords="115,156,83,156,83,151,115,151"/>
+<area shape="poly" title=" " alt="" coords="282,136,234,146,233,141,281,131"/>
+<area shape="poly" title=" " alt="" coords="281,175,233,166,234,161,282,170"/>
+<area shape="poly" title=" " alt="" coords="290,241,280,235,231,202,194,168,198,164,234,197,282,231,293,236"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -332,6 +403,79 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_manager_start_ap_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a92b6a91a3d31bfa35ff0409d0e7befdc_cgraph.png" border="0" usemap="#awifi__manager_8c_a92b6a91a3d31bfa35ff0409d0e7befdc_cgraph" alt=""/></div>
+<map name="awifi__manager_8c_a92b6a91a3d31bfa35ff0409d0e7befdc_cgraph" id="awifi__manager_8c_a92b6a91a3d31bfa35ff0409d0e7befdc_cgraph">
+<area shape="rect" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="5,80,192,106"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="251,5,356,31"/>
+<area shape="poly" title=" " alt="" coords="135,77,250,34,252,39,137,82"/>
+<area shape="rect" href="nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="256,55,351,80"/>
+<area shape="poly" title=" " alt="" coords="192,79,241,73,241,78,192,84"/>
+<area shape="rect" href="nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="258,104,349,130"/>
+<area shape="poly" title=" " alt="" coords="192,101,243,107,242,112,192,106"/>
+<area shape="rect" href="nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="240,153,367,179"/>
+<area shape="poly" title=" " alt="" coords="138,104,252,145,250,150,136,109"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a92b6a91a3d31bfa35ff0409d0e7befdc_icgraph.png" border="0" usemap="#awifi__manager_8c_a92b6a91a3d31bfa35ff0409d0e7befdc_icgraph" alt=""/></div>
+<map name="awifi__manager_8c_a92b6a91a3d31bfa35ff0409d0e7befdc_icgraph" id="awifi__manager_8c_a92b6a91a3d31bfa35ff0409d0e7befdc_icgraph">
+<area shape="rect" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="752,307,938,333"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ac7372248530e87eecab65fce9520cf80" title=" " alt="" coords="297,6,445,47"/>
+<area shape="poly" title=" " alt="" coords="836,293,822,238,797,171,779,137,758,104,732,75,702,50,672,34,640,22,573,10,506,9,446,15,446,9,505,4,573,5,642,17,675,29,705,46,736,71,762,101,784,134,802,169,827,237,841,291"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a6dd0c33d40520788feffadcade62524f" title=" " alt="" coords="515,60,698,116"/>
+<area shape="poly" title=" " alt="" coords="828,295,779,215,744,170,702,130,685,119,688,114,705,126,748,166,784,212,833,293"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a36194ae806d03ead8ac17d4ed7aba0ad" title=" " alt="" coords="509,140,704,196"/>
+<area shape="poly" title=" " alt="" coords="817,299,766,255,702,210,680,199,683,194,705,206,769,251,821,295"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a15f7fe4aa0deb562eaa211f0d7c773cc" title=" " alt="" coords="528,220,685,276"/>
+<area shape="poly" title=" " alt="" coords="784,305,685,275,686,269,786,300"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a7701c577d3e0f7d209f81eeda38343ac" title=" " alt="" coords="512,300,701,340"/>
+<area shape="poly" title=" " alt="" coords="736,323,701,323,701,317,736,317"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a0911dec679035f09125e44535c4792ef" title=" " alt="" coords="530,365,683,406"/>
+<area shape="poly" title=" " alt="" coords="781,340,684,367,682,362,780,335"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a605360a36eab5304a4d1d62680df2173" title=" " alt="" coords="532,430,681,471"/>
+<area shape="poly" title=" " alt="" coords="818,345,767,382,705,420,676,432,674,428,702,415,764,378,814,341"/>
+<area shape="rect" href="wifi__manager_8c.html#a68a4e289fd42141b8f67bfebc690ef2d" title="Scan and get for Access points that wifi manager can connect to and store them in JSON format." alt="" coords="524,536,689,576"/>
+<area shape="poly" title=" " alt="" coords="826,348,774,412,705,485,640,537,637,533,702,481,770,408,822,344"/>
+<area shape="rect" href="wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee" title="Initialize wifi manager library." alt="" coords="546,817,667,842"/>
+<area shape="poly" title=" " alt="" coords="834,348,616,817,612,815,829,346"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,333,233,358"/>
+<area shape="poly" title=" " alt="" coords="315,58,283,86,261,117,242,152,214,224,196,288,188,333,183,332,191,287,209,222,237,150,256,115,279,82,311,54"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,333,83,358"/>
+<area shape="poly" title=" " alt="" coords="115,348,83,348,83,343,115,343"/>
+<area shape="poly" title=" " alt="" coords="501,107,447,121,390,140,334,166,283,198,250,231,223,269,191,333,186,331,218,266,246,227,279,194,331,161,388,135,445,116,499,102"/>
+<area shape="poly" title=" " alt="" coords="494,181,443,190,388,204,334,222,282,246,254,266,229,290,194,334,190,331,225,287,251,262,280,242,332,217,387,198,442,185,493,176"/>
+<area shape="poly" title=" " alt="" coords="513,247,400,255,340,265,282,281,235,307,199,335,195,330,232,302,280,276,339,260,400,249,512,242"/>
+<area shape="poly" title=" " alt="" coords="497,302,392,294,336,296,282,304,241,317,207,335,204,330,239,313,280,299,336,291,392,289,497,297"/>
+<area shape="poly" title=" " alt="" coords="515,364,461,355,339,346,234,346,234,341,339,341,462,350,516,359"/>
+<area shape="poly" title=" " alt="" coords="527,427,508,420,484,409,460,399,400,383,339,370,233,354,234,348,340,365,401,377,462,394,487,404,510,415,529,422"/>
+<area shape="rect" href="test__wifi__manager_8c.html#af5571ea7379fa8afbaaf1b3879134e1b" title=" " alt="" coords="299,408,444,464"/>
+<area shape="poly" title=" " alt="" coords="555,530,460,479,436,467,438,462,463,474,558,525"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ac5221e01be8b8fc121e7195e8de03b0a" title=" " alt="" coords="299,488,444,544"/>
+<area shape="poly" title=" " alt="" coords="509,542,444,531,445,526,509,537"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a9f2f5ad85fe4f548a7bf2b77049416ba" title=" " alt="" coords="299,568,444,624"/>
+<area shape="poly" title=" " alt="" coords="509,575,445,586,444,581,509,570"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a3e029a64c8f932f884a3a152e78361c2" title=" " alt="" coords="288,648,454,704"/>
+<area shape="poly" title=" " alt="" coords="558,587,463,639,438,650,436,645,460,634,555,582"/>
+<area shape="rect" href="test__wifi__manager_8c.html#aa579ddb6d8f292349854ad131a3a2ca4" title=" " alt="" coords="283,728,459,768"/>
+<area shape="poly" title=" " alt="" coords="585,591,534,655,500,689,463,718,443,729,440,725,460,714,497,685,530,651,581,587"/>
+<area shape="poly" title=" " alt="" coords="296,403,210,361,212,356,299,399"/>
+<area shape="poly" title=" " alt="" coords="284,482,279,478,249,449,223,416,188,360,192,357,227,413,253,445,283,474,287,478"/>
+<area shape="poly" title=" " alt="" coords="284,563,279,558,258,534,240,507,212,450,193,397,183,359,188,358,198,396,217,448,244,504,262,531,283,554,288,559"/>
+<area shape="poly" title=" " alt="" coords="281,640,279,638,253,603,231,565,215,524,202,483,187,410,181,359,187,359,192,409,208,482,220,522,236,562,257,600,283,634,284,636"/>
+<area shape="poly" title=" " alt="" coords="281,720,279,718,246,673,221,623,203,570,191,517,181,422,180,359,185,359,186,421,197,516,208,569,226,621,251,670,283,714,284,716"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="333,793,410,818"/>
+<area shape="poly" title=" " alt="" coords="530,824,410,812,411,807,531,819"/>
+<area shape="rect" href="test__wifi__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="333,842,410,868"/>
+<area shape="poly" title=" " alt="" coords="531,840,411,853,410,848,530,835"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a85164e31a518f33b699e35c435b60c8b" title=" " alt="" coords="281,892,461,948"/>
+<area shape="poly" title=" " alt="" coords="558,851,446,894,444,889,556,846"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -378,6 +522,51 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_manager_start_ap_
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels.">wifi_c_scan_all_ap</a> <br  />
  </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a68a4e289fd42141b8f67bfebc690ef2d_cgraph.png" border="0" usemap="#awifi__manager_8c_a68a4e289fd42141b8f67bfebc690ef2d_cgraph" alt=""/></div>
+<map name="awifi__manager_8c_a68a4e289fd42141b8f67bfebc690ef2d_cgraph" id="awifi__manager_8c_a68a4e289fd42141b8f67bfebc690ef2d_cgraph">
+<area shape="rect" title="Scan and get for Access points that wifi manager can connect to and store them in JSON format." alt="" coords="5,23,171,64"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="465,5,569,31"/>
+<area shape="poly" title=" " alt="" coords="171,36,449,19,449,25,171,41"/>
+<area shape="rect" href="wifi__manager_8c.html#a92b6a91a3d31bfa35ff0409d0e7befdc" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="219,56,405,82"/>
+<area shape="poly" title=" " alt="" coords="171,50,203,54,203,59,171,56"/>
+<area shape="poly" title=" " alt="" coords="366,53,448,32,450,37,367,58"/>
+<area shape="rect" href="nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="470,55,564,80"/>
+<area shape="poly" title=" " alt="" coords="405,66,454,65,454,71,405,71"/>
+<area shape="rect" href="nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="471,104,562,130"/>
+<area shape="poly" title=" " alt="" coords="371,80,456,100,455,105,369,85"/>
+<area shape="rect" href="nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="453,153,580,179"/>
+<area shape="poly" title=" " alt="" coords="338,80,454,140,466,145,463,150,452,145,335,85"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a68a4e289fd42141b8f67bfebc690ef2d_icgraph.png" border="0" usemap="#awifi__manager_8c_a68a4e289fd42141b8f67bfebc690ef2d_icgraph" alt=""/></div>
+<map name="awifi__manager_8c_a68a4e289fd42141b8f67bfebc690ef2d_icgraph" id="awifi__manager_8c_a68a4e289fd42141b8f67bfebc690ef2d_icgraph">
+<area shape="rect" title="Scan and get for Access points that wifi manager can connect to and store them in JSON format." alt="" coords="505,173,671,214"/>
+<area shape="rect" href="test__wifi__manager_8c.html#af5571ea7379fa8afbaaf1b3879134e1b" title=" " alt="" coords="297,5,442,61"/>
+<area shape="poly" title=" " alt="" coords="556,163,511,119,456,75,436,64,439,59,459,71,514,115,560,159"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ac5221e01be8b8fc121e7195e8de03b0a" title=" " alt="" coords="297,85,442,141"/>
+<area shape="poly" title=" " alt="" coords="515,170,441,142,443,137,517,165"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a9f2f5ad85fe4f548a7bf2b77049416ba" title=" " alt="" coords="297,165,442,221"/>
+<area shape="poly" title=" " alt="" coords="490,196,442,196,442,191,490,191"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a3e029a64c8f932f884a3a152e78361c2" title=" " alt="" coords="286,245,452,301"/>
+<area shape="poly" title=" " alt="" coords="517,222,448,247,446,242,515,217"/>
+<area shape="rect" href="test__wifi__manager_8c.html#aa579ddb6d8f292349854ad131a3a2ca4" title=" " alt="" coords="281,325,457,366"/>
+<area shape="poly" title=" " alt="" coords="561,227,515,272,459,315,437,327,435,322,456,311,512,268,557,224"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,180,233,206"/>
+<area shape="poly" title=" " alt="" coords="287,72,283,75,254,102,228,131,193,181,189,178,224,128,250,98,279,71,284,68"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,180,83,206"/>
+<area shape="poly" title=" " alt="" coords="115,196,83,196,83,191,115,191"/>
+<area shape="poly" title=" " alt="" coords="289,150,215,182,213,177,287,145"/>
+<area shape="poly" title=" " alt="" coords="281,196,233,196,233,191,281,191"/>
+<area shape="poly" title=" " alt="" coords="287,241,213,209,215,204,289,236"/>
+<area shape="poly" title=" " alt="" coords="285,319,279,315,249,289,223,259,188,208,193,205,228,256,253,285,283,311,288,315"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -404,6 +593,93 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_manager_start_ap_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a1bb2312786a60b8f18002dd6a93e7eee_cgraph.png" border="0" usemap="#awifi__manager_8c_a1bb2312786a60b8f18002dd6a93e7eee_cgraph" alt=""/></div>
+<map name="awifi__manager_8c_a1bb2312786a60b8f18002dd6a93e7eee_cgraph" id="awifi__manager_8c_a1bb2312786a60b8f18002dd6a93e7eee_cgraph">
+<area shape="rect" title="Initialize wifi manager library." alt="" coords="5,189,127,214"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="421,286,525,312"/>
+<area shape="poly" title=" " alt="" coords="69,187,81,154,102,111,132,69,151,50,173,35,224,12,269,3,291,4,314,10,362,35,390,59,413,87,431,118,445,152,464,217,472,270,467,271,458,218,440,154,426,121,409,90,386,62,360,40,312,15,291,10,269,8,226,17,176,40,155,54,136,72,106,114,86,156,74,189"/>
+<area shape="rect" href="nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="205,49,331,90"/>
+<area shape="poly" title=" " alt="" coords="76,186,116,144,143,120,173,99,189,91,192,95,176,104,147,124,120,148,80,190"/>
+<area shape="rect" href="wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="222,114,314,140"/>
+<area shape="poly" title=" " alt="" coords="91,186,174,148,206,138,207,143,176,153,93,190"/>
+<area shape="rect" href="wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="216,163,320,189"/>
+<area shape="poly" title=" " alt="" coords="127,191,200,182,201,187,127,197"/>
+<area shape="rect" href="wifi__controller_8h.html#a30a6f81293cb4d466933926997d2d884" title="Starts WiFi in softAP mode." alt="" coords="214,213,322,238"/>
+<area shape="poly" title=" " alt="" coords="127,206,199,215,198,220,127,211"/>
+<area shape="rect" href="wifi__controller_8h.html#a222008978f46f659f29a0f44e4985780" title="Starts WiFi in STA mode." alt="" coords="212,262,324,288"/>
+<area shape="poly" title=" " alt="" coords="94,213,176,248,198,255,196,260,174,253,92,217"/>
+<area shape="rect" href="wifi__manager_8c.html#a92b6a91a3d31bfa35ff0409d0e7befdc" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="175,361,361,386"/>
+<area shape="poly" title=" " alt="" coords="75,214,112,278,141,316,176,347,183,351,180,356,173,352,137,319,107,281,71,216"/>
+<area shape="rect" href="wifi__http__server_8c.html#a3aca862ceb12066cd03d353d5d1534e8" title="Start wifi manager HTTP server." alt="" coords="186,311,350,337"/>
+<area shape="poly" title=" " alt="" coords="80,213,119,255,146,278,176,298,186,303,184,308,173,302,143,282,116,259,76,217"/>
+<area shape="poly" title=" " alt="" coords="329,357,360,347,384,334,408,320,419,315,421,320,410,325,386,339,362,352,330,363"/>
+<area shape="rect" href="nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="426,335,520,361"/>
+<area shape="poly" title=" " alt="" coords="361,359,410,353,411,358,362,365"/>
+<area shape="rect" href="nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="427,385,518,410"/>
+<area shape="poly" title=" " alt="" coords="362,382,412,388,411,393,361,387"/>
+<area shape="rect" href="nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="409,434,536,460"/>
+<area shape="poly" title=" " alt="" coords="307,384,421,426,419,431,305,389"/>
+<area shape="poly" title=" " alt="" coords="350,311,405,304,405,310,351,317"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a1bb2312786a60b8f18002dd6a93e7eee_icgraph.png" border="0" usemap="#awifi__manager_8c_a1bb2312786a60b8f18002dd6a93e7eee_icgraph" alt=""/></div>
+<map name="awifi__manager_8c_a1bb2312786a60b8f18002dd6a93e7eee_icgraph" id="awifi__manager_8c_a1bb2312786a60b8f18002dd6a93e7eee_icgraph">
+<area shape="rect" title="Initialize wifi manager library." alt="" coords="234,55,355,80"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="57,5,134,31"/>
+<area shape="poly" title=" " alt="" coords="224,53,134,30,135,25,225,48"/>
+<area shape="rect" href="test__wifi__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="57,55,134,80"/>
+<area shape="poly" title=" " alt="" coords="218,70,135,70,135,65,218,65"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a85164e31a518f33b699e35c435b60c8b" title=" " alt="" coords="5,105,186,161"/>
+<area shape="poly" title=" " alt="" coords="240,88,183,107,181,102,238,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a025b8f724ceaee693f08a1684f2a6b46" name="a025b8f724ceaee693f08a1684f2a6b46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a025b8f724ceaee693f08a1684f2a6b46">&#9670;&#160;</a></span>wifi_manager_start_ap_and_server()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wifi_manager_start_ap_and_server </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a025b8f724ceaee693f08a1684f2a6b46_cgraph.png" border="0" usemap="#awifi__manager_8c_a025b8f724ceaee693f08a1684f2a6b46_cgraph" alt=""/></div>
+<map name="awifi__manager_8c_a025b8f724ceaee693f08a1684f2a6b46_cgraph" id="awifi__manager_8c_a025b8f724ceaee693f08a1684f2a6b46_cgraph">
+<area shape="rect" title=" " alt="" coords="5,148,136,188"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="396,147,500,173"/>
+<area shape="poly" title=" " alt="" coords="79,146,94,117,117,84,146,52,182,27,227,9,266,3,305,9,349,27,380,48,405,76,424,105,438,132,433,134,419,108,400,79,376,52,347,32,303,14,266,8,229,14,185,32,150,56,121,87,99,120,84,148"/>
+<area shape="rect" href="nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="203,41,329,82"/>
+<area shape="poly" title=" " alt="" coords="98,145,137,118,182,91,192,86,195,91,185,96,140,123,101,150"/>
+<area shape="rect" href="wifi__controller_8h.html#a9a31bfae33079bc395d64c40933a73c8" title="Change wifi operating mode." alt="" coords="195,106,337,132"/>
+<area shape="poly" title=" " alt="" coords="135,149,197,133,198,139,137,154"/>
+<area shape="rect" href="wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="205,155,327,181"/>
+<area shape="poly" title=" " alt="" coords="136,165,189,165,189,171,136,171"/>
+<area shape="rect" href="wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="214,205,318,230"/>
+<area shape="poly" title=" " alt="" coords="137,182,200,198,198,203,135,187"/>
+<area shape="rect" href="wifi__controller_8h.html#a30a6f81293cb4d466933926997d2d884" title="Starts WiFi in softAP mode." alt="" coords="212,254,320,280"/>
+<area shape="poly" title=" " alt="" coords="100,187,139,214,185,240,198,246,196,251,182,245,136,219,97,191"/>
+<area shape="rect" href="wifi__http__server_8c.html#a3aca862ceb12066cd03d353d5d1534e8" title="Start wifi manager HTTP server." alt="" coords="184,303,348,329"/>
+<area shape="poly" title=" " alt="" coords="87,187,127,239,154,266,185,290,193,294,190,299,182,294,151,270,123,242,83,190"/>
+<area shape="poly" title=" " alt="" coords="327,300,346,290,374,266,397,239,431,186,436,188,402,242,377,270,350,294,330,305"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -463,6 +739,63 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>wifi_manager_start_ap_
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a7bb30c48143ab3688c2a2573683eac62_cgraph.png" border="0" usemap="#awifi__manager_8c_a7bb30c48143ab3688c2a2573683eac62_cgraph" alt=""/></div>
+<map name="awifi__manager_8c_a7bb30c48143ab3688c2a2573683eac62_cgraph" id="awifi__manager_8c_a7bb30c48143ab3688c2a2573683eac62_cgraph">
+<area shape="rect" title="Store access point credentials in Wifi Manager NVS namespace." alt="" coords="5,80,160,106"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="221,5,325,31"/>
+<area shape="poly" title=" " alt="" coords="115,77,207,40,220,35,222,39,209,45,117,82"/>
+<area shape="rect" href="nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="226,55,320,80"/>
+<area shape="poly" title=" " alt="" coords="160,80,210,73,211,78,161,85"/>
+<area shape="rect" href="nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="227,104,319,130"/>
+<area shape="poly" title=" " alt="" coords="161,100,212,107,212,112,160,105"/>
+<area shape="rect" href="nvs__controller_8h.html#a26d3a2f94cdeb9d143dd8ee23ac8a939" title="Write key&#45;value pair string into nvs namespace." alt="" coords="208,153,338,179"/>
+<area shape="poly" title=" " alt="" coords="118,104,209,140,222,145,220,150,207,145,116,109"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__manager_8c_a7bb30c48143ab3688c2a2573683eac62_icgraph.png" border="0" usemap="#awifi__manager_8c_a7bb30c48143ab3688c2a2573683eac62_icgraph" alt=""/></div>
+<map name="awifi__manager_8c_a7bb30c48143ab3688c2a2573683eac62_icgraph" id="awifi__manager_8c_a7bb30c48143ab3688c2a2573683eac62_icgraph">
+<area shape="rect" title="Store access point credentials in Wifi Manager NVS namespace." alt="" coords="505,336,660,361"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ac7372248530e87eecab65fce9520cf80" title=" " alt="" coords="295,5,443,46"/>
+<area shape="poly" title=" " alt="" coords="574,321,562,266,540,196,505,123,482,90,456,60,441,49,444,44,459,56,487,86,510,121,545,194,567,265,579,320"/>
+<area shape="rect" href="test__wifi__manager_8c.html#af5571ea7379fa8afbaaf1b3879134e1b" title=" " alt="" coords="297,70,442,126"/>
+<area shape="poly" title=" " alt="" coords="569,322,552,282,528,234,495,184,456,140,440,128,444,124,459,136,499,181,532,231,557,280,574,320"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a3e029a64c8f932f884a3a152e78361c2" title=" " alt="" coords="286,150,452,206"/>
+<area shape="poly" title=" " alt="" coords="560,325,515,273,487,245,456,220,437,208,440,204,459,215,490,241,519,269,564,321"/>
+<area shape="rect" href="test__wifi__manager_8c.html#aa579ddb6d8f292349854ad131a3a2ca4" title=" " alt="" coords="281,229,457,270"/>
+<area shape="poly" title=" " alt="" coords="543,330,456,285,427,273,429,268,458,281,546,325"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a0911dec679035f09125e44535c4792ef" title=" " alt="" coords="293,295,445,335"/>
+<area shape="poly" title=" " alt="" coords="490,337,445,330,446,324,491,331"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a605360a36eab5304a4d1d62680df2173" title=" " alt="" coords="295,360,443,401"/>
+<area shape="poly" title=" " alt="" coords="490,365,444,372,444,367,490,360"/>
+<area shape="rect" href="test__wifi__manager_8c.html#abb649ab933f6b6f986af1f837ebb2062" title=" " alt="" coords="283,425,455,480"/>
+<area shape="poly" title=" " alt="" coords="544,371,459,415,434,426,432,422,456,410,542,366"/>
+<area shape="rect" href="test__wifi__manager_8c.html#add2c722ce7b22a80dbfa6ce4e57f1759" title=" " alt="" coords="296,505,443,560"/>
+<area shape="poly" title=" " alt="" coords="567,375,522,434,492,466,459,494,441,506,438,502,456,490,488,462,518,430,562,372"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a529a516738a6df35c0224ea1217fdce6" title=" " alt="" coords="296,585,443,640"/>
+<area shape="poly" title=" " alt="" coords="575,377,559,419,534,472,501,526,459,574,444,586,440,582,456,570,497,523,529,469,554,417,570,375"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a51dbf57d9584412e7409b07095731dd2" title=" " alt="" coords="291,664,447,705"/>
+<area shape="poly" title=" " alt="" coords="580,377,569,434,547,508,531,547,511,586,487,622,459,654,444,666,441,661,456,650,483,619,507,583,526,545,542,506,563,433,575,376"/>
+<area shape="rect" href="test__wifi__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,336,233,361"/>
+<area shape="poly" title=" " alt="" coords="285,58,283,59,256,93,235,131,218,171,206,211,191,285,186,336,181,335,186,284,201,210,213,169,230,128,252,90,279,56,281,54"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,336,83,361"/>
+<area shape="poly" title=" " alt="" coords="115,351,83,351,83,346,115,346"/>
+<area shape="poly" title=" " alt="" coords="286,137,283,140,262,163,245,190,217,246,198,298,189,336,183,334,193,297,212,244,240,187,258,160,279,136,282,133"/>
+<area shape="poly" title=" " alt="" coords="287,217,283,220,253,249,227,281,192,337,188,334,223,278,249,245,279,216,283,212"/>
+<area shape="poly" title=" " alt="" coords="296,279,282,285,238,312,202,337,199,333,235,307,280,281,293,274"/>
+<area shape="poly" title=" " alt="" coords="279,334,234,342,233,337,278,329"/>
+<area shape="poly" title=" " alt="" coords="279,368,233,360,234,354,280,362"/>
+<area shape="poly" title=" " alt="" coords="289,419,280,415,200,364,203,359,282,410,291,415"/>
+<area shape="poly" title=" " alt="" coords="283,497,279,494,247,461,221,424,187,363,191,360,225,422,251,458,283,490,286,493"/>
+<area shape="poly" title=" " alt="" coords="281,576,279,574,257,548,239,519,210,459,192,403,183,362,188,361,197,401,215,457,243,517,262,545,283,571,285,572"/>
+<area shape="poly" title=" " alt="" coords="281,656,279,654,251,618,228,578,212,535,199,492,185,414,181,362,186,361,190,414,204,491,217,533,233,576,255,615,283,651,285,652"/>
+</map>
+</div>
 
 </div>
 </div>

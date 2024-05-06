@@ -1,0 +1,7 @@
+<map id="test_if_helper_prepare_url_returns_err_on_null_ota_url" name="test_if_helper_prepare_url_returns_err_on_null_ota_url">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,20,165,75"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="224,5,329,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,33,209,26,209,31,166,38"/>
+<area shape="rect" id="Node000003" href="$esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a" title="Prepare URL for OTA with device ID as parameter." alt="" coords="213,55,340,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,57,198,61,197,67,165,62"/>
+</map>

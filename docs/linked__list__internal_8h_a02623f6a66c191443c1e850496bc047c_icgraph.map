@@ -1,0 +1,7 @@
+<map id="linkedl_create_node" name="linkedl_create_node">
+<area shape="rect" id="Node000001" title="Creates and initializes new node." alt="" coords="168,31,304,56"/>
+<area shape="rect" id="Node000002" href="$linked__list_8c.html#ae9d538ed09dba37b4bdddf398663838d" title="Insert new item at beginning of the list." alt="" coords="5,5,120,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,34,119,29,120,24,153,29"/>
+<area shape="rect" id="Node000003" href="$linked__list_8c.html#a01399973dfda03dc0992b73d7ca71035" title="Insert new item at end of the list." alt="" coords="5,55,120,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="153,58,120,62,119,57,152,52"/>
+</map>

@@ -1,7 +1,13 @@
 <map id="projects/lib_tests/lib/cli_manager/include/cli_manager_errors.h" name="projects/lib_tests/lib/cli_manager/include/cli_manager_errors.h">
-<area shape="rect" id="Node000001" title="CLI Manager library errors list." alt="" coords="5,5,163,61"/>
-<area shape="rect" id="Node000002" href="$cli__manager_8h.html" title="Cli Manager library header file." alt="" coords="5,109,163,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,77,87,108,81,108,81,77"/>
-<area shape="rect" id="Node000003" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="17,213,151,268"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,180,87,212,81,212,81,180"/>
+<area shape="rect" id="Node000001" title="CLI Manager library errors list." alt="" coords="245,5,402,61"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8h.html" title="Cli Manager library header file." alt="" coords="245,109,402,165"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="326,77,326,108,321,108,321,77"/>
+<area shape="rect" id="Node000003" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="5,220,140,276"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="248,174,136,222,134,217,246,169"/>
+<area shape="rect" id="Node000004" href="$test__cli__manager_8c.html" title=" " alt="" coords="164,213,309,283"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="295,178,266,214,262,211,290,175"/>
+<area shape="rect" id="Node000005" href="$test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="333,220,490,276"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="356,175,391,218,387,221,352,178"/>
+<area shape="rect" id="Node000006" href="$test__cli__manager_2main_2main_8c.html" title=" " alt="" coords="514,220,671,276"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="405,168,526,217,524,222,403,173"/>
 </map>

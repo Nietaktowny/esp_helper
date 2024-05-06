@@ -1,0 +1,22 @@
+<map id="bmp_i2c_get_ctrl_meas" name="bmp_i2c_get_ctrl_meas">
+<area shape="rect" id="Node000001" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="938,80,1097,106"/>
+<area shape="rect" id="Node000002" href="$bmp280_8c.html#a73b7bf20c2a74ff716d22181b36f753a" title="Change BMP device operating mode." alt="" coords="714,5,848,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="972,76,889,45,848,34,849,29,891,40,974,71"/>
+<area shape="rect" id="Node000007" href="$bmp280_8c.html#aaf822501cab64075a6964114a3432783" title="Set pressure oversampling." alt="" coords="672,55,890,80"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="922,85,890,82,891,77,923,80"/>
+<area shape="rect" id="Node000008" href="$bmp280_8c.html#a573d2f5665e8d34814a0da21248b7eab" title="Set temperature oversampling." alt="" coords="673,104,889,130"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="923,105,889,109,889,103,922,100"/>
+<area shape="rect" id="Node000009" href="$bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="536,129,606,155"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="978,115,936,132,891,145,811,154,732,156,606,149,607,144,732,151,811,149,889,140,935,127,976,110"/>
+<area shape="rect" id="Node000003" href="$bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="518,80,624,106"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="700,36,673,45,631,63,596,82,593,77,629,58,671,40,698,31"/>
+<area shape="rect" id="Node000004" href="$test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="316,105,470,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="503,105,471,110,470,105,503,100"/>
+<area shape="rect" id="Node000005" href="$test__bmp__project_2main_2main_8c.html#a9d566a3935adbcc220297a7f20f15134" title=" " alt="" coords="131,105,268,131"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="301,121,268,121,268,116,301,116"/>
+<area shape="rect" id="Node000006" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="5,105,83,131"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="115,121,83,121,83,116,115,116"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="656,85,624,89,624,84,656,80"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="657,105,624,101,624,96,658,100"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="520,138,470,131,471,126,521,133"/>
+</map>

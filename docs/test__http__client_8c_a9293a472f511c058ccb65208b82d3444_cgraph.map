@@ -1,0 +1,5 @@
+<map id="test_if_http_init_reuse_returns_err_on_null_handle" name="test_if_http_init_reuse_returns_err_on_null_handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,189,46"/>
+<area shape="rect" id="Node000002" href="$http__client_8c.html#ae0beeb232473e1e9bf8198957edd455b" title="Init http_client_t handle for reusing with multiple connections." alt="" coords="237,13,381,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,23,221,23,221,28,189,28"/>
+</map>

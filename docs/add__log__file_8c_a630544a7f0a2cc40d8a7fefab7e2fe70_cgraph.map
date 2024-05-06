@@ -1,0 +1,13 @@
+<map id="app_main" name="app_main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,83,106"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#ac318f2fb9f51699954c24804dd8b095d" title="Add new log file to be used as log output." alt="" coords="154,5,286,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,77,94,58,130,40,145,34,147,39,132,45,96,63,66,82"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#af2c98b7b8443107e7ff7948f630eff36" title="Enable silent mode &#45; don&#39;t log to stderr." alt="" coords="131,55,309,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,85,115,80,115,85,83,90"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="180,104,260,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="83,95,165,107,164,112,83,101"/>
+<area shape="rect" id="Node000006" href="$logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927" title="Set logger log level." alt="" coords="150,153,290,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="66,104,97,122,132,140,148,146,146,151,130,145,94,127,64,108"/>
+<area shape="rect" id="Node000005" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="357,104,506,130"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="261,114,341,114,341,120,261,120"/>
+</map>

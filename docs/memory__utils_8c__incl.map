@@ -1,0 +1,23 @@
+<map id="projects/lib_tests/lib/memory_utils/src/memory_utils.c" name="projects/lib_tests/lib/memory_utils/src/memory_utils.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="134,5,276,61"/>
+<area shape="rect" id="Node000002" href="$memory__utils_8h.html" title=" " alt="" coords="59,109,167,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,63,139,100,135,96,174,59"/>
+<area shape="rect" id="Node000005" href="$logger_8h.html" title="Logger library header file." alt="" coords="172,183,238,208"/>
+<area shape="poly" id="edge10_Node000001_Node000005" title=" " alt="" coords="208,62,208,167,202,167,202,62"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="243,109,324,135"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="231,59,264,96,260,99,227,63"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="14,183,76,208"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,137,69,173,65,170,100,133"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,256,82,282"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="113,136,105,170,90,210,66,246,62,243,85,207,100,168,108,135"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="130,133,179,171,176,175,127,137"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="179,211,86,252,84,247,176,206"/>
+<area shape="rect" id="Node000006" href="$ansi__colors_8h.html" title="ANSI color codes for logger library." alt="" coords="106,256,203,282"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="199,210,174,245,169,242,194,207"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="227,256,287,282"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="216,207,241,242,237,245,211,210"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="310,256,366,282"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="229,207,303,246,301,251,226,211"/>
+<area shape="rect" id="Node000009" href="$logger__errors_8h.html" title="Logger library errors list." alt="" coords="390,256,497,282"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="239,204,389,249,388,254,238,209"/>
+</map>

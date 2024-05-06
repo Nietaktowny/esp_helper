@@ -1,0 +1,7 @@
+<map id="test_if_logger_disable_silent_mode_returns_non_zero_if_mode_was_enabled" name="test_if_logger_disable_silent_mode_returns_non_zero_if_mode_was_enabled">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,194,71"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a3e7b3623430234c1a334f1a2e2434730" title="Disable silent mode &#45; log all logs to stderr." alt="" coords="242,5,423,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,31,226,27,226,32,194,36"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#af2c98b7b8443107e7ff7948f630eff36" title="Enable silent mode &#45; don&#39;t log to stderr." alt="" coords="243,55,422,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,51,228,54,227,59,194,56"/>
+</map>

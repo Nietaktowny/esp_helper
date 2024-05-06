@@ -1,0 +1,36 @@
+<map id="app_main" name="app_main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,83,106"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="160,5,241,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,77,129,40,144,33,147,38,132,45,67,82"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927" title="Set logger log level." alt="" coords="131,55,270,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="83,84,115,79,116,84,84,89"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="348,77,474,117"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="83,91,332,93,332,99,83,96"/>
+<area shape="rect" id="Node000006" href="$wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee" title="Initialize wifi manager library." alt="" coords="140,241,261,267"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="60,104,178,228,174,232,56,108"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="337,5,486,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="241,16,321,16,321,21,241,21"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="210,239,253,189,283,160,316,133,336,122,338,127,320,138,287,164,257,193,214,242"/>
+<area shape="rect" id="Node000007" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="564,364,668,390"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="214,239,258,206,287,189,317,177,370,161,414,152,457,156,506,177,528,194,548,214,578,260,599,308,611,348,606,350,594,310,573,263,544,217,525,198,503,182,456,161,414,158,371,166,319,182,289,194,261,210,218,243"/>
+<area shape="rect" id="Node000008" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="365,192,457,218"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="258,238,349,216,350,222,259,243"/>
+<area shape="rect" id="Node000009" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="359,241,463,267"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="261,252,344,252,344,257,261,257"/>
+<area shape="rect" id="Node000010" href="$wifi__controller_8h.html#a30a6f81293cb4d466933926997d2d884" title="Starts WiFi in softAP mode." alt="" coords="357,291,465,316"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="259,265,342,285,341,290,258,270"/>
+<area shape="rect" id="Node000011" href="$wifi__controller_8h.html#a222008978f46f659f29a0f44e4985780" title="Starts WiFi in STA mode." alt="" coords="355,340,467,366"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="220,265,264,296,319,326,341,335,339,340,317,331,261,301,217,270"/>
+<area shape="rect" id="Node000012" href="$wifi__manager_8c.html#a92b6a91a3d31bfa35ff0409d0e7befdc" title="Get stored credentials of Wifi manager last stored access point." alt="" coords="318,439,504,464"/>
+<area shape="poly" id="edge12_Node000006_Node000012" title=" " alt="" coords="209,266,223,299,247,342,279,387,320,425,325,429,322,433,316,430,275,391,242,345,219,301,204,268"/>
+<area shape="rect" id="Node000016" href="$wifi__http__server_8c.html#a3aca862ceb12066cd03d353d5d1534e8" title="Start wifi manager HTTP server." alt="" coords="329,389,493,415"/>
+<area shape="poly" id="edge17_Node000006_Node000016" title=" " alt="" coords="212,266,254,320,285,350,319,376,328,381,326,385,317,380,281,354,250,323,208,269"/>
+<area shape="poly" id="edge13_Node000012_Node000007" title=" " alt="" coords="472,435,503,425,527,412,551,398,562,393,565,398,554,403,530,417,505,430,474,441"/>
+<area shape="rect" id="Node000013" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="569,413,663,439"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="504,437,553,431,554,436,505,443"/>
+<area shape="rect" id="Node000014" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="570,463,662,488"/>
+<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="505,460,555,466,555,471,504,465"/>
+<area shape="rect" id="Node000015" href="$nvs__controller_8h.html#aa0f1fbc87b27b1ffaaeb56604c5e0584" title="Read string with passed key from NVS namespace." alt="" coords="552,512,680,538"/>
+<area shape="poly" id="edge16_Node000012_Node000015" title=" " alt="" coords="450,462,564,504,563,509,449,467"/>
+<area shape="poly" id="edge18_Node000016_Node000007" title=" " alt="" coords="493,389,548,383,549,388,494,395"/>
+</map>

@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -99,37 +99,52 @@ $(document).ready(function(){initNavTree('http__server_8h_source.html',''); init
   <div class="headertitle"><div class="title">http_server.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="http__server_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">struct </span><a class="code hl_struct" href="structhttp__s__handle__obj.html">http_s_handle_obj</a>;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structhttp__s__handle__obj.html">http_s_handle_obj</a>* <a class="code hl_struct" href="structhttp__s__handle__obj.html">http_s_handle_t</a>;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="http__server_8h.html#a467749a99923ea5a3c53ae30cd614a09">    4</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structhttp__s__handle__obj.html">http_s_handle_obj</a>* <a class="code hl_typedef" href="http__server_8h.html#a467749a99923ea5a3c53ae30cd614a09">http_s_handle_t</a>;</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    HTTP_S_GET,</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    HTTP_S_POST,</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    HTTP_S_HEAD,</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    HTTP_S_PUT,</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    HTTP_S_DELETE,</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    HTTP_S_CONNECT,</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    HTTP_S_OPTIONS,</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    HTTP_S_TRACE,</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    HTTP_S_PATCH,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>} http_server_method_t;</div>
+<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1">    6</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1aa9ba8b96ce9f0180da6c054938c10c31">    7</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1aa9ba8b96ce9f0180da6c054938c10c31">HTTP_S_GET</a>,</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1af91dd3119e3b5ae338225199d08e4f78">    8</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1af91dd3119e3b5ae338225199d08e4f78">HTTP_S_POST</a>,</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a27fed3180eabdeb842a9777175d9dfbf">    9</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a27fed3180eabdeb842a9777175d9dfbf">HTTP_S_HEAD</a>,</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a2ed105bd8411ab5a5b76606ae90e5b62">   10</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a2ed105bd8411ab5a5b76606ae90e5b62">HTTP_S_PUT</a>,</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1aa126ca6a07dea0ec3d08404710fb162b">   11</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1aa126ca6a07dea0ec3d08404710fb162b">HTTP_S_DELETE</a>,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a93ff14c45eed67c567d1f6e5fa4cb105">   12</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a93ff14c45eed67c567d1f6e5fa4cb105">HTTP_S_CONNECT</a>,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1ad0da051799b693a271fb40f1915f779c">   13</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1ad0da051799b693a271fb40f1915f779c">HTTP_S_OPTIONS</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1ae5b6bce6dc5e475d9fc3380ace6a433b">   14</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1ae5b6bce6dc5e475d9fc3380ace6a433b">HTTP_S_TRACE</a>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a3fe4916b2a6583a3096e03cc857f8cd9">   15</a></span>    <a class="code hl_enumvalue" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a3fe4916b2a6583a3096e03cc857f8cd9">HTTP_S_PATCH</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>} <a class="code hl_enumeration" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1">http_server_method_t</a>;</div>
+</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structhttp__s__uri__t.html">   18</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structhttp__s__uri__t.html">http_s_uri_t</a> {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">char</span> uri[64];</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    http_server_method_t method;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structhttp__s__uri__t.html#afdd0714d4d7961f99d4b23134f77cd1b">   19</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structhttp__s__uri__t.html#afdd0714d4d7961f99d4b23134f77cd1b">uri</a>[64];</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structhttp__s__uri__t.html#a57ab2650b4594a28f508a62afa1da880">   20</a></span>    <a class="code hl_enumeration" href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1">http_server_method_t</a> <a class="code hl_variable" href="structhttp__s__uri__t.html#a57ab2650b4594a28f508a62afa1da880">method</a>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
 </div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1">http_server_method_t</a></div><div class="ttdeci">http_server_method_t</div><div class="ttdef"><b>Definition</b> http_server.h:6</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1a27fed3180eabdeb842a9777175d9dfbf"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a27fed3180eabdeb842a9777175d9dfbf">HTTP_S_HEAD</a></div><div class="ttdeci">@ HTTP_S_HEAD</div><div class="ttdef"><b>Definition</b> http_server.h:9</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1a2ed105bd8411ab5a5b76606ae90e5b62"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a2ed105bd8411ab5a5b76606ae90e5b62">HTTP_S_PUT</a></div><div class="ttdeci">@ HTTP_S_PUT</div><div class="ttdef"><b>Definition</b> http_server.h:10</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1a3fe4916b2a6583a3096e03cc857f8cd9"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a3fe4916b2a6583a3096e03cc857f8cd9">HTTP_S_PATCH</a></div><div class="ttdeci">@ HTTP_S_PATCH</div><div class="ttdef"><b>Definition</b> http_server.h:15</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1a93ff14c45eed67c567d1f6e5fa4cb105"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1a93ff14c45eed67c567d1f6e5fa4cb105">HTTP_S_CONNECT</a></div><div class="ttdeci">@ HTTP_S_CONNECT</div><div class="ttdef"><b>Definition</b> http_server.h:12</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1aa126ca6a07dea0ec3d08404710fb162b"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1aa126ca6a07dea0ec3d08404710fb162b">HTTP_S_DELETE</a></div><div class="ttdeci">@ HTTP_S_DELETE</div><div class="ttdef"><b>Definition</b> http_server.h:11</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1aa9ba8b96ce9f0180da6c054938c10c31"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1aa9ba8b96ce9f0180da6c054938c10c31">HTTP_S_GET</a></div><div class="ttdeci">@ HTTP_S_GET</div><div class="ttdef"><b>Definition</b> http_server.h:7</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1ad0da051799b693a271fb40f1915f779c"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1ad0da051799b693a271fb40f1915f779c">HTTP_S_OPTIONS</a></div><div class="ttdeci">@ HTTP_S_OPTIONS</div><div class="ttdef"><b>Definition</b> http_server.h:13</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1ae5b6bce6dc5e475d9fc3380ace6a433b"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1ae5b6bce6dc5e475d9fc3380ace6a433b">HTTP_S_TRACE</a></div><div class="ttdeci">@ HTTP_S_TRACE</div><div class="ttdef"><b>Definition</b> http_server.h:14</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a32a51cec357178d9fe50d61d8f530fc1af91dd3119e3b5ae338225199d08e4f78"><div class="ttname"><a href="http__server_8h.html#a32a51cec357178d9fe50d61d8f530fc1af91dd3119e3b5ae338225199d08e4f78">HTTP_S_POST</a></div><div class="ttdeci">@ HTTP_S_POST</div><div class="ttdef"><b>Definition</b> http_server.h:8</div></div>
+<div class="ttc" id="ahttp__server_8h_html_a467749a99923ea5a3c53ae30cd614a09"><div class="ttname"><a href="http__server_8h.html#a467749a99923ea5a3c53ae30cd614a09">http_s_handle_t</a></div><div class="ttdeci">struct http_s_handle_obj * http_s_handle_t</div><div class="ttdef"><b>Definition</b> http_server.h:4</div></div>
 <div class="ttc" id="astructhttp__s__handle__obj_html"><div class="ttname"><a href="structhttp__s__handle__obj.html">http_s_handle_obj</a></div><div class="ttdef"><b>Definition</b> http_server.c:23</div></div>
 <div class="ttc" id="astructhttp__s__uri__t_html"><div class="ttname"><a href="structhttp__s__uri__t.html">http_s_uri_t</a></div><div class="ttdef"><b>Definition</b> http_server.h:18</div></div>
+<div class="ttc" id="astructhttp__s__uri__t_html_a57ab2650b4594a28f508a62afa1da880"><div class="ttname"><a href="structhttp__s__uri__t.html#a57ab2650b4594a28f508a62afa1da880">http_s_uri_t::method</a></div><div class="ttdeci">http_server_method_t method</div><div class="ttdef"><b>Definition</b> http_server.h:20</div></div>
+<div class="ttc" id="astructhttp__s__uri__t_html_afdd0714d4d7961f99d4b23134f77cd1b"><div class="ttname"><a href="structhttp__s__uri__t.html#afdd0714d4d7961f99d4b23134f77cd1b">http_s_uri_t::uri</a></div><div class="ttdeci">char uri[64]</div><div class="ttdef"><b>Definition</b> http_server.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_29acd90ebddc7397a51aae186bd6cfa3.html">http_server</a></li><li class="navelem"><a class="el" href="dir_1574b3c545dbcc13c6caa5459ff9df20.html">include</a></li><li class="navelem"><b>http_server.h</b></li>
+    <li class="navelem"><a class="el" href="dir_a9ec1ef424966475f993eb98877e3088.html">projects</a></li><li class="navelem"><a class="el" href="dir_b89048b57bfd67615bf500fdda124d93.html">lib_tests</a></li><li class="navelem"><a class="el" href="dir_855d5b67a0b6a1e95f97d8678c396cca.html">lib</a></li><li class="navelem"><a class="el" href="dir_29acd90ebddc7397a51aae186bd6cfa3.html">http_server</a></li><li class="navelem"><a class="el" href="dir_1574b3c545dbcc13c6caa5459ff9df20.html">include</a></li><li class="navelem"><a class="el" href="http__server_8h.html">http_server.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>

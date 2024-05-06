@@ -1,0 +1,11 @@
+<map id="test_if_nvs_c_write_blob_should_return_zero" name="test_if_nvs_c_write_blob_should_return_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,100,174,141"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a92ba0066a43bc3f296e16c4976b17fcc" title="Deinit default NVS partition." alt="" coords="222,5,362,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,97,231,51,234,56,136,102"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="229,71,355,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="173,106,213,100,214,105,174,111"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="246,136,338,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,129,231,137,230,143,173,135"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#a28af7eebe042a8beac9bbf003560e38d" title="Write blob data to NVS namespace." alt="" coords="231,185,353,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="141,139,223,171,237,177,236,182,221,176,139,144"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="helper_perform_ota_with_id" name="helper_perform_ota_with_id">
+<area shape="rect" id="Node000001" title="Perform simple OTA firmware update with standard ESP Helper server and provided device ID." alt="" coords="315,5,447,46"/>
+<area shape="rect" id="Node000002" href="$test__esp__helper__utils_2main_2main_8c.html#aee86106cd4b46eeccb08bc2e17942225" title=" " alt="" coords="131,5,267,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="299,28,268,28,268,23,299,23"/>
+<area shape="rect" id="Node000003" href="$test__esp__helper__utils_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,13,83,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,28,83,28,83,23,115,23"/>
+</map>

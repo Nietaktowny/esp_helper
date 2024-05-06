@@ -3,6 +3,7 @@ var nvs__controller_8h =
     [ "nvs_c_handle_obj", "structnvs__c__handle__obj.html", "structnvs__c__handle__obj" ],
     [ "NVS_C_DEFAULT_NVS_PART_NAME", "nvs__controller_8h.html#abc3e2cdd3d64c162526e75a7517f0d78", null ],
     [ "NVS_C_DEFAULT_NVS_PART_NAME_LEN", "nvs__controller_8h.html#a90d337d356daf2b8a8f039e476fa9032", null ],
+    [ "NVS_C_ERR_KEY_NOT_FOUND", "nvs__controller_8h.html#a1198bc320cb3cd8e397e6276c2d1a2cc", null ],
     [ "nvs_c_handle_t", "nvs__controller_8h.html#a1348556dca9de34e626773cb78531aa8", null ],
     [ "nvs_c_open_mode_t", "nvs__controller_8h.html#a6689ef55a745136011533e08b2b357e6", [
       [ "NVS_C_READONLY", "nvs__controller_8h.html#a6689ef55a745136011533e08b2b357e6a69e989fb45bdaa1274cab8269857bc50", null ],

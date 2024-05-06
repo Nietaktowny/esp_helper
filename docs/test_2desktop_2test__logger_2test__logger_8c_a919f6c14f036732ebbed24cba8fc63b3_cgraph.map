@@ -1,0 +1,7 @@
+<map id="test_if_logger_set_log_level_changes_log_level_to_fatal" name="test_if_logger_set_log_level_changes_log_level_to_fatal">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,165,71"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a5a7a1f5d6d0ee21e13fa10283d2d6a07" title="Get pointer to logger context." alt="" coords="213,5,381,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,31,197,27,197,33,165,37"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#aff0c2c2b1273462278d67b61ffe2a927" title="Set logger log level." alt="" coords="227,55,367,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="165,50,212,55,211,61,165,55"/>
+</map>

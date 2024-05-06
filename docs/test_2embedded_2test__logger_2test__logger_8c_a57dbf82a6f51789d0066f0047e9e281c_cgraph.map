@@ -1,0 +1,9 @@
+<map id="test_if_after_logger_add_file_return_err_on_null_file" name="test_if_after_logger_add_file_return_err_on_null_file">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,140,71"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#ac318f2fb9f51699954c24804dd8b095d" title="Add new log file to be used as log output." alt="" coords="188,5,319,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,31,172,27,173,32,141,37"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="213,55,294,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,50,198,57,197,63,140,55"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="367,55,516,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="294,65,351,65,351,70,294,70"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="app_main" name="app_main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,211,83,236"/>
+<area shape="rect" id="Node000002" href="$start__apsta__example_8c.html#aa3cb44e8af5c48769202fa3161a0ad6a" title=" " alt="" coords="141,5,279,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,210,53,176,69,130,94,82,110,60,129,40,133,37,136,41,132,44,114,63,98,85,74,132,59,177,50,211"/>
+<area shape="rect" id="Node000003" href="$start__apsta__example_8c.html#ad5424540167e601df575f587417c5018" title=" " alt="" coords="133,55,287,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="48,209,76,151,100,118,129,89,134,86,137,90,132,94,104,122,81,154,53,211"/>
+<area shape="rect" id="Node000004" href="$start__apsta__example_8c.html#aff2117131250aa3af2e714dcb6e645c5" title=" " alt="" coords="139,104,281,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="53,209,85,174,129,139,138,134,141,138,132,143,89,178,57,212"/>
+<area shape="rect" id="Node000005" href="$start__apsta__example_8c.html#a7c20aff5aa7e978d0cf8f0b8ac1fca67" title=" " alt="" coords="131,153,289,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="79,208,130,189,151,182,152,187,132,194,81,213"/>
+<area shape="rect" id="Node000006" href="$wifi__controller_8h.html#a5ab89410d5bf8d703907b59935825401" title="Register function to be called each time new STA connects to AP." alt="" coords="147,203,273,244"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="83,221,131,221,131,226,83,226"/>
+<area shape="rect" id="Node000007" href="$wifi__controller_8h.html#a9897aff5eb6a80a264379be4c29e4101" title="Register function to be called each time STA disconnects from our AP." alt="" coords="140,269,280,309"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="80,234,143,260,141,265,78,239"/>
+<area shape="rect" id="Node000008" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="158,333,262,359"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="56,235,86,276,108,299,132,319,145,326,142,330,129,323,104,303,82,280,51,238"/>
+<area shape="rect" id="Node000009" href="$wifi__controller_8h.html#a30a6f81293cb4d466933926997d2d884" title="Starts WiFi in softAP mode." alt="" coords="156,383,264,408"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="52,236,79,300,102,337,132,369,143,376,140,381,129,374,98,341,74,302,47,238"/>
+<area shape="rect" id="Node000010" href="$wifi__controller_8h.html#a222008978f46f659f29a0f44e4985780" title="Starts WiFi in STA mode." alt="" coords="154,432,266,458"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="50,236,57,273,72,322,96,374,113,398,132,419,142,426,138,430,129,423,109,401,92,377,67,324,52,274,45,237"/>
+</map>

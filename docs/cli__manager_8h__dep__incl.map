@@ -1,5 +1,11 @@
 <map id="projects/lib_tests/lib/cli_manager/include/cli_manager.h" name="projects/lib_tests/lib/cli_manager/include/cli_manager.h">
-<area shape="rect" id="Node000001" title="Cli Manager library header file." alt="" coords="5,5,163,61"/>
-<area shape="rect" id="Node000002" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="17,109,151,165"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,77,87,108,81,108,81,77"/>
+<area shape="rect" id="Node000001" title="Cli Manager library header file." alt="" coords="245,5,402,61"/>
+<area shape="rect" id="Node000002" href="$cli__manager_8c.html" title="Cli Manager library source file." alt="" coords="5,117,140,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,70,136,118,134,113,246,65"/>
+<area shape="rect" id="Node000003" href="$test__cli__manager_8c.html" title=" " alt="" coords="164,109,309,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="295,75,266,110,262,107,290,71"/>
+<area shape="rect" id="Node000004" href="$test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="333,117,490,172"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="356,71,391,114,387,118,352,75"/>
+<area shape="rect" id="Node000005" href="$test__cli__manager_2main_2main_8c.html" title=" " alt="" coords="514,117,671,172"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="405,65,526,113,524,118,403,70"/>
 </map>

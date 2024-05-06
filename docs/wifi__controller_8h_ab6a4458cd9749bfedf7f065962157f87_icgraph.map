@@ -1,0 +1,17 @@
+<map id="wifi_c_sta_register_disconnect_handler" name="wifi_c_sta_register_disconnect_handler">
+<area shape="rect" id="Node000001" title="Register function to be called when STA loses connection with AP and all attempts to connect again fa..." alt="" coords="519,99,660,140"/>
+<area shape="rect" id="Node000002" href="$test__wifi__controller_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="349,5,426,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="548,92,511,68,470,46,426,30,428,25,472,41,514,63,550,88"/>
+<area shape="rect" id="Node000003" href="$test__wifi__controller_8c.html#abb3fb0f4cf282c52ea22d7f81b1090f8" title=" " alt="" coords="312,56,464,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="504,107,464,100,465,95,505,102"/>
+<area shape="rect" id="Node000006" href="$test__wifi__controller_8c.html#a60c6be2720398c655e69b5173cf66cf5" title=" " alt="" coords="312,135,464,176"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="505,137,465,144,464,139,504,132"/>
+<area shape="rect" id="Node000007" href="$test__wifi__controller_8c.html#a7e54b42e46482b646c435b9b18e60271" title=" " alt="" coords="304,200,471,255"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="542,151,473,190,450,202,447,197,470,185,539,146"/>
+<area shape="rect" id="Node000004" href="$test__wifi__controller_8c.html#a25fd59993328610671b8a6fcac37a5e1" title=" " alt="" coords="131,135,256,176"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="298,119,251,137,249,132,296,115"/>
+<area shape="rect" id="Node000005" href="$test__wifi__controller_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,143,83,168"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="115,158,83,158,83,153,115,153"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="296,158,256,158,256,153,296,153"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="295,196,249,179,251,174,297,191"/>
+</map>

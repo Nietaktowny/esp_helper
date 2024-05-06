@@ -1,0 +1,9 @@
+<map id="test_if_after_logger_init_silent_mode_is_disabled" name="test_if_after_logger_init_silent_mode_is_disabled">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,16,145,71"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a5a7a1f5d6d0ee21e13fa10283d2d6a07" title="Get pointer to logger context." alt="" coords="193,5,361,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,32,176,28,177,33,145,37"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="237,55,317,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,49,222,58,221,64,145,54"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="409,55,558,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="318,65,393,65,393,70,318,70"/>
+</map>

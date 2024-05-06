@@ -1,0 +1,15 @@
+<map id="test_if_nvs_c_read_int8_returns_zero" name="test_if_nvs_c_read_int8_returns_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,150,137,191"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="208,5,303,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,148,124,95,152,66,183,41,193,36,195,40,186,46,156,70,128,99,88,151"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a9eeeb82f5b26f763b25ea820b1b9f332" title="Erse all data in default NVS partition." alt="" coords="185,55,326,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,147,183,106,195,101,198,105,186,111,111,152"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="192,121,319,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="136,157,177,151,178,156,137,162"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="210,185,301,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="137,177,195,186,194,192,136,183"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#a51b0520cbcfab1bc37a6e4e1e474b2e5" title="Read int8_t value from NVS namespace." alt="" coords="197,235,314,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="115,189,186,221,200,226,198,231,184,226,112,193"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#a7941e1b5e4d28abc11942037ca5a1f8e" title="Write int8_t value to NVS namespace." alt="" coords="196,284,315,310"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="92,189,133,230,186,271,194,275,192,280,183,275,129,234,88,193"/>
+</map>

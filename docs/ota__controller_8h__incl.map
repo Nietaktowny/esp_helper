@@ -1,0 +1,9 @@
+<map id="projects/lib_tests/lib/ota_controller/include/ota_controller.h" name="projects/lib_tests/lib/ota_controller/include/ota_controller.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="56,5,214,61"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,109,73,135"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,63,65,100,62,96,103,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,109,173,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,61,138,93,132,93,132,61"/>
+<area shape="rect" id="Node000004" href="$ota__c__errors_8h.html" title="OTA Controller errors list." alt="" coords="197,109,300,135"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="172,59,222,97,219,101,169,63"/>
+</map>

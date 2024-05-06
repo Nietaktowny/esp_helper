@@ -1,0 +1,14 @@
+<map id="test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode" name="test_if_wifi_c_scan_all_ap_returns_err_on_wrong_wifi_mode">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,92,155,147"/>
+<area shape="rect" id="Node000002" href="$test__wifi__controller_8c.html#a6836f1a8df8a60455b709f8e24aeea20" title=" " alt="" coords="230,5,306,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,89,201,48,224,36,227,41,204,53,131,94"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="381,31,473,56"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="155,101,365,54,366,59,156,106"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="216,107,320,132"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="155,117,200,117,200,122,155,122"/>
+<area shape="rect" id="Node000005" href="$wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels." alt="" coords="203,156,333,182"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="156,137,202,149,201,154,154,142"/>
+<area shape="rect" id="Node000006" href="$wifi__controller_8h.html#a30a6f81293cb4d466933926997d2d884" title="Starts WiFi in softAP mode." alt="" coords="214,205,322,231"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="124,146,204,192,214,197,212,201,201,197,122,150"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="307,22,366,31,365,36,306,27"/>
+</map>

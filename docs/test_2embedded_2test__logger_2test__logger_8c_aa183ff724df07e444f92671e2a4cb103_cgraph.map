@@ -1,0 +1,11 @@
+<map id="test_if_clear_all_files_sets_filesnum_to_zero" name="test_if_clear_all_files_sets_filesnum_to_zero">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,63,163,103"/>
+<area shape="rect" id="Node000002" href="$logger_8c.html#a4cae04593f6a3be65ac345115c8a959d" title="Clear all files used as log output." alt="" coords="227,5,363,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,60,212,45,213,51,162,65"/>
+<area shape="rect" id="Node000003" href="$logger_8c.html#a5a7a1f5d6d0ee21e13fa10283d2d6a07" title="Get pointer to logger context." alt="" coords="211,70,379,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,80,195,80,195,86,163,86"/>
+<area shape="rect" id="Node000004" href="$logger_8c.html#a5c9881b498d2fe84d5ef9c89cb81d93d" title="Init logger library." alt="" coords="255,120,335,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="163,99,240,117,239,122,162,104"/>
+<area shape="rect" id="Node000005" href="$logger_8c.html#abab9441a735dc4904805af1a4d3b69d6" title="Create logger mutex used for synchronization." alt="" coords="427,120,576,145"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="336,130,411,130,411,135,336,135"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="test_if_nvs_init_partition_returns_err_on_null_label" name="test_if_nvs_init_partition_returns_err_on_null_label">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,178,46"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#ae1a4d1487545e1a6c7776a950ce744cf" title="Init NVS partition with specified label." alt="" coords="226,13,359,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,23,210,23,210,28,178,28"/>
+</map>

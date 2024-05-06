@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -127,8 +127,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a926fd921b86ef0a89fc70542152a95cb" id="r_a926fd921b86ef0a89fc70542152a95cb"><td class="memItemLeft" align="right" valign="top"><a id="a926fd921b86ef0a89fc70542152a95cb" name="a926fd921b86ef0a89fc70542152a95cb"></a>
-typedef struct adc_c_oneshot_handle_obj *&#160;</td><td class="memItemRight" valign="bottom"><b>adc_c_oneshot_handle_t</b></td></tr>
+<tr class="memitem:a926fd921b86ef0a89fc70542152a95cb" id="r_a926fd921b86ef0a89fc70542152a95cb"><td class="memItemLeft" align="right" valign="top">typedef struct adc_c_oneshot_handle_obj *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a></td></tr>
 <tr class="separator:a926fd921b86ef0a89fc70542152a95cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -175,19 +174,19 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aced5a4213f4fe3ae97ca53d66c509bba" id="r_aced5a4213f4fe3ae97ca53d66c509bba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#aced5a4213f4fe3ae97ca53d66c509bba">adc_c_init_oneshot</a> (adc_c_oneshot_handle_t *handle, <a class="el" href="adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327">adc_c_gpio_t</a> gpio)</td></tr>
+<tr class="memitem:aced5a4213f4fe3ae97ca53d66c509bba" id="r_aced5a4213f4fe3ae97ca53d66c509bba"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#aced5a4213f4fe3ae97ca53d66c509bba">adc_c_init_oneshot</a> (<a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a> *handle, <a class="el" href="adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327">adc_c_gpio_t</a> gpio)</td></tr>
 <tr class="memdesc:aced5a4213f4fe3ae97ca53d66c509bba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize ADC UNIT and specified GPIO.  <br /></td></tr>
 <tr class="separator:aced5a4213f4fe3ae97ca53d66c509bba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62bfc3ad466ed5c4951f5caeba13b248" id="r_a62bfc3ad466ed5c4951f5caeba13b248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#a62bfc3ad466ed5c4951f5caeba13b248">adc_c_deinit_oneshot</a> (adc_c_oneshot_handle_t *handle)</td></tr>
+<tr class="memitem:a62bfc3ad466ed5c4951f5caeba13b248" id="r_a62bfc3ad466ed5c4951f5caeba13b248"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#a62bfc3ad466ed5c4951f5caeba13b248">adc_c_deinit_oneshot</a> (<a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a> *handle)</td></tr>
 <tr class="memdesc:a62bfc3ad466ed5c4951f5caeba13b248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinit ADC Controller instance.  <br /></td></tr>
 <tr class="separator:a62bfc3ad466ed5c4951f5caeba13b248"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5c9effbe4d77683d78dd183d97780f8" id="r_ab5c9effbe4d77683d78dd183d97780f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#ab5c9effbe4d77683d78dd183d97780f8">adc_c_oneshot_read_channel</a> (adc_c_oneshot_handle_t handle, <a class="el" href="adc__controller_8h.html#a01506b4a486e08265871579367260019">adc_c_channel_t</a> channel, int *out_raw)</td></tr>
+<tr class="memitem:ab5c9effbe4d77683d78dd183d97780f8" id="r_ab5c9effbe4d77683d78dd183d97780f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#ab5c9effbe4d77683d78dd183d97780f8">adc_c_oneshot_read_channel</a> (<a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a> handle, <a class="el" href="adc__controller_8h.html#a01506b4a486e08265871579367260019">adc_c_channel_t</a> channel, int *out_raw)</td></tr>
 <tr class="memdesc:ab5c9effbe4d77683d78dd183d97780f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read ADC value from specified channel.  <br /></td></tr>
 <tr class="separator:ab5c9effbe4d77683d78dd183d97780f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26237e3ef598ce67c6f6fda02cc710f1" id="r_a26237e3ef598ce67c6f6fda02cc710f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#a26237e3ef598ce67c6f6fda02cc710f1">adc_c_oneshot_calibrate</a> (adc_c_oneshot_handle_t handle)</td></tr>
+<tr class="memitem:a26237e3ef598ce67c6f6fda02cc710f1" id="r_a26237e3ef598ce67c6f6fda02cc710f1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#a26237e3ef598ce67c6f6fda02cc710f1">adc_c_oneshot_calibrate</a> (<a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a> handle)</td></tr>
 <tr class="memdesc:a26237e3ef598ce67c6f6fda02cc710f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calibrate ADC Unit.  <br /></td></tr>
 <tr class="separator:a26237e3ef598ce67c6f6fda02cc710f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed0eab0f1028f6f0ba245087bfa53374" id="r_aed0eab0f1028f6f0ba245087bfa53374"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#aed0eab0f1028f6f0ba245087bfa53374">adc_c_oneshot_read_gpio</a> (adc_c_oneshot_handle_t handle, <a class="el" href="adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327">adc_c_gpio_t</a> gpio, int *out)</td></tr>
+<tr class="memitem:aed0eab0f1028f6f0ba245087bfa53374" id="r_aed0eab0f1028f6f0ba245087bfa53374"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc__controller_8h.html#aed0eab0f1028f6f0ba245087bfa53374">adc_c_oneshot_read_gpio</a> (<a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a> handle, <a class="el" href="adc__controller_8h.html#ab11ccc8a588e07241dc26708d30d4327">adc_c_gpio_t</a> gpio, int *out)</td></tr>
 <tr class="memdesc:aed0eab0f1028f6f0ba245087bfa53374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read ADC calibrated result from specified GPIO.  <br /></td></tr>
 <tr class="separator:aed0eab0f1028f6f0ba245087bfa53374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -197,7 +196,22 @@ Functions</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-04-06</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Typedef Documentation</h2>
+<a id="a926fd921b86ef0a89fc70542152a95cb" name="a926fd921b86ef0a89fc70542152a95cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a926fd921b86ef0a89fc70542152a95cb">&#9670;&#160;</a></span>adc_c_oneshot_handle_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct adc_c_oneshot_handle_obj* <a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a01506b4a486e08265871579367260019" name="a01506b4a486e08265871579367260019"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01506b4a486e08265871579367260019">&#9670;&#160;</a></span>adc_c_channel_t</h2>
 
@@ -293,7 +307,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int adc_c_deinit_oneshot </td>
           <td>(</td>
-          <td class="paramtype">adc_c_oneshot_handle_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a> *&#160;</td>
           <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
         </tr>
@@ -328,7 +342,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int adc_c_init_oneshot </td>
           <td>(</td>
-          <td class="paramtype">adc_c_oneshot_handle_t *&#160;</td>
+          <td class="paramtype"><a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a> *&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
         </tr>
         <tr>
@@ -376,7 +390,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int adc_c_oneshot_calibrate </td>
           <td>(</td>
-          <td class="paramtype">adc_c_oneshot_handle_t&#160;</td>
+          <td class="paramtype"><a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em></td><td>)</td>
           <td></td>
         </tr>
@@ -410,7 +424,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int adc_c_oneshot_read_channel </td>
           <td>(</td>
-          <td class="paramtype">adc_c_oneshot_handle_t&#160;</td>
+          <td class="paramtype"><a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
         </tr>
         <tr>
@@ -463,7 +477,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int adc_c_oneshot_read_gpio </td>
           <td>(</td>
-          <td class="paramtype">adc_c_oneshot_handle_t&#160;</td>
+          <td class="paramtype"><a class="el" href="adc__controller_8h.html#a926fd921b86ef0a89fc70542152a95cb">adc_c_oneshot_handle_t</a>&#160;</td>
           <td class="paramname"><em>handle</em>, </td>
         </tr>
         <tr>

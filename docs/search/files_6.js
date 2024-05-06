@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['linked_5flist_2ec_0',['linked_list.c',['../linked__list_8c.html',1,'']]],
-  ['linked_5flist_2eh_1',['linked_list.h',['../linked__list_8h.html',1,'']]],
-  ['linked_5flist_5ferrors_2eh_2',['linked_list_errors.h',['../linked__list__errors_8h.html',1,'']]],
-  ['linked_5flist_5finternal_2eh_3',['linked_list_internal.h',['../linked__list__internal_8h.html',1,'']]],
-  ['logger_2ec_4',['logger.c',['../logger_8c.html',1,'']]],
-  ['logger_2eh_5',['logger.h',['../logger_8h.html',1,'']]],
-  ['logger_5ferrors_2eh_6',['logger_errors.h',['../logger__errors_8h.html',1,'']]]
+  ['i2c_5fc_5ferrors_2eh_0',['i2c_c_errors.h',['../i2c__c__errors_8h.html',1,'']]],
+  ['i2c_5fcontroller_2ec_1',['i2c_controller.c',['../i2c__controller_8c.html',1,'']]],
+  ['i2c_5fcontroller_2eh_2',['i2c_controller.h',['../i2c__controller_8h.html',1,'']]],
+  ['i2c_5fcontroller_5finternal_2eh_3',['i2c_controller_internal.h',['../i2c__controller__internal_8h.html',1,'']]]
 ];

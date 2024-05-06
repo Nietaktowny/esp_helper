@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('wifi__http__server_8c.html',''); initR
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">wifi_http_server.c File Reference</div></div>
@@ -115,8 +115,8 @@ $(document).ready(function(){initNavTree('wifi__http__server_8c.html',''); initR
 <code>#include &quot;esp_tls.h&quot;</code><br />
 <code>#include &quot;esp_tls_crypto.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="logger_8h_source.html">logger.h</a>&quot;</code><br />
-<code>#include &quot;memory_utils.h&quot;</code><br />
-<code>#include &quot;spiffs_controller.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="memory__utils_8h_source.html">memory_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="spiffs__controller_8h_source.html">spiffs_controller.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wifi__controller_8h_source.html">wifi_controller.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wifi__manager_8h_source.html">wifi_manager.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wifi__manager__internal_8h_source.html">wifi_manager_internal.h</a>&quot;</code><br />
@@ -154,9 +154,9 @@ Include dependency graph for wifi_http_server.c:</div>
 <area shape="poly" title=" " alt="" coords="1158,35,1530,58,1781,79,2039,106,2038,111,1780,84,1530,64,1158,41"/>
 <area shape="rect" href="logger_8h.html" title="Logger library header file." alt="" coords="377,183,443,208"/>
 <area shape="poly" title=" " alt="" coords="1017,36,919,39,797,50,664,73,597,90,534,111,479,141,436,175,432,170,477,136,532,107,596,85,662,68,796,45,919,34,1017,31"/>
-<area shape="rect" href="memory__utils_8h_source.html" title=" " alt="" coords="545,109,654,135"/>
+<area shape="rect" href="memory__utils_8h.html" title=" " alt="" coords="545,109,654,135"/>
 <area shape="poly" title=" " alt="" coords="1018,50,669,111,668,106,1017,44"/>
-<area shape="rect" href="spiffs__controller_8h_source.html" title=" " alt="" coords="729,109,851,135"/>
+<area shape="rect" href="spiffs__controller_8h.html" title=" " alt="" coords="729,109,851,135"/>
 <area shape="poly" title=" " alt="" coords="1018,57,847,107,846,102,1016,52"/>
 <area shape="rect" href="wifi__controller_8h.html" title="Wifi controller header file." alt="" coords="875,109,985,135"/>
 <area shape="poly" title=" " alt="" coords="1039,64,967,104,964,99,1037,59"/>
@@ -166,7 +166,7 @@ Include dependency graph for wifi_http_server.c:</div>
 <area shape="poly" title=" " alt="" coords="1090,61,1090,93,1085,93,1085,61"/>
 <area shape="rect" title=" " alt="" coords="673,256,750,282"/>
 <area shape="poly" title=" " alt="" coords="434,133,484,168,549,206,605,230,659,249,657,255,603,235,546,211,481,172,431,137"/>
-<area shape="rect" href="CException_8h_source.html" title=" " alt="" coords="131,183,228,208"/>
+<area shape="rect" href="CException_8h.html" title=" " alt="" coords="131,183,228,208"/>
 <area shape="poly" title=" " alt="" coords="377,138,235,180,234,175,376,133"/>
 <area shape="rect" href="err__c__errors_8h.html" title="Error helper library errors list." alt="" coords="252,183,352,208"/>
 <area shape="poly" title=" " alt="" coords="399,137,336,176,333,172,396,133"/>
@@ -188,7 +188,7 @@ Include dependency graph for wifi_http_server.c:</div>
 <area shape="poly" title=" " alt="" coords="767,138,732,158,695,185,664,215,639,246,635,242,660,212,691,181,729,154,765,133"/>
 <area shape="rect" title=" " alt="" coords="898,183,971,208"/>
 <area shape="poly" title=" " alt="" coords="816,133,897,173,895,178,813,138"/>
-<area shape="rect" href="spiffs__c__errors_8h_source.html" title=" " alt="" coords="705,183,822,208"/>
+<area shape="rect" href="spiffs__c__errors_8h.html" title=" " alt="" coords="705,183,822,208"/>
 <area shape="poly" title=" " alt="" coords="788,136,776,169,771,167,783,134"/>
 <area shape="poly" title=" " alt="" coords="948,133,966,148,982,168,991,189,990,200,984,210,970,222,948,233,891,249,826,260,765,266,765,261,825,254,890,243,946,228,967,218,980,207,985,198,985,189,978,170,962,152,945,137"/>
 <area shape="poly" title=" " alt="" coords="933,135,935,167,930,167,928,135"/>
@@ -204,7 +204,7 @@ Include dependency graph for wifi_http_server.c:</div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
+Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structwifi__s__handle__obj.html">wifi_s_handle_obj</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wifi manager http server handle object.  <a href="structwifi__s__handle__obj.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -214,20 +214,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a98339200ece5bb03129ce899af3d7234" id="r_a98339200ece5bb03129ce899af3d7234"><td class="memItemLeft" align="right" valign="top">const uint8_t style_css_start[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a98339200ece5bb03129ce899af3d7234">asm</a> (&quot;_binary_styles_css_start&quot;)</td></tr>
 <tr class="memdesc:a98339200ece5bb03129ce899af3d7234"><td class="mdescLeft">&#160;</td><td class="mdescRight">embedded binary data.  <br /></td></tr>
 <tr class="separator:a98339200ece5bb03129ce899af3d7234"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11faef5551accda65288954a1a715e4f" id="r_a11faef5551accda65288954a1a715e4f"><td class="memItemLeft" align="right" valign="top"><a id="a11faef5551accda65288954a1a715e4f" name="a11faef5551accda65288954a1a715e4f"></a>
-const uint8_t style_css_end[]&#160;</td><td class="memItemRight" valign="bottom"><b>asm</b> (&quot;_binary_styles_css_end&quot;)</td></tr>
+<tr class="memitem:a11faef5551accda65288954a1a715e4f" id="r_a11faef5551accda65288954a1a715e4f"><td class="memItemLeft" align="right" valign="top">const uint8_t style_css_end[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a11faef5551accda65288954a1a715e4f">asm</a> (&quot;_binary_styles_css_end&quot;)</td></tr>
 <tr class="separator:a11faef5551accda65288954a1a715e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d7dea50787e75eeb47ff32546b5cc83" id="r_a0d7dea50787e75eeb47ff32546b5cc83"><td class="memItemLeft" align="right" valign="top"><a id="a0d7dea50787e75eeb47ff32546b5cc83" name="a0d7dea50787e75eeb47ff32546b5cc83"></a>
-const uint8_t code_js_start[]&#160;</td><td class="memItemRight" valign="bottom"><b>asm</b> (&quot;_binary_code_js_start&quot;)</td></tr>
+<tr class="memitem:a0d7dea50787e75eeb47ff32546b5cc83" id="r_a0d7dea50787e75eeb47ff32546b5cc83"><td class="memItemLeft" align="right" valign="top">const uint8_t code_js_start[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a0d7dea50787e75eeb47ff32546b5cc83">asm</a> (&quot;_binary_code_js_start&quot;)</td></tr>
 <tr class="separator:a0d7dea50787e75eeb47ff32546b5cc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2872e913bbdaefc2d8facdcb941de977" id="r_a2872e913bbdaefc2d8facdcb941de977"><td class="memItemLeft" align="right" valign="top"><a id="a2872e913bbdaefc2d8facdcb941de977" name="a2872e913bbdaefc2d8facdcb941de977"></a>
-const uint8_t code_js_end[]&#160;</td><td class="memItemRight" valign="bottom"><b>asm</b> (&quot;_binary_code_js_end&quot;)</td></tr>
+<tr class="memitem:a2872e913bbdaefc2d8facdcb941de977" id="r_a2872e913bbdaefc2d8facdcb941de977"><td class="memItemLeft" align="right" valign="top">const uint8_t code_js_end[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a2872e913bbdaefc2d8facdcb941de977">asm</a> (&quot;_binary_code_js_end&quot;)</td></tr>
 <tr class="separator:a2872e913bbdaefc2d8facdcb941de977"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aede8f0bb2c45776a5718d8e7b8acbb6a" id="r_aede8f0bb2c45776a5718d8e7b8acbb6a"><td class="memItemLeft" align="right" valign="top"><a id="aede8f0bb2c45776a5718d8e7b8acbb6a" name="aede8f0bb2c45776a5718d8e7b8acbb6a"></a>
-const uint8_t index_html_start[]&#160;</td><td class="memItemRight" valign="bottom"><b>asm</b> (&quot;_binary_index_html_start&quot;)</td></tr>
+<tr class="memitem:aede8f0bb2c45776a5718d8e7b8acbb6a" id="r_aede8f0bb2c45776a5718d8e7b8acbb6a"><td class="memItemLeft" align="right" valign="top">const uint8_t index_html_start[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#aede8f0bb2c45776a5718d8e7b8acbb6a">asm</a> (&quot;_binary_index_html_start&quot;)</td></tr>
 <tr class="separator:aede8f0bb2c45776a5718d8e7b8acbb6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b39f1fcc418da402de3d6966546ef7d" id="r_a7b39f1fcc418da402de3d6966546ef7d"><td class="memItemLeft" align="right" valign="top"><a id="a7b39f1fcc418da402de3d6966546ef7d" name="a7b39f1fcc418da402de3d6966546ef7d"></a>
-const uint8_t index_html_end[]&#160;</td><td class="memItemRight" valign="bottom"><b>asm</b> (&quot;_binary_index_html_end&quot;)</td></tr>
+<tr class="memitem:a7b39f1fcc418da402de3d6966546ef7d" id="r_a7b39f1fcc418da402de3d6966546ef7d"><td class="memItemLeft" align="right" valign="top">const uint8_t index_html_end[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a7b39f1fcc418da402de3d6966546ef7d">asm</a> (&quot;_binary_index_html_end&quot;)</td></tr>
 <tr class="separator:a7b39f1fcc418da402de3d6966546ef7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aca862ceb12066cd03d353d5d1534e8" id="r_a3aca862ceb12066cd03d353d5d1534e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a3aca862ceb12066cd03d353d5d1534e8">wifi_manager_server_init</a> (<a class="el" href="wifi__manager__internal_8h.html#aa629ca7532d4fa607743b038462a454d">wifi_s_handle_t</a> *out_handle)</td></tr>
 <tr class="memdesc:a3aca862ceb12066cd03d353d5d1534e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start wifi manager HTTP server.  <br /></td></tr>
@@ -237,25 +232,19 @@ const uint8_t index_html_end[]&#160;</td><td class="memItemRight" valign="bottom
 Variables</h2></td></tr>
 <tr class="memitem:a8333672f8df1ac7010b780bcacbe2a50" id="r_a8333672f8df1ac7010b780bcacbe2a50"><td class="memItemLeft" align="right" valign="top">httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a8333672f8df1ac7010b780bcacbe2a50">uri_get_styles</a></td></tr>
 <tr class="separator:a8333672f8df1ac7010b780bcacbe2a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fe26b938c5dbebc6baa02c1cf80284b" id="r_a5fe26b938c5dbebc6baa02c1cf80284b"><td class="memItemLeft" align="right" valign="top"><a id="a5fe26b938c5dbebc6baa02c1cf80284b" name="a5fe26b938c5dbebc6baa02c1cf80284b"></a>
-httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_script</b> = {.uri = &quot;/code.js&quot;, .method = HTTP_GET, .handler = script_handler, .user_ctx = NULL}</td></tr>
+<tr class="memitem:a5fe26b938c5dbebc6baa02c1cf80284b" id="r_a5fe26b938c5dbebc6baa02c1cf80284b"><td class="memItemLeft" align="right" valign="top">httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a5fe26b938c5dbebc6baa02c1cf80284b">uri_get_script</a> = {.uri = &quot;/code.js&quot;, .method = HTTP_GET, .handler = script_handler, .user_ctx = NULL}</td></tr>
 <tr class="separator:a5fe26b938c5dbebc6baa02c1cf80284b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a445cf2a0e6eec20469243ddc45acaed0" id="r_a445cf2a0e6eec20469243ddc45acaed0"><td class="memItemLeft" align="right" valign="top"><a id="a445cf2a0e6eec20469243ddc45acaed0" name="a445cf2a0e6eec20469243ddc45acaed0"></a>
-httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_ap_json</b> = {.uri = &quot;/scan&quot;, .method = HTTP_GET, .handler = ap_json_handler, .user_ctx = NULL}</td></tr>
+<tr class="memitem:a445cf2a0e6eec20469243ddc45acaed0" id="r_a445cf2a0e6eec20469243ddc45acaed0"><td class="memItemLeft" align="right" valign="top">httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a445cf2a0e6eec20469243ddc45acaed0">uri_get_ap_json</a> = {.uri = &quot;/scan&quot;, .method = HTTP_GET, .handler = ap_json_handler, .user_ctx = NULL}</td></tr>
 <tr class="separator:a445cf2a0e6eec20469243ddc45acaed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6800144dd9ee9438722c3081a80baf9d" id="r_a6800144dd9ee9438722c3081a80baf9d"><td class="memItemLeft" align="right" valign="top"><a id="a6800144dd9ee9438722c3081a80baf9d" name="a6800144dd9ee9438722c3081a80baf9d"></a>
-httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_state_json</b> = {.uri = &quot;/state&quot;, .method = HTTP_GET, .handler = state_json_handler, .user_ctx = NULL}</td></tr>
+<tr class="memitem:a6800144dd9ee9438722c3081a80baf9d" id="r_a6800144dd9ee9438722c3081a80baf9d"><td class="memItemLeft" align="right" valign="top">httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a6800144dd9ee9438722c3081a80baf9d">uri_get_state_json</a> = {.uri = &quot;/state&quot;, .method = HTTP_GET, .handler = state_json_handler, .user_ctx = NULL}</td></tr>
 <tr class="separator:a6800144dd9ee9438722c3081a80baf9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ba2cfc6a43ad7ff02304aa55fcc7097" id="r_a3ba2cfc6a43ad7ff02304aa55fcc7097"><td class="memItemLeft" align="right" valign="top"><a id="a3ba2cfc6a43ad7ff02304aa55fcc7097" name="a3ba2cfc6a43ad7ff02304aa55fcc7097"></a>
-httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_post_connect</b> = {.uri = &quot;/connect&quot;, .method = HTTP_POST, .handler = connect_handler, .user_ctx = NULL}</td></tr>
+<tr class="memitem:a3ba2cfc6a43ad7ff02304aa55fcc7097" id="r_a3ba2cfc6a43ad7ff02304aa55fcc7097"><td class="memItemLeft" align="right" valign="top">httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a3ba2cfc6a43ad7ff02304aa55fcc7097">uri_post_connect</a> = {.uri = &quot;/connect&quot;, .method = HTTP_POST, .handler = <a class="el" href="start__ap__example_8c.html#a74d87c01adafb70a9bf42a4d7868633f">connect_handler</a>, .user_ctx = NULL}</td></tr>
 <tr class="separator:a3ba2cfc6a43ad7ff02304aa55fcc7097"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ef9f31a35105bb80f9763b6bd6edcd9" id="r_a8ef9f31a35105bb80f9763b6bd6edcd9"><td class="memItemLeft" align="right" valign="top">httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a8ef9f31a35105bb80f9763b6bd6edcd9">uri_get_saved_ap_json</a></td></tr>
 <tr class="separator:a8ef9f31a35105bb80f9763b6bd6edcd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa13b33aad8f8382211c0c8db0543f87c" id="r_aa13b33aad8f8382211c0c8db0543f87c"><td class="memItemLeft" align="right" valign="top"><a id="aa13b33aad8f8382211c0c8db0543f87c" name="aa13b33aad8f8382211c0c8db0543f87c"></a>
-httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_restart</b> = {.uri = &quot;/restart&quot;, .method = HTTP_GET, .handler = restart_handler, .user_ctx = NULL}</td></tr>
+<tr class="memitem:aa13b33aad8f8382211c0c8db0543f87c" id="r_aa13b33aad8f8382211c0c8db0543f87c"><td class="memItemLeft" align="right" valign="top">httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#aa13b33aad8f8382211c0c8db0543f87c">uri_get_restart</a> = {.uri = &quot;/restart&quot;, .method = HTTP_GET, .handler = restart_handler, .user_ctx = NULL}</td></tr>
 <tr class="separator:aa13b33aad8f8382211c0c8db0543f87c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d678dfa8e7c27df3d42a50e8f670ab2" id="r_a6d678dfa8e7c27df3d42a50e8f670ab2"><td class="memItemLeft" align="right" valign="top"><a id="a6d678dfa8e7c27df3d42a50e8f670ab2" name="a6d678dfa8e7c27df3d42a50e8f670ab2"></a>
-httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_clear</b> = {.uri = &quot;/clear&quot;, .method = HTTP_GET, .handler = clear_handler, .user_ctx = NULL}</td></tr>
+<tr class="memitem:a6d678dfa8e7c27df3d42a50e8f670ab2" id="r_a6d678dfa8e7c27df3d42a50e8f670ab2"><td class="memItemLeft" align="right" valign="top">httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__http__server_8c.html#a6d678dfa8e7c27df3d42a50e8f670ab2">uri_get_clear</a> = {.uri = &quot;/clear&quot;, .method = HTTP_GET, .handler = clear_handler, .user_ctx = NULL}</td></tr>
 <tr class="separator:a6d678dfa8e7c27df3d42a50e8f670ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -264,8 +253,138 @@ httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_clear<
 <dl class="section version"><dt>Version</dt><dd>1.1.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-03-08 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a2872e913bbdaefc2d8facdcb941de977" name="a2872e913bbdaefc2d8facdcb941de977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2872e913bbdaefc2d8facdcb941de977">&#9670;&#160;</a></span>asm() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t code_js_end[] asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;_binary_code_js_end&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d7dea50787e75eeb47ff32546b5cc83" name="a0d7dea50787e75eeb47ff32546b5cc83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d7dea50787e75eeb47ff32546b5cc83">&#9670;&#160;</a></span>asm() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t code_js_start[] asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;_binary_code_js_start&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b39f1fcc418da402de3d6966546ef7d" name="a7b39f1fcc418da402de3d6966546ef7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b39f1fcc418da402de3d6966546ef7d">&#9670;&#160;</a></span>asm() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t index_html_end[] asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;_binary_index_html_end&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aede8f0bb2c45776a5718d8e7b8acbb6a" name="aede8f0bb2c45776a5718d8e7b8acbb6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede8f0bb2c45776a5718d8e7b8acbb6a">&#9670;&#160;</a></span>asm() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t index_html_start[] asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;_binary_index_html_start&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11faef5551accda65288954a1a715e4f" name="a11faef5551accda65288954a1a715e4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11faef5551accda65288954a1a715e4f">&#9670;&#160;</a></span>asm() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t style_css_end[] asm </td>
+          <td>(</td>
+          <td class="paramtype">&quot;_binary_styles_css_end&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a98339200ece5bb03129ce899af3d7234" name="a98339200ece5bb03129ce899af3d7234"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98339200ece5bb03129ce899af3d7234">&#9670;&#160;</a></span>asm()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a98339200ece5bb03129ce899af3d7234">&#9670;&#160;</a></span>asm() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -327,10 +446,80 @@ httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_clear<
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__http__server_8c_a3aca862ceb12066cd03d353d5d1534e8_cgraph.png" border="0" usemap="#awifi__http__server_8c_a3aca862ceb12066cd03d353d5d1534e8_cgraph" alt=""/></div>
+<map name="awifi__http__server_8c_a3aca862ceb12066cd03d353d5d1534e8_cgraph" id="awifi__http__server_8c_a3aca862ceb12066cd03d353d5d1534e8_cgraph">
+<area shape="rect" title="Start wifi manager HTTP server." alt="" coords="5,5,170,31"/>
+<area shape="rect" href="err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="218,5,322,31"/>
+<area shape="poly" title=" " alt="" coords="170,16,202,16,202,21,170,21"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="wifi__http__server_8c_a3aca862ceb12066cd03d353d5d1534e8_icgraph.png" border="0" usemap="#awifi__http__server_8c_a3aca862ceb12066cd03d353d5d1534e8_icgraph" alt=""/></div>
+<map name="awifi__http__server_8c_a3aca862ceb12066cd03d353d5d1534e8_icgraph" id="awifi__http__server_8c_a3aca862ceb12066cd03d353d5d1534e8_icgraph">
+<area shape="rect" title="Start wifi manager HTTP server." alt="" coords="412,84,576,110"/>
+<area shape="rect" href="wifi__manager_8c.html#a1bb2312786a60b8f18002dd6a93e7eee" title="Initialize wifi manager library." alt="" coords="238,55,360,80"/>
+<area shape="poly" title=" " alt="" coords="396,85,360,79,361,74,397,80"/>
+<area shape="rect" href="wifi__manager_8c.html#a025b8f724ceaee693f08a1684f2a6b46" title=" " alt="" coords="234,105,364,145"/>
+<area shape="poly" title=" " alt="" coords="397,113,365,118,364,113,396,108"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="57,5,134,31"/>
+<area shape="poly" title=" " alt="" coords="227,53,134,30,135,25,229,48"/>
+<area shape="rect" href="test__wifi__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="57,55,134,80"/>
+<area shape="poly" title=" " alt="" coords="222,70,134,70,134,65,222,65"/>
+<area shape="rect" href="test__wifi__manager_8c.html#a85164e31a518f33b699e35c435b60c8b" title=" " alt="" coords="5,105,186,161"/>
+<area shape="poly" title=" " alt="" coords="243,88,185,107,183,102,241,83"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a445cf2a0e6eec20469243ddc45acaed0" name="a445cf2a0e6eec20469243ddc45acaed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a445cf2a0e6eec20469243ddc45acaed0">&#9670;&#160;</a></span>uri_get_ap_json</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">httpd_uri_t uri_get_ap_json = {.uri = &quot;/scan&quot;, .method = HTTP_GET, .handler = ap_json_handler, .user_ctx = NULL}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d678dfa8e7c27df3d42a50e8f670ab2" name="a6d678dfa8e7c27df3d42a50e8f670ab2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d678dfa8e7c27df3d42a50e8f670ab2">&#9670;&#160;</a></span>uri_get_clear</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">httpd_uri_t uri_get_clear = {.uri = &quot;/clear&quot;, .method = HTTP_GET, .handler = clear_handler, .user_ctx = NULL}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa13b33aad8f8382211c0c8db0543f87c" name="aa13b33aad8f8382211c0c8db0543f87c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa13b33aad8f8382211c0c8db0543f87c">&#9670;&#160;</a></span>uri_get_restart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">httpd_uri_t uri_get_restart = {.uri = &quot;/restart&quot;, .method = HTTP_GET, .handler = restart_handler, .user_ctx = NULL}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8ef9f31a35105bb80f9763b6bd6edcd9" name="a8ef9f31a35105bb80f9763b6bd6edcd9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ef9f31a35105bb80f9763b6bd6edcd9">&#9670;&#160;</a></span>uri_get_saved_ap_json</h2>
 
@@ -347,6 +536,34 @@ httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_clear<
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a5fe26b938c5dbebc6baa02c1cf80284b" name="a5fe26b938c5dbebc6baa02c1cf80284b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe26b938c5dbebc6baa02c1cf80284b">&#9670;&#160;</a></span>uri_get_script</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">httpd_uri_t uri_get_script = {.uri = &quot;/code.js&quot;, .method = HTTP_GET, .handler = script_handler, .user_ctx = NULL}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6800144dd9ee9438722c3081a80baf9d" name="a6800144dd9ee9438722c3081a80baf9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6800144dd9ee9438722c3081a80baf9d">&#9670;&#160;</a></span>uri_get_state_json</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">httpd_uri_t uri_get_state_json = {.uri = &quot;/state&quot;, .method = HTTP_GET, .handler = state_json_handler, .user_ctx = NULL}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8333672f8df1ac7010b780bcacbe2a50" name="a8333672f8df1ac7010b780bcacbe2a50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8333672f8df1ac7010b780bcacbe2a50">&#9670;&#160;</a></span>uri_get_styles</h2>
 
@@ -361,6 +578,20 @@ httpd_uri_t&#160;</td><td class="memItemRight" valign="bottom"><b>uri_get_clear<
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    .uri = <span class="stringliteral">&quot;/styles.css&quot;</span>, .method = HTTP_GET, .handler = stylesheet_handler, .user_ctx = NULL}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a3ba2cfc6a43ad7ff02304aa55fcc7097" name="a3ba2cfc6a43ad7ff02304aa55fcc7097"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ba2cfc6a43ad7ff02304aa55fcc7097">&#9670;&#160;</a></span>uri_post_connect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">httpd_uri_t uri_post_connect = {.uri = &quot;/connect&quot;, .method = HTTP_POST, .handler = <a class="el" href="start__ap__example_8c.html#a74d87c01adafb70a9bf42a4d7868633f">connect_handler</a>, .user_ctx = NULL}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 </div><!-- contents -->

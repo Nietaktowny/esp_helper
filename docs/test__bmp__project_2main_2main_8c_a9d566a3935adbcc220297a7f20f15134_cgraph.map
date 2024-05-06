@@ -1,0 +1,96 @@
+<map id="on_connect_handler" name="on_connect_handler">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,386,143,412"/>
+<area shape="rect" id="Node000002" href="$esp__helper__utils_8c.html#a3c2b5d9275a6adee717f70a06011a088" title="Perform simple OTA firmware update with standard ESP Helper server." alt="" coords="202,146,334,172"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,384,245,182,249,185,88,387"/>
+<area shape="rect" id="Node000011" href="$i2c__controller_8c.html#ad0308bccdb2bdbb4f617ed60319408dc" title="Initialize I2C bus and allocate memory for it." alt="" coords="216,486,320,512"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="94,410,137,441,192,473,204,478,202,483,189,477,134,446,91,415"/>
+<area shape="rect" id="Node000012" href="$test__bmp__project_2main_2main_8c.html#a35918ec96795bd96101b8ee1b8b03d61" title=" " alt="" coords="220,308,316,333"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="107,383,219,337,221,342,109,388"/>
+<area shape="rect" id="Node000015" href="$test__bmp__project_2main_2main_8c.html#a67affee515727bcd16ef707dbe226021" title=" " alt="" coords="191,437,345,463"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="127,410,202,430,201,435,125,415"/>
+<area shape="rect" id="Node000003" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="676,121,781,147"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,153,661,135,661,140,334,158"/>
+<area shape="rect" id="Node000004" href="$esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a" title="Prepare URL for OTA with device ID as parameter." alt="" coords="419,5,546,46"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="280,144,327,101,392,55,403,49,406,54,394,60,331,105,284,148"/>
+<area shape="rect" id="Node000005" href="$ota__controller_8c.html#a9bdb2553ca10cdaf2b8d49f84fce5ba5" title=" " alt="" coords="439,172,525,197"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="335,164,424,175,423,180,334,169"/>
+<area shape="rect" id="Node000008" href="$sys__utils_8c.html#a83d18d05750f1c594860687ff0ec3882" title="Get base chip MAC address as C string." alt="" coords="408,271,557,311"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="284,170,331,212,394,257,403,261,401,266,392,261,328,216,281,174"/>
+<area shape="rect" id="Node000010" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="421,70,543,96"/>
+<area shape="poly" id="edge10_Node000002_Node000010" title=" " alt="" coords="306,143,428,99,430,104,307,148"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="525,173,661,145,662,150,526,178"/>
+<area shape="rect" id="Node000006" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="890,286,1041,312"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="526,180,588,181,667,187,753,199,839,220,892,245,936,274,933,279,889,250,837,226,752,204,666,192,588,187,526,186"/>
+<area shape="rect" id="Node000007" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="1093,286,1260,312"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="1041,296,1077,296,1077,302,1041,302"/>
+<area shape="rect" id="Node000009" href="$sys__utils_8c.html#ab39f400f14d827d848f3f907b2d5a7d8" title="Get base chip MAC address." alt="" coords="638,236,819,261"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="557,275,635,262,636,267,558,281"/>
+<area shape="poly" id="edge14_Node000012_Node000008" title=" " alt="" coords="316,311,391,301,392,306,317,316"/>
+<area shape="rect" id="Node000013" href="$http__client_8c.html#a55c042080b84c0ac0c2644a0b37f8388" title="Make a HTTP POST request." alt="" coords="426,336,539,361"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="316,324,410,336,409,342,316,329"/>
+<area shape="rect" id="Node000014" href="$wifi__controller_8h.html#acc993cc2a0481bf076e5361048057a90" title="Get current wifi_controller status as JSON string." alt="" coords="395,221,569,247"/>
+<area shape="poly" id="edge15_Node000012_Node000014" title=" " alt="" coords="292,305,337,281,392,257,413,249,415,254,394,261,340,286,294,309"/>
+<area shape="poly" id="edge55_Node000015_Node000006" title=" " alt="" coords="329,434,473,400,536,383,570,371,584,360,593,347,602,333,618,322,682,300,750,288,815,284,874,286,874,291,815,290,750,293,684,305,621,327,606,337,597,350,588,363,573,376,537,388,474,405,331,439"/>
+<area shape="poly" id="edge56_Node000015_Node000008" title=" " alt="" coords="277,435,322,380,355,349,392,321,399,316,402,321,394,325,359,353,326,384,281,438"/>
+<area shape="poly" id="edge54_Node000015_Node000013" title=" " alt="" coords="289,434,336,407,392,378,424,365,426,370,394,383,338,411,292,439"/>
+<area shape="rect" id="Node000016" href="$bmp280_8c.html#a2d2c0726c6a64714da12904fd44664ee" title="Configure BMP280 device." alt="" coords="430,512,535,537"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="314,461,346,471,433,503,431,508,344,476,312,466"/>
+<area shape="rect" id="Node000030" href="$bmp280_8c.html#a9487ef46257acb04e1caeff62d2b1da3" title="Get BMP device chip ID." alt="" coords="423,561,542,587"/>
+<area shape="poly" id="edge41_Node000015_Node000030" title=" " alt="" coords="328,461,347,472,364,491,371,511,379,530,395,548,410,556,407,561,391,552,374,533,366,513,359,494,343,476,325,465"/>
+<area shape="rect" id="Node000031" href="$bmp280_8c.html#ad4b0984dcbeb48e41089d7ba94bf6a8f" title="Get BMP device I2C address." alt="" coords="419,610,546,636"/>
+<area shape="poly" id="edge42_Node000015_Node000031" title=" " alt="" coords="331,461,347,472,360,488,367,504,371,536,376,568,382,582,395,597,406,605,403,609,391,601,378,585,370,569,366,537,362,506,355,491,343,476,328,465"/>
+<area shape="rect" id="Node000032" href="$bmp280_8c.html#a1fe612550d5ab7dd6fbd935ffb51c5db" title="Get current mode of BMP device." alt="" coords="427,660,537,685"/>
+<area shape="poly" id="edge43_Node000015_Node000032" title=" " alt="" coords="332,461,347,472,363,494,371,517,371,561,372,605,379,626,395,646,414,659,411,664,391,650,375,628,367,606,366,561,365,518,358,497,343,476,329,465"/>
+<area shape="rect" id="Node000033" href="$bmp280_8c.html#af356cdcaca2bcc22564d38b080505c40" title="Get calculated altitude based on pressure and pressure on sea level." alt="" coords="393,709,571,735"/>
+<area shape="poly" id="edge44_Node000015_Node000033" title=" " alt="" coords="333,461,347,472,366,501,374,530,374,558,371,587,368,614,368,642,376,669,395,696,396,697,393,701,391,699,371,671,363,642,362,614,366,586,369,558,369,530,361,503,343,475,330,465"/>
+<area shape="rect" id="Node000034" href="$bmp280_8c.html#a153ceda67f3ecc98d9147fe4b7754717" title="Initialize BMP device, and return it&#39;s handle." alt="" coords="447,437,517,463"/>
+<area shape="poly" id="edge45_Node000015_Node000034" title=" " alt="" coords="346,447,432,447,432,452,346,452"/>
+<area shape="rect" id="Node000017" href="$bmp280_8c.html#a4265be98ad7d32842ae40e855692f18e" title="Set IIR filter value." alt="" coords="657,734,800,760"/>
+<area shape="poly" id="edge18_Node000016_Node000017" title=" " alt="" coords="536,527,556,534,573,546,590,569,597,591,597,636,598,680,605,701,621,721,643,735,640,740,618,725,601,703,593,681,592,636,592,592,585,571,569,550,553,539,534,532"/>
+<area shape="rect" id="Node000025" href="$bmp280_8c.html#a73b7bf20c2a74ff716d22181b36f753a" title="Change BMP device operating mode." alt="" coords="661,586,796,612"/>
+<area shape="poly" id="edge28_Node000016_Node000025" title=" " alt="" coords="536,534,572,546,597,560,620,573,647,581,645,586,618,577,594,564,570,551,534,539"/>
+<area shape="rect" id="Node000027" href="$bmp280_8c.html#aaf822501cab64075a6964114a3432783" title="Set pressure oversampling." alt="" coords="619,636,838,661"/>
+<area shape="poly" id="edge32_Node000016_Node000027" title=" " alt="" coords="536,529,555,536,573,546,590,566,598,586,605,605,621,622,627,626,624,630,618,626,600,608,593,588,585,568,570,550,553,541,534,534"/>
+<area shape="rect" id="Node000028" href="$bmp280_8c.html#a486db22a0f87aea52afd72d32bdfb64f" title="Set standby time of BMP280 device in normal mode." alt="" coords="639,685,818,711"/>
+<area shape="poly" id="edge35_Node000016_Node000028" title=" " alt="" coords="536,528,556,535,573,546,587,562,594,579,598,611,602,643,608,657,621,672,627,676,624,680,618,676,604,660,596,644,592,612,589,580,582,565,570,550,553,540,534,533"/>
+<area shape="rect" id="Node000029" href="$bmp280_8c.html#a573d2f5665e8d34814a0da21248b7eab" title="Set temperature oversampling." alt="" coords="621,537,836,563"/>
+<area shape="poly" id="edge38_Node000016_Node000029" title=" " alt="" coords="535,527,606,534,605,540,535,532"/>
+<area shape="rect" id="Node000018" href="$bmp280_8c.html#afab376c79aa0600e731ea1dc8691e1af" title="Get value of BMP_REG_CONFIG register using I2C." alt="" coords="897,685,1034,711"/>
+<area shape="poly" id="edge19_Node000017_Node000018" title=" " alt="" coords="793,731,885,712,886,717,794,736"/>
+<area shape="rect" id="Node000023" href="$bmp280_8c.html#a712e1325090f1da050399876d9658e36" title="Write to register of BMP280 device." alt="" coords="913,624,1018,649"/>
+<area shape="poly" id="edge24_Node000017_Node000023" title=" " alt="" coords="800,735,836,721,851,709,860,697,869,684,884,670,912,654,915,658,887,674,873,687,864,700,855,713,839,725,802,740"/>
+<area shape="rect" id="Node000019" href="$bmp280_8c.html#a3dcf4fd49a722611da21b9ad512d94e0" title="Read register value of BMP280 device." alt="" coords="1126,542,1228,568"/>
+<area shape="poly" id="edge20_Node000018_Node000019" title=" " alt="" coords="1000,682,1044,659,1101,618,1149,577,1152,581,1105,622,1046,664,1002,687"/>
+<area shape="rect" id="Node000020" href="$i2c__controller_8c.html#aa8a4d2b69b4c8907726d50596a9a5e05" title="Read register from I2C device." alt="" coords="1310,568,1394,593"/>
+<area shape="poly" id="edge21_Node000019_Node000020" title=" " alt="" coords="1229,560,1295,569,1294,575,1228,565"/>
+<area shape="rect" id="Node000021" href="$i2c__controller_8c.html#abab70a1e4c437ce46d32271437611ec5" title="Get I2C device lock. Used for thread safety." alt="" coords="1451,617,1579,643"/>
+<area shape="poly" id="edge22_Node000020_Node000021" title=" " alt="" coords="1395,590,1457,609,1455,614,1394,596"/>
+<area shape="rect" id="Node000022" href="$i2c__controller_8c.html#a9d059bf9a090c2f1ffe009a49b6682a1" title="Return I2C device lock. Used for thread safety." alt="" coords="1444,568,1586,593"/>
+<area shape="poly" id="edge23_Node000020_Node000022" title=" " alt="" coords="1395,578,1428,578,1428,583,1395,583"/>
+<area shape="rect" id="Node000024" href="$i2c__controller_8c.html#a02c8c0d8707804fa2b534c6f69f50759" title="Write to register in I2C device." alt="" coords="1308,617,1396,643"/>
+<area shape="poly" id="edge25_Node000023_Node000024" title=" " alt="" coords="1018,633,1293,628,1293,633,1019,638"/>
+<area shape="poly" id="edge26_Node000024_Node000021" title=" " alt="" coords="1396,627,1435,627,1435,632,1396,632"/>
+<area shape="poly" id="edge27_Node000024_Node000022" title=" " alt="" coords="1395,614,1455,596,1456,601,1397,619"/>
+<area shape="poly" id="edge31_Node000025_Node000023" title=" " alt="" coords="797,607,898,623,897,628,796,612"/>
+<area shape="rect" id="Node000026" href="$bmp280_8c.html#a85ba0d6d084be1005f3afd5b83e231c5" title="Get value of BMP_REG_CTRL_MEAS register using I2C." alt="" coords="886,542,1045,568"/>
+<area shape="poly" id="edge29_Node000025_Node000026" title=" " alt="" coords="796,584,877,569,878,574,797,589"/>
+<area shape="poly" id="edge30_Node000026_Node000019" title=" " alt="" coords="1046,552,1110,552,1110,558,1046,558"/>
+<area shape="poly" id="edge34_Node000027_Node000023" title=" " alt="" coords="838,640,897,637,897,642,838,645"/>
+<area shape="poly" id="edge33_Node000027_Node000026" title=" " alt="" coords="802,632,837,622,886,599,930,574,932,579,889,604,839,627,804,638"/>
+<area shape="poly" id="edge36_Node000028_Node000018" title=" " alt="" coords="819,695,882,695,882,700,819,700"/>
+<area shape="poly" id="edge37_Node000028_Node000023" title=" " alt="" coords="793,682,837,671,906,651,908,657,838,676,794,687"/>
+<area shape="poly" id="edge40_Node000029_Node000023" title=" " alt="" coords="803,561,839,571,887,591,930,613,927,618,885,596,837,576,801,566"/>
+<area shape="poly" id="edge39_Node000029_Node000026" title=" " alt="" coords="837,549,870,550,870,556,837,555"/>
+<area shape="poly" id="edge49_Node000034_Node000026" title=" " alt="" coords="518,444,579,441,660,443,750,452,839,472,894,499,939,530,936,535,891,504,837,478,749,457,660,448,579,447,518,449"/>
+<area shape="rect" id="Node000035" href="$bmp280_8c.html#af12043f643ffea6caf5be93fe8ec0435" title="Read BMP calibration data." alt="" coords="665,337,792,363"/>
+<area shape="poly" id="edge46_Node000034_Node000035" title=" " alt="" coords="517,438,544,428,570,415,584,404,593,393,603,382,618,371,649,359,651,364,621,376,606,386,597,397,588,408,573,420,546,433,519,443"/>
+<area shape="rect" id="Node000036" href="$bmp280_8c.html#a76f74528570223059dea2107d49e8441" title="Search for BMP280 device on possible addresses." alt="" coords="654,386,803,412"/>
+<area shape="poly" id="edge50_Node000034_Node000036" title=" " alt="" coords="517,440,647,413,648,418,518,445"/>
+<area shape="rect" id="Node000038" href="$i2c__controller_8c.html#a70a67c9218d9f13c8ff8ea546ed54791" title="Add I2C device and allocate memory for it." alt="" coords="666,488,791,513"/>
+<area shape="poly" id="edge53_Node000034_Node000038" title=" " alt="" coords="518,454,651,482,650,487,517,459"/>
+<area shape="poly" id="edge48_Node000035_Node000006" title=" " alt="" coords="791,334,887,313,888,318,793,339"/>
+<area shape="poly" id="edge47_Node000035_Node000019" title=" " alt="" coords="792,342,849,342,915,347,982,362,1015,374,1046,389,1086,419,1120,456,1146,494,1165,527,1160,530,1142,497,1116,459,1083,423,1044,393,1013,379,981,367,914,353,849,347,792,347"/>
+<area shape="poly" id="edge51_Node000036_Node000019" title=" " alt="" coords="803,389,858,388,921,391,985,402,1046,423,1082,445,1114,473,1160,527,1156,531,1110,476,1079,449,1044,428,984,407,920,397,858,393,804,394"/>
+<area shape="rect" id="Node000037" href="$i2c__controller_8c.html#ac217eb666f2eed503785d965289c0e39" title="Change I2C device address." alt="" coords="888,438,1043,464"/>
+<area shape="poly" id="edge52_Node000036_Node000037" title=" " alt="" coords="791,410,889,432,888,437,790,415"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="test_if_nvs_c_erase_namespace_should_return_err_on_null_handle" name="test_if_nvs_c_erase_namespace_should_return_err_on_null_handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,186,61"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a5966e157cae5d3998dfa1c2157dcead2" title="Erase all key&#45;value pairs in specified NVS namespace." alt="" coords="234,20,403,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,31,218,31,218,36,186,36"/>
+</map>

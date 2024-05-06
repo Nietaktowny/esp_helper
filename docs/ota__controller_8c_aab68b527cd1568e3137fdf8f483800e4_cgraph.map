@@ -1,0 +1,11 @@
+<map id="ota_c_update_device_data" name="ota_c_update_device_data">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,182,80"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="253,5,358,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,51,237,31,238,36,153,57"/>
+<area shape="rect" id="Node000003" href="$http__client_8c.html#a55c042080b84c0ac0c2644a0b37f8388" title="Make a HTTP POST request." alt="" coords="249,55,362,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,65,233,65,233,70,182,70"/>
+<area shape="rect" id="Node000004" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="230,104,381,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="153,78,233,97,232,103,151,84"/>
+<area shape="rect" id="Node000005" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="429,104,596,130"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="381,114,413,114,413,120,381,120"/>
+</map>

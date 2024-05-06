@@ -1,0 +1,9 @@
+<map id="test_if_scan_all_ap_returns_err_on_null_result_to_return" name="test_if_scan_all_ap_returns_err_on_null_result_to_return">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,40,144,95"/>
+<area shape="rect" id="Node000002" href="$wifi__controller_8h.html#a1debd2a3af82d4833f67c1b77f0cf98f" title="Used to deinit wifi controller, and free all resources." alt="" coords="211,5,303,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,46,195,32,196,37,145,51"/>
+<area shape="rect" id="Node000003" href="$wifi__controller_8h.html#ad35b1ccb1fdac425ec6c387dfe6fd5fa" title="Used to initialize and prepare Wifi to work." alt="" coords="205,55,309,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,65,189,65,189,70,144,70"/>
+<area shape="rect" id="Node000004" href="$wifi__controller_8h.html#ab36aca7a0de853286b0e3f0a31b46f9b" title="Scan for AP on all channels." alt="" coords="192,104,322,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="145,84,193,97,192,102,144,89"/>
+</map>

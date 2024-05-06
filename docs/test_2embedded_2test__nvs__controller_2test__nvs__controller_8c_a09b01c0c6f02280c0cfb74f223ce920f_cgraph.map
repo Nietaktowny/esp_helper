@@ -1,0 +1,5 @@
+<map id="test_if_nvs_c_write_uint32_should_return_err_on_null_handle" name="test_if_nvs_c_write_uint32_should_return_err_on_null_handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,154,61"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#ad23f252b6c36ed3f31130550816d6732" title="Write uint32_t value to NVS namespace." alt="" coords="202,20,335,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,31,186,31,186,36,154,36"/>
+</map>

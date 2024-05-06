@@ -12,7 +12,7 @@
 <area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="604,59,690,100,687,104,601,64"/>
 <area shape="rect" id="Node000015" href="$err__c__errors_8h.html" title="Error helper library errors list." alt="" coords="830,183,930,208"/>
 <area shape="poly" id="edge23_Node000001_Node000015" title=" " alt="" coords="607,42,698,65,748,83,795,107,833,137,863,169,859,172,830,141,792,111,746,88,697,70,606,47"/>
-<area shape="rect" id="Node000016" href="$memory__utils_8h_source.html" title=" " alt="" coords="491,109,599,135"/>
+<area shape="rect" id="Node000016" href="$memory__utils_8h.html" title=" " alt="" coords="491,109,599,135"/>
 <area shape="poly" id="edge19_Node000001_Node000016" title=" " alt="" coords="548,61,548,93,543,93,543,61"/>
 <area shape="rect" id="Node000017" title=" " alt="" coords="431,183,494,208"/>
 <area shape="poly" id="edge25_Node000001_Node000017" title=" " alt="" coords="516,63,497,85,481,110,471,139,466,168,461,167,466,138,476,108,493,82,512,60"/>
@@ -34,7 +34,7 @@
 <area shape="rect" id="Node000011" href="$logger__errors_8h.html" title="Logger library errors list." alt="" coords="537,256,644,282"/>
 <area shape="poly" id="edge13_Node000007_Node000011" title=" " alt="" coords="644,210,613,246,609,243,640,207"/>
 <area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="702,138,534,211,438,252,435,247,532,206,700,133"/>
-<area shape="rect" id="Node000013" href="$CException_8h_source.html" title=" " alt="" coords="709,183,805,208"/>
+<area shape="rect" id="Node000013" href="$CException_8h.html" title=" " alt="" coords="709,183,805,208"/>
 <area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="735,134,749,167,744,169,730,136"/>
 <area shape="poly" id="edge18_Node000012_Node000015" title=" " alt="" coords="755,133,841,173,839,178,752,138"/>
 <area shape="rect" id="Node000014" title=" " alt="" coords="873,256,943,282"/>

@@ -1,0 +1,51 @@
+<map id="logger_add_log_file" name="logger_add_log_file">
+<area shape="rect" id="Node000001" title="Add new log file to be used as log output." alt="" coords="991,471,1122,496"/>
+<area shape="rect" id="Node000002" href="$add__log__file_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="809,331,887,356"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1035,460,996,413,970,390,942,370,914,358,886,351,888,346,916,353,944,365,973,386,999,410,1039,456"/>
+<area shape="rect" id="Node000003" href="$cli__manager_8c.html#a6cf547424c3b4d26fa301c9f2bc79688" title="Task responsible for accepting new hosts in TCP log server." alt="" coords="792,380,904,406"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="1022,464,984,442,942,421,904,408,905,403,944,416,987,437,1025,460"/>
+<area shape="rect" id="Node000015" href="$lib_2logger_2test_2test__logger_8c.html#af5455b5d1eb377eea1a82b27296a4fa0" title=" " alt="" coords="772,430,924,471"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="976,473,924,465,924,460,976,468"/>
+<area shape="rect" id="Node000017" href="$lib_2logger_2test_2test__logger_8c.html#ae6fcfb6f4aabd33000b53f29b99d18eb" title=" " alt="" coords="753,495,943,536"/>
+<area shape="poly" id="edge21_Node000001_Node000017" title=" " alt="" coords="976,499,944,504,943,498,975,493"/>
+<area shape="rect" id="Node000018" href="$lib_2logger_2test_2test__logger_8c.html#a57dbf82a6f51789d0066f0047e9e281c" title=" " alt="" coords="781,560,915,615"/>
+<area shape="poly" id="edge23_Node000001_Node000018" title=" " alt="" coords="1022,507,944,550,916,563,914,558,942,545,1020,502"/>
+<area shape="rect" id="Node000022" href="$lib_2logger_2test_2test__logger_8c.html#aac0bfbedc5abd7b3f93b18fa0eac599c" title=" " alt="" coords="774,639,922,680"/>
+<area shape="poly" id="edge27_Node000001_Node000022" title=" " alt="" coords="1043,511,1004,570,976,602,945,630,924,642,921,637,941,625,973,598,1000,567,1039,508"/>
+<area shape="rect" id="Node000004" href="$cli__manager_8c.html#a4b80c5127fd2867a5881d9c1f9d2cfda" title="Log all logger library logs to remote host on TCP port." alt="" coords="550,200,705,226"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="776,383,751,371,710,337,676,296,633,228,638,225,680,293,714,333,754,367,778,378"/>
+<area shape="rect" id="Node000013" href="$test__cli__manager_8c.html#a7771b6e51a6c9c4200b7a59092bc6925" title=" " alt="" coords="559,358,696,414"/>
+<area shape="poly" id="edge15_Node000003_Node000013" title=" " alt="" coords="776,393,697,391,697,386,776,388"/>
+<area shape="rect" id="Node000014" href="$test__cli__manager_8c.html#a7e192697ee2a71a480ff086a46be09f0" title=" " alt="" coords="566,438,689,479"/>
+<area shape="poly" id="edge17_Node000003_Node000014" title=" " alt="" coords="781,413,753,421,691,440,689,435,752,416,780,408"/>
+<area shape="rect" id="Node000005" href="$test__bmp__project_2main_2main_8c.html#abce06be17fc37d675118a678a8100a36" title=" " alt="" coords="353,5,430,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="612,187,594,154,570,115,539,76,501,44,466,29,430,22,431,17,468,24,504,40,542,73,574,112,599,151,617,184"/>
+<area shape="rect" id="Node000006" href="$test__cli__manager_2main_2main_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="353,55,430,80"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="605,190,561,141,533,116,501,95,466,81,430,74,431,69,467,76,504,90,536,112,565,137,609,186"/>
+<area shape="rect" id="Node000007" href="$test__cli__manager_8c.html#a3ffaba09f8a01fb56abbfcb68fa49919" title=" " alt="" coords="314,105,470,161"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="572,197,470,162,471,157,574,192"/>
+<area shape="rect" id="Node000010" href="$test__cli__manager_8c.html#a7466ea899c6e9dd7f5924ec352cc2490" title=" " alt="" coords="311,185,473,241"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="535,216,473,216,473,210,535,210"/>
+<area shape="rect" id="Node000011" href="$test__cli__manager_8c.html#ae4c642a25d7133e81ffe7227de1704f8" title=" " alt="" coords="281,265,502,305"/>
+<area shape="poly" id="edge11_Node000004_Node000011" title=" " alt="" coords="572,233,503,255,466,266,465,261,502,250,570,228"/>
+<area shape="rect" id="Node000012" href="$test__cli__manager_8c.html#a55b55c53e3e53e45495bde7948db0f46" title=" " alt="" coords="317,330,466,371"/>
+<area shape="poly" id="edge13_Node000004_Node000012" title=" " alt="" coords="605,239,561,280,504,319,468,335,466,330,501,315,557,275,602,235"/>
+<area shape="rect" id="Node000008" href="$test__cli__manager_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,305,233,331"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="301,163,283,175,250,207,224,244,191,306,186,304,219,241,246,203,279,171,298,159"/>
+<area shape="rect" id="Node000009" href="$test__cli__manager_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,305,83,331"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="115,321,83,321,83,316,115,316"/>
+<area shape="poly" id="edge10_Node000010_Node000008" title=" " alt="" coords="297,248,282,255,238,281,202,307,199,303,235,277,280,250,295,243"/>
+<area shape="poly" id="edge12_Node000011_Node000008" title=" " alt="" coords="266,308,234,313,233,307,265,302"/>
+<area shape="poly" id="edge14_Node000012_Node000008" title=" " alt="" coords="301,339,233,329,234,323,302,334"/>
+<area shape="poly" id="edge16_Node000013_Node000008" title=" " alt="" coords="543,401,484,405,418,405,348,399,280,385,255,375,232,361,196,334,199,329,235,357,258,370,282,380,349,394,418,400,484,400,543,395"/>
+<area shape="poly" id="edge18_Node000014_Node000008" title=" " alt="" coords="550,463,490,460,420,452,348,437,280,411,252,394,227,373,191,333,195,330,231,369,255,390,282,406,350,431,421,447,490,455,550,457"/>
+<area shape="rect" id="Node000016" href="$test_2desktop_2test__logger_2test__logger_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="576,503,679,528"/>
+<area shape="poly" id="edge20_Node000015_Node000016" title=" " alt="" coords="763,478,674,505,673,499,762,473"/>
+<area shape="poly" id="edge22_Node000017_Node000016" title=" " alt="" coords="737,518,679,518,679,513,737,513"/>
+<area shape="rect" id="Node000019" href="$lib_2logger_2test_2test__logger_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="576,575,679,600"/>
+<area shape="poly" id="edge24_Node000018_Node000019" title=" " alt="" coords="765,590,679,590,679,585,765,585"/>
+<area shape="rect" id="Node000020" href="$test_2embedded_2test__logger_2test__logger_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="353,549,430,575"/>
+<area shape="poly" id="edge25_Node000019_Node000020" title=" " alt="" coords="561,583,430,569,431,564,562,578"/>
+<area shape="rect" id="Node000021" href="$test_2desktop_2test__logger_2test__logger_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="367,599,416,624"/>
+<area shape="poly" id="edge26_Node000019_Node000021" title=" " alt="" coords="561,597,417,612,416,606,561,592"/>
+</map>

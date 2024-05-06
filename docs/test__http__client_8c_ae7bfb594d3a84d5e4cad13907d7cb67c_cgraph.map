@@ -1,0 +1,9 @@
+<map id="test_if_http_deinit_reuse_returns_err_on_null_handle" name="test_if_http_deinit_reuse_returns_err_on_null_handle">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,156,61"/>
+<area shape="rect" id="Node000002" href="$http__client_8c.html#a4b2ab87e18213803c735bcf8c6a9cdae" title="This function frees resources allocated with http_client_post_reuse() and closes connection." alt="" coords="204,13,323,54"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,31,188,31,188,36,156,36"/>
+<area shape="rect" id="Node000003" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="371,20,522,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,31,355,31,355,36,323,36"/>
+<area shape="rect" id="Node000004" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="570,20,738,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="522,31,555,31,555,36,522,36"/>
+</map>

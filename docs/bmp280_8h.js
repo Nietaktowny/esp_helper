@@ -1,9 +1,14 @@
 var bmp280_8h =
 [
     [ "bmp_config_obj", "structbmp__config__obj.html", "structbmp__config__obj" ],
+    [ "BMP_ERR_MODE_ERROR", "bmp280_8h.html#ac1ec1dc2b5a7f11e5abca070b935fc2d", null ],
     [ "BMP_STANDARD_SEA_LEVEL_PRESSURE", "bmp280_8h.html#af744e1b58f5bc4dde2b53f4c096d2a46", null ],
     [ "bmp_config_t", "bmp280_8h.html#afa02a3140775658979c4d4c5894e520a", null ],
     [ "bmp_handle_t", "bmp280_8h.html#aafd00d7ee2a718bb560358d1bba6b6c1", null ],
+    [ "bmp_iir_filter_t", "bmp280_8h.html#aa90dc53f873411465e52e8cc2e57c1fb", null ],
+    [ "bmp_mode_t", "bmp280_8h.html#afb74abd3717a3282a49aaad631b21e41", null ],
+    [ "bmp_oversampling_t", "bmp280_8h.html#a5e08da1732a2335a87630f36518ab40a", null ],
+    [ "bmp_stdby_time_t", "bmp280_8h.html#a9ea2c994729518f8b7cdd28c7bc46af8", null ],
     [ "bmp_iir_filter_t", "bmp280_8h.html#a10658ef8374c97bdc03473a07118fa4e", [
       [ "BMP_IIR_NONE", "bmp280_8h.html#a10658ef8374c97bdc03473a07118fa4ea98d74e19e2e4978696a6e2b12cc46135", null ],
       [ "BMP_IIR_X1", "bmp280_8h.html#a10658ef8374c97bdc03473a07118fa4ea26f028915afc7bc6b3c3fc76c15964eb", null ],

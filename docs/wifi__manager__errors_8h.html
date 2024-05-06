@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -104,13 +104,21 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="wifi__manager__errors_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2wifi__manager_2include_2wifi__manager__errors_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2wifi__manager_2include_2wifi__manager__errors_8hdep" id="aprojects_2lib__tests_2lib_2wifi__manager_2include_2wifi__manager__errors_8hdep">
-<area shape="rect" title="Wifi manager library errors list." alt="" coords="75,5,239,61"/>
-<area shape="rect" href="wifi__manager_8h.html" title="Wifi manager source file." alt="" coords="75,109,239,165"/>
-<area shape="poly" title=" " alt="" coords="160,77,160,108,154,108,154,77"/>
-<area shape="rect" href="wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="5,213,146,268"/>
-<area shape="poly" title=" " alt="" coords="128,179,99,214,95,210,123,175"/>
-<area shape="rect" href="wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="169,213,310,268"/>
-<area shape="poly" title=" " alt="" coords="191,175,219,210,215,214,187,179"/>
+<area shape="rect" title="Wifi manager library errors list." alt="" coords="421,5,584,61"/>
+<area shape="rect" href="wifi__manager_8h.html" title="Wifi manager source file." alt="" coords="421,109,584,165"/>
+<area shape="poly" title=" " alt="" coords="505,77,505,108,500,108,500,77"/>
+<area shape="rect" href="wifi__http__server_8c.html" title="Wifi manager server source file." alt="" coords="5,220,146,276"/>
+<area shape="poly" title=" " alt="" coords="406,157,286,181,158,215,138,222,136,217,156,210,285,176,405,152"/>
+<area shape="rect" href="wifi__manager_8c.html" title="Wifi manager source file." alt="" coords="169,220,310,276"/>
+<area shape="poly" title=" " alt="" coords="423,174,322,215,305,222,303,217,320,210,421,169"/>
+<area shape="rect" href="test__wifi__manager_8c.html" title=" " alt="" coords="333,213,490,283"/>
+<area shape="poly" title=" " alt="" coords="472,178,442,214,438,211,468,175"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="514,220,672,276"/>
+<area shape="poly" title=" " alt="" coords="536,175,572,218,568,221,532,178"/>
+<area shape="rect" href="test__wifi__controller_2main_2main_8c.html" title=" " alt="" coords="696,220,829,276"/>
+<area shape="poly" title=" " alt="" coords="584,169,685,210,701,217,699,222,682,215,582,174"/>
+<area shape="rect" href="test__wifi__manager_2main_2main_8c.html" title=" " alt="" coords="853,220,1015,276"/>
+<area shape="poly" title=" " alt="" coords="600,153,716,178,842,210,863,217,862,222,840,215,715,183,599,159"/>
 </map>
 </div>
 </div>
@@ -118,9 +126,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aba94c5fceae77bfd18c757b4afac2802" id="r_aba94c5fceae77bfd18c757b4afac2802"><td class="memItemLeft" align="right" valign="top"><a id="aba94c5fceae77bfd18c757b4afac2802" name="aba94c5fceae77bfd18c757b4afac2802"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIFI_MANAGER_ERR_BASE</b>&#160;&#160;&#160;0x04B0</td></tr>
-<tr class="memdesc:aba94c5fceae77bfd18c757b4afac2802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wifi manager error base. <br /></td></tr>
+<tr class="memitem:aba94c5fceae77bfd18c757b4afac2802" id="r_aba94c5fceae77bfd18c757b4afac2802"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="wifi__manager__errors_8h.html#aba94c5fceae77bfd18c757b4afac2802">WIFI_MANAGER_ERR_BASE</a>&#160;&#160;&#160;0x04B0</td></tr>
+<tr class="memdesc:aba94c5fceae77bfd18c757b4afac2802"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wifi manager error base.  <br /></td></tr>
 <tr class="separator:aba94c5fceae77bfd18c757b4afac2802"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -129,7 +136,24 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.1.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-03-01</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aba94c5fceae77bfd18c757b4afac2802" name="aba94c5fceae77bfd18c757b4afac2802"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba94c5fceae77bfd18c757b4afac2802">&#9670;&#160;</a></span>WIFI_MANAGER_ERR_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WIFI_MANAGER_ERR_BASE&#160;&#160;&#160;0x04B0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wifi manager error base. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

@@ -1,0 +1,22 @@
+<map id="logger_enable_silent_mode" name="logger_enable_silent_mode">
+<area shape="rect" id="Node000001" title="Enable silent mode &#45; don&#39;t log to stderr." alt="" coords="517,157,696,183"/>
+<area shape="rect" id="Node000002" href="$add__log__file_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="337,5,414,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="583,147,534,96,502,69,468,46,441,34,414,27,415,22,443,29,471,41,506,64,538,92,587,144"/>
+<area shape="rect" id="Node000003" href="$lib_2logger_2test_2test__logger_8c.html#a161f307fabe5aa8ed8272c56be47c177" title=" " alt="" coords="281,56,469,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="555,154,451,114,452,109,557,149"/>
+<area shape="rect" id="Node000007" href="$lib_2logger_2test_2test__logger_8c.html#a6a373c33ce4e1a000d78d9407c8ee52c" title=" " alt="" coords="293,135,457,206"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="502,173,458,173,458,168,502,168"/>
+<area shape="rect" id="Node000008" href="$lib_2logger_2test_2test__logger_8c.html#a7d6b3c61e39bf33fae62b66a740b9a78" title=" " alt="" coords="295,230,456,300"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="560,192,457,234,455,229,558,187"/>
+<area shape="rect" id="Node000009" href="$lib_2logger_2test_2test__logger_8c.html#a7c70bdb05ba0fa6e7ecb4c1bd0ba92d8" title=" " alt="" coords="296,324,454,395"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="587,197,537,254,505,285,471,314,453,326,450,321,468,309,502,281,534,250,583,193"/>
+<area shape="rect" id="Node000004" href="$lib_2logger_2test_2test__logger_8c.html#ae1cd91cff7ca45ac6a8069a2540e4ed6" title=" " alt="" coords="131,205,233,231"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="287,122,283,124,232,167,196,207,192,203,228,163,279,120,284,117"/>
+<area shape="rect" id="Node000005" href="$test_2embedded_2test__logger_2test__logger_8c.html#a630544a7f0a2cc40d8a7fefab7e2fe70" title=" " alt="" coords="5,180,83,206"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="115,209,83,203,84,197,116,203"/>
+<area shape="rect" id="Node000006" href="$test_2desktop_2test__logger_2test__logger_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="19,229,69,255"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="116,232,70,241,69,235,115,227"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="278,197,234,208,233,203,277,192"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="279,244,233,233,234,228,280,239"/>
+<area shape="poly" id="edge11_Node000009_Node000004" title=" " alt="" coords="286,318,279,314,230,271,193,233,197,230,233,268,283,309,289,314"/>
+</map>

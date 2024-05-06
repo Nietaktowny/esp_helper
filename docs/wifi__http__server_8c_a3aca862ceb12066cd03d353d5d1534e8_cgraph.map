@@ -1,0 +1,5 @@
+<map id="wifi_manager_server_init" name="wifi_manager_server_init">
+<area shape="rect" id="Node000001" title="Start wifi manager HTTP server." alt="" coords="5,5,170,31"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="218,5,322,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,16,202,16,202,21,170,21"/>
+</map>

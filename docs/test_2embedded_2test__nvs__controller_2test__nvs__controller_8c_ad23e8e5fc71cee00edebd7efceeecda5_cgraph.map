@@ -1,0 +1,15 @@
+<map id="test_if_nvs_c_write_int64_writes_data" name="test_if_nvs_c_write_int64_writes_data">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,150,140,191"/>
+<area shape="rect" id="Node000002" href="$nvs__controller_8h.html#a8ee96dcf034338a98ba90a13d8d9fb0f" title="Close NVS namespace." alt="" coords="211,5,306,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,148,127,95,155,66,186,41,196,36,198,40,189,46,158,70,131,99,90,151"/>
+<area shape="rect" id="Node000003" href="$nvs__controller_8h.html#a9eeeb82f5b26f763b25ea820b1b9f332" title="Erse all data in default NVS partition." alt="" coords="188,55,329,96"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="110,147,186,106,198,101,201,105,189,111,113,152"/>
+<area shape="rect" id="Node000004" href="$nvs__controller_8h.html#ac76f434b1b54b2da82bdcee38a02e4a4" title="Initialize default NVS partition." alt="" coords="195,121,322,161"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="140,157,179,151,180,156,140,162"/>
+<area shape="rect" id="Node000005" href="$nvs__controller_8h.html#abbcfede1ed4eb33fb41ed01e40091ffc" title="Open NVS namespace from default NVS partition for read and write operations." alt="" coords="213,185,304,211"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="140,178,198,186,197,192,140,183"/>
+<area shape="rect" id="Node000006" href="$nvs__controller_8h.html#af8f01e4671e582ddfc82426f2c53ce01" title="Read int64_t value from NVS namespace." alt="" coords="197,235,320,260"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="117,189,189,221,203,226,201,231,187,226,114,193"/>
+<area shape="rect" id="Node000007" href="$nvs__controller_8h.html#a271434ae6c5399148a7975022db60d9c" title="Write int64_t value to NVS namespace." alt="" coords="195,284,322,310"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="94,189,135,230,189,271,197,275,195,280,186,275,132,234,90,193"/>
+</map>

@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('wifi__manager_8h_source.html',''); ini
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">/* ---------------------------------*/</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">int</span> <a class="code hl_function" href="wifi__manager_8h.html#a1bb2312786a60b8f18002dd6a93e7eee">wifi_manager_init</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">int</span> wifi_manager_start_ap_and_server(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">int</span> <a class="code hl_function" href="wifi__manager_8h.html#a025b8f724ceaee693f08a1684f2a6b46">wifi_manager_start_ap_and_server</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/* -------------------------------*/</span></div>
@@ -119,16 +119,18 @@ $(document).ready(function(){initNavTree('wifi__manager_8h_source.html',''); ini
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">int</span> <a class="code hl_function" href="wifi__manager_8h.html#a7bb30c48143ab3688c2a2573683eac62">wifi_manager_store_ap</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* ssid, <span class="keywordtype">size_t</span> ssid_len, <span class="keyword">const</span> <span class="keywordtype">char</span>* password, <span class="keywordtype">size_t</span> password_len);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keywordtype">int</span> wifi_manager_check_for_stored_ap(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="wifi__manager_8h.html#ae67e4c744ed8fc0f034c1964363169fd">   58</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="wifi__manager_8h.html#ae67e4c744ed8fc0f034c1964363169fd">wifi_manager_check_for_stored_ap</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">/* -------------------------------*/</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">/* ---------------------------------*/</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">int</span> <a class="code hl_function" href="wifi__manager_8h.html#ae40d3fa65c5e68e8fa280cc45a81e8b0">wifi_manager_erase_ap</a>(<span class="keywordtype">void</span>);</div>
+<div class="ttc" id="awifi__manager_8h_html_a025b8f724ceaee693f08a1684f2a6b46"><div class="ttname"><a href="wifi__manager_8h.html#a025b8f724ceaee693f08a1684f2a6b46">wifi_manager_start_ap_and_server</a></div><div class="ttdeci">int wifi_manager_start_ap_and_server(void)</div><div class="ttdef"><b>Definition</b> wifi_manager.c:172</div></div>
 <div class="ttc" id="awifi__manager_8h_html_a1bb2312786a60b8f18002dd6a93e7eee"><div class="ttname"><a href="wifi__manager_8h.html#a1bb2312786a60b8f18002dd6a93e7eee">wifi_manager_init</a></div><div class="ttdeci">int wifi_manager_init(void)</div><div class="ttdoc">Initialize wifi manager library.</div><div class="ttdef"><b>Definition</b> wifi_manager.c:216</div></div>
 <div class="ttc" id="awifi__manager_8h_html_a7bb30c48143ab3688c2a2573683eac62"><div class="ttname"><a href="wifi__manager_8h.html#a7bb30c48143ab3688c2a2573683eac62">wifi_manager_store_ap</a></div><div class="ttdeci">int wifi_manager_store_ap(const char *ssid, size_t ssid_len, const char *password, size_t password_len)</div><div class="ttdoc">Store access point credentials in Wifi Manager NVS namespace.</div><div class="ttdef"><b>Definition</b> wifi_manager.c:54</div></div>
 <div class="ttc" id="awifi__manager_8h_html_a92b6a91a3d31bfa35ff0409d0e7befdc"><div class="ttname"><a href="wifi__manager_8h.html#a92b6a91a3d31bfa35ff0409d0e7befdc">wifi_manager_get_stored_ap</a></div><div class="ttdeci">int wifi_manager_get_stored_ap(char *ssid, size_t ssid_len, char *password, size_t password_len)</div><div class="ttdoc">Get stored credentials of Wifi manager last stored access point.</div><div class="ttdef"><b>Definition</b> wifi_manager.c:81</div></div>
 <div class="ttc" id="awifi__manager_8h_html_ae40d3fa65c5e68e8fa280cc45a81e8b0"><div class="ttname"><a href="wifi__manager_8h.html#ae40d3fa65c5e68e8fa280cc45a81e8b0">wifi_manager_erase_ap</a></div><div class="ttdeci">int wifi_manager_erase_ap(void)</div><div class="ttdoc">Erase all data stored in wifi manager NVS namespace.</div><div class="ttdef"><b>Definition</b> wifi_manager.c:143</div></div>
+<div class="ttc" id="awifi__manager_8h_html_ae67e4c744ed8fc0f034c1964363169fd"><div class="ttname"><a href="wifi__manager_8h.html#ae67e4c744ed8fc0f034c1964363169fd">wifi_manager_check_for_stored_ap</a></div><div class="ttdeci">int wifi_manager_check_for_stored_ap(void)</div></div>
 <div class="ttc" id="awifi__manager__errors_8h_html"><div class="ttname"><a href="wifi__manager__errors_8h.html">wifi_manager_errors.h</a></div><div class="ttdoc">Wifi manager library errors list.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

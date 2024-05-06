@@ -1,0 +1,16 @@
+<map id="helper_perform_ota_with_id" name="helper_perform_ota_with_id">
+<area shape="rect" id="Node000001" title="Perform simple OTA firmware update with standard ESP Helper server and provided device ID." alt="" coords="5,57,138,97"/>
+<area shape="rect" id="Node000002" href="$err__c__names_8c.html#ad8f4caa10a5c3bbc6b73762ed9f87840" title="Translate error code to error name." alt="" coords="385,11,489,37"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,54,139,31,185,13,233,5,281,3,369,9,369,14,281,8,233,10,186,18,141,36,103,59"/>
+<area shape="rect" id="Node000003" href="$esp__helper__utils_8c.html#a1809da36848c291864649a3cc56f289a" title="Prepare URL for OTA with device ID as parameter." alt="" coords="186,27,313,68"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,64,170,58,171,63,138,69"/>
+<area shape="rect" id="Node000004" href="$ota__controller_8c.html#a9bdb2553ca10cdaf2b8d49f84fce5ba5" title=" " alt="" coords="206,92,293,118"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="138,85,191,93,190,99,138,90"/>
+<area shape="rect" id="Node000007" href="$wifi__controller_8h.html#a11fdd017dcbc950018cd580cfaf441d8" title="Get current wifi_controller status." alt="" coords="188,142,311,167"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="116,95,187,128,199,133,197,138,185,133,114,100"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="283,89,312,77,392,41,394,46,314,82,285,94"/>
+<area shape="rect" id="Node000005" href="$memory__utils_8c.html#ab5c50391a7269b0ace7502e312fc0cc0" title="Zeroes memory." alt="" coords="361,92,512,118"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="293,102,345,102,345,108,293,108"/>
+<area shape="rect" id="Node000006" href="$memory__utils_8c.html#afc66e8fdd5b73e06970994bf079b8c62" title="Fill memory with constant byte." alt="" coords="560,92,728,118"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="512,102,545,102,545,108,512,108"/>
+</map>

@@ -26,9 +26,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">ESP Helper
+   <div id="projectname">ESP Helper<span id="projectnumber">&#160;1.0.0.0</span>
    </div>
-   <div id="projectbrief">Helper libraries used with ESP-IDF.</div>
+   <div id="projectbrief">Internet of Things collection of projects build with ESP-IDF.</div>
   </td>
  </tr>
  </tbody>
@@ -104,11 +104,19 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="esp__helper__errors_8h__dep__incl.png" border="0" usemap="#aprojects_2lib__tests_2lib_2esp__helper__utils_2include_2esp__helper__errors_8hdep" alt=""/></div>
 <map name="aprojects_2lib__tests_2lib_2esp__helper__utils_2include_2esp__helper__errors_8hdep" id="aprojects_2lib__tests_2lib_2esp__helper__utils_2include_2esp__helper__errors_8hdep">
-<area shape="rect" title="ESP Helper library errors list." alt="" coords="5,5,189,61"/>
-<area shape="rect" href="esp__helper__utils_8h.html" title="ESP Helper library header file." alt="" coords="10,109,184,165"/>
-<area shape="poly" title=" " alt="" coords="100,77,100,108,94,108,94,77"/>
-<area shape="rect" href="esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="21,213,173,268"/>
-<area shape="poly" title=" " alt="" coords="100,180,100,212,94,212,94,180"/>
+<area shape="rect" title="ESP Helper library errors list." alt="" coords="340,5,523,61"/>
+<area shape="rect" href="esp__helper__utils_8h.html" title="ESP Helper library header file." alt="" coords="345,109,519,165"/>
+<area shape="poly" title=" " alt="" coords="434,77,434,108,429,108,429,77"/>
+<area shape="rect" href="esp__helper__utils_8c.html" title="ESP Helper utils library source file." alt="" coords="5,220,157,276"/>
+<area shape="poly" title=" " alt="" coords="331,167,168,215,149,222,147,217,167,210,329,162"/>
+<area shape="rect" href="test__esp__helper__utils_8c.html" title=" " alt="" coords="180,213,329,283"/>
+<area shape="poly" title=" " alt="" coords="376,175,312,214,309,210,373,171"/>
+<area shape="rect" href="test__bmp__project_2main_2main_8c.html" title=" " alt="" coords="353,220,510,276"/>
+<area shape="poly" title=" " alt="" coords="434,180,434,220,429,220,429,180"/>
+<area shape="rect" href="test__cli__manager_2main_2main_8c.html" title=" " alt="" coords="535,220,691,276"/>
+<area shape="poly" title=" " alt="" coords="491,171,569,217,566,222,489,175"/>
+<area shape="rect" href="test__esp__helper__utils_2main_2main_8c.html" title=" " alt="" coords="715,220,863,276"/>
+<area shape="poly" title=" " alt="" coords="535,161,704,210,724,217,722,222,703,215,533,166"/>
 </map>
 </div>
 </div>
@@ -116,13 +124,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a21bf2341855cdec9e6a891523faf982d" id="r_a21bf2341855cdec9e6a891523faf982d"><td class="memItemLeft" align="right" valign="top"><a id="a21bf2341855cdec9e6a891523faf982d" name="a21bf2341855cdec9e6a891523faf982d"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ESP_HELPER_ERR_BASE</b>&#160;&#160;&#160;0x0384</td></tr>
-<tr class="memdesc:a21bf2341855cdec9e6a891523faf982d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP Helper error base. <br /></td></tr>
+<tr class="memitem:a21bf2341855cdec9e6a891523faf982d" id="r_a21bf2341855cdec9e6a891523faf982d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp__helper__errors_8h.html#a21bf2341855cdec9e6a891523faf982d">ESP_HELPER_ERR_BASE</a>&#160;&#160;&#160;0x0384</td></tr>
+<tr class="memdesc:a21bf2341855cdec9e6a891523faf982d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ESP Helper error base.  <br /></td></tr>
 <tr class="separator:a21bf2341855cdec9e6a891523faf982d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ee13b4abef394a8757aca74f2db87da" id="r_a2ee13b4abef394a8757aca74f2db87da"><td class="memItemLeft" align="right" valign="top"><a id="a2ee13b4abef394a8757aca74f2db87da" name="a2ee13b4abef394a8757aca74f2db87da"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>ESP_HELPER_ERR_NOT_CONNECTED</b>&#160;&#160;&#160;0x0001 + <a class="el" href="esp__helper__errors_8h.html#a21bf2341855cdec9e6a891523faf982d">ESP_HELPER_ERR_BASE</a></td></tr>
-<tr class="memdesc:a2ee13b4abef394a8757aca74f2db87da"><td class="mdescLeft">&#160;</td><td class="mdescRight">When trying to perform OTA when STA is not connected. <br /></td></tr>
+<tr class="memitem:a2ee13b4abef394a8757aca74f2db87da" id="r_a2ee13b4abef394a8757aca74f2db87da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="esp__helper__errors_8h.html#a2ee13b4abef394a8757aca74f2db87da">ESP_HELPER_ERR_NOT_CONNECTED</a>&#160;&#160;&#160;0x0001 + <a class="el" href="esp__helper__errors_8h.html#a21bf2341855cdec9e6a891523faf982d">ESP_HELPER_ERR_BASE</a></td></tr>
+<tr class="memdesc:a2ee13b4abef394a8757aca74f2db87da"><td class="mdescLeft">&#160;</td><td class="mdescRight">When trying to perform OTA when STA is not connected.  <br /></td></tr>
 <tr class="separator:a2ee13b4abef394a8757aca74f2db87da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -131,7 +137,40 @@ Macros</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>1.0.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-02-28</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a21bf2341855cdec9e6a891523faf982d" name="a21bf2341855cdec9e6a891523faf982d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bf2341855cdec9e6a891523faf982d">&#9670;&#160;</a></span>ESP_HELPER_ERR_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESP_HELPER_ERR_BASE&#160;&#160;&#160;0x0384</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ESP Helper error base. </p>
+
+</div>
+</div>
+<a id="a2ee13b4abef394a8757aca74f2db87da" name="a2ee13b4abef394a8757aca74f2db87da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ee13b4abef394a8757aca74f2db87da">&#9670;&#160;</a></span>ESP_HELPER_ERR_NOT_CONNECTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ESP_HELPER_ERR_NOT_CONNECTED&#160;&#160;&#160;0x0001 + <a class="el" href="esp__helper__errors_8h.html#a21bf2341855cdec9e6a891523faf982d">ESP_HELPER_ERR_BASE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When trying to perform OTA when STA is not connected. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
